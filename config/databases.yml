@@ -6,5 +6,5 @@ all:
     class: sfDoctrineDatabase
     param:
       dsn:      pgsql:host=localhost;dbname=anbeed
-      username: mario
-      password: admin
+      username: postgres
+      password: postgres
