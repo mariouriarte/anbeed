@@ -1,0 +1,28 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           LaboratorioFabricante
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          laboratorio_fabricante
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        pais_id:        {label: 'País de Origen'}
+        bajo_liciencia: {label: 'Bajo Licencia de'}
+        direccion:      {label: 'Dirección'}
+        telefono:       {label: 'Teléfono'}
+        email:          {label: 'E-mail'}
+      list:    ~
+      filter:
+        display:        [nombre] 
+      form:
+        display:        [pais_id, nombre, bajo_licencia, para, direccion, telefono, fax, email, observaciones]
+      edit:    ~
+      new:     ~

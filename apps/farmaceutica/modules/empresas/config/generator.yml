@@ -1,0 +1,40 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Empresa
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          empresa
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        regente_farmaceutico_id:  {label: 'Regente Farmacéutico'}
+        representante_legal_id:   {label: 'Representante Legal'}
+        razon_social:             {label: 'Razón Social'}
+        fecha_registro:           {label: 'Fecha de Registro'}
+        num_resolucion:           {label: 'Número de Resolución Ministerial'}
+        fecha_resolucion:         {date_format: 'dd/MM/yyyy', label: 'Fecha de Resolución Ministerial'}
+        direccion:                {label: 'Dirección'}
+        telefono1:                {label: 'Teléfono 1'}
+        telefono2:                {label: 'Teléfono 2'}
+        registro_camara:          {label: 'Registro en la Cámara Nacional de Industria y/o Comercio'}
+        fundempresa:              {label: 'FUNDEMPRESA'}
+        nit:                      {label: 'NIT'}
+      list:    ~
+      filter:
+        display: [razon_social, fecha_registro, nit]
+      form:
+        display: 
+          Personal Responsable: [representante_legal_id, regente_farmaceutico_id]
+          Datos: [razon_social, fecha_registro, fecha_resolucion, fax, direccion, casilla, telefono1, telefono1, email, actividad, registro_camara, fundaempresa, nit, licencia_funcionamiento]
+          
+      edit:
+        title: Editar Empresa %%razon_social%%
+      new:
+        title: Nueva Empresa

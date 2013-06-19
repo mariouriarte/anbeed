@@ -1,0 +1,41 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Persona
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          persona_personaregente
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        ap_paterno:      {label: 'Ap. Paterno'}
+        ap_materno:      {label: 'Ap. Materno'}
+        cedula_expedido: {label: 'Cédula de identidad'}
+        ci:              {label: 'Cedula de Identidad'}
+        expedido:        {label: 'Expedido'}
+        direccion:       {label: 'Dirección'}
+        telefono:        {label: 'Teléfono'}
+        celular:         {label: 'Celular'}
+        fax:             {label: 'Fax'}
+        casilla:         {label: 'Casilla'}
+        email:           {label: 'Email'}
+        
+      list:
+        title: Listado de Personas
+        display: [nombre, ap_paterno, ap_materno, cedula_expedido, telefono]
+      filter:
+        display: [nombre, ap_paterno, ci]
+      form:
+        display: 
+          Datos de la Persona:  [nombre, ap_paterno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
+          Personal Responsable: [newRegente]
+      edit:
+        title: Editar Regente Farmaceutico %%nombre%%
+      new:
+        title: Nuevo Regente Farmaceutico

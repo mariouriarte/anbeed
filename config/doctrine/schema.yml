@@ -1,0 +1,170 @@
+# config/doctrine/schema.yml
+---
+Persona:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre:           {type: string(50), notnull: true}
+    ap_paterno:       {type: string(30), notnull: true}
+    ap_materno:       {type: string(30), notnull: true}
+    ci:               {type: string(12), notnull: true, unique: true}
+    expedido:         {type: string(2), notnull: true}
+    direccion:        {type: string(255)}
+    telefono:         {type: string(20)}
+    celular:          {type: string(20)}
+    fax:              {type: string(20)}
+    casilla:          {type: string(10)}
+    email:            {type: string(255), notnull: false, unique: true}
+    fecha_nacimiento: {type: date}
+  relations:
+    sfGuardUser:         {local: id, foreign: persona_id,  type: one, foreignAlias: Persona}
+    RepresentanteLegal:  {local: id, foreign: persona_id, type: one, foreignAlias: Persona}
+    RegenteFarmaceutico: {local: id, foreign: persona_id, type: one, foreignAlias: Persona}
+
+RepresentanteLegal:
+  actAs: {Timestampable: ~}
+  columns:
+    persona_id: {type: integer, notnull: true}
+  relations:
+    Persona: {local: persona_id, foreign: id, type: one, foreignAlias: Representante}
+    Empresa: {local: id, foreign: representante_legal_id, type: one, foreignAlias: Representante}
+    
+RegenteFarmaceutico:
+  actAs: {Timestampable: ~}
+  columns:
+    persona_id:            {type: integer, notnull: true}
+    matricula_profesional: {type: string(20), notnull: true}
+    carnet_colegiado:      {type: string(20), notnull: true}
+  relations:
+    Persona: {local: persona_id, foreign: id, type: one, foreignAlias: Regente}
+    Empresa: {local: id, foreign: regente_farmaceutico_id, type: one, foreignAlias: Regente}
+    
+Empresa:
+  actAs: {Timestampable: ~}
+  columns:
+    representante_legal_id:  {type: integer, notnull: true}
+    regente_farmaceutico_id: {type: integer, notnull: true}
+    razon_social:            {type: string(255), notnull: true, unique: true}
+    fecha_registro:          {type: date}
+    num_resolucion:          {type: string(30), notnull: true, unique: true}
+    fecha_resolucion:        {type: date, notnull: false}
+    fax:                     {type: string(20), notnull: false}
+    direccion:               {type: string(255)}
+    casilla:                 {type: string(20), notnull: false}
+    telefono1:               {type: string(20), notnull: true}
+    telefono2:               {type: string(20), notnull: false}
+    email:                   {type: string(255), notnull: false, unique: true}
+    actividad:               {type: string(255), notnull: true}
+    registro_camara:         {type: string(30), notnull: false}
+    fundaempresa:            {type: string(30), notnull: true}
+    nit:                     {type: string(30), notnull: true, unique: true}
+    licencia_funcionamiento: {type: string(30), notnull: true, unique: true}
+  relations:
+    RepresentanteLegal:  {local: representante_legal_id, foreign: id, type: one, foreignAlias: Empresa}
+    RegenteFarmaceutico: {local: regente_farmaceutico_id, foreign: id, type: one, foreignAlias: Empresa}
+    Producto:            {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
+    
+LaboratorioFabricante:
+  actAs: {Timestampable: ~}
+  columns:
+    pais_id:       {type: integer, notnull: true}
+    nombre:        {type: string(255), notnull: true, unique: true}
+    bajo_licencia: {type: string(255), notnull: true}
+    para:          {type: string(255), notnull: true}
+    direccion:     {type: string(255)}
+    telefono:      {type: string(20), notnull: true}
+    fax:           {type: string(20), notnull: false}
+    email:         {type: string(255), notnull: false, unique: true}
+    observaciones: {type: string(2000)}
+  relations:
+    Pais:     {local: pais_id, foreign: id, type: one, foreignAlias: Laboratorio}
+    Producto: {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
+    
+Pais:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre:  {type: string(150)}
+    bandera: {type: string(50)}
+  relations:
+    LaboratorioFabricante: {local: id, foreign: pais_id, type: one, foreignAlias: Pais}
+    
+Producto:
+  actAs: {Timestampable: ~}
+  columns:
+    empresa_id:                {type: integer, notnull: true}
+    laboratorio_fabricante_id: {type: integer, notnull: true}
+    nombre_generico:           {type: string(255), notnull: true}
+    descripcion:               {type: string(2000), notnull: false}
+    procedencia:               {type: string(255)}
+    registro_sanitario:        {type: string(50), unique: true, notnull: false}
+  relations:
+    Empresa:               {local: empresa_id, foreign: id, type: one, foreignAlias: Protuctos}
+    LaboratorioFabricante: {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Protuctos}
+#    Producto:              {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
+    
+Medicamento:
+  actAs: {Timestampable: ~}
+  columns:
+    producto_id:           {type: integer, notnull: true}
+    forma_farmaceutica_id: {type: integer, notnull: true}
+    via_administracion_id: {type: integer, notnull: true}
+    tipo_venta_id:         {type: integer, notnull: true}    
+    formula_cc_id:         {type: integer, notnull: true}
+    nombre_comercial:      {type: string(255), notnull: true}
+    concentracion:         {type: string(150), notnull: true}
+    accion_terapeutica:    {type: string(255)}
+    conservacion:          {type: string(255)}
+    periodo_validez:       {type: string(50)}
+    especificacion_envase: {type: string(2000)}
+    aval:                  {type: string(255)}
+    certificado_control:   {type: string(30)}
+  relations:
+    Producto:          {local: producto_id, foreign: id, type: one, foreignAlias: Medicamento}
+    FormaFarmaceutica: {local: forma_farmaceutica_id, foreign: id, type: one, foreignAlias: Medicamentos}
+    ViaAdministracion: {local: via_administracion_id, foreign: id, type: one, foreignAlias: Medicamentos}
+    TipoVenta:         {local: tipo_venta_id, foreign: id, type: one, foreignAlias: Medicamentos}
+#    debria ser many aca arriba
+
+FormaFarmaceutica:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre: {type: string(255), notnull: true}
+  relations:
+    Medicamento: {local: producto_id, foreign: id, type: many, foreignAlias: Forma}
+    
+ViaAdministracion:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre: {type: string(100), notnull: true}
+  relations:
+    Medicamento: {local: producto_id, foreign: id, type: many, foreignAlias: Administracion}
+    
+TipoVenta:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre: {type: string(100), notnull: true}
+  relations:
+    Medicamento: {local: producto_id, foreign: id, type: many, foreignAlias: TipoVenta}
+    
+FormulaCc:
+  actAs: {Timestampable: ~}
+  columns:
+    detalle_formula_cc_id: {type: integer, notnull: true}
+  relations:
+    DetalleFormulaCc: {local: detalle_formula_cc_id, foreign: id, type: many, foreignAlias: FormulaCc}
+    
+DetalleFormulaCc:
+  actAs: {Timestampable: ~}
+  columns:
+    ingrediente_id: {type: integer, notnull: true}
+    cantidad:       {type: decimal(5), scale: 2, notnull: true}
+    unidad:         {type: string(20), notnull: true}
+  relations:
+    FormulaCc:   {local: id, foreign: detalle_formula_cc_id, type: one, foreignAlias: Detalles}
+    Ingrediente: {local: ingrediente_id, foreign: id, type: many, foreignAlias: Detalles}
+    
+Ingrediente:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre: {type: string(100), notnull: true}
+  relations:
+    DetalleFormulaCc: {local: id, foreign: ingrediente_id, type: one, foreignAlias: Ingrediente}

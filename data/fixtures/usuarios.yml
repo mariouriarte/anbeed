@@ -1,0 +1,22 @@
+
+sfGuardUser:
+  UserAdmin:
+    Persona: Jose
+    username: admin
+    password: admin
+    is_super_admin: true
+    Groups:         [Group_admin]
+    
+# Grupos
+sfGuardGroup:
+  Group_admin:
+    name:           Administradores
+    description:    Grupo de administradores
+    Permissions:    [Permission_admin]
+    
+## permisos para los grupos
+sfGuardPermission:
+  Permission_admin:
+    name:           Administración
+    description:    permisos de administración
+    
