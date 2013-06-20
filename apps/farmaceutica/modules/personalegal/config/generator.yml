@@ -33,8 +33,8 @@ generator:
         display: [nombre, ap_paterno, ci]
       form:
         display: 
-          Datos de la Persona:  [nombre, ap_paterno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
-          Personal Responsable: [newRegente]
+          Datos de la Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
+          Personal Responsable: [nuevo Representante]
       edit:
         title: Editar Representante Legal %%nombre%%
       new:

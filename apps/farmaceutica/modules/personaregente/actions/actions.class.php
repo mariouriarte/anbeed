@@ -13,4 +13,15 @@ require_once dirname(__FILE__).'/../lib/personaregenteGeneratorHelper.class.php'
  */
 class personaregenteActions extends autoPersonaregenteActions
 {
+    
+    public function executeEdit(sfWebRequest $request)
+    {
+//       $this->persona = $this->getRoute()->getObject();
+//       $this->form = $this->configuration->getForm($this->persona);
+        parent::executeEdit($request);
+       
+       $this->regente = $this->persona->getRegenteFarmaceutico();
+//       $this->form2 = $this->configuration->getForm($this->regente);
+       
+    }
 }

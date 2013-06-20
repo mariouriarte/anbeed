@@ -33,7 +33,7 @@ generator:
         display: [nombre, ap_paterno, ci]
       form:
         display: 
-          Persona:  [nombre, ap_paterno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
+          Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
       edit:
         title: Editar Persona %%nombre%%
       new:
