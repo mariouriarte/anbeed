@@ -34,7 +34,7 @@ generator:
       form:
         display: 
           Datos de la Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
-          Personal Responsable: [nuevo Representante]
+          Personal Responsable: [Nuevo Representante]
       edit:
         title: Editar Representante Legal %%nombre%%
       new:
