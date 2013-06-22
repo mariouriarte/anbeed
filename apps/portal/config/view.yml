@@ -12,9 +12,9 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css]
+  stylesheets:    [main.css, portal.css, /sfDoctrinePlugin/css/global.css, /sfDoctrinePlugin/css/default.css]
 
-  javascripts:    []
+  javascripts:    [jquery-2.0.2.js, jquery-ui.min.js]
 
   has_layout:     true
   layout:         layout

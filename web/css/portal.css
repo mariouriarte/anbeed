@@ -1,0 +1,58 @@
+/* 
+    Document   : portal
+    Created on : 15-04-2012, 07:40:22 PM
+    Author     : Mario Uriarte Marin
+    Description:
+        Estilos para el portal, 
+        se muestra cuando ingresan al sistema
+*/
+
+a {
+    text-decoration: none;
+}
+
+.contenido ul{
+/*    list-style: none outside none !important;*/    
+    /*font-size: 11px;*/
+}
+
+.contenido li {
+    list-style: square outside none !important;
+    padding: 1px 0;
+} 
+
+div.portal {
+    /*margin-left: 20px;*/
+    width: 1008px;
+    margin: 40px auto;
+}
+
+.linea {
+    clear: both;
+}
+
+.portal .linea .columna {
+    display: inline;
+    width: 220px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    /*border: 1px solid #8CACBB;*/
+}
+
+.columna .cubo {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.linea .cubo .contenido {    
+    min-height: 140px;
+    padding: 4px;
+    /*border-top: 1px solid #8CACBB;*/
+}
+
+
+.linea-regional .cubo .contenido {
+    /*min-height: 50px;*/
+    /*padding: 10px;*/
+}

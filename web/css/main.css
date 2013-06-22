@@ -1,0 +1,312 @@
+/*
+ * Mismas reglas  del admin generator
+*/
+body {
+    padding: 0px !important;
+    margin: 0 !important;
+    text-align: left;   
+
+}
+
+a {
+    text-decoration: none;
+    color: #464646;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+/*
+ * Reglas propias
+*/
+/*label {
+    text-transform: uppercase;
+}*/
+
+#conten-header {
+    height: 97px;
+}
+
+#header {
+    background-attachment: scroll;
+    background-color: #FFF;
+    /*background-color: #777777;*/
+    height: 97px;
+    margin-left: auto;
+    margin-right: auto;
+    /*margin-bottom: 10px;*/
+    vertical-align: middle;
+
+    border-bottom: 1px solid #555753;
+}
+
+/* Cuando flota el header */
+.header-fixed {
+    position: fixed;
+    top: 25px;
+    height: 97px;
+    width: 100%;
+    /*margin-bottom: 10px;*/
+    vertical-align: middle;
+}
+
+#header #header-content {
+    width: 1008px;
+    /*margin: 0 auto;*/
+    margin: 0 85px;
+    height: 97px;
+}
+
+#header #header-logo {
+    float: left;
+    height: 70px;
+}
+
+#header #header-tools {
+    float: left;
+    height: 65px;
+    width: auto;
+    padding: 5px 0 0 10px;
+    border-left: 1px solid #555753;
+}
+
+/* Dentro del header */
+#header-tools .header-info-page div,
+#header-tools .header-info-page table {
+    float: left;
+    margin-right: 15px;
+}
+
+#header #header-logo div {
+    float: left;
+}
+
+#header-content #header-top {
+    clear: both;
+    height: 70px;
+}
+
+#header-content #header-bottom {
+    height: 25px;
+    padding: 2px 0 0 5px;
+}
+
+#header-bottom #nombre-regional {
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #555555;
+    font-weight: bold;
+}
+
+.sponsor {
+    font-size: 20pt;
+    line-height: 130%;
+    color: #555555;
+    text-shadow: 1px 2px 6px #111111;
+    display: block;
+}
+
+img.cps-logo {    
+    float: left;
+    /*margin-right: 20px;*/
+}
+#logo {    
+    height: 74px;
+    padding: 5px 15px 0 0;
+}
+
+#info-user {
+    padding: 5px 10px 0 0;
+}
+
+#container {
+    min-height: 100%; /* alto minimo FF y Safari */
+    width: 100%;
+    height: 100%; /* alto minimo para IE Windows */
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    /*margin-bottom: 70px;*/
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.footer {
+    margin-top: 20px;    
+    bottom: 0;    
+    height: auto;
+    width: 100%;
+    position: fixed;
+
+    color: #FFFFFF;    
+    background-color: #555753;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0px !important;
+}
+
+#content {    
+    margin: 4px 2em 0 40px;
+}
+
+#activo-titulo {
+    margin-left: 45px;
+}
+
+#activo-titulo h2 {
+    font-size: 1.3em;
+}
+
+#generar-codigo label, #generar-codigo-nuevo label{
+    display: inline;
+    float: none;
+}
+
+.header-forms {
+    background-color: #EEE;
+    margin: 10px auto;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px 6px 6px 6px;
+    padding: 5px 10px;
+    width: 939px;
+}
+
+#info-user #boton-salir {
+    /*    margin-bottom: 11px;
+        font-weight: bold;*/
+    font-size: 95%;
+    /*    padding: 3px 0 0 19px;*/
+    /*    background: url("../images/16x16/system_log_out.png") no-repeat scroll 0 0 transparent;*/
+    text-shadow: none;
+}
+
+#box-izquierda {
+    width: 460px;
+    margin-right: 17px;
+    float: left
+}
+
+#box-derecha {    
+    width: 460px;
+    float: left;
+    height: 150px;
+    overflow-y: auto;
+}
+
+#box-footer {
+    clear: both;
+}
+
+ul.acciones_lista {
+    clear: both;
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+ul.acciones_lista li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+
+ul li.acciones_lista_list a {
+    background: url(../sfDoctrinePlugin/images/list.png) no-repeat 0 0;
+    padding-left: 20px;
+    color: #464646;
+    text-decoration: none;
+}
+
+ul li.acciones_lista_list a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.table-header {
+    margin: 0;
+    font-size: 11px !important;
+}
+
+.table-header tr{
+    background-color: #EEEEEE !important;
+    border-color: #EEEEEE !important;
+}
+
+.table-header th {
+    background-color: #EEEEEE !important;
+    border-color: #EEEEEE !important;
+    color: #555555 !important;
+    text-shadow: 1px 1px 3px #AAAAAA;
+}
+
+.table-header td {
+    background-color: #EEEEEE !important;
+    border-color: #EEEEEE !important;
+    color: #555555 !important;
+    text-shadow: 1px 1px 3px #AAAAAA;
+}
+
+.table-header th,
+.table-header td {
+    padding: 2px 5px !important;
+    text-transform: uppercase;
+}
+
+#icon-tools #titulo-header-tools {
+    /*margin-bottom: 35px;*/
+    font-weight: bold;
+    color: #555555;
+    /*    text-shadow: 1px 1px 3px #AAAAAA;*/
+}
+
+a.accion-pdf {
+    padding: 31px 3px 0px 3px;
+    margin-left: 10px;
+    background: url("../images/32x32/pdf.png") no-repeat scroll 0 0 transparent;
+}
+
+a.accion-aceptar {
+    padding: 31px 2px 0px 2px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background: url("../images/32x32/dialog_ok_apply.png") no-repeat scroll 0 0 transparent;
+    /*    background: url("../images/32x32/application_vnd.oasis.opendocument.database.png") no-repeat scroll 0 0 transparent;*/
+}
+
+input[type="submit"], button {
+    background: url("/images/ui/buttonshadow.png") repeat-x scroll center bottom #FFFFFF;
+    border: 1px solid #8CACBB;
+    color: #000000;
+    cursor: pointer;
+    font-size: 100%;
+    margin: 1px;
+    padding: 0.125em 0.4em;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.ui-datepicker-trigger {
+    font-size: 10px;
+}
+
+select, select[disabled], select[disabled]:hover {
+    background: none repeat scroll 0 0 #FAFAFA !important;
+    border: 1px solid #C0C0C0 !important;
+    cursor: pointer;
+    padding: 2px !important;
+}
+
+input[type="text"], input[type="password"], textarea {
+    /*background: url("../img/textbox-back.png") repeat-x scroll 0 0 #FFFFFF;*/
+    border: 1px solid #C0C0C0;
+    color: #000000;
+    margin-top: 2px;
+    padding: 1px 0 1px 2px;
+}
