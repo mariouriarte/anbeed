@@ -12,4 +12,5 @@
  */
 class RepresentanteLegal extends BaseRepresentanteLegal
 {
+    
 }

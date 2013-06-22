@@ -24,4 +24,30 @@ class personaregenteActions extends autoPersonaregenteActions
 //       $this->form2 = $this->configuration->getForm($this->regente);
        
     }
+    public function executeBuscar($request)
+    {
+        $this->getResponse()->setContentType('application/json');
+        $buscar = $request->getParameter('q');
+
+//        $query = PersonaTable::getInstance()->buscarPersonasQuery(
+//            $request->getParameter('q'),
+//            $request->getParameter('limit')
+//        );
+        $query  = Doctrine::getTable('Persona')
+                              ->createQuery('a')
+                              ->orWhere('a.nombre LIKE ?', "%$buscar%")
+                              ->orWhere('a.ap_paterno LIKE ?', "%$buscar%")
+                              ->orWhere('a.ap_materno LIKE ?', "%$buscar%")
+                              ->execute();
+
+        $personas = array();
+        //var_dump($personas);
+        foreach ($query as $persona) {
+            $nombre_completo = strtoupper($persona->getNombre()." ".$persona->getApPaterno()." ".$persona->getApMaterno());
+            $personas[$persona->getId()] = (string)($nombre_completo);
+        }
+        //var_dump($personas);
+        return $this->renderText(json_encode($personas));
+    }
+    
 }

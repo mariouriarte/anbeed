@@ -1,3 +1,4 @@
+<?php use_javascript('jquery-migrate.js') ?>
 <script type='text/javascript'>
 $(document).ready(function()
 {
@@ -6,11 +7,10 @@ $(document).ready(function()
 //    $('#empresa_regente_farmaceutico_id')
 //        .after('<button type="button" id="btn-buscar-regente" class="btn-buscar-trigger">Crear Regente</button>');
     $('#empresa_representante_legal_id')
-        .after('<?php echo link_to('Crear Representante', 'personalegal/new');  ?>');
+        .after('<?php echo link_to('Crear Representante Legal', 'personalegal/new');  ?>');
     
     $('#empresa_regente_farmaceutico_id')
-        .after('<?php echo link_to('Crear Regente', 'personaregente/new');  ?>');
-    
+        .after('<?php echo link_to('Crear Regente Farmacéutico', 'personaregente/new');  ?>');
 });
 </script>
 
