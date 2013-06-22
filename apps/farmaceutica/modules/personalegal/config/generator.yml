@@ -27,15 +27,18 @@ generator:
         email:           {label: 'Email'}
         
       list:
-        title: Listado de Personas
+        title: Personas Registradas
         display: [nombre, ap_paterno, ap_materno, cedula_expedido, telefono]
       filter:
         display: [nombre, ap_paterno, ci]
       form:
         display: 
           Datos de la Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
-          Personal Responsable: [Nuevo Representante]
+          Datos de Representante: [Nuevo Representante]
       edit:
         title: Editar Representante Legal %%nombre%%
       new:
         title: Nuevo Representante Legal
+        actions: 
+          _list: ~
+          _save: ~

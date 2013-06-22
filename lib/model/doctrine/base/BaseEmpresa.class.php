@@ -19,7 +19,7 @@
  * @property string $email
  * @property string $actividad
  * @property string $registro_camara
- * @property string $fundaempresa
+ * @property string $fundempresa
  * @property string $nit
  * @property string $licencia_funcionamiento
  * @property RepresentanteLegal $RepresentanteLegal
@@ -40,7 +40,7 @@
  * @method string              getEmail()                   Returns the current record's "email" value
  * @method string              getActividad()               Returns the current record's "actividad" value
  * @method string              getRegistroCamara()          Returns the current record's "registro_camara" value
- * @method string              getFundaempresa()            Returns the current record's "fundaempresa" value
+ * @method string              getFundempresa()             Returns the current record's "fundempresa" value
  * @method string              getNit()                     Returns the current record's "nit" value
  * @method string              getLicenciaFuncionamiento()  Returns the current record's "licencia_funcionamiento" value
  * @method RepresentanteLegal  getRepresentanteLegal()      Returns the current record's "RepresentanteLegal" value
@@ -60,7 +60,7 @@
  * @method Empresa             setEmail()                   Sets the current record's "email" value
  * @method Empresa             setActividad()               Sets the current record's "actividad" value
  * @method Empresa             setRegistroCamara()          Sets the current record's "registro_camara" value
- * @method Empresa             setFundaempresa()            Sets the current record's "fundaempresa" value
+ * @method Empresa             setFundempresa()             Sets the current record's "fundempresa" value
  * @method Empresa             setNit()                     Sets the current record's "nit" value
  * @method Empresa             setLicenciaFuncionamiento()  Sets the current record's "licencia_funcionamiento" value
  * @method Empresa             setRepresentanteLegal()      Sets the current record's "RepresentanteLegal" value
@@ -144,7 +144,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'notnull' => false,
              'length' => 30,
              ));
-        $this->hasColumn('fundaempresa', 'string', 30, array(
+        $this->hasColumn('fundempresa', 'string', 30, array(
              'type' => 'string',
              'notnull' => true,
              'length' => 30,

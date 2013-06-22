@@ -55,7 +55,7 @@ Empresa:
     email:                   {type: string(255), notnull: false, unique: true}
     actividad:               {type: string(255), notnull: true}
     registro_camara:         {type: string(30), notnull: false}
-    fundaempresa:            {type: string(30), notnull: true}
+    fundempresa:            {type: string(30), notnull: true}
     nit:                     {type: string(30), notnull: true, unique: true}
     licencia_funcionamiento: {type: string(30), notnull: true, unique: true}
   relations:
