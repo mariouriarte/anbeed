@@ -26,15 +26,16 @@ generator:
         registro_camara:          {label: 'Registro en la Cámara Nacional de Industria y/o Comercio'}
         fundempresa:              {label: 'FUNDEMPRESA'}
         nit:                      {label: 'NIT'}
-      list:    ~
+      list:
+        title: Empresas Registradas
+        display: [razon_social, nit, fecha_registro]
       filter:
-        display: [razon_social, fecha_registro, nit]
+        display: [razon_social, nit]
       form:
         display: 
+          Datos:                [razon_social, fecha_registro, fecha_resolucion, fax, direccion, casilla, telefono1, telefono1, telefono2, email, actividad, registro_camara, fundempresa, nit, licencia_funcionamiento]
           Personal Responsable: [representante_legal_id, regente_farmaceutico_id]
-          Datos: [razon_social, fecha_registro, fecha_resolucion, fax, direccion, casilla, telefono1, telefono1, email, actividad, registro_camara, fundaempresa, nit, licencia_funcionamiento]
-          
       edit:
         title: Editar Empresa %%razon_social%%
       new:
-        title: Nueva Empresa
+        title: Registro de Empresas

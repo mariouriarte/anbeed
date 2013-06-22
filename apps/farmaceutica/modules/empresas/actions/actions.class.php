@@ -16,5 +16,10 @@ class empresasActions extends autoEmpresasActions
     public function executeNew(sfWebRequest $request)
     {
         parent::executeNew($request);
-           }
+        $legal_id = new sfWidgetFormSchema(array('representante_legal_id'
+            => new sfWidgetFormInput()));
+        $legal_id->setDefault('representante_legal_id', $request
+                ->getParameter('legal_id'));
+        $this->getUser()->setAttribute('legal_id', $legal_id);
+    }
 }

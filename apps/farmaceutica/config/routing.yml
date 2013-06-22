@@ -1,3 +1,6 @@
+buscar_personas:
+    url:   /personaregente/buscar
+    param: { module: personaregente, action: buscar }
 persona_personalegal:
   class: sfDoctrineRouteCollection
   options:

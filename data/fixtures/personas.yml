@@ -2,36 +2,36 @@
 ---
 Persona:
   Jose:
-    nombre: Jose
-    ap_paterno: Vasquez
-    ap_materno: Arnez
-    ci: 12345
+    nombre: jose
+    ap_paterno: vasquez
+    ap_materno: arnez
+    ci: 123456
     expedido: SC
     direccion: Miraflores
-    telefono: 12345
+    telefono: 123456
     celular: 12345
-    email: jose@gmail.com
+    email: jyva.00@gmail.com
     fecha_nacimiento: '1986-12-22'
   Mario:
-    nombre: Mario
-    ap_paterno: Uriarte
-    ap_materno: Marin
-    ci: 123453
+    nombre: mario
+    ap_paterno: uriarte
+    ap_materno: marin
+    ci: 1234537
     expedido: LP
-    direccion: Miraflores
+    direccion: miraflores
     telefono: 12345
     celular: 12345
-    email: mario@gmail.com
+    email: mario.00@gmail.com
     fecha_nacimiento: '1984-12-22'
   Rolo:
-    nombre: Rolo
-    ap_paterno: Cadima
-    ap_materno: Bernal
-    ci: 1234576
+    nombre: rolo
+    ap_paterno: cadima
+    ap_materno: bernal
+    ci: 12345768
     expedido: LP
     direccion: Miraflores
     telefono: 12345
     celular: 12345
-    email: rolo@gmail.com
+    email: rolo.00@gmail.com
     fecha_nacimiento: '1984-12-22'
     

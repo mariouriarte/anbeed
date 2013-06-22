@@ -21,8 +21,12 @@ class EmpresaForm extends BaseEmpresaForm
         //$this->validatorSchema['fecha_registro'] = new sfValidatorDate(array('required' => true));
         
         // Fecha de Resolución
+        $years = range(date('Y') - 80, date('Y'));   
         $this->widgetSchema['fecha_resolucion'] = new sfWidgetFormJQueryDate(
-            array('culture' => 'us'));
+            array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
+                  'years' => array_combine($years, $years))), ));
+        
+        
         $this->validatorSchema['fecha_resolucion'] = new sfValidatorDate(
             array('required' => true));
         
@@ -30,7 +34,10 @@ class EmpresaForm extends BaseEmpresaForm
         $this->widgetSchema['representante_legal_id'] = new  sfWidgetFormInputText();
         
         // Regente Farmaceutico
-        $this->widgetSchema['regente_farmaceutico_id'] = new  sfWidgetFormInputText();
+      $this->widgetSchema['regente_farmaceutico_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+                array( 'model'=>'Persona',
+                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_personas')
+         ));
         
     }
 }

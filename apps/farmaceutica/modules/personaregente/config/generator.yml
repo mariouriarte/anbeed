@@ -39,3 +39,6 @@ generator:
         title: Editar Regente Farmaceutico %%nombre%%
       new:
         title: Nuevo Regente Farmaceutico
+        actions:
+          _list: ~
+          _save: ~
