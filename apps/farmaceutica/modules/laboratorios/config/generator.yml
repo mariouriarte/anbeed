@@ -19,10 +19,14 @@ generator:
         direccion:      {label: 'Dirección'}
         telefono:       {label: 'Teléfono'}
         email:          {label: 'E-mail'}
-      list:    ~
+      list: 
+        title: Laboratorios Farmaceuticos Registrados
+        display: [nombre, telefono]
       filter:
         display:        [nombre] 
       form:
         display:        [pais_id, nombre, bajo_licencia, para, direccion, telefono, fax, email, observaciones]
-      edit:    ~
-      new:     ~
+      edit:    
+        title: Editar Laboratorio %%nombre%%
+      new:
+        title: Registro de Laboratorios Farmaceuticos
