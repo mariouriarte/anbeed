@@ -14,10 +14,14 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list: 
+        title: Paises Registrados
+        display: [nombre, bandera]
       filter:  
         display: [nombre]
       form:    
         display: [nombre, bandera]
-      edit:    ~
-      new:     ~
+      edit:
+        title: Editar Pais %%nombre%%
+      new:     
+        title: Registro de Paises
