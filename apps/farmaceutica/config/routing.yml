@@ -1,4 +1,7 @@
-buscar_personas:
+buscar_representantes:
+    url:   /personalegal/buscar
+    param: { module: personalegal, action: buscar }
+buscar_regentes:
     url:   /personaregente/buscar
     param: { module: personaregente, action: buscar }
 persona_personalegal:

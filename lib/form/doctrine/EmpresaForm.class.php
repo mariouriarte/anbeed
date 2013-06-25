@@ -33,12 +33,15 @@ class EmpresaForm extends BaseEmpresaForm
             array('required' => true));
         
         // Representante Legal
-        $this->widgetSchema['representante_legal_id'] = new  sfWidgetFormInputText();
+        $this->widgetSchema['representante_legal_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+                array( 'model'=>'Persona',
+                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_representantes')
+         ));
         
         // Regente Farmaceutico
-      $this->widgetSchema['regente_farmaceutico_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+        $this->widgetSchema['regente_farmaceutico_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
                 array( 'model'=>'Persona',
-                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_personas')
+                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_regentes')
          ));
         
     }

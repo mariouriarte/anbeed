@@ -56,4 +56,23 @@ class personalegalActions extends autoPersonalegalActions
       $this->getUser()->setFlash('error', 'The item has not been saved due to some errors.', false);
     }
   }
+    public function executeBuscar($request)
+    {
+        $this->getResponse()->setContentType('application/json');
+        $buscar = $request->getParameter('q');
+//      Obtenemos los representante legal registrados en el sistema, coincidiendo las busqueda con el nombre apellido paterno o materno
+       $query  = Doctrine::getTable('RepresentanteLegal')
+                              ->createQuery('a')
+                              ->innerJoin('a.Persona p')
+                              ->orWhere('p.nombre LIKE ?', "%$buscar%")
+                              ->orWhere('p.ap_paterno LIKE ?', "%$buscar%")
+                              ->orWhere('p.ap_materno LIKE ?', "%$buscar%")
+                              ->execute();
+        $representantes = array();
+        foreach ($query as $representante) {
+            $nombre_completo = strtoupper($representante->getPersona()->getNombre()." ".$representante->getPersona()->getApPaterno()." ".$representante->getPersona()->getApMaterno());
+            $representantes[$representante->getId()] = (string)($nombre_completo);
+        }
+        return $this->renderText(json_encode($representantes));
+    }
 }
