@@ -11,6 +11,18 @@ require_once dirname(__FILE__).'/../lib/empresasGeneratorHelper.class.php';
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
+function FechaEspanol($fecha)
+{
+    $i = strtotime($fecha);
+    $ano = date('Y', $i);
+    $mes = date('n',$i);
+    $dia = date('d',$i);
+    $diasemana = date('w',$i);
+    $dias = array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+    $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+    return  $dias[$diasemana]." ".$dia." de ".$meses[$mes-1]. " de ".$ano ;
+}
+
 class empresasActions extends autoEmpresasActions
 {
     public function executeNew(sfWebRequest $request)

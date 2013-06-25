@@ -6,7 +6,8 @@
                 ANBEED
             <?php endif ?>
         </title>
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/anbeed.ico" />
+        <link rel="shortcut icon" href="<?php echo sfContext::getInstance()->getRequest()->getRelativeUrlRoot() ?>/favicon.ico" />
         <?php $sf_user->setCulture('es') ?>
         <?php include_http_metas() ?>
         <?php include_metas() ?>
@@ -44,7 +45,7 @@
                             </div>
                             <div id="header-tools">
                                 <?php if (!include_slot('header-tools')): ?>
-                                esapcio 1
+                                espacio 1
                                 <?php endif ?>
                                 <?php if (!$sf_user->isAuthenticated()): ?>
                                     <h2>ANBEED SRL</h2>
@@ -52,7 +53,7 @@
                             </div>
                         </div>
                         <div id="header-bottom">
-                           esapacio 2
+                           espacio 2
                         </div>
                     </div>
                 </div>

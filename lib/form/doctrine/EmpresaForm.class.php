@@ -14,9 +14,11 @@ class EmpresaForm extends BaseEmpresaForm
     {
         unset($this['created_at'], $this['updated_at']);
         
+        $dias = array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+    
         // Fecha de Registro
         $this->widgetSchema['fecha_registro'] = new sfWidgetFormInputText(
-            array(), array('value' => date('Y-m-d'), 'readonly' => 'readonly'));
+            array(), array('value' => FechaEspanol(date('Y-m-d')), 'readonly' => 'readonly', 'size' => '30'));
         //$this->widgetSchema['fecha_registro']->setAttribute('readonly', 'readonly');
         //$this->validatorSchema['fecha_registro'] = new sfValidatorDate(array('required' => true));
         
