@@ -12,5 +12,8 @@
  */
 class RepresentanteLegal extends BaseRepresentanteLegal
 {
-    
+    public function __toString()
+    {
+       return $this->getPersona()->getNombre(). " ".$this->getPersona()->getApPaterno(). " ".$this->getPersona()->getApMaterno() ;
+    }
 }
