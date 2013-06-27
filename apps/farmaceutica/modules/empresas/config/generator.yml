@@ -24,7 +24,7 @@ generator:
         telefono1:                {label: 'Teléfono 1'}
         telefono2:                {label: 'Teléfono 2'}
         registro_camara:          {label: 'Registro en la Cámara Nacional de Industria y/o Comercio'}
-        fundempresa:              {label: 'FUNDEMPRESA'}
+        fundempresa:              {label: 'Fundaempresa'}
         nit:                      {label: 'NIT'}
       list:
         title: Empresas Registradas
@@ -32,8 +32,8 @@ generator:
       filter:
         display: [razon_social, nit]
       form:
-        display: 
-          Datos:                [razon_social, fecha_registro, fecha_resolucion, fax, direccion, casilla, telefono1, telefono1, telefono2, email, actividad, registro_camara, fundempresa, nit, licencia_funcionamiento]
+        display:
+          Datos: [razon_social, fecha_registro, fecha_resolucion, num_resolucion, fax, direccion, casilla, telefono1, telefono1, telefono2, email, actividad, registro_camara, fundempresa, nit, licencia_funcionamiento]
           Personal Responsable: [representante_legal_id, regente_farmaceutico_id]
         actions:
           _list: ~

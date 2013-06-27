@@ -14,11 +14,11 @@ class EmpresaForm extends BaseEmpresaForm
     {
         unset($this['created_at'], $this['updated_at']);
         
-        $dias = array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
-    
+            
         // Fecha de Registro
-        $this->widgetSchema['fecha_registro'] = new sfWidgetFormInputText(
-            array(), array('value' => FechaEspanol(date('Y-m-d')), 'readonly' => 'readonly', 'size' => '30'));
+        
+        $this->widgetSchema['fecha_registro'] = new sfWidgetFormInputHidden(
+            array(), array('value' => date('Y-m-d'), 'readonly' => 'readonly', 'size' => '30'));
         //$this->widgetSchema['fecha_registro']->setAttribute('readonly', 'readonly');
         //$this->validatorSchema['fecha_registro'] = new sfValidatorDate(array('required' => true));
         
@@ -33,13 +33,17 @@ class EmpresaForm extends BaseEmpresaForm
             array('required' => true));
         
         // Representante Legal
-        $this->widgetSchema['representante_legal_id'] = new  sfWidgetFormInputText();
-        
-        // Regente Farmaceutico
-      $this->widgetSchema['regente_farmaceutico_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
-                array( 'model'=>'Persona',
-                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_personas')
+        $this->widgetSchema['representante_legal_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+                array( 'model'=>'RepresentanteLegal',
+                       'url'=>sfContext::getInstance()->getRouting()->generate('buscar_representantes')
          ));
-        
+        //$this->widgetSchema['representante_legal_id']->setOption('method', 'e'); 
+        // Regente Farmaceutico
+        $this->widgetSchema['regente_farmaceutico_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+                array( 'model'=>'RegenteFarmaceutico',
+                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_regentes')
+         ));
+        $this->widgetSchema['regente_farmaceutico_id']->addOption('method', '__toString'); 
+        //$this->widgetSchema['regente_farmaceutico_id']addOption('method', '__toString');
     }
 }

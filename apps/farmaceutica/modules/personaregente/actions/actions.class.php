@@ -41,26 +41,25 @@ class personaregenteActions extends autoPersonaregenteActions
     {
         $this->getResponse()->setContentType('application/json');
         $buscar = $request->getParameter('q');
-
-//        $query = PersonaTable::getInstance()->buscarPersonasQuery(
-//            $request->getParameter('q'),
-//            $request->getParameter('limit')
-//        );
-        $query  = Doctrine::getTable('Persona')
+// Obtenemos los regente farmaceutico registrados en el sistema, coincidiendo las busqueda con el nombre apellido paterno o materno
+         $query = Doctrine::getTable('RegenteFarmaceutico')
                               ->createQuery('a')
-                              ->orWhere('a.nombre LIKE ?', "%$buscar%")
-                              ->orWhere('a.ap_paterno LIKE ?', "%$buscar%")
-                              ->orWhere('a.ap_materno LIKE ?', "%$buscar%")
+                              ->innerJoin('a.Persona p')
+                              ->orWhere('p.nombre LIKE ?', "%$buscar%")
+                              ->orWhere('p.ap_paterno LIKE ?', "%$buscar%")
+                              ->orWhere('p.ap_materno LIKE ?', "%$buscar%")
                               ->execute();
-
-        $personas = array();
-        //var_dump($personas);
-        foreach ($query as $persona) {
-            $nombre_completo = strtoupper($persona->getNombre()." ".$persona->getApPaterno()." ".$persona->getApMaterno());
-            $personas[$persona->getId()] = (string)($nombre_completo);
+        $regentes = array();
+        //var_dump($query);
+        foreach ($query as $regente) {
+            $nombre_completo = strtoupper($regente->getPersona()->getNombre()." ".$regente->getPersona()->getApPaterno()." ".$regente->getPersona()->getApMaterno());
+            $regentes[$regente->getId()] = (string)($nombre_completo);
         }
         //var_dump($personas);
-        return $this->renderText(json_encode($personas));
+        return $this->renderText(json_encode($regentes));
+        
+        
+        
     }
     
 }

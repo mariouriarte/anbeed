@@ -34,7 +34,7 @@ $(document).ready(function()
 });
 </script>
 
-
+<?php echo "Fecha: ".FechaEspanol(date('Y-m-d')); ?>
 
 <script type='text/javascript'>
 function getPersona()

@@ -1,4 +1,79 @@
-buscar_personas:
+ingrediente:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Ingrediente
+    module:               ingredientes
+    prefix_path:          /ingredientes
+    column:               id
+    with_wildcard_routes: true
+
+detalle_formula_cc:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                DetalleFormulaCc
+    module:               detallescc
+    prefix_path:          /detallescc
+    column:               id
+    with_wildcard_routes: true
+
+formula_cc:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                FormulaCc
+    module:               formulas
+    prefix_path:          /formulas
+    column:               id
+    with_wildcard_routes: true
+
+tipo_venta:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoVenta
+    module:               tventas
+    prefix_path:          /tventas
+    column:               id
+    with_wildcard_routes: true
+
+via_administracion:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ViaAdministracion
+    module:               administraciones
+    prefix_path:          /administraciones
+    column:               id
+    with_wildcard_routes: true
+
+forma_farmaceutica:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                FormaFarmaceutica
+    module:               ffarmaceuticas
+    prefix_path:          /ffarmaceuticas
+    column:               id
+    with_wildcard_routes: true
+
+medicamento:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Medicamento
+    module:               medicamentos
+    prefix_path:          /medicamentos
+    column:               id
+    with_wildcard_routes: true
+
+producto:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Producto
+    module:               productos
+    prefix_path:          /productos
+    column:               id
+    with_wildcard_routes: true
+
+buscar_representantes:
+    url:   /personalegal/buscar
+    param: { module: personalegal, action: buscar }
+buscar_regentes:
     url:   /personaregente/buscar
     param: { module: personaregente, action: buscar }
 persona_personalegal:

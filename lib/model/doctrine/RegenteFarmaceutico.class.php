@@ -12,9 +12,14 @@
  */
 class RegenteFarmaceutico extends BaseRegenteFarmaceutico
 {
-    public function __toString() 
+//    public function __toString() 
+//    {
+//        return $this->getMatriculaProfesional();
+//        
+//    }
+    
+    public function __toString()
     {
-        return $this->getMatriculaProfesional();
-        
+       return $this->getPersona()->getNombre(). " ".$this->getPersona()->getApPaterno(). " ".$this->getPersona()->getApMaterno() ;
     }
 }

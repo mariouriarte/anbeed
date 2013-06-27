@@ -116,6 +116,7 @@ class sfWidgetFormJQueryDate extends sfWidgetForm
     jQuery("#%s").datepicker(jQuery.extend({}, {
       minDate:    new Date(%s, 1 - 1, 1),
       maxDate:    new Date(%s, 12 - 1, 31),
+      yearRange: '1933:yy',
       beforeShow: wfd_%s_read_linked,
       onSelect:   wfd_%s_update_linked,
       showOn:     "button",
@@ -125,7 +126,27 @@ class sfWidgetFormJQueryDate extends sfWidgetForm
     }, jQuery.datepicker.regional["%s"], %s, {dateFormat: "yy-mm-dd"}));
     wfd_%s_check_linked_days();
   });
-
+jQuery(function($){
+        $.datepicker.regional['es'] = {
+                closeText: 'Cerrar',
+                prevText: '&#x3c;Ant',
+                nextText: 'Sig&#x3e;',
+                currentText: 'Hoy',
+                monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
+                'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+                monthNamesShort: ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
+                'Julio','Agosto','Septiempre','Octubre','Noviembre','Diciembre'],
+                dayNames: ['Domingo','Lunes','Martes','Mi&eacute;rcoles','Jueves','Viernes','S&aacute;bado'],
+                dayNamesShort: ['Dom','Lun','Mar','Mi&eacute;','Juv','Vie','S&aacute;b'],
+                dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','S&aacute;'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''};
+        $.datepicker.setDefaults($.datepicker.regional['es']);
+});
   jQuery("#%s, #%s, #%s").change(wfd_%s_check_linked_days);
 </script>
 EOF

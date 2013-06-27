@@ -18,11 +18,6 @@ class personalegalGeneratorHelper extends BasePersonalegalGeneratorHelper
         
         return link_to($params['label'] , 'empresas/new?idprl='. $object->getId()
             .'&idprf='. $id_regentefar);
-//        if($object->getId())    
-//        {
-//            
-//        } else {
-//            return link_to($params['label'] , 'empresas/new');
-//        }
+
     }
 }

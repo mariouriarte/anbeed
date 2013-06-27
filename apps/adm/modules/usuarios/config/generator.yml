@@ -13,9 +13,20 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      fields: 
+        username:       {label: Usuario}
+        algorithm:      {label: Algoritmo}
+        password:       {label: Contraseña}
+        is_active:      {label: 'Esta activo?'}
+        is_super_admin: {label: 'Es super-usuario?'}
+      list:    
+        title: Usuarios Registrados
+        display: [username, password]
+      filter:  
+        display: [username]
+      form:
+        display: [username, algorithm, password, is_active, is_super_admin]
+      edit: 
+        title: Editar Usuario %%username%%
+      new:
+        title: Registro de Usuario

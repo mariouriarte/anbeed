@@ -13,10 +13,15 @@ class PersonaForm extends BasePersonaForm
     public function configure()
     {
         unset($this['created_at'], $this['updated_at']);
-      
-        $this->widgetSchema['fecha_nacimiento'] = new sfWidgetFormJQueryDate(
-            array('culture' => 'es'));
         
+        //Fecha de nacimiento
+        $years = range(date('Y') - 80, date('Y'));   
+        $this->widgetSchema['fecha_nacimiento'] = new sfWidgetFormJQueryDate(
+            array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
+                  'years' => array_combine($years, $years))), ));
+        
+        $this->validatorSchema['fecha_nacimiento'] = new sfValidatorDate(
+            array('required' => true));
        
         if(sfContext::getInstance()->getModuleName() == "personalegal")
         {

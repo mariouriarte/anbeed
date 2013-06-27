@@ -40,10 +40,6 @@ generator:
           _save: ~
       edit:
         title: Editar Representante Legal %%nombre%%
-#        actions:
-#          _save: ~
       new:
         title: Nuevo Representante Legal
-#        actions:
-#          ir_empresa: {label: Volver a empresa}
-#          _save: ~
+
