@@ -35,6 +35,9 @@ generator:
         display: 
           Datos:                [razon_social, fecha_registro, fecha_resolucion, fax, direccion, casilla, telefono1, telefono1, telefono2, email, actividad, registro_camara, fundempresa, nit, licencia_funcionamiento]
           Personal Responsable: [representante_legal_id, regente_farmaceutico_id]
+        actions:
+          _list: ~
+          _save: ~
       edit:
         title: Editar Empresa %%razon_social%%
       new:

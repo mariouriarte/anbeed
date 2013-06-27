@@ -35,10 +35,15 @@ generator:
         display: 
           Datos de la Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
           Datos de Representante: [Nuevo Representante]
+        actions:
+          ir_empresa: {label: Volver a empresa}
+          _save: ~
       edit:
         title: Editar Representante Legal %%nombre%%
+#        actions:
+#          _save: ~
       new:
         title: Nuevo Representante Legal
-        actions: 
-          _list: ~
-          _save: ~
+#        actions:
+#          ir_empresa: {label: Volver a empresa}
+#          _save: ~

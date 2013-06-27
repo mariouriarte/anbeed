@@ -35,10 +35,11 @@ generator:
         display: 
           Datos de la Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
           Personal Responsable: [Nuevo Regente]
+        actions:
+          ir_empresa: {label: Volver a empresa}
+          _save: ~
       edit:
         title: Editar Regente Farmaceutico %%nombre%%
       new:
         title: Nuevo Regente Farmaceutico
         actions:
-          _list: ~
-          _save: ~

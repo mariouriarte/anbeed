@@ -13,17 +13,30 @@ require_once dirname(__FILE__).'/../lib/personaregenteGeneratorHelper.class.php'
  */
 class personaregenteActions extends autoPersonaregenteActions
 {
+    public function executeNew(sfWebRequest $request)
+    {
+        parent::executeNew($request);
+       
+        $user = $this->getUser();
+        
+        if($request->hasParameter('idprl'))
+        {
+            $user->setAttribute('id_reprelegal', $request->getParameter('idprl')) ;
+        }
+    }
     
     public function executeEdit(sfWebRequest $request)
     {
-//       $this->persona = $this->getRoute()->getObject();
-//       $this->form = $this->configuration->getForm($this->persona);
         parent::executeEdit($request);
        
-       $this->regente = $this->persona->getRegenteFarmaceutico();
-//       $this->form2 = $this->configuration->getForm($this->regente);
-       
+        $user = $this->getUser();
+        
+        if($request->hasParameter('idprl'))
+        {
+            $user->setAttribute('id_reprelegal', $request->getParameter('idprl')) ;
+        }
     }
+    
     public function executeBuscar($request)
     {
         $this->getResponse()->setContentType('application/json');

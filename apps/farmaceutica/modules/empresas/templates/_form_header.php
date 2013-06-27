@@ -1,4 +1,24 @@
 <?php use_javascript('jquery-migrate.js') ?>
+
+<?php
+
+$idprl = $sf_params->get('idprl');
+$idprf = $sf_params->get('idprf');
+
+$url  = link_to('Crear Representante Legal', 'personalegal/new?idprf='. $idprf);
+$url2 = link_to('Crear Regente Farmacéutico', 'personaregente/new?idprl='. $idprl);
+
+if($sf_params->has('idprl') && ($sf_params->get('idprl') != ''))
+{
+    $url  = link_to('Editar Representante Legal', 'personalegal/edit?id='.$idprl.'&idprf='. $idprf);
+}
+
+if($sf_params->has('idprf')&& ($sf_params->get('idprf') != ''))
+{
+    $url2 = link_to('Editar Regente Farmacéutico', 'personaregente/edit?id='.$idprf.'&idprl='. $idprl);
+}
+?>
+
 <script type='text/javascript'>
 $(document).ready(function()
 {
@@ -7,10 +27,10 @@ $(document).ready(function()
 //    $('#empresa_regente_farmaceutico_id')
 //        .after('<button type="button" id="btn-buscar-regente" class="btn-buscar-trigger">Crear Regente</button>');
     $('#empresa_representante_legal_id')
-        .after('<?php echo link_to('Crear Representante Legal', 'personalegal/new');  ?>');
+        .after('<?php echo $url; ?>');
     
     $('#empresa_regente_farmaceutico_id')
-        .after('<?php echo link_to('Crear Regente Farmacéutico', 'personaregente/new');  ?>');
+        .after('<?php echo $url2;  ?>');
 });
 </script>
 
