@@ -52,7 +52,9 @@
                             </div>
                         </div>
                         <div id="header-bottom">
-                           esapacio 2
+                           <?php if (!include_slot('header-navegador')): ?>
+                                
+                           <?php endif ?>
                         </div>
                     </div>
                 </div>

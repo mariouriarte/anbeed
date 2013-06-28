@@ -25,6 +25,16 @@ function FechaEspanol($fecha)
 
 class empresasActions extends autoEmpresasActions
 {
+    
+    public function executeAdministrarEmpresa(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        
+        $this->empresa = $this->getRoute()->getObject();
+        
+        $user->setAttribute('empresa', $this->empresa);
+    }
+    
     public function executeNew(sfWebRequest $request)
     {
         parent::executeNew($request);
