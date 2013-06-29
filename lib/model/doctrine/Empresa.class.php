@@ -12,4 +12,8 @@
  */
 class Empresa extends BaseEmpresa
 {
+    public function __toString()
+    {
+       return $this->getRazonSocial();
+}
 }

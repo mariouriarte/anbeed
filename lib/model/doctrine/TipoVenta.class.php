@@ -12,4 +12,8 @@
  */
 class TipoVenta extends BaseTipoVenta
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+}
 }

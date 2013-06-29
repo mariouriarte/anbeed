@@ -1,0 +1,29 @@
+## YAML Template.
+---
+ViaAdministracion:
+  Oral:
+    nombre: Vía Oral
+  Sublingual:
+    nombre: Vía Sublingual
+  Nasal:
+    nombre: Vía Nasal
+  Oftalmica:
+    nombre: Vía Oftálmica
+  Topica:
+    nombre: Vía Tópica
+  Subcutaneas:
+    nombre: Vía Subcutánea
+  Intramuscular:
+    nombre: Vía Intramuscular 
+  Intravenosa:
+    nombre: Vía Intravenosa
+  Inaladora:
+    nombre: Vía Inaladora
+  Inalatoria:
+    nombre: Vía Inalatoria
+  Intravenosa:
+    nombre: Vía Intravenosa
+  Rectal:
+    nombre: Vía Rectal
+  Parenteral:
+    nombre: Vía Parenteral
