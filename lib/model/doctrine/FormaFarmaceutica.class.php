@@ -12,4 +12,8 @@
  */
 class FormaFarmaceutica extends BaseFormaFarmaceutica
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+    }
 }
