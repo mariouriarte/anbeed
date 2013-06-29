@@ -4,32 +4,19 @@
     <?php echo $empresa->getRazonSocial() ?>
 <?php end_slot(); ?>
 
-<h2>Esta en el espacio: <?php echo $empresa->getRazonSocial() ?></h2>
-<h2>NIT: <?php echo $empresa->getNit() ?></h2>
-<h2>Representante Legal: <?php echo $empresa->RepresentanteLegal ?></h2>
-<h2>Regente Farmaceutico: <?php echo $empresa->RegenteFarmaceutico ?></h2>
+
+<!--<h2>Representante Legal: <?php echo $empresa->RepresentanteLegal ?></h2>
+<h2>Regente Farmaceutico: <?php echo $empresa->RegenteFarmaceutico ?></h2>-->
 
 <div class="portal">
+    <h2>Esta en el espacio: <?php echo $empresa->getRazonSocial() ?></h2>
+    <h2>NIT: <?php echo $empresa->getNit() ?></h2>
     <div class="linea">
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo">Producto</h2>
+                    <h2 class="titulo"><img src="/images/icons/applications-development.png" />Laboratorios</h2>
                     <div class="contenido">
-                        <img src="/images/04_maps_32.png" />
-                        <ul>
-                            <li><a href="/farmaceutica_dev.php/empresas"><span>Empresas</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columna">
-            <div class="cubo">
-                <div class="adentro">
-                    <h2 class="titulo">Producto</h2>
-                    <div class="contenido">
-                        <img src="/images/applications_engineering.png" />
                         <ul>
                             <li><a href="/farmaceutica_dev.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
                         </ul>
@@ -37,17 +24,29 @@
                 </div>
             </div>
         </div>
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <h2 class="titulo"><img src="/images/icons/application-vnd.ms-powerpoint.png" />Medicamentos</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/farmaceutica_dev.php/medicamentos"><span>Productos Medicamentos</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
     
     <div class="linea">
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo">Producto</h2>
+                    <h2 class="titulo"><img src="/images/icons/application-vnd.ms-powerpoint.png" />Dispositivos Médicos</h2>
                     <div class="contenido">
-                        <img src="/images/applications_engineering.png" />
                         <ul>
-                            <li><a href="/adm_dev.php/usuarios"><span>Usuarios</span></a></li>
+                            <li><a href="/adm_dev.php/usuarios"><span>Productos Dispositivos Médicos</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -56,11 +55,10 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo">Producto</h2>
+                    <h2 class="titulo"><h2 class="titulo"><img src="/images/icons/application-vnd.ms-powerpoint.png" />Cosméticos</h2></h2>
                     <div class="contenido">
-                        <img src="/images/applications_engineering.png" />
                         <ul>
-                            <li><a href="/adm_dev.php/personas"><span>Personas</span></a></li>
+                            <li><a href="/adm_dev.php/personas"><span>Productos Cosméticos</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -68,4 +66,10 @@
         </div>
     
     </div>
+    <ul class="acciones_lista">
+        <li class="acciones_lista_list">
+            <?php echo link_to('Volver al listado', 'empresas/index') ?>
+        </li>
+    </ul>
 </div>
+

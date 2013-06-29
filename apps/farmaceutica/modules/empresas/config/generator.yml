@@ -29,10 +29,12 @@ generator:
         
       list:
         title: Empresas Registradas
-        display: [razon_social, nit, fecha_registro]
+        display: [razon_social, nit]
         object_actions:
           adm_empresa: {label: Administrar, action: administrarEmpresa}
-          _edit: ~
+        actions:
+          ir_portal: {label: Ir a Portal}
+          _new: ~
       filter:
         display: [razon_social, nit]
       form:

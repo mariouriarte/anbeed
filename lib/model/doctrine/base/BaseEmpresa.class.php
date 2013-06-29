@@ -79,11 +79,11 @@ abstract class BaseEmpresa extends sfDoctrineRecord
         $this->setTableName('empresa');
         $this->hasColumn('representante_legal_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('regente_farmaceutico_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('razon_social', 'string', 255, array(
              'type' => 'string',

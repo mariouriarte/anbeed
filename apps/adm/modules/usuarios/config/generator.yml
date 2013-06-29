@@ -21,11 +21,14 @@ generator:
         is_super_admin: {label: 'Es super-usuario?'}
       list:    
         title: Usuarios Registrados
-        display: [username, password]
+        display: [username]
+        actions:
+          ir_portal: {label: Ir a Portal}
+          _new: ~
       filter:  
         display: [username]
       form:
-        display: [username, algorithm, password, is_active, is_super_admin]
+        display: [username, is_active, is_super_admin]
       edit: 
         title: Editar Usuario %%username%%
       new:

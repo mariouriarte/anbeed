@@ -41,8 +41,8 @@ RegenteFarmaceutico:
 Empresa:
   actAs: {Timestampable: ~}
   columns:
-    representante_legal_id:  {type: integer, notnull: true}
-    regente_farmaceutico_id: {type: integer, notnull: true}
+    representante_legal_id:  {type: integer, notnull: false}
+    regente_farmaceutico_id: {type: integer, notnull: false}
     razon_social:            {type: string(255), notnull: true, unique: true}
     fecha_registro:          {type: date}
     num_resolucion:          {type: string(30), notnull: true, unique: true}

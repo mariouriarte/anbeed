@@ -49,5 +49,10 @@ class empresasActions extends autoEmpresasActions
 //                ->getParameter('legal_id'));
         //$user->setAttribute('idrl', $request->getParameter('idrl'));
         
+    } 
+    
+    public function executeListIrPortal(sfWebRequest $request)
+    {
+        $this->redirect('/portal_dev.php/inicio/index');
     }
 }
