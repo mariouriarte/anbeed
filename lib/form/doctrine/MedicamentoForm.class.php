@@ -12,5 +12,7 @@ class MedicamentoForm extends BaseMedicamentoForm
 {
   public function configure()
   {
+      unset($this['created_at'], $this['updated_at']);
+      $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden();
   }
 }
