@@ -15,10 +15,10 @@ abstract class BaseLaboratorioFabricanteFormFilter extends BaseFormFilterDoctrin
     $this->setWidgets(array(
       'pais_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'add_empty' => true)),
       'nombre'        => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'bajo_licencia' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'para'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'bajo_licencia' => new sfWidgetFormFilterInput(),
+      'para'          => new sfWidgetFormFilterInput(),
       'direccion'     => new sfWidgetFormFilterInput(),
-      'telefono'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'telefono'      => new sfWidgetFormFilterInput(),
       'fax'           => new sfWidgetFormFilterInput(),
       'email'         => new sfWidgetFormFilterInput(),
       'observaciones' => new sfWidgetFormFilterInput(),

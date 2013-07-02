@@ -1,3 +1,12 @@
+producto_prodmed:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Producto
+    module:               prodmed
+    prefix_path:          /prodmed
+    column:               id
+    with_wildcard_routes: true
+
 ingrediente:
   class: sfDoctrineRouteCollection
   options:

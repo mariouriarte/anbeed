@@ -23,7 +23,8 @@ generator:
          title:   Medicamentos Registrados
          display: [nombre_generico, laboratorio_fabricante_id, registro_sanitario]
          actions:
-          adm_empresa: {label: Administrar Empresa}
+          adm_empresa: {label: Volver a Empresa}
+          _new:     ~ 
       filter:  
         display:  [laboratorio_fabricante_id, nombre_generico, registro_sanitario]
       form:

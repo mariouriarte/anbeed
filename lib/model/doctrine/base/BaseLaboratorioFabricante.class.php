@@ -62,27 +62,27 @@ abstract class BaseLaboratorioFabricante extends sfDoctrineRecord
              ));
         $this->hasColumn('bajo_licencia', 'string', 255, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 255,
              ));
         $this->hasColumn('para', 'string', 255, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 255,
              ));
         $this->hasColumn('direccion', 'string', 255, array(
              'type' => 'string',
              'length' => 255,
              ));
-        $this->hasColumn('telefono', 'string', 20, array(
-             'type' => 'string',
-             'notnull' => true,
-             'length' => 20,
-             ));
-        $this->hasColumn('fax', 'string', 20, array(
+        $this->hasColumn('telefono', 'string', 150, array(
              'type' => 'string',
              'notnull' => false,
-             'length' => 20,
+             'length' => 150,
+             ));
+        $this->hasColumn('fax', 'string', 150, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => 150,
              ));
         $this->hasColumn('email', 'string', 255, array(
              'type' => 'string',
