@@ -4,14 +4,56 @@
     <?php echo $empresa->getRazonSocial() ?>
 <?php end_slot(); ?>
 
+<?php slot('header-tools') ?>
+    <table>
+        <tbody>
+            <tr>
+                <th>Esta en el espacio</th>
+                <td><?php echo $empresa->getRazonSocial() ?></td>
+                <th>Representante Legal</th>
+                <td><?php echo $empresa->RepresentanteLegal ?></td>
+            <tr>
+            <tr>
+                <th>NIT</th>
+                <td><?php echo $empresa->getNit() ?></td>
+                <th>Regente Farmaceutico</th>
+                <td><?php echo $empresa->RegenteFarmaceutico ?></td>
+            <tr>
+        </tbody>
+    </table>
+<?php end_slot(); ?>
 
-<!--<h2>Representante Legal: <?php echo $empresa->RepresentanteLegal ?></h2>
-<h2>Regente Farmaceutico: <?php echo $empresa->RegenteFarmaceutico ?></h2>-->
 
 <div class="portal">
-    <h2>Esta en el espacio: <?php echo $empresa->getRazonSocial() ?></h2>
-    <h2>NIT: <?php echo $empresa->getNit() ?></h2>
+    
+    <ul class="acciones_lista">
+        <li class="acciones_lista_list">
+            <?php echo link_to('Volver al listado', 'empresas/index') ?>
+        </li>
+    </ul>
     <div class="linea">
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <h2 class="titulo"><img src="/images/icons/applications-debugging.png" />Administración</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><?php echo link_to('Editar Empresa', 'empresas/edit?id=' . $empresa->getId()) ?></li>
+                            
+                            <li>
+                                <?php if($empresa->RepresentanteLegal->Persona->getId()): ?>
+                                    <?php echo link_to('Editar Representante Legal', 'personalegal/edit?id=' . $empresa->RepresentanteLegal->Persona->getId()) ?>
+                                <?php else: ?>
+                                    <?php echo link_to('Crear Representante Legal', 'personalegal/index') ?>
+                                <?php endif; ?>
+                            </li>
+                            
+                            <li><?php echo link_to('Editar Regente Farmaceútico', 'personaregente/edit?id=' . $empresa->RegenteFarmaceutico->Persona->getId()) ?></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">

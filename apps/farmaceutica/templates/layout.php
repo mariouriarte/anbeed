@@ -44,7 +44,6 @@
                             </div>
                             <div id="header-tools">
                                 <?php if (!include_slot('header-tools')): ?>
-                                esapcio 1
                                 <?php endif ?>
                                 <?php if (!$sf_user->isAuthenticated()): ?>
                                     <h2>ANBEED SRL</h2>
