@@ -72,7 +72,7 @@
                     <h2 class="titulo"><img src="/images/icons/application-vnd.ms-powerpoint.png" />Medicamentos</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/farmaceutica_dev.php/medicamentos"><span>Productos Medicamentos</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/prodmed"><span>Productos Medicamentos</span></a></li>
                         </ul>
                     </div>
                 </div>

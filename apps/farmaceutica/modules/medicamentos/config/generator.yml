@@ -13,7 +13,9 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields: ~
+        #pais_id:        {label: 'País de Origen'}
+        #bajo_liciencia: {label: 'Bajo Licencia de'}
       list:    ~
       filter:  ~
       form:    ~
