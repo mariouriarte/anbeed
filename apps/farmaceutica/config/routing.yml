@@ -79,6 +79,9 @@ producto:
     column:               id
     with_wildcard_routes: true
 
+buscar_labs:
+    url:   /laboratorios/buscar
+    param: { module: laboratorios, action: buscar }
 buscar_representantes:
     url:   /personalegal/buscar
     param: { module: personalegal, action: buscar }

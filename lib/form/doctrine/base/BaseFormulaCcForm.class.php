@@ -15,17 +15,17 @@ abstract class BaseFormulaCcForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'                    => new sfWidgetFormInputHidden(),
-      'detalle_formula_cc_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('DetalleFormulaCc'), 'add_empty' => false)),
-      'created_at'            => new sfWidgetFormDateTime(),
-      'updated_at'            => new sfWidgetFormDateTime(),
+      'id'            => new sfWidgetFormInputHidden(),
+      'observaciones' => new sfWidgetFormTextarea(),
+      'created_at'    => new sfWidgetFormDateTime(),
+      'updated_at'    => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'id'                    => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'detalle_formula_cc_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('DetalleFormulaCc'))),
-      'created_at'            => new sfValidatorDateTime(),
-      'updated_at'            => new sfValidatorDateTime(),
+      'id'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'observaciones' => new sfValidatorString(array('max_length' => 2000, 'required' => false)),
+      'created_at'    => new sfValidatorDateTime(),
+      'updated_at'    => new sfValidatorDateTime(),
     ));
 
     $this->widgetSchema->setNameFormat('formula_cc[%s]');

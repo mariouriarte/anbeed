@@ -148,18 +148,19 @@ TipoVenta:
 FormulaCc:
   actAs: {Timestampable: ~}
   columns:
-    detalle_formula_cc_id: {type: integer, notnull: true}
+    observaciones: {type: string(2000), notnull: false}
   relations:
-    DetalleFormulaCc: {local: detalle_formula_cc_id, foreign: id, type: many, foreignAlias: FormulaCc}
+    DetalleFormulaCc: {local: id, foreign: formula_cc_id, type: many, foreignAlias: FormulaCc}
     
 DetalleFormulaCc:
   actAs: {Timestampable: ~}
   columns:
+    formula_cc_id:  {type: integer, notnull: true}
     ingrediente_id: {type: integer, notnull: true}
     cantidad:       {type: decimal(5), scale: 2, notnull: true}
     unidad:         {type: string(20), notnull: true}
   relations:
-    FormulaCc:   {local: id, foreign: detalle_formula_cc_id, type: one, foreignAlias: Detalles}
+    FormulaCc:   {local: formula_cc_id, foreign: id, type: one, foreignAlias: Detalles}
     Ingrediente: {local: ingrediente_id, foreign: id, type: many, foreignAlias: Detalles}
     
 Ingrediente:

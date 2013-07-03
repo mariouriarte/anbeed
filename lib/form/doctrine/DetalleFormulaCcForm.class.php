@@ -12,5 +12,9 @@ class DetalleFormulaCcForm extends BaseDetalleFormulaCcForm
 {
   public function configure()
   {
+      unset($this['created_at'], $this['updated_at']);
+//      $producto = sfContext::getInstance()->getUser()->getAttribute('producto');
+      $this->widgetSchema['formula_cc_id'] = new sfWidgetFormInputHidden(
+            array(), array('value' => 1));
   }
 }
