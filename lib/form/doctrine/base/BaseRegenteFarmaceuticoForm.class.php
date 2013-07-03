@@ -19,6 +19,7 @@ abstract class BaseRegenteFarmaceuticoForm extends BaseFormDoctrine
       'persona_id'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Persona'), 'add_empty' => false)),
       'matricula_profesional' => new sfWidgetFormInputText(),
       'carnet_colegiado'      => new sfWidgetFormInputText(),
+      'is_active'             => new sfWidgetFormInputCheckbox(),
       'created_at'            => new sfWidgetFormDateTime(),
       'updated_at'            => new sfWidgetFormDateTime(),
     ));
@@ -28,6 +29,7 @@ abstract class BaseRegenteFarmaceuticoForm extends BaseFormDoctrine
       'persona_id'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Persona'))),
       'matricula_profesional' => new sfValidatorString(array('max_length' => 20)),
       'carnet_colegiado'      => new sfValidatorString(array('max_length' => 20)),
+      'is_active'             => new sfValidatorBoolean(array('required' => false)),
       'created_at'            => new sfValidatorDateTime(),
       'updated_at'            => new sfValidatorDateTime(),
     ));

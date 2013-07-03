@@ -37,6 +37,7 @@ class personalegalActions extends autoPersonalegalActions
 //        }
     }
     
+    // Quita el representante legal desde editar personalegal
     public function executeListQuitarPersonalegal(sfWebRequest $request)
     {
         $user = $this->getUser();
@@ -45,17 +46,24 @@ class personalegalActions extends autoPersonalegalActions
         $empresa->setRepresentanteLegal(null);
         $empresa->save();
         
+        $persona = $this->getRoute()->getObject();
+        $persona->RepresentanteLegal->setIsActive(false);
+        $persona->save();
+                
         $this->redirect('empresas/administrarEmpresa?id=' . $empresa->getId());
     }
     
     public function executeAsignarPersonalegal(sfWebRequest $request)
     {
         $persona = $this->getRoute()->getObject();
+        $persona->RepresentanteLegal->setIsActive(true);
+        $persona->save();
         
         $user = $this->getUser();
         $empresa = $user->getAttribute('empresa');
         
         $empresa->setRepresentanteLegal($persona->RepresentanteLegal);
+        
         $empresa->save();
         
         $this->redirect('empresas/administrarEmpresa?id=' . $empresa->getId());

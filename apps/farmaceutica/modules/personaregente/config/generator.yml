@@ -27,18 +27,28 @@ generator:
         email:           {label: 'Email'}
         
       list:
-        title: Listado de Personas
+        table_method:   selectPersonasRegentes
+        title: Listado de Regentes Farmaceuticos disponibles
         display: [nombre, ap_paterno, ap_materno, cedula_expedido, telefono]
+        object_actions:
+          asignar_personaregente: {label: Asignar Persona, action: asignarPersonaregente, params: 'class=boton-asignar confirm=¿Asignar al Personal?'}
+        actions:
+          ir_empresa: {label: Volver a Empresa}
+          _new: ~
       filter:
         display: [nombre, ap_paterno, ci]
       form:
         display: 
           Datos de la Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
           Personal Responsable: [Nuevo Regente]
-        actions:
-          ir_empresa: {label: Volver a empresa}
-          _save: ~
       edit:
         title: Editar Regente Farmaceutico %%nombre%%
+        actions:
+          ir_empresa:            {label: Volver a empresa}
+          quitar_personaregente: {label: Quitar Regente Farmaceútico, params: 'class=boton-quitar confirm=¿Quitar Regente Farmaceútico?'}
+          _save: ~
       new:
         title: Nuevo Regente Farmaceutico
+        actions:
+          _list: ~
+          _save: ~

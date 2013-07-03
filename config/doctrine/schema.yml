@@ -14,7 +14,9 @@ Persona:
     fax:              {type: string(20)}
     casilla:          {type: string(10)}
     email:            {type: string(255), notnull: false, unique: true}
-    fecha_nacimiento: {type: date}
+    fecha_nacimiento: {type: date, notnull: false}
+    is_active:        {type: boolean, default: true, notnull: true}
+    foto:             {type: string(50), default: null, notnull: false}
   relations:
     sfGuardUser:         {local: id, foreign: persona_id,  type: one, foreignAlias: Persona}
     RepresentanteLegal:  {local: id, foreign: persona_id, type: one, foreignAlias: Persona}
@@ -24,6 +26,7 @@ RepresentanteLegal:
   actAs: {Timestampable: ~}
   columns:
     persona_id: {type: integer, notnull: true}
+    is_active:        {type: boolean, default: true, notnull: true}
   relations:
     Persona: {local: persona_id, foreign: id, type: one, foreignAlias: Representante}
     Empresa: {local: id, foreign: representante_legal_id, type: one, foreignAlias: Representante}
@@ -34,6 +37,7 @@ RegenteFarmaceutico:
     persona_id:            {type: integer, notnull: true}
     matricula_profesional: {type: string(20), notnull: true}
     carnet_colegiado:      {type: string(20), notnull: true}
+    is_active:        {type: boolean, default: true, notnull: true}
   relations:
     Persona: {local: persona_id, foreign: id, type: one, foreignAlias: Regente}
     Empresa: {local: id, foreign: regente_farmaceutico_id, type: one, foreignAlias: Regente}
@@ -55,9 +59,10 @@ Empresa:
     email:                   {type: string(255), notnull: false, unique: true}
     actividad:               {type: string(255), notnull: true}
     registro_camara:         {type: string(30), notnull: false}
-    fundempresa:            {type: string(30), notnull: true}
+    fundempresa:             {type: string(30), notnull: true}
     nit:                     {type: string(30), notnull: true, unique: true}
     licencia_funcionamiento: {type: string(30), notnull: true, unique: true}
+    is_active:               {type: boolean, default: true, notnull: true}
   relations:
     RepresentanteLegal:  {local: representante_legal_id, foreign: id, type: one, foreignAlias: Empresa}
     RegenteFarmaceutico: {local: regente_farmaceutico_id, foreign: id, type: one, foreignAlias: Empresa}
@@ -108,10 +113,10 @@ Medicamento:
     forma_farmaceutica_id: {type: integer, notnull: true}
     via_administracion_id: {type: integer, notnull: true}
     tipo_venta_id:         {type: integer, notnull: true}    
-    formula_cc_id:         {type: integer, notnull: true}
+    formula_cc_id:         {type: integer, notnull: false}
     nombre_comercial:      {type: string(255), notnull: true}
     concentracion:         {type: string(150), notnull: true}
-    accion_terapeutica:    {type: string(255)}
+    accion_terapeutica:    {type: string(2000)}
     conservacion:          {type: string(255)}
     periodo_validez:       {type: string(50)}
     especificacion_envase: {type: string(2000)}
