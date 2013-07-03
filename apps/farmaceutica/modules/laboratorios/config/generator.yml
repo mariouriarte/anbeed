@@ -15,15 +15,16 @@ generator:
       actions: ~
       fields:
         pais_id:        {label: 'País de Origen'}
+        pais:           {label: 'País de Origen'}
         bajo_liciencia: {label: 'Bajo Licencia de'}
         direccion:      {label: 'Dirección'}
         telefono:       {label: 'Teléfono'}
         email:          {label: 'E-mail'}
       list: 
         title: Laboratorios Farmaceuticos Registrados
-        display: [nombre, telefono]
+        display: [nombre, pais, telefono]
       filter:
-        display:        [nombre] 
+        display:        [nombre, pais_id] 
       form:
         display:        [pais_id, nombre, bajo_licencia, para, direccion, telefono, fax, email, observaciones]
       edit:    

@@ -13,8 +13,11 @@ require_once dirname(__FILE__).'/../lib/prodmedGeneratorHelper.class.php';
  */
 class prodmedActions extends autoProdmedActions
 {
-    public function executeListIrPortal(sfWebRequest $request)
+    public function executeListAdmEmpresa(sfWebRequest $request)
     {
-        $this->redirect('/portal_dev.php/inicio/index');
-    }
+        $user = $this->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $this->redirect('/farmaceutica_dev.php/empresas/'.$empresa->getId().'/administrarEmpresa');
+    }    
+
 }

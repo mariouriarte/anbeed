@@ -73,11 +73,11 @@ LaboratorioFabricante:
   columns:
     pais_id:       {type: integer, notnull: true}
     nombre:        {type: string(255), notnull: true, unique: true}
-    bajo_licencia: {type: string(255), notnull: true}
-    para:          {type: string(255), notnull: true}
+    bajo_licencia: {type: string(255), notnull: false}
+    para:          {type: string(255), notnull: false}
     direccion:     {type: string(255)}
-    telefono:      {type: string(20), notnull: true}
-    fax:           {type: string(20), notnull: false}
+    telefono:      {type: string(150), notnull: false}
+    fax:           {type: string(150), notnull: false}
     email:         {type: string(255), notnull: false, unique: true}
     observaciones: {type: string(2000)}
   relations:
