@@ -41,7 +41,7 @@ abstract class BaseDetalleFormulaCc extends sfDoctrineRecord
              ));
         $this->hasColumn('ingrediente_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('cantidad', 'decimal', 5, array(
              'type' => 'decimal',

@@ -10,31 +10,92 @@
  */
 class FormulaCcForm extends BaseFormulaCcForm
 {
+  protected $detallesAEliminar = array();
   public function configure()
   {
-        unset($this['created_at'], $this['updated_at']);
-        //Form enbebido, Detalle de formulas
-        $subForm = new sfForm();
-        for ($i = 1; $i < 6; $i++)
-        {
-            if($this->isNew())
-            {
-                $detalle = new DetalleFormulaCc();
-            }
-            else 
-            {
-              $detalles = Doctrine_Query::create()
-                    ->from('DetalleFormulaCc a')                    
-                    ->where('a.formulaCc_id = ?', $this->getObject()->getId())
-                    ->execute();
-        
-                $detalle = $detalles[0];
-            }   
-            $detalle->FormulaCc = $this->getObject();
-            
-            $form2 = new DetalleFormulaCcForm($detalle);
-            $subForm->embedForm( $i , $form2);
-        }
-            $this->embedForm('Formula CualiCuantitativa', $subForm);
+      unset($this['created_at'], $this['updated_at']);
+      //Creamos un DetallesFormulaCcForm (nuevo), para tener la coleecion de detalles de formulas cc
+      //Revisar -> DetallesFormulaCcForm
+//      $Form = new DetallesFormulaCcForm(null, array(
+//           'formulaCc' => $this->getObject(),
+//           'size'    => 1,
+//      ));
+//      $this->embedForm('Formula CualiCuantitativa', $Form);
+//      $this->embedRelation('DetalleFormulaCc') ;
+      //unset($this['DetalleFormulaCc']['id']);
+      $detalle = new DetalleFormulaCc();
+      $detalle->setFormulaCc($this->object);
+      $detalleForm = new DetalleFormulaCcForm($detalle);
+      $this->embedForm('NuevoDetalleFormulaCc', $detalleForm);  
+
+      $this->embedRelation('DetalleFormulaCc');
+      
+      
   }
+  protected function doBind(array $values) {
+    // step 3.1
+    if ('' === trim($values['NuevoDetalleFormulaCc']['ingrediente_id']) AND
+        '' === trim($values['NuevoDetalleFormulaCc']['cantidad']) AND
+        '' === trim($values['NuevoDetalleFormulaCc']['unidad'])) {
+      $this->validatorSchema['NuevoDetalleFormulaCc'] = new sfValidatorPass();
+    }
+
+    // para eliminar
+     if (isset($values['DetalleFormulaCc'])) {
+      foreach ($values['DetalleFormulaCc'] as $key => $detalless) {
+        if (isset($detalless['Eliminar']) && $detalless['id']) {
+          $this->detallesAEliminar[$key] = $detalless['id'];
+        }
+      }
+    }
+    
+    
+    parent::doBind($values);
+  }
+
+   protected function doUpdateObject($values) {
+    // step 4.4
+    if (count($this->detallesAEliminar)) {
+      foreach ($this->detallesAEliminar as $index => $id) {
+        unset($values['DetalleFormulaCc'][$index]);
+        unset($this->object['DetalleFormulaCc'][$index]);
+        DetalleFormulaCcTable::getInstance()->findOneById($id)->delete();
+      }
+    }
+
+    parent::doUpdateObject($values);
+  }
+  public function saveEmbeddedForms($con = null, $forms = null) {
+    if (null === $con) {
+      $con = $this->getConnection();
+    }
+
+    // step 3.2
+    if (null === $forms) {
+      $detalle = $this->getValue('NuevoDetalleFormulaCc');
+      $forms = $this->embeddedForms;
+     
+      if ('' === trim($detalle['ingrediente_id']) AND
+          '' === trim($detalle['cantidad']) AND
+          '' === trim($detalle['unidad'])) {
+          unset($forms['NuevoDetalleFormulaCc']);
+      }
+
+    }
+
+    foreach ($forms as $form){
+      if ($form instanceof sfFormObject) 
+      {
+           if (!in_array($form->getObject()->getId(), $this->detallesAEliminar)) 
+           {
+                $form->saveEmbeddedForms($con);
+                $form->getObject()->save($con);
+           }
+      } 
+      else {
+        $this->saveEmbeddedForms($con, $form->getEmbeddedForms());
+      }
+    }
+  }
+  
 }

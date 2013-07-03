@@ -13,9 +13,19 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
+      fields:  
+        observaciones:         {label: 'Observaciones'} 
+        NuevoDetalleFormulaCc: {label: 'Nuevo Detalle '}
+        DetalleFormulaCc:      {label: 'Detalle(s) Resgistrado(s)'}
+      list:    
+        title:   Fórmulas Cualicuantitativas Registradas
       filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      form:  
+        display:  
+          Fórmula Cualicuantitativa:                                [observaciones]
+          Nuevo Detalle de la Fórmula Cualicuantitativa:            [NuevoDetalleFormulaCc]
+          Detalle(s) de la Fórmula Cualicuantitativa Registrada(s): [DetalleFormulaCc]
+      edit:   
+        title:   Editar Fórmula Cualicuantitativa
+      new:     
+        title:   Registro de Fórmula Cualicuantitativa

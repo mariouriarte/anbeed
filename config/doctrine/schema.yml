@@ -156,7 +156,7 @@ DetalleFormulaCc:
   actAs: {Timestampable: ~}
   columns:
     formula_cc_id:  {type: integer, notnull: true}
-    ingrediente_id: {type: integer, notnull: true}
+    ingrediente_id: {type: integer, notnull: false}
     cantidad:       {type: decimal(5), scale: 2, notnull: true}
     unidad:         {type: string(20), notnull: true}
   relations:

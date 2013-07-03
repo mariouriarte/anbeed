@@ -13,4 +13,19 @@ require_once dirname(__FILE__).'/../lib/ingredientesGeneratorHelper.class.php';
  */
 class ingredientesActions extends autoIngredientesActions
 {
+    public function executeBuscar(sfWebRequest $request)
+    {
+        $this->getResponse()->setContentType('application/json');
+        $buscar = $request->getParameter('q');
+        $query = Doctrine::getTable('Ingrediente')
+                              ->createQuery('a')
+                              ->orWhere('a.nombre LIKE ?', "%$buscar%")
+                              ->execute();
+        $ingredientes = array();
+        foreach ($query as $ingrediente) {
+            $ingredientes[$ingrediente->getId()] = $ingrediente->getNombre();
+        }
+        return $this->renderText(json_encode($ingredientes));
+    }
 }
+
