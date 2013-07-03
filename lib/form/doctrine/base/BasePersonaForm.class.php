@@ -28,6 +28,8 @@ abstract class BasePersonaForm extends BaseFormDoctrine
       'casilla'          => new sfWidgetFormInputText(),
       'email'            => new sfWidgetFormInputText(),
       'fecha_nacimiento' => new sfWidgetFormDate(),
+      'is_active'        => new sfWidgetFormInputCheckbox(),
+      'foto'             => new sfWidgetFormInputText(),
       'created_at'       => new sfWidgetFormDateTime(),
       'updated_at'       => new sfWidgetFormDateTime(),
     ));
@@ -46,6 +48,8 @@ abstract class BasePersonaForm extends BaseFormDoctrine
       'casilla'          => new sfValidatorString(array('max_length' => 10, 'required' => false)),
       'email'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'fecha_nacimiento' => new sfValidatorDate(array('required' => false)),
+      'is_active'        => new sfValidatorBoolean(array('required' => false)),
+      'foto'             => new sfValidatorString(array('max_length' => 50, 'required' => false)),
       'created_at'       => new sfValidatorDateTime(),
       'updated_at'       => new sfValidatorDateTime(),
     ));

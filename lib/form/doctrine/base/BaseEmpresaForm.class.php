@@ -33,6 +33,7 @@ abstract class BaseEmpresaForm extends BaseFormDoctrine
       'fundempresa'             => new sfWidgetFormInputText(),
       'nit'                     => new sfWidgetFormInputText(),
       'licencia_funcionamiento' => new sfWidgetFormInputText(),
+      'is_active'               => new sfWidgetFormInputCheckbox(),
       'created_at'              => new sfWidgetFormDateTime(),
       'updated_at'              => new sfWidgetFormDateTime(),
     ));
@@ -56,6 +57,7 @@ abstract class BaseEmpresaForm extends BaseFormDoctrine
       'fundempresa'             => new sfValidatorString(array('max_length' => 30)),
       'nit'                     => new sfValidatorString(array('max_length' => 30)),
       'licencia_funcionamiento' => new sfValidatorString(array('max_length' => 30)),
+      'is_active'               => new sfValidatorBoolean(array('required' => false)),
       'created_at'              => new sfValidatorDateTime(),
       'updated_at'              => new sfValidatorDateTime(),
     ));
