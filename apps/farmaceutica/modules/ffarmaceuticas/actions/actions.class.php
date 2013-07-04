@@ -13,4 +13,19 @@ require_once dirname(__FILE__).'/../lib/ffarmaceuticasGeneratorHelper.class.php'
  */
 class ffarmaceuticasActions extends autoFfarmaceuticasActions
 {
+    public function executeBuscar(sfWebRequest $request)
+    {
+        $this->getResponse()->setContentType('application/json');
+        $buscar = $request->getParameter('q');
+        $query = Doctrine::getTable('FormaFarmaceutica')
+                              ->createQuery('a')
+                              ->orWhere('a.nombre LIKE ?', "%$buscar%")
+                              ->execute();
+        $ffarmaceuticas = array();
+        foreach ($query as $ffarmaceutica) {
+            $ffarmaceuticas[$ffarmaceutica->getId()] = $ffarmaceutica->getNombre();
+        }
+ 
+        return $this->renderText(json_encode($ffarmaceuticas));
+    }
 }

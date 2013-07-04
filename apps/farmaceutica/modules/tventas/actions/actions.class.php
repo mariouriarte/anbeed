@@ -13,4 +13,19 @@ require_once dirname(__FILE__).'/../lib/tventasGeneratorHelper.class.php';
  */
 class tventasActions extends autoTventasActions
 {
+    public function executeBuscar(sfWebRequest $request)
+    {
+        $this->getResponse()->setContentType('application/json');
+        $buscar = $request->getParameter('q');
+        $query = Doctrine::getTable('TipoVenta')
+                              ->createQuery('a')
+                              ->orWhere('a.nombre LIKE ?', "%$buscar%")
+                              ->execute();
+        $ventas = array();
+        foreach ($query as $venta) {
+            $ventas[$venta->getId()] = $venta->getNombre();
+        }
+ 
+        return $this->renderText(json_encode($ventas));
+    }
 }

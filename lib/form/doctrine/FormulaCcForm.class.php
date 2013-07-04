@@ -14,15 +14,6 @@ class FormulaCcForm extends BaseFormulaCcForm
   public function configure()
   {
       unset($this['created_at'], $this['updated_at']);
-      //Creamos un DetallesFormulaCcForm (nuevo), para tener la coleecion de detalles de formulas cc
-      //Revisar -> DetallesFormulaCcForm
-//      $Form = new DetallesFormulaCcForm(null, array(
-//           'formulaCc' => $this->getObject(),
-//           'size'    => 1,
-//      ));
-//      $this->embedForm('Formula CualiCuantitativa', $Form);
-//      $this->embedRelation('DetalleFormulaCc') ;
-      //unset($this['DetalleFormulaCc']['id']);
       $detalle = new DetalleFormulaCc();
       $detalle->setFormulaCc($this->object);
       $detalleForm = new DetalleFormulaCcForm($detalle);
@@ -65,7 +56,8 @@ class FormulaCcForm extends BaseFormulaCcForm
 
     parent::doUpdateObject($values);
   }
-  public function saveEmbeddedForms($con = null, $forms = null) {
+  public function saveEmbeddedForms($con = null, $forms = null)
+  {
     if (null === $con) {
       $con = $this->getConnection();
     }
@@ -81,13 +73,16 @@ class FormulaCcForm extends BaseFormulaCcForm
           unset($forms['NuevoDetalleFormulaCc']);
       }
 
-    }
+        }
 
     foreach ($forms as $form){
       if ($form instanceof sfFormObject) 
       {
            if (!in_array($form->getObject()->getId(), $this->detallesAEliminar)) 
            {
+                //var_dump($form);
+                //var_dump($detalle['ingrediente_id'][0]);
+                //die();
                 $form->saveEmbeddedForms($con);
                 $form->getObject()->save($con);
            }

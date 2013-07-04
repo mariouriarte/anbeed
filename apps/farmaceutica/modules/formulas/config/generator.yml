@@ -19,6 +19,7 @@ generator:
         DetalleFormulaCc:      {label: 'Detalle(s) Resgistrado(s)'}
       list:    
         title:   Fórmulas Cualicuantitativas Registradas
+        display: [observaciones]
       filter:  ~
       form:  
         display:  

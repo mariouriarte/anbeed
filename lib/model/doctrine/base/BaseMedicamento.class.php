@@ -92,7 +92,7 @@ abstract class BaseMedicamento extends sfDoctrineRecord
              ));
         $this->hasColumn('formula_cc_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('nombre_comercial', 'string', 255, array(
              'type' => 'string',
@@ -104,9 +104,9 @@ abstract class BaseMedicamento extends sfDoctrineRecord
              'notnull' => true,
              'length' => 150,
              ));
-        $this->hasColumn('accion_terapeutica', 'string', 255, array(
+        $this->hasColumn('accion_terapeutica', 'string', 2000, array(
              'type' => 'string',
-             'length' => 255,
+             'length' => 2000,
              ));
         $this->hasColumn('conservacion', 'string', 255, array(
              'type' => 'string',

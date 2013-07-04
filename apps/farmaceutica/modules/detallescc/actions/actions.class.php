@@ -16,8 +16,6 @@ class detallesccActions extends autoDetallesccActions
     protected function processForm(sfWebRequest $request, sfForm $form)
   {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
-    var_dump($form['NuevoDetalleFormulaCc'][1]['id']);
-    die();
     if ($form->isValid())
     {
       $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';

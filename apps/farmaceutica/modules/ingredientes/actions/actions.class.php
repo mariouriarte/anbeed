@@ -25,6 +25,7 @@ class ingredientesActions extends autoIngredientesActions
         foreach ($query as $ingrediente) {
             $ingredientes[$ingrediente->getId()] = $ingrediente->getNombre();
         }
+ 
         return $this->renderText(json_encode($ingredientes));
     }
 }

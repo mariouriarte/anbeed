@@ -79,6 +79,15 @@ producto:
     column:               id
     with_wildcard_routes: true
 
+buscar_venta:
+    url:   /tventas/buscar
+    param: { module: tventas, action: buscar }
+buscar_via:
+    url:   /administraciones/buscar
+    param: { module: administraciones, action: buscar }
+buscar_ffarmaceutica:
+    url:   /ffarmaceuticas/buscar
+    param: { module: ffarmaceuticas, action: buscar }
 buscar_ingrediente:
     url:   /ingredientes/buscar
     param: { module: ingredientes, action: buscar }
