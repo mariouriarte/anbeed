@@ -1,3 +1,39 @@
+via_administracion:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ViaAdministracion
+    module:               administraciones
+    prefix_path:          /administraciones
+    column:               id
+    with_wildcard_routes: true
+
+tipo_venta:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoVenta
+    module:               tventas
+    prefix_path:          /tventas
+    column:               id
+    with_wildcard_routes: true
+
+pais:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Pais
+    module:               paises
+    prefix_path:          /paises
+    column:               id
+    with_wildcard_routes: true
+
+laboratorio_fabricante:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                LaboratorioFabricante
+    module:               laboratorios
+    prefix_path:          /laboratorios
+    column:               id
+    with_wildcard_routes: true
+
 ingrediente:
   class: sfDoctrineRouteCollection
   options:

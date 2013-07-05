@@ -1,17 +1,17 @@
 <?php
 
-require_once dirname(__FILE__).'/../lib/ingredientesGeneratorConfiguration.class.php';
-require_once dirname(__FILE__).'/../lib/ingredientesGeneratorHelper.class.php';
+require_once dirname(__FILE__).'/../lib/tventasGeneratorConfiguration.class.php';
+require_once dirname(__FILE__).'/../lib/tventasGeneratorHelper.class.php';
 
 /**
- * ingredientes actions.
+ * tventas actions.
  *
  * @package    anbeed
- * @subpackage ingredientes
+ * @subpackage tventas
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class ingredientesActions extends autoIngredientesActions
+class tventasActions extends autoTventasActions
 {
     public function executeListIrPortal(sfWebRequest $request)
     {
@@ -22,15 +22,15 @@ class ingredientesActions extends autoIngredientesActions
     {
         $this->getResponse()->setContentType('application/json');
         $buscar = $request->getParameter('q');
-        $query = Doctrine::getTable('Ingrediente')
+        $query = Doctrine::getTable('TipoVenta')
                               ->createQuery('a')
                               ->orWhere('a.nombre LIKE ?', "%$buscar%")
                               ->execute();
-        $ingredientes = array();
-        foreach ($query as $ingrediente) {
-            $ingredientes[$ingrediente->getId()] = $ingrediente->getNombre();
+        $ventas = array();
+        foreach ($query as $venta) {
+            $ventas[$venta->getId()] = $venta->getNombre();
         }
  
-        return $this->renderText(json_encode($ingredientes));
+        return $this->renderText(json_encode($ventas));
     }
 }

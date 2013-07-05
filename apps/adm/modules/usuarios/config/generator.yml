@@ -20,7 +20,8 @@ generator:
         is_active:      {label: 'Esta activo?'}
         is_super_admin: {label: 'Es super-usuario?'}
       list:    
-        title: Usuarios Registrados
+        title: Listado de Usuarios Registrados
+        max_per_page: 15
         display: [username]
         actions:
           ir_portal: {label: Ir a Portal}

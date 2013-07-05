@@ -1,22 +1,21 @@
 generator:
   class: sfDoctrineGenerator
   param:
-    model_class:           Ingrediente
+    model_class:           TipoVenta
     theme:                 admin
     non_verbose_templates: true
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          ingrediente
+    route_prefix:          tipo_venta
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
     config:
       actions: ~
-      fields:  
-        nombre: {label: Nombre}
-      list:
-        title: Listado de Ingredientes Registrados
+      fields:  ~
+      list:    
+        title: Listado de Tipo de Ventas Registrados
         max_per_page: 15
         display: [nombre]
         actions:
@@ -25,10 +24,11 @@ generator:
       filter:  
         display: [nombre]
       form:    
+        display: [nombre]
         actions: 
           _save: ~ 
           _save_and_add: ~ 
       edit:    
-        title: Editar Ingrediente %%nombre%%
+        title: Editar Tipo de Venta %%nombre%%
       new:     
-        title: Nuevo Ingrediente
+        title: Nuevo Tipo de Venta

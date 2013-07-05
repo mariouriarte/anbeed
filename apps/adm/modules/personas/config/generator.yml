@@ -27,7 +27,8 @@ generator:
         email:           {label: 'Email'}
         
       list:
-        title: Personas Registradas
+        title: Listado de Personas Registradas
+        max_per_page: 15
         display: [nombre, ap_paterno, ap_materno, cedula_expedido, telefono]
         actions:
           ir_portal: {label: Ir a Portal}
