@@ -15,7 +15,8 @@ generator:
       actions: ~
       fields:  ~
       list:    
-        title: Tipo de Ventas Registrados
+        title: Listado de Tipo de Ventas Registrados
+        max_per_page: 15
         display: [nombre]
         actions:
           ir_portal: {label: Ir a Portal}

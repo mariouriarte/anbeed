@@ -15,9 +15,10 @@ generator:
       actions: ~
       fields:  
         nombre: {label: Nombre}
-      list:    
-        title:    Ingredientes Registrados
-        display:  [nombre]
+      list:
+        title: Listado de Ingredientes Registrados
+        max_per_page: 15
+        display: [nombre]
         actions:
           ir_portal: {label: Ir a Portal}
           _new: ~

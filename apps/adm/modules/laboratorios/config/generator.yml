@@ -21,7 +21,8 @@ generator:
         telefono:       {label: 'Teléfono'}
         email:          {label: 'E-mail'}
       list: 
-        title: Laboratorios Farmaceuticos Registrados
+        title: Listado de Laboratorios Farmaceuticos Registrados
+        max_per_page: 15
         display: [nombre, pais, telefono]
         actions:
           ir_portal: {label: Ir a Portal}

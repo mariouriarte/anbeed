@@ -15,7 +15,8 @@ generator:
       actions: ~
       fields:  ~
       list: 
-        title: Paises Registrados
+        title: Listado de Paises Registrados
+        max_per_page: 15
         display: [nombre]
         actions:
           ir_portal: {label: Ir a Portal}
