@@ -1,0 +1,36 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           LaboratorioFabricante
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          laboratorio_fabricante
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        pais_id:        {label: 'País de Origen'}
+        pais:           {label: 'País de Origen'}
+        bajo_liciencia: {label: 'Bajo Licencia de'}
+        direccion:      {label: 'Dirección'}
+        telefono:       {label: 'Teléfono'}
+        email:          {label: 'E-mail'}
+      list: 
+        title: Listado de Laboratorios Farmaceuticos Registrados
+        display: [nombre, pais, telefono]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter:
+        display: [nombre, pais_id] 
+      form:
+        display: [pais_id, nombre, bajo_licencia, para, direccion, telefono, fax, email, observaciones]
+      edit:    
+        title: Editar Laboratorio %%nombre%%
+      new:
+        title: Registro de Laboratorio Farmaceutico

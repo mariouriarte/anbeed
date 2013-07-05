@@ -33,6 +33,15 @@ class empresasActions extends autoEmpresasActions
         $this->empresa = $this->getRoute()->getObject();
         
         $user->setAttribute('empresa', $this->empresa);
+        
+        $environment = sfConfig::get('sf_environment');
+        if($environment == 'dev')
+        {
+            $this->env = '_dev';
+        } else if($environment == 'prod')
+        {
+            $this->env = '';
+        }
     }
     
     public function executeNew(sfWebRequest $request)

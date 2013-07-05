@@ -17,6 +17,14 @@ class inicioActions extends sfActions
   */
     public function executeIndex(sfWebRequest $request)
     {
+        $environment = sfConfig::get('sf_environment');
+        if($environment == 'dev')
+        {
+            $this->env = '_dev';
+        } else if($environment == 'prod')
+        {
+            $this->env = '';
+        }
         
     }
 }
