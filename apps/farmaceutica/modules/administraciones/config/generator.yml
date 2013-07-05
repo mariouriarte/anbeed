@@ -16,6 +16,10 @@ generator:
       fields:  ~
       list:    ~
       filter:  ~
-      form:    ~
+      form:    
+        actions:
+          _save: ~
+          cerrar:
       edit:    ~
-      new:     ~
+      new:     
+        title: Registro de la Vía de Administracón        

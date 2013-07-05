@@ -7,11 +7,14 @@
  * 
  * @property string $observaciones
  * @property Doctrine_Collection $DetalleFormulaCc
+ * @property Doctrine_Collection $Medicamento
  * 
  * @method string              getObservaciones()    Returns the current record's "observaciones" value
  * @method Doctrine_Collection getDetalleFormulaCc() Returns the current record's "DetalleFormulaCc" collection
+ * @method Doctrine_Collection getMedicamento()      Returns the current record's "Medicamento" collection
  * @method FormulaCc           setObservaciones()    Sets the current record's "observaciones" value
  * @method FormulaCc           setDetalleFormulaCc() Sets the current record's "DetalleFormulaCc" collection
+ * @method FormulaCc           setMedicamento()      Sets the current record's "Medicamento" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -34,6 +37,10 @@ abstract class BaseFormulaCc extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasMany('DetalleFormulaCc', array(
+             'local' => 'id',
+             'foreign' => 'formula_cc_id'));
+
+        $this->hasMany('Medicamento', array(
              'local' => 'id',
              'foreign' => 'formula_cc_id'));
 

@@ -127,6 +127,7 @@ Medicamento:
     FormaFarmaceutica: {local: forma_farmaceutica_id, foreign: id, type: one, foreignAlias: Medicamentos}
     ViaAdministracion: {local: via_administracion_id, foreign: id, type: one, foreignAlias: Medicamentos}
     TipoVenta:         {local: tipo_venta_id, foreign: id, type: one, foreignAlias: Medicamentos}
+    FormulaCc:         {local: formula_cc_id, foreign: id, type: one, foreignAlias: Medicamentos}
 #    debria ser many aca arriba
 
 FormaFarmaceutica:
@@ -156,7 +157,7 @@ FormulaCc:
     observaciones: {type: string(2000), notnull: false}
   relations:
     DetalleFormulaCc: {local: id, foreign: formula_cc_id, type: many, foreignAlias: FormulaCc}
-    
+    Medicamento:      {local: id, foreign: formula_cc_id, type: many, foreignAlias: FormulaCc}
 DetalleFormulaCc:
   actAs: {Timestampable: ~}
   columns:

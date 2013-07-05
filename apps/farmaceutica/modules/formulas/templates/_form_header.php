@@ -1,6 +1,5 @@
 <?php use_javascript('jquery-migrate.js') ?>
 <script type='text/javascript'>
-   
 $(document).ready(function()
 {
     $('#autocomplete_formula_cc_NuevoDetalleFormulaCc_ingrediente_id')

@@ -28,6 +28,7 @@ ALTER TABLE laboratorio_fabricante ADD CONSTRAINT laboratorio_fabricante_pais_id
 ALTER TABLE medicamento ADD CONSTRAINT medicamento_via_administracion_id_via_administracion_id FOREIGN KEY (via_administracion_id) REFERENCES via_administracion(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE medicamento ADD CONSTRAINT medicamento_tipo_venta_id_tipo_venta_id FOREIGN KEY (tipo_venta_id) REFERENCES tipo_venta(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE medicamento ADD CONSTRAINT medicamento_producto_id_producto_id FOREIGN KEY (producto_id) REFERENCES producto(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
+ALTER TABLE medicamento ADD CONSTRAINT medicamento_formula_cc_id_formula_cc_id FOREIGN KEY (formula_cc_id) REFERENCES formula_cc(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE medicamento ADD CONSTRAINT medicamento_forma_farmaceutica_id_forma_farmaceutica_id FOREIGN KEY (forma_farmaceutica_id) REFERENCES forma_farmaceutica(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE producto ADD CONSTRAINT producto_laboratorio_fabricante_id_laboratorio_fabricante_id FOREIGN KEY (laboratorio_fabricante_id) REFERENCES laboratorio_fabricante(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE producto ADD CONSTRAINT producto_empresa_id_empresa_id FOREIGN KEY (empresa_id) REFERENCES empresa(id) NOT DEFERRABLE INITIALLY IMMEDIATE;

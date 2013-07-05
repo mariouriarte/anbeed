@@ -13,5 +13,6 @@ class LaboratorioFabricanteForm extends BaseLaboratorioFabricanteForm
   public function configure()
   {
       unset($this['created_at'], $this['updated_at']);
+      $this->widgetSchema['pais_id']->setOption('add_empty', 'Seleccione un país');
   }
 }
