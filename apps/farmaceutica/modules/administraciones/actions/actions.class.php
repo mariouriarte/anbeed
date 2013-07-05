@@ -13,4 +13,19 @@ require_once dirname(__FILE__).'/../lib/administracionesGeneratorHelper.class.ph
  */
 class administracionesActions extends autoAdministracionesActions
 {
+    public function executeBuscar(sfWebRequest $request)
+    {
+        $this->getResponse()->setContentType('application/json');
+        $buscar = $request->getParameter('q');
+        $query = Doctrine::getTable('ViaAdministracion')
+                              ->createQuery('a')
+                              ->orWhere('a.nombre LIKE ?', "%$buscar%")
+                              ->execute();
+        $administracions = array();
+        foreach ($query as $administracion) {
+            $administracions[$administracion->getId()] = $administracion->getNombre();
+        }
+ 
+        return $this->renderText(json_encode($administracions));
+    }
 }

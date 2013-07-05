@@ -12,5 +12,20 @@ class DetalleFormulaCcForm extends BaseDetalleFormulaCcForm
 {
   public function configure()
   {
+      unset($this['created_at'], $this['updated_at'], $this['formula_cc_id']);
+//      $producto = sfContext::getInstance()->getUser()->getAttribute('producto');
+//      $this->widgetSchema['formula_cc_id'] = new sfWidgetFormInputHidden(
+//            array());
+      
+      $this->widgetSchema['ingrediente_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+                array( 'model'=>'Ingrediente',
+                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_ingrediente')
+         ));
+      //$this->validatorSchema['ingrediente_id']->setOption('required', true);
+      if ($this->object->exists())
+      {
+        $this->widgetSchema['Eliminar'] = new sfWidgetFormInputCheckbox();
+        $this->validatorSchema['Eliminar'] = new sfValidatorPass();
+      }
   }
 }

@@ -21,7 +21,7 @@ generator:
         descripcion:               {label: 'Descripción'}
       list:    
          title:   Medicamentos Registrados
-         display: [nombre_generico, laboratorio_fabricante_id, registro_sanitario]
+         display: [nombre_generico, laboratorio_fabricante, registro_sanitario]
          actions:
           adm_empresa: {label: Volver a Empresa}
           _new:     ~ 

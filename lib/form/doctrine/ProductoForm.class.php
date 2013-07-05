@@ -14,7 +14,14 @@ class ProductoForm extends BaseProductoForm
   {
       unset($this['created_at'], $this['updated_at']);
       //La empresa_id lo haremos hidden por que ya tenemos ese id
-      $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden();
+      $empresa = sfContext::getInstance()->getUser()->getAttribute('empresa');
+      $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden(
+            array(), array('value' => $empresa->getId()));
+      
+      $this->widgetSchema['laboratorio_fabricante_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+                array( 'model'=>'LaboratorioFabricante',
+                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_labs')
+         ));
       
       if(sfContext::getInstance()->getModuleName() == "prodmed")
         {

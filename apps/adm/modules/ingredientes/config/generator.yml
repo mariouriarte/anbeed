@@ -13,15 +13,9 @@ generator:
 
     config:
       actions: ~
-      fields:  
-        nombre: {label: Nombre}
+      fields:  ~
       list:    ~
-      filter:  
-      form:    
-        actions: 
-          _save: ~ 
-          _save_and_add: ~ 
-      edit:    
-        title: Editar Ingrediente %%nombre%%
-      new:     
-        title: Nuevo Ingrediente
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

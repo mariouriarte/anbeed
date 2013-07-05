@@ -13,6 +13,7 @@ abstract class BaseDetalleFormulaCcFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
+      'formula_cc_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('FormulaCc'), 'add_empty' => true)),
       'ingrediente_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Ingrediente'), 'add_empty' => true)),
       'cantidad'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'unidad'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
@@ -21,6 +22,7 @@ abstract class BaseDetalleFormulaCcFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
+      'formula_cc_id'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('FormulaCc'), 'column' => 'id')),
       'ingrediente_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Ingrediente'), 'column' => 'id')),
       'cantidad'       => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
       'unidad'         => new sfValidatorPass(array('required' => false)),
@@ -46,6 +48,7 @@ abstract class BaseDetalleFormulaCcFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'             => 'Number',
+      'formula_cc_id'  => 'ForeignKey',
       'ingrediente_id' => 'ForeignKey',
       'cantidad'       => 'Number',
       'unidad'         => 'Text',

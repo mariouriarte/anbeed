@@ -18,6 +18,7 @@ class prodmedActions extends autoProdmedActions
         $user = $this->getUser();
         $empresa = $user->getAttribute('empresa');
         $this->redirect('/farmaceutica_dev.php/empresas/'.$empresa->getId().'/administrarEmpresa');
-    }    
+    }
+    
 
 }
