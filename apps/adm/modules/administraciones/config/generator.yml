@@ -1,13 +1,13 @@
 generator:
   class: sfDoctrineGenerator
   param:
-    model_class:           Ingrediente
+    model_class:           ViaAdministracion
     theme:                 admin
     non_verbose_templates: true
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          ingrediente
+    route_prefix:          via_administracion
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
@@ -16,7 +16,7 @@ generator:
       fields:  
         nombre: {label: Nombre}
       list:    
-        title:    Ingredientes Registrados
+        title:    Vias de Administración Registradas
         display:  [nombre]
         actions:
           ir_portal: {label: Ir a Portal}
@@ -28,6 +28,6 @@ generator:
           _save: ~ 
           _save_and_add: ~ 
       edit:    
-        title: Editar Ingrediente %%nombre%%
+        title: Editar Via de Administración %%nombre%%
       new:     
-        title: Nuevo Ingrediente
+        title: Nueva Via de Administración

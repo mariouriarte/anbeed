@@ -17,4 +17,20 @@ class laboratoriosActions extends autoLaboratoriosActions
     {
         $this->redirect('/portal_dev.php/inicio/index');
     }
+    
+    public function executeBuscar(sfWebRequest $request)
+    {
+        $this->getResponse()->setContentType('application/json');
+        $buscar = $request->getParameter('q');
+        // Obtenemos los representante legal registrados en el sistema, coincidiendo las busqueda con el nombre apellido paterno o materno
+        $query = Doctrine::getTable('LaboratorioFabricante')
+                               ->createQuery('a')
+                               ->Where('a.nombre LIKE ?', "%$buscar%")
+                               ->execute();
+        $labs = array();
+        foreach ($query as $lab) {
+            $labs[$lab->getId()] = $lab->getNombre();
+        }
+        return $this->renderText(json_encode($labs));
+    }
 }

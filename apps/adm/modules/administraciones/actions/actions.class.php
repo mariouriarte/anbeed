@@ -1,17 +1,17 @@
 <?php
 
-require_once dirname(__FILE__).'/../lib/ingredientesGeneratorConfiguration.class.php';
-require_once dirname(__FILE__).'/../lib/ingredientesGeneratorHelper.class.php';
+require_once dirname(__FILE__).'/../lib/administracionesGeneratorConfiguration.class.php';
+require_once dirname(__FILE__).'/../lib/administracionesGeneratorHelper.class.php';
 
 /**
- * ingredientes actions.
+ * administraciones actions.
  *
  * @package    anbeed
- * @subpackage ingredientes
+ * @subpackage administraciones
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class ingredientesActions extends autoIngredientesActions
+class administracionesActions extends autoAdministracionesActions
 {
     public function executeListIrPortal(sfWebRequest $request)
     {
@@ -22,15 +22,15 @@ class ingredientesActions extends autoIngredientesActions
     {
         $this->getResponse()->setContentType('application/json');
         $buscar = $request->getParameter('q');
-        $query = Doctrine::getTable('Ingrediente')
+        $query = Doctrine::getTable('ViaAdministracion')
                               ->createQuery('a')
                               ->orWhere('a.nombre LIKE ?', "%$buscar%")
                               ->execute();
-        $ingredientes = array();
-        foreach ($query as $ingrediente) {
-            $ingredientes[$ingrediente->getId()] = $ingrediente->getNombre();
+        $administracions = array();
+        foreach ($query as $administracion) {
+            $administracions[$administracion->getId()] = $administracion->getNombre();
         }
  
-        return $this->renderText(json_encode($ingredientes));
+        return $this->renderText(json_encode($administracions));
     }
 }

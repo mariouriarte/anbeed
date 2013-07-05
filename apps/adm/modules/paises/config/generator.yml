@@ -1,33 +1,30 @@
 generator:
   class: sfDoctrineGenerator
   param:
-    model_class:           Ingrediente
+    model_class:           Pais
     theme:                 admin
     non_verbose_templates: true
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          ingrediente
+    route_prefix:          pais
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
     config:
       actions: ~
-      fields:  
-        nombre: {label: Nombre}
-      list:    
-        title:    Ingredientes Registrados
-        display:  [nombre]
+      fields:  ~
+      list: 
+        title: Paises Registrados
+        display: [nombre]
         actions:
           ir_portal: {label: Ir a Portal}
           _new: ~
       filter:  
         display: [nombre]
       form:    
-        actions: 
-          _save: ~ 
-          _save_and_add: ~ 
-      edit:    
-        title: Editar Ingrediente %%nombre%%
+        display: [nombre, bandera]
+      edit:
+        title: Editar Pais %%nombre%%
       new:     
-        title: Nuevo Ingrediente
+        title: Registro de Paises

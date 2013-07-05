@@ -24,11 +24,11 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/"><span>Ingredientes</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/"><span>Paises</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/"><span>Personas</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/"><span>Tipo Venta</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/"><span>Vía Administración</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/ingredientes"><span>Ingredientes</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/paises"><span>Paises</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/personas"><span>Personas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tventas"><span>Tipo Venta</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/administraciones"><span>Vía Administración</span></a></li>
                         </ul>
                     </div>
                 </div>
