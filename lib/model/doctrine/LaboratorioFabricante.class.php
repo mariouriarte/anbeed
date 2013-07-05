@@ -12,4 +12,8 @@
  */
 class LaboratorioFabricante extends BaseLaboratorioFabricante
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+}
 }

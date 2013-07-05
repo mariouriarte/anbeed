@@ -16,8 +16,8 @@ abstract class BaseEmpresaForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'                      => new sfWidgetFormInputHidden(),
-      'representante_legal_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteLegal'), 'add_empty' => false)),
-      'regente_farmaceutico_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RegenteFarmaceutico'), 'add_empty' => false)),
+      'representante_legal_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteLegal'), 'add_empty' => true)),
+      'regente_farmaceutico_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RegenteFarmaceutico'), 'add_empty' => true)),
       'razon_social'            => new sfWidgetFormInputText(),
       'fecha_registro'          => new sfWidgetFormDate(),
       'num_resolucion'          => new sfWidgetFormInputText(),
@@ -33,14 +33,15 @@ abstract class BaseEmpresaForm extends BaseFormDoctrine
       'fundempresa'             => new sfWidgetFormInputText(),
       'nit'                     => new sfWidgetFormInputText(),
       'licencia_funcionamiento' => new sfWidgetFormInputText(),
+      'is_active'               => new sfWidgetFormInputCheckbox(),
       'created_at'              => new sfWidgetFormDateTime(),
       'updated_at'              => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
       'id'                      => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'representante_legal_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteLegal'))),
-      'regente_farmaceutico_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('RegenteFarmaceutico'))),
+      'representante_legal_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteLegal'), 'required' => false)),
+      'regente_farmaceutico_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('RegenteFarmaceutico'), 'required' => false)),
       'razon_social'            => new sfValidatorString(array('max_length' => 255)),
       'fecha_registro'          => new sfValidatorDate(array('required' => false)),
       'num_resolucion'          => new sfValidatorString(array('max_length' => 30)),
@@ -56,6 +57,7 @@ abstract class BaseEmpresaForm extends BaseFormDoctrine
       'fundempresa'             => new sfValidatorString(array('max_length' => 30)),
       'nit'                     => new sfValidatorString(array('max_length' => 30)),
       'licencia_funcionamiento' => new sfValidatorString(array('max_length' => 30)),
+      'is_active'               => new sfValidatorBoolean(array('required' => false)),
       'created_at'              => new sfValidatorDateTime(),
       'updated_at'              => new sfValidatorDateTime(),
     ));

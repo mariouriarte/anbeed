@@ -29,6 +29,9 @@ generator:
       list:
         title: Personas Registradas
         display: [nombre, ap_paterno, ap_materno, cedula_expedido, telefono]
+        actions:
+          ir_portal: {label: Ir a Portal}
+          _new: ~
       filter:
         display: [nombre, ap_paterno, ci]
       form:

@@ -16,4 +16,21 @@ class PersonaTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Persona');
     }
+    
+    public static function selectPersonasRegentes()
+    {
+        //$user = sfContext::getInstance()->getUser();
+       
+            //$id = $user->getAttribute('regional_id');
+            //$anio = date ("Y");
+            
+            $q = Doctrine_Query::create()
+                    ->from('Persona a')
+                    ->leftJoin('a.RegenteFarmaceutico r')
+                    ->where('r.is_active = ?', false);
+                    //->orderBy('u.codigo');
+            
+            return $q;
+       
+    }
 }

@@ -16,7 +16,10 @@ generator:
       fields:  ~
       list: 
         title: Paises Registrados
-        display: [nombre, bandera]
+        display: [nombre]
+        actions:
+          ir_portal: {label: Ir a Portal}
+          _new: ~
       filter:  
         display: [nombre]
       form:    

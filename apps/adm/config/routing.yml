@@ -1,3 +1,12 @@
+ingrediente:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Ingrediente
+    module:               ingredientes
+    prefix_path:          /ingredientes
+    column:               id
+    with_wildcard_routes: true
+
 sf_guard_permission:
   class: sfDoctrineRouteCollection
   options:

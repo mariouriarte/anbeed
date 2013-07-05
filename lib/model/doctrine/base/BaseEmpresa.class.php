@@ -22,6 +22,7 @@
  * @property string $fundempresa
  * @property string $nit
  * @property string $licencia_funcionamiento
+ * @property boolean $is_active
  * @property RepresentanteLegal $RepresentanteLegal
  * @property RegenteFarmaceutico $RegenteFarmaceutico
  * @property Doctrine_Collection $Producto
@@ -43,6 +44,7 @@
  * @method string              getFundempresa()             Returns the current record's "fundempresa" value
  * @method string              getNit()                     Returns the current record's "nit" value
  * @method string              getLicenciaFuncionamiento()  Returns the current record's "licencia_funcionamiento" value
+ * @method boolean             getIsActive()                Returns the current record's "is_active" value
  * @method RepresentanteLegal  getRepresentanteLegal()      Returns the current record's "RepresentanteLegal" value
  * @method RegenteFarmaceutico getRegenteFarmaceutico()     Returns the current record's "RegenteFarmaceutico" value
  * @method Doctrine_Collection getProducto()                Returns the current record's "Producto" collection
@@ -63,6 +65,7 @@
  * @method Empresa             setFundempresa()             Sets the current record's "fundempresa" value
  * @method Empresa             setNit()                     Sets the current record's "nit" value
  * @method Empresa             setLicenciaFuncionamiento()  Sets the current record's "licencia_funcionamiento" value
+ * @method Empresa             setIsActive()                Sets the current record's "is_active" value
  * @method Empresa             setRepresentanteLegal()      Sets the current record's "RepresentanteLegal" value
  * @method Empresa             setRegenteFarmaceutico()     Sets the current record's "RegenteFarmaceutico" value
  * @method Empresa             setProducto()                Sets the current record's "Producto" collection
@@ -79,11 +82,11 @@ abstract class BaseEmpresa extends sfDoctrineRecord
         $this->setTableName('empresa');
         $this->hasColumn('representante_legal_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('regente_farmaceutico_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('razon_social', 'string', 255, array(
              'type' => 'string',
@@ -160,6 +163,11 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'notnull' => true,
              'unique' => true,
              'length' => 30,
+             ));
+        $this->hasColumn('is_active', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => true,
+             'notnull' => true,
              ));
     }
 

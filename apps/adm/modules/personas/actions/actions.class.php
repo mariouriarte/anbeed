@@ -13,4 +13,8 @@ require_once dirname(__FILE__).'/../lib/personasGeneratorHelper.class.php';
  */
 class personasActions extends autoPersonasActions
 {
+    public function executeListIrPortal(sfWebRequest $request)
+    {
+        $this->redirect('/portal_dev.php/inicio/index');
+    }
 }

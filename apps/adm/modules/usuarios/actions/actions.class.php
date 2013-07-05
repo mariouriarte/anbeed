@@ -13,4 +13,8 @@ require_once dirname(__FILE__).'/../lib/usuariosGeneratorHelper.class.php';
  */
 class usuariosActions extends autoUsuariosActions
 {
+    public function executeListIrPortal(sfWebRequest $request)
+    {
+        $this->redirect('/portal_dev.php/inicio/index');
+    }
 }
