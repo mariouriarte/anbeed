@@ -18,10 +18,10 @@ generator:
       list:    ~
       filter:  
       form:    
-        actions: 
-          _save: ~ 
-          _save_and_add: ~ 
+        actions:
+          _save: ~
+          cerrar: 
       edit:    
         title: Editar Ingrediente %%nombre%%
       new:     
-        title: Nuevo Ingrediente
+        title: Registro de Ingrediente

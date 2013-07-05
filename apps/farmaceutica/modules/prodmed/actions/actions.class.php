@@ -19,6 +19,19 @@ class prodmedActions extends autoProdmedActions
         $empresa = $user->getAttribute('empresa');
         $this->redirect('/farmaceutica_dev.php/empresas/'.$empresa->getId().'/administrarEmpresa');
     }
+    public function executeIrFormula(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        
+        $this->producto = $this->getRoute()->getObject();
+        //Verificamos si ya tiene formulacc para mandarlo a NEW o a EDIT        
+        $formula_cc_id = $this->producto->Medicamento[0]->getFormulaCc();
+        $user->setAttribute('producto', $this->producto);
+        if(is_null($formula_cc_id))
+           $this->redirect('/farmaceutica_dev.php/formulas/new');
+        else
+           $this->redirect('/farmaceutica_dev.php/formulas/'.$formula_cc_id.'/edit');
+    }
     
 
 }

@@ -20,7 +20,7 @@ class ProductoForm extends BaseProductoForm
       
       $this->widgetSchema['laboratorio_fabricante_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
                 array( 'model'=>'LaboratorioFabricante',
-                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_labs')
+                        'url'=>sfContext::getInstance()->getRouting()->generate('producto_prodmed')
          ));
       
       if(sfContext::getInstance()->getModuleName() == "prodmed")

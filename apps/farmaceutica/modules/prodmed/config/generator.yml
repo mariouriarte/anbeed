@@ -22,6 +22,8 @@ generator:
       list:    
          title:   Medicamentos Registrados
          display: [nombre_generico, laboratorio_fabricante, registro_sanitario]
+         object_actions:
+          ir_formula: {label: Fórmula Cualicuantitativa, action: irFormula}
          actions:
           adm_empresa: {label: Volver a Empresa}
           _new:     ~ 

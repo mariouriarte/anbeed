@@ -26,6 +26,10 @@ generator:
           Fórmula Cualicuantitativa:                                [observaciones]
           Nuevo Detalle de la Fórmula Cualicuantitativa:            [NuevoDetalleFormulaCc]
           Detalle(s) de la Fórmula Cualicuantitativa Registrada(s): [DetalleFormulaCc]
+        actions:
+          ir_productos: {label: Regresar a Medicamentos}
+          _delete: ~
+          _save: ~
       edit:   
         title:   Editar Fórmula Cualicuantitativa
       new:     

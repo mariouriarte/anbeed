@@ -22,6 +22,7 @@
  * @property FormaFarmaceutica $FormaFarmaceutica
  * @property ViaAdministracion $ViaAdministracion
  * @property TipoVenta $TipoVenta
+ * @property FormulaCc $FormulaCc
  * @property FormaFarmaceutica $Forma
  * @property ViaAdministracion $Administracion
  * 
@@ -42,6 +43,7 @@
  * @method FormaFarmaceutica getFormaFarmaceutica()     Returns the current record's "FormaFarmaceutica" value
  * @method ViaAdministracion getViaAdministracion()     Returns the current record's "ViaAdministracion" value
  * @method TipoVenta         getTipoVenta()             Returns the current record's "TipoVenta" value
+ * @method FormulaCc         getFormulaCc()             Returns the current record's "FormulaCc" value
  * @method FormaFarmaceutica getForma()                 Returns the current record's "Forma" value
  * @method ViaAdministracion getAdministracion()        Returns the current record's "Administracion" value
  * @method Medicamento       setProductoId()            Sets the current record's "producto_id" value
@@ -61,6 +63,7 @@
  * @method Medicamento       setFormaFarmaceutica()     Sets the current record's "FormaFarmaceutica" value
  * @method Medicamento       setViaAdministracion()     Sets the current record's "ViaAdministracion" value
  * @method Medicamento       setTipoVenta()             Sets the current record's "TipoVenta" value
+ * @method Medicamento       setFormulaCc()             Sets the current record's "FormulaCc" value
  * @method Medicamento       setForma()                 Sets the current record's "Forma" value
  * @method Medicamento       setAdministracion()        Sets the current record's "Administracion" value
  * 
@@ -147,6 +150,10 @@ abstract class BaseMedicamento extends sfDoctrineRecord
 
         $this->hasOne('TipoVenta', array(
              'local' => 'tipo_venta_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('FormulaCc', array(
+             'local' => 'formula_cc_id',
              'foreign' => 'id'));
 
         $this->hasOne('FormaFarmaceutica as Forma', array(

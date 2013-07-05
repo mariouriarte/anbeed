@@ -27,7 +27,10 @@ generator:
         display:        [nombre, pais_id] 
       form:
         display:        [pais_id, nombre, bajo_licencia, para, direccion, telefono, fax, email, observaciones]
+        actions:
+          _save: ~
+          cerrar:
       edit:    
         title: Editar Laboratorio %%nombre%%
       new:
-        title: Registro de Laboratorios Farmaceuticos
+        title: Registro de Laboratorio Fabricante
