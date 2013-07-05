@@ -1,5 +1,10 @@
 <?php use_javascript('jquery-migrate.js') ?>
 
+<div class="content-info-empresa">
+    <?php $empresa = $sf_user->getAttribute('empresa'); ?>
+    <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
+</div>
+
 <?php
 
 $idprl = $sf_params->get('idprl');
@@ -34,7 +39,7 @@ $(document).ready(function()
 });
 </script>
 
-<?php echo "Fecha: ".FechaEspanol(date('Y-m-d')); ?>
+<?php // echo "Fecha: ".FechaEspanol(date('Y-m-d')); ?>
 
 <script type='text/javascript'>
 function getPersona()

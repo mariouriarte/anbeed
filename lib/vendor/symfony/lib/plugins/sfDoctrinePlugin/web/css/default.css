@@ -34,7 +34,7 @@ td.sf_admin_text
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
   text-align: left;
-  vertical-align: top;
+  /*vertical-align: top;*/
   /*min-width: 150px;*/
 }
 

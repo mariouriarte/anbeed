@@ -12,7 +12,7 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css, jquery-ui.min.css, /sfDoctrinePlugin/css/global.css, /sfDoctrinePlugin/css/default.css]
+  stylesheets:    [jquery-ui.min.css, /sfDoctrinePlugin/css/global.css, /sfDoctrinePlugin/css/default.css, main.css]
 
   javascripts:    [jquery-2.0.2.js, jquery-ui.min.js]
 

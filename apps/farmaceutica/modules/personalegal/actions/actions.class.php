@@ -106,6 +106,18 @@ class personalegalActions extends autoPersonalegalActions
 
       try {
         $persona = $form->save();
+        
+        // ------------
+        // Editado para asignar a esta persona a la empresa
+        // en el actual espacio
+          
+        $user = $this->getUser();
+        $empresa = $user->getAttribute('empresa');
+        
+        $empresa->setRepresentanteLegal($persona->RepresentanteLegal);
+        $empresa->save();
+        // ------------
+        
       } catch (Doctrine_Validator_Exception $e) {
 
         $errorStack = $form->getObject()->getErrorStack();
@@ -130,17 +142,6 @@ class personalegalActions extends autoPersonalegalActions
       }
       else
       {
-        // ------------
-        // Editado para asignar a esta persona a la empresa
-        // en el actual espacio
-          
-        $user = $this->getUser();
-        $empresa = $user->getAttribute('empresa');
-        
-        $empresa->setRepresentanteLegal($persona->RepresentanteLegal);
-        $empresa->save();
-        // ------------
-        
         $this->getUser()->setFlash('notice', $notice);
 
         $this->redirect(array('sf_route' => 'persona_personalegal_edit', 'sf_subject' => $persona));
