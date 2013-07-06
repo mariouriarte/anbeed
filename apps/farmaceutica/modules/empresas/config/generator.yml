@@ -28,7 +28,7 @@ generator:
         nit:                      {label: 'NIT'}
         
       list:
-        title: Empresas Registradas
+        title: Listado de Empresas Registradas
         display: [razon_social, nit]
         object_actions:
           adm_empresa: {label: Administrar Empresa, action: administrarEmpresa}

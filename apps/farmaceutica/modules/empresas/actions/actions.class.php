@@ -60,6 +60,11 @@ class empresasActions extends autoEmpresasActions
         
     } 
     
+    public function executeFilter(sfWebRequest $request)
+    {
+        parent::executeFilter($request);
+    }    
+    
     public function executeListIrPortal(sfWebRequest $request)
     {
         $this->redirect('/portal_dev.php/inicio/index');
