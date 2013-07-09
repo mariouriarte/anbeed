@@ -186,10 +186,10 @@ Formulario5:
     origen_formulario5_id:        {type: integer, notnull: true}
     producto_id:                  {type: integer, notnull: true}
   relations:
-    Producto:          {local: producto_id, foreign: id, type: one, foreignAlias: Formulario5}
-    TipoTramiteForm5:  {local: tipo_tramite_formulario5_id, foreign: id, type: one, foreignAlias: Formulario5}
-    TipoProductoForm5: {local: tipo_producto_formulario5_id, foreign: id, type: one, foreginAlias: Formulario5}
-    OrigenForm5:       {local: origen_formulario5_id, foreing: id, type: one, foreignAlias: Formulario5}
+    Producto:                {local: producto_id, foreign: id, type: one, foreignAlias: Formulario5}
+    TipoTramiteFormulario5:  {local: tipo_tramite_formulario5_id, foreign: id, type: one, foreignAlias: Formulario5}
+    TipoProductoFormulario5: {local: tipo_producto_formulario5_id, foreign: id, type: one, foreignAlias: Formulario5}
+    OrigenFormulario5:       {local: origen_formulario5_id, foreign: id, type: one, foreignAlias: Formulario5}
     
 TipoTramiteFormulario5:
   actAs: {Timestampable: ~}

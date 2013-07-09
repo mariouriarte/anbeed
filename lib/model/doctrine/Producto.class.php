@@ -12,4 +12,8 @@
  */
 class Producto extends BaseProducto
 {
+    public function __toString()
+    {
+       return $this->getNombreGenerico();
+    }
 }

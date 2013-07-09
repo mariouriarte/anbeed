@@ -12,4 +12,8 @@
  */
 class Medicamento extends BaseMedicamento
 {
+    public function __toString()
+    {
+        return $this->getNombreComercial();
+    }
 }

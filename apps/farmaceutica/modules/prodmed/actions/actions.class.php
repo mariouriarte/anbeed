@@ -13,6 +13,9 @@ require_once dirname(__FILE__).'/../lib/prodmedGeneratorHelper.class.php';
  */
 class prodmedActions extends autoProdmedActions
 {
+    
+    
+    
     public function executeListAdmEmpresa(sfWebRequest $request)
     {
         $user = $this->getUser();
@@ -38,15 +41,8 @@ class prodmedActions extends autoProdmedActions
     {
         $user = $this->getUser();
         $this->producto = $this->getRoute()->getObject();
-        //Verificamos si ya tiene formulacc para mandarlo a NEW o a EDIT        
-        //$formula_cc_id = $this->producto->Medicamento[0]->getFormulaCcId();
-        //var_dump($formula_cc_id);
-        //die();
         $user->setAttribute('producto', $this->producto);
-        //if(($formula_cc_id == NULL))
-           $this->redirect('/farmaceutica_dev.php/formulario5/new');
-        //else
-          // $this->redirect('/farmaceutica_dev.php/formulas/'.$formula_cc_id.'/edit');
+        $this->redirect('/farmaceutica_dev.php/formulario5');
     }
     
 
