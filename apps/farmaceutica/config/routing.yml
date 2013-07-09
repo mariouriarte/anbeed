@@ -1,3 +1,39 @@
+origen_formulario5:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                OrigenFormulario5
+    module:               origenf5
+    prefix_path:          /origenf5
+    column:               id
+    with_wildcard_routes: true
+
+tipo_producto_formulario5:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoProductoFormulario5
+    module:               tipoproductof5
+    prefix_path:          /tipoproductof5
+    column:               id
+    with_wildcard_routes: true
+
+tipo_tramite_formulario5:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoTramiteFormulario5
+    module:               tipotramitef5
+    prefix_path:          /tipotramitef5
+    column:               id
+    with_wildcard_routes: true
+
+formulario5:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario5
+    module:               formulario5
+    prefix_path:          /formulario5
+    column:               id
+    with_wildcard_routes: true
+
 producto_prodmed:
   class: sfDoctrineRouteCollection
   options:

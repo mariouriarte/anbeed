@@ -17,13 +17,15 @@ class ingredientesActions extends autoIngredientesActions
     {
         $this->getResponse()->setContentType('application/json');
         $buscar = $request->getParameter('q');
-        $query = Doctrine::getTable('Ingrediente')
-                              ->createQuery('a')
-                              ->orWhere('a.nombre LIKE ?', "%$buscar%")
-                              ->execute();
+        //construimos la consulta
+        $query = "SELECT * FROM ingrediente where nombre ILIKE '%$buscar%'";
+        //obtenemos el singleton de la conexión
+        $con = Doctrine_Manager::getInstance()->connection();
+        //ejecutamos la consulta    
+        $query = $con->execute($query);
         $ingredientes = array();
         foreach ($query as $ingrediente) {
-            $ingredientes[$ingrediente->getId()] = $ingrediente->getNombre();
+            $ingredientes[$ingrediente['id']] = $ingrediente['nombre'];
         }
  
         return $this->renderText(json_encode($ingredientes));

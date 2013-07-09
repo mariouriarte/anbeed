@@ -17,15 +17,17 @@ class tventasActions extends autoTventasActions
     {
         $this->getResponse()->setContentType('application/json');
         $buscar = $request->getParameter('q');
-        $query = Doctrine::getTable('TipoVenta')
-                              ->createQuery('a')
-                              ->orWhere('a.nombre LIKE ?', "%$buscar%")
-                              ->execute();
+        //construimos la consulta
+        $query = "SELECT * FROM tipo_venta where nombre ILIKE '%$buscar%'";
+        //obtenemos el singleton de la conexión
+        $con = Doctrine_Manager::getInstance()->connection();
+        //ejecutamos la consulta    
+        $query = $con->execute($query);
         $ventas = array();
         foreach ($query as $venta) {
-            $ventas[$venta->getId()] = $venta->getNombre();
+            $ventas[$venta  ['id']] = $venta['nombre'];
         }
  
         return $this->renderText(json_encode($ventas));
-    }
+     }
 }
