@@ -12,4 +12,8 @@
  */
 class TipoProductoFormulario5 extends BaseTipoProductoFormulario5
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+    }
 }
