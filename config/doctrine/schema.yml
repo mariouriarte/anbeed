@@ -81,8 +81,8 @@ LaboratorioFabricante:
     email:         {type: string(255), notnull: false, unique: true}
     observaciones: {type: string(2000)}
   relations:
-    Pais:     {local: pais_id, foreign: id, type: one, foreignAlias: Laboratorio}
-    Producto: {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
+    Pais:         {local: pais_id, foreign: id, type: one, foreignAlias: Laboratorio}
+    Producto:     {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
     
 Pais:
   actAs: {Timestampable: ~}
@@ -104,6 +104,7 @@ Producto:
   relations:
     Empresa:               {local: empresa_id, foreign: id, type: one, foreignAlias: Protuctos}
     LaboratorioFabricante: {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Protuctos}
+    Formulario5:           {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
 #    Producto:              {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
     
 Medicamento:
@@ -175,3 +176,38 @@ Ingrediente:
     nombre: {type: string(100), notnull: true}
   relations:
     DetalleFormulaCc: {local: id, foreign: ingrediente_id, type: one, foreignAlias: Ingrediente}
+
+Formulario5:
+  actAs: {Timestampable: ~}
+  columns:
+    fecha:                        {type: date}
+    tipo_tramite_formulario5_id:  {type: integer, notnull: true}
+    tipo_producto_formulario5_id: {type: integer, notnull: true}
+    origen_formulario5_id:        {type: integer, notnull: true}
+    producto_id:                  {type: integer, notnull: true}
+  relations:
+    Producto:          {local: producto_id, foreign: id, type: one, foreignAlias: Formulario5}
+    TipoTramiteForm5:  {local: tipo_tramite_formulario5_id, foreign: id, type: one, foreignAlias: Formulario5}
+    TipoProductoForm5: {local: tipo_producto_formulario5_id, foreign: id, type: one, foreginAlias: Formulario5}
+    OrigenForm5:       {local: origen_formulario5_id, foreing: id, type: one, foreignAlias: Formulario5}
+    
+TipoTramiteFormulario5:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre:      {type: string(30), notnull: true}
+  relations:
+    Formulario5: {local: id, foreign: tipo_tramite_formulario5_id, type: one, foreignAlias: TipoTramite}
+
+TipoProductoFormulario5:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre:      {type: string(30), notnull: true}
+  relations:
+    Formulario5: {local: id, foreign: tipo_producto_formulario5_id, type: one, foreignAlias: TipoProducto}
+
+OrigenFormulario5:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre:      {type: string(30), notnull: true}
+  relations:
+    Formulario5: {local: id, foreign: origen_formulario5_id, type: one, foreignAlias: Origen}
