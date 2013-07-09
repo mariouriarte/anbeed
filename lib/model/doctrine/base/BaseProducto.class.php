@@ -13,6 +13,7 @@
  * @property string $registro_sanitario
  * @property Empresa $Empresa
  * @property LaboratorioFabricante $LaboratorioFabricante
+ * @property Formulario5 $Formulario5
  * @property Doctrine_Collection $Medicamento
  * 
  * @method integer               getEmpresaId()                 Returns the current record's "empresa_id" value
@@ -23,6 +24,7 @@
  * @method string                getRegistroSanitario()         Returns the current record's "registro_sanitario" value
  * @method Empresa               getEmpresa()                   Returns the current record's "Empresa" value
  * @method LaboratorioFabricante getLaboratorioFabricante()     Returns the current record's "LaboratorioFabricante" value
+ * @method Formulario5           getFormulario5()               Returns the current record's "Formulario5" value
  * @method Doctrine_Collection   getMedicamento()               Returns the current record's "Medicamento" collection
  * @method Producto              setEmpresaId()                 Sets the current record's "empresa_id" value
  * @method Producto              setLaboratorioFabricanteId()   Sets the current record's "laboratorio_fabricante_id" value
@@ -32,6 +34,7 @@
  * @method Producto              setRegistroSanitario()         Sets the current record's "registro_sanitario" value
  * @method Producto              setEmpresa()                   Sets the current record's "Empresa" value
  * @method Producto              setLaboratorioFabricante()     Sets the current record's "LaboratorioFabricante" value
+ * @method Producto              setFormulario5()               Sets the current record's "Formulario5" value
  * @method Producto              setMedicamento()               Sets the current record's "Medicamento" collection
  * 
  * @package    anbeed
@@ -84,6 +87,10 @@ abstract class BaseProducto extends sfDoctrineRecord
         $this->hasOne('LaboratorioFabricante', array(
              'local' => 'laboratorio_fabricante_id',
              'foreign' => 'id'));
+
+        $this->hasOne('Formulario5', array(
+             'local' => 'id',
+             'foreign' => 'producto_id'));
 
         $this->hasMany('Medicamento', array(
              'local' => 'id',
