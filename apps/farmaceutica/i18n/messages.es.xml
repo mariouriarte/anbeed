@@ -121,7 +121,7 @@
             <trans-unit id="30">
                 <source>Required.</source>
                 <target>Requerido.</target>
-            </trans-unit>              
+            </trans-unit>
             <trans-unit id="31">
                 <source>is empty</source>
                 <target>esta vacío</target>

@@ -31,7 +31,7 @@ generator:
         max_per_page: 15
         display: [nombre, ap_paterno, ap_materno, cedula_expedido, telefono]
         actions:
-          ir_portal: {label: Ir a Portal}
+          ir_portal: {label: Volver al Portal}
           _new: ~
       filter:
         display: [nombre, ap_paterno, ci]
