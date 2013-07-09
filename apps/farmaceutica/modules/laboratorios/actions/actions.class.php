@@ -17,14 +17,15 @@ class laboratoriosActions extends autoLaboratoriosActions
     {
         $this->getResponse()->setContentType('application/json');
         $buscar = $request->getParameter('q');
-        // Obtenemos los representante legal registrados en el sistema, coincidiendo las busqueda con el nombre apellido paterno o materno
-        $query = Doctrine::getTable('LaboratorioFabricante')
-                               ->createQuery('a')
-                               ->Where('a.nombre LIKE ?', "%$buscar%")
-                               ->execute();
+        //construimos la consulta
+        $query = "SELECT * FROM laboratorio_fabricante where nombre ILIKE '%$buscar%'";
+        //obtenemos el singleton de la conexión
+        $con = Doctrine_Manager::getInstance()->connection();
+        //ejecutamos la consulta    
+        $query = $con->execute($query);
         $labs = array();
         foreach ($query as $lab) {
-            $labs[$lab->getId()] = $lab->getNombre();
+            $labs[$lab['id']] = $lab['nombre'];
         }
         return $this->renderText(json_encode($labs));
     }

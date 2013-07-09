@@ -17,13 +17,15 @@ class administracionesActions extends autoAdministracionesActions
     {
         $this->getResponse()->setContentType('application/json');
         $buscar = $request->getParameter('q');
-        $query = Doctrine::getTable('ViaAdministracion')
-                              ->createQuery('a')
-                              ->orWhere('a.nombre LIKE ?', "%$buscar%")
-                              ->execute();
+        //construimos la consulta
+        $query = "SELECT * FROM via_administracion where nombre ILIKE '%$buscar%'";
+        //obtenemos el singleton de la conexión
+        $con = Doctrine_Manager::getInstance()->connection();
+        //ejecutamos la consulta    
+        $query = $con->execute($query);
         $administracions = array();
         foreach ($query as $administracion) {
-            $administracions[$administracion->getId()] = $administracion->getNombre();
+            $administracions[$administracion['id']] = $administracion['nombre'];
         }
  
         return $this->renderText(json_encode($administracions));

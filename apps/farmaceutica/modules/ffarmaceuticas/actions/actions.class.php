@@ -17,13 +17,15 @@ class ffarmaceuticasActions extends autoFfarmaceuticasActions
     {
         $this->getResponse()->setContentType('application/json');
         $buscar = $request->getParameter('q');
-        $query = Doctrine::getTable('FormaFarmaceutica')
-                              ->createQuery('a')
-                              ->orWhere('a.nombre LIKE ?', "%$buscar%")
-                              ->execute();
+        //construimos la consulta
+        $query = "SELECT * FROM forma_farmaceutica where nombre ILIKE '%$buscar%'";
+        //obtenemos el singleton de la conexión
+        $con = Doctrine_Manager::getInstance()->connection();
+        //ejecutamos la consulta    
+        $query = $con->execute($query);
         $ffarmaceuticas = array();
         foreach ($query as $ffarmaceutica) {
-            $ffarmaceuticas[$ffarmaceutica->getId()] = $ffarmaceutica->getNombre();
+            $ffarmaceuticas[$ffarmaceutica['id']] = $ffarmaceutica['nombre'];
         }
  
         return $this->renderText(json_encode($ffarmaceuticas));
