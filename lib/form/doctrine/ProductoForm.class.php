@@ -25,7 +25,7 @@ class ProductoForm extends BaseProductoForm
       
       if(sfContext::getInstance()->getModuleName() == "prodmed")
         {
-            
+            unset($this['procedencia']);
             //Form enbebido, Medicamento\
             $subForm2 = new sfForm();
             if($this->isNew())

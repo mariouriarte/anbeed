@@ -11,28 +11,28 @@
  * @property integer $origen_formulario5_id
  * @property integer $producto_id
  * @property Producto $Producto
- * @property Doctrine_Collection $TipoTramite
- * @property Doctrine_Collection $TipoProducto
- * @property Doctrine_Collection $Origen
+ * @property TipoTramiteFormulario5 $TipoTramiteFormulario5
+ * @property TipoProductoFormulario5 $TipoProductoFormulario5
+ * @property OrigenFormulario5 $OrigenFormulario5
  * 
- * @method date                getFecha()                        Returns the current record's "fecha" value
- * @method integer             getTipoTramiteFormulario5Id()     Returns the current record's "tipo_tramite_formulario5_id" value
- * @method integer             getTipoProductoFormulario5Id()    Returns the current record's "tipo_producto_formulario5_id" value
- * @method integer             getOrigenFormulario5Id()          Returns the current record's "origen_formulario5_id" value
- * @method integer             getProductoId()                   Returns the current record's "producto_id" value
- * @method Producto            getProducto()                     Returns the current record's "Producto" value
- * @method Doctrine_Collection getTipoTramite()                  Returns the current record's "TipoTramite" collection
- * @method Doctrine_Collection getTipoProducto()                 Returns the current record's "TipoProducto" collection
- * @method Doctrine_Collection getOrigen()                       Returns the current record's "Origen" collection
- * @method Formulario5         setFecha()                        Sets the current record's "fecha" value
- * @method Formulario5         setTipoTramiteFormulario5Id()     Sets the current record's "tipo_tramite_formulario5_id" value
- * @method Formulario5         setTipoProductoFormulario5Id()    Sets the current record's "tipo_producto_formulario5_id" value
- * @method Formulario5         setOrigenFormulario5Id()          Sets the current record's "origen_formulario5_id" value
- * @method Formulario5         setProductoId()                   Sets the current record's "producto_id" value
- * @method Formulario5         setProducto()                     Sets the current record's "Producto" value
- * @method Formulario5         setTipoTramite()                  Sets the current record's "TipoTramite" collection
- * @method Formulario5         setTipoProducto()                 Sets the current record's "TipoProducto" collection
- * @method Formulario5         setOrigen()                       Sets the current record's "Origen" collection
+ * @method date                    getFecha()                        Returns the current record's "fecha" value
+ * @method integer                 getTipoTramiteFormulario5Id()     Returns the current record's "tipo_tramite_formulario5_id" value
+ * @method integer                 getTipoProductoFormulario5Id()    Returns the current record's "tipo_producto_formulario5_id" value
+ * @method integer                 getOrigenFormulario5Id()          Returns the current record's "origen_formulario5_id" value
+ * @method integer                 getProductoId()                   Returns the current record's "producto_id" value
+ * @method Producto                getProducto()                     Returns the current record's "Producto" value
+ * @method TipoTramiteFormulario5  getTipoTramiteFormulario5()       Returns the current record's "TipoTramiteFormulario5" value
+ * @method TipoProductoFormulario5 getTipoProductoFormulario5()      Returns the current record's "TipoProductoFormulario5" value
+ * @method OrigenFormulario5       getOrigenFormulario5()            Returns the current record's "OrigenFormulario5" value
+ * @method Formulario5             setFecha()                        Sets the current record's "fecha" value
+ * @method Formulario5             setTipoTramiteFormulario5Id()     Sets the current record's "tipo_tramite_formulario5_id" value
+ * @method Formulario5             setTipoProductoFormulario5Id()    Sets the current record's "tipo_producto_formulario5_id" value
+ * @method Formulario5             setOrigenFormulario5Id()          Sets the current record's "origen_formulario5_id" value
+ * @method Formulario5             setProductoId()                   Sets the current record's "producto_id" value
+ * @method Formulario5             setProducto()                     Sets the current record's "Producto" value
+ * @method Formulario5             setTipoTramiteFormulario5()       Sets the current record's "TipoTramiteFormulario5" value
+ * @method Formulario5             setTipoProductoFormulario5()      Sets the current record's "TipoProductoFormulario5" value
+ * @method Formulario5             setOrigenFormulario5()            Sets the current record's "OrigenFormulario5" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -72,15 +72,15 @@ abstract class BaseFormulario5 extends sfDoctrineRecord
              'local' => 'producto_id',
              'foreign' => 'id'));
 
-        $this->hasMany('TipoTramiteFormulario5 as TipoTramite', array(
+        $this->hasOne('TipoTramiteFormulario5', array(
              'local' => 'tipo_tramite_formulario5_id',
              'foreign' => 'id'));
 
-        $this->hasMany('TipoProductoFormulario5 as TipoProducto', array(
+        $this->hasOne('TipoProductoFormulario5', array(
              'local' => 'tipo_producto_formulario5_id',
              'foreign' => 'id'));
 
-        $this->hasMany('OrigenFormulario5 as Origen', array(
+        $this->hasOne('OrigenFormulario5', array(
              'local' => 'origen_formulario5_id',
              'foreign' => 'id'));
 

@@ -13,6 +13,9 @@ require_once dirname(__FILE__).'/../lib/prodmedGeneratorHelper.class.php';
  */
 class prodmedActions extends autoProdmedActions
 {
+    
+    
+    
     public function executeListAdmEmpresa(sfWebRequest $request)
     {
         $user = $this->getUser();
@@ -33,6 +36,13 @@ class prodmedActions extends autoProdmedActions
            $this->redirect('/farmaceutica_dev.php/formulas/new');
         else
            $this->redirect('/farmaceutica_dev.php/formulas/'.$formula_cc_id.'/edit');
+    }
+    public function executeIrForm5(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        $this->producto = $this->getRoute()->getObject();
+        $user->setAttribute('producto', $this->producto);
+        $this->redirect('/farmaceutica_dev.php/formulario5');
     }
     
 

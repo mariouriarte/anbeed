@@ -16,4 +16,20 @@ class Formulario5Table extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Formulario5');
     }
+    public function selectForms5DeMedicamento()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $producto = $user->getAttribute('producto');
+        $q = Doctrine_Query::create()
+                    ->from('Formulario5 f')
+                    ->leftJoin('f.Producto p')
+                    ->leftJoin('f.TipoTramiteFormulario5 tf')
+                    ->leftJoin('f.TipoProductoFormulario5 tp')
+                    ->leftJoin('f.OrigenFormulario5 of')
+                    ->where('f.producto_id = ?', $producto->getId())
+                    ->orderBy('f.id ASC');
+            
+        return $q;
+    }
+    
 }

@@ -12,4 +12,8 @@
  */
 class TipoTramiteFormulario5 extends BaseTipoTramiteFormulario5
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+    }
 }
