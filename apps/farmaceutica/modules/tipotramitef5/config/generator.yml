@@ -14,8 +14,17 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      list:    
+        title: Tipos de Tramite Registrados
+        display: [nombre]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [nombre]
+      form:    
+        display: [nombre]
+      edit:    
+        title: Editar Tipo de Tramite %%nombre%%
+      new: 
+        title: Registro de Tipos de Tramite

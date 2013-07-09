@@ -14,8 +14,17 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      list:    
+        title: Origenes
+        display: [nombre]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [nombre]
+      form:    
+        display: [nombre]
+      edit:    
+        title: Editar Origen %%nombre%%
+      new: 
+        title: Registro Origenes

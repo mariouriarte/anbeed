@@ -13,4 +13,8 @@ require_once dirname(__FILE__).'/../lib/tipotramitef5GeneratorHelper.class.php';
  */
 class tipotramitef5Actions extends autoTipotramitef5Actions
 {
+    public function executeListIrPortal(sfWebRequest $request)
+    {
+        $this->redirect('/portal_dev.php/inicio/index');
+    }
 }

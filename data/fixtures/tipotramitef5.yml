@@ -1,0 +1,17 @@
+TipoTramiteFormulario5:
+  TipoTramiteFormulario5_1:
+    nombre: INSCRIPCIÓN
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:02:00'
+  TipoTramiteFormulario5_2:
+    nombre: REINSCRIPCIÓN
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:00:00'
+  TipoTramiteFormulario5_3:
+    nombre: 'CAMBIO DE'
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 01:00:00'
+  TipoTramiteFormulario5_4:
+    nombre: OTRO
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:00:00'

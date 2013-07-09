@@ -13,4 +13,8 @@ require_once dirname(__FILE__).'/../lib/origenf5GeneratorHelper.class.php';
  */
 class origenf5Actions extends autoOrigenf5Actions
 {
+    public function executeListIrPortal(sfWebRequest $request)
+    {
+        $this->redirect('/portal_dev.php/inicio/index');
+    }
 }
