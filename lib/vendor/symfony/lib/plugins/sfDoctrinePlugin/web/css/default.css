@@ -113,7 +113,8 @@ td.sf_admin_text
     position: absolute;
     /*right: 300px;*/
     top: 25px;
-    left: 350px;
+    /*left: 350px;*/
+    right: 150px;
 }
 
 .sf_admin_pagination
