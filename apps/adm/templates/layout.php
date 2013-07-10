@@ -17,7 +17,7 @@
         <div id="global_domain_bar">
             <div id="menu">
                 <?php if ($sf_user->isAuthenticated()): ?>
-                    
+                    <?php echo Menu::getMenu() ?>
                 <?php endif; ?>
             </div>
         </div>
@@ -28,6 +28,7 @@
                 <div id="header">
                     <div id="header-content">
                         <div id="header-top">
+                            
                             <div id="header-logo">
                                 <div id="logo">
                                     <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '/portal_dev.php/inicio')?>
@@ -49,6 +50,8 @@
                                     <h2>ANBEED SRL</h2>
                                 <?php endif; ?>
                             </div>
+                            
+                            
                         </div>
                         <div id="header-bottom">
                            <?php if (!include_slot('header-navegador')): ?>

@@ -18,7 +18,7 @@
         <div id="global_domain_bar">
             <div id="menu">
                 <?php if ($sf_user->isAuthenticated()): ?>
-                    
+                    <?php echo Menu::getMenu() ?>
                 <?php endif; ?>
             </div>
         </div>
@@ -29,9 +29,20 @@
                 <div id="header">
                     <div id="header-content">
                         <div id="header-top">
+                            <div id="header-tools">
+                                <?php if (!include_slot('header-tools')): ?>
+                                
+                                <?php endif ?>
+                                <?php if (!$sf_user->isAuthenticated()): ?>
+                                    <h2>ANBEED SRL</h2>
+                                <?php endif; ?>
+                            </div>
                             <div id="header-logo">
                                 <div id="logo">
+<<<<<<< HEAD
+=======
                                     <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '@homepage')?>
+>>>>>>> 47c69a6152e4b0ea9f1cce2ba46da1d68058449c
                                 </div>
                                 <?php if ($sf_user->isAuthenticated()): ?>
                                 <div id="info-user">
@@ -43,17 +54,9 @@
                                 </div>
                                 <?php endif; ?>
                             </div>
-                            <div id="header-tools">
-                                <?php if (!include_slot('header-tools')): ?>
-                                espacio 1
-                                <?php endif ?>
-                                <?php if (!$sf_user->isAuthenticated()): ?>
-                                    <h2>ANBEED SRL</h2>
-                                <?php endif; ?>
-                            </div>
+                            
                         </div>
                         <div id="header-bottom">
-                           espacio 2
                         </div>
                     </div>
                 </div>

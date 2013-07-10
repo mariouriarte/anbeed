@@ -95,7 +95,7 @@
                 </div>
             </div>
         </div>
-        <div class="columna">
+<!--        <div class="columna">
             <div class="cubo">
                 <div class="adentro">
                     <h2 class="titulo"><img src="/images/icons/package-x-generic.svg" />Dispositivos Médicos</h2>
@@ -118,10 +118,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         
+<<<<<<< HEAD
+    </div>
+=======
     
     </div>-->
+>>>>>>> 47c69a6152e4b0ea9f1cce2ba46da1d68058449c
     <ul class="acciones_lista">
         <li class="acciones_lista_list">
             <?php echo link_to('Volver al listado', 'empresas/index') ?>
