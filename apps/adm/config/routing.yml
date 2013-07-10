@@ -1,3 +1,12 @@
+formulario5:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario5
+    module:               formulario5
+    prefix_path:          /formulario5
+    column:               id
+    with_wildcard_routes: true
+
 via_administracion:
   class: sfDoctrineRouteCollection
   options:

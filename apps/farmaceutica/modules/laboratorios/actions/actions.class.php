@@ -29,4 +29,11 @@ class laboratoriosActions extends autoLaboratoriosActions
         }
         return $this->renderText(json_encode($labs));
     }
+    
+    public function executeListIrEmpresa(sfWebRequest $request)
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $this->redirect('farmaceutica_dev.php/empresas/administrarEmpresa?id='.$empresa->getId());
+    }
 }
