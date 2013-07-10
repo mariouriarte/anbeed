@@ -113,8 +113,8 @@ img.cps-logo {
     /*margin-right: 20px;*/
 }
 #logo {    
-    height: 74px;
-    padding: 5px 15px 0 0;
+    height: 90px;
+    padding: 0px 0px 0 0;
 }
 
 #info-user {
@@ -132,7 +132,7 @@ img.cps-logo {
 #container {
     /*margin-bottom: 70px;*/
     height: auto;
-    margin-top: 25px;
+    margin-top: 0px;
     margin-bottom: 50px;
 }
 
