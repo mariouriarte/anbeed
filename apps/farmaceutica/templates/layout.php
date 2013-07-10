@@ -17,7 +17,7 @@
         <div id="global_domain_bar">
             <div id="menu">
                 <?php if ($sf_user->isAuthenticated()): ?>
-                    
+                    <?php echo Menu::getMenu() ?>
                 <?php endif; ?>
             </div>
         </div>
