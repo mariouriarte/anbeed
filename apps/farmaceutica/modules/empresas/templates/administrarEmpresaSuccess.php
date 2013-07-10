@@ -17,7 +17,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/applications-debugging.svg" />Administración</h2>
+                    <h2 class="titulo"><img src="/images/icons/applications-debugging.svg" /> Administración</h2>
                     <div class="contenido">
                         <ul>
                             <li><?php echo link_to('Editar Empresa', 'empresas/edit?id=' . $empresa->getId()) ?></li>
@@ -48,7 +48,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/applications-development.svg" />Laboratorios</h2>
+                    <h2 class="titulo"><img src="/images/icons/applications-development.svg" /> Laboratorios</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica_dev.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
@@ -57,8 +57,32 @@
                 </div>
             </div>
         </div>
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <h2 class="titulo"><img src="/images/icons/package-x-generic.svg" /> Productos</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/farmaceutica_dev.php/prodmed"><span> Medicamentos</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <h2 class="titulo"><img src="/images/icons/folder-documents.png" /> Formularios</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/farmaceutica_dev.php/formulario5porempresa"><span> Formulario 005</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="linea">
+<!--    <div class="linea">
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
@@ -96,7 +120,12 @@
             </div>
         </div>-->
         
+<<<<<<< HEAD
     </div>
+=======
+    
+    </div>-->
+>>>>>>> 47c69a6152e4b0ea9f1cce2ba46da1d68058449c
     <ul class="acciones_lista">
         <li class="acciones_lista_list">
             <?php echo link_to('Volver al listado', 'empresas/index') ?>

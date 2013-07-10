@@ -39,6 +39,10 @@
                             </div>
                             <div id="header-logo">
                                 <div id="logo">
+<<<<<<< HEAD
+=======
+                                    <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '@homepage')?>
+>>>>>>> 47c69a6152e4b0ea9f1cce2ba46da1d68058449c
                                 </div>
                                 <?php if ($sf_user->isAuthenticated()): ?>
                                 <div id="info-user">

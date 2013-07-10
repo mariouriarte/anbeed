@@ -23,6 +23,9 @@ generator:
       list: 
         title: Laboratorios Farmaceuticos Registrados
         display: [nombre, pais, telefono]
+        actions:
+          ir_empresa: {label: Volver a Empresa}
+          _new: ~
       filter:
         display:        [nombre, pais_id] 
       form:

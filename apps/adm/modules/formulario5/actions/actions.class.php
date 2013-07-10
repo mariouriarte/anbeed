@@ -13,8 +13,4 @@ require_once dirname(__FILE__).'/../lib/formulario5GeneratorHelper.class.php';
  */
 class formulario5Actions extends autoFormulario5Actions
 {
-   public function executeListIrProductos(sfWebRequest $request)
-   {
-        $this->redirect(sfContext::getInstance()->getRouting()->generate('producto_prodmed'));
-   }
 }
