@@ -13,4 +13,10 @@ require_once dirname(__FILE__).'/../lib/formulario5porempresaGeneratorHelper.cla
  */
 class formulario5porempresaActions extends autoFormulario5porempresaActions
 {
+           public function executeListIrEmpresa(sfWebRequest $request)
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
+    }
 }

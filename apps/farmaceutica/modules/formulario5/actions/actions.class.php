@@ -17,4 +17,10 @@ class formulario5Actions extends autoFormulario5Actions
    {
         $this->redirect(sfContext::getInstance()->getRouting()->generate('producto_prodmed'));
    }
+       public function executeListIrEmpresa(sfWebRequest $request)
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
+    }
 }
