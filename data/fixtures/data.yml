@@ -1,96 +1,12 @@
-RegenteFarmaceutico:
-  RegenteFarmaceutico_1:
-    Persona: Persona_1
-    matricula_profesional: '123456'
-    carnet_colegiado: '321654'
-    is_active: true
-    created_at: '2013-06-24 22:00:47'
-    updated_at: '2013-06-24 22:00:47'
-  RegenteFarmaceutico_2:
-    Persona: Persona_3
-    matricula_profesional: bgh544
-    carnet_colegiado: 1112-123
-    is_active: true
-    created_at: '2013-06-27 00:00:22'
-    updated_at: '2013-06-27 00:00:22'
-FormulaCc:
-  FormulaCc_1:
-    observaciones: ninguna
-    created_at: '2013-07-09 18:49:36'
-    updated_at: '2013-07-09 18:49:36'
-Producto:
-  Producto_1:
-    Empresa: Empresa_1
-    LaboratorioFabricante: LaboratorioFabricante_1
-    nombre_generico: ASPIRINA
-    descripcion: aspirina
-    procedencia: ALEMANIA
-    registro_sanitario: ''
-    created_at: '2013-07-09 18:49:03'
-    updated_at: '2013-07-09 18:49:03'
 RepresentanteLegal:
   RepresentanteLegal_1:
     Persona: Persona_2
-    is_active: true
     created_at: '2013-06-24 22:01:33'
     updated_at: '2013-06-24 22:01:33'
   RepresentanteLegal_2:
     Persona: Persona_4
-    is_active: true
     created_at: '2013-06-27 00:12:40'
     updated_at: '2013-06-27 00:12:40'
-DetalleFormulaCc:
-  DetalleFormulaCc_1:
-    FormulaCc: FormulaCc_1
-    Ingrediente: Ingrediente_1
-    cantidad: '10.00'
-    unidad: MG
-    created_at: '2013-07-09 18:49:36'
-    updated_at: '2013-07-09 18:49:36'
-  DetalleFormulaCc_2:
-    FormulaCc: FormulaCc_1
-    Ingrediente: Ingrediente_7
-    cantidad: '10.00'
-    unidad: MG
-    created_at: '2013-07-09 18:50:03'
-    updated_at: '2013-07-09 18:50:03'
-  DetalleFormulaCc_3:
-    FormulaCc: FormulaCc_1
-    Ingrediente: Ingrediente_5
-    cantidad: '10.00'
-    unidad: MG
-    created_at: '2013-07-09 18:50:19'
-    updated_at: '2013-07-09 18:50:19'
-Medicamento:
-  Medicamento_1:
-    Producto: Producto_1
-    FormaFarmaceutica: FormaFarmaceutica_6
-    ViaAdministracion: ViaAdministracion_1
-    TipoVenta: TipoVenta_4
-    FormulaCc: FormulaCc_1
-    nombre_comercial: ASPIRINEX
-    concentracion: '50 MG'
-    accion_terapeutica: si
-    conservacion: NORMAL
-    periodo_validez: SI
-    especificacion_envase: no
-    aval: SI
-    certificado_control: SI
-    created_at: '2013-07-09 18:49:03'
-    updated_at: '2013-07-09 18:49:36'
-LaboratorioFabricante:
-  LaboratorioFabricante_1:
-    Pais: Pais_3
-    nombre: 'LABORATORIOS PATITO'
-    bajo_licencia: SI
-    para: TODOS
-    direccion: 'AV AHI'
-    telefono: '222222'
-    fax: '222222'
-    email: PATITO@GMAIL.COM
-    observaciones: ninguna
-    created_at: '2013-07-09 18:47:11'
-    updated_at: '2013-07-09 18:47:11'
 Empresa:
   Empresa_1:
     RepresentanteLegal: RepresentanteLegal_1
@@ -110,6 +26,168 @@ Empresa:
     fundempresa: 22w32
     nit: '212312'
     licencia_funcionamiento: '123123'
-    is_active: true
     created_at: '2013-06-25 22:19:03'
     updated_at: '2013-06-25 22:19:03'
+RegenteFarmaceutico:
+  RegenteFarmaceutico_1:
+    Persona: Persona_1
+    matricula_profesional: '123456'
+    carnet_colegiado: '321654'
+    created_at: '2013-06-24 22:00:47'
+    updated_at: '2013-06-24 22:00:47'
+  RegenteFarmaceutico_2:
+    Persona: Persona_3
+    matricula_profesional: bgh544
+    carnet_colegiado: 1112-123
+    created_at: '2013-06-27 00:00:22'
+    updated_at: '2013-06-27 00:00:22'
+ViaAdministracion:
+  ViaAdministracion_1:
+    nombre: 'Vía Oral'
+    created_at: '2013-06-28 00:09:00'
+    updated_at: '2013-06-28 00:09:00'
+  ViaAdministracion_2:
+    nombre: 'Vía Sublingual'
+    created_at: '2013-06-28 00:09:00'
+    updated_at: '2013-06-28 00:09:00'
+  ViaAdministracion_3:
+    nombre: 'Vía Nasal'
+    created_at: '2013-06-28 00:09:00'
+    updated_at: '2013-06-28 00:09:00'
+  ViaAdministracion_4:
+    nombre: 'Vía Oftálmica'
+    created_at: '2013-06-28 00:09:00'
+    updated_at: '2013-06-28 00:09:00'
+  ViaAdministracion_5:
+    nombre: 'Vía Tópica'
+    created_at: '2013-06-28 00:09:00'
+    updated_at: '2013-06-28 00:09:00'
+  ViaAdministracion_6:
+    nombre: 'Vía Subcutánea'
+    created_at: '2013-06-28 00:09:00'
+    updated_at: '2013-06-28 00:09:00'
+  ViaAdministracion_7:
+    nombre: 'Vía Intramuscular'
+    created_at: '2013-06-28 00:09:00'
+    updated_at: '2013-06-28 00:09:00'
+  ViaAdministracion_8:
+    nombre: 'Vía Intravenosa'
+    created_at: '2013-06-28 00:09:00'
+    updated_at: '2013-06-28 00:09:00'
+  ViaAdministracion_9:
+    nombre: 'Vía Inaladora'
+    created_at: '2013-06-28 00:09:00'
+    updated_at: '2013-06-28 00:09:00'
+  ViaAdministracion_10:
+    nombre: 'Vía Inalatoria'
+    created_at: '2013-06-28 00:09:00'
+    updated_at: '2013-06-28 00:09:00'
+  ViaAdministracion_11:
+    nombre: 'Vía Rectal'
+    created_at: '2013-06-28 00:09:00'
+    updated_at: '2013-06-28 00:09:00'
+  ViaAdministracion_12:
+    nombre: 'Vía Parenteral'
+    created_at: '2013-06-28 00:09:00'
+    updated_at: '2013-06-28 00:09:00'
+Persona:
+  Persona_1:
+    nombre: regente
+    ap_paterno: regente
+    ap_materno: regente
+    ci: '5555555'
+    expedido: lp
+    direccion: ''
+    telefono: ''
+    celular: ''
+    fax: ''
+    casilla: ''
+    email: ''
+    fecha_nacimiento: null
+    created_at: '2013-06-24 22:00:47'
+    updated_at: '2013-06-24 22:00:47'
+  Persona_2:
+    nombre: legal
+    ap_paterno: legal
+    ap_materno: legal
+    ci: '987854544'
+    expedido: lp
+    direccion: ''
+    telefono: ''
+    celular: ''
+    fax: ''
+    casilla: ''
+    email: jj@jyva.com
+    fecha_nacimiento: null
+    created_at: '2013-06-24 22:01:33'
+    updated_at: '2013-06-24 22:01:33'
+  Persona_3:
+    nombre: 'nuevo regente'
+    ap_paterno: 'nuevo regente'
+    ap_materno: 'nuevo regente'
+    ci: '23343434'
+    expedido: lp
+    direccion: ''
+    telefono: ''
+    celular: ''
+    fax: ''
+    casilla: ''
+    email: j222@jyva.com
+    fecha_nacimiento: '2013-06-30'
+    created_at: '2013-06-27 00:00:22'
+    updated_at: '2013-06-27 00:00:22'
+  Persona_4:
+    nombre: nn
+    ap_paterno: nn
+    ap_materno: nn
+    ci: '232323423'
+    expedido: sc
+    direccion: ''
+    telefono: ''
+    celular: ''
+    fax: ''
+    casilla: ''
+    email: j2232@jyva.com
+    fecha_nacimiento: '2013-06-05'
+    created_at: '2013-06-27 00:12:40'
+    updated_at: '2013-06-27 00:12:40'
+LaboratorioFabricante:
+  LaboratorioFabricante_1:
+    Pais: Pais_3
+    nombre: 'LABORATORIOS PATITO'
+    bajo_licencia: SI
+    para: TODOS
+    direccion: 'AV AHI'
+    telefono: '222222'
+    fax: '222222'
+    email: PATITO@GMAIL.COM
+    observaciones: ninguna
+    created_at: '2013-07-09 18:47:11'
+    updated_at: '2013-07-09 18:47:11'
+Producto:
+  Producto_1:
+    Empresa: Empresa_1
+    LaboratorioFabricante: LaboratorioFabricante_1
+    nombre_generico: ASPIRINA
+    descripcion: aspirina
+    procedencia: ALEMANIA
+    registro_sanitario: ''
+    created_at: '2013-07-09 18:49:03'
+    updated_at: '2013-07-09 18:49:03'
+Medicamento:
+  Medicamento_1:
+    Producto: Producto_1
+    FormaFarmaceutica: Tableta
+    ViaAdministracion: ViaAdministracion_1
+    TipoVenta: Libre
+    nombre_comercial: ASPIRINEX
+    concentracion: '50 MG'
+    accion_terapeutica: si
+    conservacion: NORMAL
+    periodo_validez: SI
+    especificacion_envase: no
+    aval: SI
+    certificado_control: SI
+    created_at: '2013-07-09 18:49:03'
+    updated_at: '2013-07-09 18:49:36'
+
