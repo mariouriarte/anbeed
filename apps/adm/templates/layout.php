@@ -30,7 +30,7 @@
                         <div id="header-top">
                             <div id="header-logo">
                                 <div id="logo">
-                                    
+                                    <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '/portal_dev.php/inicio')?>
                                 </div>
                                 <?php if ($sf_user->isAuthenticated()): ?>
                                 <div id="info-user">
