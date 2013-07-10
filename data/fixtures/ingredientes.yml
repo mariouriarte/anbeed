@@ -1,101 +1,51 @@
 Ingrediente:
   Ingrediente_1:
-    nombre: agua
-    created_at: '2013-07-04 21:50:20'
-    updated_at: '2013-07-04 21:50:20'
+    nombre: AGUA
   Ingrediente_2:
-    nombre: 'fosfato de calcio dibasico'
-    created_at: '2013-07-04 21:51:13'
-    updated_at: '2013-07-04 21:51:13'
+    nombre: FOSFATO DE CALCIO DIBASICO
   Ingrediente_3:
-    nombre: 'propylene glycol'
-    created_at: '2013-07-04 21:51:44'
-    updated_at: '2013-07-04 21:51:44'
+    nombre: PROPYLENE GLYCOL
   Ingrediente_4:
-    nombre: 'sodium methylparaben'
-    created_at: '2013-07-04 21:51:58'
-    updated_at: '2013-07-04 21:51:58'
+    nombre: SODIUM METHYLAPARABEN
   Ingrediente_5:
-    nombre: caramel
-    created_at: '2013-07-04 21:52:02'
-    updated_at: '2013-07-04 21:52:02'
+    nombre: CARAMEL
   Ingrediente_6:
-    nombre: parfum
-    created_at: '2013-07-04 21:52:07'
-    updated_at: '2013-07-04 21:52:07'
+    nombre: PARFUM
   Ingrediente_7:
-    nombre: almidon
-    created_at: '2013-07-04 21:52:11'
-    updated_at: '2013-07-04 21:52:11'
+    nombre: ALMIDÓN
   Ingrediente_8:
-    nombre: gelatina
-    created_at: '2013-07-04 21:52:15'
-    updated_at: '2013-07-04 21:52:15'
+    nombre: GELATINA
   Ingrediente_9:
-    nombre: lactosa
-    created_at: '2013-07-04 21:52:20'
-    updated_at: '2013-07-04 21:52:20'
+    nombre: LACTOSA
   Ingrediente_10:
-    nombre: talco
-    created_at: '2013-07-04 21:52:23'
-    updated_at: '2013-07-04 21:52:23'
+    nombre: TALCO
   Ingrediente_11:
-    nombre: azucar
-    created_at: '2013-07-04 21:52:26'
-    updated_at: '2013-07-04 21:52:26'
+    nombre: AZUCAR
   Ingrediente_12:
-    nombre: 'acido citrico'
-    created_at: '2013-07-04 21:52:31'
-    updated_at: '2013-07-04 21:52:31'
+    nombre: ÁCIDO CÍTRICO
   Ingrediente_13:
-    nombre: mentol
-    created_at: '2013-07-04 21:52:35'
-    updated_at: '2013-07-04 21:52:35'
+    nombre: MENTOL
   Ingrediente_14:
-    nombre: 'alcohol isopropilico'
-    created_at: '2013-07-04 21:52:43'
-    updated_at: '2013-07-04 21:52:43'
+    nombre: ALCOHOL ISOPROPILICO
   Ingrediente_15:
-    nombre: acetona
-    created_at: '2013-07-04 21:52:54'
-    updated_at: '2013-07-04 21:52:54'
+    nombre: ACETONA
   Ingrediente_16:
-    nombre: 'acido hialuronico'
-    created_at: '2013-07-04 21:53:05'
-    updated_at: '2013-07-04 21:53:05'
+    nombre: ACIDO HIALURONICO
   Ingrediente_17:
-    nombre: 'alcohol denat'
-    created_at: '2013-07-04 21:53:16'
-    updated_at: '2013-07-04 21:53:16'
+    nombre: ALCOHOL DENAT
   Ingrediente_18:
-    nombre: 'alcohol rectificado'
-    created_at: '2013-07-04 21:53:23'
-    updated_at: '2013-07-04 21:53:23'
+    nombre: ALCOHOL RECTIFICADO
   Ingrediente_19:
-    nombre: glicerina
-    created_at: '2013-07-04 21:53:29'
-    updated_at: '2013-07-04 21:53:29'
+    nombre: GLICERINA
   Ingrediente_20:
-    nombre: 'citrato de sodio dihidratado'
-    created_at: '2013-07-04 21:53:37'
-    updated_at: '2013-07-04 21:53:37'
+    nombre: CITRATO DE SODIO DIHIDRATADO
   Ingrediente_21:
-    nombre: atenolol
-    created_at: '2013-07-04 21:53:50'
-    updated_at: '2013-07-04 21:53:50'
+    nombre: ATENOLOL
   Ingrediente_22:
-    nombre: sacarosa
-    created_at: '2013-07-04 21:53:55'
-    updated_at: '2013-07-04 21:53:55'
+    nombre: SACAROSA
   Ingrediente_23:
-    nombre: 'agua destilada'
-    created_at: '2013-07-04 21:54:00'
-    updated_at: '2013-07-04 21:54:00'
+    nombre: AGUA DESTILADA
   Ingrediente_24:
-    nombre: 'vitamina b1'
-    created_at: '2013-07-04 21:54:06'
-    updated_at: '2013-07-04 21:54:06'
+    nombre: VITAMINA B1
   Ingrediente_25:
-    nombre: vainilla
-    created_at: '2013-07-04 21:54:11'
-    updated_at: '2013-07-04 21:54:11'
+    nombre: VAINILLA

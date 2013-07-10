@@ -2,18 +2,16 @@
 ---
 FormaFarmaceutica:
   Comprimido:
-    nombre: Comprimido
+    nombre: COMPRIMIDO
   Capsula:
-    nombre: Cápsula
+    nombre: CÁPSULA
   Polvo:
-    nombre: Polvo
+    nombre: POLVO
   Jarabe:
-    nombre: Jarabe
+    nombre: JARABE
   Inyectable:
-    nombre: Inyectable
+    nombre: INYECTABLE
   Tableta:
-    nombre: Tableta
+    nombre: TABLETA
   Gotas:
-    nombre: Gotas  
-  Otros:
-    nombre: Otros
+    nombre: GOTAS

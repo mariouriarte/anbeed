@@ -2,11 +2,11 @@
 ---
 TipoVenta:
   Receta:
-    nombre: Receta Médica
+    nombre: RECETA MÉDICA
   Archivada:
-    nombre: Receta Médica Archivada
+    nombre: RECETA MÉDICA ARCHIVADA
   Valorada:
-    nombre: Receta Valorada
+    nombre: RECETA VALORADA
   Libre:
-    nombre: Venta Libre
+    nombre: VENTA LIBRE
   

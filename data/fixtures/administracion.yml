@@ -2,28 +2,26 @@
 ---
 ViaAdministracion:
   Oral:
-    nombre: Vía Oral
+    nombre: VÍA ORAL
   Sublingual:
-    nombre: Vía Sublingual
+    nombre: VÍA SUBLINGUAL
   Nasal:
-    nombre: Vía Nasal
+    nombre: VÍA NASAL
   Oftalmica:
-    nombre: Vía Oftálmica
+    nombre: VÍA OFTÁLMICA
   Topica:
-    nombre: Vía Tópica
+    nombre: VÍA TÓPICA
   Subcutaneas:
-    nombre: Vía Subcutánea
+    nombre: VÍA SUBCUTÁNEA
   Intramuscular:
-    nombre: Vía Intramuscular 
-  Intravenosa:
-    nombre: Vía Intravenosa
+    nombre: VÍA INTRAMUSCULAR
   Inaladora:
-    nombre: Vía Inaladora
+    nombre: VÍA INALADORA
   Inalatoria:
-    nombre: Vía Inalatoria
+    nombre: VÍA INALATORIA
   Intravenosa:
-    nombre: Vía Intravenosa
+    nombre: VÍA INTRAVENOSA
   Rectal:
-    nombre: Vía Rectal
+    nombre: VÍA RECTAL
   Parenteral:
-    nombre: Vía Parenteral
+    nombre: VÍA PARENTERAL
