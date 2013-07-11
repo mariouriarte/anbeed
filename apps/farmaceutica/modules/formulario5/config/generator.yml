@@ -31,11 +31,16 @@ generator:
         display: [tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario5_id]
       
       form:    
-      
+       
       edit:    
         title: Editar Listado de Solicitudes para Registro y Control de Calidad de Medicamentos
         display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario5_id, producto_id]
-     
+        actions:
+          _list: ~  
+          _save: ~  
       new:     
         title: Solicitud para Registro y Control de Calidad de Medicamentos
         display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario5_id, producto_id]
+        actions:
+          _list: ~  
+          _save: ~

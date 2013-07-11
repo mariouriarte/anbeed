@@ -67,6 +67,7 @@ class empresasActions extends autoEmpresasActions
     
     public function executeListIrPortal(sfWebRequest $request)
     {
+        //$this->getUser()->setAttribute('empresa', NULL);
         $this->redirect('/portal_dev.php/inicio/index');
     }
 }
