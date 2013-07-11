@@ -34,6 +34,6 @@ class laboratoriosActions extends autoLaboratoriosActions
     {
         $user = sfContext::getInstance()->getUser();
         $empresa = $user->getAttribute('empresa');
-        $this->redirect('farmaceutica_dev.php/empresas/administrarEmpresa?id='.$empresa->getId());
+        $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
     }
 }
