@@ -21,12 +21,13 @@ generator:
       
       list:    
         title: Listado de Solicitudes para Registro y Control de Calidad de Medicamentos
+        table_method: selectForms5DeEmpresa
         display: [fecha, tipo_tramite_formulario5, tipo_producto_formulario5, origen_formulario5, producto]
         actions:
           ir_empresa: {label: Volver a Empresa}
           _new: ~
-      filter:  ~
-      
+      filter:
+        display: [tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario5_id]
       form:    
       
       edit:    

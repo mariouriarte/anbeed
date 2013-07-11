@@ -100,7 +100,7 @@ Producto:
     nombre_generico:           {type: string(255), notnull: true}
     descripcion:               {type: string(2000), notnull: false}
     procedencia:               {type: string(255)}
-    registro_sanitario:        {type: string(50), unique: true, notnull: false}
+    registro_sanitario:        {type: string(50), unique: true, default: NULL}
   relations:
     Empresa:               {local: empresa_id, foreign: id, type: one, foreignAlias: Protuctos}
     LaboratorioFabricante: {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Protuctos}

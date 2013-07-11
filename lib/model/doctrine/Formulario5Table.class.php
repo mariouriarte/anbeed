@@ -32,4 +32,20 @@ class Formulario5Table extends Doctrine_Table
         return $q;
     }
     
+    public function selectForms5DeEmpresa()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $q = Doctrine_Query::create()
+                    ->from('Formulario5 f')
+                    ->leftJoin('f.Producto p')
+                    ->leftJoin('p.Empresa e ON id = ?', $empresa->getId())
+
+//                    ->leftJoin('p.TipoTramiteFormulario5 tf')
+//                    ->leftJoin('p.TipoProductoFormulario5 tp')
+//                    ->leftJoin('p.OrigenFormulario5 of')
+                    
+                    ->orderBy('f.id ASC');
+        return $q;
+    }
 }

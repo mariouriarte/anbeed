@@ -4,7 +4,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/folder-documents.png" />Empresas</h2>
+                    <h2 class="titulo"><?php echo image_tag('company.ico', 'size=48x48')?> Empresas</h2>
                     <div class="contenido">
                         
                         <ul>
@@ -14,9 +14,19 @@
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div class="linea">
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <h2 class="titulo"><img src="/images/icons/x-office-document.svg" /> Formularios</h2>
+                    <div class="contenido">
+                        
+                        <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/formulario5"><span> Formulario 005 vista global</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
@@ -34,6 +44,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    
+    <div class="linea">
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
