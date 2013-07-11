@@ -13,4 +13,8 @@ require_once dirname(__FILE__).'/../lib/formulario5GeneratorHelper.class.php';
  */
 class formulario5Actions extends autoFormulario5Actions
 {
+    public function executeListIrPortal(sfWebRequest $request)
+    {
+        $this->redirect('/portal_dev.php/inicio/index');
+    }
 }

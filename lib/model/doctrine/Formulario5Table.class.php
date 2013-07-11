@@ -39,12 +39,8 @@ class Formulario5Table extends Doctrine_Table
         $q = Doctrine_Query::create()
                     ->from('Formulario5 f')
                     ->leftJoin('f.Producto p')
-                    ->leftJoin('p.Empresa e ON id = ?', $empresa->getId())
-
-//                    ->leftJoin('p.TipoTramiteFormulario5 tf')
-//                    ->leftJoin('p.TipoProductoFormulario5 tp')
-//                    ->leftJoin('p.OrigenFormulario5 of')
-                    
+                    ->leftJoin('p.Empresa e') 
+                    ->where('p.empresa_id = ?', $empresa->getId())
                     ->orderBy('f.id ASC');
         return $q;
     }
