@@ -21,6 +21,7 @@ generator:
         descripcion:               {label: 'Descripción'}
       list:    
          title:   Medicamentos Registrados
+         table_method: selectMedicamentosDeEmpresa
          display: [nombre_generico, laboratorio_fabricante, registro_sanitario]
          object_actions:
           ir_formula: {label: Fórmula Cualicuantitativa, action: irFormula}

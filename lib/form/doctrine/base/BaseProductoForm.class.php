@@ -38,10 +38,6 @@ abstract class BaseProductoForm extends BaseFormDoctrine
       'updated_at'                => new sfValidatorDateTime(),
     ));
 
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'Producto', 'column' => array('registro_sanitario')))
-    );
-
     $this->widgetSchema->setNameFormat('producto[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

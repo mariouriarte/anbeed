@@ -71,8 +71,7 @@ abstract class BaseProducto extends sfDoctrineRecord
              ));
         $this->hasColumn('registro_sanitario', 'string', 50, array(
              'type' => 'string',
-             'unique' => true,
-             'notnull' => false,
+             'unique' => false,
              'length' => 50,
              ));
     }
