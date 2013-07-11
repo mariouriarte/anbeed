@@ -23,9 +23,7 @@
             </div>
         </div>
         <div id="container">
-            
             <div id="conten-header">
-
                 <div id="header">
                     <div id="header-content">
                         <div id="header-top">
@@ -39,12 +37,10 @@
                             </div>
                             <div id="header-logo">
                                 <div id="logo">
-<<<<<<< HEAD
-=======
                                     <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '@homepage')?>
->>>>>>> 47c69a6152e4b0ea9f1cce2ba46da1d68058449c
                                 </div>
-                                <?php if ($sf_user->isAuthenticated()): ?>
+                            </div>
+                            <?php if ($sf_user->isAuthenticated()): ?>
                                 <div id="info-user">
                                     <h4>Usuario: <?php echo $sf_user->getUsername(); ?></h4>
                                     <h3><?php echo link_to('Cerrar session', '@sf_guard_signout',
@@ -52,9 +48,7 @@
                                         ?>
                                     </h3>
                                 </div>
-                                <?php endif; ?>
-                            </div>
-                            
+                            <?php endif; ?>
                         </div>
                         <div id="header-bottom">
                         </div>

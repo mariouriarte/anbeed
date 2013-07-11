@@ -54,14 +54,15 @@ a:hover {
 
 #header #header-content {
     width: 1008px;
-    /*margin: 0 auto;*/
-    margin: 0 85px;
+    margin: 0 auto;
     height: 97px;
 }
 
+
 #header #header-logo {
-    float: right;
-    height: 70px;
+    float: left;
+    height: 90px;
+    padding: 4px 0 0;
 }
 
 #header #header-tools {
@@ -112,13 +113,17 @@ img.cps-logo {
     float: left;
     /*margin-right: 20px;*/
 }
-#logo {    
+#info-user {
+    float: right;
     height: 90px;
-    padding: 0px 0px 0 0;
+    padding: 7px 10px 0;
+    width: 200px;
 }
 
 #info-user {
-    padding: 5px 10px 0 0;
+    height: 90px;
+    padding: 7px 10px 0;
+    width: 200px;
 }
 
 #container {
@@ -130,10 +135,9 @@ img.cps-logo {
 }
 
 #container {
-    /*margin-bottom: 70px;*/
     height: auto;
-    margin-top: 0px;
     margin-bottom: 50px;
+    margin-top: 25px;
 }
 
 .footer {
@@ -186,6 +190,7 @@ img.cps-logo {
     /*    padding: 3px 0 0 19px;*/
     /*    background: url("../images/16x16/system_log_out.png") no-repeat scroll 0 0 transparent;*/
     text-shadow: none;
+    color: #D92232;
 }
 
 #box-izquierda {

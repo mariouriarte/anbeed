@@ -21,19 +21,18 @@
 
 /* menu::base */
 #menu {
-    /*background-image: url("../images/gui/menu_bg.gif");*/
-    position:relative;
-    z-index:100;
-    /*padding-top: 23px;*/
-    /*height:18px;*/
+    margin: auto;
+    position: relative;
+    width: 1008px;
+    z-index: 100;
 }
+
 .header-menu {
     /*margin-left: 30px !important;*/
 }
 
 #menu .menu {
     position:absolute;
-    left: 180px;
 }
 #menu * {
     list-style:none;
@@ -46,7 +45,7 @@
     /*padding:7px 14px 7px 14px;*/
     padding:0px 14px 0px 14px;
     white-space:nowrap;
-    background-color: #555753 !important;
+    background-color: #5C6F61 !important;
     /*background-color: #fff !important;*/    
     /*margin-right: 2px;*/
 }
@@ -182,7 +181,7 @@ div#menu li.back .left {
 
 #global_domain_bar {
     /*background: none repeat scroll 0 0 #2E3436;*/
-    background: none repeat scroll 0 0 #555753;
+    background: none repeat scroll 0 0 #D3DFD1;
     height: 25px;
     position: fixed;
     top: 0;

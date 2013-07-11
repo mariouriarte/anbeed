@@ -28,11 +28,20 @@
                 <div id="header">
                     <div id="header-content">
                         <div id="header-top">
+                            <div id="header-tools">
+                                <?php if (!include_slot('header-tools')): ?>
+                                
+                                <?php endif ?>
+                                <?php if (!$sf_user->isAuthenticated()): ?>
+                                    <h2>ANBEED SRL</h2>
+                                <?php endif; ?>
+                            </div>
                             <div id="header-logo">
                                 <div id="logo">
-                                 <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '/portal_dev.php/inicio')?>  
+                                    <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '@homepage')?>
                                 </div>
-                                <?php if ($sf_user->isAuthenticated()): ?>
+                            </div>
+                            <?php if ($sf_user->isAuthenticated()): ?>
                                 <div id="info-user">
                                     <h4>Usuario: <?php echo $sf_user->getUsername(); ?></h4>
                                     <h3><?php echo link_to('Cerrar session', '@sf_guard_signout',
@@ -40,20 +49,9 @@
                                         ?>
                                     </h3>
                                 </div>
-                                <?php endif; ?>
-                            </div>
-                            <div id="header-tools">
-                                <?php if (!include_slot('header-tools')): ?>
-                                <?php endif ?>
-                                <?php if (!$sf_user->isAuthenticated()): ?>
-                                    <h2>ANBEED SRL</h2>
-                                <?php endif; ?>
-                            </div>
+                            <?php endif; ?>
                         </div>
                         <div id="header-bottom">
-                           <?php if (!include_slot('header-navegador')): ?>
-                                
-                           <?php endif ?>
                         </div>
                     </div>
                 </div>
