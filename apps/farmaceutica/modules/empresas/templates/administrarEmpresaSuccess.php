@@ -51,7 +51,7 @@
                     <h2 class="titulo"><img src="/images/icons/applications-development.svg" /> Laboratorios</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/farmaceutica_dev.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
+                            <li><a href="/adm_dev.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
                         </ul>
                     </div>
                 </div>

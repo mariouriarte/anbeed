@@ -15,3 +15,7 @@ FormaFarmaceutica:
     nombre: TABLETA
   Gotas:
     nombre: GOTAS
+  Gel:
+    nombre: GEL
+  Pasta:
+    nombre: PASTA
