@@ -4,7 +4,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><?php echo image_tag('company.ico', 'size=48x48')?> Empresas</h2>
+                    <h2 class="titulo"><img src="/images/icons/empresa.png" /> Empresas</h2>
                     <div class="contenido">
                         
                         <ul>
