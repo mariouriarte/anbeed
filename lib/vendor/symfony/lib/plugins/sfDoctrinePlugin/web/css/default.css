@@ -1,6 +1,6 @@
 #sf_admin_container a
 {
-  color: #464646;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -19,7 +19,7 @@
 
 #sf_admin_container th
 {
-  background-color: #e7eef6;
+  background-color: #5C6F61;
   white-space: nowrap;
 }
 
