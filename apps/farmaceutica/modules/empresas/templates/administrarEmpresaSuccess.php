@@ -72,7 +72,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/folder-documents.png" /> Formularios</h2>
+                    <h2 class="titulo"><img src="/images/icons/text.svg" /> Formularios</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica_dev.php/formulario5porempresa"><span> Formulario 005</span></a></li>
