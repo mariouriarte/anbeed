@@ -17,7 +17,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/x-office-document.svg" /> Formularios</h2>
+                    <h2 class="titulo"><img src="/images/icons/text.svg" /> Formularios</h2>
                     <div class="contenido">
                         
                         <ul>

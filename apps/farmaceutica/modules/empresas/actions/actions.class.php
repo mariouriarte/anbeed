@@ -26,6 +26,15 @@ function FechaEspanol($fecha)
 class empresasActions extends autoEmpresasActions
 {
     
+    public function executeIndex(sfWebRequest $request)
+    {
+        parent::executeIndex($request);
+        
+        $user = $this->getUser();
+        $user->getAttributeHolder()->remove('empresa');
+        $user->getAttributeHolder()->remove('producto');
+    }
+    
     public function executeAdministrarEmpresa(sfWebRequest $request)
     {
         $user = $this->getUser();
@@ -49,15 +58,6 @@ class empresasActions extends autoEmpresasActions
         parent::executeNew($request);
         
         $user = $this->getUser();
-        
-//        echo $request->getParameter('idrl');
-        
-//        $legal_id = new sfWidgetFormSchema(array('representante_legal_id'
-//            => new sfWidgetFormInput()));
-//        $legal_id->setDefault('representante_legal_id', $request
-//                ->getParameter('legal_id'));
-        //$user->setAttribute('idrl', $request->getParameter('idrl'));
-        
     } 
     
     public function executeFilter(sfWebRequest $request)

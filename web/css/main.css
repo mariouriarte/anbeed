@@ -324,9 +324,9 @@ input[type="text"], input[type="password"], textarea {
 }
 
 .tabla-info-empresa th {
-    background-color: #5C6F61 !important;
-    border: 1px solid #5C6F61 !important;
-    color: #FFFFFF !important;
+    background-color: #D3DFD1 !important;
+    border: 1px solid #D3DFD1 !important;
+    color: #000 !important;
     font-size: 12px !important;
     padding: 3px !important;
     text-align: left !important;

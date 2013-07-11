@@ -26,5 +26,8 @@ class inicioActions extends sfActions
             $this->env = '';
         }
         
+        $user = $this->getUser();
+        $user->getAttributeHolder()->remove('empresa');
+        $user->getAttributeHolder()->remove('producto');
     }
 }
