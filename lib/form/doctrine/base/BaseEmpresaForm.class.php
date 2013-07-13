@@ -44,7 +44,7 @@ abstract class BaseEmpresaForm extends BaseFormDoctrine
       'regente_farmaceutico_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('RegenteFarmaceutico'), 'required' => false)),
       'razon_social'            => new sfValidatorString(array('max_length' => 255)),
       'fecha_registro'          => new sfValidatorDate(array('required' => false)),
-      'num_resolucion'          => new sfValidatorString(array('max_length' => 30)),
+      'num_resolucion'          => new sfValidatorString(array('max_length' => 30, 'required' => false)),
       'fecha_resolucion'        => new sfValidatorDate(array('required' => false)),
       'fax'                     => new sfValidatorString(array('max_length' => 20, 'required' => false)),
       'direccion'               => new sfValidatorString(array('max_length' => 255, 'required' => false)),

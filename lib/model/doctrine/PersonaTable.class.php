@@ -17,20 +17,18 @@ class PersonaTable extends Doctrine_Table
         return Doctrine_Core::getTable('Persona');
     }
     
-    public static function selectPersonasRegentes()
+    public static function selectPersonasDisponibles()
     {
         //$user = sfContext::getInstance()->getUser();
        
-            //$id = $user->getAttribute('regional_id');
-            //$anio = date ("Y");
-            
-            $q = Doctrine_Query::create()
-                    ->from('Persona a')
-                    ->leftJoin('a.RegenteFarmaceutico r')
-                    ->where('r.is_active = ?', false);
-                    //->orderBy('u.codigo');
-            
-            return $q;
+        $q = Doctrine_Query::create()
+                ->from('Persona a')
+                ->leftJoin('a.sfGuardUser u')
+                ->where('a.is_active = ?', true)
+                ->addWhere('u.id is NULL')
+                ->orderBy('a.ap_paterno');
+        
+        return $q;
        
     }
 }

@@ -11,6 +11,8 @@
 
 <div class="portal">
     
+<h1>Administrador de Empresa</h1>
+
     <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
     
     <div class="linea">
@@ -24,11 +26,9 @@
                             
                             <li>
                                 <?php if($empresa->RepresentanteLegal->Persona->getId()): ?>
-                                    <?php echo link_to('Editar Representante Legal',
-                                                       'personalegal/edit?id=' . $empresa->RepresentanteLegal->Persona->getId()) ?>
+                                    <?php echo link_to('Editar Representante Legal','personalegal/edit?id=' . $empresa->RepresentanteLegal->Persona->getId()) ?>
                                 <?php else: ?>
-                                    <?php echo link_to('Crear Representante Legal',
-                                                       'personalegal/index') ?>
+                                    <?php echo link_to('Asignar Representante Legal','personalegal/index') ?>
                                 <?php endif; ?>
                             </li>
                             
@@ -36,22 +36,10 @@
                                 <?php if($empresa->RegenteFarmaceutico->Persona->getId()): ?>
                                     <?php echo link_to('Editar Regente Farmaceútico', 'personaregente/edit?id=' . $empresa->RegenteFarmaceutico->Persona->getId()) ?>
                                 <?php else: ?>
-                                    <?php echo link_to('Crear Regente Farmaceútico', 'personaregente/index') ?>
+                                    <?php echo link_to('Asignar Regente Farmaceútico', 'personaregente/index') ?>
                                 <?php endif; ?>
                             </li>
                             
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columna">
-            <div class="cubo">
-                <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/applications-development.svg" /> Laboratorios</h2>
-                    <div class="contenido">
-                        <ul>
-                            <li><a href="/adm_dev.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
                         </ul>
                     </div>
                 </div>

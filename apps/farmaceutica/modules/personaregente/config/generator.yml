@@ -25,18 +25,19 @@ generator:
         fax:             {label: 'Fax'}
         casilla:         {label: 'Casilla'}
         email:           {label: 'Email'}
+        nombre_ordenado: {label: 'Persona'}
         
       list:
-        table_method:   selectPersonasRegentes
         title: Listado de Regentes Farmaceuticos disponibles
-        display: [nombre, ap_paterno, ap_materno, cedula_expedido, telefono]
+        table_method:   selectPersonasDisponibles
+        display: [nombre_ordenado, cedula_expedido, telefono]
         object_actions:
           asignar_personaregente: {label: Asignar Persona, action: asignarPersonaregente, params: 'class=boton-asignar confirm=¿Asignar al Personal?'}
         actions:
           ir_empresa: {label: Volver a Empresa}
           _new: ~
       filter:
-        display: [nombre, ap_paterno, ci]
+        display: [ap_paterno, ci]
       form:
         display: 
           Datos de la Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]

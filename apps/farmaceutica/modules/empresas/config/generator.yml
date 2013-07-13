@@ -24,7 +24,7 @@ generator:
         telefono1:                {label: 'Teléfono 1'}
         telefono2:                {label: 'Teléfono 2'}
         registro_camara:          {label: 'Registro en la Cámara Nacional de Industria y/o Comercio'}
-        fundempresa:              {label: 'Fundaempresa'}
+        fundempresa:              {label: 'Fundempresa'}
         nit:                      {label: 'NIT'}
         
       list:

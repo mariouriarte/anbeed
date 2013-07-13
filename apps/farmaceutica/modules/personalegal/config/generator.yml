@@ -24,10 +24,12 @@ generator:
         fax:             {label: 'Fax'}
         casilla:         {label: 'Casilla'}
         email:           {label: 'Email'}
+        nombre_ordenado: {label: 'Persona'}
         
       list:
-        title: Personas Registradas
-        display: [nombre, ap_paterno, ap_materno, cedula_expedido]
+        title: Listado de Personas Registradas
+        table_method: selectPersonasDisponibles
+        display: [nombre_ordenado, cedula_expedido]
         batch_actions: {}
         object_actions:
           asignar_personalegal: {label: Asignar Persona, action: asignarPersonalegal, params: 'class=boton-asignar confirm=¿Asignar al Personal?'}
@@ -35,7 +37,7 @@ generator:
           ir_empresa: {label: Volver a Empresa}
           _new: ~
       filter:
-        display: [ci]
+        display: [ap_paterno, ci]
       form:
         display: 
           Datos de la Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]

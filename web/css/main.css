@@ -321,30 +321,40 @@ input[type="text"], input[type="password"], textarea {
 {
     border-collapse: collapse;
     font-size: 11px;
+    width: 100%;
 }
 
 .tabla-info-empresa th {
-    background-color: #D3DFD1 !important;
-    border: 1px solid #D3DFD1 !important;
+    background-color: #D3DFD1;
     color: #000 !important;
     font-size: 12px !important;
     padding: 3px !important;
     text-align: left !important;
+    width: 160px;
 }
 
 .tabla-info-empresa td {
-    background-color: #F6F4F0 !important;
-    border: 1px solid #D4D4D4 !important;
-    padding: 7px 5px !important;
+    background-color: #F6F4F0;
+    
+    /*padding: 7px 5px !important;*/
+    min-width: 170px;
 }
 
 .tabla-info-empresa th, .tabla-info-empresa td {
     text-align: left;
     text-transform: uppercase;
     padding: 0.2em;
-    min-width: 170px;
+    border: 1px solid #DDDDDD;
+    
 }
 
 .content-info-empresa {
     margin: 10px auto !important;
+}
+
+/* Avisos y errores */
+
+.td-warning {
+    background-color: #FEEFB3 !important;
+    border-color: #FEEFB3 !important;
 }

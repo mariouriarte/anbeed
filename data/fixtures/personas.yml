@@ -70,9 +70,9 @@ Persona:
     created_at: '2013-06-27 00:12:40'
     updated_at: '2013-06-27 00:12:40'
   Persona_5:
-    nombre: jose
-    ap_paterno: vasquez
-    ap_materno: arnez
+    nombre: Juanito
+    ap_paterno: Perez
+    ap_materno: Perez
     ci: '123456'
     expedido: SC
     direccion: Miraflores
@@ -80,7 +80,7 @@ Persona:
     celular: '12345'
     fax: null
     casilla: null
-    email: jyva.01@gmail.com
+    email: juan.01@gmail.com
     fecha_nacimiento: '1986-12-22'
     is_active: true
     foto: null
@@ -165,26 +165,3 @@ Persona:
     celular: 12345
     email: jyva.00@gmail.com
     fecha_nacimiento: '1986-12-22'
-  Mario:
-    nombre: mario
-    ap_paterno: uriarte
-    ap_materno: marin
-    ci: 15525537
-    expedido: LP
-    direccion: miraflores
-    telefono: 12345
-    celular: 12345
-    email: mario.00@gmail.com
-    fecha_nacimiento: '1984-12-22'
-  Rolo:
-    nombre: rolo
-    ap_paterno: cadima
-    ap_materno: bernal
-    ci: 6781614
-    expedido: LP
-    direccion: Miraflores
-    telefono: 12345
-    celular: 12345
-    email: rolo.00@gmail.com
-    fecha_nacimiento: '1984-12-22'
-    

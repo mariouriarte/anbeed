@@ -1,4 +1,4 @@
-/**
+ /**
  *********************************************
  * Prototype of styles for horizontal CSS-menu
  * @data 25.01.2010
@@ -183,10 +183,11 @@ div#menu li.back .left {
     /*background: none repeat scroll 0 0 #2E3436;*/
     background: none repeat scroll 0 0 #D3DFD1;
     height: 25px;
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
-    width: 100%;
+    width: 1008px;
     z-index: 100;
+    margin: 0 auto;
 }
 
 #global_domain_bar a {

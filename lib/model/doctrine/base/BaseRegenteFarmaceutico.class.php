@@ -41,12 +41,12 @@ abstract class BaseRegenteFarmaceutico extends sfDoctrineRecord
              ));
         $this->hasColumn('matricula_profesional', 'string', 20, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 20,
              ));
         $this->hasColumn('carnet_colegiado', 'string', 20, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 20,
              ));
         $this->hasColumn('is_active', 'boolean', null, array(

@@ -35,8 +35,8 @@ RegenteFarmaceutico:
   actAs: {Timestampable: ~}
   columns:
     persona_id:            {type: integer, notnull: true}
-    matricula_profesional: {type: string(20), notnull: true}
-    carnet_colegiado:      {type: string(20), notnull: true}
+    matricula_profesional: {type: string(20), notnull: false}
+    carnet_colegiado:      {type: string(20), notnull: false}
     is_active:        {type: boolean, default: true, notnull: true}
   relations:
     Persona: {local: persona_id, foreign: id, type: one, foreignAlias: Regente}
@@ -49,7 +49,7 @@ Empresa:
     regente_farmaceutico_id: {type: integer, notnull: false}
     razon_social:            {type: string(255), notnull: true, unique: true}
     fecha_registro:          {type: date}
-    num_resolucion:          {type: string(30), notnull: true, unique: true}
+    num_resolucion:          {type: string(30), notnull: false, unique: true}
     fecha_resolucion:        {type: date, notnull: false}
     fax:                     {type: string(20), notnull: false}
     direccion:               {type: string(255)}

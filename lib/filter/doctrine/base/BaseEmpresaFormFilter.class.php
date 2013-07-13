@@ -17,7 +17,7 @@ abstract class BaseEmpresaFormFilter extends BaseFormFilterDoctrine
       'regente_farmaceutico_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RegenteFarmaceutico'), 'add_empty' => true)),
       'razon_social'            => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'fecha_registro'          => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
-      'num_resolucion'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'num_resolucion'          => new sfWidgetFormFilterInput(),
       'fecha_resolucion'        => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'fax'                     => new sfWidgetFormFilterInput(),
       'direccion'               => new sfWidgetFormFilterInput(),

@@ -99,7 +99,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              ));
         $this->hasColumn('num_resolucion', 'string', 30, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'unique' => true,
              'length' => 30,
              ));

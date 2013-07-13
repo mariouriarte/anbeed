@@ -14,8 +14,8 @@ abstract class BaseRegenteFarmaceuticoFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'persona_id'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Persona'), 'add_empty' => true)),
-      'matricula_profesional' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'carnet_colegiado'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'matricula_profesional' => new sfWidgetFormFilterInput(),
+      'carnet_colegiado'      => new sfWidgetFormFilterInput(),
       'is_active'             => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'created_at'            => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'            => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
