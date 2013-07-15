@@ -105,7 +105,8 @@ Producto:
     Empresa:               {local: empresa_id, foreign: id, type: one, foreignAlias: Protuctos}
     LaboratorioFabricante: {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Protuctos}
     Formulario5:           {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
-#    Producto:              {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
+    Medicamento:           {local: id, foreign: producto_id, type: one, foreignAlias: Medicamento}
+    DispositivoMedico:     {local: id, foreign: producto_id, type: one, foreignAlias: Dispositivo}
     
 Medicamento:
   actAs: {Timestampable: ~}
@@ -131,6 +132,22 @@ Medicamento:
     FormulaCc:         {local: formula_cc_id, foreign: id, type: one, foreignAlias: Medicamentos}
 #    debria ser many aca arriba
 
+DispositivoMedico:
+  actAs: {Timestampable: ~}
+  columns:
+    producto_id:          {type: integer, notnull: true}
+    nombre_comercial:     {type: string(255), notnull: true}
+    clasificacion_riesgo: {type: string(1000), notnull: false}
+    codigo_internacional: {type: string(255), notnull: false}
+    manual:               {type: integer(1), notnull: false, default: 0}
+    indicaciones:         {type: string(2000), notnull: false}
+    presentacion:         {type: string(2000), notnull: false}
+    condicion_empaque:    {type: string(2000), notnull: false}
+    vida_util:            {type: string(2000), notnull: false}
+    metodo_desecho:       {type: string(2000), notnull: false}
+  relations:
+    Producto: {local: producto_id, foreign: id, type: one, foreignAlias: Dispositivo}
+    
 FormaFarmaceutica:
   actAs: {Timestampable: ~}
   columns:
