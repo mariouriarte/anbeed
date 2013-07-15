@@ -38,8 +38,9 @@ a:hover {
     margin-right: auto;
     /*margin-bottom: 10px;*/
     vertical-align: middle;
-
-    border-bottom: 1px solid #555753;
+    width: 1095px;
+    border: 1px solid #D9D9D9;
+    overflow: hidden;
 }
 
 /* Cuando flota el header */
@@ -132,12 +133,11 @@ img.cps-logo {
     height: 100%; /* alto minimo para IE Windows */
     margin: 0;
     padding: 0;
-}
-
-#container {
+ 
     height: auto;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     margin-top: 25px;
+    background: none    repeat scroll 0 0 #F5F5F2
 }
 
 .footer {
@@ -157,8 +157,24 @@ img.cps-logo {
 }
 
 #content {    
-    margin: 20px auto;
-    width: 1008px;
+    background: none repeat scroll 0 0 #FFF;
+    border: 1px solid #D9D9D9;
+    /*margin: auto;*/
+    padding-bottom: 0;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 50px !important;
+    width: 1095px;
+    
+    overflow: hidden;
+     
+    /*background-color: #777777;*/
+    margin-left: auto;
+    margin-right: auto;
+    /*margin-bottom: 10px;*/
+    vertical-align: middle;
+    float: bottom;
+    
 }
 
 #activo-titulo {
@@ -355,6 +371,10 @@ input[type="text"], input[type="password"], textarea {
 /* Avisos y errores */
 
 .td-warning {
-    background-color: #FEEFB3 !important;
-    border-color: #FEEFB3 !important;
+    background-color: #F5F5F2 !important;
+    border-color: #F5F5F2 !important;
+}
+table
+{
+    width: 100%;
 }

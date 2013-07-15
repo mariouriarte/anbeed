@@ -14,10 +14,14 @@ generator:
     config:
       actions: ~
       fields:  
+        empresa_id:                   {label: 'Empresa'}
         fecha:                        {label: 'Fecha de Registro'}
         tipo_tramite_formulario5_id:  {label: 'Tipo de Trámite'}
         tipo_producto_formulario5_id: {label: 'Tipo de Producto'}
         origen_formulario5_id:        {label: 'Origen'}
+        tipo_tramite_formulario5:     {label: 'Tipo de Trámite'}
+        tipo_producto_formulario5:    {label: 'Tipo de Producto'}
+        origen_formulario5:           {label: 'Origen'}
       
       list:    
         title: Listado de Solicitudes para Registro y Control de Calidad de Medicamentos

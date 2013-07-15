@@ -17,4 +17,11 @@ class formulario5Actions extends autoFormulario5Actions
     {
         $this->redirect('/portal_dev.php/inicio/index');
     }
+    public function executeEdit(sfWebRequest $request)
+    { 
+        $this->formulario5 = $this->getRoute()->getObject();
+        $user = sfContext::getInstance()->getUser();
+        $user->setAttribute('producto2', $this->formulario5->Producto);
+        $this->form = $this->configuration->getForm($this->formulario5);
+    }
 }

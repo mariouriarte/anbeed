@@ -37,7 +37,7 @@
                             </div>
                             <div id="header-logo">
                                 <div id="logo">
-                                    <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '/portal.php')?>
+                                    <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '@homepage')?>
                                 </div>
                             </div>
                             <?php if ($sf_user->isAuthenticated()): ?>
@@ -59,10 +59,12 @@
             <div id="nav_page">
                 <?php include_slot('navegador') ?>
             </div>
+            
             <div id="content">
                 <?php echo $sf_content ?>
                 
             </div>
+             
         </div>
     </body>
 </html>

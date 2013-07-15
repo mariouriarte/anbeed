@@ -15,12 +15,20 @@ class Formulario5Form extends BaseFormulario5Form
        unset($this['created_at'], $this['updated_at']);
        $years = range(date('Y') - 0, date('Y'));   
        
-       $producto = sfContext::getInstance()->getUser()->getAttribute('producto');
+     // Asigna el id del producto para el form5
+       if(!isset($this['producto_id']))
+       {
+           $producto = sfContext::getInstance()->getUser()->getAttribute('producto');
+           $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden(
+                    array(), array('value' => $producto->getId()));
+       }
+       else
+       {    
+           $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden(
+                    array());
+       }
        
-       // Asigna el id del producto para el form5 
-       $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden(
-            array(), array('value' => $producto->getId()));
-       
+           
        $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es',
                   'default' => date('Y-m-d'),

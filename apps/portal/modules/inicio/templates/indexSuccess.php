@@ -45,7 +45,6 @@
                     <h2 class="titulo"><img src="/images/icons/preferences-desktop.png" />Adm del Sistema</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/ingredientes"><span>Ingredientes</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/paises"><span>Paises</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/personas"><span>Personas</span></a></li>
