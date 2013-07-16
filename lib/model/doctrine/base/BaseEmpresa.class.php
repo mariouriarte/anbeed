@@ -7,6 +7,7 @@
  * 
  * @property integer $representante_legal_id
  * @property integer $regente_farmaceutico_id
+ * @property integer $ciudad_id
  * @property string $razon_social
  * @property date $fecha_registro
  * @property string $num_resolucion
@@ -26,9 +27,11 @@
  * @property RepresentanteLegal $RepresentanteLegal
  * @property RegenteFarmaceutico $RegenteFarmaceutico
  * @property Doctrine_Collection $Producto
+ * @property Ciudad $Ciudad
  * 
  * @method integer             getRepresentanteLegalId()    Returns the current record's "representante_legal_id" value
  * @method integer             getRegenteFarmaceuticoId()   Returns the current record's "regente_farmaceutico_id" value
+ * @method integer             getCiudadId()                Returns the current record's "ciudad_id" value
  * @method string              getRazonSocial()             Returns the current record's "razon_social" value
  * @method date                getFechaRegistro()           Returns the current record's "fecha_registro" value
  * @method string              getNumResolucion()           Returns the current record's "num_resolucion" value
@@ -48,8 +51,10 @@
  * @method RepresentanteLegal  getRepresentanteLegal()      Returns the current record's "RepresentanteLegal" value
  * @method RegenteFarmaceutico getRegenteFarmaceutico()     Returns the current record's "RegenteFarmaceutico" value
  * @method Doctrine_Collection getProducto()                Returns the current record's "Producto" collection
+ * @method Ciudad              getCiudad()                  Returns the current record's "Ciudad" value
  * @method Empresa             setRepresentanteLegalId()    Sets the current record's "representante_legal_id" value
  * @method Empresa             setRegenteFarmaceuticoId()   Sets the current record's "regente_farmaceutico_id" value
+ * @method Empresa             setCiudadId()                Sets the current record's "ciudad_id" value
  * @method Empresa             setRazonSocial()             Sets the current record's "razon_social" value
  * @method Empresa             setFechaRegistro()           Sets the current record's "fecha_registro" value
  * @method Empresa             setNumResolucion()           Sets the current record's "num_resolucion" value
@@ -69,6 +74,7 @@
  * @method Empresa             setRepresentanteLegal()      Sets the current record's "RepresentanteLegal" value
  * @method Empresa             setRegenteFarmaceutico()     Sets the current record's "RegenteFarmaceutico" value
  * @method Empresa             setProducto()                Sets the current record's "Producto" collection
+ * @method Empresa             setCiudad()                  Sets the current record's "Ciudad" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -85,6 +91,10 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'notnull' => false,
              ));
         $this->hasColumn('regente_farmaceutico_id', 'integer', null, array(
+             'type' => 'integer',
+             'notnull' => false,
+             ));
+        $this->hasColumn('ciudad_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => false,
              ));
@@ -185,6 +195,10 @@ abstract class BaseEmpresa extends sfDoctrineRecord
         $this->hasMany('Producto', array(
              'local' => 'id',
              'foreign' => 'empresa_id'));
+
+        $this->hasOne('Ciudad', array(
+             'local' => 'ciudad_id',
+             'foreign' => 'id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

@@ -427,7 +427,7 @@ Formulario5:
     fecha: '2013-07-10'
     TipoTramiteFormulario5: TipoTramiteFormulario5_1
     TipoProductoFormulario5: TipoProductoFormulario5_1
-    OrigenFormulario5: OrigenFormulario5_2
+    OrigenFormulario: OrigenFormulario_2
     Producto: Producto_1
     created_at: '2013-07-11 00:00:03'
     updated_at: '2013-07-11 00:00:03'
@@ -435,7 +435,7 @@ Formulario5:
     fecha: '2013-07-11'
     TipoTramiteFormulario5: TipoTramiteFormulario5_2
     TipoProductoFormulario5: TipoProductoFormulario5_1
-    OrigenFormulario5: OrigenFormulario5_1
+    OrigenFormulario: OrigenFormulario_1
     Producto: Producto_1
     created_at: '2013-07-11 00:00:17'
     updated_at: '2013-07-11 00:00:17'
@@ -443,7 +443,7 @@ Formulario5:
     fecha: '2013-07-11'
     TipoTramiteFormulario5: TipoTramiteFormulario5_2
     TipoProductoFormulario5: TipoProductoFormulario5_1
-    OrigenFormulario5: OrigenFormulario5_2
+    OrigenFormulario: OrigenFormulario_2
     Producto: Producto_2
     created_at: '2013-07-11 00:01:58'
     updated_at: '2013-07-11 00:01:58'
@@ -451,7 +451,7 @@ Formulario5:
     fecha: '2013-07-11'
     TipoTramiteFormulario5: TipoTramiteFormulario5_1
     TipoProductoFormulario5: TipoProductoFormulario5_5
-    OrigenFormulario5: OrigenFormulario5_1
+    OrigenFormulario: OrigenFormulario_1
     Producto: Producto_3
     created_at: '2013-07-11 00:12:44'
     updated_at: '2013-07-11 00:12:44'
@@ -459,7 +459,7 @@ Formulario5:
     fecha: '2013-07-11'
     TipoTramiteFormulario5: TipoTramiteFormulario5_2
     TipoProductoFormulario5: TipoProductoFormulario5_1
-    OrigenFormulario5: OrigenFormulario5_2
+    OrigenFormulario: OrigenFormulario_2
     Producto: Producto_3
     created_at: '2013-07-11 00:12:59'
     updated_at: '2013-07-11 00:12:59'
@@ -467,7 +467,7 @@ Formulario5:
     fecha: '2013-07-11'
     TipoTramiteFormulario5: TipoTramiteFormulario5_1
     TipoProductoFormulario5: TipoProductoFormulario5_3
-    OrigenFormulario5: OrigenFormulario5_1
+    OrigenFormulario: OrigenFormulario_1
     Producto: Producto_3
     created_at: '2013-07-11 00:13:03'
     updated_at: '2013-07-11 00:13:03'
@@ -475,7 +475,7 @@ Formulario5:
     fecha: '2013-07-11'
     TipoTramiteFormulario5: TipoTramiteFormulario5_2
     TipoProductoFormulario5: TipoProductoFormulario5_6
-    OrigenFormulario5: OrigenFormulario5_1
+    OrigenFormulario: OrigenFormulario_1
     Producto: Producto_4
     created_at: '2013-07-11 16:28:22'
     updated_at: '2013-07-11 16:28:31'
@@ -483,7 +483,7 @@ Formulario5:
     fecha: '2013-07-11'
     TipoTramiteFormulario5: TipoTramiteFormulario5_1
     TipoProductoFormulario5: TipoProductoFormulario5_1
-    OrigenFormulario5: OrigenFormulario5_2
+    OrigenFormulario: OrigenFormulario_2
     Producto: Producto_4
     created_at: '2013-07-11 16:29:11'
     updated_at: '2013-07-11 16:29:11'
@@ -491,7 +491,7 @@ Formulario5:
     fecha: '2013-07-11'
     TipoTramiteFormulario5: TipoTramiteFormulario5_1
     TipoProductoFormulario5: TipoProductoFormulario5_4
-    OrigenFormulario5: OrigenFormulario5_1
+    OrigenFormulario: OrigenFormulario_1
     Producto: Producto_5
     created_at: '2013-07-11 18:08:33'
     updated_at: '2013-07-11 18:08:33'
@@ -499,7 +499,7 @@ Formulario5:
     fecha: '2013-07-11'
     TipoTramiteFormulario5: TipoTramiteFormulario5_1
     TipoProductoFormulario5: TipoProductoFormulario5_5
-    OrigenFormulario5: OrigenFormulario5_1
+    OrigenFormulario: OrigenFormulario_1
     Producto: Producto_7
     created_at: '2013-07-11 18:08:55'
     updated_at: '2013-07-11 18:08:55'
@@ -507,7 +507,7 @@ Formulario5:
     fecha: '2013-07-11'
     TipoTramiteFormulario5: TipoTramiteFormulario5_1
     TipoProductoFormulario5: TipoProductoFormulario5_1
-    OrigenFormulario5: OrigenFormulario5_2
+    OrigenFormulario: OrigenFormulario_2
     Producto: Producto_8
     created_at: '2013-07-11 18:13:51'
     updated_at: '2013-07-11 18:13:51'
@@ -515,7 +515,7 @@ Formulario5:
     fecha: '2013-07-11'
     TipoTramiteFormulario5: TipoTramiteFormulario5_1
     TipoProductoFormulario5: TipoProductoFormulario5_5
-    OrigenFormulario5: OrigenFormulario5_2
+    OrigenFormulario: OrigenFormulario_2
     Producto: Producto_9
     created_at: '2013-07-11 18:14:06'
     updated_at: '2013-07-11 18:14:06'

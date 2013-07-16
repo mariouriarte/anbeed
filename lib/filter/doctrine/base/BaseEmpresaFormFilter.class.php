@@ -15,6 +15,7 @@ abstract class BaseEmpresaFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'representante_legal_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteLegal'), 'add_empty' => true)),
       'regente_farmaceutico_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RegenteFarmaceutico'), 'add_empty' => true)),
+      'ciudad_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Ciudad'), 'add_empty' => true)),
       'razon_social'            => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'fecha_registro'          => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'num_resolucion'          => new sfWidgetFormFilterInput(),
@@ -38,6 +39,7 @@ abstract class BaseEmpresaFormFilter extends BaseFormFilterDoctrine
     $this->setValidators(array(
       'representante_legal_id'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('RepresentanteLegal'), 'column' => 'id')),
       'regente_farmaceutico_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('RegenteFarmaceutico'), 'column' => 'id')),
+      'ciudad_id'               => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Ciudad'), 'column' => 'id')),
       'razon_social'            => new sfValidatorPass(array('required' => false)),
       'fecha_registro'          => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
       'num_resolucion'          => new sfValidatorPass(array('required' => false)),
@@ -78,6 +80,7 @@ abstract class BaseEmpresaFormFilter extends BaseFormFilterDoctrine
       'id'                      => 'Number',
       'representante_legal_id'  => 'ForeignKey',
       'regente_farmaceutico_id' => 'ForeignKey',
+      'ciudad_id'               => 'ForeignKey',
       'razon_social'            => 'Text',
       'fecha_registro'          => 'Date',
       'num_resolucion'          => 'Text',

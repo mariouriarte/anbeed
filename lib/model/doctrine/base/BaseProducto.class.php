@@ -13,8 +13,14 @@
  * @property string $registro_sanitario
  * @property Empresa $Empresa
  * @property LaboratorioFabricante $LaboratorioFabricante
- * @property Formulario5 $Formulario5
- * @property Doctrine_Collection $Medicamento
+ * @property Doctrine_Collection $Formulario5
+ * @property Medicamento $Medicamento
+ * @property DispositivoMedico $DispositivoMedico
+ * @property Formulario27 $Formulario27
+ * @property Doctrine_Collection $Cosmetico
+ * @property Doctrine_Collection $Formulario516
+ * @property Doctrine_Collection $Higiene
+ * @property Doctrine_Collection $Formulario706
  * 
  * @method integer               getEmpresaId()                 Returns the current record's "empresa_id" value
  * @method integer               getLaboratorioFabricanteId()   Returns the current record's "laboratorio_fabricante_id" value
@@ -24,8 +30,14 @@
  * @method string                getRegistroSanitario()         Returns the current record's "registro_sanitario" value
  * @method Empresa               getEmpresa()                   Returns the current record's "Empresa" value
  * @method LaboratorioFabricante getLaboratorioFabricante()     Returns the current record's "LaboratorioFabricante" value
- * @method Formulario5           getFormulario5()               Returns the current record's "Formulario5" value
- * @method Doctrine_Collection   getMedicamento()               Returns the current record's "Medicamento" collection
+ * @method Doctrine_Collection   getFormulario5()               Returns the current record's "Formulario5" collection
+ * @method Medicamento           getMedicamento()               Returns the current record's "Medicamento" value
+ * @method DispositivoMedico     getDispositivoMedico()         Returns the current record's "DispositivoMedico" value
+ * @method Formulario27          getFormulario27()              Returns the current record's "Formulario27" value
+ * @method Doctrine_Collection   getCosmetico()                 Returns the current record's "Cosmetico" collection
+ * @method Doctrine_Collection   getFormulario516()             Returns the current record's "Formulario516" collection
+ * @method Doctrine_Collection   getHigiene()                   Returns the current record's "Higiene" collection
+ * @method Doctrine_Collection   getFormulario706()             Returns the current record's "Formulario706" collection
  * @method Producto              setEmpresaId()                 Sets the current record's "empresa_id" value
  * @method Producto              setLaboratorioFabricanteId()   Sets the current record's "laboratorio_fabricante_id" value
  * @method Producto              setNombreGenerico()            Sets the current record's "nombre_generico" value
@@ -34,8 +46,14 @@
  * @method Producto              setRegistroSanitario()         Sets the current record's "registro_sanitario" value
  * @method Producto              setEmpresa()                   Sets the current record's "Empresa" value
  * @method Producto              setLaboratorioFabricante()     Sets the current record's "LaboratorioFabricante" value
- * @method Producto              setFormulario5()               Sets the current record's "Formulario5" value
- * @method Producto              setMedicamento()               Sets the current record's "Medicamento" collection
+ * @method Producto              setFormulario5()               Sets the current record's "Formulario5" collection
+ * @method Producto              setMedicamento()               Sets the current record's "Medicamento" value
+ * @method Producto              setDispositivoMedico()         Sets the current record's "DispositivoMedico" value
+ * @method Producto              setFormulario27()              Sets the current record's "Formulario27" value
+ * @method Producto              setCosmetico()                 Sets the current record's "Cosmetico" collection
+ * @method Producto              setFormulario516()             Sets the current record's "Formulario516" collection
+ * @method Producto              setHigiene()                   Sets the current record's "Higiene" collection
+ * @method Producto              setFormulario706()             Sets the current record's "Formulario706" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -87,11 +105,35 @@ abstract class BaseProducto extends sfDoctrineRecord
              'local' => 'laboratorio_fabricante_id',
              'foreign' => 'id'));
 
-        $this->hasOne('Formulario5', array(
+        $this->hasMany('Formulario5', array(
              'local' => 'id',
              'foreign' => 'producto_id'));
 
-        $this->hasMany('Medicamento', array(
+        $this->hasOne('Medicamento', array(
+             'local' => 'id',
+             'foreign' => 'producto_id'));
+
+        $this->hasOne('DispositivoMedico', array(
+             'local' => 'id',
+             'foreign' => 'producto_id'));
+
+        $this->hasOne('Formulario27', array(
+             'local' => 'id',
+             'foreign' => 'producto_id'));
+
+        $this->hasMany('Cosmetico', array(
+             'local' => 'id',
+             'foreign' => 'producto_id'));
+
+        $this->hasMany('Formulario516', array(
+             'local' => 'id',
+             'foreign' => 'producto_id'));
+
+        $this->hasMany('Higiene', array(
+             'local' => 'id',
+             'foreign' => 'producto_id'));
+
+        $this->hasMany('Formulario706', array(
              'local' => 'id',
              'foreign' => 'producto_id'));
 
