@@ -17,7 +17,7 @@ abstract class BaseFormulario516Form extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'                         => new sfWidgetFormInputHidden(),
       'fecha'                      => new sfWidgetFormDate(),
-      'producto_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => false)),
+      'cosmetico_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Cosmetico'), 'add_empty' => false)),
       'vigencia'                   => new sfWidgetFormInputText(),
       'fecha_inicio_vigencia'      => new sfWidgetFormDate(),
       'numero_ruta'                => new sfWidgetFormInputText(),
@@ -35,7 +35,7 @@ abstract class BaseFormulario516Form extends BaseFormDoctrine
     $this->setValidators(array(
       'id'                         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'fecha'                      => new sfValidatorDate(array('required' => false)),
-      'producto_id'                => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'))),
+      'cosmetico_id'               => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Cosmetico'))),
       'vigencia'                   => new sfValidatorInteger(array('required' => false)),
       'fecha_inicio_vigencia'      => new sfValidatorDate(array('required' => false)),
       'numero_ruta'                => new sfValidatorInteger(array('required' => false)),

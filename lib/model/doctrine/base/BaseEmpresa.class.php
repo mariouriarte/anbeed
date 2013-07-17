@@ -26,7 +26,10 @@
  * @property boolean $is_active
  * @property RepresentanteLegal $RepresentanteLegal
  * @property RegenteFarmaceutico $RegenteFarmaceutico
- * @property Doctrine_Collection $Producto
+ * @property Doctrine_Collection $Medicamento
+ * @property Doctrine_Collection $DispositivoMedico
+ * @property Doctrine_Collection $Cosmetico
+ * @property Doctrine_Collection $Higiene
  * @property Ciudad $Ciudad
  * 
  * @method integer             getRepresentanteLegalId()    Returns the current record's "representante_legal_id" value
@@ -50,7 +53,10 @@
  * @method boolean             getIsActive()                Returns the current record's "is_active" value
  * @method RepresentanteLegal  getRepresentanteLegal()      Returns the current record's "RepresentanteLegal" value
  * @method RegenteFarmaceutico getRegenteFarmaceutico()     Returns the current record's "RegenteFarmaceutico" value
- * @method Doctrine_Collection getProducto()                Returns the current record's "Producto" collection
+ * @method Doctrine_Collection getMedicamento()             Returns the current record's "Medicamento" collection
+ * @method Doctrine_Collection getDispositivoMedico()       Returns the current record's "DispositivoMedico" collection
+ * @method Doctrine_Collection getCosmetico()               Returns the current record's "Cosmetico" collection
+ * @method Doctrine_Collection getHigiene()                 Returns the current record's "Higiene" collection
  * @method Ciudad              getCiudad()                  Returns the current record's "Ciudad" value
  * @method Empresa             setRepresentanteLegalId()    Sets the current record's "representante_legal_id" value
  * @method Empresa             setRegenteFarmaceuticoId()   Sets the current record's "regente_farmaceutico_id" value
@@ -73,7 +79,10 @@
  * @method Empresa             setIsActive()                Sets the current record's "is_active" value
  * @method Empresa             setRepresentanteLegal()      Sets the current record's "RepresentanteLegal" value
  * @method Empresa             setRegenteFarmaceutico()     Sets the current record's "RegenteFarmaceutico" value
- * @method Empresa             setProducto()                Sets the current record's "Producto" collection
+ * @method Empresa             setMedicamento()             Sets the current record's "Medicamento" collection
+ * @method Empresa             setDispositivoMedico()       Sets the current record's "DispositivoMedico" collection
+ * @method Empresa             setCosmetico()               Sets the current record's "Cosmetico" collection
+ * @method Empresa             setHigiene()                 Sets the current record's "Higiene" collection
  * @method Empresa             setCiudad()                  Sets the current record's "Ciudad" value
  * 
  * @package    anbeed
@@ -192,7 +201,19 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'local' => 'regente_farmaceutico_id',
              'foreign' => 'id'));
 
-        $this->hasMany('Producto', array(
+        $this->hasMany('Medicamento', array(
+             'local' => 'id',
+             'foreign' => 'empresa_id'));
+
+        $this->hasMany('DispositivoMedico', array(
+             'local' => 'id',
+             'foreign' => 'empresa_id'));
+
+        $this->hasMany('Cosmetico', array(
+             'local' => 'id',
+             'foreign' => 'empresa_id'));
+
+        $this->hasMany('Higiene', array(
              'local' => 'id',
              'foreign' => 'empresa_id'));
 

@@ -12,8 +12,8 @@
  * @property integer $tipo_tramite_formulario5_id
  * @property integer $tipo_producto_formulario5_id
  * @property integer $origen_formulario_id
- * @property integer $producto_id
- * @property Producto $Producto
+ * @property integer $medicamento_id
+ * @property Medicamento $Medicamento
  * @property TipoTramiteFormulario5 $TipoTramiteFormulario5
  * @property TipoProductoFormulario5 $TipoProductoFormulario5
  * @property OrigenFormulario $OrigenFormulario
@@ -27,8 +27,8 @@
  * @method integer                 getTipoTramiteFormulario5Id()     Returns the current record's "tipo_tramite_formulario5_id" value
  * @method integer                 getTipoProductoFormulario5Id()    Returns the current record's "tipo_producto_formulario5_id" value
  * @method integer                 getOrigenFormularioId()           Returns the current record's "origen_formulario_id" value
- * @method integer                 getProductoId()                   Returns the current record's "producto_id" value
- * @method Producto                getProducto()                     Returns the current record's "Producto" value
+ * @method integer                 getMedicamentoId()                Returns the current record's "medicamento_id" value
+ * @method Medicamento             getMedicamento()                  Returns the current record's "Medicamento" value
  * @method TipoTramiteFormulario5  getTipoTramiteFormulario5()       Returns the current record's "TipoTramiteFormulario5" value
  * @method TipoProductoFormulario5 getTipoProductoFormulario5()      Returns the current record's "TipoProductoFormulario5" value
  * @method OrigenFormulario        getOrigenFormulario()             Returns the current record's "OrigenFormulario" value
@@ -41,8 +41,8 @@
  * @method Formulario5             setTipoTramiteFormulario5Id()     Sets the current record's "tipo_tramite_formulario5_id" value
  * @method Formulario5             setTipoProductoFormulario5Id()    Sets the current record's "tipo_producto_formulario5_id" value
  * @method Formulario5             setOrigenFormularioId()           Sets the current record's "origen_formulario_id" value
- * @method Formulario5             setProductoId()                   Sets the current record's "producto_id" value
- * @method Formulario5             setProducto()                     Sets the current record's "Producto" value
+ * @method Formulario5             setMedicamentoId()                Sets the current record's "medicamento_id" value
+ * @method Formulario5             setMedicamento()                  Sets the current record's "Medicamento" value
  * @method Formulario5             setTipoTramiteFormulario5()       Sets the current record's "TipoTramiteFormulario5" value
  * @method Formulario5             setTipoProductoFormulario5()      Sets the current record's "TipoProductoFormulario5" value
  * @method Formulario5             setOrigenFormulario()             Sets the current record's "OrigenFormulario" value
@@ -88,7 +88,7 @@ abstract class BaseFormulario5 extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('producto_id', 'integer', null, array(
+        $this->hasColumn('medicamento_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
              ));
@@ -97,8 +97,8 @@ abstract class BaseFormulario5 extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('Producto', array(
-             'local' => 'producto_id',
+        $this->hasOne('Medicamento', array(
+             'local' => 'medicamento_id',
              'foreign' => 'id'));
 
         $this->hasOne('TipoTramiteFormulario5', array(

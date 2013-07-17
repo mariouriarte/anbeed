@@ -14,7 +14,7 @@ abstract class BaseFormulario706FormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'fecha'                      => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
-      'producto_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => true)),
+      'higiene_id'                 => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Higiene'), 'add_empty' => true)),
       'vigencia'                   => new sfWidgetFormFilterInput(),
       'fecha_inicio_vigencia'      => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'numero_ruta'                => new sfWidgetFormFilterInput(),
@@ -31,7 +31,7 @@ abstract class BaseFormulario706FormFilter extends BaseFormFilterDoctrine
 
     $this->setValidators(array(
       'fecha'                      => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
-      'producto_id'                => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Producto'), 'column' => 'id')),
+      'higiene_id'                 => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Higiene'), 'column' => 'id')),
       'vigencia'                   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'fecha_inicio_vigencia'      => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
       'numero_ruta'                => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
@@ -65,7 +65,7 @@ abstract class BaseFormulario706FormFilter extends BaseFormFilterDoctrine
     return array(
       'id'                         => 'Number',
       'fecha'                      => 'Date',
-      'producto_id'                => 'ForeignKey',
+      'higiene_id'                 => 'ForeignKey',
       'vigencia'                   => 'Number',
       'fecha_inicio_vigencia'      => 'Date',
       'numero_ruta'                => 'Number',

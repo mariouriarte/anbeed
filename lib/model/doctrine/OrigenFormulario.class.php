@@ -12,4 +12,8 @@
  */
 class OrigenFormulario extends BaseOrigenFormulario
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+    }
 }

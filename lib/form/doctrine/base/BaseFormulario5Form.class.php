@@ -23,7 +23,7 @@ abstract class BaseFormulario5Form extends BaseFormDoctrine
       'tipo_tramite_formulario5_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoTramiteFormulario5'), 'add_empty' => false)),
       'tipo_producto_formulario5_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoProductoFormulario5'), 'add_empty' => false)),
       'origen_formulario_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('OrigenFormulario'), 'add_empty' => false)),
-      'producto_id'                  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => false)),
+      'medicamento_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Medicamento'), 'add_empty' => false)),
       'created_at'                   => new sfWidgetFormDateTime(),
       'updated_at'                   => new sfWidgetFormDateTime(),
     ));
@@ -37,7 +37,7 @@ abstract class BaseFormulario5Form extends BaseFormDoctrine
       'tipo_tramite_formulario5_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TipoTramiteFormulario5'))),
       'tipo_producto_formulario5_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TipoProductoFormulario5'))),
       'origen_formulario_id'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('OrigenFormulario'))),
-      'producto_id'                  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'))),
+      'medicamento_id'               => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Medicamento'))),
       'created_at'                   => new sfValidatorDateTime(),
       'updated_at'                   => new sfValidatorDateTime(),
     ));

@@ -7,14 +7,11 @@
  * 
  * @property string $nombre
  * @property Doctrine_Collection $Medicamento
- * @property Doctrine_Collection $Medicamentos
  * 
- * @method string              getNombre()       Returns the current record's "nombre" value
- * @method Doctrine_Collection getMedicamento()  Returns the current record's "Medicamento" collection
- * @method Doctrine_Collection getMedicamentos() Returns the current record's "Medicamentos" collection
- * @method FormaFarmaceutica   setNombre()       Sets the current record's "nombre" value
- * @method FormaFarmaceutica   setMedicamento()  Sets the current record's "Medicamento" collection
- * @method FormaFarmaceutica   setMedicamentos() Sets the current record's "Medicamentos" collection
+ * @method string              getNombre()      Returns the current record's "nombre" value
+ * @method Doctrine_Collection getMedicamento() Returns the current record's "Medicamento" collection
+ * @method FormaFarmaceutica   setNombre()      Sets the current record's "nombre" value
+ * @method FormaFarmaceutica   setMedicamento() Sets the current record's "Medicamento" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -37,10 +34,6 @@ abstract class BaseFormaFarmaceutica extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasMany('Medicamento', array(
-             'local' => 'producto_id',
-             'foreign' => 'id'));
-
-        $this->hasMany('Medicamento as Medicamentos', array(
              'local' => 'id',
              'foreign' => 'forma_farmaceutica_id'));
 

@@ -20,7 +20,7 @@ abstract class BaseFormulario27FormFilter extends BaseFormFilterDoctrine
       'tipo_tramite_formulario27_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoTramiteFormulario27'), 'add_empty' => true)),
       'origen_formulario_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('OrigenFormulario'), 'add_empty' => true)),
       'datos_formulario27_id'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('DatosFormulario27'), 'add_empty' => true)),
-      'producto_id'                  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => true)),
+      'dispositivo_medico_id'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('DispositivoMedico'), 'add_empty' => true)),
       'created_at'                   => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'                   => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
@@ -33,7 +33,7 @@ abstract class BaseFormulario27FormFilter extends BaseFormFilterDoctrine
       'tipo_tramite_formulario27_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('TipoTramiteFormulario27'), 'column' => 'id')),
       'origen_formulario_id'         => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('OrigenFormulario'), 'column' => 'id')),
       'datos_formulario27_id'        => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('DatosFormulario27'), 'column' => 'id')),
-      'producto_id'                  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Producto'), 'column' => 'id')),
+      'dispositivo_medico_id'        => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('DispositivoMedico'), 'column' => 'id')),
       'created_at'                   => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'                   => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
@@ -63,7 +63,7 @@ abstract class BaseFormulario27FormFilter extends BaseFormFilterDoctrine
       'tipo_tramite_formulario27_id' => 'ForeignKey',
       'origen_formulario_id'         => 'ForeignKey',
       'datos_formulario27_id'        => 'ForeignKey',
-      'producto_id'                  => 'ForeignKey',
+      'dispositivo_medico_id'        => 'ForeignKey',
       'created_at'                   => 'Date',
       'updated_at'                   => 'Date',
     );

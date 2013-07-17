@@ -15,7 +15,7 @@ class formulario5Actions extends autoFormulario5Actions
 {
    public function executeListIrProductos(sfWebRequest $request)
    {
-        $this->redirect(sfContext::getInstance()->getRouting()->generate('producto_prodmed'));
+        $this->redirect(sfContext::getInstance()->getRouting()->generate('medicamento'));
    }
        public function executeListIrEmpresa(sfWebRequest $request)
     {

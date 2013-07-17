@@ -16,35 +16,44 @@
  * @property string $email
  * @property string $observaciones
  * @property Pais $Pais
- * @property Doctrine_Collection $Producto
+ * @property Doctrine_Collection $Medicamento
+ * @property Doctrine_Collection $DispositivoMedico
+ * @property Doctrine_Collection $Cosmetico
+ * @property Doctrine_Collection $Higiene
  * @property Ciudad $Ciudad
  * 
- * @method integer               getPaisId()        Returns the current record's "pais_id" value
- * @method integer               getCiudadId()      Returns the current record's "ciudad_id" value
- * @method string                getNombre()        Returns the current record's "nombre" value
- * @method string                getBajoLicencia()  Returns the current record's "bajo_licencia" value
- * @method string                getPara()          Returns the current record's "para" value
- * @method string                getDireccion()     Returns the current record's "direccion" value
- * @method string                getTelefono()      Returns the current record's "telefono" value
- * @method string                getFax()           Returns the current record's "fax" value
- * @method string                getEmail()         Returns the current record's "email" value
- * @method string                getObservaciones() Returns the current record's "observaciones" value
- * @method Pais                  getPais()          Returns the current record's "Pais" value
- * @method Doctrine_Collection   getProducto()      Returns the current record's "Producto" collection
- * @method Ciudad                getCiudad()        Returns the current record's "Ciudad" value
- * @method LaboratorioFabricante setPaisId()        Sets the current record's "pais_id" value
- * @method LaboratorioFabricante setCiudadId()      Sets the current record's "ciudad_id" value
- * @method LaboratorioFabricante setNombre()        Sets the current record's "nombre" value
- * @method LaboratorioFabricante setBajoLicencia()  Sets the current record's "bajo_licencia" value
- * @method LaboratorioFabricante setPara()          Sets the current record's "para" value
- * @method LaboratorioFabricante setDireccion()     Sets the current record's "direccion" value
- * @method LaboratorioFabricante setTelefono()      Sets the current record's "telefono" value
- * @method LaboratorioFabricante setFax()           Sets the current record's "fax" value
- * @method LaboratorioFabricante setEmail()         Sets the current record's "email" value
- * @method LaboratorioFabricante setObservaciones() Sets the current record's "observaciones" value
- * @method LaboratorioFabricante setPais()          Sets the current record's "Pais" value
- * @method LaboratorioFabricante setProducto()      Sets the current record's "Producto" collection
- * @method LaboratorioFabricante setCiudad()        Sets the current record's "Ciudad" value
+ * @method integer               getPaisId()            Returns the current record's "pais_id" value
+ * @method integer               getCiudadId()          Returns the current record's "ciudad_id" value
+ * @method string                getNombre()            Returns the current record's "nombre" value
+ * @method string                getBajoLicencia()      Returns the current record's "bajo_licencia" value
+ * @method string                getPara()              Returns the current record's "para" value
+ * @method string                getDireccion()         Returns the current record's "direccion" value
+ * @method string                getTelefono()          Returns the current record's "telefono" value
+ * @method string                getFax()               Returns the current record's "fax" value
+ * @method string                getEmail()             Returns the current record's "email" value
+ * @method string                getObservaciones()     Returns the current record's "observaciones" value
+ * @method Pais                  getPais()              Returns the current record's "Pais" value
+ * @method Doctrine_Collection   getMedicamento()       Returns the current record's "Medicamento" collection
+ * @method Doctrine_Collection   getDispositivoMedico() Returns the current record's "DispositivoMedico" collection
+ * @method Doctrine_Collection   getCosmetico()         Returns the current record's "Cosmetico" collection
+ * @method Doctrine_Collection   getHigiene()           Returns the current record's "Higiene" collection
+ * @method Ciudad                getCiudad()            Returns the current record's "Ciudad" value
+ * @method LaboratorioFabricante setPaisId()            Sets the current record's "pais_id" value
+ * @method LaboratorioFabricante setCiudadId()          Sets the current record's "ciudad_id" value
+ * @method LaboratorioFabricante setNombre()            Sets the current record's "nombre" value
+ * @method LaboratorioFabricante setBajoLicencia()      Sets the current record's "bajo_licencia" value
+ * @method LaboratorioFabricante setPara()              Sets the current record's "para" value
+ * @method LaboratorioFabricante setDireccion()         Sets the current record's "direccion" value
+ * @method LaboratorioFabricante setTelefono()          Sets the current record's "telefono" value
+ * @method LaboratorioFabricante setFax()               Sets the current record's "fax" value
+ * @method LaboratorioFabricante setEmail()             Sets the current record's "email" value
+ * @method LaboratorioFabricante setObservaciones()     Sets the current record's "observaciones" value
+ * @method LaboratorioFabricante setPais()              Sets the current record's "Pais" value
+ * @method LaboratorioFabricante setMedicamento()       Sets the current record's "Medicamento" collection
+ * @method LaboratorioFabricante setDispositivoMedico() Sets the current record's "DispositivoMedico" collection
+ * @method LaboratorioFabricante setCosmetico()         Sets the current record's "Cosmetico" collection
+ * @method LaboratorioFabricante setHigiene()           Sets the current record's "Higiene" collection
+ * @method LaboratorioFabricante setCiudad()            Sets the current record's "Ciudad" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -113,7 +122,19 @@ abstract class BaseLaboratorioFabricante extends sfDoctrineRecord
              'local' => 'pais_id',
              'foreign' => 'id'));
 
-        $this->hasMany('Producto', array(
+        $this->hasMany('Medicamento', array(
+             'local' => 'id',
+             'foreign' => 'laboratorio_fabricante_id'));
+
+        $this->hasMany('DispositivoMedico', array(
+             'local' => 'id',
+             'foreign' => 'laboratorio_fabricante_id'));
+
+        $this->hasMany('Cosmetico', array(
+             'local' => 'id',
+             'foreign' => 'laboratorio_fabricante_id'));
+
+        $this->hasMany('Higiene', array(
              'local' => 'id',
              'foreign' => 'laboratorio_fabricante_id'));
 

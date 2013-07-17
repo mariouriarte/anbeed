@@ -16,4 +16,16 @@ class CosmeticoTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Cosmetico');
     }
+        public function selectCosmeticosDeEmpresa()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $q = Doctrine_Query::create()
+                    ->from('Producto p')
+                    ->innerJoin('p.Cosmetico')
+                    ->where('p.empresa_id = ?', $empresa->getId())
+                    ->orderBy('p.id ASC');
+            
+        return $q;
+    }
 }

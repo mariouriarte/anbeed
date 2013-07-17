@@ -180,342 +180,342 @@ LaboratorioFabricante:
     observaciones: nacional
     created_at: '2013-07-11 18:11:11'
     updated_at: '2013-07-11 18:11:11'
-Producto:
-  Producto_1:
-    Empresa: Empresa_1
-    LaboratorioFabricante: LaboratorioFabricante_1
-    nombre_generico: ASPIRINA
-    descripcion: aspirina
-    procedencia: ALEMANIA
-    registro_sanitario: '5525256'
-    created_at: '2013-07-09 18:49:03'
-    updated_at: '2013-07-09 18:49:03'
-  Producto_2:
-    Empresa: Empresa_1
-    LaboratorioFabricante: LaboratorioFabricante_1
-    nombre_generico: ANTIGRIPAL
-    descripcion: otro
-    procedencia: null
-    registro_sanitario: '123456'
-    created_at: '2013-07-11 00:01:35'
-    updated_at: '2013-07-11 00:01:35'
-  Producto_3:
-    Empresa: Empresa_2
-    LaboratorioFabricante: LaboratorioFabricante_1
-    nombre_generico: DICLOFENACO
-    descripcion: si
-    procedencia: null
-    registro_sanitario: '42342'
-    created_at: '2013-07-11 00:09:52'
-    updated_at: '2013-07-11 00:09:52'
-  Producto_4:
-    Empresa: Empresa_2
-    LaboratorioFabricante: LaboratorioFabricante_2
-    nombre_generico: IBUPROFENO
-    descripcion: 'para fiebre'
-    procedencia: null
-    registro_sanitario: '33030'
-    created_at: '2013-07-11 00:12:16'
-    updated_at: '2013-07-11 00:12:16'
-  Producto_5:
-    Empresa: Empresa_3
-    LaboratorioFabricante: LaboratorioFabricante_3
-    nombre_generico: PLACEBO
-    descripcion: nuevo
-    procedencia: null
-    registro_sanitario: '443535'
-    created_at: '2013-07-11 18:02:42'
-    updated_at: '2013-07-11 18:07:13'
-  Producto_6:
-    Empresa: Empresa_3
-    LaboratorioFabricante: LaboratorioFabricante_2
-    nombre_generico: 'CREMA DENTAL'
-    descripcion: nuevo
-    procedencia: null
-    registro_sanitario: '424255'
-    created_at: '2013-07-11 18:07:02'
-    updated_at: '2013-07-11 18:07:02'
-  Producto_7:
-    Empresa: Empresa_4
-    LaboratorioFabricante: LaboratorioFabricante_4
-    nombre_generico: ANTIGRIPAL
-    descripcion: nacional
-    procedencia: null
-    registro_sanitario: '224255'
-    created_at: '2013-07-11 18:12:27'
-    updated_at: '2013-07-11 18:12:27'
-  Producto_8:
-    Empresa: Empresa_4
-    LaboratorioFabricante: LaboratorioFabricante_4
-    nombre_generico: 'VITAMINA C'
-    descripcion: eferbesente
-    procedencia: null
-    registro_sanitario: '252662'
-    created_at: '2013-07-11 18:13:34'
-    updated_at: '2013-07-11 18:13:34'
-  Producto_9:
-    Empresa: Empresa_4
-    LaboratorioFabricante: LaboratorioFabricante_4
-    nombre_generico: DIGESTIVO
-    descripcion: 'come come'
-    procedencia: null
-    registro_sanitario: ''
-    created_at: '2013-07-11 18:51:17'
-    updated_at: '2013-07-11 18:51:17'
-  Producto_10:
-    Empresa: Empresa_4
-    LaboratorioFabricante: LaboratorioFabricante_4
-    nombre_generico: DIGESTIVO
-    descripcion: 'para el chaqui'
-    procedencia: null
-    registro_sanitario: ''
-    created_at: '2013-07-11 18:52:56'
-    updated_at: '2013-07-11 18:52:56'
-Medicamento:
-  Medicamento_1:
-    Producto: Producto_1
-    FormaFarmaceutica: Tableta
-    ViaAdministracion: Oral
-    TipoVenta: Libre
-    nombre_comercial: ASPIRINEX
-    concentracion: '50 MG'
-    accion_terapeutica: si
-    conservacion: NORMAL
-    periodo_validez: SI
-    especificacion_envase: no
-    aval: SI
-    certificado_control: SI
-    created_at: '2013-07-09 18:49:03'
-    updated_at: '2013-07-09 18:49:36'
-  Medicamento_2:
-    Producto: Producto_2
-    FormaFarmaceutica: Tableta
-    ViaAdministracion: Oral
-    TipoVenta: Libre
-    nombre_comercial: LCH
-    concentracion: '400 MG'
-    accion_terapeutica: no
-    conservacion: NO
-    periodo_validez: SI
-    especificacion_envase: no
-    aval: NO
-    certificado_control: NO
-    created_at: '2013-07-11 00:01:35'
-    updated_at: '2013-07-11 00:01:35'
-  Medicamento_3:
-    Producto: Producto_3
-    FormaFarmaceutica: Gel
-    ViaAdministracion: Subcutaneas
-    TipoVenta: Receta
-    nombre_comercial: DOCLOFIN
-    concentracion: '500 MG'
-    accion_terapeutica: no
-    conservacion: SI
-    periodo_validez: SI
-    especificacion_envase: 'como la crema dental'
-    aval: '3442425'
-    certificado_control: '21423425'
-    created_at: '2013-07-11 00:09:52'
-    updated_at: '2013-07-11 00:09:52'
-  Medicamento_4:
-    Producto: Producto_4
-    FormaFarmaceutica: Tableta
-    ViaAdministracion: Oral
-    TipoVenta: Libre
-    nombre_comercial: IBU
-    concentracion: '500 MG'
-    accion_terapeutica: no
-    conservacion: NO
-    periodo_validez: NO
-    especificacion_envase: no
-    aval: NO
-    certificado_control: NO
-    created_at: '2013-07-11 00:12:16'
-    updated_at: '2013-07-11 00:12:16'
-  Medicamento_5:
-    Producto: Producto_5
-    FormaFarmaceutica: Polvo
-    ViaAdministracion: Nasal
-    TipoVenta: Valorada
-    nombre_comercial: PLACIBIM
-    concentracion: '300 MG'
-    accion_terapeutica: 'no '
-    conservacion: NO
-    periodo_validez: SI
-    especificacion_envase: si
-    aval: NO
-    certificado_control: SI
-    created_at: '2013-07-11 18:02:42'
-    updated_at: '2013-07-11 18:02:42'
-  Medicamento_6:
-    Producto: Producto_6
-    FormaFarmaceutica: Pasta
-    ViaAdministracion: Oral
-    TipoVenta: Libre
-    nombre_comercial: COLGATE
-    concentracion: '500 MG'
-    accion_terapeutica: no
-    conservacion: NO
-    periodo_validez: NO
-    especificacion_envase: no
-    aval: 'SI '
-    certificado_control: SI
-    created_at: '2013-07-11 18:07:02'
-    updated_at: '2013-07-11 18:07:02'
-  Medicamento_7:
-    Producto: Producto_7
-    FormaFarmaceutica: Polvo
-    ViaAdministracion: Oral
-    TipoVenta: Libre
-    nombre_comercial: VITAGRIP
-    concentracion: '500 MG'
-    accion_terapeutica: no
-    conservacion: NO
-    periodo_validez: NO
-    especificacion_envase: 'si '
-    aval: SI
-    certificado_control: SI
-    created_at: '2013-07-11 18:12:27'
-    updated_at: '2013-07-11 18:12:27'
-  Medicamento_8:
-    Producto: Producto_8
-    FormaFarmaceutica: Tableta
-    ViaAdministracion: Oral
-    TipoVenta: Libre
-    nombre_comercial: REDOXON
-    concentracion: '500 MG'
-    accion_terapeutica: no
-    conservacion: NO
-    periodo_validez: SI
-    especificacion_envase: si
-    aval: SI
-    certificado_control: SI
-    created_at: '2013-07-11 18:13:34'
-    updated_at: '2013-07-11 18:13:34'
-  Medicamento_9:
-    Producto: Producto_9
-    FormaFarmaceutica: Polvo
-    ViaAdministracion: Oral
-    TipoVenta: Libre
-    nombre_comercial: DIGESTAN
-    concentracion: NO
-    accion_terapeutica: no
-    conservacion: NO
-    periodo_validez: NO
-    especificacion_envase: no
-    aval: NO
-    certificado_control: NO
-    created_at: '2013-07-11 18:51:17'
-    updated_at: '2013-07-11 18:51:17'
-  Medicamento_10:
-    Producto: Producto_10
-    FormaFarmaceutica: Tableta
-    ViaAdministracion: Oral
-    TipoVenta: Libre
-    nombre_comercial: ALCACERSE
-    concentracion: NO
-    accion_terapeutica: no
-    conservacion: NO
-    periodo_validez: no
-    especificacion_envase: no
-    aval: N
-    certificado_control: O
-    created_at: '2013-07-11 18:52:56'
-    updated_at: '2013-07-11 18:52:56'
-Formulario5:
-  Formulario5_1:
-    fecha: '2013-07-10'
-    TipoTramiteFormulario5: TipoTramiteFormulario5_1
-    TipoProductoFormulario5: TipoProductoFormulario5_1
-    OrigenFormulario: OrigenFormulario_2
-    Producto: Producto_1
-    created_at: '2013-07-11 00:00:03'
-    updated_at: '2013-07-11 00:00:03'
-  Formulario5_2:
-    fecha: '2013-07-11'
-    TipoTramiteFormulario5: TipoTramiteFormulario5_2
-    TipoProductoFormulario5: TipoProductoFormulario5_1
-    OrigenFormulario: OrigenFormulario_1
-    Producto: Producto_1
-    created_at: '2013-07-11 00:00:17'
-    updated_at: '2013-07-11 00:00:17'
-  Formulario5_3:
-    fecha: '2013-07-11'
-    TipoTramiteFormulario5: TipoTramiteFormulario5_2
-    TipoProductoFormulario5: TipoProductoFormulario5_1
-    OrigenFormulario: OrigenFormulario_2
-    Producto: Producto_2
-    created_at: '2013-07-11 00:01:58'
-    updated_at: '2013-07-11 00:01:58'
-  Formulario5_4:
-    fecha: '2013-07-11'
-    TipoTramiteFormulario5: TipoTramiteFormulario5_1
-    TipoProductoFormulario5: TipoProductoFormulario5_5
-    OrigenFormulario: OrigenFormulario_1
-    Producto: Producto_3
-    created_at: '2013-07-11 00:12:44'
-    updated_at: '2013-07-11 00:12:44'
-  Formulario5_5:
-    fecha: '2013-07-11'
-    TipoTramiteFormulario5: TipoTramiteFormulario5_2
-    TipoProductoFormulario5: TipoProductoFormulario5_1
-    OrigenFormulario: OrigenFormulario_2
-    Producto: Producto_3
-    created_at: '2013-07-11 00:12:59'
-    updated_at: '2013-07-11 00:12:59'
-  Formulario5_6:
-    fecha: '2013-07-11'
-    TipoTramiteFormulario5: TipoTramiteFormulario5_1
-    TipoProductoFormulario5: TipoProductoFormulario5_3
-    OrigenFormulario: OrigenFormulario_1
-    Producto: Producto_3
-    created_at: '2013-07-11 00:13:03'
-    updated_at: '2013-07-11 00:13:03'
-  Formulario5_7:
-    fecha: '2013-07-11'
-    TipoTramiteFormulario5: TipoTramiteFormulario5_2
-    TipoProductoFormulario5: TipoProductoFormulario5_6
-    OrigenFormulario: OrigenFormulario_1
-    Producto: Producto_4
-    created_at: '2013-07-11 16:28:22'
-    updated_at: '2013-07-11 16:28:31'
-  Formulario5_8:
-    fecha: '2013-07-11'
-    TipoTramiteFormulario5: TipoTramiteFormulario5_1
-    TipoProductoFormulario5: TipoProductoFormulario5_1
-    OrigenFormulario: OrigenFormulario_2
-    Producto: Producto_4
-    created_at: '2013-07-11 16:29:11'
-    updated_at: '2013-07-11 16:29:11'
-  Formulario5_9:
-    fecha: '2013-07-11'
-    TipoTramiteFormulario5: TipoTramiteFormulario5_1
-    TipoProductoFormulario5: TipoProductoFormulario5_4
-    OrigenFormulario: OrigenFormulario_1
-    Producto: Producto_5
-    created_at: '2013-07-11 18:08:33'
-    updated_at: '2013-07-11 18:08:33'
-  Formulario5_10:
-    fecha: '2013-07-11'
-    TipoTramiteFormulario5: TipoTramiteFormulario5_1
-    TipoProductoFormulario5: TipoProductoFormulario5_5
-    OrigenFormulario: OrigenFormulario_1
-    Producto: Producto_7
-    created_at: '2013-07-11 18:08:55'
-    updated_at: '2013-07-11 18:08:55'
-  Formulario5_11:
-    fecha: '2013-07-11'
-    TipoTramiteFormulario5: TipoTramiteFormulario5_1
-    TipoProductoFormulario5: TipoProductoFormulario5_1
-    OrigenFormulario: OrigenFormulario_2
-    Producto: Producto_8
-    created_at: '2013-07-11 18:13:51'
-    updated_at: '2013-07-11 18:13:51'
-  Formulario5_12:
-    fecha: '2013-07-11'
-    TipoTramiteFormulario5: TipoTramiteFormulario5_1
-    TipoProductoFormulario5: TipoProductoFormulario5_5
-    OrigenFormulario: OrigenFormulario_2
-    Producto: Producto_9
-    created_at: '2013-07-11 18:14:06'
-    updated_at: '2013-07-11 18:14:06'
+#Producto:
+#  Producto_1:
+#    Empresa: Empresa_1
+#    LaboratorioFabricante: LaboratorioFabricante_1
+#    nombre_generico: ASPIRINA
+#    descripcion: aspirina
+#    procedencia: ALEMANIA
+#    registro_sanitario: '5525256'
+#    created_at: '2013-07-09 18:49:03'
+#    updated_at: '2013-07-09 18:49:03'
+#  Producto_2:
+#    Empresa: Empresa_1
+#    LaboratorioFabricante: LaboratorioFabricante_1
+#    nombre_generico: ANTIGRIPAL
+#    descripcion: otro
+#    procedencia: null
+#    registro_sanitario: '123456'
+#    created_at: '2013-07-11 00:01:35'
+#    updated_at: '2013-07-11 00:01:35'
+#  Producto_3:
+#    Empresa: Empresa_2
+#    LaboratorioFabricante: LaboratorioFabricante_1
+#    nombre_generico: DICLOFENACO
+#    descripcion: si
+#    procedencia: null
+#    registro_sanitario: '42342'
+#    created_at: '2013-07-11 00:09:52'
+#    updated_at: '2013-07-11 00:09:52'
+#  Producto_4:
+#    Empresa: Empresa_2
+#    LaboratorioFabricante: LaboratorioFabricante_2
+#    nombre_generico: IBUPROFENO
+#    descripcion: 'para fiebre'
+#    procedencia: null
+#    registro_sanitario: '33030'
+#    created_at: '2013-07-11 00:12:16'
+#    updated_at: '2013-07-11 00:12:16'
+#  Producto_5:
+#    Empresa: Empresa_3
+#    LaboratorioFabricante: LaboratorioFabricante_3
+#    nombre_generico: PLACEBO
+#    descripcion: nuevo
+#    procedencia: null
+#    registro_sanitario: '443535'
+#    created_at: '2013-07-11 18:02:42'
+#    updated_at: '2013-07-11 18:07:13'
+#  Producto_6:
+#    Empresa: Empresa_3
+#    LaboratorioFabricante: LaboratorioFabricante_2
+#    nombre_generico: 'CREMA DENTAL'
+#    descripcion: nuevo
+#    procedencia: null
+#    registro_sanitario: '424255'
+#    created_at: '2013-07-11 18:07:02'
+#    updated_at: '2013-07-11 18:07:02'
+#  Producto_7:
+#    Empresa: Empresa_4
+#    LaboratorioFabricante: LaboratorioFabricante_4
+#    nombre_generico: ANTIGRIPAL
+#    descripcion: nacional
+#    procedencia: null
+#    registro_sanitario: '224255'
+#    created_at: '2013-07-11 18:12:27'
+#    updated_at: '2013-07-11 18:12:27'
+#  Producto_8:
+#    Empresa: Empresa_4
+#    LaboratorioFabricante: LaboratorioFabricante_4
+#    nombre_generico: 'VITAMINA C'
+#    descripcion: eferbesente
+#    procedencia: null
+#    registro_sanitario: '252662'
+#    created_at: '2013-07-11 18:13:34'
+#    updated_at: '2013-07-11 18:13:34'
+#  Producto_9:
+#    Empresa: Empresa_4
+#    LaboratorioFabricante: LaboratorioFabricante_4
+#    nombre_generico: DIGESTIVO
+#    descripcion: 'come come'
+#    procedencia: null
+#    registro_sanitario: ''
+#    created_at: '2013-07-11 18:51:17'
+#    updated_at: '2013-07-11 18:51:17'
+#  Producto_10:
+#    Empresa: Empresa_4
+#    LaboratorioFabricante: LaboratorioFabricante_4
+#    nombre_generico: DIGESTIVO
+#    descripcion: 'para el chaqui'
+#    procedencia: null
+#    registro_sanitario: ''
+#    created_at: '2013-07-11 18:52:56'
+#    updated_at: '2013-07-11 18:52:56'
+#Medicamento:
+#  Medicamento_1:
+#    Producto: Producto_1
+#    FormaFarmaceutica: Tableta
+#    ViaAdministracion: Oral
+#    TipoVenta: Libre
+#    nombre_comercial: ASPIRINEX
+#    concentracion: '50 MG'
+#    accion_terapeutica: si
+#    conservacion: NORMAL
+#    periodo_validez: SI
+#    especificacion_envase: no
+#    aval: SI
+#    certificado_control: SI
+#    created_at: '2013-07-09 18:49:03'
+#    updated_at: '2013-07-09 18:49:36'
+#  Medicamento_2:
+#    Producto: Producto_2
+#    FormaFarmaceutica: Tableta
+#    ViaAdministracion: Oral
+#    TipoVenta: Libre
+#    nombre_comercial: LCH
+#    concentracion: '400 MG'
+#    accion_terapeutica: no
+#    conservacion: NO
+#    periodo_validez: SI
+#    especificacion_envase: no
+#    aval: NO
+#    certificado_control: NO
+#    created_at: '2013-07-11 00:01:35'
+#    updated_at: '2013-07-11 00:01:35'
+#  Medicamento_3:
+#    Producto: Producto_3
+#    FormaFarmaceutica: Gel
+#    ViaAdministracion: Subcutaneas
+#    TipoVenta: Receta
+#    nombre_comercial: DOCLOFIN
+#    concentracion: '500 MG'
+#    accion_terapeutica: no
+#    conservacion: SI
+#    periodo_validez: SI
+#    especificacion_envase: 'como la crema dental'
+#    aval: '3442425'
+#    certificado_control: '21423425'
+#    created_at: '2013-07-11 00:09:52'
+#    updated_at: '2013-07-11 00:09:52'
+#  Medicamento_4:
+#    Producto: Producto_4
+#    FormaFarmaceutica: Tableta
+#    ViaAdministracion: Oral
+#    TipoVenta: Libre
+#    nombre_comercial: IBU
+#    concentracion: '500 MG'
+#    accion_terapeutica: no
+#    conservacion: NO
+#    periodo_validez: NO
+#    especificacion_envase: no
+#    aval: NO
+#    certificado_control: NO
+#    created_at: '2013-07-11 00:12:16'
+#    updated_at: '2013-07-11 00:12:16'
+#  Medicamento_5:
+#    Producto: Producto_5
+#    FormaFarmaceutica: Polvo
+#    ViaAdministracion: Nasal
+#    TipoVenta: Valorada
+#    nombre_comercial: PLACIBIM
+#    concentracion: '300 MG'
+#    accion_terapeutica: 'no '
+#    conservacion: NO
+#    periodo_validez: SI
+#    especificacion_envase: si
+#    aval: NO
+#    certificado_control: SI
+#    created_at: '2013-07-11 18:02:42'
+#    updated_at: '2013-07-11 18:02:42'
+#  Medicamento_6:
+#    Producto: Producto_6
+#    FormaFarmaceutica: Pasta
+#    ViaAdministracion: Oral
+#    TipoVenta: Libre
+#    nombre_comercial: COLGATE
+#    concentracion: '500 MG'
+#    accion_terapeutica: no
+#    conservacion: NO
+#    periodo_validez: NO
+#    especificacion_envase: no
+#    aval: 'SI '
+#    certificado_control: SI
+#    created_at: '2013-07-11 18:07:02'
+#    updated_at: '2013-07-11 18:07:02'
+#  Medicamento_7:
+#    Producto: Producto_7
+#    FormaFarmaceutica: Polvo
+#    ViaAdministracion: Oral
+#    TipoVenta: Libre
+#    nombre_comercial: VITAGRIP
+#    concentracion: '500 MG'
+#    accion_terapeutica: no
+#    conservacion: NO
+#    periodo_validez: NO
+#    especificacion_envase: 'si '
+#    aval: SI
+#    certificado_control: SI
+#    created_at: '2013-07-11 18:12:27'
+#    updated_at: '2013-07-11 18:12:27'
+#  Medicamento_8:
+#    Producto: Producto_8
+#    FormaFarmaceutica: Tableta
+#    ViaAdministracion: Oral
+#    TipoVenta: Libre
+#    nombre_comercial: REDOXON
+#    concentracion: '500 MG'
+#    accion_terapeutica: no
+#    conservacion: NO
+#    periodo_validez: SI
+#    especificacion_envase: si
+#    aval: SI
+#    certificado_control: SI
+#    created_at: '2013-07-11 18:13:34'
+#    updated_at: '2013-07-11 18:13:34'
+#  Medicamento_9:
+#    Producto: Producto_9
+#    FormaFarmaceutica: Polvo
+#    ViaAdministracion: Oral
+#    TipoVenta: Libre
+#    nombre_comercial: DIGESTAN
+#    concentracion: NO
+#    accion_terapeutica: no
+#    conservacion: NO
+#    periodo_validez: NO
+#    especificacion_envase: no
+#    aval: NO
+#    certificado_control: NO
+#    created_at: '2013-07-11 18:51:17'
+#    updated_at: '2013-07-11 18:51:17'
+#  Medicamento_10:
+#    Producto: Producto_10
+#    FormaFarmaceutica: Tableta
+#    ViaAdministracion: Oral
+#    TipoVenta: Libre
+#    nombre_comercial: ALCACERSE
+#    concentracion: NO
+#    accion_terapeutica: no
+#    conservacion: NO
+#    periodo_validez: no
+#    especificacion_envase: no
+#    aval: N
+#    certificado_control: O
+#    created_at: '2013-07-11 18:52:56'
+#    updated_at: '2013-07-11 18:52:56'
+#Formulario5:
+#  Formulario5_1:
+#    fecha: '2013-07-10'
+#    TipoTramiteFormulario5: TipoTramiteFormulario5_1
+#    TipoProductoFormulario5: TipoProductoFormulario5_1
+#    OrigenFormulario: OrigenFormulario_2
+#    Producto: Producto_1
+#    created_at: '2013-07-11 00:00:03'
+#    updated_at: '2013-07-11 00:00:03'
+#  Formulario5_2:
+#    fecha: '2013-07-11'
+#    TipoTramiteFormulario5: TipoTramiteFormulario5_2
+#    TipoProductoFormulario5: TipoProductoFormulario5_1
+#    OrigenFormulario: OrigenFormulario_1
+#    Producto: Producto_1
+#    created_at: '2013-07-11 00:00:17'
+#    updated_at: '2013-07-11 00:00:17'
+#  Formulario5_3:
+#    fecha: '2013-07-11'
+#    TipoTramiteFormulario5: TipoTramiteFormulario5_2
+#    TipoProductoFormulario5: TipoProductoFormulario5_1
+#    OrigenFormulario: OrigenFormulario_2
+#    Producto: Producto_2
+#    created_at: '2013-07-11 00:01:58'
+#    updated_at: '2013-07-11 00:01:58'
+#  Formulario5_4:
+#    fecha: '2013-07-11'
+#    TipoTramiteFormulario5: TipoTramiteFormulario5_1
+#    TipoProductoFormulario5: TipoProductoFormulario5_5
+#    OrigenFormulario: OrigenFormulario_1
+#    Producto: Producto_3
+#    created_at: '2013-07-11 00:12:44'
+#    updated_at: '2013-07-11 00:12:44'
+#  Formulario5_5:
+#    fecha: '2013-07-11'
+#    TipoTramiteFormulario5: TipoTramiteFormulario5_2
+#    TipoProductoFormulario5: TipoProductoFormulario5_1
+#    OrigenFormulario: OrigenFormulario_2
+#    Producto: Producto_3
+#    created_at: '2013-07-11 00:12:59'
+#    updated_at: '2013-07-11 00:12:59'
+#  Formulario5_6:
+#    fecha: '2013-07-11'
+#    TipoTramiteFormulario5: TipoTramiteFormulario5_1
+#    TipoProductoFormulario5: TipoProductoFormulario5_3
+#    OrigenFormulario: OrigenFormulario_1
+#    Producto: Producto_3
+#    created_at: '2013-07-11 00:13:03'
+#    updated_at: '2013-07-11 00:13:03'
+#  Formulario5_7:
+#    fecha: '2013-07-11'
+#    TipoTramiteFormulario5: TipoTramiteFormulario5_2
+#    TipoProductoFormulario5: TipoProductoFormulario5_6
+#    OrigenFormulario: OrigenFormulario_1
+#    Producto: Producto_4
+#    created_at: '2013-07-11 16:28:22'
+#    updated_at: '2013-07-11 16:28:31'
+#  Formulario5_8:
+#    fecha: '2013-07-11'
+#    TipoTramiteFormulario5: TipoTramiteFormulario5_1
+#    TipoProductoFormulario5: TipoProductoFormulario5_1
+#    OrigenFormulario: OrigenFormulario_2
+#    Producto: Producto_4
+#    created_at: '2013-07-11 16:29:11'
+#    updated_at: '2013-07-11 16:29:11'
+#  Formulario5_9:
+#    fecha: '2013-07-11'
+#    TipoTramiteFormulario5: TipoTramiteFormulario5_1
+#    TipoProductoFormulario5: TipoProductoFormulario5_4
+#    OrigenFormulario: OrigenFormulario_1
+#    Producto: Producto_5
+#    created_at: '2013-07-11 18:08:33'
+#    updated_at: '2013-07-11 18:08:33'
+#  Formulario5_10:
+#    fecha: '2013-07-11'
+#    TipoTramiteFormulario5: TipoTramiteFormulario5_1
+#    TipoProductoFormulario5: TipoProductoFormulario5_5
+#    OrigenFormulario: OrigenFormulario_1
+#    Producto: Producto_7
+#    created_at: '2013-07-11 18:08:55'
+#    updated_at: '2013-07-11 18:08:55'
+#  Formulario5_11:
+#    fecha: '2013-07-11'
+#    TipoTramiteFormulario5: TipoTramiteFormulario5_1
+#    TipoProductoFormulario5: TipoProductoFormulario5_1
+#    OrigenFormulario: OrigenFormulario_2
+#    Producto: Producto_8
+#    created_at: '2013-07-11 18:13:51'
+#    updated_at: '2013-07-11 18:13:51'
+#  Formulario5_12:
+#    fecha: '2013-07-11'
+#    TipoTramiteFormulario5: TipoTramiteFormulario5_1
+#    TipoProductoFormulario5: TipoProductoFormulario5_5
+#    OrigenFormulario: OrigenFormulario_2
+#    Producto: Producto_9
+#    created_at: '2013-07-11 18:14:06'
+#    updated_at: '2013-07-11 18:14:06'

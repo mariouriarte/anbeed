@@ -12,8 +12,8 @@
  * @property integer $tipo_tramite_formulario27_id
  * @property integer $origen_formulario_id
  * @property integer $datos_formulario27_id
- * @property integer $producto_id
- * @property Producto $Producto
+ * @property integer $dispositivo_medico_id
+ * @property DispositivoMedico $DispositivoMedico
  * @property TipoTramiteFormulario27 $TipoTramiteFormulario27
  * @property DatosFormulario27 $DatosFormulario27
  * @property OrigenFormulario $OrigenFormulario
@@ -26,8 +26,8 @@
  * @method integer                 getTipoTramiteFormulario27Id()    Returns the current record's "tipo_tramite_formulario27_id" value
  * @method integer                 getOrigenFormularioId()           Returns the current record's "origen_formulario_id" value
  * @method integer                 getDatosFormulario27Id()          Returns the current record's "datos_formulario27_id" value
- * @method integer                 getProductoId()                   Returns the current record's "producto_id" value
- * @method Producto                getProducto()                     Returns the current record's "Producto" value
+ * @method integer                 getDispositivoMedicoId()          Returns the current record's "dispositivo_medico_id" value
+ * @method DispositivoMedico       getDispositivoMedico()            Returns the current record's "DispositivoMedico" value
  * @method TipoTramiteFormulario27 getTipoTramiteFormulario27()      Returns the current record's "TipoTramiteFormulario27" value
  * @method DatosFormulario27       getDatosFormulario27()            Returns the current record's "DatosFormulario27" value
  * @method OrigenFormulario        getOrigenFormulario()             Returns the current record's "OrigenFormulario" value
@@ -39,8 +39,8 @@
  * @method Formulario27            setTipoTramiteFormulario27Id()    Sets the current record's "tipo_tramite_formulario27_id" value
  * @method Formulario27            setOrigenFormularioId()           Sets the current record's "origen_formulario_id" value
  * @method Formulario27            setDatosFormulario27Id()          Sets the current record's "datos_formulario27_id" value
- * @method Formulario27            setProductoId()                   Sets the current record's "producto_id" value
- * @method Formulario27            setProducto()                     Sets the current record's "Producto" value
+ * @method Formulario27            setDispositivoMedicoId()          Sets the current record's "dispositivo_medico_id" value
+ * @method Formulario27            setDispositivoMedico()            Sets the current record's "DispositivoMedico" value
  * @method Formulario27            setTipoTramiteFormulario27()      Sets the current record's "TipoTramiteFormulario27" value
  * @method Formulario27            setDatosFormulario27()            Sets the current record's "DatosFormulario27" value
  * @method Formulario27            setOrigenFormulario()             Sets the current record's "OrigenFormulario" value
@@ -84,7 +84,7 @@ abstract class BaseFormulario27 extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('producto_id', 'integer', null, array(
+        $this->hasColumn('dispositivo_medico_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
              ));
@@ -93,8 +93,8 @@ abstract class BaseFormulario27 extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('Producto', array(
-             'local' => 'producto_id',
+        $this->hasOne('DispositivoMedico', array(
+             'local' => 'dispositivo_medico_id',
              'foreign' => 'id'));
 
         $this->hasOne('TipoTramiteFormulario27', array(

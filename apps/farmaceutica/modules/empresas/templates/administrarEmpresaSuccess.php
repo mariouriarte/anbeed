@@ -51,8 +51,8 @@
                     <h2 class="titulo"><img src="/images/icons/package-x-generic.svg" /> Productos</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/farmaceutica_dev.php/prodmed"><span> Medicamentos</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/prodcos"><span> Cosméticos</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/medicamentos"><span> Medicamentos</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/cosmetico"><span> Cosméticos</span></a></li>
                         </ul>
                     </div>
                 </div>
