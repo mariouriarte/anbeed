@@ -62,7 +62,6 @@
             
             <div id="content">
                 <?php echo $sf_content ?>
-                
             </div>
              
         </div>

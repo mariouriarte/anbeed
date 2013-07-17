@@ -14,7 +14,8 @@
  * @property Empresa $Empresa
  * @property LaboratorioFabricante $LaboratorioFabricante
  * @property Formulario5 $Formulario5
- * @property Doctrine_Collection $Medicamento
+ * @property Medicamento $Medicamento
+ * @property DispositivoMedico $DispositivoMedico
  * 
  * @method integer               getEmpresaId()                 Returns the current record's "empresa_id" value
  * @method integer               getLaboratorioFabricanteId()   Returns the current record's "laboratorio_fabricante_id" value
@@ -25,7 +26,8 @@
  * @method Empresa               getEmpresa()                   Returns the current record's "Empresa" value
  * @method LaboratorioFabricante getLaboratorioFabricante()     Returns the current record's "LaboratorioFabricante" value
  * @method Formulario5           getFormulario5()               Returns the current record's "Formulario5" value
- * @method Doctrine_Collection   getMedicamento()               Returns the current record's "Medicamento" collection
+ * @method Medicamento           getMedicamento()               Returns the current record's "Medicamento" value
+ * @method DispositivoMedico     getDispositivoMedico()         Returns the current record's "DispositivoMedico" value
  * @method Producto              setEmpresaId()                 Sets the current record's "empresa_id" value
  * @method Producto              setLaboratorioFabricanteId()   Sets the current record's "laboratorio_fabricante_id" value
  * @method Producto              setNombreGenerico()            Sets the current record's "nombre_generico" value
@@ -35,7 +37,8 @@
  * @method Producto              setEmpresa()                   Sets the current record's "Empresa" value
  * @method Producto              setLaboratorioFabricante()     Sets the current record's "LaboratorioFabricante" value
  * @method Producto              setFormulario5()               Sets the current record's "Formulario5" value
- * @method Producto              setMedicamento()               Sets the current record's "Medicamento" collection
+ * @method Producto              setMedicamento()               Sets the current record's "Medicamento" value
+ * @method Producto              setDispositivoMedico()         Sets the current record's "DispositivoMedico" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -91,7 +94,11 @@ abstract class BaseProducto extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'producto_id'));
 
-        $this->hasMany('Medicamento', array(
+        $this->hasOne('Medicamento', array(
+             'local' => 'id',
+             'foreign' => 'producto_id'));
+
+        $this->hasOne('DispositivoMedico', array(
              'local' => 'id',
              'foreign' => 'producto_id'));
 

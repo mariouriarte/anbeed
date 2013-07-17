@@ -161,20 +161,19 @@ img.cps-logo {
     border: 1px solid #D9D9D9;
     /*margin: auto;*/
     padding-bottom: 0;
-    padding-left: auto;
-    padding-right: auto;
+/*    padding-left: auto;
+    padding-right: auto;*/
     padding-top: 50px !important;
     width: 1095px;
     
-    overflow: hidden;
+    /*overflow: hidden;*/
      
     /*background-color: #777777;*/
     margin-left: auto;
     margin-right: auto;
     /*margin-bottom: 10px;*/
     vertical-align: middle;
-    float: bottom;
-    
+    min-height: 600px;
 }
 
 #activo-titulo {
@@ -373,8 +372,4 @@ input[type="text"], input[type="password"], textarea {
 .td-warning {
     background-color: #F5F5F2 !important;
     border-color: #F5F5F2 !important;
-}
-table
-{
-    width: 100%;
 }
