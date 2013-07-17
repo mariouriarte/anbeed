@@ -304,7 +304,7 @@ Cosmetico:
   relations:
     Producto:       {local: producto_id, foreign: id, type: one, foreignAlias: Cosmetico}
     FormaCosmetica: {local: forma_cosmetica_id, foreign: id, type: one, foreignAlias: Cosmetico}
-    GrupoCosmetico: {local: grupo_cosmetico_id, foreign: id, type: one, foreignAlias: Cosmetico}
+    GrupoCosmetico: {local: grupo_cosmetico_id, foreign: id, type: many, foreignAlias: Cosmeticos}
     Marca:          {local: grupo_cosmetico_id, foreign: id, type: one, foreignAlias: Cosmetico}
     Pais:           {local: pais_id, foreign: id, type: one, foreignAlias: Cosmetico}
 

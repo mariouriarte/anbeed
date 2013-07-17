@@ -1,0 +1,49 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Producto
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          producto_prodcos
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        laboratorio_fabricante_id: {label: 'Laboratorio Fabricante'}
+        nombre_generico:           {label: 'Nombre del Producto'}
+        #procedencia:               {label: 'Lugar de Procedencia'}
+        registro_sanitario:        {label: 'Número de Registro Sanitario'}
+        descripcion:               {label: 'Descripción'}
+        newcosmetico:              {label: 'Nuevo Cosmético'}
+      list:    
+         title:   Cosméticos Registrados
+         table_method: selectCosmeticosDeEmpresa
+         display: [nombre_generico, laboratorio_fabricante, registro_sanitario]
+         object_actions:
+          #ir_formula: {label: Fórmula Cualicuantitativa, action: irFormula}
+          ir_form516:   {label: Desición 516, action: irForm516}
+          _edit: ~ 
+         actions:
+          adm_empresa: {label: Volver a Empresa}
+          _new:     ~ 
+      filter:  
+        display:  [laboratorio_fabricante_id, nombre_generico, registro_sanitario]
+      form:
+        display:  
+          Datos Generales del Producto:   [laboratorio_fabricante_id, nombre_generico, registro_sanitario, descripcion]
+          Datos Específicos del Producto: [newcosmetico]
+        actions:    
+          _delete: ~
+          _list: ~
+          _save: ~
+                   
+          
+      edit:    
+        title: Editar Cosmético %%nombre_generico%%
+      new:     
+        title: Registro de Cosméticos

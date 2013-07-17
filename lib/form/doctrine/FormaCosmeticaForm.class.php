@@ -12,5 +12,6 @@ class FormaCosmeticaForm extends BaseFormaCosmeticaForm
 {
   public function configure()
   {
+      unset($this['created_at'], $this['updated_at']);
   }
 }

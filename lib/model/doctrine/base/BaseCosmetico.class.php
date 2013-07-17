@@ -15,36 +15,36 @@
  * @property string $expediente
  * @property Producto $Producto
  * @property FormaCosmetica $FormaCosmetica
- * @property GrupoCosmetico $GrupoCosmetico
+ * @property Doctrine_Collection $GrupoCosmetico
  * @property Marca $Marca
  * @property Pais $Pais
  * 
- * @method integer        getProductoId()         Returns the current record's "producto_id" value
- * @method integer        getFormaCosmeticaId()   Returns the current record's "forma_cosmetica_id" value
- * @method integer        getGrupoCosmeticoId()   Returns the current record's "grupo_cosmetico_id" value
- * @method integer        getMarcaId()            Returns the current record's "marca_id" value
- * @method integer        getPaisId()             Returns the current record's "pais_id" value
- * @method string         getCodigoNso()          Returns the current record's "codigo_nso" value
- * @method string         getVigenciaNso()        Returns the current record's "vigencia_nso" value
- * @method string         getExpediente()         Returns the current record's "expediente" value
- * @method Producto       getProducto()           Returns the current record's "Producto" value
- * @method FormaCosmetica getFormaCosmetica()     Returns the current record's "FormaCosmetica" value
- * @method GrupoCosmetico getGrupoCosmetico()     Returns the current record's "GrupoCosmetico" value
- * @method Marca          getMarca()              Returns the current record's "Marca" value
- * @method Pais           getPais()               Returns the current record's "Pais" value
- * @method Cosmetico      setProductoId()         Sets the current record's "producto_id" value
- * @method Cosmetico      setFormaCosmeticaId()   Sets the current record's "forma_cosmetica_id" value
- * @method Cosmetico      setGrupoCosmeticoId()   Sets the current record's "grupo_cosmetico_id" value
- * @method Cosmetico      setMarcaId()            Sets the current record's "marca_id" value
- * @method Cosmetico      setPaisId()             Sets the current record's "pais_id" value
- * @method Cosmetico      setCodigoNso()          Sets the current record's "codigo_nso" value
- * @method Cosmetico      setVigenciaNso()        Sets the current record's "vigencia_nso" value
- * @method Cosmetico      setExpediente()         Sets the current record's "expediente" value
- * @method Cosmetico      setProducto()           Sets the current record's "Producto" value
- * @method Cosmetico      setFormaCosmetica()     Sets the current record's "FormaCosmetica" value
- * @method Cosmetico      setGrupoCosmetico()     Sets the current record's "GrupoCosmetico" value
- * @method Cosmetico      setMarca()              Sets the current record's "Marca" value
- * @method Cosmetico      setPais()               Sets the current record's "Pais" value
+ * @method integer             getProductoId()         Returns the current record's "producto_id" value
+ * @method integer             getFormaCosmeticaId()   Returns the current record's "forma_cosmetica_id" value
+ * @method integer             getGrupoCosmeticoId()   Returns the current record's "grupo_cosmetico_id" value
+ * @method integer             getMarcaId()            Returns the current record's "marca_id" value
+ * @method integer             getPaisId()             Returns the current record's "pais_id" value
+ * @method string              getCodigoNso()          Returns the current record's "codigo_nso" value
+ * @method string              getVigenciaNso()        Returns the current record's "vigencia_nso" value
+ * @method string              getExpediente()         Returns the current record's "expediente" value
+ * @method Producto            getProducto()           Returns the current record's "Producto" value
+ * @method FormaCosmetica      getFormaCosmetica()     Returns the current record's "FormaCosmetica" value
+ * @method Doctrine_Collection getGrupoCosmetico()     Returns the current record's "GrupoCosmetico" collection
+ * @method Marca               getMarca()              Returns the current record's "Marca" value
+ * @method Pais                getPais()               Returns the current record's "Pais" value
+ * @method Cosmetico           setProductoId()         Sets the current record's "producto_id" value
+ * @method Cosmetico           setFormaCosmeticaId()   Sets the current record's "forma_cosmetica_id" value
+ * @method Cosmetico           setGrupoCosmeticoId()   Sets the current record's "grupo_cosmetico_id" value
+ * @method Cosmetico           setMarcaId()            Sets the current record's "marca_id" value
+ * @method Cosmetico           setPaisId()             Sets the current record's "pais_id" value
+ * @method Cosmetico           setCodigoNso()          Sets the current record's "codigo_nso" value
+ * @method Cosmetico           setVigenciaNso()        Sets the current record's "vigencia_nso" value
+ * @method Cosmetico           setExpediente()         Sets the current record's "expediente" value
+ * @method Cosmetico           setProducto()           Sets the current record's "Producto" value
+ * @method Cosmetico           setFormaCosmetica()     Sets the current record's "FormaCosmetica" value
+ * @method Cosmetico           setGrupoCosmetico()     Sets the current record's "GrupoCosmetico" collection
+ * @method Cosmetico           setMarca()              Sets the current record's "Marca" value
+ * @method Cosmetico           setPais()               Sets the current record's "Pais" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -104,7 +104,7 @@ abstract class BaseCosmetico extends sfDoctrineRecord
              'local' => 'forma_cosmetica_id',
              'foreign' => 'id'));
 
-        $this->hasOne('GrupoCosmetico', array(
+        $this->hasMany('GrupoCosmetico', array(
              'local' => 'grupo_cosmetico_id',
              'foreign' => 'id'));
 

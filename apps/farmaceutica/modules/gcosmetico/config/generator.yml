@@ -1,13 +1,13 @@
 generator:
   class: sfDoctrineGenerator
   param:
-    model_class:           Pais
+    model_class:           GrupoCosmetico
     theme:                 admin
     non_verbose_templates: true
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          pais
+    route_prefix:          grupo_cosmetico
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
@@ -21,7 +21,7 @@ generator:
         actions:
           _save: ~
           cerrar: 
-      edit:
-        title: Editar Pais %%nombre%%
+      edit:    
+        title: Editar Grupo Cosmético %%nombre%%
       new:     
-        title: Registro de Paises
+        title: Registro de Grupo Cosmético

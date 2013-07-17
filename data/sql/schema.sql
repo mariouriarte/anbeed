@@ -44,7 +44,6 @@ CREATE INDEX is_active_idx ON sf_guard_user (is_active);
 ALTER TABLE cosmetico ADD CONSTRAINT cosmetico_producto_id_producto_id FOREIGN KEY (producto_id) REFERENCES producto(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE cosmetico ADD CONSTRAINT cosmetico_pais_id_pais_id FOREIGN KEY (pais_id) REFERENCES pais(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE cosmetico ADD CONSTRAINT cosmetico_grupo_cosmetico_id_marca_id FOREIGN KEY (grupo_cosmetico_id) REFERENCES marca(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
-ALTER TABLE cosmetico ADD CONSTRAINT cosmetico_grupo_cosmetico_id_grupo_cosmetico_id FOREIGN KEY (grupo_cosmetico_id) REFERENCES grupo_cosmetico(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE cosmetico ADD CONSTRAINT cosmetico_forma_cosmetica_id_forma_cosmetica_id FOREIGN KEY (forma_cosmetica_id) REFERENCES forma_cosmetica(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE detalle_formula_cc ADD CONSTRAINT detalle_formula_cc_formula_cc_id_formula_cc_id FOREIGN KEY (formula_cc_id) REFERENCES formula_cc(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE dispositivo_medico ADD CONSTRAINT dispositivo_medico_producto_id_producto_id FOREIGN KEY (producto_id) REFERENCES producto(id) NOT DEFERRABLE INITIALLY IMMEDIATE;

@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Cosmetico
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          cosmetico
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        forma_cosmetica_id: {label: Forma Cosmética}
+        grupo_cosmetico_id: {label: Grupo Cosmético}
+        marca_id:           {label: Marca}
+        codigo_nso:         {label: Código de identificación de la NSO}
+        expediente:         {label: Número de Expediente}
+        vigencia_nso:       {label: Vigencia del Código de identificación de la NSO}
+        pais_id:            {label: País que emitió el Código de identificación de la NSO}
+      list:    
+        display:  [forma_cosmetica_id, grupo_cosmetico_id, marca_id, pais_id]
+      filter:  
+        display:  [forma_cosmetica_id, grupo_cosmetico_id, marca_id, pais_id]
+      form:    
+        display:  [forma_cosmetica_id, grupo_cosmetico_id, marca_id, codigo_nso, expediente, vigencia_nso, pais_id]
+      edit:   
+        display:  [forma_cosmetica_id, grupo_cosmetico_id, marca_id, codigo_nso, expediente, vigencia_nso, pais_id]
+      new:
+        display:  [forma_cosmetica_id, grupo_cosmetico_id, marca_id, codigo_nso, expediente, vigencia_nso, pais_id]

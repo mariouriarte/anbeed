@@ -12,5 +12,6 @@ class MarcaForm extends BaseMarcaForm
 {
   public function configure()
   {
+      unset($this['created_at'], $this['updated_at']);
   }
 }

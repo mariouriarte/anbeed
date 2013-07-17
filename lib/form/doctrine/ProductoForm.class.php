@@ -47,5 +47,29 @@ class ProductoForm extends BaseProductoForm
             $subForm2->embedForm( 1 , $form2);
             $this->embedForm('Nuevo Medicamento', $subForm2);
         }
+      if(sfContext::getInstance()->getModuleName() == "prodcos")
+        {
+            unset($this['procedencia']);
+            //Form enbebido, Cosmetico\
+            $subFormCos = new sfForm();
+            if($this->isNew())
+            {
+                $cosmetico = new Cosmetico();
+            }
+            else 
+            {
+              $cosmeticos = Doctrine_Query::create()
+                    ->from('Cosmetico a')                    
+                    ->where('a.producto_id = ?', $this->getObject()->getId())
+                    ->execute();
+        
+                $cosmetico = $cosmeticos[0];
+            }   
+            $cosmetico->Producto = $this->getObject();
+            
+            $formCos = new CosmeticoForm($cosmetico);
+            $subFormCos->embedForm( 1 , $formCos);
+            $this->embedForm('newcosmetico', $subFormCos);
+        }
   }
 }

@@ -1,3 +1,57 @@
+producto_prodcos:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Producto
+    module:               prodcos
+    prefix_path:          /prodcos
+    column:               id
+    with_wildcard_routes: true
+
+formulario516:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario516
+    module:               formulario516
+    prefix_path:          /formulario516
+    column:               id
+    with_wildcard_routes: true
+
+marca:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Marca
+    module:               marca
+    prefix_path:          /marca
+    column:               id
+    with_wildcard_routes: true
+
+grupo_cosmetico:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                GrupoCosmetico
+    module:               gcosmetico
+    prefix_path:          /gcosmetico
+    column:               id
+    with_wildcard_routes: true
+
+forma_cosmetica:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                FormaCosmetica
+    module:               fcosmetica
+    prefix_path:          /fcosmetica
+    column:               id
+    with_wildcard_routes: true
+
+cosmetico:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Cosmetico
+    module:               cosmetico
+    prefix_path:          /cosmetico
+    column:               id
+    with_wildcard_routes: true
+
 formulario5_formulario5porempresa:
   class: sfDoctrineRouteCollection
   options:
@@ -124,6 +178,18 @@ producto:
     column:               id
     with_wildcard_routes: true
 
+buscar_paises:
+    url:   /paises/buscar
+    param: { module: paises, action: buscar }
+buscar_fcosmetica:
+    url:   /fcosmetica/buscar
+    param: { module: fcosmetica, action: buscar }
+buscar_gcosmetico:
+    url:   /gcosmetico/buscar
+    param: { module: gcosmetico, action: buscar }
+buscar_marca:
+    url:   /marca/buscar
+    param: { module: marca, action: buscar }
 buscar_venta:
     url:   /tventas/buscar
     param: { module: tventas, action: buscar }

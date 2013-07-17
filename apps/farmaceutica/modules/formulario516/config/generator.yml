@@ -1,27 +1,21 @@
 generator:
   class: sfDoctrineGenerator
   param:
-    model_class:           Pais
+    model_class:           Formulario516
     theme:                 admin
     non_verbose_templates: true
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          pais
+    route_prefix:          formulario516
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
     config:
       actions: ~
-      fields:  
-        nombre: {label: Nombre}
+      fields:  ~
       list:    ~
-      filter:  
-      form:    
-        actions:
-          _save: ~
-          cerrar: 
-      edit:
-        title: Editar Pais %%nombre%%
-      new:     
-        title: Registro de Paises
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~
