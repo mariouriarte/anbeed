@@ -1,9 +1,9 @@
-OrigenFormulario5:
-  OrigenFormulario5_1:
+OrigenFormulario:
+  OrigenFormulario_1:
     nombre: IMPORTADO
     created_at: '2008-01-01 00:00:00'
     updated_at: '2008-01-01 00:00:00'
-  OrigenFormulario5_2:
+  OrigenFormulario_2:
     nombre: NACIONAL
     created_at: '2008-01-01 00:00:00'
     updated_at: '2008-01-01 00:00:00'

@@ -13,17 +13,14 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list: 
-        title: Paises Registrados
-        display: [nombre]
-        actions:
-          ir_portal: {label: Ir a Portal}
-          _new: ~
+      fields:  
+        nombre: {label: Nombre}
+      list:    ~
       filter:  
-        display: [nombre]
       form:    
-        display: [nombre, bandera]
+        actions:
+          _save: ~
+          cerrar: 
       edit:
         title: Editar Pais %%nombre%%
       new:     

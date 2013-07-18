@@ -13,11 +13,44 @@ generator:
 
     config:
       actions: ~
-      fields: ~
-        #pais_id:        {label: 'País de Origen'}
-        #bajo_liciencia: {label: 'Bajo Licencia de'}
-      list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      fields: 
+        laboratorio_fabricante_id: {label: 'Laboratorio Fabricante'}
+        forma_farmaceutica_id:     {label: 'Forma Farmaceútica'}
+        via_administracion_id:     {label: 'Vía de Administración'}
+        tipo_venta_id:             {label: 'Tipo de Venta'}
+        nombre_comercial:          {label: 'Nombre Comercial'}
+        nombre_generico:           {label: 'Nombre Genérico'}
+        concentracion:             {label: 'Concentración (p.a.)'}
+        accion_terapeutica:        {label: 'Acción Terapeútica'}
+        conservacion:              {label: 'Conservación'}
+        periodo_validez:           {label: 'Periodo de Validez'}
+        especificacion_envase:     {label: 'Especificación del Envase'}
+        envase_clinico:            {label: 'Envase Clínico'}
+        aval:                      {label: 'Aval de la C.F.N.'}
+        registro_sanitario:        {label: 'Nº de Registro Sanitario'}
+        certificado_control:       {label: 'Nº de Certificado de Control de Calidad (CONCAMYT - INALSA)'}
+        descripcion:               {label: 'Descripcion'}
+      list:    
+        title:   Medicamentos Registrados
+        table_method: selectMedicamentosDeEmpresa
+        display: [nombre_comercial, nombre_generico, laboratorio_fabricante, registro_sanitario]
+        object_actions:
+          ir_formula: {label: Fórmula Cualicuantitativa, action: irFormula}
+          ir_form5:   {label: Form 005, action: irForm5}
+          _edit: ~ 
+        actions:
+          adm_empresa: {label: Volver a Empresa}
+          _new:     ~ 
+      filter:  
+        display: [nombre_comercial, nombre_generico, laboratorio_fabricante_id, registro_sanitario]
+      form:
+        display:
+          Datos Generales del Producto: [laboratorio_fabricante_id, forma_farmaceutica_id, via_administracion_id, tipo_venta_id, nombre_comercial, nombre_generico, concentracion, accion_terapeutica, conservacion, periodo_validez, especificacion_envase, envase_clinico, aval, registro_sanitario, certificado_control, descripcion]
+        actions:    
+          _delete: ~
+          _list: ~
+          _save: ~
+      edit:    
+        title: Editar Medicamento %%nombre_generico%%
+      new:     
+        title: Registro de Medicamentos

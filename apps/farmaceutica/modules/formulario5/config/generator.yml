@@ -17,30 +17,30 @@ generator:
         fecha:                        {label: 'Fecha de Registro'}
         tipo_tramite_formulario5_id:  {label: 'Tipo de Trámite'}
         tipo_producto_formulario5_id: {label: 'Tipo de Producto'}
-        origen_formulario5_id:        {label: 'Origen'}
+        origen_formulario_id:        {label: 'Origen'}
       
       list:    
         title: Listado de Solicitudes para Registro y Control de Calidad de Medicamentos
         table_method: selectForms5DeMedicamento
-        display: [fecha, tipo_tramite_formulario5, tipo_producto_formulario5, origen_formulario5, producto]
+        display: [fecha, tipo_tramite_formulario5, tipo_producto_formulario5, origen_formulario, medicamento]
         actions:
           ir_productos: {label: Regresar a Medicamentos}
           ir_empresa: {label: Volver a Empresa}
           _new: ~      
       filter:  
-        display: [tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario5_id]
+        display: [tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id]
       
       form:    
        
       edit:    
         title: Editar Listado de Solicitudes para Registro y Control de Calidad de Medicamentos
-        display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario5_id, producto_id]
+        display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id, medicamento_id]
         actions:
           _list: ~  
           _save: ~  
       new:     
         title: Solicitud para Registro y Control de Calidad de Medicamentos
-        display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario5_id, producto_id]
+        display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id, medicamento_id]
         actions:
           _list: ~  
           _save: ~

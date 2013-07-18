@@ -10,4 +10,8 @@
  */
 class paisesGeneratorHelper extends BasePaisesGeneratorHelper
 {
+    public function linkToCerrar($object, $params)
+    {
+     return '<li class="none"><input name="cerrar" type="submit" onclick="window.close();" value="Cerrar" /> </li>';
+    }
 }

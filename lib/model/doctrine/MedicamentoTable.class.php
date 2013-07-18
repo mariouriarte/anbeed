@@ -16,4 +16,15 @@ class MedicamentoTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Medicamento');
     }
+    public function selectMedicamentosDeEmpresa()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $q = Doctrine_Query::create()
+                    ->from('Medicamento m')
+                    ->where('m.empresa_id = ?', $empresa->getId())
+                    ->orderBy('m.id ASC');
+            
+        return $q;
+    }
 }

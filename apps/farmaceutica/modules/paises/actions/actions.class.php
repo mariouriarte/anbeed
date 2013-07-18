@@ -17,4 +17,21 @@ class paisesActions extends autoPaisesActions
     {
         $this->redirect('/portal_dev.php/inicio/index');
     }
+    public function executeBuscar(sfWebRequest $request)
+    {
+        $this->getResponse()->setContentType('application/json');
+        $buscar = $request->getParameter('q');
+        //construimos la consulta
+        $query = "SELECT * FROM pais where nombre ILIKE '%$buscar%'";
+        //obtenemos el singleton de la conexión
+        $con = Doctrine_Manager::getInstance()->connection();
+        //ejecutamos la consulta    
+        $query = $con->execute($query);
+        $paises = array();
+        foreach ($query as $pais) {
+            $paises[$pais['id']] = $pais['nombre'];
+        }
+ 
+        return $this->renderText(json_encode($paises));
+     }
 }

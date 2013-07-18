@@ -14,6 +14,7 @@ abstract class BaseLaboratorioFabricanteFormFilter extends BaseFormFilterDoctrin
   {
     $this->setWidgets(array(
       'pais_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'add_empty' => true)),
+      'ciudad_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Ciudad'), 'add_empty' => true)),
       'nombre'        => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'bajo_licencia' => new sfWidgetFormFilterInput(),
       'para'          => new sfWidgetFormFilterInput(),
@@ -28,6 +29,7 @@ abstract class BaseLaboratorioFabricanteFormFilter extends BaseFormFilterDoctrin
 
     $this->setValidators(array(
       'pais_id'       => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Pais'), 'column' => 'id')),
+      'ciudad_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Ciudad'), 'column' => 'id')),
       'nombre'        => new sfValidatorPass(array('required' => false)),
       'bajo_licencia' => new sfValidatorPass(array('required' => false)),
       'para'          => new sfValidatorPass(array('required' => false)),
@@ -59,6 +61,7 @@ abstract class BaseLaboratorioFabricanteFormFilter extends BaseFormFilterDoctrin
     return array(
       'id'            => 'Number',
       'pais_id'       => 'ForeignKey',
+      'ciudad_id'     => 'ForeignKey',
       'nombre'        => 'Text',
       'bajo_licencia' => 'Text',
       'para'          => 'Text',

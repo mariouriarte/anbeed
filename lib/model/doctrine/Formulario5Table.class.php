@@ -19,14 +19,13 @@ class Formulario5Table extends Doctrine_Table
     public function selectForms5DeMedicamento()
     {
         $user = sfContext::getInstance()->getUser();
-        $producto = $user->getAttribute('producto');
+        $medicamento = $user->getAttribute('medicamento');
         $q = Doctrine_Query::create()
                     ->from('Formulario5 f')
-                    ->leftJoin('f.Producto p')
                     ->leftJoin('f.TipoTramiteFormulario5 tf')
                     ->leftJoin('f.TipoProductoFormulario5 tp')
-                    ->leftJoin('f.OrigenFormulario5 of')
-                    ->where('f.producto_id = ?', $producto->getId())
+                    ->leftJoin('f.OrigenFormulario of')
+                    ->where('f.medicamento_id = ?', $medicamento->getId())
                     ->orderBy('f.id ASC');
             
         return $q;
@@ -38,7 +37,7 @@ class Formulario5Table extends Doctrine_Table
         $empresa = $user->getAttribute('empresa');
         $q = Doctrine_Query::create()
                     ->from('Formulario5 f')
-                    ->leftJoin('f.Producto p')
+                    ->leftJoin('f.Medicamento p')
                     ->leftJoin('p.Empresa e') 
                     ->where('p.empresa_id = ?', $empresa->getId())
                     ->orderBy('f.id ASC');

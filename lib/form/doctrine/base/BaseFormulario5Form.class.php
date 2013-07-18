@@ -17,10 +17,13 @@ abstract class BaseFormulario5Form extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'                           => new sfWidgetFormInputHidden(),
       'fecha'                        => new sfWidgetFormDate(),
+      'vigencia'                     => new sfWidgetFormInputText(),
+      'fecha_inicio_vigencia'        => new sfWidgetFormDate(),
+      'numero_ruta'                  => new sfWidgetFormInputText(),
       'tipo_tramite_formulario5_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoTramiteFormulario5'), 'add_empty' => false)),
       'tipo_producto_formulario5_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoProductoFormulario5'), 'add_empty' => false)),
-      'origen_formulario5_id'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('OrigenFormulario5'), 'add_empty' => false)),
-      'producto_id'                  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => false)),
+      'origen_formulario_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('OrigenFormulario'), 'add_empty' => false)),
+      'medicamento_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Medicamento'), 'add_empty' => false)),
       'created_at'                   => new sfWidgetFormDateTime(),
       'updated_at'                   => new sfWidgetFormDateTime(),
     ));
@@ -28,10 +31,13 @@ abstract class BaseFormulario5Form extends BaseFormDoctrine
     $this->setValidators(array(
       'id'                           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'fecha'                        => new sfValidatorDate(array('required' => false)),
+      'vigencia'                     => new sfValidatorInteger(array('required' => false)),
+      'fecha_inicio_vigencia'        => new sfValidatorDate(array('required' => false)),
+      'numero_ruta'                  => new sfValidatorInteger(array('required' => false)),
       'tipo_tramite_formulario5_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TipoTramiteFormulario5'))),
       'tipo_producto_formulario5_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TipoProductoFormulario5'))),
-      'origen_formulario5_id'        => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('OrigenFormulario5'))),
-      'producto_id'                  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'))),
+      'origen_formulario_id'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('OrigenFormulario'))),
+      'medicamento_id'               => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Medicamento'))),
       'created_at'                   => new sfValidatorDateTime(),
       'updated_at'                   => new sfValidatorDateTime(),
     ));

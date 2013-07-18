@@ -15,7 +15,7 @@ class formulasActions extends autoFormulasActions
 {
    public function executeListIrProductos(sfWebRequest $request)
    {
-        $this->redirect(sfContext::getInstance()->getRouting()->generate('producto_prodmed'));
+        $this->redirect(sfContext::getInstance()->getRouting()->generate('medicamento'));
    }
    
    protected function processForm(sfWebRequest $request, sfForm $form)
@@ -30,9 +30,8 @@ class formulasActions extends autoFormulasActions
 
         // Editado para asignar a esta formulacc al medicamento
         $user = $this->getUser();
-        $producto = $user->getAttribute('producto');
-        $medicamento = $producto->getMedicamento();
-        $medicamento[0]->setFormulaCc($formula_cc);
+        $medicamento = $user->getAttribute('medicamento');
+        $medicamento->setFormulaCc($formula_cc);
         //$medicamento->setFormulaCc($formula_cc);
         $medicamento->save();
         // ------------

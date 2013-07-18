@@ -15,6 +15,7 @@ class Formulario5Form extends BaseFormulario5Form
        unset($this['created_at'], $this['updated_at']);
        $years = range(date('Y') - 0, date('Y'));   
        
+<<<<<<< HEAD
      // Asigna el id del producto para el form5
        if(!isset($this['producto_id']))
        {
@@ -27,6 +28,13 @@ class Formulario5Form extends BaseFormulario5Form
            $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden(
                     array());
        }
+=======
+       $medicamento = sfContext::getInstance()->getUser()->getAttribute('medicamento');
+       
+       // Asigna el id del medicamento para el form5 
+       $this->widgetSchema['medicamento_id'] = new sfWidgetFormInputHidden(
+            array(), array('value' => $medicamento->getId()));
+>>>>>>> form506
        
            
        $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
@@ -49,11 +57,9 @@ class Formulario5Form extends BaseFormulario5Form
            array('required' => true,
                  'model'    => 'TipoProductoFormulario5'));
        
-       $this->widgetSchema['origen_formulario5_id'] = new sfWidgetFormDoctrineChoice(
+       $this->widgetSchema['origen_formulario_id'] = new sfWidgetFormDoctrineChoice(
            array('expanded' => true,
-                 'model'    => 'OrigenFormulario5'));
-       $this->validatorSchema['origen_formulario5_id'] = new sfValidatorDoctrineChoice(
-           array('required' => true,
-                 'model'    => 'OrigenFormulario5'));
+                 'model'    => 'OrigenFormulario'));
+       
   }
 }
