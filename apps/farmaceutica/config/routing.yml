@@ -1,3 +1,39 @@
+tipo_tramite_formulario27:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoTramiteFormulario27
+    module:               tipotramitef27
+    prefix_path:          /tipotramitef27
+    column:               id
+    with_wildcard_routes: true
+
+datos_formulario27:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                DatosFormulario27
+    module:               datosf27
+    prefix_path:          /datosf27
+    column:               id
+    with_wildcard_routes: true
+
+formulario27:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario27
+    module:               formulario27
+    prefix_path:          /formulario27
+    column:               id
+    with_wildcard_routes: true
+
+dispositivo_medico:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                DispositivoMedico
+    module:               dispositivos
+    prefix_path:          /dispositivos
+    column:               id
+    with_wildcard_routes: true
+
 producto_prodcos:
   class: sfDoctrineRouteCollection
   options:

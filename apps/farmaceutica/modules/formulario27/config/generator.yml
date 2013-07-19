@@ -1,0 +1,46 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Formulario27
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario27
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        fecha:                         {label: 'Fecha de Registro'}
+        datos_formulario27_id:         {label: 'Datos'}
+        tipo_tramite_formulario27_id:  {label: 'Tipo de Trámite'}
+        origen_formulario_id:          {label: 'Origen'}
+      
+      list:    
+        title: Listado de Solicitudes para Registro y Control de Calidad de Dispositivos Medicos
+#        table_method: selectForms5DeMedicamento
+        display: [fecha, tipo_tramite_formulario27, datos_formulario27, origen_formulario, dispositivo_medico]
+        actions:
+          ir_productos: {label: Regresar a Dispositivos}
+          ir_empresa:   {label: Volver a Empresa}
+          _new: ~      
+      filter:  
+        display: [datos_formulario27_id, tipo_tramite_formulario27_id, origen_formulario_id]
+      
+      form:    
+        display: [fecha, datos_formulario27_id, tipo_tramite_formulario27_id, origen_formulario_id, vigencia, fecha_inicio_vigencia, numero_ruta]
+      edit:    
+        title: Editar Listado de Solicitudes para Registro y Control de Calidad de Dispositivos Medicos
+        display: [fecha, datos_formulario27_id, tipo_tramite_formulario27_id, origen_formulario_id, dispositivo_medico_idvigencia, fecha_inicio_vigencia, numero_ruta]
+        actions:
+          _list: ~  
+          _save: ~  
+      new:     
+        title: Solicitud para Registro y Control de Calidad de Dispositivos Medicos
+        display: [fecha, datos_formulario27_id, tipo_tramite_formulario27_id, origen_formulario_id, dispositivo_medico_id, vigencia, fecha_inicio_vigencia, numero_ruta]
+        actions:
+          _list: ~  
+          _save: ~

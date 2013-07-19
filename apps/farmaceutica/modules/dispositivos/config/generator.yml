@@ -1,0 +1,50 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           DispositivoMedico
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          dispositivo_medico
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        laboratorio_fabricante_id: {label: Laboratorio Fabricante}
+        nombre_comercial:          {label: Nombre Comercial}
+        nombre_generico:           {label: Nombre Generico}
+        clasificacion_riesgo:      {label: Clasificacion de Acuerdo al Riesgo}
+        codigo_internacional:      {label: Codigo Internacional}
+        presentacion:              {label: Presentación}
+        manual:                    {label: "Manual?"}
+        condicion_empaque:         {label: Condiciones de Almacenamiento y Empaque}
+        vida_util:                 {label: Vida Útil}
+        metodo_desecho:            {label: Método de Desecho o Disposición Final del Producto}
+        registro_sanitario:        {label: N° de Registro Sanitario}
+        descripcion:               {label: Descripción}
+      list:    
+        title: Dispositivos Medicos Registrados
+        display: [nombre_comercial, nombre_generico, laboratorio_fabricante, registro_sanitario]
+        object_actions:
+          ir_form27:   {label: Form 027, action: irForm27}
+          _edit:  ~
+        actions:
+          adm_empresa: {label: Volver a Empresa}
+          _new:     ~ 
+      filter:  
+        display: [nombre_comercial, nombre_generico, laboratorio_fabricante_id, registro_sanitario]
+      form:    
+        display:
+          Datos Generales del Producto: [laboratorio_fabricante_id, nombre_comercial, nombre_generico, clasificacion_riesgo, codigo_internacional, manual, indicaciones, presentacion, condicion_empaque, vida_util, metodo_desecho, registro_sanitario, descripcion]
+        actions:    
+          _delete: ~
+          _list: ~
+          _save: ~
+      edit:
+        title: Editar Dispositivo Medico %%nombre_comercial%%
+      new:     
+        title: Registro de Dispositivos Medicos

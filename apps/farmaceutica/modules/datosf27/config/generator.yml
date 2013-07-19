@@ -1,0 +1,30 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           DatosFormulario27
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          datos_formulario27
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        title: Datos del Formulario Registrados
+        display: [nombre]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [nombre]
+      form:    
+        display: [nombre]
+      edit:    
+        title: Editar Datos de Formulario %%nombre%%
+      new: 
+        title: Registro Datos de Formulario

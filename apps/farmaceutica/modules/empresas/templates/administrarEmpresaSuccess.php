@@ -52,6 +52,7 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica_dev.php/medicamentos"><span> Medicamentos</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/dispositivos"><span> Dispositivos Medicos</span></a></li>
                             <li><a href="/farmaceutica_dev.php/cosmetico"><span> Cosméticos</span></a></li>
                         </ul>
                     </div>

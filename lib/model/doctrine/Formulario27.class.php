@@ -12,4 +12,8 @@
  */
 class Formulario27 extends BaseFormulario27
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+    }
 }

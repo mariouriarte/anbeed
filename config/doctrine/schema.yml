@@ -269,7 +269,7 @@ Formulario27:
     tipo_tramite_formulario27_id:   {type: integer, notnull: true}
     origen_formulario_id:           {type: integer, notnull: true}
     datos_formulario27_id:          {type: integer, notnull: true}
-    dispositivo_medico_id:                    {type: integer, notnull: true}
+    dispositivo_medico_id:          {type: integer, notnull: true}
   relations:
     DispositivoMedico:              {local: dispositivo_medico_id, foreign: id, type: one, foreignAlias: Formulario27}
     TipoTramiteFormulario27:        {local: tipo_tramite_formulario27_id, foreign: id, type: one, foreignAlias: Formulario27}
