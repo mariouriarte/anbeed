@@ -63,7 +63,10 @@
             <div id="content">
                 <?php echo $sf_content ?>
             </div>
-             
+            <div class="footer">
+                ANBEED S.R.L.<br />
+                Copyright © 2013 Capsule Systems. All Rights Reserved.
+            </div> 
         </div>
     </body>
 </html>

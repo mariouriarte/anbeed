@@ -95,12 +95,6 @@ a:hover {
     padding: 2px 0 0 5px;
 }
 
-#header-bottom #nombre-regional {
-    font-size: 14px;
-    font-family: arial,sans-serif;
-    color: #555555;
-    font-weight: bold;
-}
 
 .sponsor {
     font-size: 20pt;
@@ -110,10 +104,6 @@ a:hover {
     display: block;
 }
 
-img.cps-logo {    
-    float: left;
-    /*margin-right: 20px;*/
-}
 #info-user {
     float: right;
     height: 90px;
@@ -141,15 +131,22 @@ img.cps-logo {
 }
 
 .footer {
-    margin-top: 20px;    
-    bottom: 0;    
     height: auto;
     width: 100%;
-    position: fixed;
-
-    color: #FFFFFF;    
-    background-color: #555753;
+    color: #000;    
+    background-color: #D3DFD1;
     text-align: center;
+    
+    border-bottom: 1px solid #DEDBD4;
+    box-shadow: -1px 0 8px 0 rgba(0, 0, 0, 0.8);
+    float: left;
+    
+/*    background-color: #2A2A2A;
+    border-top: 5px solid #DDDDDD;
+    float: left;
+    padding: 20px 0 40px;
+    width: 100%;
+    text-align: center*/
 }
 
 .footer p {
@@ -161,32 +158,17 @@ img.cps-logo {
     border: 1px solid #D9D9D9;
     /*margin: auto;*/
     padding-bottom: 0;
-/*    padding-left: auto;
+/*  padding-left: auto;
     padding-right: auto;*/
     padding-top: 50px !important;
     width: 1095px;
-    
     /*overflow: hidden;*/
-     
     /*background-color: #777777;*/
     margin-left: auto;
     margin-right: auto;
     /*margin-bottom: 10px;*/
     vertical-align: middle;
-    min-height: 600px;
-}
-
-#activo-titulo {
-    margin-left: 45px;
-}
-
-#activo-titulo h2 {
-    font-size: 1.3em;
-}
-
-#generar-codigo label, #generar-codigo-nuevo label{
-    display: inline;
-    float: none;
+    min-height: 650px;
 }
 
 .header-forms {

@@ -30,6 +30,8 @@
     font:normal 12px/14px Arial, Helvetica, Sans-serif;
     margin:0 auto 30px;
     overflow:hidden;
+    border-bottom: 1px solid #DEDBD4;
+    box-shadow: -1px 0 8px 0 rgba(0, 0, 0, 0.8);
 }
 .box.login
 {
@@ -40,7 +42,7 @@
     position: absolute;
     margin:-130px 0 0 -166px;
     left: 50%;
-    top: 25%;
+    top: 300px;
 }
 .boxBody
 {
