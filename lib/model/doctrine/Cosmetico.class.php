@@ -12,4 +12,8 @@
  */
 class Cosmetico extends BaseCosmetico
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+    }
 }

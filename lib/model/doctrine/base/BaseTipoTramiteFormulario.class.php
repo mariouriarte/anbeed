@@ -26,10 +26,10 @@ abstract class BaseTipoTramiteFormulario extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('tipo_tramite_formulario');
-        $this->hasColumn('nombre', 'string', 30, array(
+        $this->hasColumn('nombre', 'string', 100, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 30,
+             'length' => 100,
              ));
     }
 

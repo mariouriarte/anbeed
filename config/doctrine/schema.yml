@@ -307,13 +307,15 @@ Cosmetico:
     codigo_nso:                {type: string(250), notnull: false}
     vigencia_nso:              {type: string(250), notnull: false}
     expediente:                {type: string(250), notnull: false}
+    registro_sanitario:        {type: string(50), unique: false, default: NULL}
+    descripcion:               {type: string(2000), notnull: false}
   relations:
     Formulario516:           {local: id, foreign: cosmetico_id, type: many, foreignAlias: Cosmeticos}
     Empresa:                {local: empresa_id, foreign: id, type: one, foreignAlias: Cosmeticos}
     LaboratorioFabricante:  {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Cosmeticos}
     FormaCosmetica:         {local: forma_cosmetica_id, foreign: id, type: one, foreignAlias: Cosmetico}
     GrupoCosmetico:         {local: grupo_cosmetico_id, foreign: id, type: many, foreignAlias: Cosmeticos}
-    Marca:                  {local: grupo_cosmetico_id, foreign: id, type: one, foreignAlias: Cosmetico}
+    Marca:                  {local: marca_id, foreign: id, type: many, foreignAlias: Cosmetico}
     Pais:                   {local: pais_id, foreign: id, type: one, foreignAlias: Cosmetico}
     
 
@@ -342,7 +344,7 @@ Formulario516:
   actAs: {Timestampable: ~}
   columns:
     fecha:                          {type: date}
-    cosmetico_id:                    {type: integer, notnull: true}
+    cosmetico_id:                   {type: integer, notnull: true}
     vigencia:                       {type: integer(2), notnull: false}
     fecha_inicio_vigencia:          {type: date, notnull: false}
     numero_ruta:                    {type: integer, notnull: false}
@@ -362,7 +364,7 @@ Formulario516:
 TipoTramiteFormulario:
   actAs: {Timestampable: ~}
   columns:
-    nombre:       {type: string(30), notnull: true}
+    nombre:       {type: string(100), notnull: true}
   relations:
     Formulario516: {local: id, foreign: tipo_tramite_formulario_id, type: one, foreignAlias: TipoTramite}
 

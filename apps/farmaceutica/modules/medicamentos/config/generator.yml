@@ -45,7 +45,7 @@ generator:
         display: [nombre_comercial, nombre_generico, laboratorio_fabricante_id, registro_sanitario]
       form:
         display:
-          Datos Generales del Producto: [laboratorio_fabricante_id, forma_farmaceutica_id, via_administracion_id, tipo_venta_id, nombre_comercial, nombre_generico, concentracion, accion_terapeutica, conservacion, periodo_validez, especificacion_envase, envase_clinico, aval, registro_sanitario, certificado_control, descripcion]
+          Datos Generales del Producto: [laboratorio_fabricante_id, nombre_comercial, nombre_generico, forma_farmaceutica_id, concentracion, via_administracion_id, accion_terapeutica, tipo_venta_id, conservacion, periodo_validez, especificacion_envase, envase_clinico, aval, registro_sanitario, certificado_control, descripcion]
         actions:    
           _delete: ~
           _list: ~

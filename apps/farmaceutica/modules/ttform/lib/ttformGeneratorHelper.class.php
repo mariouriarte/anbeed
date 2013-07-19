@@ -1,13 +1,13 @@
 <?php
 
 /**
- * prodmed module helper.
+ * ttform module helper.
  *
  * @package    anbeed
- * @subpackage prodmed
+ * @subpackage ttform
  * @author     Your name here
  * @version    SVN: $Id: helper.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class prodmedGeneratorHelper extends BaseProdmedGeneratorHelper
+class ttformGeneratorHelper extends BaseTtformGeneratorHelper
 {
 }

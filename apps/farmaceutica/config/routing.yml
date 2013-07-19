@@ -1,3 +1,12 @@
+tipo_tramite_formulario:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoTramiteFormulario
+    module:               ttform
+    prefix_path:          /ttform
+    column:               id
+    with_wildcard_routes: true
+
 producto_prodcos:
   class: sfDoctrineRouteCollection
   options:

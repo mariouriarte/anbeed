@@ -15,12 +15,14 @@
  * @property string $codigo_nso
  * @property string $vigencia_nso
  * @property string $expediente
+ * @property string $registro_sanitario
+ * @property string $descripcion
  * @property Doctrine_Collection $Formulario516
  * @property Empresa $Empresa
  * @property LaboratorioFabricante $LaboratorioFabricante
  * @property FormaCosmetica $FormaCosmetica
  * @property Doctrine_Collection $GrupoCosmetico
- * @property Marca $Marca
+ * @property Doctrine_Collection $Marca
  * @property Pais $Pais
  * 
  * @method integer               getEmpresaId()                 Returns the current record's "empresa_id" value
@@ -33,12 +35,14 @@
  * @method string                getCodigoNso()                 Returns the current record's "codigo_nso" value
  * @method string                getVigenciaNso()               Returns the current record's "vigencia_nso" value
  * @method string                getExpediente()                Returns the current record's "expediente" value
+ * @method string                getRegistroSanitario()         Returns the current record's "registro_sanitario" value
+ * @method string                getDescripcion()               Returns the current record's "descripcion" value
  * @method Doctrine_Collection   getFormulario516()             Returns the current record's "Formulario516" collection
  * @method Empresa               getEmpresa()                   Returns the current record's "Empresa" value
  * @method LaboratorioFabricante getLaboratorioFabricante()     Returns the current record's "LaboratorioFabricante" value
  * @method FormaCosmetica        getFormaCosmetica()            Returns the current record's "FormaCosmetica" value
  * @method Doctrine_Collection   getGrupoCosmetico()            Returns the current record's "GrupoCosmetico" collection
- * @method Marca                 getMarca()                     Returns the current record's "Marca" value
+ * @method Doctrine_Collection   getMarca()                     Returns the current record's "Marca" collection
  * @method Pais                  getPais()                      Returns the current record's "Pais" value
  * @method Cosmetico             setEmpresaId()                 Sets the current record's "empresa_id" value
  * @method Cosmetico             setLaboratorioFabricanteId()   Sets the current record's "laboratorio_fabricante_id" value
@@ -50,12 +54,14 @@
  * @method Cosmetico             setCodigoNso()                 Sets the current record's "codigo_nso" value
  * @method Cosmetico             setVigenciaNso()               Sets the current record's "vigencia_nso" value
  * @method Cosmetico             setExpediente()                Sets the current record's "expediente" value
+ * @method Cosmetico             setRegistroSanitario()         Sets the current record's "registro_sanitario" value
+ * @method Cosmetico             setDescripcion()               Sets the current record's "descripcion" value
  * @method Cosmetico             setFormulario516()             Sets the current record's "Formulario516" collection
  * @method Cosmetico             setEmpresa()                   Sets the current record's "Empresa" value
  * @method Cosmetico             setLaboratorioFabricante()     Sets the current record's "LaboratorioFabricante" value
  * @method Cosmetico             setFormaCosmetica()            Sets the current record's "FormaCosmetica" value
  * @method Cosmetico             setGrupoCosmetico()            Sets the current record's "GrupoCosmetico" collection
- * @method Cosmetico             setMarca()                     Sets the current record's "Marca" value
+ * @method Cosmetico             setMarca()                     Sets the current record's "Marca" collection
  * @method Cosmetico             setPais()                      Sets the current record's "Pais" value
  * 
  * @package    anbeed
@@ -112,6 +118,16 @@ abstract class BaseCosmetico extends sfDoctrineRecord
              'notnull' => false,
              'length' => 250,
              ));
+        $this->hasColumn('registro_sanitario', 'string', 50, array(
+             'type' => 'string',
+             'unique' => false,
+             'length' => 50,
+             ));
+        $this->hasColumn('descripcion', 'string', 2000, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => 2000,
+             ));
     }
 
     public function setUp()
@@ -137,8 +153,8 @@ abstract class BaseCosmetico extends sfDoctrineRecord
              'local' => 'grupo_cosmetico_id',
              'foreign' => 'id'));
 
-        $this->hasOne('Marca', array(
-             'local' => 'grupo_cosmetico_id',
+        $this->hasMany('Marca', array(
+             'local' => 'marca_id',
              'foreign' => 'id'));
 
         $this->hasOne('Pais', array(

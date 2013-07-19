@@ -21,8 +21,7 @@ class CosmeticoTable extends Doctrine_Table
         $user = sfContext::getInstance()->getUser();
         $empresa = $user->getAttribute('empresa');
         $q = Doctrine_Query::create()
-                    ->from('Producto p')
-                    ->innerJoin('p.Cosmetico')
+                    ->from('Cosmetico p')
                     ->where('p.empresa_id = ?', $empresa->getId())
                     ->orderBy('p.id ASC');
             

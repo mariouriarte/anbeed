@@ -12,4 +12,8 @@
  */
 class GrupoCosmetico extends BaseGrupoCosmetico
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+    }
 }

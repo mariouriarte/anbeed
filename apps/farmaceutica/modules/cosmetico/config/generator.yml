@@ -13,21 +13,39 @@ generator:
 
     config:
       actions: ~
-      fields:  
-        forma_cosmetica_id: {label: Forma Cosmética}
-        grupo_cosmetico_id: {label: Grupo Cosmético}
-        marca_id:           {label: Marca}
-        codigo_nso:         {label: Código de identificación de la NSO}
-        expediente:         {label: Número de Expediente}
-        vigencia_nso:       {label: Vigencia del Código de identificación de la NSO}
-        pais_id:            {label: País que emitió el Código de identificación de la NSO}
+      fields:
+        fields: 
+        laboratorio_fabricante_id: {label: 'Laboratorio Fabricante'}
+        forma_cosmetica_id:        {label: Forma Cosmética}
+        grupo_cosmetico_id:        {label: Grupo Cosmético}
+        marca_id:                  {label: Marca}
+        nombre:                    {label: Nombre del producto}
+        codigo_nso:                {label: Código de identificación de la NSO}
+        expediente:                {label: Número de Expediente}
+        vigencia_nso:              {label: Vigencia del Código de identificación de la NSO}
+        pais_id:                   {label: País que emitió el Código de identificación de la NSO}
+        registro_sanitario:        {label: 'Nº de Registro Sanitario'}
+        descripcion:               {label: 'Descripcion'}
       list:    
-        display:  [forma_cosmetica_id, grupo_cosmetico_id, marca_id, pais_id]
+        title:   Cosmeticos Registrados
+        table_method: selectCosmeticosDeEmpresa
+        display: [nombre, marca, laboratorio_fabricante, registro_sanitario]
+        object_actions:
+          ir_form516:   {label: Desicion 516, action: irForm516}
+          _edit: ~ 
+        actions:
+          adm_empresa: {label: Volver a Empresa}
+          _new:     ~ 
       filter:  
-        display:  [forma_cosmetica_id, grupo_cosmetico_id, marca_id, pais_id]
-      form:    
-        display:  [forma_cosmetica_id, grupo_cosmetico_id, marca_id, codigo_nso, expediente, vigencia_nso, pais_id]
-      edit:   
-        display:  [forma_cosmetica_id, grupo_cosmetico_id, marca_id, codigo_nso, expediente, vigencia_nso, pais_id]
-      new:
-        display:  [forma_cosmetica_id, grupo_cosmetico_id, marca_id, codigo_nso, expediente, vigencia_nso, pais_id]
+        display: [nombre, marca_id, laboratorio_fabricante_id, registro_sanitario]
+      form:
+        display:
+          Datos Generales del Producto: [laboratorio_fabricante_id, nombre, forma_cosmetica_id, grupo_cosmetico_id, marca_id, codigo_nso, expediente, vigencia_nso, pais_id, registro_sanitario, descripcion]
+        actions:    
+          _delete: ~
+          _list: ~
+          _save: ~
+      edit:    
+        title: Editar Cosmético %%nombre%%
+      new:     
+        title: Registro de Cosméticos  

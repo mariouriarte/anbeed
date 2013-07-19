@@ -12,4 +12,8 @@
  */
 class FormaCosmetica extends BaseFormaCosmetica
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+    }    
 }

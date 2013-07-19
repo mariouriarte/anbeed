@@ -13,4 +13,17 @@ require_once dirname(__FILE__).'/../lib/cosmeticoGeneratorHelper.class.php';
  */
 class cosmeticoActions extends autoCosmeticoActions
 {
+    public function executeListAdmEmpresa(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $this->redirect('/farmaceutica_dev.php/empresas/'.$empresa->getId().'/administrarEmpresa');
+    }
+    public function executeIrForm516(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        $this->cosmetico = $this->getRoute()->getObject();
+        $user->setAttribute('cosmetico', $this->cosmetico);
+        $this->redirect('/farmaceutica_dev.php/formulario516');
+    }
 }

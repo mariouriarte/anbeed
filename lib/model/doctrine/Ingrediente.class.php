@@ -15,5 +15,5 @@ class Ingrediente extends BaseIngrediente
     public function __toString()
     {
        return $this->getNombre();
-}
+    }
 }
