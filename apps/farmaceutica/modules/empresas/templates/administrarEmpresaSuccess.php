@@ -66,6 +66,7 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica_dev.php/formulario5porempresa"><span> Formulario 005</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/formulario27porempresa"><span> Formulario 027</span></a></li>
                         </ul>
                     </div>
                 </div>

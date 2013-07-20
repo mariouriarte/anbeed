@@ -13,11 +13,11 @@ require_once dirname(__FILE__).'/../lib/dispositivosGeneratorHelper.class.php';
  */
 class dispositivosActions extends autoDispositivosActions
 {
-     public function executeListAdmEmpresa(sfWebRequest $request)
+    public function executeListAdmEmpresa(sfWebRequest $request)
     {
         $user = $this->getUser();
         $empresa = $user->getAttribute('empresa');
-        $this->redirect('/farmaceutica_dev.php/empresas/'.$empresa->getId().'/administrarEmpresa');
+        $this->redirect('empresas/administrarEmpresa?id=' . $empresa->getId());
     }
     
     public function executeIrForm27(sfWebRequest $request)

@@ -37,9 +37,9 @@ class Formulario27Form extends BaseFormulario27Form
        $this->widgetSchema['datos_formulario27_id'] = new sfWidgetFormDoctrineChoice(
            array('expanded' => true,
                 'model'    => 'DatosFormulario27'));
-       $this->validatorSchema['datos_formulario5_id'] = new sfValidatorDoctrineChoice(
+       $this->validatorSchema['datos_formulario27_id'] = new sfValidatorDoctrineChoice(
            array('required' => true,
-                 'model'    => 'DatosFormulario5'));
+                 'model'    => 'DatosFormulario27'));
        
        $this->widgetSchema['origen_formulario_id'] = new sfWidgetFormDoctrineChoice(
            array('expanded' => true,
