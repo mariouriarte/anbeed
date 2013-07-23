@@ -12,4 +12,8 @@
  */
 class Ciudad extends BaseCiudad
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+    }
 }

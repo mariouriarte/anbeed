@@ -13,4 +13,23 @@ require_once dirname(__FILE__).'/../lib/formulario516GeneratorHelper.class.php';
  */
 class formulario516Actions extends autoFormulario516Actions
 {
+    public function executeListIrProductos(sfWebRequest $request)
+    {
+        $this->redirect('cosmetico');
+    }
+    public function executeListIrEmpresa(sfWebRequest $request)
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
+    }     
+    public function executeNuevo(sfWebRequest $request)
+    {
+        $this->redirect('form516/new');
+    }
+    public function executeEditar(sfWebRequest $request)
+    {
+        $id = $request->getParameter('id');
+        $this->redirect("form516/edit?id=$id");
+    }
 }

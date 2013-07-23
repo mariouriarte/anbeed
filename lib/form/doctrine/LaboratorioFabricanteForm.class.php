@@ -14,5 +14,13 @@ class LaboratorioFabricanteForm extends BaseLaboratorioFabricanteForm
   {
       unset($this['created_at'], $this['updated_at']);
       $this->widgetSchema['pais_id']->setOption('add_empty', 'Seleccione un país');
+      ////// ciudad
+      $this->widgetSchema['ciudad_id'] = new sfWidgetFormDoctrineDependentSelect(
+          array('model'     => 'Ciudad',
+                'depends'   => 'Pais',
+                'add_empty' => 'Seleccione ciudad'));
+      $this->validatorSchema['ciudad_id'] = new sfValidatorDoctrineChoice(
+          array('model' => 'Ciudad', 'required' => true));
+      
   }
 }

@@ -33,6 +33,21 @@ class EmpresaForm extends BaseEmpresaForm
         $this->validatorSchema['fecha_resolucion'] = new sfValidatorDate(
             array('required' => true));
         
+        ///// Pais
+        $this->widgetSchema['pais_id'] = new sfWidgetFormDoctrineChoice(
+            array('model'        => 'Pais',
+                  'add_empty'    => 'Seleccione país'));
+        $this->validatorSchema['pais_id'] = new sfValidatorDoctrineChoice(
+            array('model' => 'Pais', 'required' => false));
+        
+        ////// ciudad
+        $this->widgetSchema['ciudad_id'] = new sfWidgetFormDoctrineDependentSelect(
+            array('model'     => 'Ciudad',
+                  'depends'   => 'Pais',
+                  'add_empty' => 'Seleccione ciudad'));
+        $this->validatorSchema['ciudad_id'] = new sfValidatorDoctrineChoice(
+            array('model' => 'Ciudad', 'required' => true));
+        
         /*
         // Representante Legal
         $this->widgetSchema['representante_legal_id']= new sfWidgetFormDoctrineJQueryAutocompleter(

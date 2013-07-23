@@ -47,7 +47,7 @@ Empresa:
   columns:
     representante_legal_id:  {type: integer, notnull: false}
     regente_farmaceutico_id: {type: integer, notnull: false}
-    ciudad_id:               {type: integer, notnull: false}
+    ciudad_id:               {type: integer, notnull: true}
     razon_social:            {type: string(255), notnull: true, unique: true}
     fecha_registro:          {type: date}
     num_resolucion:          {type: string(30), notnull: false, unique: true}
@@ -77,7 +77,7 @@ LaboratorioFabricante:
   actAs: {Timestampable: ~}
   columns:
     pais_id:       {type: integer, notnull: true}
-    ciudad_id:     {type: integer, notnull: false}
+    ciudad_id:     {type: integer, notnull: true}
     nombre:        {type: string(255), notnull: true, unique: true}
     bajo_licencia: {type: string(255), notnull: false}
     para:          {type: string(255), notnull: false}
@@ -101,7 +101,7 @@ Pais:
     bandera:   {type: string(50)}
   relations:
     LaboratorioFabricante: {local: id, foreign: pais_id, type: one, foreignAlias: Pais}
-    Ciudad:                {local: id, foreign: pais_id, type: one, foreignAlias: Pais}
+    Ciudad:                {local: id, foreign: pais_id, type: many, foreignAlias: Pais}
     Cosmetico:             {local: id, foreign: pais_id, type: one, foreignAlias: Pais}
 
 Ciudad:
@@ -110,7 +110,7 @@ Ciudad:
     pais_id: {type: integer, notnull: false}
     nombre:  {type: string(150)}
   relations:
-    Pais:                  {local: pais_id, foreign: id, type: many, foreignAlias: Ciudades}
+    Pais:                  {local: pais_id, foreign: id, type: one, foreignAlias: Ciudades}
     Empresa:               {local: id, foreign: ciudad_id, type: one, foreignAlias: Ciudad}
     LaboratorioFabricante: {local: id, foreign: ciudad_id, type: one, foreignAlias: Ciudad}
 #-----------------------------
@@ -314,8 +314,8 @@ Cosmetico:
     Empresa:                {local: empresa_id, foreign: id, type: one, foreignAlias: Cosmeticos}
     LaboratorioFabricante:  {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Cosmeticos}
     FormaCosmetica:         {local: forma_cosmetica_id, foreign: id, type: one, foreignAlias: Cosmetico}
-    GrupoCosmetico:         {local: grupo_cosmetico_id, foreign: id, type: many, foreignAlias: Cosmeticos}
-    Marca:                  {local: marca_id, foreign: id, type: many, foreignAlias: Cosmetico}
+    GrupoCosmetico:         {local: grupo_cosmetico_id, foreign: id, type: one, foreignAlias: Cosmetico}
+    Marca:                  {local: marca_id, foreign: id, type: one, foreignAlias: Cosmetico}
     Pais:                   {local: pais_id, foreign: id, type: one, foreignAlias: Cosmetico}
     
 

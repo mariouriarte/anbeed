@@ -22,5 +22,5 @@ class formulario5Actions extends autoFormulario5Actions
         $user = sfContext::getInstance()->getUser();
         $empresa = $user->getAttribute('empresa');
         $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
-    }
+    }         
 }
