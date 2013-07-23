@@ -14,7 +14,11 @@ class Formulario516Form extends BaseFormulario516Form
   {
       unset($this['created_at'], $this['updated_at']);
       $years = range(date('Y') - 0, date('Y'));   
-       
+      
+      //if($this->widgetSchema['maquila_embasador']->getValue()!= NULL)
+        $this->widgetSchema['maquila_embasador']->setAttribute('disabled', 'disabled');
+      
+      
       $cosmetico = sfContext::getInstance()->getUser()->getAttribute('cosmetico');
       // Asigna el id del cosmetico para el form516 
       $this->widgetSchema['cosmetico_id'] = new sfWidgetFormInputHidden(
@@ -23,6 +27,11 @@ class Formulario516Form extends BaseFormulario516Form
       $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
            array('culture' => 'es',
                  'default' => date('Y-m-d'),
+                 'date_widget' => new sfWidgetFormDate(array(
+                 'years' => array_combine($years, $years)))));
+      
+      $this->widgetSchema['fecha_inicio_vigencia'] = new sfWidgetFormJQueryDate(
+           array('culture' => 'es',
                  'date_widget' => new sfWidgetFormDate(array(
                  'years' => array_combine($years, $years)))));
       

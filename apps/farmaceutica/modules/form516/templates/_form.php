@@ -1,11 +1,24 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
-
-<?php
-$cosmeticos = $sf_user->getAttribute('cosmetico');
-?>
-
-<form action="<?php echo url_for('form516/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+<script type="text/javascript">
+function habilita()
+{
+    if(document.form516.formulario516_maquila_embasador.disabled == true)
+    {
+        document.form516.formulario516_maquila_embasador.disabled = false;
+    } 
+    else
+    {
+        document.form516.formulario516_maquila_embasador.disabled = true; 
+    }
+} 
+</script>
+<?php $cosmeticos = $sf_user->getAttribute('cosmetico'); ?>
+<div class="content-info-empresa">
+    <?php $empresa = $sf_user->getAttribute('empresa'); ?>
+    <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
+</div>
+<form name="form516" action="<?php echo url_for('form516/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
 <?php endif; ?>
@@ -148,8 +161,11 @@ $cosmeticos = $sf_user->getAttribute('cosmetico');
                 $check1 = "";
                 if(($form['maquila_embasador']->getValue()) != NULL )
                     $check1= "checked";?>
-            <input type="checkbox" <?php echo $check1?>>
-              <?php echo $form['maquila_embasador'] ?>
+            <input type="checkbox" <?php echo $check1?> onclick="habilita()">
+                
+              <?php 
+                echo $form['maquila_embasador'];
+              ?>
         </td>
       </tr>
       <tr>
@@ -219,7 +235,6 @@ $cosmeticos = $sf_user->getAttribute('cosmetico');
           <td><?php if ($cosmeticos->getPaisId()!=NULL)
                     echo $cosmeticos->Pais ?></td>
       </tr>
-          
       <tr>
         <th><?php echo $form['vigencia']->renderLabel() ?></th>
         <td>
@@ -241,14 +256,7 @@ $cosmeticos = $sf_user->getAttribute('cosmetico');
           <?php echo $form['numero_ruta'] ?>
         </td>
       </tr>
-      
-      <tr>
-        <th><?php echo $form['datos_titular']->renderLabel() ?></th>
-        
-      </tr>
-      
       </tr>
     </tbody>
-    
   </table>
 </form>

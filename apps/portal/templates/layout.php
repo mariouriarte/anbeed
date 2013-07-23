@@ -6,7 +6,7 @@
                 ANBEED
             <?php endif ?>
         </title>
-        <link rel="shortcut icon" href="/anbeed.ico" />
+        <link rel="shortcut icon" href="/images/favicon.ico" />
         <link rel="shortcut icon" href="<?php echo sfContext::getInstance()->getRequest()->getRelativeUrlRoot() ?>/favicon.ico" />
         <?php $sf_user->setCulture('es') ?>
         <?php include_http_metas() ?>

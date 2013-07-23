@@ -16,4 +16,8 @@ class Cosmetico extends BaseCosmetico
     {
        return $this->getNombre();
     }
+    
+
+    
+            
 }

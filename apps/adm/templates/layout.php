@@ -6,7 +6,7 @@
                 ANBEED
             <?php endif ?>
         </title>
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/images/favicon.ico" />
         <?php $sf_user->setCulture('es') ?>
         <?php include_http_metas() ?>
         <?php include_metas() ?>

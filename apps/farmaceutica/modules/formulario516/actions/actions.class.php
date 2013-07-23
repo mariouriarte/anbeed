@@ -27,4 +27,9 @@ class formulario516Actions extends autoFormulario516Actions
     {
         $this->redirect('form516/new');
     }
+    public function executeEditar(sfWebRequest $request)
+    {
+        $id = $request->getParameter('id');
+        $this->redirect("form516/edit?id=$id");
+    }
 }
