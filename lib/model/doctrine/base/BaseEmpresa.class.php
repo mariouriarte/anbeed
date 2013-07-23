@@ -105,7 +105,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              ));
         $this->hasColumn('ciudad_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => false,
+             'notnull' => true,
              ));
         $this->hasColumn('razon_social', 'string', 255, array(
              'type' => 'string',

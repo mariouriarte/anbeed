@@ -26,10 +26,25 @@ class Formulario516Form extends BaseFormulario516Form
                  'date_widget' => new sfWidgetFormDate(array(
                  'years' => array_combine($years, $years)))));
       
+      
+      $this->widgetSchema['datos'] = new sfWidgetFormChoice(
+            array('expanded' => true, 
+                  'choices'=>  array('TITULAR', 'RESPONSABLE DE LA COMERCIALIZACIÓN'),       
+  ));
+      
+      $this->widgetSchema['datos_titular'] = new sfWidgetFormChoice(
+            array('expanded' => true, 
+                  'choices'=>  array('REPRESENTANTE LEGAL', 'APODERADO'),       
+  ));
+      
       $this->widgetSchema['tipo_tramite_formulario_id'] = new sfWidgetFormDoctrineChoice(
-           array('expanded' => false,
+           array('expanded' => true,
                  'model'    => 'TipoTramiteFormulario'));
       
-      $this->widgetSchema['tipo_tramite_formulario_id']->addOption('order_by',array('id','asc'));
+      $this->widgetSchema['tipo_tramite_formulario_id'] = new sfWidgetFormDoctrineChoice(
+           array('expanded' => true,
+                 'model'    => 'TipoTramiteFormulario'));
+      
+      //$this->widgetSchema['tipo_tramite_formulario_id']->addOption('order_by',array('id','asc'));
   }
 }

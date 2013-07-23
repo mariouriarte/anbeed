@@ -21,8 +21,8 @@
  * @property Empresa $Empresa
  * @property LaboratorioFabricante $LaboratorioFabricante
  * @property FormaCosmetica $FormaCosmetica
- * @property Doctrine_Collection $GrupoCosmetico
- * @property Doctrine_Collection $Marca
+ * @property GrupoCosmetico $GrupoCosmetico
+ * @property Marca $Marca
  * @property Pais $Pais
  * 
  * @method integer               getEmpresaId()                 Returns the current record's "empresa_id" value
@@ -41,8 +41,8 @@
  * @method Empresa               getEmpresa()                   Returns the current record's "Empresa" value
  * @method LaboratorioFabricante getLaboratorioFabricante()     Returns the current record's "LaboratorioFabricante" value
  * @method FormaCosmetica        getFormaCosmetica()            Returns the current record's "FormaCosmetica" value
- * @method Doctrine_Collection   getGrupoCosmetico()            Returns the current record's "GrupoCosmetico" collection
- * @method Doctrine_Collection   getMarca()                     Returns the current record's "Marca" collection
+ * @method GrupoCosmetico        getGrupoCosmetico()            Returns the current record's "GrupoCosmetico" value
+ * @method Marca                 getMarca()                     Returns the current record's "Marca" value
  * @method Pais                  getPais()                      Returns the current record's "Pais" value
  * @method Cosmetico             setEmpresaId()                 Sets the current record's "empresa_id" value
  * @method Cosmetico             setLaboratorioFabricanteId()   Sets the current record's "laboratorio_fabricante_id" value
@@ -60,8 +60,8 @@
  * @method Cosmetico             setEmpresa()                   Sets the current record's "Empresa" value
  * @method Cosmetico             setLaboratorioFabricante()     Sets the current record's "LaboratorioFabricante" value
  * @method Cosmetico             setFormaCosmetica()            Sets the current record's "FormaCosmetica" value
- * @method Cosmetico             setGrupoCosmetico()            Sets the current record's "GrupoCosmetico" collection
- * @method Cosmetico             setMarca()                     Sets the current record's "Marca" collection
+ * @method Cosmetico             setGrupoCosmetico()            Sets the current record's "GrupoCosmetico" value
+ * @method Cosmetico             setMarca()                     Sets the current record's "Marca" value
  * @method Cosmetico             setPais()                      Sets the current record's "Pais" value
  * 
  * @package    anbeed
@@ -149,11 +149,11 @@ abstract class BaseCosmetico extends sfDoctrineRecord
              'local' => 'forma_cosmetica_id',
              'foreign' => 'id'));
 
-        $this->hasMany('GrupoCosmetico', array(
+        $this->hasOne('GrupoCosmetico', array(
              'local' => 'grupo_cosmetico_id',
              'foreign' => 'id'));
 
-        $this->hasMany('Marca', array(
+        $this->hasOne('Marca', array(
              'local' => 'marca_id',
              'foreign' => 'id'));
 

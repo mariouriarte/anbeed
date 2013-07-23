@@ -14,8 +14,15 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
-      filter:  ~
+      list:
+        title:   Desiciones 516 Registrados
+        actions:
+          ir_empresa: {label: Volver a Empresa}
+          ir_productos: {label: Regresar a Cosméticos}
+          new: {label: Nuevo, action: nuevo}
+          
+      filter:  
+        display: [cosmetico_id, tipo_tramite_formulario_id]
       form:    ~
       edit:    ~
       new:     ~

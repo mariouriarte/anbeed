@@ -71,7 +71,7 @@ abstract class BaseLaboratorioFabricante extends sfDoctrineRecord
              ));
         $this->hasColumn('ciudad_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => false,
+             'notnull' => true,
              ));
         $this->hasColumn('nombre', 'string', 255, array(
              'type' => 'string',

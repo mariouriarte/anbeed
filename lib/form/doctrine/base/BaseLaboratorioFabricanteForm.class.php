@@ -17,7 +17,7 @@ abstract class BaseLaboratorioFabricanteForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'            => new sfWidgetFormInputHidden(),
       'pais_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'add_empty' => false)),
-      'ciudad_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Ciudad'), 'add_empty' => true)),
+      'ciudad_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Ciudad'), 'add_empty' => false)),
       'nombre'        => new sfWidgetFormInputText(),
       'bajo_licencia' => new sfWidgetFormInputText(),
       'para'          => new sfWidgetFormInputText(),
@@ -33,7 +33,7 @@ abstract class BaseLaboratorioFabricanteForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'pais_id'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'))),
-      'ciudad_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Ciudad'), 'required' => false)),
+      'ciudad_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Ciudad'))),
       'nombre'        => new sfValidatorString(array('max_length' => 255)),
       'bajo_licencia' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'para'          => new sfValidatorString(array('max_length' => 255, 'required' => false)),

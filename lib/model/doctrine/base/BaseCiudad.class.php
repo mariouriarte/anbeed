@@ -7,18 +7,18 @@
  * 
  * @property integer $pais_id
  * @property string $nombre
- * @property Doctrine_Collection $Pais
+ * @property Pais $Pais
  * @property Empresa $Empresa
  * @property LaboratorioFabricante $LaboratorioFabricante
  * 
  * @method integer               getPaisId()                Returns the current record's "pais_id" value
  * @method string                getNombre()                Returns the current record's "nombre" value
- * @method Doctrine_Collection   getPais()                  Returns the current record's "Pais" collection
+ * @method Pais                  getPais()                  Returns the current record's "Pais" value
  * @method Empresa               getEmpresa()               Returns the current record's "Empresa" value
  * @method LaboratorioFabricante getLaboratorioFabricante() Returns the current record's "LaboratorioFabricante" value
  * @method Ciudad                setPaisId()                Sets the current record's "pais_id" value
  * @method Ciudad                setNombre()                Sets the current record's "nombre" value
- * @method Ciudad                setPais()                  Sets the current record's "Pais" collection
+ * @method Ciudad                setPais()                  Sets the current record's "Pais" value
  * @method Ciudad                setEmpresa()               Sets the current record's "Empresa" value
  * @method Ciudad                setLaboratorioFabricante() Sets the current record's "LaboratorioFabricante" value
  * 
@@ -45,7 +45,7 @@ abstract class BaseCiudad extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasMany('Pais', array(
+        $this->hasOne('Pais', array(
              'local' => 'pais_id',
              'foreign' => 'id'));
 
