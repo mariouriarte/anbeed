@@ -8,13 +8,9 @@
     
 <?php end_slot(); ?>
 
-
-<div class="portal">
-    
 <h1>Administrador de Empresa</h1>
-
-    <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
-    
+<?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
+<div class="portal">
     <div class="linea">
         <div class="columna">
             <div class="cubo">
