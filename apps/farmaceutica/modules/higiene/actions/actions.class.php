@@ -13,4 +13,19 @@ require_once dirname(__FILE__).'/../lib/higieneGeneratorHelper.class.php';
  */
 class higieneActions extends autoHigieneActions
 {
+    public function executeListAdmEmpresa(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
+    }
+    
+    public function executeListIrForm706(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        
+        $higiene = $this->getRoute()->getObject();
+        $user->setAttribute('higiene', $higiene);
+        $this->redirect('formulario706/index');
+    }
 }

@@ -33,9 +33,23 @@ generator:
         object_actions:
           ir_form706:   {label: Desicion 706}
           _edit: ~ 
+        actions:
+          adm_empresa: {label: Volver a Empresa}
+          _new: ~ 
+          
       filter:
         display: [nombre, marca_id, laboratorio_fabricante_id]
         
-      form:    ~
-      edit:    ~
-      new:     ~
+      form:
+        display:
+         datos: [empresa_id, laboratorio_fabricante_id, grupo_higiene, marca_id, pais_id, nombre, phd, pahp, variedad, codigo_nso, vigencia_nso, expediente]
+        actions:    
+          _delete: ~
+          _list: ~
+          _save: ~
+          
+      edit:
+        title: Editar producto higiénico %%nombre%%
+        
+      new:
+        title: Registro de producto higiénico
