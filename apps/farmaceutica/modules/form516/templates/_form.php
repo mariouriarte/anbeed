@@ -1,18 +1,43 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
-<script type="text/javascript">
-function habilita()
+<!--<script type="text/javascript">
+function habilita(campo)
 {
-    if(document.form516.formulario516_maquila_embasador.disabled == true)
-    {
-        document.form516.formulario516_maquila_embasador.disabled = false;
-    } 
-    else
-    {
-        document.form516.formulario516_maquila_embasador.disabled = true; 
-    }
+    if(campo == 1)
+    {    
+        if(document.form516.formulario516_maquila_embasador.disabled == true)
+        {
+            document.form516.formulario516_maquila_embasador.disabled = false;
+        } 
+        else
+        {
+            document.form516.formulario516_maquila_embasador.disabled = true; 
+        }
+    }   
+    if(campo == 2)
+    {    
+        if(document.form516.formulario516_maquila_empacador.disabled == true)
+        {
+            document.form516.formulario516_maquila_empacador.disabled = false;
+        } 
+        else
+        {
+            document.form516.formulario516_maquila_empacador.disabled = true; 
+        }
+    }   
+    if(campo == 3)
+    {    
+        if(document.form516.formulario516_maquila_acondicionador.disabled == true)
+        {
+            document.form516.formulario516_maquila_acondicionador.disabled = false;
+        } 
+        else
+        {
+            document.form516.formulario516_maquila_acondicionador.disabled = true; 
+        }
+    }   
 } 
-</script>
+</script>-->
 <?php $cosmeticos = $sf_user->getAttribute('cosmetico'); ?>
 <div class="content-info-empresa">
     <?php $empresa = $sf_user->getAttribute('empresa'); ?>
@@ -22,20 +47,7 @@ function habilita()
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
 <?php endif; ?>
-  <table>
-    <tfoot>
-      <tr>
-        <td colspan="2">
-          <?php echo $form->renderHiddenFields(false) ?>
-          &nbsp;<a href="<?php echo url_for('formulario516/index') ?>">Volver al listado</a>
-          <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'form516/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
-          <?php endif; ?>
-          <input type="submit" value="Save" />
-        </td>
-      </tr>
-    </tfoot>
-    
+<table class="tablas_form">
     <tbody>
       <?php echo $form->renderGlobalErrors() ?>
       <tr>
@@ -158,10 +170,10 @@ function habilita()
         <td>
           <?php echo $form['maquila_embasador']->renderError(); ?>
             <?php //ACA VERIFICAMOS SI TIENE EMBASADOR
-                $check1 = "";
-                if(($form['maquila_embasador']->getValue()) != NULL )
-                    $check1= "checked";?>
-            <input type="checkbox" <?php echo $check1?> onclick="habilita()">
+//                $check1 = "";
+//                if(($form['maquila_embasador']->getValue()) != NULL )
+//                    $check1= "checked";?>
+<!--            <input type="checkbox" //<?php //echo $check1?> onclick="habilita(1)">-->
                 
               <?php 
                 echo $form['maquila_embasador'];
@@ -172,11 +184,7 @@ function habilita()
         <th><?php echo $form['maquila_empacador']->renderLabel() ?></th>
         <td>
           <?php echo $form['maquila_empacador']->renderError() ?>
-            <?php //ACA VERIFICAMOS SI TIENE EMBASADOR
-                $check2 = "";
-                if(($form['maquila_empacador']->getValue()) != NULL )
-                    $check2= "checked";?>
-            <input type="checkbox" <?php echo $check2?>>
+          
           <?php echo $form['maquila_empacador'] ?>
         </td>
       </tr>
@@ -184,12 +192,7 @@ function habilita()
         <th><?php echo $form['maquila_acondicionador']->renderLabel() ?></th>
         <td>
           <?php echo $form['maquila_acondicionador']->renderError() ?>
-            <?php //ACA VERIFICAMOS SI TIENE EMBASADOR
-                $check3 = "";
-                if(($form['maquila_acondicionador']->getValue()) != NULL )
-                    $check3= "checked";?>
-            <input type="checkbox" <?php echo $check3?>>
-          <?php echo $form['maquila_acondicionador'] ?>
+            <?php echo $form['maquila_acondicionador'] ?>
         </td>
       </tr>
       <tr>
@@ -259,4 +262,19 @@ function habilita()
       </tr>
     </tbody>
   </table>
+
+<?php echo $form->renderHiddenFields(false) ?>          
+<ul class="sf_admin_actions">
+    <?php if (!$form->getObject()->isNew()): ?>
+    <li class="sf_admin_action_delete">
+        <?php echo link_to('Borrar', 'form516/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
+    </li>
+    <?php endif; ?>
+    <li class="sf_admin_action_list">
+        <a href="<?php echo url_for('formulario516/index') ?>">Volver al listado</a>
+    </li>
+    <li class="sf_admin_action_save">
+        <input type="submit" value="Guardar" />
+    </li>
+</ul>
 </form>

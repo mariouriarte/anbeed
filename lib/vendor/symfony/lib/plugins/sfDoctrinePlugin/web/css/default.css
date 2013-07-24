@@ -280,3 +280,7 @@ td.sf_admin_text
   text-align: center;
 }
 
+.sf_admin_list table
+{
+    width: 100%;
+}

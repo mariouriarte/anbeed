@@ -358,3 +358,94 @@ input[type="text"], input[type="password"], textarea {
     background-color: #FEEFB3 !important;
     border-color: #FEEFB3 !important;
 }
+
+/*tablas css formularios sin admin*/
+.tablas_form
+{
+    border-color: #DDDDDD #DDDDDD -moz-use-text-color;
+    width: 100%;
+}
+
+.tablas_form th, td
+{
+    border-color: #DDDDDD #DDDDDD -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    margin-bottom: 3px;
+}
+.tablas_form th
+{
+    color: #000000;
+    font-weight: normal !important;
+    padding: 5 1em 3px 0;
+    text-align: left;
+    width: 20em;
+    background: #EFFBEF;
+    text-transform: uppercase;
+}
+.tablas_form td
+{
+    text-align: left;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+.tablas_form li
+{
+    list-style-type: none;
+    display: compact;
+    margin-right: 10px;
+    font-size: 90%;
+}
+.tablas_form tfoot td
+{
+    text-transform: lowercase;
+}
+.sf_admin_td_actions
+{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+sf_admin_td_actions li
+{
+  list-style-type: none;
+  display: inline;
+  margin-right: 10px;
+  font-size: 90%;
+}
+
+ul.sf_admin_actions
+{
+  margin: 10px 0;
+  list-style-type: none;
+}
+
+ul.sf_admin_actions li
+{
+  list-style-type: none;
+  display: inline;
+  margin-right: 10px;
+}
+
+ul.sf_admin_actions li a,
+ul.sf_admin_td_actions li a
+{
+  padding-left: 20px;
+  background: url(../sfDoctrinePlugin/images/default.png) no-repeat 0 0;
+}
+ul li.sf_admin_action_delete a
+{
+  background: url(../sfDoctrinePlugin/images/delete.png) no-repeat 0 0;
+}
+
+ul li.sf_admin_action_list a
+{
+  background: url(../sfDoctrinePlugin/images/list.png) no-repeat 0 0;
+}
+
+ul li.sf_admin_action_edit a
+{
+  background: url(../sfDoctrinePlugin/images/edit.png) no-repeat 0 0;
+}
