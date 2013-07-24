@@ -236,9 +236,10 @@ td.sf_admin_text
   padding: 0 1em 3px 0;
   float: left;
   text-align: left;
-  width: 8em;
+  width: 20em;
   color: #333;
   font-weight: normal !important;
+  text-transform: uppercase;
 }
 
 #sf_admin_container ul label, #sf_admin_container td label

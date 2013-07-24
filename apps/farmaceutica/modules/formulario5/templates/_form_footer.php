@@ -1,7 +1,7 @@
 <?php $medicamento = $sf_user->getAttribute('medicamento');?>
 <h2>II. Datos de la Empresa Solicitante</h2>
 <div>
-    <table class="tabla-info-empresa">
+    <table class="tablas_form">
         <tbody>
             <tr>
                 <th>Razón Social</th>
@@ -28,7 +28,7 @@
 </div>
 <h2>III. Datos del Laboratorio Fabricante</h2>
 <div>
-    <table class="tabla-info-empresa">
+    <table class="tablas_form">
         <tbody>
             <tr>
                 <th>Laboratorio fabricante</th>
@@ -55,7 +55,7 @@
 </div>
 <h2>IV. Datos del Producto</h2>
 <div>
-    <table class="tabla-info-empresa">
+    <table class="tablas_form">
         <tbody>
             <tr>
                 <th colspan="2">Nombre comercial</th>
