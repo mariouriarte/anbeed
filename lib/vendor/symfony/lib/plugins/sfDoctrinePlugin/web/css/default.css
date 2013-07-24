@@ -13,8 +13,8 @@
 #sf_admin_container h1
 {
   margin: 0;
-  padding: 0;
-  margin-bottom: 20px;
+  padding: 5px;
+  margin-bottom: auto;
 }
 
 #sf_admin_container th
@@ -211,7 +211,7 @@ td.sf_admin_text
 {
   padding: 3px;
   color: #333;
-  background-color: #ccf;
+  background-color: #D3DFD1;
   font-size: 11px;
   margin: 0;
 }
@@ -237,7 +237,7 @@ td.sf_admin_text
   float: left;
   text-align: left;
   width: 8em;
-  color: #000;
+  color: #333;
   font-weight: normal !important;
 }
 

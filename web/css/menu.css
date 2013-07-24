@@ -182,12 +182,14 @@ div#menu li.back .left {
 #global_domain_bar {
     /*background: none repeat scroll 0 0 #2E3436;*/
     background: none repeat scroll 0 0 #D3DFD1;
-    height: 25px;
-    /*position: fixed;*/
+    height: 23px;
     top: 0;
-    width: 1008px;
-    z-index: 100;
-    margin: 0 auto;
+    border-bottom: 1px solid #DEDBD4;
+    box-shadow: -1px 0 8px 0 rgba(0, 0, 0, 0.8);
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1120;
 }
 
 #global_domain_bar a {

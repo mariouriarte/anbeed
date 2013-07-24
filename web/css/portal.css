@@ -23,8 +23,12 @@ a {
 
 div.portal {
     /*margin-left: 20px;*/
-    /*width: 1008px;*/
-    margin: 62px auto;
+    width: 1018px;
+    margin: 50px auto;
+    min-height: 440px;  
+
+    overflow: hidden;
+    position: relative;
 }
 
 .linea {
@@ -33,26 +37,47 @@ div.portal {
 
 .portal .linea .columna {
     display: inline;
-    width: 220px;
-    float: left;
     margin-right: 20px;
     margin-bottom: 20px;
-    /*border: 1px solid #8CACBB;*/
+    border: 1px solid #8CACBB;
+    width: 185px;
+    height: 230px;
+    margin: 8px;
+    float: left;
+    position: relative;
+    background-color: #f9f9f9;
+    color: #000;
+    overflow: hidden;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.15);
+    border: 1px solid #DADADA;
+    /*border-top: 1px #fff solid;*/
 }
 
 .columna .cubo {
     margin-bottom: 15px;
     width: 100%;
+    
+    
 }
 
 .linea .cubo .contenido {    
-    min-height: 140px;
-    padding: 4px;
+    min-height: 230px;
+    padding: 0px;
     /*border-top: 1px solid #8CACBB;*/
 }
 
-
-.linea-regional .cubo .contenido {
-    /*min-height: 50px;*/
-    /*padding: 10px;*/
+.cubo:hover {
+	border-top: 1px #ddd solid;
+	-webkit-box-shadow: inset 0px 1px 5px -2px #777;
+	box-shadow: inset 0px 1px 5px -2px #777;
+}
+.titulo{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.contenido
+{
+    max-height: 200px;
 }

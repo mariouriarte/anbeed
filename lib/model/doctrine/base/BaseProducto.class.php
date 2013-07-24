@@ -13,6 +13,11 @@
  * @property string $registro_sanitario
  * @property Empresa $Empresa
  * @property LaboratorioFabricante $LaboratorioFabricante
+<<<<<<< HEAD
+ * @property Formulario5 $Formulario5
+ * @property Medicamento $Medicamento
+ * @property DispositivoMedico $DispositivoMedico
+=======
  * @property Doctrine_Collection $Formulario5
  * @property Medicamento $Medicamento
  * @property DispositivoMedico $DispositivoMedico
@@ -21,6 +26,7 @@
  * @property Doctrine_Collection $Formulario516
  * @property Doctrine_Collection $Higiene
  * @property Doctrine_Collection $Formulario706
+>>>>>>> form506
  * 
  * @method integer               getEmpresaId()                 Returns the current record's "empresa_id" value
  * @method integer               getLaboratorioFabricanteId()   Returns the current record's "laboratorio_fabricante_id" value
@@ -30,6 +36,11 @@
  * @method string                getRegistroSanitario()         Returns the current record's "registro_sanitario" value
  * @method Empresa               getEmpresa()                   Returns the current record's "Empresa" value
  * @method LaboratorioFabricante getLaboratorioFabricante()     Returns the current record's "LaboratorioFabricante" value
+<<<<<<< HEAD
+ * @method Formulario5           getFormulario5()               Returns the current record's "Formulario5" value
+ * @method Medicamento           getMedicamento()               Returns the current record's "Medicamento" value
+ * @method DispositivoMedico     getDispositivoMedico()         Returns the current record's "DispositivoMedico" value
+=======
  * @method Doctrine_Collection   getFormulario5()               Returns the current record's "Formulario5" collection
  * @method Medicamento           getMedicamento()               Returns the current record's "Medicamento" value
  * @method DispositivoMedico     getDispositivoMedico()         Returns the current record's "DispositivoMedico" value
@@ -38,6 +49,7 @@
  * @method Doctrine_Collection   getFormulario516()             Returns the current record's "Formulario516" collection
  * @method Doctrine_Collection   getHigiene()                   Returns the current record's "Higiene" collection
  * @method Doctrine_Collection   getFormulario706()             Returns the current record's "Formulario706" collection
+>>>>>>> form506
  * @method Producto              setEmpresaId()                 Sets the current record's "empresa_id" value
  * @method Producto              setLaboratorioFabricanteId()   Sets the current record's "laboratorio_fabricante_id" value
  * @method Producto              setNombreGenerico()            Sets the current record's "nombre_generico" value
@@ -46,6 +58,11 @@
  * @method Producto              setRegistroSanitario()         Sets the current record's "registro_sanitario" value
  * @method Producto              setEmpresa()                   Sets the current record's "Empresa" value
  * @method Producto              setLaboratorioFabricante()     Sets the current record's "LaboratorioFabricante" value
+<<<<<<< HEAD
+ * @method Producto              setFormulario5()               Sets the current record's "Formulario5" value
+ * @method Producto              setMedicamento()               Sets the current record's "Medicamento" value
+ * @method Producto              setDispositivoMedico()         Sets the current record's "DispositivoMedico" value
+=======
  * @method Producto              setFormulario5()               Sets the current record's "Formulario5" collection
  * @method Producto              setMedicamento()               Sets the current record's "Medicamento" value
  * @method Producto              setDispositivoMedico()         Sets the current record's "DispositivoMedico" value
@@ -54,6 +71,7 @@
  * @method Producto              setFormulario516()             Sets the current record's "Formulario516" collection
  * @method Producto              setHigiene()                   Sets the current record's "Higiene" collection
  * @method Producto              setFormulario706()             Sets the current record's "Formulario706" collection
+>>>>>>> form506
  * 
  * @package    anbeed
  * @subpackage model
@@ -114,6 +132,8 @@ abstract class BaseProducto extends sfDoctrineRecord
              'foreign' => 'producto_id'));
 
         $this->hasOne('DispositivoMedico', array(
+<<<<<<< HEAD
+=======
              'local' => 'id',
              'foreign' => 'producto_id'));
 
@@ -134,6 +154,7 @@ abstract class BaseProducto extends sfDoctrineRecord
              'foreign' => 'producto_id'));
 
         $this->hasMany('Formulario706', array(
+>>>>>>> form506
              'local' => 'id',
              'foreign' => 'producto_id'));
 

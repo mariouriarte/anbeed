@@ -15,5 +15,11 @@ class sfGuardFormSignin extends BasesfGuardFormSignin
    */
   public function configure()
   {
+      //$this['username'] = new 'userna->setAttribute("class","fieldInput");me' => new sfWidgetFormInputText(),
+      $this->widgetSchema['username']->setAttribute("placeholder","Usuario");          
+      $this->widgetSchema['password']->setAttribute("placeholder","Contraseña");          
+      //$this->widgetSchema['remember']->setAttribute("class","footer_label");          
+      unset($this['remember']);  
+      //array('placeholder' => 'Add your comment')
   }
 }

@@ -26,6 +26,7 @@ all:
   .settings:
     #internacionalizacion
     i18n: on
+    default_culture: es 
     # Form security secret (CSRF protection)
     csrf_secret:            dcd06b796c7b55f34d8ccb3d7acb46f601d7a9d0
 
