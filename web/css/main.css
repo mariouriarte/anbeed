@@ -334,7 +334,7 @@ input[type="text"], input[type="password"], textarea {
 
 .tabla-info-empresa td {
     background-color: #F6F4F0;
-    width: auto;
+    min-width: 170px;
 }
 
 .tabla-info-empresa th, .tabla-info-empresa td {
@@ -351,8 +351,8 @@ input[type="text"], input[type="password"], textarea {
 /* Avisos y errores */
 
 .td-warning {
-    background-color: #F5F6CE !important;
-    border-color: #F5F6CE !important;
+    background-color: #FEEFB3 !important;
+    border-color: #FEEFB3 !important;
 }
 
 h1
