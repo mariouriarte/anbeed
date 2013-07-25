@@ -28,6 +28,7 @@ abstract class BaseHigieneForm extends BaseFormDoctrine
       'codigo_nso'                => new sfWidgetFormInputText(),
       'vigencia_nso'              => new sfWidgetFormInputText(),
       'expediente'                => new sfWidgetFormInputText(),
+      'registro_sanitario'        => new sfWidgetFormInputText(),
       'created_at'                => new sfWidgetFormDateTime(),
       'updated_at'                => new sfWidgetFormDateTime(),
     ));
@@ -46,6 +47,7 @@ abstract class BaseHigieneForm extends BaseFormDoctrine
       'codigo_nso'                => new sfValidatorString(array('max_length' => 250, 'required' => false)),
       'vigencia_nso'              => new sfValidatorString(array('max_length' => 250, 'required' => false)),
       'expediente'                => new sfValidatorString(array('max_length' => 250, 'required' => false)),
+      'registro_sanitario'        => new sfValidatorString(array('max_length' => 50, 'required' => false)),
       'created_at'                => new sfValidatorDateTime(),
       'updated_at'                => new sfValidatorDateTime(),
     ));

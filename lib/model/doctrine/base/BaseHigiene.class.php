@@ -17,6 +17,7 @@
  * @property string $codigo_nso
  * @property string $vigencia_nso
  * @property string $expediente
+ * @property string $registro_sanitario
  * @property Doctrine_Collection $Formulario706
  * @property Empresa $Empresa
  * @property LaboratorioFabricante $LaboratorioFabricante
@@ -35,6 +36,7 @@
  * @method string                getCodigoNso()                 Returns the current record's "codigo_nso" value
  * @method string                getVigenciaNso()               Returns the current record's "vigencia_nso" value
  * @method string                getExpediente()                Returns the current record's "expediente" value
+ * @method string                getRegistroSanitario()         Returns the current record's "registro_sanitario" value
  * @method Doctrine_Collection   getFormulario706()             Returns the current record's "Formulario706" collection
  * @method Empresa               getEmpresa()                   Returns the current record's "Empresa" value
  * @method LaboratorioFabricante getLaboratorioFabricante()     Returns the current record's "LaboratorioFabricante" value
@@ -52,6 +54,7 @@
  * @method Higiene               setCodigoNso()                 Sets the current record's "codigo_nso" value
  * @method Higiene               setVigenciaNso()               Sets the current record's "vigencia_nso" value
  * @method Higiene               setExpediente()                Sets the current record's "expediente" value
+ * @method Higiene               setRegistroSanitario()         Sets the current record's "registro_sanitario" value
  * @method Higiene               setFormulario706()             Sets the current record's "Formulario706" collection
  * @method Higiene               setEmpresa()                   Sets the current record's "Empresa" value
  * @method Higiene               setLaboratorioFabricante()     Sets the current record's "LaboratorioFabricante" value
@@ -123,6 +126,11 @@ abstract class BaseHigiene extends sfDoctrineRecord
              'type' => 'string',
              'notnull' => false,
              'length' => 250,
+             ));
+        $this->hasColumn('registro_sanitario', 'string', 50, array(
+             'type' => 'string',
+             'unique' => false,
+             'length' => 50,
              ));
     }
 
