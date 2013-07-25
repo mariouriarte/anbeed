@@ -32,7 +32,10 @@ class empresasActions extends autoEmpresasActions
         
         $user = $this->getUser();
         $user->getAttributeHolder()->remove('empresa');
-        $user->getAttributeHolder()->remove('producto');
+        $user->getAttributeHolder()->remove('medicamento');
+        $user->getAttributeHolder()->remove('cosmetico');
+        $user->getAttributeHolder()->remove('dispositivo_medico');
+        $user->getAttributeHolder()->remove('higiene');
     }
     
     public function executeAdministrarEmpresa(sfWebRequest $request)

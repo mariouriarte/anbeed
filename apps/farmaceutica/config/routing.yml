@@ -1,3 +1,21 @@
+formulario706_form706porempresa:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario706
+    module:               form706porempresa
+    prefix_path:          /form706porempresa
+    column:               id
+    with_wildcard_routes: true
+
+formulario516_form516porempresa:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario516
+    module:               form516porempresa
+    prefix_path:          /form516porempresa
+    column:               id
+    with_wildcard_routes: true
+
 formulario706:
   class: sfDoctrineRouteCollection
   options:

@@ -21,7 +21,7 @@ class formulario5Actions extends autoFormulario5Actions
     { 
         $this->formulario5 = $this->getRoute()->getObject();
         $user = sfContext::getInstance()->getUser();
-        $user->setAttribute('producto2', $this->formulario5->Producto);
+        $user->setAttribute('medicamento2', $this->formulario5->Medicamento);
         $this->form = $this->configuration->getForm($this->formulario5);
     }
 }

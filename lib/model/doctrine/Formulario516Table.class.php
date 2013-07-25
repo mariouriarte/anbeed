@@ -16,4 +16,30 @@ class Formulario516Table extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Formulario516');
     }
+    public function selectForms516DeCosmetico()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $cosmetico = $user->getAttribute('cosmetico');
+        $q = Doctrine_Query::create()
+                    ->from('Formulario516 f')
+                    ->leftJoin('f.TipoTramiteFormulario tf')
+                    ->where('f.cosmetico_id = ?', $cosmetico->getId())
+                    ->orderBy('f.id ASC');
+            
+        return $q;
+    }
+    public function selectForms516DeEmpresa()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        
+        $q = Doctrine_Query::create()
+            ->from('Formulario516 f')
+            ->leftJoin('f.Cosmetico d')
+            #->leftJoin('d.Empresa e') 
+            ->where('d.empresa_id = ?', $empresa->getId())
+            ->orderBy('f.id ASC');
+        
+        return $q;
+    }
 }

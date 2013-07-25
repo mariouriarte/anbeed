@@ -32,7 +32,6 @@
                                 
                                 <?php endif ?>
                                 <?php if (!$sf_user->isAuthenticated()): ?>
-                                    <h2>ANBEED SRL</h2>
                                 <?php endif; ?>
                             </div>
                             <div id="header-logo">

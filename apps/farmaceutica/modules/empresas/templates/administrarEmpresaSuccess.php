@@ -64,6 +64,8 @@
                         <ul>
                             <li><a href="/farmaceutica_dev.php/formulario5porempresa"><span> Formulario 005</span></a></li>
                             <li><a href="/farmaceutica_dev.php/formulario27porempresa"><span> Formulario 027</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/form516porempresa"><span> Desición 516</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/form706porempresa"><span> Desición 706</span></a></li>
                         </ul>
                     </div>
                 </div>

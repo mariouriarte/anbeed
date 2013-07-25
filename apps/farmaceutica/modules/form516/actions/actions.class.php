@@ -65,9 +65,20 @@ class form516Actions extends sfActions
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
-      $formulario516 = $form->save();
-
-      $this->redirect('form516/edit?id='.$formulario516->getId());
+        $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';  
+        try
+        {
+            $formulario516 = $form->save();
+        }
+        catch (Doctrine_Validator_Exception $e) 
+        {
+                $this->getUser()->setFlash('notice', $notice);
+                $this->redirect('form516/edit?id='.$formulario516->getId());
+        }
+    }
+    else
+    {
+      $this->getUser()->setFlash('error', 'The item has not been saved due to some errors.', false);
     }
   }
 }

@@ -204,7 +204,7 @@ Formulario5:
     origen_formulario_id:         {type: integer, notnull: true}
     medicamento_id:               {type: integer, notnull: true}
   relations:
-    Medicamento:             {local: medicamento_id, foreign: id, type: one, foreignAlias: Formularios5}
+    Medicamento:             {local: medicamento_id, foreign: id, type: one, foreignAlias: Formulario5}
     TipoTramiteFormulario5:  {local: tipo_tramite_formulario5_id, foreign: id, type: one, foreignAlias: Formulario5}
     TipoProductoFormulario5: {local: tipo_producto_formulario5_id, foreign: id, type: one, foreignAlias: Formulario5}
     OrigenFormulario:        {local: origen_formulario_id, foreign: id, type: one, foreignAlias: Formulario5}

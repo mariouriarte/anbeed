@@ -19,12 +19,12 @@ if($empresa->RepresentanteLegal->getPersonaId() =='')
 if($empresa->RegenteFarmaceutico->getMatriculaProfesional() == '')
 {
     $classRegente = 'td-warning';
-    $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\">";
+    $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\"> <font color=red> Sin Matricula inexistente </font> ";
 }
 if($empresa->RegenteFarmaceutico->getCarnetColegiado() =='')
 {
     $classRegente = 'td-warning';
-    $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\">";
+    $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\"> <font color=red> Carnet Colegiado inexistente </font> ";
 }
 ?>
 
@@ -48,7 +48,7 @@ $(document).ready(function()
 <table class="tabla-info-empresa">
     <tbody>
         <tr>
-            <th>Empresa:</th>
+            <th>Razón Social:</th>
             <td><?php echo $empresa->getRazonSocial() ?></td>
             <th>Representante Legal:</th>
             <td class="<?php echo $classRepresentante ?>">

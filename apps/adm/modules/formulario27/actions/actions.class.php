@@ -17,4 +17,11 @@ class formulario27Actions extends autoFormulario27Actions
     {
         $this->redirect('/portal_dev.php/inicio/index');
     }
+    public function executeEdit(sfWebRequest $request)
+    { 
+        $this->formulario27 = $this->getRoute()->getObject();
+        $user = sfContext::getInstance()->getUser();
+        $user->setAttribute('dispositivo_medico2', $this->formulario27->DispositivoMedico);
+        $this->form = $this->configuration->getForm($this->formulario27);
+    }
 }

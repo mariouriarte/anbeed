@@ -1,0 +1,30 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Formulario516
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario516
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        empresa_id:  {label: 'Empresa'}
+        laboratorio: {label: 'Laboratorio Fabricante'}
+      list:
+        title:   Desiciones 516 Registrados
+        display: [cosmetico, laboratorio, tipo_tramite_formulario]
+        actions:
+          ir_portal: {label: Volver al Portal}
+        object_actions:
+          edit: {label: Editar, action: editar}   
+      filter:  
+        display: [cosmetico_id, tipo_tramite_formulario_id]
+      form:    ~
+      edit:    ~
+      new:     ~

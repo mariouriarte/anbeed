@@ -40,8 +40,7 @@ function habilita(campo)
 </script>-->
 <?php $cosmeticos = $sf_user->getAttribute('cosmetico'); ?>
 <div class="content-info-empresa">
-    <?php $empresa = $sf_user->getAttribute('empresa'); ?>
-    <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
+    <?php include_partial('formulario516/list_header') ?>
 </div>
 <form name="form516" action="<?php echo url_for('form516/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>

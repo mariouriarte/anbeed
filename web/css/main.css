@@ -161,7 +161,9 @@ text-align: center*/
 /* padding-left: auto;
 padding-right: auto;*/
     padding-top: 20px !important;
-    width: 1095px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 1055px;
     /*overflow: hidden;*/
     /*background-color: #777777;*/
     margin-left: auto;
@@ -316,7 +318,7 @@ input[type="text"], input[type="password"], textarea {
 
 .tabla-info-empresa
 {
-    border-collapse: collapse;
+    border-color: #DDDDDD #DDDDDD -moz-use-text-color;
     font-size: 11px;
     width: 100%;
 }
@@ -327,14 +329,12 @@ input[type="text"], input[type="password"], textarea {
     font-size: 12px !important;
     padding: 3px !important;
     text-align: left !important;
-    width: 160px;
+    width: 165px;
 }
 
 .tabla-info-empresa td {
     background-color: #F6F4F0;
-    
-    /*padding: 7px 5px !important;*/
-    min-width: 170px;
+    width: auto;
 }
 
 .tabla-info-empresa th, .tabla-info-empresa td {
@@ -342,7 +342,6 @@ input[type="text"], input[type="password"], textarea {
     text-transform: uppercase;
     padding: 0.2em;
     border: 1px solid #DDDDDD;
-    
 }
 
 .content-info-empresa {
@@ -352,8 +351,8 @@ input[type="text"], input[type="password"], textarea {
 /* Avisos y errores */
 
 .td-warning {
-    background-color: #F5F5F2 !important;
-    border-color: #F5F5F2 !important;
+    background-color: #F5F6CE !important;
+    border-color: #F5F6CE !important;
 }
 
 h1

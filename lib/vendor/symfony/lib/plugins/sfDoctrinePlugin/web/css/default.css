@@ -12,9 +12,7 @@
 
 #sf_admin_container h1
 {
-  margin: 0;
-  padding: 5px;
-  margin-bottom: auto;
+
 }
 
 #sf_admin_container th
@@ -45,7 +43,7 @@ td.sf_admin_text
   border-right: 1px solid #ddd;
 }
 
-#sf_admin_container ul.error_list
+#sf_admin_container ul.error_list, .tablas_form ul.error_list
 {
   margin: 0;
   margin-bottom: 7px;
@@ -54,7 +52,7 @@ td.sf_admin_text
   background-color: #f33;
 }
 
-#sf_admin_container ul.error_list li
+#sf_admin_container ul.error_list li, .tablas_form ul.error_list li
 {
   padding: 4px;
   padding-left: 25px;
@@ -115,8 +113,12 @@ td.sf_admin_text
     top: 25px;
     /*left: 350px;*/
     right: 150px;
+    width: auto;
 }
-
+.sf_admin_filter
+{
+    width: auto;
+}
 .sf_admin_pagination
 {
   float: right;
@@ -281,7 +283,11 @@ td.sf_admin_text
   text-align: center;
 }
 
-.sf_admin_list table
+.sf_admin_list table 
 {
     width: 100%;
+}
+.sf_admin_list table td, .sf_admin_list table th
+{
+    width: auto;
 }

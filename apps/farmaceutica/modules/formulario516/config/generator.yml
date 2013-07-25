@@ -17,6 +17,7 @@ generator:
         laboratorio: {label: 'Laboratorio Fabricante'}
       list:
         title:   Desiciones 516 Registrados
+        table_method: selectForms516DeCosmetico
         display: [cosmetico, laboratorio, tipo_tramite_formulario]
         actions:
           ir_empresa:   {label: Volver a Empresa}

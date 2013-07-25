@@ -1,4 +1,6 @@
-<?php $producto = $sf_user->getAttribute('producto2');?>
+<?php $producto = $sf_user->getAttribute('medicamento2');
+      $producto = $producto->Medicamentos;
+        ;?>
 <h2>II. Datos de la Empresa Solicitante</h2>
 <div>
     <table class="tabla-info-empresa">

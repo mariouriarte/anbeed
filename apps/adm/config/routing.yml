@@ -1,3 +1,21 @@
+formulario706:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario706
+    module:               formulario706
+    prefix_path:          /formulario706
+    column:               id
+    with_wildcard_routes: true
+
+formulario516:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario516
+    module:               formulario516
+    prefix_path:          /formulario516
+    column:               id
+    with_wildcard_routes: true
+
 ciudad:
   class: sfDoctrineRouteCollection
   options:
