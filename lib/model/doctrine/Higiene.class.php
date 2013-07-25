@@ -12,4 +12,8 @@
  */
 class Higiene extends BaseHigiene
 {
+    public function __toString()
+    {
+        return $this->getNombre();
+    }
 }

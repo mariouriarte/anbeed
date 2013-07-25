@@ -1,3 +1,21 @@
+formulario706:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario706
+    module:               formulario706
+    prefix_path:          /formulario706
+    column:               id
+    with_wildcard_routes: true
+
+higiene:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Higiene
+    module:               higiene
+    prefix_path:          /higiene
+    column:               id
+    with_wildcard_routes: true
+
 tipo_tramite_formulario:
   class: sfDoctrineRouteCollection
   options:

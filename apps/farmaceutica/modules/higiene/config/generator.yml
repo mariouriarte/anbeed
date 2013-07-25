@@ -1,0 +1,55 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Higiene
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          higiene
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        empresa_id:                {label: 'Empresa'}
+        laboratorio_fabricante_id: {label: 'Laboratorio Fabricante'}
+        grupo_higiene:             {label: 'Grupo Higiene'}
+        marca_id:                  {label: 'Marca'}
+        pais_id:                   {label: 'País de código NSO'}
+        nombre:                    {label: 'Nombre del producto'}
+        phd:                       {label: 'PHD'}
+        pahp:                      {label: 'PAHP'}
+        variedad:                  {label: 'Variedad'}
+        codigo_nso:                {label: 'Código NSO'}
+        vigencia_nso:              {label: 'Vigencia de código NSO'}
+        expediente:                {label: 'Expediente'}
+        
+      list:
+        title:   Productos de higiene registrados
+        display: [nombre, marca, laboratorio_fabricante]
+        object_actions:
+          ir_form706:   {label: Desicion 706}
+          _edit: ~ 
+        actions:
+          adm_empresa: {label: Volver a Empresa}
+          _new: ~ 
+          
+      filter:
+        display: [nombre, marca_id, laboratorio_fabricante_id]
+        
+      form:
+        display:
+         datos: [empresa_id, laboratorio_fabricante_id, nombre, phd, pahp, grupo_higiene, variedad, marca_id, codigo_nso, expediente, vigencia_nso, pais_id]
+        actions:    
+          _delete: ~
+          _list: ~
+          _save: ~
+          
+      edit:
+        title: Editar producto higiénico %%nombre%%
+        
+      new:
+        title: Registro de producto higiénico

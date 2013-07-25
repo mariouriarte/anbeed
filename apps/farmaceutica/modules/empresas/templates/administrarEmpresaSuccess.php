@@ -44,12 +44,18 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/package-x-generic.svg" /> Productos</h2>
+                    <h2 class="titulo"><img src="/images/icons/package-x-generic.svg" />Productos</h2>
                     <div class="contenido">
                         <ul>
+<<<<<<< HEAD
                             <li><a href="/farmaceutica_dev.php/medicamentos"><span> Medicamentos</span></a></li>
                             <li><a href="/farmaceutica_dev.php/dispositivos"><span> Dispositivos Medicos</span></a></li>
                             <li><a href="/farmaceutica_dev.php/cosmetico"><span> Cosméticos</span></a></li>
+=======
+                            <li><a href="/farmaceutica_dev.php/medicamentos"><span>Medicamentos</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/cosmetico"><span>Cosméticos</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/higiene"><span>Higiene</span></a></li>
+>>>>>>> ec895265eb21c87dc865431354ac360d46dc7e08
                         </ul>
                     </div>
                 </div>
