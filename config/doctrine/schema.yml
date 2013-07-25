@@ -386,6 +386,7 @@ Higiene:
     codigo_nso:                {type: string(250), notnull: false}
     vigencia_nso:              {type: string(250), notnull: false}
     expediente:                {type: string(250), notnull: false}
+    registro_sanitario:        {type: string(50), unique: false, default: NULL}
   relations:
     Formulario706:             {local: id, foreign: higiene_id, type: many, foreignAlias: Higienes}
     Empresa:                   {local: empresa_id, foreign: id, type: one, foreignAlias: Higienes}
