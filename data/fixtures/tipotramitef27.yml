@@ -1,0 +1,9 @@
+TipoTramiteFormulario27:
+  TipoTramiteFormulario27_1:
+    nombre: 'REGISTRO SANITARIO'
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:02:00'
+  TipoTramiteFormulario27_2:
+    nombre: 'PERMISO DE COMERCIALIZACIÓN'
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:00:00'

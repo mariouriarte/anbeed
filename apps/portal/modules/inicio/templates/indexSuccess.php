@@ -33,6 +33,7 @@
                         
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/formulario5"><span>Reportes Formulario 005</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/formulario27"><span>Reportes Formulario 027</span></a></li>
                         </ul>
                     </div>
                 </div>

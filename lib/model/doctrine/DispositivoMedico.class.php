@@ -12,4 +12,8 @@
  */
 class DispositivoMedico extends BaseDispositivoMedico
 {
+    public function __toString()
+    {
+        return $this->getNombreComercial();
+    }
 }

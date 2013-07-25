@@ -1,15 +1,30 @@
 <?php
-$class = null;
-$icono = null;
+if(!$sf_user->hasAttribute('empresa'))
+{
+    $context = sfContext::getInstance(); 
+    $controller = $context->getController();
+    $controller->redirect('/portal_dev.php/inicio/index');
+}
+
+$classRepresentante = null;
+$iconoRepresentante = null;
+$classRegente = null;
+$iconoRegente = null;
+
+if($empresa->RepresentanteLegal->getPersonaId() =='')
+{
+    $classRepresentante= 'td-warning';
+    $iconoRepresentante = "<img src=\"/images/icons/16/help-hint.svg\">";
+}
 if($empresa->RegenteFarmaceutico->getMatriculaProfesional() == '')
 {
-    $class = 'td-warning';
-    $icono = "<img src=\"/images/icons/16/help-hint.svg\">";
+    $classRegente = 'td-warning';
+    $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\">";
 }
 if($empresa->RegenteFarmaceutico->getCarnetColegiado() =='')
 {
-    $class = 'td-warning';
-    $icono = "<img src=\"/images/icons/16/help-hint.svg\">";
+    $classRegente = 'td-warning';
+    $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\">";
 }
 ?>
 
@@ -36,15 +51,19 @@ $(document).ready(function()
             <th>Empresa:</th>
             <td><?php echo $empresa->getRazonSocial() ?></td>
             <th>Representante Legal:</th>
-            <td><?php echo $empresa->RepresentanteLegal ?></td>
+            <td class="<?php echo $classRepresentante ?>">
+                <?php 
+                echo $iconoRepresentante.' '.$empresa->RepresentanteLegal 
+                ?>
+            </td>
         </tr>
         <tr>
             <th>NIT:</th>
             <td><?php echo $empresa->getNit() ?></td>
             <th>Regente Farmaceútico:</th>
-            <td class="<?php echo $class ?>">
+            <td class="<?php echo $classRegente ?>">
                 <?php 
-                echo $icono.' '.$empresa->RegenteFarmaceutico;
+                echo $iconoRegente.' '.$empresa->RegenteFarmaceutico;
                 ?>
             </td>
         </tr>

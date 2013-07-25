@@ -48,6 +48,7 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica_dev.php/medicamentos"><span> Medicamentos</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/dispositivos"><span> Dispositivos Medicos</span></a></li>
                             <li><a href="/farmaceutica_dev.php/cosmetico"><span> Cosméticos</span></a></li>
                         </ul>
                     </div>
@@ -61,6 +62,7 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica_dev.php/formulario5porempresa"><span> Formulario 005</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/formulario27porempresa"><span> Formulario 027</span></a></li>
                         </ul>
                     </div>
                 </div>

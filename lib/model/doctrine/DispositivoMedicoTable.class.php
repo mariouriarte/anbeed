@@ -16,4 +16,16 @@ class DispositivoMedicoTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('DispositivoMedico');
     }
+    
+    public function selectDispositivosDeEmpresa()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $q = Doctrine_Query::create()
+                    ->from('DispositivoMedico d')
+                    ->where('d.empresa_id = ?', $empresa->getId())
+                    ->orderBy('d.id ASC');
+            
+        return $q;
+    }
 }

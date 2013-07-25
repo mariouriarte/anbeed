@@ -6,6 +6,15 @@ ciudad:
     prefix_path:          /ciudades
     column:               id
     with_wildcard_routes: true
+    
+formulario27:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario27
+    module:               formulario27
+    prefix_path:          /formulario27
+    column:               id
+    with_wildcard_routes: true
 
 formulario5:
   class: sfDoctrineRouteCollection
