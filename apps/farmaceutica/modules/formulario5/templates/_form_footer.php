@@ -58,24 +58,24 @@
     <table class="tablas_form">
         <tbody>
             <tr>
-                <th colspan="2">Nombre comercial</th>
-                <td colspan="2"><?php echo $medicamento->getNombreComercial(); ?></td>
+                <th>Nombre comercial</th>
+                <td colspan="3"><?php echo $medicamento->getNombreComercial(); ?></td>
             </tr>
             <tr>
-                <th colspan="2">Nombre genérico</th>
-                <td colspan="2"><?php echo $medicamento->getNombreGenerico() ?></td>
+                <th>Nombre genérico</th>
+                <td colspan="3"><?php echo $medicamento->getNombreGenerico() ?></td>
             </tr>
             <tr>
-                <th colspan="2">Forma Farmaceútica</th>
-                <td colspan="2"><?php echo $medicamento->getFormaFarmaceutica(); ?></td>
+                <th>Forma Farmaceútica</th>
+                <td colspan="3"><?php echo $medicamento->getFormaFarmaceutica(); ?></td>
             </tr>
             <tr>
-                <th colspan="2">Concentración (p.a.)</th>
-                <td colspan="2"><?php echo $medicamento->getConcentracion(); ?></td>
+                <th>Concentración (p.a.)</th>
+                <td colspan="3"><?php echo $medicamento->getConcentracion(); ?></td>
             </tr>
             <tr>
-                <th colspan="2">Vía de administración</th>
-                <td colspan="2"><?php echo $medicamento->ViaAdministracion; ?></td>
+                <th>Vía de administración</th>
+                <td colspan="3"><?php echo $medicamento->ViaAdministracion; ?></td>
             </tr>
             <tr>
                 <th>Acción terapeútica</th>
@@ -90,24 +90,24 @@
                 <td></td>
             </tr>
             <tr>
-                <th colspan="2">Especificación del envase</th>
-                <td colspan="2"><?php echo $medicamento->getEspecificacionEnvase(); ?></td>
+                <th>Especificación del envase</th>
+                <td colspan="3"><?php echo $medicamento->getEspecificacionEnvase(); ?></td>
             </tr>
             <tr>
-                <th colspan="2">Envase clínico</th>
-                <td colspan="2"><?php echo $medicamento->FormaFarmaceutica; ?></td>
+                <th>Envase clínico</th>
+                <td colspan="3"><?php echo $medicamento->FormaFarmaceutica; ?></td>
             </tr>
             <tr>
-                <th colspan="2">Aval de la C.F.N.</th>
-                <td colspan="2"><?php echo $medicamento->getAval(); ?></td>
+                <th>Aval de la C.F.N.</th>
+                <td colspan="3"><?php echo $medicamento->getAval(); ?></td>
             </tr>
             <tr>
-                <th colspan="2">N° de Registro Sanitario</th>
-                <td colspan="2"><?php echo $medicamento->getRegistroSanitario(); ?></td>
+                <th>N° de Registro Sanitario</th>
+                <td colspan="3"><?php echo $medicamento->getRegistroSanitario(); ?></td>
             </tr>
             <tr>
-                <th colspan="2">N° de Certificado de Control de Calidad</th>
-                <td colspan="2"><?php echo $medicamento->getCertificadoControl(); ?></td>
+                <th>N° de Certificado de Control de Calidad</th>
+                <td colspan="3"><?php echo $medicamento->getCertificadoControl(); ?></td>
             </tr>
         </tbody>
     </table>

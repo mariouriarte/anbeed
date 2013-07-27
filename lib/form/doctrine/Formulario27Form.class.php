@@ -15,11 +15,19 @@ class Formulario27Form extends BaseFormulario27Form
        unset($this['created_at'], $this['updated_at']);
        $years = range(date('Y') - 0, date('Y'));   
        
-       $dispositivo = sfContext::getInstance()->getUser()->getAttribute('dispositivo_medico');
-
        // Asigna el id del dispositivo para el form27
-       $this->widgetSchema['dispositivo_medico_id'] = new sfWidgetFormInputHidden(
-            array(), array('value' => $dispositivo->getId()));
+       
+       if(!isset($this['dispositivo_medico_id']))
+       {
+          $dispositivo = sfContext::getInstance()->getUser()->getAttribute('dispositivo_medico');
+           $this->widgetSchema['dispositivo_medico_id'] = new sfWidgetFormInputHidden(
+                    array(), array('value' => $dispositivo->getId()));
+       }
+       else
+       {    
+           $this->widgetSchema['dispositivo_medico_id'] = new sfWidgetFormInputHidden(
+                    array());
+       }
        
        $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es',
