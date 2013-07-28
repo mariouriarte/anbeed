@@ -10,6 +10,7 @@
  * @property LaboratorioFabricante $LaboratorioFabricante
  * @property Doctrine_Collection $Ciudad
  * @property Cosmetico $Cosmetico
+ * @property Doctrine_Collection $Formularios706
  * @property Doctrine_Collection $Higiene
  * 
  * @method string                getNombre()                Returns the current record's "nombre" value
@@ -17,12 +18,14 @@
  * @method LaboratorioFabricante getLaboratorioFabricante() Returns the current record's "LaboratorioFabricante" value
  * @method Doctrine_Collection   getCiudad()                Returns the current record's "Ciudad" collection
  * @method Cosmetico             getCosmetico()             Returns the current record's "Cosmetico" value
+ * @method Doctrine_Collection   getFormularios706()        Returns the current record's "Formularios706" collection
  * @method Doctrine_Collection   getHigiene()               Returns the current record's "Higiene" collection
  * @method Pais                  setNombre()                Sets the current record's "nombre" value
  * @method Pais                  setBandera()               Sets the current record's "bandera" value
  * @method Pais                  setLaboratorioFabricante() Sets the current record's "LaboratorioFabricante" value
  * @method Pais                  setCiudad()                Sets the current record's "Ciudad" collection
  * @method Pais                  setCosmetico()             Sets the current record's "Cosmetico" value
+ * @method Pais                  setFormularios706()        Sets the current record's "Formularios706" collection
  * @method Pais                  setHigiene()               Sets the current record's "Higiene" collection
  * 
  * @package    anbeed
@@ -59,6 +62,10 @@ abstract class BasePais extends sfDoctrineRecord
         $this->hasOne('Cosmetico', array(
              'local' => 'id',
              'foreign' => 'pais_id'));
+
+        $this->hasMany('Formulario706 as Formularios706', array(
+             'local' => 'id',
+             'foreign' => 'rescom_ciudad_id'));
 
         $this->hasMany('Higiene', array(
              'local' => 'id',

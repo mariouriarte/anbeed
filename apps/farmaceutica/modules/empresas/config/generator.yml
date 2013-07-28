@@ -16,7 +16,7 @@ generator:
       fields:
         regente_farmaceutico_id:  {label: 'Regente Farmacéutico'}
         representante_legal_id:   {label: 'Representante Legal'}
-        razon_social:             {label: 'Razón Social'}
+        razon_social:             {label: 'Razón Social', help: 'Nombre de la empresa'}
         fecha_registro:           {label: 'Fecha de Registro'}
         num_resolucion:           {label: 'Número de Resolución Ministerial'}
         fecha_resolucion:         {label: 'Fecha de Resolución Ministerial', date_format: 'dd/MM/yyyy'}

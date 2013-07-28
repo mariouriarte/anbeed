@@ -22,8 +22,8 @@ generator:
         table_method: selectForms706DeHigiene
         display: [higiene, laboratorio, tipo_tramite_formulario]
         actions:
-          ir_empresa:   {label: Volver a Empresa}
-          ir_productos: {label: Regresar a higiéne}
+          ir_empresa:   {label: Volver a empresa}
+          ir_productos: {label: Volver a higiéne}
           new:  {label: Nuevo, action: nuevo}
         object_actions:
           edit: {label: Editar, action: editar}

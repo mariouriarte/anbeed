@@ -10,6 +10,8 @@
  */
 class HigieneForm extends BaseHigieneForm
 {
+    protected $nombre_detalle = array('PHD' => 'PHD', 'PAHP' => 'PAHP');
+
     public function configure()
     {
         unset($this['created_at'], $this['updated_at']);
@@ -37,6 +39,11 @@ class HigieneForm extends BaseHigieneForm
                   'url'=>sfContext::getInstance()->getRouting()->generate('buscar_paises')
         ));
         
+        //// Nombre detalle PHD PAHP
+        $this->widgetSchema['nombre_detalle'] = new sfWidgetFormChoice(
+            array('expanded' => true, 
+                  'choices'  => $this->nombre_detalle));
+        $this->validatorSchema['nombre_detalle'] = new sfValidatorString(array('required' => true));
         
     }
 }

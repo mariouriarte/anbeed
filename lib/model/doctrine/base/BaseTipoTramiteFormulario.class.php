@@ -7,14 +7,14 @@
  * 
  * @property string $nombre
  * @property Formulario516 $Formulario516
- * @property Doctrine_Collection $Formulario706
+ * @property Doctrine_Collection $Formularios706
  * 
- * @method string                getNombre()        Returns the current record's "nombre" value
- * @method Formulario516         getFormulario516() Returns the current record's "Formulario516" value
- * @method Doctrine_Collection   getFormulario706() Returns the current record's "Formulario706" collection
- * @method TipoTramiteFormulario setNombre()        Sets the current record's "nombre" value
- * @method TipoTramiteFormulario setFormulario516() Sets the current record's "Formulario516" value
- * @method TipoTramiteFormulario setFormulario706() Sets the current record's "Formulario706" collection
+ * @method string                getNombre()         Returns the current record's "nombre" value
+ * @method Formulario516         getFormulario516()  Returns the current record's "Formulario516" value
+ * @method Doctrine_Collection   getFormularios706() Returns the current record's "Formularios706" collection
+ * @method TipoTramiteFormulario setNombre()         Sets the current record's "nombre" value
+ * @method TipoTramiteFormulario setFormulario516()  Sets the current record's "Formulario516" value
+ * @method TipoTramiteFormulario setFormularios706() Sets the current record's "Formularios706" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -40,7 +40,7 @@ abstract class BaseTipoTramiteFormulario extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'tipo_tramite_formulario_id'));
 
-        $this->hasMany('Formulario706', array(
+        $this->hasMany('Formulario706 as Formularios706', array(
              'local' => 'id',
              'foreign' => 'tipo_tramite_formulario_id'));
 

@@ -47,9 +47,9 @@ td.sf_admin_text
 {
   margin: 0;
   margin-bottom: 7px;
-  color: #d33;
+  /*color: #d33;*/
   border: none;
-  background-color: #f33;
+  /*background-color: #f33;*/
 }
 
 #sf_admin_container ul.error_list li, .tablas_form ul.error_list li
@@ -57,7 +57,8 @@ td.sf_admin_text
   padding: 4px;
   padding-left: 25px;
   list-style: none;
-  color: #fff;
+  /*color: #fff;*/
+  color: #FF3333;
   background: url(../images/error.png) no-repeat 4px 4px;
 }
 
@@ -118,6 +119,7 @@ td.sf_admin_text
 .sf_admin_filter
 {
     width: auto;
+    font-size: 10px;
 }
 .sf_admin_pagination
 {
@@ -196,8 +198,8 @@ td.sf_admin_text
   background: url(../images/error.png) no-repeat 10px 4px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: #f33;
-  color: #fff;
+/*  background-color: #f33;*/
+  color: #f33;
 }
 
 #sf_admin_container .sf_admin_row_0 td

@@ -11,9 +11,8 @@
  * @property integer $marca_id
  * @property integer $pais_id
  * @property string $nombre
- * @property boolean $phd
- * @property boolean $pahp
- * @property string $variedad
+ * @property string $nombre_detalle
+ * @property string $variedades
  * @property string $codigo_nso
  * @property string $vigencia_nso
  * @property string $expediente
@@ -30,9 +29,8 @@
  * @method integer               getMarcaId()                   Returns the current record's "marca_id" value
  * @method integer               getPaisId()                    Returns the current record's "pais_id" value
  * @method string                getNombre()                    Returns the current record's "nombre" value
- * @method boolean               getPhd()                       Returns the current record's "phd" value
- * @method boolean               getPahp()                      Returns the current record's "pahp" value
- * @method string                getVariedad()                  Returns the current record's "variedad" value
+ * @method string                getNombreDetalle()             Returns the current record's "nombre_detalle" value
+ * @method string                getVariedades()                Returns the current record's "variedades" value
  * @method string                getCodigoNso()                 Returns the current record's "codigo_nso" value
  * @method string                getVigenciaNso()               Returns the current record's "vigencia_nso" value
  * @method string                getExpediente()                Returns the current record's "expediente" value
@@ -48,9 +46,8 @@
  * @method Higiene               setMarcaId()                   Sets the current record's "marca_id" value
  * @method Higiene               setPaisId()                    Sets the current record's "pais_id" value
  * @method Higiene               setNombre()                    Sets the current record's "nombre" value
- * @method Higiene               setPhd()                       Sets the current record's "phd" value
- * @method Higiene               setPahp()                      Sets the current record's "pahp" value
- * @method Higiene               setVariedad()                  Sets the current record's "variedad" value
+ * @method Higiene               setNombreDetalle()             Sets the current record's "nombre_detalle" value
+ * @method Higiene               setVariedades()                Sets the current record's "variedades" value
  * @method Higiene               setCodigoNso()                 Sets the current record's "codigo_nso" value
  * @method Higiene               setVigenciaNso()               Sets the current record's "vigencia_nso" value
  * @method Higiene               setExpediente()                Sets the current record's "expediente" value
@@ -97,17 +94,12 @@ abstract class BaseHigiene extends sfDoctrineRecord
              'notnull' => true,
              'length' => 255,
              ));
-        $this->hasColumn('phd', 'boolean', null, array(
-             'type' => 'boolean',
-             'notnull' => false,
-             'default' => false,
+        $this->hasColumn('nombre_detalle', 'string', 5, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => 5,
              ));
-        $this->hasColumn('pahp', 'boolean', null, array(
-             'type' => 'boolean',
-             'notnull' => false,
-             'default' => false,
-             ));
-        $this->hasColumn('variedad', 'string', 2000, array(
+        $this->hasColumn('variedades', 'string', 2000, array(
              'type' => 'string',
              'notnull' => false,
              'length' => 2000,

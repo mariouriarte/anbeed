@@ -1,0 +1,49 @@
+.container-form-decision {
+    font-size: 12px;
+    border: 1px solid #5C6F61;
+    margin-bottom: 15px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.container-form-decision li {
+    list-style-type: none;
+}
+
+.container-form-decision .lista-linea li{
+    display: inline;
+}
+
+.help-descripcion-tabla {
+    text-transform: none !important;
+    color: #AAAAAA;
+}
+
+.tbl-form-decision {
+    width: 100%;
+    margin: 0;
+}
+
+.tbl-form-decision td, .tbl-form-decision th {
+    border: 0px solid #5C6F61;
+    width: 50%;
+}
+
+.tbl-form-decision td {
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.tbl-form-decision th {
+    border-bottom: 1px solid #ddd;
+    background-color: #EFFBEF;
+}
+
+.tbl-form-decision td.celda-entera {
+    border-left: 0px !important;
+}
+
+.tbl-form-decision td.celda-abajo,
+.tbl-form-decision th.celda-abajo {
+    border-bottom: 0px !important;
+}

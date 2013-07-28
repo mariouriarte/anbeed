@@ -13,13 +13,20 @@
  * @property integer $tipo_tramite_formulario_id
  * @property string $datos
  * @property string $datos_titular
- * @property string $maquila_embasador
- * @property string $maquila_empacador
- * @property string $maquila_acondicionador
- * @property string $maquila_fabricado_para
+ * @property string $rescom_nombre
+ * @property string $rescom_direccion
+ * @property integer $rescom_ciudad_id
+ * @property string $rescom_telefono
+ * @property string $rescom_fax
+ * @property string $rescom_email
+ * @property string $maquila_tipo
+ * @property string $maquila
+ * @property string $maquila_fabricado
  * @property Higiene $Higiene
  * @property TipoTramiteFormulario $TipoTramiteFormulario
  * @property Doctrine_Collection $Etapa
+ * @property Ciudad $Ciudad
+ * @property Pais $Pais
  * 
  * @method date                  getFecha()                      Returns the current record's "fecha" value
  * @method integer               getHigieneId()                  Returns the current record's "higiene_id" value
@@ -29,13 +36,20 @@
  * @method integer               getTipoTramiteFormularioId()    Returns the current record's "tipo_tramite_formulario_id" value
  * @method string                getDatos()                      Returns the current record's "datos" value
  * @method string                getDatosTitular()               Returns the current record's "datos_titular" value
- * @method string                getMaquilaEmbasador()           Returns the current record's "maquila_embasador" value
- * @method string                getMaquilaEmpacador()           Returns the current record's "maquila_empacador" value
- * @method string                getMaquilaAcondicionador()      Returns the current record's "maquila_acondicionador" value
- * @method string                getMaquilaFabricadoPara()       Returns the current record's "maquila_fabricado_para" value
+ * @method string                getRescomNombre()               Returns the current record's "rescom_nombre" value
+ * @method string                getRescomDireccion()            Returns the current record's "rescom_direccion" value
+ * @method integer               getRescomCiudadId()             Returns the current record's "rescom_ciudad_id" value
+ * @method string                getRescomTelefono()             Returns the current record's "rescom_telefono" value
+ * @method string                getRescomFax()                  Returns the current record's "rescom_fax" value
+ * @method string                getRescomEmail()                Returns the current record's "rescom_email" value
+ * @method string                getMaquilaTipo()                Returns the current record's "maquila_tipo" value
+ * @method string                getMaquila()                    Returns the current record's "maquila" value
+ * @method string                getMaquilaFabricado()           Returns the current record's "maquila_fabricado" value
  * @method Higiene               getHigiene()                    Returns the current record's "Higiene" value
  * @method TipoTramiteFormulario getTipoTramiteFormulario()      Returns the current record's "TipoTramiteFormulario" value
  * @method Doctrine_Collection   getEtapa()                      Returns the current record's "Etapa" collection
+ * @method Ciudad                getCiudad()                     Returns the current record's "Ciudad" value
+ * @method Pais                  getPais()                       Returns the current record's "Pais" value
  * @method Formulario706         setFecha()                      Sets the current record's "fecha" value
  * @method Formulario706         setHigieneId()                  Sets the current record's "higiene_id" value
  * @method Formulario706         setVigencia()                   Sets the current record's "vigencia" value
@@ -44,13 +58,20 @@
  * @method Formulario706         setTipoTramiteFormularioId()    Sets the current record's "tipo_tramite_formulario_id" value
  * @method Formulario706         setDatos()                      Sets the current record's "datos" value
  * @method Formulario706         setDatosTitular()               Sets the current record's "datos_titular" value
- * @method Formulario706         setMaquilaEmbasador()           Sets the current record's "maquila_embasador" value
- * @method Formulario706         setMaquilaEmpacador()           Sets the current record's "maquila_empacador" value
- * @method Formulario706         setMaquilaAcondicionador()      Sets the current record's "maquila_acondicionador" value
- * @method Formulario706         setMaquilaFabricadoPara()       Sets the current record's "maquila_fabricado_para" value
+ * @method Formulario706         setRescomNombre()               Sets the current record's "rescom_nombre" value
+ * @method Formulario706         setRescomDireccion()            Sets the current record's "rescom_direccion" value
+ * @method Formulario706         setRescomCiudadId()             Sets the current record's "rescom_ciudad_id" value
+ * @method Formulario706         setRescomTelefono()             Sets the current record's "rescom_telefono" value
+ * @method Formulario706         setRescomFax()                  Sets the current record's "rescom_fax" value
+ * @method Formulario706         setRescomEmail()                Sets the current record's "rescom_email" value
+ * @method Formulario706         setMaquilaTipo()                Sets the current record's "maquila_tipo" value
+ * @method Formulario706         setMaquila()                    Sets the current record's "maquila" value
+ * @method Formulario706         setMaquilaFabricado()           Sets the current record's "maquila_fabricado" value
  * @method Formulario706         setHigiene()                    Sets the current record's "Higiene" value
  * @method Formulario706         setTipoTramiteFormulario()      Sets the current record's "TipoTramiteFormulario" value
  * @method Formulario706         setEtapa()                      Sets the current record's "Etapa" collection
+ * @method Formulario706         setCiudad()                     Sets the current record's "Ciudad" value
+ * @method Formulario706         setPais()                       Sets the current record's "Pais" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -96,22 +117,46 @@ abstract class BaseFormulario706 extends sfDoctrineRecord
              'notnull' => true,
              'length' => 150,
              ));
-        $this->hasColumn('maquila_embasador', 'string', 255, array(
+        $this->hasColumn('rescom_nombre', 'string', 150, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => 150,
+             ));
+        $this->hasColumn('rescom_direccion', 'string', 150, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => 150,
+             ));
+        $this->hasColumn('rescom_ciudad_id', 'integer', null, array(
+             'type' => 'integer',
+             'notnull' => false,
+             ));
+        $this->hasColumn('rescom_telefono', 'string', 20, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => 20,
+             ));
+        $this->hasColumn('rescom_fax', 'string', 20, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => 20,
+             ));
+        $this->hasColumn('rescom_email', 'string', 255, array(
              'type' => 'string',
              'notnull' => false,
              'length' => 255,
              ));
-        $this->hasColumn('maquila_empacador', 'string', 255, array(
+        $this->hasColumn('maquila_tipo', 'string', 255, array(
              'type' => 'string',
              'notnull' => false,
              'length' => 255,
              ));
-        $this->hasColumn('maquila_acondicionador', 'string', 255, array(
+        $this->hasColumn('maquila', 'string', 255, array(
              'type' => 'string',
              'notnull' => false,
              'length' => 255,
              ));
-        $this->hasColumn('maquila_fabricado_para', 'string', 255, array(
+        $this->hasColumn('maquila_fabricado', 'string', 255, array(
              'type' => 'string',
              'notnull' => false,
              'length' => 255,
@@ -132,6 +177,14 @@ abstract class BaseFormulario706 extends sfDoctrineRecord
         $this->hasMany('Etapa', array(
              'local' => 'id',
              'foreign' => 'formulario706_id'));
+
+        $this->hasOne('Ciudad', array(
+             'local' => 'rescom_ciudad_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('Pais', array(
+             'local' => 'rescom_ciudad_id',
+             'foreign' => 'id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

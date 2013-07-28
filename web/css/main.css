@@ -377,7 +377,7 @@ h1
     width: 100%;
 }
 
-.tablas_form th, td
+.tablas_form th, .tablas_form td
 {
     border-color: #DDDDDD #DDDDDD -moz-use-text-color;
     border-image: none;

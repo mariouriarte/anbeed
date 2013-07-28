@@ -1,5 +1,6 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
+<?php use_stylesheet('formulario_decision.css') ?>
 
 <?php $higiene = $sf_user->getAttribute('higiene'); ?>
 <div class="content-info-empresa">
@@ -11,22 +12,35 @@
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
 <?php endif; ?>
-  <table class="tablas_form">
+<div class="container-form-decision">
+  <table class="tbl-form-decision">
     <tbody>
       <?php echo $form->renderGlobalErrors() ?>
       <tr>
-          <td colspan="2">
+        <td colspan="2" class="celda-entera celda-abajo">
           <?php echo $form['tipo_tramite_formulario_id']->renderError() ?>
           <?php echo $form['tipo_tramite_formulario_id'] ?>
         </td>
       </tr>
+    </tbody>
+  </table>
+</div>
+      
+<div class="container-form-decision">
+  <table class="tbl-form-decision">
+    <thead>
       <tr>
         <th>I. DATOS DEL</th>
-        <td>
+        <td class="lista-linea">
           <?php echo $form['datos']->renderError() ?>
           <?php echo $form['datos'] ?>
+          <span class="help-descripcion-tabla">
+            Artículo 7, numeral 1, literales a) y c); y Artículo 12 de la Decisión 706
+          </span>
         </td>
       </tr>
+    </thead>
+    <tbody>
       <tr>
         <th>Nombre o razón social</th>
         <td><?php echo $higiene->Empresa ?></td>
@@ -56,62 +70,90 @@
         <td><?php  echo $higiene->Empresa->getEmail() ?></td>
       </tr>
       <tr>
-          <th>Nombre del</th>  
-          <td>
-          <?php echo $form['datos_titular']->renderError() ?>
-          <?php echo $form['datos_titular'] ?>
-            </td>
+          <th>Nombre del</th>
+          <td class="lista-linea">
+            <?php echo $form['datos_titular']->renderError() ?>
+            <?php echo $form['datos_titular'] ?>
+          </td>
       </tr>
       <tr>
-          <td colspan="2"><?php  echo $higiene->Empresa->RepresentanteLegal ?></td>
+          <td colspan="2" class="celda-entera"><?php  echo $higiene->Empresa->RepresentanteLegal ?></td>
       </tr>
       <tr>
           <th>Teléfono</th>
-          <td colspan="2"><?php  echo $higiene->Empresa->RepresentanteLegal->Persona->getTelefono() ?></td>
+          <td><?php  echo $higiene->Empresa->RepresentanteLegal->Persona->getTelefono() ?></td>
       </tr>
       <tr>
           <th>Email</th>
-          <td colspan="2"><?php  echo $higiene->Empresa->RepresentanteLegal->Persona->getEmail() ?></td>
+          <td><?php  echo $higiene->Empresa->RepresentanteLegal->Persona->getEmail() ?></td>
       </tr>
       <tr>
-          <td colspan="2">Responsable de la Comercialización</td>
-      </tr>
-      <tr>
-          <td colspan="2"><?php  echo $higiene->Empresa->RegenteFarmaceutico ?></td>
+          <th>Responsable de la Comercialización</th>
+          <td>
+            <?php echo $form['rescom_nombre']->renderError() ?>
+            <?php echo $form['rescom_nombre'] ?>
+          </td>
       </tr>
       <tr>
           <th>Domicilio o dirección</th>
-          <td colspan="2"><?php  echo $higiene->Empresa->RegenteFarmaceutico->Persona->getDireccion() ?></td>
-      </tr>
-      <tr>
-          <th>Ciudad / Distrito / Provincia / Departamento</th>
-          <td></td>
+          <td>
+            <?php echo $form['rescom_direccion']->renderError() ?>
+            <?php echo $form['rescom_direccion'] ?>
+          </td>
       </tr>
       <tr>
           <th>País</th>
-          <td></td>
+          <td>
+            <?php echo $form['rescom_pais_id']->renderError() ?>
+            <?php echo $form['rescom_pais_id'] ?>
+          </td>
+      </tr>
+      <tr>
+          <th>Ciudad / Distrito / Provincia / Departamento</th>
+          <td>
+            <?php echo $form['rescom_ciudad_id']->renderError() ?>
+            <?php echo $form['rescom_ciudad_id'] ?>
+          </td>
       </tr>
       <tr>
           <th>Teléfono</th>
-          <td colspan="2"><?php  echo $higiene->Empresa->RegenteFarmaceutico->Persona->getTelefono() ?></td>
+          <td>
+            <?php echo $form['rescom_telefono']->renderError() ?>
+            <?php echo $form['rescom_telefono'] ?>
+          </td>
       </tr>
       <tr>
           <th>Email</th>
-          <td colspan="2"><?php  echo $higiene->Empresa->RegenteFarmaceutico->Persona->getEmail() ?></td>
+          <td>
+            <?php echo $form['rescom_email']->renderError() ?>
+            <?php echo $form['rescom_email'] ?>
+          </td>
       </tr>
       <tr>
-        <th><?php echo $form['fecha']->renderLabel() ?></th>
-        <td>
+        <th class="celda-abajo"><?php echo $form['fecha']->renderLabel() ?></th>
+        <td class="celda-abajo">
           <?php echo $form['fecha']->renderError() ?>
           <?php echo $form['fecha'] ?>
         </td>
       </tr>
-      
-      <!-- ------------------------------------------ -->
-      
+    </tbody>
+  </table>
+</div>
+
+<div class="container-form-decision">
+  <table class="tbl-form-decision">
+    <thead>
       <tr>
-          <th colspan="2">II. DATOS DEL FABRICANTE O FABRICANTES</th>
+          <th colspan="2">
+            II. DATOS DEL FABRICANTE O FABRICANTES<br />
+            <span class="help-descripcion-tabla">
+              Artículo 7, numeral 1, literal c), y Artículo 12, segundo párrafo de la Decisión 706<br />
+              (Envasador/empacador/acondicionador)
+            </span>
+          </th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
         <th>Nombre o razón social</th>
         <td><?php echo $higiene->LaboratorioFabricante ?></td>
@@ -140,68 +182,55 @@
         <th>Email</th>
         <td><?php echo $higiene->LaboratorioFabricante->getEmail() ?></td>
       </tr>
-      
       <tr>
-          <td colspan="2">Nombre del responsable médico</td>
+          <th colspan="2">Nombre del responsable médico</th>
       </tr>
       <tr>
-          <td colspan="2"><?php echo $higiene->Empresa->RegenteFarmaceutico ?></td>
+          <td colspan="2" class="celda-entera"><?php echo $higiene->Empresa->RegenteFarmaceutico ?></td>
       </tr>
       <tr>
           <th>Teléfono</th>
-          <td colspan="2"><?php echo $higiene->Empresa->RegenteFarmaceutico->Persona->getTelefono() ?></td>
+          <td><?php echo $higiene->Empresa->RegenteFarmaceutico->Persona->getTelefono() ?></td>
       </tr>
       <tr>
           <th>E-mail</th>
-          <td colspan="2"><?php echo $higiene->Empresa->RegenteFarmaceutico->Persona->getEmail() ?></td>
+          <td><?php echo $higiene->Empresa->RegenteFarmaceutico->Persona->getEmail() ?></td>
       </tr>
       <tr>
           <th>Número de Registro o Colegiatura Profesional</th>
-          <td colspan="2"><?php echo $higiene->Empresa->RegenteFarmaceutico->getCarnetColegiado() ?></td>
-      </tr>
-      
-      <!-- ------------------------------------------ -->
-      
-      <tr>
-          <th>En caso de maquila:</th>
+          <td><?php echo $higiene->Empresa->RegenteFarmaceutico->getCarnetColegiado() ?></td>
       </tr>
       <tr>
-        <th><?php echo $form['maquila_embasador']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['maquila_embasador']->renderError(); ?>
-            <?php //ACA VERIFICAMOS SI TIENE EMBASADOR
-//                $check1 = "";
-//                if(($form['maquila_embasador']->getValue()) != NULL )
-//                    $check1= "checked";?>
-<!--            <input type="checkbox" //<?php //echo $check1?> onclick="habilita(1)">-->
-                
-              <?php 
-                echo $form['maquila_embasador'];
-              ?>
+          <th colspan="2">En caso de maquila:</th>
+      </tr>
+      <tr>
+        <th><?php echo $form['maquila_tipo']->renderLabel() ?></th>
+        <td class="lista-linea">
+          <?php echo $form['maquila_tipo']->renderError() ?>
+          <?php echo $form['maquila_tipo'] ?>
         </td>
       </tr>
       <tr>
-        <th><?php echo $form['maquila_empacador']->renderLabel() ?></th>
+        <th><?php echo $form['maquila']->renderLabel() ?></th>
         <td>
-          <?php echo $form['maquila_empacador']->renderError() ?>
-          
-          <?php echo $form['maquila_empacador'] ?>
+          <?php echo $form['maquila']->renderError() ?>
+          <?php echo $form['maquila'] ?>
         </td>
       </tr>
       <tr>
-        <th><?php echo $form['maquila_acondicionador']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['maquila_acondicionador']->renderError() ?>
-            <?php echo $form['maquila_acondicionador'] ?>
+        <th class="celda-abajo"><?php echo "Fabricado para:" ?></th>
+        <td class="celda-abajo">
+          <?php echo $form['maquila_fabricado']->renderError() ?>
+          <?php echo $form['maquila_fabricado'] ?>
         </td>
       </tr>
-      <tr>
-        <th><?php echo "Fabricado para:" ?></th>
-        <td>
-          <?php echo $form['maquila_fabricado_para']->renderError() ?>
-          <?php echo $form['maquila_fabricado_para'] ?>
-        </td>
-      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container-form-decision">
+  <table class="tbl-form-decision">
+    </tbody>
       <tr>
           <th colspan="2">III. DATOS GENERALES DEL PRODUCTO</th>
       </tr>
@@ -210,20 +239,16 @@
           <td><?php echo $higiene ?></td>
       </tr>
       <tr>
-          <th>PHD</th>
-          <td><?php echo $higiene->getPhd() ? 'X' : '' ?></td>
-      </tr>
-      <tr>
-          <th>PAHP</th>
-          <td><?php echo $higiene->getPahp() ? 'X' : '' ?></td>
+          <th>Tipo</th>
+          <td><?php echo $higiene->getNombreDetalle() ?></td>
       </tr>
       <tr>
           <th>Grupo</th>
           <td><?php echo $higiene->getGrupoHigiene() ?></td>
       </tr>
       <tr>
-          <th>variedad</th>
-          <td><?php echo $higiene->getVariedad() ?></td>
+          <th>variedades</th>
+          <td><?php echo $higiene->getVariedades() ?></td>
       </tr>
       <tr>
           <th>Marca</th>
@@ -242,10 +267,21 @@
           <td><?php echo $higiene->getVigenciaNso()?></td>
       </tr>
       <tr>
-          <th>País que emitió el Código de identificación de la NSO:</th>
-          <td><?php if ($higiene->getPaisId()!=NULL)
-                    echo $higiene->Pais ?></td>
+          <th class="celda-abajo">País que emitió el Código de identificación de la NSO:</th>
+          <td class="celda-abajo">
+              <?php 
+              if ($higiene->getPaisId() != NULL)
+                  echo $higiene->Pais 
+              ?>
+          </td>
       </tr>
+    </tbody>
+  </table>
+</div>
+    
+<div class="container-form-decision">
+  <table class="tbl-form-decision">
+    <tbody>
       <tr>
         <th><?php echo $form['vigencia']->renderLabel() ?></th>
         <td>
@@ -261,8 +297,8 @@
         </td>
       </tr>
       <tr>
-        <th><?php echo $form['numero_ruta']->renderLabel() ?></th>
-        <td>
+        <th class="celda-abajo"><?php echo $form['numero_ruta']->renderLabel() ?></th>
+        <td class="celda-abajo">
           <?php echo $form['numero_ruta']->renderError() ?>
           <?php echo $form['numero_ruta'] ?>
         </td>
@@ -270,7 +306,7 @@
       </tr>
     </tbody>
   </table>
-
+</div>
 
 
 <?php echo $form->renderHiddenFields(false) ?>          

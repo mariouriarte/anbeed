@@ -10,17 +10,20 @@
  * @property Pais $Pais
  * @property Empresa $Empresa
  * @property LaboratorioFabricante $LaboratorioFabricante
+ * @property Doctrine_Collection $Formularios706
  * 
  * @method integer               getPaisId()                Returns the current record's "pais_id" value
  * @method string                getNombre()                Returns the current record's "nombre" value
  * @method Pais                  getPais()                  Returns the current record's "Pais" value
  * @method Empresa               getEmpresa()               Returns the current record's "Empresa" value
  * @method LaboratorioFabricante getLaboratorioFabricante() Returns the current record's "LaboratorioFabricante" value
+ * @method Doctrine_Collection   getFormularios706()        Returns the current record's "Formularios706" collection
  * @method Ciudad                setPaisId()                Sets the current record's "pais_id" value
  * @method Ciudad                setNombre()                Sets the current record's "nombre" value
  * @method Ciudad                setPais()                  Sets the current record's "Pais" value
  * @method Ciudad                setEmpresa()               Sets the current record's "Empresa" value
  * @method Ciudad                setLaboratorioFabricante() Sets the current record's "LaboratorioFabricante" value
+ * @method Ciudad                setFormularios706()        Sets the current record's "Formularios706" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -56,6 +59,10 @@ abstract class BaseCiudad extends sfDoctrineRecord
         $this->hasOne('LaboratorioFabricante', array(
              'local' => 'id',
              'foreign' => 'ciudad_id'));
+
+        $this->hasMany('Formulario706 as Formularios706', array(
+             'local' => 'id',
+             'foreign' => 'rescom_ciudad_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);
