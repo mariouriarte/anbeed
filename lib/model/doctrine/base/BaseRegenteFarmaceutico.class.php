@@ -8,17 +8,20 @@
  * @property integer $persona_id
  * @property string $matricula_profesional
  * @property string $carnet_colegiado
+ * @property boolean $is_active
  * @property Persona $Persona
  * @property Empresa $Empresa
  * 
  * @method integer             getPersonaId()             Returns the current record's "persona_id" value
  * @method string              getMatriculaProfesional()  Returns the current record's "matricula_profesional" value
  * @method string              getCarnetColegiado()       Returns the current record's "carnet_colegiado" value
+ * @method boolean             getIsActive()              Returns the current record's "is_active" value
  * @method Persona             getPersona()               Returns the current record's "Persona" value
  * @method Empresa             getEmpresa()               Returns the current record's "Empresa" value
  * @method RegenteFarmaceutico setPersonaId()             Sets the current record's "persona_id" value
  * @method RegenteFarmaceutico setMatriculaProfesional()  Sets the current record's "matricula_profesional" value
  * @method RegenteFarmaceutico setCarnetColegiado()       Sets the current record's "carnet_colegiado" value
+ * @method RegenteFarmaceutico setIsActive()              Sets the current record's "is_active" value
  * @method RegenteFarmaceutico setPersona()               Sets the current record's "Persona" value
  * @method RegenteFarmaceutico setEmpresa()               Sets the current record's "Empresa" value
  * 
@@ -38,13 +41,18 @@ abstract class BaseRegenteFarmaceutico extends sfDoctrineRecord
              ));
         $this->hasColumn('matricula_profesional', 'string', 20, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 20,
              ));
         $this->hasColumn('carnet_colegiado', 'string', 20, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 20,
+             ));
+        $this->hasColumn('is_active', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => true,
+             'notnull' => true,
              ));
     }
 

@@ -7,14 +7,14 @@
  * 
  * @property string $nombre
  * @property Doctrine_Collection $Medicamento
- * @property Doctrine_Collection $Medicamentos
+ * @property Doctrine_Collection $Formulario7
  * 
- * @method string              getNombre()       Returns the current record's "nombre" value
- * @method Doctrine_Collection getMedicamento()  Returns the current record's "Medicamento" collection
- * @method Doctrine_Collection getMedicamentos() Returns the current record's "Medicamentos" collection
- * @method ViaAdministracion   setNombre()       Sets the current record's "nombre" value
- * @method ViaAdministracion   setMedicamento()  Sets the current record's "Medicamento" collection
- * @method ViaAdministracion   setMedicamentos() Sets the current record's "Medicamentos" collection
+ * @method string              getNombre()      Returns the current record's "nombre" value
+ * @method Doctrine_Collection getMedicamento() Returns the current record's "Medicamento" collection
+ * @method Doctrine_Collection getFormulario7() Returns the current record's "Formulario7" collection
+ * @method ViaAdministracion   setNombre()      Sets the current record's "nombre" value
+ * @method ViaAdministracion   setMedicamento() Sets the current record's "Medicamento" collection
+ * @method ViaAdministracion   setFormulario7() Sets the current record's "Formulario7" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -37,10 +37,10 @@ abstract class BaseViaAdministracion extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasMany('Medicamento', array(
-             'local' => 'producto_id',
-             'foreign' => 'id'));
+             'local' => 'id',
+             'foreign' => 'via_administracion_id'));
 
-        $this->hasMany('Medicamento as Medicamentos', array(
+        $this->hasMany('Formulario7', array(
              'local' => 'id',
              'foreign' => 'via_administracion_id'));
 

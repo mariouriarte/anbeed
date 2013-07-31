@@ -1,0 +1,35 @@
+TipoTramiteFormulario5:
+  TipoTramiteFormulario5_1:
+    nombre: INSCRIPCIÓN
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:02:00'
+  TipoTramiteFormulario5_2:
+    nombre: REINSCRIPCIÓN
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:00:00'
+  TipoTramiteFormulario5_3:
+    nombre: 'CAMBIO DE'
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 01:00:00'
+  TipoTramiteFormulario5_4:
+    nombre: OTRO
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:00:00'
+
+TipoTramiteFormulario:
+  TipoTramiteFormulario_1:
+    nombre: 'NOTIFICACIÓN SANITARIA OBLIGATORIA (NSO)'
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:02:00'
+  TipoTramiteFormulario_2:
+    nombre: 'SOLICITUD DE RENOVACIÓN DEL CÓDIGO DE IDENTIFICACIÓN DE LA NSO'
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:00:00'
+  TipoTramiteFormulario_3:
+    nombre: 'SOLICITUD DE RECONOCIMIENTO DEL CÓDIGO DE IDENTIFICACIÓN DE LA NSO'
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 01:00:00'
+  TipoTramiteFormulario_4:
+    nombre: 'INFORMACIÓN DE CAMBIOS'
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:00:00'

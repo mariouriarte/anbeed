@@ -1,0 +1,189 @@
+FormaCosmetica:
+  FormaCosmetica_1:
+    nombre: 'PASTA DENTAL'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_2:
+    nombre: AEROSOL
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_3:
+    nombre: BARRA
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_4:
+    nombre: CREMA
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_5:
+    nombre: EMULSIÓN
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_6:
+    nombre: ESPUMA
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_7:
+    nombre: GEL
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_8:
+    nombre: LOCIÓN
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_9:
+    nombre: PARCHE
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_10:
+    nombre: SHAMPOO
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_11:
+    nombre: SOLUCIÓN
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_12:
+    nombre: TONICO
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_13:
+    nombre: UNGUENTO
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_14:
+    nombre: ACEITE
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_15:
+    nombre: POLVO
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_16:
+    nombre: 'POLVO COMPACTO'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_17:
+    nombre: MASCARILLA
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_18:
+    nombre: LIQUIDA
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_19:
+    nombre: 'GEL CREMA'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_20:
+    nombre: LAPIZ
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_21:
+    nombre: PERLAS
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_22:
+    nombre: 'SALES DE BAÑO'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_23:
+    nombre: TOALLA
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_24:
+    nombre: ESMALTE
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_25:
+    nombre: BALSAMO
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_26:
+    nombre: TONICO
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_27:
+    nombre: SPLASH
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_28:
+    nombre: PERFUME
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_29:
+    nombre: CERA
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_30:
+    nombre: MAQUILLAJE
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_31:
+    nombre: SERUM
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_32:
+    nombre: 'JABON LIQUIDO GEL'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_33:
+    nombre: 'PASTA  DENTAL'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_34:
+    nombre: 'ENJUAGUE BUCAL'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_35:
+    nombre: 'GEL DENTAL'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_36:
+    nombre: 'JABON LIQUIDO'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_37:
+    nombre: SPRAY
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_38:
+    nombre: 'LOCION DE BAÑO'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_39:
+    nombre: COLONIA
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_40:
+    nombre: PERFUME
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_41:
+    nombre: 'LOCION CREMOSA'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_42:
+    nombre: 'CREMA LABIAL'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_43:
+    nombre: ACONDICIONADOR
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_44:
+    nombre: 'LOCION CREMOSA'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_45:
+    nombre: PASTA
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_46:
+    nombre: JABON
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  FormaCosmetica_47:
+    nombre: 'CREMA EN POLVO'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'

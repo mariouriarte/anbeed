@@ -10,7 +10,8 @@
  */
 class EmpresaFormFilter extends BaseEmpresaFormFilter
 {
-  public function configure()
-  {
-  }
+    public function configure()
+    {
+        //$this->addOption('template', 'from %from_value%<br />to %to_value%');
+    }
 }

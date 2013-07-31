@@ -1,0 +1,83 @@
+/* 
+    Document   : portal
+    Created on : 15-04-2012, 07:40:22 PM
+    Author     : Mario Uriarte Marin
+    Description:
+        Estilos para el portal, 
+        se muestra cuando ingresan al sistema
+*/
+
+a {
+    text-decoration: none;
+}
+
+.contenido ul{
+/*    list-style: none outside none !important;*/    
+    /*font-size: 11px;*/
+}
+
+.contenido li {
+    list-style: square outside none !important;
+    padding: 1px 0;
+} 
+
+div.portal {
+    /*margin-left: 20px;*/
+    width: 1018px;
+    margin: 50px auto;
+    min-height: 440px;  
+
+    overflow: hidden;
+    position: relative;
+}
+
+.linea {
+    clear: both;
+}
+
+.portal .linea .columna {
+    display: inline;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #8CACBB;
+    width: 185px;
+    height: 230px;
+    margin: 8px;
+    float: left;
+    position: relative;
+    background-color: #f9f9f9;
+    color: #000;
+    overflow: hidden;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.15);
+    border: 1px solid #DADADA;
+    /*border-top: 1px #fff solid;*/
+}
+
+.columna .cubo {
+    margin-bottom: 15px;
+    width: 100%;
+    
+    
+}
+
+.linea .cubo .contenido {    
+    min-height: 230px;
+    padding: 0px;
+    /*border-top: 1px solid #8CACBB;*/
+}
+
+.cubo:hover {
+	border-top: 1px #ddd solid;
+	-webkit-box-shadow: inset 0px 1px 5px -2px #777;
+	box-shadow: inset 0px 1px 5px -2px #777;
+}
+.titulo{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.contenido
+{
+    max-height: 200px;
+}

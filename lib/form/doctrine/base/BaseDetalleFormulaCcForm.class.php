@@ -16,7 +16,8 @@ abstract class BaseDetalleFormulaCcForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'             => new sfWidgetFormInputHidden(),
-      'ingrediente_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Ingrediente'), 'add_empty' => false)),
+      'formula_cc_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('FormulaCc'), 'add_empty' => false)),
+      'ingrediente_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Ingrediente'), 'add_empty' => true)),
       'cantidad'       => new sfWidgetFormInputText(),
       'unidad'         => new sfWidgetFormInputText(),
       'created_at'     => new sfWidgetFormDateTime(),
@@ -25,7 +26,8 @@ abstract class BaseDetalleFormulaCcForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'             => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'ingrediente_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Ingrediente'))),
+      'formula_cc_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('FormulaCc'))),
+      'ingrediente_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Ingrediente'), 'required' => false)),
       'cantidad'       => new sfValidatorNumber(),
       'unidad'         => new sfValidatorString(array('max_length' => 20)),
       'created_at'     => new sfValidatorDateTime(),

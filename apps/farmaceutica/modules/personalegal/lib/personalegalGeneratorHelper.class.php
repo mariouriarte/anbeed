@@ -10,4 +10,11 @@
  */
 class personalegalGeneratorHelper extends BasePersonalegalGeneratorHelper
 {
+    public function linkToIrEmpresa($object, $params)
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        
+        return link_to($params['label'] , 'empresas/administrarEmpresa?id=' . $empresa->getId());
+    }
 }

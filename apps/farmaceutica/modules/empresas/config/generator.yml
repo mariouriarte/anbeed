@@ -16,25 +16,41 @@ generator:
       fields:
         regente_farmaceutico_id:  {label: 'Regente Farmacéutico'}
         representante_legal_id:   {label: 'Representante Legal'}
-        razon_social:             {label: 'Razón Social'}
+        razon_social:             {label: 'Razón Social', help: 'Nombre de la empresa'}
         fecha_registro:           {label: 'Fecha de Registro'}
         num_resolucion:           {label: 'Número de Resolución Ministerial'}
-        fecha_resolucion:         {date_format: 'dd/MM/yyyy', label: 'Fecha de Resolución Ministerial'}
+        fecha_resolucion:         {label: 'Fecha de Resolución Ministerial', date_format: 'dd/MM/yyyy'}
         direccion:                {label: 'Dirección'}
         telefono1:                {label: 'Teléfono 1'}
         telefono2:                {label: 'Teléfono 2'}
         registro_camara:          {label: 'Registro en la Cámara Nacional de Industria y/o Comercio'}
-        fundempresa:              {label: 'FUNDEMPRESA'}
+        fundempresa:              {label: 'Fundempresa'}
         nit:                      {label: 'NIT'}
-      list:    ~
+        pais_id:                  {label: 'País'}
+        ciudad_id:                {label: 'Ciudad'}
+        
+      list:
+        title: Listado de Empresas Registradas
+        display: [razon_social, nit]
+        object_actions:
+          adm_empresa: {label: Administrar Empresa, action: administrarEmpresa}
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
       filter:
-        display: [razon_social, fecha_registro, nit]
+        display: [razon_social, nit]
       form:
-        display: 
-          Personal Responsable: [representante_legal_id, regente_farmaceutico_id]
-          Datos: [razon_social, fecha_registro, fecha_resolucion, fax, direccion, casilla, telefono1, telefono1, email, actividad, registro_camara, fundaempresa, nit, licencia_funcionamiento]
-          
+        display:
+          Datos: [razon_social, pais_id, ciudad_id, fecha_registro, fecha_resolucion, num_resolucion, fax, direccion, casilla, telefono1, telefono1, telefono2, email, actividad, registro_camara, fundempresa, nit, licencia_funcionamiento]
+        
       edit:
         title: Editar Empresa %%razon_social%%
+        actions:
+          ir_empresa: {label: Volver a Empresa}
+          _save: ~
+        
       new:
-        title: Nueva Empresa
+        title: Registro de Empresa
+        actions:
+          _list: ~
+          _save: ~

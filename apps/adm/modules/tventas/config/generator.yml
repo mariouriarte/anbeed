@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           TipoVenta
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          tipo_venta
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        title: Listado de Tipo de Ventas Registrados
+        max_per_page: 15
+        display: [nombre]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [nombre]
+      form:    
+        display: [nombre]
+        actions: 
+          _save: ~ 
+          _save_and_add: ~ 
+      edit:    
+        title: Editar Tipo de Venta %%nombre%%
+      new:     
+        title: Nuevo Tipo de Venta

@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Ingrediente
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          ingrediente
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        nombre: {label: Nombre}
+      list:
+        title: Listado de Ingredientes Registrados
+        max_per_page: 15
+        display: [nombre]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [nombre]
+      form:    
+        actions: 
+          _save: ~ 
+          _save_and_add: ~ 
+      edit:    
+        title: Editar Ingrediente %%nombre%%
+      new:     
+        title: Nuevo Ingrediente

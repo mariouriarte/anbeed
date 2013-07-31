@@ -1,0 +1,35 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Formulario706
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario706_form706porempresa
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        fields:  
+        laboratorio: {label: 'Laboratorio Fabricante'}
+        
+      list:
+        title: Desiciones 706 registrados
+        table_method: selectForms706DeEmpresa
+        display: [higiene, laboratorio, tipo_tramite_formulario]
+        actions:
+          ir_empresa:   {label: Volver a Empresa}
+          #ir_productos: {label: Regresar a higiéne}
+          #new:  {label: Nuevo, action: nuevo}
+        object_actions:
+          edit: {label: Editar, action: editar}
+      
+      filter:
+        display: [higiene_id, tipo_tramite_formulario_id]
+      form:    ~
+      edit:    ~
+      new:     ~

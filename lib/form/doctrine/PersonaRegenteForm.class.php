@@ -10,14 +10,14 @@
  */
 class PersonaRegenteForm extends BasePersonaForm
 {
-    public function configure()
-    {
-        unset($this['created_at'], $this['updated_at']);
-      
-        $this->widgetSchema['fecha_nacimiento'] = new sfWidgetFormJQueryDate(
-            array('culture' => 'es'));
-        
-        // Form enbebido, Regente Farmaceutico
+//    public function configure()
+//    {
+//        unset($this['created_at'], $this['updated_at']);
+//      
+//        $this->widgetSchema['fecha_nacimiento'] = new sfWidgetFormJQueryDate(
+//            array('culture' => 'es'));
+//        
+//        // Form enbebido, Regente Farmaceutico
 //        $subForm2 = new sfForm();
 //
 //        $regente = new RegenteFarmaceutico();
@@ -27,5 +27,5 @@ class PersonaRegenteForm extends BasePersonaForm
 //
 //        $subForm2->embedForm(1, $form2);
 //        $this->embedForm('newRegente', $subForm2);
-    }
+//    }
 }

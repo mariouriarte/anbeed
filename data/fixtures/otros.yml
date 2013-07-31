@@ -1,0 +1,212 @@
+RepresentanteLegal:
+  RepresentanteLegal_1:
+    Persona: Persona_2
+    is_active: true
+    created_at: '2013-06-24 22:01:33'
+    updated_at: '2013-06-24 22:01:33'
+  RepresentanteLegal_2:
+    Persona: Persona_4
+    is_active: true
+    created_at: '2013-06-27 00:12:40'
+    updated_at: '2013-06-27 00:12:40'
+  RepresentanteLegal_3:
+    Persona: Persona_7
+    is_active: true
+    created_at: '2013-07-11 00:04:25'
+    updated_at: '2013-07-11 00:04:25'
+  RepresentanteLegal_4:
+    Persona: Persona_5
+    is_active: true
+    created_at: '2013-07-11 17:56:50'
+    updated_at: '2013-07-11 17:56:50'
+Ciudad:
+  Ciudad_1:
+    Pais: Pais_23
+    nombre: 'LA PAZ'
+    created_at: '2013-07-20 11:06:39'
+    updated_at: '2013-07-20 11:06:39'
+  Ciudad_2:
+    Pais: Pais_23
+    nombre: 'SANTA CRUZ'
+    created_at: '2013-07-20 11:06:47'
+    updated_at: '2013-07-20 11:06:47'
+  Ciudad_3:
+    Pais: Pais_23
+    nombre: COCHABAMBA
+    created_at: '2013-07-20 11:06:54'
+    updated_at: '2013-07-20 11:06:54'
+Marca:
+  Marca_1:
+    nombre: 'MY PAYOT'
+    created_at: '2013-07-18 18:18:33'
+    updated_at: '2013-07-18 18:18:33'
+
+Empresa:
+  Empresa_1:
+    RepresentanteLegal: RepresentanteLegal_1
+    RegenteFarmaceutico: RegenteFarmaceutico_1
+    Ciudad: Ciudad_1
+    razon_social: 'Nueva Empresa'
+    fecha_registro: '2013-07-20'
+    num_resolucion: '1234'
+    fecha_resolucion: '2008-06-11'
+    fax: '1234555'
+    direccion: '123123123'
+    casilla: '123123'
+    telefono1: '12312312'
+    telefono2: '312312'
+    email: ''
+    actividad: Nueva
+    registro_camara: '2'
+    fundempresa: 22w32
+    nit: '212312'
+    licencia_funcionamiento: '123123'
+    is_active: false
+    created_at: '2013-06-25 22:19:03'
+    updated_at: '2013-07-20 11:07:11'
+  Empresa_3:
+    Ciudad: Ciudad_1
+    razon_social: 'FARMACIA GLORIA'
+    fecha_registro: '2013-07-20'
+    num_resolucion: '512314'
+    fecha_resolucion: '1995-07-06'
+    fax: '113145'
+    direccion: 'AV GLORIA'
+    casilla: '5132'
+    telefono1: '3123134'
+    telefono2: '1312314'
+    email: GLORIA@GLORIA.COM
+    actividad: FARMACIA
+    registro_camara: '1231415'
+    fundempresa: '3412314'
+    nit: '3123141'
+    licencia_funcionamiento: '1312345'
+    is_active: false
+    created_at: '2013-07-11 17:56:27'
+    updated_at: '2013-07-20 11:07:25'
+  Empresa_4:
+    RepresentanteLegal: RepresentanteLegal_4
+    RegenteFarmaceutico: RegenteFarmaceutico_4
+    Ciudad: Ciudad_1
+    razon_social: 'FARMACIAS VIDA NUEVA'
+    fecha_registro: '2013-07-20'
+    num_resolucion: '551341'
+    fecha_resolucion: '1996-05-17'
+    fax: '112314'
+    direccion: 'AV. VIDA NUEVA'
+    casilla: '1141'
+    telefono1: '1123134'
+    telefono2: '113145'
+    email: VIDA@NUEVA.COM
+    actividad: FARMACIA
+    registro_camara: '551515'
+    fundempresa: '4411312'
+    nit: '54511231'
+    licencia_funcionamiento: '113134'
+    is_active: false
+    created_at: '2013-07-11 17:55:02'
+    updated_at: '2013-07-20 11:08:30'
+  Empresa_2:
+    RepresentanteLegal: RepresentanteLegal_3
+    RegenteFarmaceutico: RegenteFarmaceutico_3
+    Ciudad: Ciudad_2
+    razon_social: 'FARMACIAS BOLIVIA'
+    fecha_registro: '2013-07-20'
+    num_resolucion: '513132'
+    fecha_resolucion: '2012-02-22'
+    fax: '2342424'
+    direccion: 'AV. SIEMPREVIVA'
+    casilla: '401'
+    telefono1: '2414241'
+    telefono2: '2424141'
+    email: BOLIVIA@GMAIL.COM
+    actividad: FARMACIAS
+    registro_camara: '55325'
+    fundempresa: '312314'
+    nit: '551231'
+    licencia_funcionamiento: '1415125'
+    is_active: false
+    created_at: '2013-07-11 00:03:58'
+    updated_at: '2013-07-20 11:08:41'
+RegenteFarmaceutico:
+  RegenteFarmaceutico_1:
+    Persona: Persona_1
+    matricula_profesional: '123456'
+    carnet_colegiado: '321654'
+    is_active: true
+    created_at: '2013-06-24 22:00:47'
+    updated_at: '2013-06-24 22:00:47'
+  RegenteFarmaceutico_2:
+    Persona: Persona_3
+    matricula_profesional: bgh544
+    carnet_colegiado: 1112-123
+    is_active: true
+    created_at: '2013-06-27 00:00:22'
+    updated_at: '2013-06-27 00:00:22'
+  RegenteFarmaceutico_3:
+    Persona: Persona_8
+    matricula_profesional: '12314145'
+    carnet_colegiado: '3131141'
+    is_active: true
+    created_at: '2013-07-11 00:05:24'
+    updated_at: '2013-07-11 00:05:24'
+  RegenteFarmaceutico_4:
+    Persona: Persona_9
+    matricula_profesional: '4435533'
+    carnet_colegiado: '1134535'
+    is_active: true
+    created_at: '2013-07-11 17:58:55'
+    updated_at: '2013-07-11 17:58:55'
+LaboratorioFabricante:
+  LaboratorioFabricante_1:
+    Pais: Pais_23
+    Ciudad: Ciudad_1
+    nombre: 'LABORATORIOS PATITO'
+    bajo_licencia: SI
+    para: TODOS
+    direccion: 'AV AHI'
+    telefono: '222222'
+    fax: '222222'
+    email: PATITO@GMAIL.COM
+    observaciones: ninguna
+    created_at: '2013-07-09 18:47:11'
+    updated_at: '2013-07-09 18:47:11'
+  LaboratorioFabricante_2:
+    Pais: Pais_23
+    Ciudad: Ciudad_1
+    nombre: 'LABORATORIOS TODO'
+    bajo_licencia: 'DE TODOS'
+    para: TODOS
+    direccion: 'AV. TODOS'
+    telefono: '22222'
+    fax: '2222'
+    email: TODOS@TODOS.COM
+    observaciones: todos
+    created_at: '2013-07-11 00:11:08'
+    updated_at: '2013-07-11 00:11:08'
+  LaboratorioFabricante_3:
+    Pais: Pais_23
+    Ciudad: Ciudad_1
+    nombre: 'LABORATORIOS JERINGA'
+    bajo_licencia: SI
+    para: TODOS
+    direccion: 'AV. LAB'
+    telefono: '2242552'
+    fax: '2425425'
+    email: JERIGA@GMAIL.COM
+    observaciones: ninguna
+    created_at: '2013-07-11 17:59:55'
+    updated_at: '2013-07-11 17:59:55'
+  LaboratorioFabricante_4:
+    Pais: Pais_23
+    Ciudad: Ciudad_1
+    nombre: 'LABORATORIOS VITA'
+    bajo_licencia: 'LA PAZ'
+    para: BOLIVIANOS
+    direccion: 'AV. MANCO KAPAC'
+    telefono: '2545266'
+    fax: '2425626'
+    email: LABORATORIOS@VITA.COM
+    observaciones: nacional
+    created_at: '2013-07-11 18:11:11'
+    updated_at: '2013-07-11 18:11:11'

@@ -7,6 +7,7 @@
  * 
  * @property integer $representante_legal_id
  * @property integer $regente_farmaceutico_id
+ * @property integer $ciudad_id
  * @property string $razon_social
  * @property date $fecha_registro
  * @property string $num_resolucion
@@ -19,15 +20,23 @@
  * @property string $email
  * @property string $actividad
  * @property string $registro_camara
- * @property string $fundaempresa
+ * @property string $fundempresa
  * @property string $nit
  * @property string $licencia_funcionamiento
+ * @property boolean $is_active
  * @property RepresentanteLegal $RepresentanteLegal
  * @property RegenteFarmaceutico $RegenteFarmaceutico
- * @property Doctrine_Collection $Producto
+ * @property Doctrine_Collection $Medicamento
+ * @property Doctrine_Collection $DispositivoMedico
+ * @property Doctrine_Collection $Cosmetico
+ * @property Doctrine_Collection $Higiene
+ * @property Ciudad $Ciudad
+ * @property Doctrine_Collection $Reactivos
+ * @property Doctrine_Collection $Formulario11
  * 
  * @method integer             getRepresentanteLegalId()    Returns the current record's "representante_legal_id" value
  * @method integer             getRegenteFarmaceuticoId()   Returns the current record's "regente_farmaceutico_id" value
+ * @method integer             getCiudadId()                Returns the current record's "ciudad_id" value
  * @method string              getRazonSocial()             Returns the current record's "razon_social" value
  * @method date                getFechaRegistro()           Returns the current record's "fecha_registro" value
  * @method string              getNumResolucion()           Returns the current record's "num_resolucion" value
@@ -40,14 +49,22 @@
  * @method string              getEmail()                   Returns the current record's "email" value
  * @method string              getActividad()               Returns the current record's "actividad" value
  * @method string              getRegistroCamara()          Returns the current record's "registro_camara" value
- * @method string              getFundaempresa()            Returns the current record's "fundaempresa" value
+ * @method string              getFundempresa()             Returns the current record's "fundempresa" value
  * @method string              getNit()                     Returns the current record's "nit" value
  * @method string              getLicenciaFuncionamiento()  Returns the current record's "licencia_funcionamiento" value
+ * @method boolean             getIsActive()                Returns the current record's "is_active" value
  * @method RepresentanteLegal  getRepresentanteLegal()      Returns the current record's "RepresentanteLegal" value
  * @method RegenteFarmaceutico getRegenteFarmaceutico()     Returns the current record's "RegenteFarmaceutico" value
- * @method Doctrine_Collection getProducto()                Returns the current record's "Producto" collection
+ * @method Doctrine_Collection getMedicamento()             Returns the current record's "Medicamento" collection
+ * @method Doctrine_Collection getDispositivoMedico()       Returns the current record's "DispositivoMedico" collection
+ * @method Doctrine_Collection getCosmetico()               Returns the current record's "Cosmetico" collection
+ * @method Doctrine_Collection getHigiene()                 Returns the current record's "Higiene" collection
+ * @method Ciudad              getCiudad()                  Returns the current record's "Ciudad" value
+ * @method Doctrine_Collection getReactivos()               Returns the current record's "Reactivos" collection
+ * @method Doctrine_Collection getFormulario11()            Returns the current record's "Formulario11" collection
  * @method Empresa             setRepresentanteLegalId()    Sets the current record's "representante_legal_id" value
  * @method Empresa             setRegenteFarmaceuticoId()   Sets the current record's "regente_farmaceutico_id" value
+ * @method Empresa             setCiudadId()                Sets the current record's "ciudad_id" value
  * @method Empresa             setRazonSocial()             Sets the current record's "razon_social" value
  * @method Empresa             setFechaRegistro()           Sets the current record's "fecha_registro" value
  * @method Empresa             setNumResolucion()           Sets the current record's "num_resolucion" value
@@ -60,12 +77,19 @@
  * @method Empresa             setEmail()                   Sets the current record's "email" value
  * @method Empresa             setActividad()               Sets the current record's "actividad" value
  * @method Empresa             setRegistroCamara()          Sets the current record's "registro_camara" value
- * @method Empresa             setFundaempresa()            Sets the current record's "fundaempresa" value
+ * @method Empresa             setFundempresa()             Sets the current record's "fundempresa" value
  * @method Empresa             setNit()                     Sets the current record's "nit" value
  * @method Empresa             setLicenciaFuncionamiento()  Sets the current record's "licencia_funcionamiento" value
+ * @method Empresa             setIsActive()                Sets the current record's "is_active" value
  * @method Empresa             setRepresentanteLegal()      Sets the current record's "RepresentanteLegal" value
  * @method Empresa             setRegenteFarmaceutico()     Sets the current record's "RegenteFarmaceutico" value
- * @method Empresa             setProducto()                Sets the current record's "Producto" collection
+ * @method Empresa             setMedicamento()             Sets the current record's "Medicamento" collection
+ * @method Empresa             setDispositivoMedico()       Sets the current record's "DispositivoMedico" collection
+ * @method Empresa             setCosmetico()               Sets the current record's "Cosmetico" collection
+ * @method Empresa             setHigiene()                 Sets the current record's "Higiene" collection
+ * @method Empresa             setCiudad()                  Sets the current record's "Ciudad" value
+ * @method Empresa             setReactivos()               Sets the current record's "Reactivos" collection
+ * @method Empresa             setFormulario11()            Sets the current record's "Formulario11" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -79,9 +103,13 @@ abstract class BaseEmpresa extends sfDoctrineRecord
         $this->setTableName('empresa');
         $this->hasColumn('representante_legal_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('regente_farmaceutico_id', 'integer', null, array(
+             'type' => 'integer',
+             'notnull' => false,
+             ));
+        $this->hasColumn('ciudad_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
              ));
@@ -96,7 +124,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              ));
         $this->hasColumn('num_resolucion', 'string', 30, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'unique' => true,
              'length' => 30,
              ));
@@ -144,7 +172,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'notnull' => false,
              'length' => 30,
              ));
-        $this->hasColumn('fundaempresa', 'string', 30, array(
+        $this->hasColumn('fundempresa', 'string', 30, array(
              'type' => 'string',
              'notnull' => true,
              'length' => 30,
@@ -161,6 +189,11 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'unique' => true,
              'length' => 30,
              ));
+        $this->hasColumn('is_active', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => true,
+             'notnull' => true,
+             ));
     }
 
     public function setUp()
@@ -174,7 +207,31 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'local' => 'regente_farmaceutico_id',
              'foreign' => 'id'));
 
-        $this->hasMany('Producto', array(
+        $this->hasMany('Medicamento', array(
+             'local' => 'id',
+             'foreign' => 'empresa_id'));
+
+        $this->hasMany('DispositivoMedico', array(
+             'local' => 'id',
+             'foreign' => 'empresa_id'));
+
+        $this->hasMany('Cosmetico', array(
+             'local' => 'id',
+             'foreign' => 'empresa_id'));
+
+        $this->hasMany('Higiene', array(
+             'local' => 'id',
+             'foreign' => 'empresa_id'));
+
+        $this->hasOne('Ciudad', array(
+             'local' => 'ciudad_id',
+             'foreign' => 'id'));
+
+        $this->hasMany('Reactivo as Reactivos', array(
+             'local' => 'id',
+             'foreign' => 'empresa_id'));
+
+        $this->hasMany('Formulario11', array(
              'local' => 'id',
              'foreign' => 'empresa_id'));
 

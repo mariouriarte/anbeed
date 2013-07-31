@@ -15,14 +15,26 @@ generator:
       actions: ~
       fields:
         pais_id:        {label: 'País de Origen'}
+        ciudad_id:      {label: 'Ciudad de Origen'}
+        pais:           {label: 'País de Origen'}
         bajo_liciencia: {label: 'Bajo Licencia de'}
         direccion:      {label: 'Dirección'}
         telefono:       {label: 'Teléfono'}
         email:          {label: 'E-mail'}
-      list:    ~
+      list: 
+        title: Laboratorios Farmaceuticos Registrados
+        display: [nombre, pais, telefono]
+        actions:
+          ir_empresa: {label: Volver a Empresa}
+          _new: ~
       filter:
-        display:        [nombre] 
+        display:        [nombre, pais_id] 
       form:
-        display:        [pais_id, nombre, bajo_licencia, para, direccion, telefono, fax, email, observaciones]
-      edit:    ~
-      new:     ~
+        display:        [pais_id, ciudad_id, nombre, bajo_licencia, para, direccion, telefono, fax, email, observaciones]
+        actions:
+          _save: ~
+          cerrar:
+      edit:    
+        title: Editar Laboratorio %%nombre%%
+      new:
+        title: Registro de Laboratorio Fabricante

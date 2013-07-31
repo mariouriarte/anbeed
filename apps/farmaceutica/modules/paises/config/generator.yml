@@ -13,11 +13,15 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:  
+        nombre: {label: Nombre}
       list:    ~
       filter:  
-        display: [nombre]
       form:    
-        display: [nombre, bandera]
-      edit:    ~
-      new:     ~
+        actions:
+          _save: ~
+          cerrar: 
+      edit:
+        title: Editar Pais %%nombre%%
+      new:     
+        title: Registro de Paises

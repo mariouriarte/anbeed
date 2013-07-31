@@ -25,17 +25,31 @@ generator:
         fax:             {label: 'Fax'}
         casilla:         {label: 'Casilla'}
         email:           {label: 'Email'}
+        nombre_ordenado: {label: 'Persona'}
         
       list:
-        title: Listado de Personas
-        display: [nombre, ap_paterno, ap_materno, cedula_expedido, telefono]
+        title: Listado de Regentes Farmaceuticos disponibles
+        table_method:   selectPersonasDisponibles
+        display: [nombre_ordenado, cedula_expedido, telefono]
+        object_actions:
+          asignar_personaregente: {label: Asignar Persona, action: asignarPersonaregente, params: 'class=boton-asignar confirm=¿Asignar al Personal?'}
+        actions:
+          ir_empresa: {label: Volver a Empresa}
+          _new: ~
       filter:
-        display: [nombre, ap_paterno, ci]
+        display: [ap_paterno, ci]
       form:
         display: 
-          Datos de la Persona:  [nombre, ap_paterno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
-          Personal Responsable: [newRegente]
+          Datos de la Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
+          Personal Responsable: [Nuevo Regente]
       edit:
         title: Editar Regente Farmaceutico %%nombre%%
+        actions:
+          ir_empresa:            {label: Volver a empresa}
+          quitar_personaregente: {label: Quitar Regente Farmaceútico, params: 'class=boton-quitar confirm=¿Quitar Regente Farmaceútico?'}
+          _save: ~
       new:
         title: Nuevo Regente Farmaceutico
+        actions:
+          _list: ~
+          _save: ~

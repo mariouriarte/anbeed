@@ -12,6 +12,7 @@ class RegenteFarmaceuticoForm extends BaseRegenteFarmaceuticoForm
 {
     public function configure()
     {
-        unset($this['created_at'], $this['updated_at'], $this['persona_id']);
+        unset($this['created_at'], $this['updated_at'], 
+              $this['persona_id'], $this['is_active']);
     }
 }

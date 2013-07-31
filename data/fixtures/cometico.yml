@@ -1,0 +1,15 @@
+#Cosmetico:
+#  Cosmetico_1:
+#    Empresa: Empresa_1
+#    LaboratorioFabricante: LaboratorioFabricante_1
+#    FormaCosmetica: FormaCosmetica_5
+#    GrupoCosmetico: GrupoCosmetico_15
+#    Marca: Marca_1
+#    nombre: 'MY PAYOT JOUR'
+#    codigo_nso: ''
+#    vigencia_nso: ''
+#    expediente: ''
+#    registro_sanitario: ''
+#    descripcion: ''
+#    created_at: '2013-07-18 18:18:39'
+#    updated_at: '2013-07-18 18:18:39'

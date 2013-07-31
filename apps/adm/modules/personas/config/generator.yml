@@ -27,14 +27,18 @@ generator:
         email:           {label: 'Email'}
         
       list:
-        title: Listado de Personas
+        title: Listado de Personas Registradas
+        max_per_page: 15
         display: [nombre, ap_paterno, ap_materno, cedula_expedido, telefono]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
       filter:
         display: [nombre, ap_paterno, ci]
       form:
         display: 
-          Persona:  [nombre, ap_paterno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
+          Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
       edit:
-        title: Editar Persona %%nombre%%
+        title: Editar %%nombre%%
       new:
         title: Nueva Persona

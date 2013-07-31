@@ -16,4 +16,13 @@ class Persona extends BasePersona
     {
         return $this->getCi() .' '. $this->getExpedido();
     }
+    public function __toString()
+    {
+       return $this->getNombre().' '.$this->getApPaterno().' '.$this->getApMaterno();
+    }
+    
+    public function getNombreOrdenado()
+    {
+        return $this->getApPaterno().' '.$this->getApMaterno().' '.$this->getNombre();
+    }
 }

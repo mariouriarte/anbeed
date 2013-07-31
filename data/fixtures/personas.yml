@@ -1,37 +1,167 @@
 ## YAML Template.
 ---
 Persona:
-  Jose:
-    nombre: Jose
-    ap_paterno: Vasquez
-    ap_materno: Arnez
-    ci: 12345
+  Persona_1:
+    nombre: regente
+    ap_paterno: regente
+    ap_materno: regente
+    ci: '5555555'
+    expedido: lp
+    direccion: ''
+    telefono: ''
+    celular: ''
+    fax: ''
+    casilla: ''
+    email: ''
+    fecha_nacimiento: null
+    is_active: true
+    foto: null
+    created_at: '2013-06-24 22:00:47'
+    updated_at: '2013-06-24 22:00:47'
+  Persona_2:
+    nombre: legal
+    ap_paterno: legal
+    ap_materno: legal
+    ci: '987854544'
+    expedido: lp
+    direccion: ''
+    telefono: ''
+    celular: ''
+    fax: ''
+    casilla: ''
+    email: jj@jyva.com
+    fecha_nacimiento: null
+    is_active: true
+    foto: null
+    created_at: '2013-06-24 22:01:33'
+    updated_at: '2013-06-24 22:01:33'
+  Persona_3:
+    nombre: 'nuevo regente'
+    ap_paterno: 'nuevo regente'
+    ap_materno: 'nuevo regente'
+    ci: '23343434'
+    expedido: lp
+    direccion: ''
+    telefono: ''
+    celular: ''
+    fax: ''
+    casilla: ''
+    email: j222@jyva.com
+    fecha_nacimiento: '2013-06-30'
+    is_active: true
+    foto: null
+    created_at: '2013-06-27 00:00:22'
+    updated_at: '2013-06-27 00:00:22'
+  Persona_4:
+    nombre: nn
+    ap_paterno: nn
+    ap_materno: nn
+    ci: '232323423'
+    expedido: sc
+    direccion: ''
+    telefono: ''
+    celular: ''
+    fax: ''
+    casilla: ''
+    email: j2232@jyva.com
+    fecha_nacimiento: '2013-06-05'
+    is_active: true
+    foto: null
+    created_at: '2013-06-27 00:12:40'
+    updated_at: '2013-06-27 00:12:40'
+  Persona_5:
+    nombre: Juanito
+    ap_paterno: Perez
+    ap_materno: Perez
+    ci: '123456'
     expedido: SC
     direccion: Miraflores
-    telefono: 12345
-    celular: 12345
-    email: jose@gmail.com
+    telefono: '123456'
+    celular: '12345'
+    fax: null
+    casilla: null
+    email: juan.01@gmail.com
     fecha_nacimiento: '1986-12-22'
-  Mario:
-    nombre: Mario
-    ap_paterno: Uriarte
-    ap_materno: Marin
-    ci: 123453
+    is_active: true
+    foto: null
+    created_at: '2013-07-09 20:12:10'
+    updated_at: '2013-07-09 20:12:10'
+  Persona_6:
+    nombre: mario
+    ap_paterno: uriarte
+    ap_materno: marin
+    ci: '1234537'
+    expedido: LP
+    direccion: miraflores
+    telefono: '12345'
+    celular: '12345'
+    fax: null
+    casilla: null
+    email: mario.01@gmail.com
+    fecha_nacimiento: '1984-12-22'
+    is_active: true
+    foto: null
+    created_at: '2013-07-09 20:12:10'
+    updated_at: '2013-07-09 20:12:10'
+  Persona_7:
+    nombre: rolo
+    ap_paterno: cadima
+    ap_materno: bernal
+    ci: '12345768'
     expedido: LP
     direccion: Miraflores
-    telefono: 12345
-    celular: 12345
-    email: mario@gmail.com
+    telefono: '12345'
+    celular: '12345'
+    fax: null
+    casilla: null
+    email: rolo.01@gmail.com
     fecha_nacimiento: '1984-12-22'
-  Rolo:
-    nombre: Rolo
-    ap_paterno: Cadima
-    ap_materno: Bernal
-    ci: 1234576
+    is_active: true
+    foto: null
+    created_at: '2013-07-09 20:12:10'
+    updated_at: '2013-07-09 20:12:10'
+  Persona_8:
+    nombre: REGETEBOLIVIA
+    ap_paterno: REGENTE
+    ap_materno: REGENTE
+    ci: '41414141'
     expedido: LP
+    direccion: 'AV. AQUI'
+    telefono: '2242424'
+    celular: '871818'
+    fax: '314141'
+    casilla: '491'
+    email: BOLIVIA@REGENTE.COM
+    fecha_nacimiento: '1988-07-23'
+    is_active: false
+    foto: ''
+    created_at: '2013-07-11 00:05:23'
+    updated_at: '2013-07-11 00:05:23'
+  Persona_9:
+    nombre: VIDA
+    ap_paterno: NUEVA
+    ap_materno: REGENTE
+    ci: '431251'
+    expedido: SC
+    direccion: 'AV. ALLI'
+    telefono: '2242521'
+    celular: '7181919'
+    fax: '2341551'
+    casilla: '314'
+    email: VIDA@REGENTE.COM
+    fecha_nacimiento: '1983-07-15'
+    is_active: false
+    foto: ''
+    created_at: '2013-07-11 17:58:55'
+    updated_at: '2013-07-11 17:58:55'
+  Jose:
+    nombre: jose
+    ap_paterno: vasquez
+    ap_materno: arnez
+    ci: 114142456
+    expedido: SC
     direccion: Miraflores
-    telefono: 12345
+    telefono: 123456
     celular: 12345
-    email: rolo@gmail.com
-    fecha_nacimiento: '1984-12-22'
-    
+    email: jyva.00@gmail.com
+    fecha_nacimiento: '1986-12-22'

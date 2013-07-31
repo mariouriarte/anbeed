@@ -16,4 +16,19 @@ class PersonaTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Persona');
     }
+    
+    public static function selectPersonasDisponibles()
+    {
+        //$user = sfContext::getInstance()->getUser();
+       
+        $q = Doctrine_Query::create()
+                ->from('Persona a')
+                ->leftJoin('a.sfGuardUser u')
+                ->where('a.is_active = ?', true)
+                ->addWhere('u.id is NULL')
+                ->orderBy('a.ap_paterno');
+        
+        return $q;
+       
+    }
 }

@@ -1,0 +1,36 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           FormulaCc
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formula_cc
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        observaciones:         {label: 'Observaciones'} 
+        NuevoDetalleFormulaCc: {label: 'Nuevo Detalle '}
+        DetalleFormulaCc:      {label: 'Detalle(s) Resgistrado(s)'}
+      list:    
+        title:   Fórmulas Cualicuantitativas Registradas
+        display: [observaciones]
+      filter:  ~
+      form:  
+        display:  
+          Fórmula Cualicuantitativa:                                [observaciones]
+          Nuevo Detalle de la Fórmula Cualicuantitativa:            [NuevoDetalleFormulaCc]
+          Detalle(s) de la Fórmula Cualicuantitativa Registrada(s): [DetalleFormulaCc]
+        actions:
+          ir_productos: {label: Regresar a Medicamentos}
+          _delete: ~
+          _save: ~
+      edit:   
+        title:   Editar Fórmula Cualicuantitativa
+      new:     
+        title:   Registro de Fórmula Cualicuantitativa

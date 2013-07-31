@@ -11,10 +11,9 @@ default:
     #keywords:     symfony, project
     #language:     en
     #robots:       index, follow
+  stylesheets:    [jquery-ui.min.css, /sfDoctrinePlugin/css/global.css, /sfDoctrinePlugin/css/default.css, main.css, menu.css, login.css, portal.css]
 
-  stylesheets:    [main.css]
-
-  javascripts:    []
+  javascripts:    [jquery-2.0.2.js, jquery-ui.min.js]
 
   has_layout:     true
   layout:         layout

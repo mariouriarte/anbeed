@@ -1,3 +1,306 @@
+formulario706_form706porempresa:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario706
+    module:               form706porempresa
+    prefix_path:          /form706porempresa
+    column:               id
+    with_wildcard_routes: true
+
+formulario516_form516porempresa:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario516
+    module:               form516porempresa
+    prefix_path:          /form516porempresa
+    column:               id
+    with_wildcard_routes: true
+
+formulario706:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario706
+    module:               formulario706
+    prefix_path:          /formulario706
+    column:               id
+    with_wildcard_routes: true
+
+higiene:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Higiene
+    module:               higiene
+    prefix_path:          /higiene
+    column:               id
+    with_wildcard_routes: true
+
+tipo_tramite_formulario:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoTramiteFormulario
+    module:               ttform
+    prefix_path:          /ttform
+    column:               id
+    with_wildcard_routes: true
+
+formulario27_formulario27porempresa:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario27
+    module:               formulario27porempresa
+    prefix_path:          /formulario27porempresa
+    column:               id
+    with_wildcard_routes: true
+
+tipo_tramite_formulario27:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoTramiteFormulario27
+    module:               tipotramitef27
+    prefix_path:          /tipotramitef27
+    column:               id
+    with_wildcard_routes: true
+
+datos_formulario27:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                DatosFormulario27
+    module:               datosf27
+    prefix_path:          /datosf27
+    column:               id
+    with_wildcard_routes: true
+
+formulario27:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario27
+    module:               formulario27
+    prefix_path:          /formulario27
+    column:               id
+    with_wildcard_routes: true
+
+dispositivo_medico:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                DispositivoMedico
+    module:               dispositivos
+    prefix_path:          /dispositivos
+    column:               id
+    with_wildcard_routes: true
+
+producto_prodcos:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Producto
+    module:               prodcos
+    prefix_path:          /prodcos
+    column:               id
+    with_wildcard_routes: true
+
+formulario516:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario516
+    module:               formulario516
+    prefix_path:          /formulario516
+    column:               id
+    with_wildcard_routes: true
+
+marca:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Marca
+    module:               marca
+    prefix_path:          /marca
+    column:               id
+    with_wildcard_routes: true
+
+grupo_cosmetico:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                GrupoCosmetico
+    module:               gcosmetico
+    prefix_path:          /gcosmetico
+    column:               id
+    with_wildcard_routes: true
+
+forma_cosmetica:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                FormaCosmetica
+    module:               fcosmetica
+    prefix_path:          /fcosmetica
+    column:               id
+    with_wildcard_routes: true
+
+cosmetico:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Cosmetico
+    module:               cosmetico
+    prefix_path:          /cosmetico
+    column:               id
+    with_wildcard_routes: true
+
+formulario5_formulario5porempresa:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario5
+    module:               formulario5porempresa
+    prefix_path:          /formulario5porempresa
+    column:               id
+    with_wildcard_routes: true
+
+origen_formulario5:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                OrigenFormulario5
+    module:               origenf5
+    prefix_path:          /origenf5
+    column:               id
+    with_wildcard_routes: true
+
+tipo_producto_formulario5:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoProductoFormulario5
+    module:               tipoproductof5
+    prefix_path:          /tipoproductof5
+    column:               id
+    with_wildcard_routes: true
+
+tipo_tramite_formulario5:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoTramiteFormulario5
+    module:               tipotramitef5
+    prefix_path:          /tipotramitef5
+    column:               id
+    with_wildcard_routes: true
+
+formulario5:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario5
+    module:               formulario5
+    prefix_path:          /formulario5
+    column:               id
+    with_wildcard_routes: true
+
+producto_prodmed:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Producto
+    module:               prodmed
+    prefix_path:          /prodmed
+    column:               id
+    with_wildcard_routes: true
+
+ingrediente:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Ingrediente
+    module:               ingredientes
+    prefix_path:          /ingredientes
+    column:               id
+    with_wildcard_routes: true
+
+detalle_formula_cc:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                DetalleFormulaCc
+    module:               detallescc
+    prefix_path:          /detallescc
+    column:               id
+    with_wildcard_routes: true
+
+formula_cc:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                FormulaCc
+    module:               formulas
+    prefix_path:          /formulas
+    column:               id
+    with_wildcard_routes: true
+
+tipo_venta:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoVenta
+    module:               tventas
+    prefix_path:          /tventas
+    column:               id
+    with_wildcard_routes: true
+
+via_administracion:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ViaAdministracion
+    module:               administraciones
+    prefix_path:          /administraciones
+    column:               id
+    with_wildcard_routes: true
+
+forma_farmaceutica:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                FormaFarmaceutica
+    module:               ffarmaceuticas
+    prefix_path:          /ffarmaceuticas
+    column:               id
+    with_wildcard_routes: true
+
+medicamento:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Medicamento
+    module:               medicamentos
+    prefix_path:          /medicamentos
+    column:               id
+    with_wildcard_routes: true
+
+producto:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Producto
+    module:               productos
+    prefix_path:          /productos
+    column:               id
+    with_wildcard_routes: true
+
+buscar_paises:
+    url:   /paises/buscar
+    param: { module: paises, action: buscar }
+buscar_fcosmetica:
+    url:   /fcosmetica/buscar
+    param: { module: fcosmetica, action: buscar }
+buscar_gcosmetico:
+    url:   /gcosmetico/buscar
+    param: { module: gcosmetico, action: buscar }
+buscar_marca:
+    url:   /marca/buscar
+    param: { module: marca, action: buscar }
+buscar_venta:
+    url:   /tventas/buscar
+    param: { module: tventas, action: buscar }
+buscar_via:
+    url:   /administraciones/buscar
+    param: { module: administraciones, action: buscar }
+buscar_ffarmaceutica:
+    url:   /ffarmaceuticas/buscar
+    param: { module: ffarmaceuticas, action: buscar }
+buscar_ingrediente:
+    url:   /ingredientes/buscar
+    param: { module: ingredientes, action: buscar }
+buscar_labs:
+    url:   /laboratorios/buscar
+    param: { module: laboratorios, action: buscar }
+buscar_representantes:
+    url:   /personalegal/buscar
+    param: { module: personalegal, action: buscar }
+buscar_regentes:
+    url:   /personaregente/buscar
+    param: { module: personaregente, action: buscar }
 persona_personalegal:
   class: sfDoctrineRouteCollection
   options:

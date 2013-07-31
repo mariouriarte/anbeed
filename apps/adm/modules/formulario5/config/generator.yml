@@ -1,0 +1,39 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Formulario5
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario5
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        empresa_id:                   {label: 'Empresa'}
+        fecha:                        {label: 'Fecha de Registro'}
+        tipo_tramite_formulario5_id:  {label: 'Tipo de Trámite'}
+        tipo_producto_formulario5_id: {label: 'Tipo de Producto'}
+        origen_formulario_id:        {label: 'Origen'}
+      
+      list:    
+        title: Listado de Solicitudes para Registro y Control de Calidad de Medicamentos
+        display: [fecha, tipo_tramite_formulario5, tipo_producto_formulario5, origen_formulario, medicamento]
+        actions:
+          ir_portal: {label: Volver al Portal}
+      filter:
+        display: [empresa_id, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id]
+      
+      form:    
+      
+      edit:    
+        title: Editar Listado de Solicitudes para Registro y Control de Calidad de Medicamentos
+        display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id, medicamento_id]
+     
+      new:     
+        title: Solicitud para Registro y Control de Calidad de Medicamentos
+        display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id, medicamento_id]

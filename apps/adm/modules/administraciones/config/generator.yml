@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ViaAdministracion
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          via_administracion
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        nombre: {label: Nombre}
+      list:    
+        title:    Vias de Administración Registradas
+        display:  [nombre]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [nombre]
+      form:    
+        actions: 
+          _save: ~ 
+          _save_and_add: ~ 
+      edit:    
+        title: Editar Via de Administración %%nombre%%
+      new:     
+        title: Nueva Via de Administración

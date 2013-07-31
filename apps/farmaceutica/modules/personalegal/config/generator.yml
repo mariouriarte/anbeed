@@ -16,8 +16,7 @@ generator:
       fields:
         ap_paterno:      {label: 'Ap. Paterno'}
         ap_materno:      {label: 'Ap. Materno'}
-        cedula_expedido: {label: 'Cédula de identidad'}
-        ci:              {label: 'Cedula de Identidad'}
+        ci:              {label: 'Cédula de Identidad'}
         expedido:        {label: 'Expedido'}
         direccion:       {label: 'Dirección'}
         telefono:        {label: 'Teléfono'}
@@ -25,17 +24,32 @@ generator:
         fax:             {label: 'Fax'}
         casilla:         {label: 'Casilla'}
         email:           {label: 'Email'}
+        nombre_ordenado: {label: 'Persona'}
         
       list:
-        title: Listado de Personas
-        display: [nombre, ap_paterno, ap_materno, cedula_expedido, telefono]
+        title: Listado de Personas Registradas
+        table_method: selectPersonasDisponibles
+        display: [nombre_ordenado, cedula_expedido]
+        batch_actions: {}
+        object_actions:
+          asignar_personalegal: {label: Asignar Persona, action: asignarPersonalegal, params: 'class=boton-asignar confirm=¿Asignar al Personal?'}
+        actions:
+          ir_empresa: {label: Volver a Empresa}
+          _new: ~
       filter:
-        display: [nombre, ap_paterno, ci]
+        display: [ap_paterno, ci]
       form:
         display: 
-          Datos de la Persona:  [nombre, ap_paterno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
-          Personal Responsable: [newRegente]
+          Datos de la Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
+          Datos de Representante: [Nuevo Representante]
       edit:
         title: Editar Representante Legal %%nombre%%
+        actions:
+          ir_empresa:          {label: Volver a empresa}
+          quitar_personalegal: {label: Quitar Persona Legal, params: 'class=boton-quitar confirm=¿Quitar Persona Legal?'}
+          _save: ~
       new:
         title: Nuevo Representante Legal
+        actions:
+          _list: ~
+          _save: ~

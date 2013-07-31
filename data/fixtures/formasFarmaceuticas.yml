@@ -1,0 +1,21 @@
+## YAML Template.
+---
+FormaFarmaceutica:
+  Comprimido:
+    nombre: COMPRIMIDO
+  Capsula:
+    nombre: CÁPSULA
+  Polvo:
+    nombre: POLVO
+  Jarabe:
+    nombre: JARABE
+  Inyectable:
+    nombre: INYECTABLE
+  Tableta:
+    nombre: TABLETA
+  Gotas:
+    nombre: GOTAS
+  Gel:
+    nombre: GEL
+  Pasta:
+    nombre: PASTA

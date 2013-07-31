@@ -1,0 +1,61 @@
+GrupoCosmetico:
+  GrupoCosmetico_1:
+    nombre: 'COSMÉTICOS PARA NIÑOS'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_2:
+    nombre: 'COSMÉTICOS PARA EL ÁREA DE LOS OJOS'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_3:
+    nombre: 'COSMÉTICOS PARA LA PIEL'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_4:
+    nombre: 'COSMÉTICOS PARA LOS LABIOS'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_5:
+    nombre: 'COSMÉTICOS PARA EL ASEO E HIGIENE CORPORAL'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_6:
+    nombre: 'DESODORANTES Y ANTITRANSPIRANTES'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_7:
+    nombre: 'COSMÉTICOS CAPILARES'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_8:
+    nombre: 'COSMÉTICOS PARA LAS UÑAS'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_9:
+    nombre: 'COSMÉTICOS DE PERFUMERÍA'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_10:
+    nombre: 'PRODUCTOS PARA HIGIENE BUCAL Y DENTAL'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_11:
+    nombre: 'PRODUCTOS PARA DESPUÉS DE AFEITADO'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_12:
+    nombre: 'PRODUCTOS PARA EL BRONCEADO, PROTECCIÓN SOLAR Y AUTOBRONCEADORES'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_13:
+    nombre: DEPILATORIOS
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_14:
+    nombre: 'PRODUCTOS PARA EL BLANQUEO DE LA PIEL'
+    created_at: '2013-07-18 00:00:00'
+    updated_at: '2013-07-18 00:00:00'
+  GrupoCosmetico_15:
+    nombre: 'COSMETICOS PARA EL CUERPO'
+    created_at: '2013-07-18 18:18:22'
+    updated_at: '2013-07-18 18:18:22'

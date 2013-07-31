@@ -17,6 +17,8 @@
  * @property string $casilla
  * @property string $email
  * @property date $fecha_nacimiento
+ * @property boolean $is_active
+ * @property string $foto
  * @property sfGuardUser $sfGuardUser
  * @property RepresentanteLegal $RepresentanteLegal
  * @property RegenteFarmaceutico $RegenteFarmaceutico
@@ -33,6 +35,8 @@
  * @method string              getCasilla()             Returns the current record's "casilla" value
  * @method string              getEmail()               Returns the current record's "email" value
  * @method date                getFechaNacimiento()     Returns the current record's "fecha_nacimiento" value
+ * @method boolean             getIsActive()            Returns the current record's "is_active" value
+ * @method string              getFoto()                Returns the current record's "foto" value
  * @method sfGuardUser         getSfGuardUser()         Returns the current record's "sfGuardUser" value
  * @method RepresentanteLegal  getRepresentanteLegal()  Returns the current record's "RepresentanteLegal" value
  * @method RegenteFarmaceutico getRegenteFarmaceutico() Returns the current record's "RegenteFarmaceutico" value
@@ -48,6 +52,8 @@
  * @method Persona             setCasilla()             Sets the current record's "casilla" value
  * @method Persona             setEmail()               Sets the current record's "email" value
  * @method Persona             setFechaNacimiento()     Sets the current record's "fecha_nacimiento" value
+ * @method Persona             setIsActive()            Sets the current record's "is_active" value
+ * @method Persona             setFoto()                Sets the current record's "foto" value
  * @method Persona             setSfGuardUser()         Sets the current record's "sfGuardUser" value
  * @method Persona             setRepresentanteLegal()  Sets the current record's "RepresentanteLegal" value
  * @method Persona             setRegenteFarmaceutico() Sets the current record's "RegenteFarmaceutico" value
@@ -116,6 +122,17 @@ abstract class BasePersona extends sfDoctrineRecord
              ));
         $this->hasColumn('fecha_nacimiento', 'date', null, array(
              'type' => 'date',
+             'notnull' => false,
+             ));
+        $this->hasColumn('is_active', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => true,
+             'notnull' => true,
+             ));
+        $this->hasColumn('foto', 'string', 50, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => 50,
              ));
     }
 
