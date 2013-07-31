@@ -48,31 +48,31 @@ abstract class BaseFormulario extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Formulario5', array(
              'local' => 'id',
-             'foreign' => 'producto_id'));
+             'foreign' => 'formulario_id'));
 
         $this->hasOne('Formulario27', array(
              'local' => 'id',
-             'foreign' => 'producto_id'));
+             'foreign' => 'formulario_id'));
 
         $this->hasOne('Formulario516', array(
              'local' => 'id',
-             'foreign' => 'producto_id'));
+             'foreign' => 'formulario_id'));
 
         $this->hasOne('Formulario706', array(
              'local' => 'id',
-             'foreign' => 'producto_id'));
+             'foreign' => 'formulario_id'));
 
         $this->hasOne('Formulario7', array(
              'local' => 'id',
-             'foreign' => 'producto_id'));
+             'foreign' => 'formulario_id'));
 
         $this->hasOne('Formulario11', array(
              'local' => 'id',
-             'foreign' => 'producto_id'));
+             'foreign' => 'formulario_id'));
 
         $this->hasOne('Formulario12', array(
              'local' => 'id',
-             'foreign' => 'producto_id'));
+             'foreign' => 'formulario_id'));
 
         $this->hasMany('Etapa', array(
              'local' => 'id',

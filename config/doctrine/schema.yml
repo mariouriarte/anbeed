@@ -129,14 +129,14 @@ Formulario:
   actAs: {Timestampable: ~}
   columns:
   relations:
-    Formulario5:         {local: id, foreign: producto_id, type: one, foreignAlias: Formulario}
-    Formulario27:        {local: id, foreign: producto_id, type: one, foreignAlias: Formulario}
-    Formulario516:       {local: id, foreign: producto_id, type: one, foreignAlias: Formulario}
-    Formulario706:       {local: id, foreign: producto_id, type: one, foreignAlias: Formulario}
-    Formulario7:         {local: id, foreign: producto_id, type: one, foreignAlias: Formulario}
-    Formulario11:        {local: id, foreign: producto_id, type: one, foreignAlias: Formulario}
-    Formulario12:        {local: id, foreign: producto_id, type: one, foreignAlias: Formulario}
-    Etapa:              {local: id, foreign: formulario_id, type: many, foreignAlias: Formulario}
+    Formulario5:         {local: id, foreign: formulario_id, type: one, foreignAlias: Formulario}
+    Formulario27:        {local: id, foreign: formulario_id, type: one, foreignAlias: Formulario}
+    Formulario516:       {local: id, foreign: formulario_id, type: one, foreignAlias: Formulario}
+    Formulario706:       {local: id, foreign: formulario_id, type: one, foreignAlias: Formulario}
+    Formulario7:         {local: id, foreign: formulario_id, type: one, foreignAlias: Formulario}
+    Formulario11:        {local: id, foreign: formulario_id, type: one, foreignAlias: Formulario}
+    Formulario12:        {local: id, foreign: formulario_id, type: one, foreignAlias: Formulario}
+    Etapa:               {local: id, foreign: formulario_id, type: many, foreignAlias: Formulario}
 #-----------------------------
 # Medicamento y su Formulario
 Medicamento:
