@@ -4,7 +4,7 @@
     
     <table class="table_login">
         <tbody>
-        <fieldset class="boxBody"><h4>Ingresar al Sistema</h4`></fieldset>
+        <fieldset class="boxBody"><h4>Ingresar al Sistema</h4></fieldset>
             <?php echo $form ?>
         </tbody>
     </table>

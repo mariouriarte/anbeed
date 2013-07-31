@@ -8,13 +8,16 @@
  * @property string $nombre
  * @property Formulario5 $Formulario5
  * @property Formulario27 $Formulario27
+ * @property Doctrine_Collection $Formulario12
  * 
- * @method string           getNombre()       Returns the current record's "nombre" value
- * @method Formulario5      getFormulario5()  Returns the current record's "Formulario5" value
- * @method Formulario27     getFormulario27() Returns the current record's "Formulario27" value
- * @method OrigenFormulario setNombre()       Sets the current record's "nombre" value
- * @method OrigenFormulario setFormulario5()  Sets the current record's "Formulario5" value
- * @method OrigenFormulario setFormulario27() Sets the current record's "Formulario27" value
+ * @method string              getNombre()       Returns the current record's "nombre" value
+ * @method Formulario5         getFormulario5()  Returns the current record's "Formulario5" value
+ * @method Formulario27        getFormulario27() Returns the current record's "Formulario27" value
+ * @method Doctrine_Collection getFormulario12() Returns the current record's "Formulario12" collection
+ * @method OrigenFormulario    setNombre()       Sets the current record's "nombre" value
+ * @method OrigenFormulario    setFormulario5()  Sets the current record's "Formulario5" value
+ * @method OrigenFormulario    setFormulario27() Sets the current record's "Formulario27" value
+ * @method OrigenFormulario    setFormulario12() Sets the current record's "Formulario12" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -41,6 +44,10 @@ abstract class BaseOrigenFormulario extends sfDoctrineRecord
              'foreign' => 'origen_formulario_id'));
 
         $this->hasOne('Formulario27', array(
+             'local' => 'id',
+             'foreign' => 'origen_formulario_id'));
+
+        $this->hasMany('Formulario12', array(
              'local' => 'id',
              'foreign' => 'origen_formulario_id'));
 

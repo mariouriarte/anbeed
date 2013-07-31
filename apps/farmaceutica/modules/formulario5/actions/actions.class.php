@@ -17,10 +17,23 @@ class formulario5Actions extends autoFormulario5Actions
    {
         $this->redirect(sfContext::getInstance()->getRouting()->generate('medicamento'));
    }
-       public function executeListIrEmpresa(sfWebRequest $request)
-    {
+   public function executeListIrEmpresa(sfWebRequest $request)
+   {
         $user = sfContext::getInstance()->getUser();
         $empresa = $user->getAttribute('empresa');
         $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
-    }         
+   }
+//   
+//  public function executeEdit(sfWebRequest $request)
+//  {
+//    $this->formulario5 = $this->getRoute()->getObject();
+//    $this->form = $this->configuration->getForm($this->formulario5);
+//  }
+   public function executeNew(sfWebRequest $request)
+  {
+    $this->form = $this->configuration->getForm();
+    $this->formulario5 = $this->form->getObject();
+    $medicamento = $this->getUser()->getAttribute('medicamento');
+    $this->form->setDefault('medicamento_id', $medicamento->getId());
+  }
 }

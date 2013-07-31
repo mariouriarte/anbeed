@@ -13,10 +13,11 @@ abstract class BaseHigieneFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
+      'producto_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => true)),
       'empresa_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => true)),
       'laboratorio_fabricante_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('LaboratorioFabricante'), 'add_empty' => true)),
       'grupo_higiene'             => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'marca_id'                  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Marca'), 'add_empty' => true)),
+      'marca'                     => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'pais_id'                   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'add_empty' => true)),
       'nombre'                    => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'nombre_detalle'            => new sfWidgetFormFilterInput(array('with_empty' => false)),
@@ -30,10 +31,11 @@ abstract class BaseHigieneFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
+      'producto_id'               => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Producto'), 'column' => 'id')),
       'empresa_id'                => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Empresa'), 'column' => 'id')),
       'laboratorio_fabricante_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('LaboratorioFabricante'), 'column' => 'id')),
       'grupo_higiene'             => new sfValidatorPass(array('required' => false)),
-      'marca_id'                  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Marca'), 'column' => 'id')),
+      'marca'                     => new sfValidatorPass(array('required' => false)),
       'pais_id'                   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Pais'), 'column' => 'id')),
       'nombre'                    => new sfValidatorPass(array('required' => false)),
       'nombre_detalle'            => new sfValidatorPass(array('required' => false)),
@@ -64,10 +66,11 @@ abstract class BaseHigieneFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'                        => 'Number',
+      'producto_id'               => 'ForeignKey',
       'empresa_id'                => 'ForeignKey',
       'laboratorio_fabricante_id' => 'ForeignKey',
       'grupo_higiene'             => 'Text',
-      'marca_id'                  => 'ForeignKey',
+      'marca'                     => 'Text',
       'pais_id'                   => 'ForeignKey',
       'nombre'                    => 'Text',
       'nombre_detalle'            => 'Text',

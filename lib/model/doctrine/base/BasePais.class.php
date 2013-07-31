@@ -12,6 +12,7 @@
  * @property Cosmetico $Cosmetico
  * @property Doctrine_Collection $Formularios706
  * @property Doctrine_Collection $Higiene
+ * @property Doctrine_Collection $Formulario11
  * 
  * @method string                getNombre()                Returns the current record's "nombre" value
  * @method string                getBandera()               Returns the current record's "bandera" value
@@ -20,6 +21,7 @@
  * @method Cosmetico             getCosmetico()             Returns the current record's "Cosmetico" value
  * @method Doctrine_Collection   getFormularios706()        Returns the current record's "Formularios706" collection
  * @method Doctrine_Collection   getHigiene()               Returns the current record's "Higiene" collection
+ * @method Doctrine_Collection   getFormulario11()          Returns the current record's "Formulario11" collection
  * @method Pais                  setNombre()                Sets the current record's "nombre" value
  * @method Pais                  setBandera()               Sets the current record's "bandera" value
  * @method Pais                  setLaboratorioFabricante() Sets the current record's "LaboratorioFabricante" value
@@ -27,6 +29,7 @@
  * @method Pais                  setCosmetico()             Sets the current record's "Cosmetico" value
  * @method Pais                  setFormularios706()        Sets the current record's "Formularios706" collection
  * @method Pais                  setHigiene()               Sets the current record's "Higiene" collection
+ * @method Pais                  setFormulario11()          Sets the current record's "Formulario11" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -68,6 +71,10 @@ abstract class BasePais extends sfDoctrineRecord
              'foreign' => 'rescom_ciudad_id'));
 
         $this->hasMany('Higiene', array(
+             'local' => 'id',
+             'foreign' => 'pais_id'));
+
+        $this->hasMany('Formulario11', array(
              'local' => 'id',
              'foreign' => 'pais_id'));
 

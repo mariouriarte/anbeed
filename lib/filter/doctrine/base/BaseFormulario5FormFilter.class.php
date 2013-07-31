@@ -13,6 +13,7 @@ abstract class BaseFormulario5FormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
+      'formulario_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'), 'add_empty' => true)),
       'fecha'                        => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'vigencia'                     => new sfWidgetFormFilterInput(),
       'fecha_inicio_vigencia'        => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
@@ -26,6 +27,7 @@ abstract class BaseFormulario5FormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
+      'formulario_id'                => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Formulario'), 'column' => 'id')),
       'fecha'                        => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
       'vigencia'                     => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'fecha_inicio_vigencia'        => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
@@ -56,6 +58,7 @@ abstract class BaseFormulario5FormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'                           => 'Number',
+      'formulario_id'                => 'ForeignKey',
       'fecha'                        => 'Date',
       'vigencia'                     => 'Number',
       'fecha_inicio_vigencia'        => 'Date',

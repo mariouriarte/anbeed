@@ -13,11 +13,12 @@ abstract class BaseCosmeticoFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
+      'producto_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => true)),
       'empresa_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => true)),
       'laboratorio_fabricante_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('LaboratorioFabricante'), 'add_empty' => true)),
       'forma_cosmetica_id'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('FormaCosmetica'), 'add_empty' => true)),
       'grupo_cosmetico_id'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('GrupoCosmetico'), 'add_empty' => true)),
-      'marca_id'                  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Marca'), 'add_empty' => true)),
+      'marca'                     => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'pais_id'                   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'add_empty' => true)),
       'nombre'                    => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'codigo_nso'                => new sfWidgetFormFilterInput(),
@@ -30,11 +31,12 @@ abstract class BaseCosmeticoFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
+      'producto_id'               => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Producto'), 'column' => 'id')),
       'empresa_id'                => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Empresa'), 'column' => 'id')),
       'laboratorio_fabricante_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('LaboratorioFabricante'), 'column' => 'id')),
       'forma_cosmetica_id'        => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('FormaCosmetica'), 'column' => 'id')),
       'grupo_cosmetico_id'        => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('GrupoCosmetico'), 'column' => 'id')),
-      'marca_id'                  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Marca'), 'column' => 'id')),
+      'marca'                     => new sfValidatorPass(array('required' => false)),
       'pais_id'                   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Pais'), 'column' => 'id')),
       'nombre'                    => new sfValidatorPass(array('required' => false)),
       'codigo_nso'                => new sfValidatorPass(array('required' => false)),
@@ -64,11 +66,12 @@ abstract class BaseCosmeticoFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'                        => 'Number',
+      'producto_id'               => 'ForeignKey',
       'empresa_id'                => 'ForeignKey',
       'laboratorio_fabricante_id' => 'ForeignKey',
       'forma_cosmetica_id'        => 'ForeignKey',
       'grupo_cosmetico_id'        => 'ForeignKey',
-      'marca_id'                  => 'ForeignKey',
+      'marca'                     => 'Text',
       'pais_id'                   => 'ForeignKey',
       'nombre'                    => 'Text',
       'codigo_nso'                => 'Text',

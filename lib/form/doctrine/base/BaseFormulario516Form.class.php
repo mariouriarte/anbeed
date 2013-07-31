@@ -16,6 +16,7 @@ abstract class BaseFormulario516Form extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'                         => new sfWidgetFormInputHidden(),
+      'formulario_id'              => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'), 'add_empty' => false)),
       'fecha'                      => new sfWidgetFormDate(),
       'cosmetico_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Cosmetico'), 'add_empty' => false)),
       'vigencia'                   => new sfWidgetFormInputText(),
@@ -34,6 +35,7 @@ abstract class BaseFormulario516Form extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'                         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'formulario_id'              => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'))),
       'fecha'                      => new sfValidatorDate(array('required' => false)),
       'cosmetico_id'               => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Cosmetico'))),
       'vigencia'                   => new sfValidatorInteger(array('required' => false)),

@@ -13,6 +13,7 @@ abstract class BaseMedicamentoFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
+      'producto_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => true)),
       'empresa_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => true)),
       'laboratorio_fabricante_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('LaboratorioFabricante'), 'add_empty' => true)),
       'forma_farmaceutica_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('FormaFarmaceutica'), 'add_empty' => true)),
@@ -36,6 +37,7 @@ abstract class BaseMedicamentoFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
+      'producto_id'               => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Producto'), 'column' => 'id')),
       'empresa_id'                => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Empresa'), 'column' => 'id')),
       'laboratorio_fabricante_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('LaboratorioFabricante'), 'column' => 'id')),
       'forma_farmaceutica_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('FormaFarmaceutica'), 'column' => 'id')),
@@ -76,6 +78,7 @@ abstract class BaseMedicamentoFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'                        => 'Number',
+      'producto_id'               => 'ForeignKey',
       'empresa_id'                => 'ForeignKey',
       'laboratorio_fabricante_id' => 'ForeignKey',
       'forma_farmaceutica_id'     => 'ForeignKey',
