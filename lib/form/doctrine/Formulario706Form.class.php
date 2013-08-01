@@ -53,8 +53,12 @@ class Formulario706Form extends BaseFormulario706Form
                   'date_widget' => new sfWidgetFormDate(array(
                   'years'       => array_combine($years, $years)))));
         
+        //// Tipo de maquila
+        $this->widgetSchema['maquila_tipo'] = new sfWidgetFormChoice(
+            array('expanded' => true, 
+                  'choices'  => $this->tipo_maquila));
+        $this->validatorSchema['maquila_tipo'] = new sfValidatorString(array('required' => true));
         
-        /*
         ///// Responsable comercial Pais
         $this->widgetSchema['rescom_pais_id'] = new sfWidgetFormDoctrineChoice(
             array('model'        => 'Pais',
@@ -68,20 +72,7 @@ class Formulario706Form extends BaseFormulario706Form
                   'depends'   => 'Pais',
                   'add_empty' => 'Seleccione ciudad'));
         $this->validatorSchema['rescom_ciudad_id'] = new sfValidatorDoctrineChoice(
-            array('model' => 'Ciudad', 'required' => true));*/
-        $this->widgetSchema['rescom_pais_id'] = new sfWidgetFormDoctrineChoice(array(
-            'model'   => 'Pais',
-        ));
-        $this->widgetSchema['rescom_ciudad_id'] = new sfWidgetFormDoctrineDependentSelect(array(
-            'model'   => 'Ciudad', 
-            'depends' => 'Pais',
-        ));
-        
-        //// Tipo de maquila
-        $this->widgetSchema['maquila_tipo'] = new sfWidgetFormChoice(
-            array('expanded' => true, 
-                  'choices'  => $this->tipo_maquila));
-        $this->validatorSchema['maquila_tipo'] = new sfValidatorString(array('required' => true));
+            array('model' => 'Ciudad', 'required' => true));
         
     }
 }

@@ -28,9 +28,9 @@ class HigieneForm extends BaseHigieneForm
         ));
         
         //// Marca
-        $this->widgetSchema['marca_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
-            array('model'=>'Marca',
-                  'url'=>sfContext::getInstance()->getRouting()->generate('buscar_marca')
+        $this->widgetSchema['grupo_higiene_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+            array('model'=>'GrupoHigiene',
+                  'url'=>sfContext::getInstance()->getRouting()->generate('buscar_grupo_higiene')
         ));
         
         //// Pais de codigo NSO 

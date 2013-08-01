@@ -26,7 +26,7 @@ RepresentanteLegal:
   actAs: {Timestampable: ~}
   columns:
     persona_id: {type: integer, notnull: true}
-    is_active:        {type: boolean, default: true, notnull: true}
+    is_active:  {type: boolean, default: true, notnull: true}
   relations:
     Persona: {local: persona_id, foreign: id, type: one, foreignAlias: Representante}
     Empresa: {local: id, foreign: representante_legal_id, type: one, foreignAlias: Representante}
@@ -37,7 +37,7 @@ RegenteFarmaceutico:
     persona_id:            {type: integer, notnull: true}
     matricula_profesional: {type: string(20), notnull: false}
     carnet_colegiado:      {type: string(20), notnull: false}
-    is_active:        {type: boolean, default: true, notnull: true}
+    is_active:             {type: boolean, default: true, notnull: true}
   relations:
     Persona: {local: persona_id, foreign: id, type: one, foreignAlias: Regente}
     Empresa: {local: id, foreign: regente_farmaceutico_id, type: one, foreignAlias: Regente}
@@ -70,7 +70,7 @@ Empresa:
     Medicamento:         {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
     DispositivoMedico:   {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
     Cosmetico:           {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
-    Higiene:           {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
+    Higiene:             {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
     Ciudad:              {local: ciudad_id, foreign: id, type: one, foreignAlias: Empresa}
     
 LaboratorioFabricante:
@@ -87,18 +87,18 @@ LaboratorioFabricante:
     email:         {type: string(255), notnull: false, unique: true}
     observaciones: {type: string(2000)}
   relations:
-    Pais:             {local: pais_id, foreign: id, type: one, foreignAlias: Laboratorio}
-    Medicamento:        {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
-    DispositivoMedico:  {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
-    Cosmetico:          {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
-    Higiene:            {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
-    Ciudad:       {local: ciudad_id, foreign: id, type: one, foreignAlias: Laboratorio}
+    Pais:              {local: pais_id, foreign: id, type: one, foreignAlias: Laboratorio}
+    Medicamento:       {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
+    DispositivoMedico: {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
+    Cosmetico:         {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
+    Higiene:           {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
+    Ciudad:            {local: ciudad_id, foreign: id, type: one, foreignAlias: Laboratorio}
     
 Pais:
   actAs: {Timestampable: ~}
   columns:
-    nombre:    {type: string(150)}
-    bandera:   {type: string(50)}
+    nombre:  {type: string(150)}
+    bandera: {type: string(50)}
   relations:
     LaboratorioFabricante: {local: id, foreign: pais_id, type: one, foreignAlias: Pais}
     Ciudad:                {local: id, foreign: pais_id, type: many, foreignAlias: Pais}
@@ -175,6 +175,7 @@ FormulaCc:
   relations:
     DetalleFormulaCc: {local: id, foreign: formula_cc_id, type: many, foreignAlias: FormulaCc}
     Medicamento:      {local: id, foreign: formula_cc_id, type: many, foreignAlias: FormulaCc}
+    
 DetalleFormulaCc:
   actAs: {Timestampable: ~}
   columns:
@@ -214,27 +215,24 @@ Formulario5:
 TipoTramiteFormulario5:
   actAs: {Timestampable: ~}
   columns:
-    nombre:      {type: string(30), notnull: true}
+    nombre: {type: string(30), notnull: true}
   relations:
     Formulario5: {local: id, foreign: tipo_tramite_formulario5_id, type: one, foreignAlias: TipoTramite}
 
 TipoProductoFormulario5:
   actAs: {Timestampable: ~}
   columns:
-    nombre:      {type: string(30), notnull: true}
+    nombre: {type: string(30), notnull: true}
   relations:
     Formulario5: {local: id, foreign: tipo_producto_formulario5_id, type: one, foreignAlias: TipoProducto}
 
 OrigenFormulario:
   actAs: {Timestampable: ~}
   columns:
-    nombre:      {type: string(30), notnull: true}
+    nombre: {type: string(30), notnull: true}
   relations:
-    Formulario5:   {local: id, foreign: origen_formulario_id, type: one, foreignAlias: Origen}
-    Formulario27:  {local: id, foreign: origen_formulario_id, type: one, foreignAlias: Origen}
-
-
-
+    Formulario5:  {local: id, foreign: origen_formulario_id, type: one, foreignAlias: Origen}
+    Formulario27: {local: id, foreign: origen_formulario_id, type: one, foreignAlias: Origen}
 
 #-----------------------------------------
 # Dispositivo Medico y su Formulario
@@ -256,39 +254,39 @@ DispositivoMedico:
     registro_sanitario:        {type: string(50), unique: false, default: NULL}
     descripcion:               {type: string(2000), notnull: false}
   relations:
-    Formulario27:           {local: id, foreign: dispositivo_medico_id, type: many, foreignAlias: Dispositivos}
-    Empresa:                {local: empresa_id, foreign: id, type: one, foreignAlias: Dispositivos}
-    LaboratorioFabricante:  {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Dispositivos}
+    Formulario27:          {local: id, foreign: dispositivo_medico_id, type: many, foreignAlias: Dispositivos}
+    Empresa:               {local: empresa_id, foreign: id, type: one, foreignAlias: Dispositivos}
+    LaboratorioFabricante: {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Dispositivos}
 
 Formulario27:
   actAs: {Timestampable: ~}
   columns:
-    fecha:                          {type: date}
-    vigencia:                       {type: integer(2), notnull: false}
-    fecha_inicio_vigencia:          {type: date, notnull: false}
-    numero_ruta:                    {type: integer, notnull: false}
-    tipo_tramite_formulario27_id:   {type: integer, notnull: true}
-    origen_formulario_id:           {type: integer, notnull: true}
-    datos_formulario27_id:          {type: integer, notnull: true}
-    dispositivo_medico_id:          {type: integer, notnull: true}
+    fecha:                        {type: date}
+    vigencia:                     {type: integer(2), notnull: false}
+    fecha_inicio_vigencia:        {type: date, notnull: false}
+    numero_ruta:                  {type: integer, notnull: false}
+    tipo_tramite_formulario27_id: {type: integer, notnull: true}
+    origen_formulario_id:         {type: integer, notnull: true}
+    datos_formulario27_id:        {type: integer, notnull: true}
+    dispositivo_medico_id:        {type: integer, notnull: true}
   relations:
-    DispositivoMedico:              {local: dispositivo_medico_id, foreign: id, type: one, foreignAlias: Formulario27}
-    TipoTramiteFormulario27:        {local: tipo_tramite_formulario27_id, foreign: id, type: one, foreignAlias: Formulario27}
-    DatosFormulario27:              {local: datos_formulario27_id, foreign: id, type: one, foreignAlias: Formulario27}
-    OrigenFormulario:               {local: origen_formulario_id, foreign: id, type: one, foreignAlias: Formulario27}
-    Etapa:                          {local: id, foreign: formulario27_id, type: many, foreignAlias: Formulario27}
+    DispositivoMedico:       {local: dispositivo_medico_id, foreign: id, type: one, foreignAlias: Formulario27}
+    TipoTramiteFormulario27: {local: tipo_tramite_formulario27_id, foreign: id, type: one, foreignAlias: Formulario27}
+    DatosFormulario27:       {local: datos_formulario27_id, foreign: id, type: one, foreignAlias: Formulario27}
+    OrigenFormulario:        {local: origen_formulario_id, foreign: id, type: one, foreignAlias: Formulario27}
+    Etapa:                   {local: id, foreign: formulario27_id, type: many, foreignAlias: Formulario27}
     
 TipoTramiteFormulario27:
   actAs: {Timestampable: ~}
   columns:
-    nombre:       {type: string(30), notnull: true}
+    nombre: {type: string(30), notnull: true}
   relations:
     Formulario27: {local: id, foreign: tipo_tramite_formulario27_id, type: one, foreignAlias: TipoTramite}
     
 DatosFormulario27:
   actAs: {Timestampable: ~}
   columns:
-    nombre:       {type: string(30), notnull: true}
+    nombre: {type: string(30), notnull: true}
   relations:
     Formulario27: {local: id, foreign: datos_formulario27_id, type: one, foreignAlias: TipoTramite}
 
@@ -311,7 +309,7 @@ Cosmetico:
     registro_sanitario:        {type: string(50), unique: false, default: NULL}
     descripcion:               {type: string(2000), notnull: false}
   relations:
-    Formulario516:           {local: id, foreign: cosmetico_id, type: many, foreignAlias: Cosmeticos}
+    Formulario516:          {local: id, foreign: cosmetico_id, type: many, foreignAlias: Cosmeticos}
     Empresa:                {local: empresa_id, foreign: id, type: one, foreignAlias: Cosmeticos}
     LaboratorioFabricante:  {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Cosmeticos}
     FormaCosmetica:         {local: forma_cosmetica_id, foreign: id, type: one, foreignAlias: Cosmetico}
@@ -323,49 +321,48 @@ Cosmetico:
 FormaCosmetica:
   actAs: {Timestampable: ~}
   columns:
-    nombre:    {type: string(250), notnull: true}
+    nombre: {type: string(250), notnull: true}
   relations:
     Cosmetico: {local: id, foreign: forma_cosmetica_id, type: one, foreignAlias: FormaCosmetica}
 
 GrupoCosmetico:
   actAs: {Timestampable: ~}
   columns:
-    nombre:    {type: string(250), notnull: true}
+    nombre: {type: string(250), notnull: true}
   relations:
     Cosmetico: {local: id, foreign: grupo_cosmetico_id, type: one, foreignAlias: GrupoCosmetico}
     
 Marca:
   actAs: {Timestampable: ~}
   columns:
-    nombre:    {type: string(250), notnull: true}
+    nombre: {type: string(250), notnull: true}
   relations:
     Cosmetico: {local: id, foreign: marca_id, type: one, foreignAlias: Marca}
     
 Formulario516:
   actAs: {Timestampable: ~}
   columns:
-    fecha:                          {type: date}
-    cosmetico_id:                   {type: integer, notnull: true}
-    vigencia:                       {type: integer(2), notnull: false}
-    fecha_inicio_vigencia:          {type: date, notnull: false}
-    numero_ruta:                    {type: integer, notnull: false}
-    tipo_tramite_formulario_id:     {type: integer, notnull: true}
-    datos:                          {type: string(150), notnull: true}
-    datos_titular:                  {type: string(150), notnull: true}
-    maquila_embasador:              {type: string(255), notnull: false}
-    maquila_empacador:              {type: string(255), notnull: false}
-    maquila_acondicionador:         {type: string(255), notnull: false}
-    maquila_fabricado_para:         {type: string(255), notnull: false}
-    #falta por definir los anexos
+    fecha:                      {type: date}
+    cosmetico_id:               {type: integer, notnull: true}
+    vigencia:                   {type: integer(2), notnull: false}
+    fecha_inicio_vigencia:      {type: date, notnull: false}
+    numero_ruta:                {type: integer, notnull: false}
+    tipo_tramite_formulario_id: {type: integer, notnull: true}
+    datos:                      {type: string(150), notnull: true}
+    datos_titular:              {type: string(150), notnull: true}
+    maquila_embasador:          {type: string(255), notnull: false}
+    maquila_empacador:          {type: string(255), notnull: false}
+    maquila_acondicionador:     {type: string(255), notnull: false}
+    maquila_fabricado_para:     {type: string(255), notnull: false}
   relations:
-    Cosmetico:                      {local: cosmetico_id, foreign: id, type: one, foreignAlias: Formulario516}
-    TipoTramiteFormulario:          {local: tipo_tramite_formulario_id, foreign: id, type: one, foreignAlias: Formulario516}
-    Etapa:                          {local: id, foreign: formulario516_id, type: many, foreignAlias: Formulario516}
+    Cosmetico:             {local: cosmetico_id, foreign: id, type: one, foreignAlias: Formulario516}
+    TipoTramiteFormulario: {local: tipo_tramite_formulario_id, foreign: id, type: one, foreignAlias: Formulario516}
+    Etapa:                 {local: id, foreign: formulario516_id, type: many, foreignAlias: Formulario516}
 
 TipoTramiteFormulario:
   actAs: {Timestampable: ~}
   columns:
-    nombre:        {type: string(100), notnull: true}
+    nombre: {type: string(100), notnull: true}
   relations:
     Formulario516: {local: id, foreign: tipo_tramite_formulario_id, type: one, foreignAlias: TipoTramite}
 
@@ -377,8 +374,8 @@ Higiene:
   columns:
     empresa_id:                {type: integer, notnull: true}
     laboratorio_fabricante_id: {type: integer, notnull: true}
-    grupo_higiene:             {type: string(255), notnull: true}
-    marca_id:                  {type: integer, notnull: true}
+    grupo_higiene_id:          {type: integer, notnull: false}
+    marca:                     {type: string(250), notnull: false}
     pais_id:                   {type: integer, notnull: false}
     nombre:                    {type: string(255), notnull: true}
     nombre_detalle:            {type: string(5), notnull: true}
@@ -388,11 +385,18 @@ Higiene:
     expediente:                {type: string(250), notnull: false}
     registro_sanitario:        {type: string(50), unique: false, default: NULL}
   relations:
-    Formulario706:             {local: id, foreign: higiene_id, type: many, foreignAlias: Higienes}
-    Empresa:                   {local: empresa_id, foreign: id, type: one, foreignAlias: Higienes}
-    LaboratorioFabricante:     {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Higienes}
-    Marca:                     {local: marca_id, foreign: id, type: one, foreignAlias: Higiene}
-    Pais:                      {local: pais_id, foreign: id, type: one, foreignAlias: Higiene}
+    Formulario706:         {local: id, foreign: higiene_id, type: many, foreignAlias: Higiene}
+    Empresa:               {local: empresa_id, foreign: id, type: one, foreignAlias: Higiene}
+    LaboratorioFabricante: {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Higiene}
+    Pais:                  {local: pais_id, foreign: id, type: one, foreignAlias: Higiene}
+    GrupoHigiene:          {local: grupo_higiene_id, foreign: id, type: one, foreignAlias: Higiene}
+    
+GrupoHigiene:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre: {type: string(250), notnull: true}
+  relations:
+    Higienes: {local: id, foreign: forma_cosmetica_id, type: many, class: Higiene}
 
 Formulario706:
   actAs: {Timestampable: ~}
@@ -407,7 +411,6 @@ Formulario706:
     datos_titular:              {type: string(150), notnull: true}
     rescom_nombre:              {type: string(150), notnull: false}
     rescom_direccion:           {type: string(150), notnull: false}
-#    rescom_pais_id:             {type: integer, notnull: false}
     rescom_ciudad_id:           {type: integer, notnull: false}
     rescom_telefono:            {type: string(20), notnull: false}
     rescom_fax:                 {type: string(20), notnull: false}
@@ -415,13 +418,11 @@ Formulario706:
     maquila_tipo:               {type: string(255), notnull: false}
     maquila:                    {type: string(255), notnull: false}
     maquila_fabricado:          {type: string(255), notnull: false}
-
   relations:
-    Higiene:                    {local: higiene_id, foreign: id, type: one, foreignAlias: Formularios706}
-    TipoTramiteFormulario:      {local: tipo_tramite_formulario_id, foreign: id, type: one, foreignAlias: Formularios706}
-    Etapa:                      {local: id, foreign: formulario706_id, type: many, foreignAlias: Formularios706}
-    Ciudad:                     {local: rescom_ciudad_id, foreign: id, type: one, foreignAlias: Formularios706}
-    
+    Higiene:               {local: higiene_id, foreign: id, type: one, foreignAlias: Formularios706}
+    TipoTramiteFormulario: {local: tipo_tramite_formulario_id, foreign: id, type: one, foreignAlias: Formularios706}
+    Etapa:                 {local: id, foreign: formulario706_id, type: many, foreignAlias: Formularios706}
+    Ciudad:                {local: rescom_ciudad_id, foreign: id, type: one, foreignAlias: Formularios706}
 
 #--------------------------------------------
 
@@ -449,4 +450,3 @@ TipoEtapa:
     descripcion: {type: string(2000), notnull: false}
   relations:
     Etapa: {local: id, foreign: tipo_etapa_id, type: one, foreignAlias: Tipo}
-

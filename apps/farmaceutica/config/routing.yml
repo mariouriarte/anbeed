@@ -1,3 +1,12 @@
+grupo_higiene:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                GrupoHigiene
+    module:               grupo_higiene
+    prefix_path:          /grupo_higiene
+    column:               id
+    with_wildcard_routes: true
+
 formulario706_form706porempresa:
   class: sfDoctrineRouteCollection
   options:
@@ -268,6 +277,9 @@ producto:
     column:               id
     with_wildcard_routes: true
 
+buscar_grupo_higiene:
+    url:   /grupo_higiene/buscar
+    param: { module: grupo_higiene, action: buscar }
 buscar_paises:
     url:   /paises/buscar
     param: { module: paises, action: buscar }
