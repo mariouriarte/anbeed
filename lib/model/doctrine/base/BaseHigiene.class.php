@@ -8,11 +8,7 @@
  * @property integer $producto_id
  * @property integer $empresa_id
  * @property integer $laboratorio_fabricante_id
-<<<<<<< HEAD
  * @property integer $grupo_higiene_id
-=======
- * @property string $grupo_higiene
->>>>>>> e508dafd833a865e146324dd7e81ff96595afec7
  * @property string $marca
  * @property integer $pais_id
  * @property string $nombre
@@ -27,16 +23,11 @@
  * @property Empresa $Empresa
  * @property LaboratorioFabricante $LaboratorioFabricante
  * @property Pais $Pais
- * @property GrupoHigiene $GrupoHigiene
  * 
  * @method integer               getProductoId()                Returns the current record's "producto_id" value
  * @method integer               getEmpresaId()                 Returns the current record's "empresa_id" value
  * @method integer               getLaboratorioFabricanteId()   Returns the current record's "laboratorio_fabricante_id" value
-<<<<<<< HEAD
  * @method integer               getGrupoHigieneId()            Returns the current record's "grupo_higiene_id" value
-=======
- * @method string                getGrupoHigiene()              Returns the current record's "grupo_higiene" value
->>>>>>> e508dafd833a865e146324dd7e81ff96595afec7
  * @method string                getMarca()                     Returns the current record's "marca" value
  * @method integer               getPaisId()                    Returns the current record's "pais_id" value
  * @method string                getNombre()                    Returns the current record's "nombre" value
@@ -51,17 +42,10 @@
  * @method Empresa               getEmpresa()                   Returns the current record's "Empresa" value
  * @method LaboratorioFabricante getLaboratorioFabricante()     Returns the current record's "LaboratorioFabricante" value
  * @method Pais                  getPais()                      Returns the current record's "Pais" value
-<<<<<<< HEAD
- * @method GrupoHigiene          getGrupoHigiene()              Returns the current record's "GrupoHigiene" value
- * @method Higiene               setEmpresaId()                 Sets the current record's "empresa_id" value
- * @method Higiene               setLaboratorioFabricanteId()   Sets the current record's "laboratorio_fabricante_id" value
- * @method Higiene               setGrupoHigieneId()            Sets the current record's "grupo_higiene_id" value
-=======
  * @method Higiene               setProductoId()                Sets the current record's "producto_id" value
  * @method Higiene               setEmpresaId()                 Sets the current record's "empresa_id" value
  * @method Higiene               setLaboratorioFabricanteId()   Sets the current record's "laboratorio_fabricante_id" value
- * @method Higiene               setGrupoHigiene()              Sets the current record's "grupo_higiene" value
->>>>>>> e508dafd833a865e146324dd7e81ff96595afec7
+ * @method Higiene               setGrupoHigieneId()            Sets the current record's "grupo_higiene_id" value
  * @method Higiene               setMarca()                     Sets the current record's "marca" value
  * @method Higiene               setPaisId()                    Sets the current record's "pais_id" value
  * @method Higiene               setNombre()                    Sets the current record's "nombre" value
@@ -76,7 +60,6 @@
  * @method Higiene               setEmpresa()                   Sets the current record's "Empresa" value
  * @method Higiene               setLaboratorioFabricante()     Sets the current record's "LaboratorioFabricante" value
  * @method Higiene               setPais()                      Sets the current record's "Pais" value
- * @method Higiene               setGrupoHigiene()              Sets the current record's "GrupoHigiene" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -100,26 +83,14 @@ abstract class BaseHigiene extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              ));
-<<<<<<< HEAD
         $this->hasColumn('grupo_higiene_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => false,
-             ));
-        $this->hasColumn('marca', 'string', 250, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 250,
-=======
-        $this->hasColumn('grupo_higiene', 'string', 255, array(
-             'type' => 'string',
-             'notnull' => true,
-             'length' => 255,
              ));
         $this->hasColumn('marca', 'string', 255, array(
              'type' => 'string',
              'notnull' => true,
              'length' => 255,
->>>>>>> e508dafd833a865e146324dd7e81ff96595afec7
              ));
         $this->hasColumn('pais_id', 'integer', null, array(
              'type' => 'integer',
@@ -183,10 +154,6 @@ abstract class BaseHigiene extends sfDoctrineRecord
 
         $this->hasOne('Pais', array(
              'local' => 'pais_id',
-             'foreign' => 'id'));
-
-        $this->hasOne('GrupoHigiene', array(
-             'local' => 'grupo_higiene_id',
              'foreign' => 'id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();

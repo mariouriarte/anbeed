@@ -19,11 +19,7 @@ abstract class BaseHigieneForm extends BaseFormDoctrine
       'producto_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => false)),
       'empresa_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => false)),
       'laboratorio_fabricante_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('LaboratorioFabricante'), 'add_empty' => false)),
-<<<<<<< HEAD
-      'grupo_higiene_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('GrupoHigiene'), 'add_empty' => true)),
-=======
-      'grupo_higiene'             => new sfWidgetFormInputText(),
->>>>>>> e508dafd833a865e146324dd7e81ff96595afec7
+      'grupo_higiene_id'          => new sfWidgetFormInputText(),
       'marca'                     => new sfWidgetFormInputText(),
       'pais_id'                   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'add_empty' => true)),
       'nombre'                    => new sfWidgetFormInputText(),
@@ -42,13 +38,8 @@ abstract class BaseHigieneForm extends BaseFormDoctrine
       'producto_id'               => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'))),
       'empresa_id'                => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'))),
       'laboratorio_fabricante_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('LaboratorioFabricante'))),
-<<<<<<< HEAD
-      'grupo_higiene_id'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('GrupoHigiene'), 'required' => false)),
-      'marca'                     => new sfValidatorString(array('max_length' => 250, 'required' => false)),
-=======
-      'grupo_higiene'             => new sfValidatorString(array('max_length' => 255)),
+      'grupo_higiene_id'          => new sfValidatorInteger(array('required' => false)),
       'marca'                     => new sfValidatorString(array('max_length' => 255)),
->>>>>>> e508dafd833a865e146324dd7e81ff96595afec7
       'pais_id'                   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'required' => false)),
       'nombre'                    => new sfValidatorString(array('max_length' => 255)),
       'nombre_detalle'            => new sfValidatorString(array('max_length' => 5)),
