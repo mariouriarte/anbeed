@@ -13,6 +13,7 @@ abstract class BaseDispositivoMedicoFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
+      'producto_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => true)),
       'empresa_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => true)),
       'laboratorio_fabricante_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('LaboratorioFabricante'), 'add_empty' => true)),
       'nombre_comercial'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
@@ -32,6 +33,7 @@ abstract class BaseDispositivoMedicoFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
+      'producto_id'               => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Producto'), 'column' => 'id')),
       'empresa_id'                => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Empresa'), 'column' => 'id')),
       'laboratorio_fabricante_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('LaboratorioFabricante'), 'column' => 'id')),
       'nombre_comercial'          => new sfValidatorPass(array('required' => false)),
@@ -68,6 +70,7 @@ abstract class BaseDispositivoMedicoFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'                        => 'Number',
+      'producto_id'               => 'ForeignKey',
       'empresa_id'                => 'ForeignKey',
       'laboratorio_fabricante_id' => 'ForeignKey',
       'nombre_comercial'          => 'Text',

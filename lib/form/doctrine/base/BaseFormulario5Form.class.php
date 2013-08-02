@@ -16,6 +16,7 @@ abstract class BaseFormulario5Form extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'                           => new sfWidgetFormInputHidden(),
+      'formulario_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'), 'add_empty' => false)),
       'fecha'                        => new sfWidgetFormDate(),
       'vigencia'                     => new sfWidgetFormInputText(),
       'fecha_inicio_vigencia'        => new sfWidgetFormDate(),
@@ -30,6 +31,7 @@ abstract class BaseFormulario5Form extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'                           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'formulario_id'                => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'))),
       'fecha'                        => new sfValidatorDate(array('required' => false)),
       'vigencia'                     => new sfValidatorInteger(array('required' => false)),
       'fecha_inicio_vigencia'        => new sfValidatorDate(array('required' => false)),
