@@ -87,12 +87,13 @@ LaboratorioFabricante:
     email:         {type: string(255), notnull: false, unique: true}
     observaciones: {type: string(2000)}
   relations:
-    Pais:             {local: pais_id, foreign: id, type: one, foreignAlias: Laboratorio}
+    Pais:               {local: pais_id, foreign: id, type: one, foreignAlias: Laboratorio}
     Medicamento:        {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
     DispositivoMedico:  {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
     Cosmetico:          {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
     Higiene:            {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
-    Ciudad:       {local: ciudad_id, foreign: id, type: one, foreignAlias: Laboratorio}
+    Reactivo:           {local: id, foreign: laboratorio_fabricante_id, type: many, foreignAlias: Laboratorio}
+    Ciudad:             {local: ciudad_id, foreign: id, type: one, foreignAlias: Laboratorio}
     
 Pais:
   actAs: {Timestampable: ~}
@@ -497,7 +498,6 @@ Reactivo:
     periodo_validez:           {type: string(50)}
     componente:                {type: string(5000)}
     registro_sanitario:        {type: string(50), unique: false, default: NULL}
-    descripcion:               {type: string(2000), notnull: false}
   relations:
     Formulario12:           {local: id, foreign: reactivo_id, type: many, foreignAlias: Reactivos}
     Producto:               {local: producto_id, foreign: id, type: one, foreignAlias: Reactivto}

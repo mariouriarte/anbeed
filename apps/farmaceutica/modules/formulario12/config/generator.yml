@@ -1,0 +1,45 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Formulario12
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario12
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        fecha:                         {label: 'Fecha de Registro'}
+        tipo_tramite_formulario12_id:  {label: 'Tipo de Trámite'}
+        origen_formulario_id:          {label: 'Origen'}
+      
+      list:    
+        title: Listado de Solicitudes para Registro Reactivos para Diagnostico
+        display: [fecha, tipo_tramite_formulario12, origen_formulario, reactivo]
+#        table_method: selectForms12DeDispositivo
+        actions:
+          ir_productos: {label: Regresar a Reactivos}
+          ir_empresa:   {label: Volver a Empresa}
+          _new: ~      
+      filter:  
+        display: [numero_ruta, tipo_tramite_formulario12_id, origen_formulario_id]
+      
+      form:    
+        display: [fecha, tipo_tramite_formulario12_id, origen_formulario_id, vigencia, fecha_inicio_vigencia, numero_ruta, modificacion]
+      edit:    
+        title: Editar Listado de Solicitudes para Registro Reactivos para Diagnostico
+        display: [fecha, tipo_tramite_formulario12_id, origen_formulario_id, dispositivo_medico_id, vigencia, fecha_inicio_vigencia, numero_ruta]
+        actions:
+          _list: ~  
+          _save: ~  
+      new:     
+        title: Solicitud para Registro y Control de Calidad de Dispositivos Medicos
+        display: [fecha, tipo_tramite_formulario12_id, origen_formulario_id, reactivo_id, vigencia, fecha_inicio_vigencia, numero_ruta, modificacion]
+        actions:
+          _list: ~  
+          _save: ~

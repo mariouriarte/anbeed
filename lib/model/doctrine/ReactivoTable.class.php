@@ -16,4 +16,16 @@ class ReactivoTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Reactivo');
     }
+    
+    public function selectReactivosDeEmpresa()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $q = Doctrine_Query::create()
+                    ->from('Reactivo r')
+                    ->where('r.empresa_id = ?', $empresa->getId())
+                    ->orderBy('r.id ASC');
+            
+        return $q;
+    }
 }

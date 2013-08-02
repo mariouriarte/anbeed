@@ -17,7 +17,7 @@ generator:
         empresa_id:                {label: 'Empresa'}
         laboratorio_fabricante_id: {label: 'Laboratorio Fabricante'}
         grupo_higiene:             {label: 'Grupo Higiene'}
-        marca_id:                  {label: 'Marca'}
+        marca:                     {label: 'Marca'}
         pais_id:                   {label: 'País de código NSO'}
         nombre:                    {label: 'Nombre del producto'}
         phd:                       {label: 'PHD'}
@@ -38,11 +38,11 @@ generator:
           _new: ~ 
           
       filter:
-        display: [nombre, marca_id, laboratorio_fabricante_id]
+        display: [nombre, marca, laboratorio_fabricante_id]
         
       form:
         display:
-         datos: [empresa_id, laboratorio_fabricante_id, nombre, nombre_detalle, grupo_higiene, variedades, marca_id, codigo_nso, expediente, vigencia_nso, pais_id]
+         datos: [empresa_id, laboratorio_fabricante_id, nombre, nombre_detalle, grupo_higiene, variedades, marca, codigo_nso, expediente, vigencia_nso, pais_id]
         actions:    
           _delete: ~
           _list: ~

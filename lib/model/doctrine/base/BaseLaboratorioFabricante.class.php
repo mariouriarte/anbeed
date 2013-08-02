@@ -20,8 +20,8 @@
  * @property Doctrine_Collection $DispositivoMedico
  * @property Doctrine_Collection $Cosmetico
  * @property Doctrine_Collection $Higiene
+ * @property Doctrine_Collection $Reactivo
  * @property Ciudad $Ciudad
- * @property Doctrine_Collection $Reactivos
  * 
  * @method integer               getPaisId()            Returns the current record's "pais_id" value
  * @method integer               getCiudadId()          Returns the current record's "ciudad_id" value
@@ -38,8 +38,8 @@
  * @method Doctrine_Collection   getDispositivoMedico() Returns the current record's "DispositivoMedico" collection
  * @method Doctrine_Collection   getCosmetico()         Returns the current record's "Cosmetico" collection
  * @method Doctrine_Collection   getHigiene()           Returns the current record's "Higiene" collection
+ * @method Doctrine_Collection   getReactivo()          Returns the current record's "Reactivo" collection
  * @method Ciudad                getCiudad()            Returns the current record's "Ciudad" value
- * @method Doctrine_Collection   getReactivos()         Returns the current record's "Reactivos" collection
  * @method LaboratorioFabricante setPaisId()            Sets the current record's "pais_id" value
  * @method LaboratorioFabricante setCiudadId()          Sets the current record's "ciudad_id" value
  * @method LaboratorioFabricante setNombre()            Sets the current record's "nombre" value
@@ -55,8 +55,8 @@
  * @method LaboratorioFabricante setDispositivoMedico() Sets the current record's "DispositivoMedico" collection
  * @method LaboratorioFabricante setCosmetico()         Sets the current record's "Cosmetico" collection
  * @method LaboratorioFabricante setHigiene()           Sets the current record's "Higiene" collection
+ * @method LaboratorioFabricante setReactivo()          Sets the current record's "Reactivo" collection
  * @method LaboratorioFabricante setCiudad()            Sets the current record's "Ciudad" value
- * @method LaboratorioFabricante setReactivos()         Sets the current record's "Reactivos" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -141,13 +141,13 @@ abstract class BaseLaboratorioFabricante extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'laboratorio_fabricante_id'));
 
+        $this->hasMany('Reactivo', array(
+             'local' => 'id',
+             'foreign' => 'laboratorio_fabricante_id'));
+
         $this->hasOne('Ciudad', array(
              'local' => 'ciudad_id',
              'foreign' => 'id'));
-
-        $this->hasMany('Reactivo as Reactivos', array(
-             'local' => 'id',
-             'foreign' => 'laboratorio_fabricante_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

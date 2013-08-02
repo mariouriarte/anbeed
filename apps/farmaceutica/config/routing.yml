@@ -1,3 +1,21 @@
+formulario12:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario12
+    module:               formulario12
+    prefix_path:          /formulario12
+    column:               id
+    with_wildcard_routes: true
+
+reactivo:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Reactivo
+    module:               reactivos
+    prefix_path:          /reactivos
+    column:               id
+    with_wildcard_routes: true
+
 formulario706_form706porempresa:
   class: sfDoctrineRouteCollection
   options:

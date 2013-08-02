@@ -12,4 +12,8 @@
  */
 class Reactivo extends BaseReactivo
 {
+    public function __toString()
+    {
+        return $this->getNombreComercial();
+    }
 }

@@ -27,7 +27,6 @@ abstract class BaseReactivoForm extends BaseFormDoctrine
       'periodo_validez'           => new sfWidgetFormInputText(),
       'componente'                => new sfWidgetFormTextarea(),
       'registro_sanitario'        => new sfWidgetFormInputText(),
-      'descripcion'               => new sfWidgetFormTextarea(),
       'created_at'                => new sfWidgetFormDateTime(),
       'updated_at'                => new sfWidgetFormDateTime(),
     ));
@@ -45,7 +44,6 @@ abstract class BaseReactivoForm extends BaseFormDoctrine
       'periodo_validez'           => new sfValidatorString(array('max_length' => 50, 'required' => false)),
       'componente'                => new sfValidatorString(array('max_length' => 5000, 'required' => false)),
       'registro_sanitario'        => new sfValidatorString(array('max_length' => 50, 'required' => false)),
-      'descripcion'               => new sfValidatorString(array('max_length' => 2000, 'required' => false)),
       'created_at'                => new sfValidatorDateTime(),
       'updated_at'                => new sfValidatorDateTime(),
     ));

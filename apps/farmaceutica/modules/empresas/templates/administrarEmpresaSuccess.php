@@ -51,6 +51,7 @@
                             <li><a href="/farmaceutica_dev.php/dispositivos"><span>Dispositivos medicos</span></a></li>
                             <li><a href="/farmaceutica_dev.php/cosmetico"><span>Cosméticos</span></a></li>
                             <li><a href="/farmaceutica_dev.php/higiene"><span>Higiene y limpieza</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/reactivos"><span>Reactivos para Diagnóstico</span></a></li>
                         </ul>
                     </div>
                 </div>

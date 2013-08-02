@@ -1,0 +1,48 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Reactivo
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          reactivo
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        laboratorio_fabricante_id: {label: Laboratorio Fabricante}
+        nombre_comercial:          {label: Nombre Comercial}
+        catalogo:                  {label: Catálogo o referencia}
+        uso:                       {label: Uso o aplicación}
+        presentacion:              {label: Presentación}
+        conservacion:              {label: Conservación}
+        periodo_validez:           {label: Período de validez}
+        componente:                {label: COMPONENTES}
+        registro_sanitario:        {label: N° de Registro Sanitario}
+      list:    
+        title: Reactivos para Diagnóstico Registrados
+        display: [nombre_comercial, laboratorio_fabricante, registro_sanitario]
+        table_method: selectReactivosDeEmpresa
+        object_actions:
+          ir_form12:   {label: Form 012, action: irForm12}
+          _edit:  ~
+        actions:
+          adm_empresa: {label: Volver a Empresa}
+          _new:     ~ 
+      filter:  
+        display: [nombre_comercial, laboratorio_fabricante_id, registro_sanitario]
+      form:    
+        display:
+          Datos del Producto: [laboratorio_fabricante_id, nombre_comercial, catalogo, uso, presentacion, conservacion, periodo_validez, componente, registro_sanitario]
+        actions:    
+          _delete: ~
+          _list: ~
+          _save: ~
+      edit:
+        title: Editar Reactivo para Diagnóstico %%nombre_comercial%%
+      new:     
+        title: Registro de Reactivos para Diagnóstico

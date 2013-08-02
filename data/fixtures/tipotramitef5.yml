@@ -33,3 +33,17 @@ TipoTramiteFormulario:
     nombre: 'INFORMACIÓN DE CAMBIOS'
     created_at: '2008-01-01 00:00:00'
     updated_at: '2008-01-01 00:00:00'
+
+TipoTramiteFormulario12:
+  TipoTramiteFormulario12_1:
+    nombre: 'INSCRIPCIÓN'
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:02:00'
+  TipoTramiteFormulario12_2:
+    nombre: 'REINSCRIPCIÓN'
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 00:00:00'
+  TipoTramiteFormulario12_3:
+    nombre: 'MODIFICACIÓN'
+    created_at: '2008-01-01 00:00:00'
+    updated_at: '2008-01-01 01:00:00'

@@ -16,7 +16,6 @@
  * @property string $periodo_validez
  * @property string $componente
  * @property string $registro_sanitario
- * @property string $descripcion
  * @property Doctrine_Collection $Formulario12
  * @property Producto $Producto
  * @property Empresa $Empresa
@@ -33,7 +32,6 @@
  * @method string                getPeriodoValidez()            Returns the current record's "periodo_validez" value
  * @method string                getComponente()                Returns the current record's "componente" value
  * @method string                getRegistroSanitario()         Returns the current record's "registro_sanitario" value
- * @method string                getDescripcion()               Returns the current record's "descripcion" value
  * @method Doctrine_Collection   getFormulario12()              Returns the current record's "Formulario12" collection
  * @method Producto              getProducto()                  Returns the current record's "Producto" value
  * @method Empresa               getEmpresa()                   Returns the current record's "Empresa" value
@@ -49,7 +47,6 @@
  * @method Reactivo              setPeriodoValidez()            Sets the current record's "periodo_validez" value
  * @method Reactivo              setComponente()                Sets the current record's "componente" value
  * @method Reactivo              setRegistroSanitario()         Sets the current record's "registro_sanitario" value
- * @method Reactivo              setDescripcion()               Sets the current record's "descripcion" value
  * @method Reactivo              setFormulario12()              Sets the current record's "Formulario12" collection
  * @method Reactivo              setProducto()                  Sets the current record's "Producto" value
  * @method Reactivo              setEmpresa()                   Sets the current record's "Empresa" value
@@ -112,11 +109,6 @@ abstract class BaseReactivo extends sfDoctrineRecord
              'type' => 'string',
              'unique' => false,
              'length' => 50,
-             ));
-        $this->hasColumn('descripcion', 'string', 2000, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 2000,
              ));
     }
 
