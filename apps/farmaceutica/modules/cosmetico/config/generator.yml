@@ -18,7 +18,7 @@ generator:
         laboratorio_fabricante_id: {label: 'Laboratorio Fabricante'}
         forma_cosmetica_id:        {label: Forma Cosmética}
         grupo_cosmetico_id:        {label: Grupo Cosmético}
-        marca_id:                  {label: Marca}
+        marca:                     {label: Marca}
         nombre:                    {label: Nombre del producto}
         codigo_nso:                {label: Código de identificación de la NSO}
         expediente:                {label: Número de Expediente}
@@ -37,10 +37,10 @@ generator:
           adm_empresa: {label: Volver a Empresa}
           _new:     ~ 
       filter:  
-        display: [nombre, marca_id, laboratorio_fabricante_id, registro_sanitario]
+        display: [nombre, marca, laboratorio_fabricante_id, registro_sanitario]
       form:
         display:
-          Datos Generales del Producto: [laboratorio_fabricante_id, nombre, forma_cosmetica_id, grupo_cosmetico_id, marca_id, codigo_nso, expediente, vigencia_nso, pais_id, registro_sanitario, descripcion]
+          Datos Generales del Producto: [laboratorio_fabricante_id, nombre, forma_cosmetica_id, grupo_cosmetico_id, marca, codigo_nso, expediente, vigencia_nso, pais_id, registro_sanitario, descripcion]
         actions:    
           _delete: ~
           _list: ~

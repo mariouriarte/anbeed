@@ -14,17 +14,18 @@ generator:
     config:
       actions: ~
       fields:  
-        empresa_id:  {label: 'Empresa'}
-        laboratorio: {label: 'Laboratorio Fabricante'}
+        empresa_id:             {label: 'Empresa'}
+        laboratorio_fabricante: {label: 'Laboratorio Fabricante'}
+        empresa:                {label: 'Empresa'}
       list:
         title:   Desiciones 516 Registrados
-        display: [cosmetico, laboratorio, tipo_tramite_formulario]
+        display: [fecha, tipo_tramite_formulario, empresa, laboratorio_fabricante, cosmetico]
         actions:
           ir_portal: {label: Volver al Portal}
         object_actions:
           edit: {label: Editar, action: editar}   
       filter:  
-        display: [cosmetico_id, tipo_tramite_formulario_id]
+        display: [empresa_id, cosmetico_id, tipo_tramite_formulario_id]
       form:    ~
       edit:    ~
       new:     ~

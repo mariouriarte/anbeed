@@ -18,11 +18,14 @@ generator:
         tipo_tramite_formulario5_id:  {label: 'Tipo de Trámite'}
         tipo_producto_formulario5_id: {label: 'Tipo de Producto'}
         origen_formulario_id:        {label: 'Origen'}
+        empresa:                      {label: 'Empresa'}
+        laboratorio_fabricante:       {label: 'Laboratorio Fabricante'}
+        tipo_tramite_formulario5:     {label: 'Tipo de Trámite'}
       
       list:    
         title: Listado de Solicitudes para Registro y Control de Calidad de Medicamentos
         table_method: selectForms5DeMedicamento
-        display: [fecha, tipo_tramite_formulario5, tipo_producto_formulario5, origen_formulario, medicamento]
+        display: [fecha, tipo_tramite_formulario5, empresa, laboratorio_fabricante, medicamento]
         actions:
           ir_productos: {label: Regresar a Medicamentos}
           ir_empresa: {label: Volver a Empresa}

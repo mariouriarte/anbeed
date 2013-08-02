@@ -13,20 +13,20 @@ generator:
 
     config:
       actions: ~
-      fields:
-        fields:  
-        laboratorio: {label: 'Laboratorio Fabricante'}
+      fields: 
+        empresa:                      {label: 'Empresa'}
+        laboratorio_fabricante:       {label: 'Laboratorio Fabricante'}
         
       list:
         title: Desiciones 706 registrados
-        display: [higiene, laboratorio, tipo_tramite_formulario]
+        display: [fecha, tipo_tramite_formulario, empresa, laboratorio_fabricante, higiene]
         actions:
           ir_portal: {label: Volver al Portal}
         object_actions:
           edit: {label: Editar, action: editar}
       
       filter:
-        display: [higiene_id, tipo_tramite_formulario_id]
+        display: [empresa_id, higiene_id, tipo_tramite_formulario_id]
       form:    ~
       edit:    ~
       new:     ~

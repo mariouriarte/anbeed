@@ -12,5 +12,30 @@ class Formulario706FormFilter extends BaseFormulario706FormFilter
 {
   public function configure()
   {
+      parent::setup();
+      $this->setWidget('empresa_id',  new sfWidgetFormDoctrineChoice(
+              array('model' => 'Empresa', 
+                    'add_empty' => 'Seleccionar')));
+
+      $this->setValidator('empresa_id', new sfValidatorDoctrineChoice(array(
+          'required' => false,'model' => 'Empresa')));
+  }
+  public function addEmpresaIdColumnQuery(Doctrine_Query $query, $field, $value)
+  {
+      Doctrine::getTable('Empresa');
+      $this['empresa_id'];
+      $query ->from('Formulario706 f')
+        ->leftJoin('f.Higiene p')
+        ->leftJoin('p.Empresa e') 
+        ->where('p.empresa_id = ?', $this['empresa_id']->getValue())
+        ->orderBy('f.id ASC');
+      return $query;
+  }
+  public function getFields()
+  {
+    $fields = parent::getFields();
+    $fields['empresa_id'] = 'custom';
+    
+    return $fields;
   }
 }
