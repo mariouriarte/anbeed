@@ -51,11 +51,13 @@
       </tr>
       <tr>
           <th>Ciudad / Distrito / Provincia / Departamento</th>
-          <td><?php echo $higiene->Empresa->Ciudad ?></td>
+          <td><?php //echo $higiene->Empresa->Ciudad 
+          ?></td>
       </tr>
       <tr>
         <th>País</th>
-        <td><?php  echo $higiene->Empresa->Ciudad->Pais ?></td>
+        <td><?php //echo $higiene->Empresa->Ciudad->Pais 
+        ?></td>
       </tr>
       <tr>
         <th>Teléfono</th>
@@ -104,15 +106,15 @@
       <tr>
           <th>País</th>
           <td>
-            <?php echo $form['rescom_pais_id']->renderError() ?>
-            <?php echo $form['rescom_pais_id'] ?>
+            <?php //echo $form['rescom_pais_id']->renderError() ?>
+            <?php //echo $form['rescom_pais_id'] ?>
           </td>
       </tr>
       <tr>
           <th>Ciudad / Distrito / Provincia / Departamento</th>
           <td>
-            <?php echo $form['rescom_ciudad_id']->renderError() ?>
-            <?php echo $form['rescom_ciudad_id'] ?>
+            <?php //echo $form['rescom_ciudad_id']->renderError() ?>
+            <?php //echo $form['rescom_ciudad_id'] ?>
           </td>
       </tr>
       <tr>
@@ -164,11 +166,11 @@
       </tr>
       <tr>
           <th>Ciudad / Distrito / Provincia / Departamento</th>
-          <td><?php echo $higiene->LaboratorioFabricante->Ciudad ?></td>
+          <td><?php// echo $higiene->LaboratorioFabricante->Ciudad ?></td>
       </tr>
       <tr>
         <th>País</th>
-        <td><?php echo $higiene->LaboratorioFabricante->Ciudad->Pais ?></td>
+        <td><?php// echo $higiene->LaboratorioFabricante->Ciudad->Pais ?></td>
       </tr>
       <tr>
         <th>Teléfono</th>
@@ -244,7 +246,7 @@
       </tr>
       <tr>
           <th>Grupo</th>
-          <td><?php echo $higiene->getGrupoHigiene() ?></td>
+          <td><?php //echo $higiene->getGrupoHigiene() ?></td>
       </tr>
       <tr>
           <th>variedades</th>
