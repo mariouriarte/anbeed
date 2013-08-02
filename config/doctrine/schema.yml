@@ -397,7 +397,7 @@ TipoTramiteFormulario:
 Higiene:
   actAs: {Timestampable: ~}
   columns:
-    producto_id:               {type: integer, notnull: true}
+    producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
     laboratorio_fabricante_id: {type: integer, notnull: true}
     grupo_higiene_id:          {type: integer, notnull: false}
