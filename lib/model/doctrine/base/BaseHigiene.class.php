@@ -73,7 +73,7 @@ abstract class BaseHigiene extends sfDoctrineRecord
         $this->setTableName('higiene');
         $this->hasColumn('producto_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('empresa_id', 'integer', null, array(
              'type' => 'integer',

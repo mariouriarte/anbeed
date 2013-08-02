@@ -21,6 +21,10 @@ class HigieneForm extends BaseHigieneForm
         $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden(
             array(), array('value' => $empresa->getId()));
         
+        //// Empresa
+//        $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden();
+//        $this->validatorSchema['producto_id'] = new sfValidatorString(array('required' => false));
+        
         //// Laboratorio
         $this->widgetSchema['laboratorio_fabricante_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
             array('model' => 'LaboratorioFabricante',

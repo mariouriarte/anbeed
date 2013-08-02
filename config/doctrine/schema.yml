@@ -142,7 +142,7 @@ Formulario:
 Medicamento:
   actAs: {Timestampable: ~}
   columns:
-    producto_id:               {type: integer, notnull: true}
+    producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
     laboratorio_fabricante_id: {type: integer, notnull: true}
     forma_farmaceutica_id:     {type: integer, notnull: true}
@@ -266,7 +266,7 @@ OrigenFormulario:
 DispositivoMedico:
   actAs: {Timestampable: ~}
   columns:
-    producto_id:               {type: integer, notnull: true}
+    producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
     laboratorio_fabricante_id: {type: integer, notnull: true}
     nombre_comercial:          {type: string(255), notnull: true}
@@ -325,7 +325,7 @@ DatosFormulario27:
 Cosmetico:
   actAs: {Timestampable: ~}
   columns:
-    producto_id:               {type: integer, notnull: true}
+    producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
     laboratorio_fabricante_id: {type: integer, notnull: true}
     forma_cosmetica_id:        {type: integer, notnull: true}
@@ -397,7 +397,7 @@ TipoTramiteFormulario:
 Higiene:
   actAs: {Timestampable: ~}
   columns:
-    producto_id:               {type: integer, notnull: true}
+    producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
     laboratorio_fabricante_id: {type: integer, notnull: true}
     grupo_higiene_id:          {type: integer, notnull: false}
@@ -469,7 +469,7 @@ TipoEtapa:
 Reactivo:
   actAs: {Timestampable: ~}
   columns:
-    producto_id:               {type: integer, notnull: true}
+    producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
     laboratorio_fabricante_id: {type: integer, notnull: true}
     nombre_comercial:          {type: string(255), notnull: true}
@@ -531,7 +531,7 @@ Formulario7:
     fecha_inicio_vigencia: {type: date, notnull: false}
 #   este campo copiamos al campo aval del formulario 5
     referencia_aval:       {type: string(50)} 
-    producto_id:           {type: integer, notnull: true}
+    producto_id:           {type: integer, notnull: false}
     tipo_calificacion_id:  {type: integer, notnull: true}
     via_administracion_id: {type: integer, notnull: true}
     accion_terapeutica:    {type: string(1000), notnull: true}
@@ -583,4 +583,3 @@ TipoCalificacion:
     nombre: {type: string(30), notnull: true}
   relations:
     Formulario11: {local: id, foreign: tipo_calificacion_id, type: one, foreignAlias: TipoCalificacion}
-#>>>>>>> e508dafd833a865e146324dd7e81ff96595afec7
