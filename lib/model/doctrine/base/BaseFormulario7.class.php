@@ -102,7 +102,7 @@ abstract class BaseFormulario7 extends sfDoctrineRecord
              ));
         $this->hasColumn('producto_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('tipo_calificacion_id', 'integer', null, array(
              'type' => 'integer',
