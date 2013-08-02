@@ -47,7 +47,7 @@ Empresa:
   columns:
     representante_legal_id:  {type: integer, notnull: false}
     regente_farmaceutico_id: {type: integer, notnull: false}
-    ciudad_id:               {type: integer, notnull: true}
+    ciudad_id:               {type: integer, notnull: false}
     razon_social:            {type: string(255), notnull: true, unique: true}
     fecha_registro:          {type: date}
     num_resolucion:          {type: string(30), notnull: false, unique: true}
@@ -77,7 +77,7 @@ LaboratorioFabricante:
   actAs: {Timestampable: ~}
   columns:
     pais_id:       {type: integer, notnull: true}
-    ciudad_id:     {type: integer, notnull: true}
+    ciudad_id:     {type: integer, notnull: false}
     nombre:        {type: string(255), notnull: true, unique: true}
     bajo_licencia: {type: string(255), notnull: false}
     para:          {type: string(255), notnull: false}
