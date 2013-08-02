@@ -1,0 +1,1730 @@
+## laboratorios fabricantes.
+LaboratorioFabricante:
+  LaboratorioFabricante_1:
+    Pais: Pais_12
+    nombre: 'GRACE SACI'
+    bajo_licencia: null
+    para: null
+    direccion: null
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_3:
+    Pais: Pais_110
+    nombre: 'ERBASOL S.R.L.'
+    bajo_licencia: null
+    para: null
+    direccion: 'VIA TERZA ARMATA 22-34074 MONFALCONE (GORIZIA)'
+    telefono: '(0481) 411740'
+    fax: '(0481) 410351'
+    email: infoaerbasol.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_4:
+    Pais: Pais_52
+    nombre: 'ALAIN GANANCIA S.L.COSMETICS'
+    bajo_licencia: null
+    para: null
+    direccion: 'POL. IND.DE.ASEGRA.AVDA. DE  ANDALUCIA S/N 18210 PELIGROS (GRANADA)'
+    telefono: '958405016'
+    fax: '958405117'
+    email: infoaalain-ganancia.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_5:
+    Pais: Pais_77
+    nombre: 'VED PHARMACEUTICALS PVT LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'A-9 SHRADDHA HOUSING SOCIETY OPP R.C PATEL INDL ESTATE AKOTA BARODA. 390020 INDIA'
+    telefono: '912652341518'
+    fax: '912652342783'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_6:
+    Pais: Pais_77
+    nombre: 'XL LABORATORIES PVT. LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'E-1223. PHASE-1 EXTN. (GHATAL) RIICO INDUSTRIAL AREA BHIWADI RAJASTHAN-301019 INDIA'
+    telefono: (+91)+1493+224508/509
+    fax: (+91)+11+25920683/2516702
+    email: xlrem@ndb.vsnl.net
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_7:
+    Pais: Pais_77
+    nombre: 'INDOCO REMEDIES LIMITED'
+    bajo_licencia: null
+    para: null
+    direccion: 'INDOCO HOUSE 166CST ROAD SANTACRUZ (EAST) MIMBAI 400 098'
+    telefono: +9122-26541851/52/53/54/5
+    fax: +9122-26523067
+    email: '    intbiz@indoco.com'
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_8:
+    Pais: Pais_155
+    nombre: 'LA QUIMICA FARMACEUTICA S.A.'
+    bajo_licencia: null
+    para: 'QUIMFA BOLIVIA S.A'
+    direccion: 'AVENIDA PRIMER PRESIDENTE Nº 1736 C/ YRENDAGUE ASUNCION DEL PARAGUAY'
+    telefono: '(595)21 222391'
+    fax: 21-224791
+    email: 'quimfa@quimfa.com py'
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_9:
+    Pais: Pais_52
+    nombre: 'ESSENTIAL BEAUTY S.L'
+    bajo_licencia: null
+    para: null
+    direccion: 'CALLE JUAN RAMON JIMENEZ 8  1º FLOOR - 28036 MADRID'
+    telefono: '+34 913 450 163'
+    fax: '+34 913 457 754'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_10:
+    Pais: Pais_23
+    nombre: 'LABORATORIOS ROSSI LTDA'
+    bajo_licencia: null
+    para: null
+    direccion: 'AV. PANAMERICANA Nº 1959 ZONA MEJILLONES EL ALTO'
+    telefono: '2406545'
+    fax: '2110893'
+    email: deniselgatoblanco@yahoo.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_11:
+    Pais: Pais_52
+    nombre: 'URIACH- AQUILEA OTC S.L'
+    bajo_licencia: null
+    para: null
+    direccion: 'AV. CAMI REIAL 51-57 08184 PALAO-SOLITA ! PLEGAMANS ( BARCELONA - ESPAÑA)'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_12:
+    Pais: Pais_35
+    nombre: 'SHANDONG REYOUNG PHARMACEUTICAL CO. LTD.'
+    bajo_licencia: null
+    para: null
+    direccion: 'Nº6 ERLANGSHAN ROAD YIYUAN COUNTY SHANDONG PROVINCE P.R'
+    telefono: '865333227245'
+    fax: '8653332242277'
+    email: reyoung@reyoung.cn
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_13:
+    Pais: Pais_38
+    nombre: 'NEO LTDA'
+    bajo_licencia: null
+    para: null
+    direccion: 'CARRERA 40 Nº 13-61 URBANIZACION INDUSTRIAL ACOPI'
+    telefono: '6959590'
+    fax: '6959595'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_14:
+    Pais: Pais_77
+    nombre: 'INDI PHARMA PVT. LTD.'
+    bajo_licencia: null
+    para: null
+    direccion: '3RD FOOR DEMPO TRADE CENTRE BLDG PATTO PLAZA EDC COMPLEX PANJIM-403 001 GOA'
+    telefono: 91-832-2438156
+    fax: 91-832-2438151
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_15:
+    Pais: Pais_184
+    nombre: 'EL SAAD PHARMACEUTICAL INDUSTRIES'
+    bajo_licencia: null
+    para: null
+    direccion: '11688 - ALEPPO - SYRIA'
+    telefono: +963-21-52270101/5210365
+    fax: +963-21-52270100/2660903
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_16:
+    Pais: Pais_77
+    nombre: 'UNIBIOS LABORATORIES LIMITED'
+    bajo_licencia: null
+    para: null
+    direccion: '265 F-WING. SOLARIS - I SAKI-VIHAR ROAD ANDEHERI (E) MUMBAI 4000 072 INDIA'
+    telefono: '28571337'
+    fax: 91-22-28571335
+    email: unibios@vsnl.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_17:
+    Pais: Pais_77
+    nombre: 'VIDA LABORATORIES (P) LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'Nº 98/11  SUNITHA NILAYA 1 A BTS MAIN ROAD SUNKAL FARM LAYOUT WILSON GARDEN BANGALORE - 560030 INDI'
+    telefono: '918041460761'
+    fax: '918041460760'
+    email: vidalabs@gmail.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_18:
+    Pais: Pais_77
+    nombre: 'WALLACE PHARMACEUTICALS PVT LTD'
+    bajo_licencia: null
+    para: null
+    direccion: '3º FLOOR DEMPO TRADE CENTRE BUILDING PATTO PLAZ EDC COMPLEX PANAJI 403001 GOA INDIA'
+    telefono: '++918322438156 to 161'
+    fax: ++918322438151
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_19:
+    Pais: Pais_155
+    nombre: LASCA
+    bajo_licencia: null
+    para: 'LABORATORIO DE PRODUCTOS ETICOS C.E.I.S.A.'
+    direccion: 'RUTA MCAL. ESTIGARRIBIA KM 95 - SAN LORENZO - PARAGUAY'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_20:
+    Pais: Pais_155
+    nombre: 'LABORATORIO DE PRODUCTOS ETICOS C.E.I.S.A.'
+    bajo_licencia: null
+    para: null
+    direccion: 'ATILIO GALFRE Nº 151 E/CALLE 1 Y RUTA MCAL ESTIGARRIBIA KM 9 1/2 SAN LORENZO-PARAGUAY'
+    telefono: '(595 21)  495293  (RA)'
+    fax: '(595 21)  495467'
+    email: 'eticos@ pla.net.py'
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_21:
+    Pais: Pais_77
+    nombre: 'SYNMEDIC LABORATORIES'
+    bajo_licencia: null
+    para: null
+    direccion: '202SAI PLAZA EAST OF KAILASH SANT NAGAR NEW DELHI (INDIA)'
+    telefono: '26230770 51625890'
+    fax: 91-11-26217771
+    email: synmedic@vsnl.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_22:
+    Pais: Pais_110
+    nombre: ARTSANA
+    bajo_licencia: null
+    para: null
+    direccion: 'SEDE SOCIAL:22100 VIA SALDARINI CATELLI 1'
+    telefono: '(031) 382. 111'
+    fax: '(031) 382. 400'
+    email: www.chicco.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_23:
+    Pais: Pais_23
+    nombre: INQUIBOL
+    bajo_licencia: null
+    para: null
+    direccion: 'AV. BLANCO GALINDO KM 10 (PIÑAMI)'
+    telefono: '4350637'
+    fax: '1350637'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_24:
+    Pais: Pais_40
+    nombre: 'YUNGJIN PHARMA.CO.LTD'
+    bajo_licencia: null
+    para: null
+    direccion: '451-20CHEONHO-3DONG GANGDONG-GUSEUL.'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_25:
+    Pais: Pais_12
+    nombre: 'COLORANDIA S.R.L'
+    bajo_licencia: null
+    para: 'IXIR - UVAS DEL CUYUN DE ANA TERESA MASA'
+    direccion: 'PELAGIO LUNA Nº 2249 BUENOS AIRES'
+    telefono: 0054-261-4962353
+    fax: 0054-261-4962353
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_26:
+    Pais: Pais_52
+    nombre: 'CARLO DI ROMA INTERNACIONAL DIVISION S.L'
+    bajo_licencia: null
+    para: null
+    direccion: 'C./MAQUINA 35 DE 08850 GAVA (BARCELONA)'
+    telefono: '934705850'
+    fax: '934990356'
+    email: '   www.carlodiroma.com'
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_27:
+    Pais: Pais_77
+    nombre: 'ELDER PHARMACEUTICALS LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'MUMBAI- 400 053 INDIA'
+    telefono: 00(91)-22-2673058
+    fax: 00(91)-222673051
+    email: www.elderindia.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_28:
+    Pais: Pais_77
+    nombre: 'CORAL LABORATORIES LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'DALAMAL HOUSE. 5TH FLOOR NARIMAN POINT. MUMBAI. 400 021'
+    telefono: '91.22.2287 3694 2287'
+    fax: '91-22-2287 3771'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_29:
+    Pais: Pais_35
+    nombre: 'HUAIAN CITY HENGCHUN MEDICAL PRODUCT CO. LTD. PARA UNIVERSAL PHARMA'
+    bajo_licencia: null
+    para: null
+    direccion: 'ADD: Nº YANYUANG STREET NEW INDUSTRIAL ZONE LIANSHUI COUNTY CHINA'
+    telefono: +86-517-82381015
+    fax: 86-517-82387747
+    email: china@tymedical.cn
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_30:
+    Pais: Pais_35
+    nombre: 'LANZHOU INSTITUTE OF BIOLOGICAL PRODUCTS'
+    bajo_licencia: null
+    para: null
+    direccion: '888# YANCHANG ROAD LANZHOU GANSU P.R CHINA'
+    telefono: 0086-931-8340311
+    fax: 0086-931-8343199
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_31:
+    Pais: Pais_38
+    nombre: SERATEC
+    bajo_licencia: 'SERATEC DIAGNOSTOCA'
+    para: 'MALTA & ASOCIADOS S.R.L'
+    direccion: 'ERNST-RUHSTRAT-STR.5 D-37079 GOTTINGEN GERMANY'
+    telefono: ' +49 (0) 551/50480-0'
+    fax: '+49 (0) 551/50480-80'
+    email: CONTAC@SERATEC.COM
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_32:
+    Pais: Pais_77
+    nombre: 'BDH INDUSTRIES LIMITED'
+    bajo_licencia: null
+    para: null
+    direccion: 'NAIR BAUG AKURLI ROAD KANDIVLI (E) 400-101'
+    telefono: '2887 0834/2887 1370'
+    fax: '91-22-2886 8349'
+    email: bdhind@vsnl.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_33:
+    Pais: Pais_204
+    nombre: 'LABORATORIOS TERRY S.A.'
+    bajo_licencia: null
+    para: null
+    direccion: 'AV. GRAL. RIVERA 3270/74'
+    telefono: '6220153'
+    fax: '(598-2) 622 05 60'
+    email: terrysa@selby.com.uy
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_34:
+    Pais: Pais_35
+    nombre: 'ACON BIOTECH ( HANGZHOU). LTD.'
+    bajo_licencia: null
+    para: null
+    direccion: 'Nº 398 TIANMUSHAN ROSD GUDANG INDUSTRIAL PARK HANGZHOU P.R CHINA'
+    telefono: 86-571-87963569/87968687
+    fax: 86-571-87963570
+    email: css@aconlap.com.cn
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_36:
+    Pais: Pais_35
+    nombre: 'REYOUNG PHARMACEUTICAL CO. LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'Nº 6 ERLANGSHAN ROAD YIYUAN COUNTY SHANDONG PROVINCE P.R. CHINA'
+    telefono: '86533 3227245; 3223935'
+    fax: '86 533 3224277'
+    email: reyoung@reyoung.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_37:
+    Pais: Pais_77
+    nombre: 'CIRON DRUGS & PHARMACEUTICALS PVT. LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'PRABHAT NAGAR GROUND FLOOR JOGESHWARI (WEST) MUMBAI-400 102. MAHARASHTRA INDIA'
+    telefono: '+91-22-2678 0659/9322'
+    fax: '+91-22-2678 0784'
+    email: ciron@vsnl.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_38:
+    Pais: Pais_35
+    nombre: 'HEBEI ZHANGJIAKOU PHARMACEUTICAL CO LTD'
+    bajo_licencia: null
+    para: null
+    direccion: null
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_39:
+    Pais: Pais_35
+    nombre: 'ZHAG JIAKOU GREAT WALL PHARMACEUTICAL CO. LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'ZHAGJIKOU HIGH & NEW TECHNOLOGY INDUSTRIAL DEVELOPENT ZONE HEBEI. CHINA'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_40:
+    Pais: Pais_35
+    nombre: 'SHIJIAZHUANG PHARMA GROUPZHONGNUO PHARMACEUTICAL (SHIJIAZHUANG) CO. LTD'
+    bajo_licencia: null
+    para: 'CSPC. OUYI PHAMACEUTICAL CO. LTD'
+    direccion: 'Nº 188 GONGNOOG ROAD SHIJIAZHUANG CHINA'
+    telefono: 86-311-83805386
+    fax: 86-311-83804321
+    email: www.znpc.cn
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_41:
+    Pais: Pais_35
+    nombre: 'CSPC OUYI PHARMACEUTICAL CO. LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'Nº 276 ZHONGSHAN WEST ROAD SHIJIAZHUANG'
+    telefono: 0086-311-87896295
+    fax: 0086-311-87038467
+    email: sunranwei@ouyipharma.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_42:
+    Pais: Pais_35
+    nombre: 'SINOCHEM NINGBO LIMITED'
+    bajo_licencia: null
+    para: null
+    direccion: 'Nº 21 ST JIANGXIA STRET NINBO'
+    telefono: 86-574-87348875
+    fax: 86-574-67366775
+    email: nbchom@sinochem-nb.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_43:
+    Pais: Pais_35
+    nombre: 'BEIJING REAGENT LATEX PRODUCTS CO. LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'CIOU INDUSTRIAL ZONE TONGZHOU DISTRIC 101111 BEIJING PEOPLES REPUBLICA DE CHINA'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_44:
+    Pais: Pais_77
+    nombre: 'JAYWIN REMEDIES PVT. LIMITED'
+    bajo_licencia: null
+    para: 'SANAT PHARMA'
+    direccion: '122 RAVI INDUSTRIAL ESTATE BILESHWARPUR CHHTRAL DIT: GANDHINAGAR-382 729 GUJARAT STATE INDIA'
+    telefono: 0091-22-27561911
+    fax: '27574621'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_45:
+    Pais: Pais_77
+    nombre: 'DEFI HEALTHCARE PVT. LTD'
+    bajo_licencia: null
+    para: null
+    direccion: '301 SHAPATH-3 NEAR GNFC TOWER'
+    telefono: +91-79-26840045/49
+    fax: +91-79-26840046
+    email: www.defihealthcare.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_46:
+    Pais: Pais_35
+    nombre: ' YANZHOU XIER KANGTAI PHARMACEUTICAL CO. LTD'
+    bajo_licencia: null
+    para: 'SHANGHAI MERCATOR INTERNATIONAL CO.LTD'
+    direccion: 'CALLE JIANGNINGLU Nº 495 MANSION BOHONG HABITACION 1704 SHANGHAI CHINA'
+    telefono: '865373653972'
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_47:
+    Pais: Pais_77
+    nombre: 'SURU INTERNATIONAL PVT. LTD.'
+    bajo_licencia: null
+    para: null
+    direccion: 'SONA UDYOG ANDHERI (E) MUMBAI 400 069'
+    telefono: '28378500'
+    fax: 91-22-28376321
+    email: info@suru.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_48:
+    Pais: Pais_12
+    nombre: 'LACA S.R.L'
+    bajo_licencia: null
+    para: 'CAPILATIS S.A'
+    direccion: 'COCHABAMBA 2825 CAPITAL FEDERAL'
+    telefono: 4941-5329
+    fax: 4943-2085
+    email: r.enero@laboratoriolaca.com.ar
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_49:
+    Pais: Pais_12
+    nombre: 'LABORATORIOS REIG'
+    bajo_licencia: null
+    para: 'CAPILATIS S.A'
+    direccion: 'CALLE 39 2538/74 VILLA MAIPU PARTIDO DE SAN MARTIN LEGAJO 2144'
+    telefono: '4701 3333'
+    fax: '4702 1945'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_51:
+    Pais: Pais_12
+    nombre: 'LABORATORIOS CUENCA S.A'
+    bajo_licencia: null
+    para: 'CAPILATIS S.A'
+    direccion: 'EMPEDRADO 2435 CAPITAL FERDERAL LEGAJO 2126 DISPOSICION HABILITANTE 1762/03'
+    telefono: '4701 3333'
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_52:
+    Pais: Pais_77
+    nombre: 'LA MEDICCA (INDIA) PVT. LTD.'
+    bajo_licencia: null
+    para: null
+    direccion: 'PLOT Nº 168 SECTOR 7'
+    telefono: +91-124-40073764005426
+    fax: +91-124-4001310.
+    email: info@herbsfromindia.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_53:
+    Pais: Pais_52
+    nombre: 'MIXER & PACK S.L'
+    bajo_licencia: null
+    para: null
+    direccion: 'CAMINO DE AZUQUECA 9 28880 MECO MADRID ESPAÑA'
+    telefono: '(34) 918860 161'
+    fax: '(34) 918 860 236'
+    email: 'www. mixer-pack.com'
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_54:
+    Pais: Pais_155
+    nombre: 'TROVATO CISA'
+    bajo_licencia: null
+    para: null
+    direccion: 'CENTRAL 1340 ENTRE HAYTI Y NICARAGUA'
+    telefono: '595-21 210 556'
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_55:
+    Pais: Pais_77
+    nombre: 'CADILA PHARMACEUTICALS LIMITED'
+    bajo_licencia: null
+    para: null
+    direccion: '1389 DHOLKA-387810 AHMEDABAD GUJARAT STATE INDIA'
+    telefono: +91-2714-221481/483/484
+    fax: +91-2714-220315/221220
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_56:
+    Pais: Pais_38
+    nombre: 'PROCAPS S.A'
+    bajo_licencia: null
+    para: 'SANAT PHARMA S.R.L'
+    direccion: 'CALLE 80 Nº 78B-201 BARRANQUILLA COLOMBIA'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_57:
+    Pais: Pais_126
+    nombre: 'WRP ASIA PACIFIC SND BHD'
+    bajo_licencia: null
+    para: null
+    direccion: 'LOT. JALAN 3 KAWASANHAAN BANDAR BARU SALK TINGGI SEPANG SELANGOR 43900  MALAYSIA'
+    telefono: +60-3-87061486
+    fax: '+60-3-8706 1557'
+    email: customer_wrp@wrpworld.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_58:
+    Pais: Pais_25
+    nombre: 'BIOLINE. IND. COM.  DE FIOS CIRURGICOS LTDA'
+    bajo_licencia: null
+    para: null
+    direccion: 'AVENIDA MARANHÁO 500 QUADRA 64 LOTE 10 BARRIO JUNDIAÍ CEP:75.110-470-ANÀPOLIS/GO'
+    telefono: '(62) 3324-2120'
+    fax: '(62) 3324-3072'
+    email: contato@biolinefios.com.br
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_59:
+    Pais: Pais_52
+    nombre: 'IBERPACKING S.L'
+    bajo_licencia: null
+    para: 'IMPORTADO COSMETICA NACIONAL S.A  (CHILE)'
+    direccion: 'CARRETERA M - 300 KM. 28.7 DE ALCALA DE HENARES (MADRID) ESPAÑA'
+    telefono: 562-4387960
+    fax: 562-4387960
+    email: www.cosmetcanacional.cl
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_60:
+    Pais: Pais_53
+    nombre: 'ALFA VITAMINS LABORATORIES INC'
+    bajo_licencia: null
+    para: null
+    direccion: '1472 NW 78 TH AVENUE DORAL FL 33126'
+    telefono: 305-597-6410
+    fax: 305-597-6420
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_61:
+    Pais: Pais_53
+    nombre: 'PHARMACREAMS CORP.'
+    bajo_licencia: null
+    para: 'ALFA VITAMINS LABORATORIES INC.'
+    direccion: '1472 NW 78TH AVENUE DORAL FL 33126'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_62:
+    Pais: Pais_135
+    nombre: ZEYCO
+    bajo_licencia: null
+    para: null
+    direccion: 'CAMINO  A STA ANA TEPETITLAN Nº 2233'
+    telefono: 3208.38.00
+    fax: '3208.3816'
+    email: infoi@zeyco.com.mx
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_63:
+    Pais: Pais_23
+    nombre: 'INDUSTRIA S.R SANTIAGO'
+    bajo_licencia: null
+    para: null
+    direccion: 'CALLE WICHAY URAY ZONA ALALAY CERRO VERDE COCHABAMBA'
+    telefono: '4 -216952'
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_64:
+    Pais: Pais_135
+    nombre: BIO-RAD
+    bajo_licencia: null
+    para: null
+    direccion: 'EUGENIA Nº 197 PISO 10-A COL. NAVARTE.'
+    telefono: '+52(55) 5488 7670'
+    fax: 'FAX +52 (55) 1107 7270'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_65:
+    Pais: Pais_35
+    nombre: 'SHANDONG WEIGAO GROUP MEDICAL POLYMER CO. LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'YANTAI (W) ROAD 35 WEIHAI SHANDONG CHINA'
+    telefono: 0086-631-5620485
+    fax: 0086-631-5622563
+    email: markweigao@sohu.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_66:
+    Pais: Pais_35
+    nombre: 'NINGBO GREETMED INTERNATIONAL TRADE CO. LTD PARA BLANCO & NEGRO'
+    bajo_licencia: null
+    para: 'BLANCO & NEGRO'
+    direccion: '18F-3 Nº. 1BUILDING YANGMUQI ROAD NINGBO CHINA'
+    telefono: 86-574-8773-9070
+    fax: 86-574-2787-1201
+    email: www.greetmed.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_67:
+    Pais: Pais_126
+    nombre: 'TOP GLOVE SDN. BHD PARA BLANCO Y NEGRO'
+    bajo_licencia: null
+    para: null
+    direccion: 'LOT 4969 JALAN TERATAI. BATU 6. OFF JALAN MERU 41050 KLANG'
+    telefono: 603-3392
+    fax: 603-33928410
+    email: top@topglove.asiaep.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_69:
+    Pais: Pais_35
+    nombre: 'XINHUA PHARMACEUTICAL CO. LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'ZHEJIANG PROVINCIAL CHEMICAL  AND MEDICAL  MATERIALS BASE LINHAI ZONE ZHEJIANG CHINA'
+    telefono: 86-576-85588383
+    fax: 86-57685588100
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_70:
+    Pais: Pais_12
+    nombre: 'TERRAGENE S.R.L'
+    bajo_licencia: null
+    para: null
+    direccion: 'CATAMARCA 2518 ROSARIO PROVINCIA DE SANTA FE ARGENTINA'
+    telefono: '+54-341 436-2015'
+    fax: null
+    email: info@terragene.com.ar
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_71:
+    Pais: Pais_135
+    nombre: 'SDI LIMITED'
+    bajo_licencia: null
+    para: null
+    direccion: '3-13 BRUNSDON STREET'
+    telefono: '+61 3 8727 7111'
+    fax: '+61 3 8727 7222'
+    email: 'info @sdi.com.au'
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_72:
+    Pais: Pais_53
+    nombre: 'COTY US LLC'
+    bajo_licencia: null
+    para: null
+    direccion: '350 CLARK DRIVE MT. OLIVE NJ 07828'
+    telefono: '(212) 479-4300'
+    fax: '(212) 479-4699'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_76:
+    Pais: Pais_110
+    nombre: 'BULGARI PARFUMS S.A'
+    bajo_licencia: null
+    para: null
+    direccion: 'RUE DE MONRUZ 34 CH-2000'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_77:
+    Pais: Pais_34
+    nombre: 'COSMETICA NACIONAL S.A.'
+    bajo_licencia: null
+    para: null
+    direccion: 'VARGAS FONTECILLA 3830 SANTIAGO DE CHILE'
+    telefono: '(562) 4387960'
+    fax: null
+    email: www.pamelagrant.cl
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_78:
+    Pais: Pais_12
+    nombre: NEROVA
+    bajo_licencia: null
+    para: 'COSMETICA NACIONAL S.A-.'
+    direccion: 'BERUTTI 1341 MARTINEZ. PROVINCIA BUENOS AIRES'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_79:
+    Pais: Pais_53
+    nombre: 'PRODUCT QUEST MANUFACTURING'
+    bajo_licencia: null
+    para: 'IBB-INTERNATIONAL BRAD BUILDERS S.A'
+    direccion: '330 CARSWELL AVE. DAYTONA BEACH FL 32117'
+    telefono: '(386) 239.8787'
+    fax: '(386) 239.8393'
+    email: www.productquestmfg.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_80:
+    Pais: Pais_156
+    nombre: 'INTRADEVCO INDUSTRIAL S.A'
+    bajo_licencia: null
+    para: null
+    direccion: 'AV. PRODUCCION NACIONAL 188 URB. LA VILLA CHORRILLOS'
+    telefono: '(511) 467-4999'
+    fax: (511)467-0509
+    email: 'itdc@intradevco. com'
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_81:
+    Pais: Pais_77
+    nombre: 'TERUMO PENPOL LIMITED'
+    bajo_licencia: null
+    para: null
+    direccion: '1-2JAWAHAR NAGAR KOWDIAR PC. TRIVANDRUM 695 003 INDIA'
+    telefono: (0471)3015500/3015501
+    fax: (0471)2721517
+    email: info@terumopenpol.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_82:
+    Pais: Pais_35
+    nombre: 'JIANGXI HUASHUAI FIREWORKS&CRACKERS IMPORT AND EXPORT CO LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'Nº 188 YUANSHAN MIDDLE RD. YICHUNJIANGXICHINA'
+    telefono: 0086-795-3598887
+    fax: 0086-795-359822
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_83:
+    Pais: Pais_152
+    nombre: 'M.A. ARAIN & BROTHERS (PVT) LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'BOX 432 SIALKOT - PAKISTAN'
+    telefono: +92-52-4264926
+    fax: +92-52-4264759
+    email: 'info@maarain .com'
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_84:
+    Pais: Pais_52
+    nombre: 'MIXER & PACK  S.L'
+    bajo_licencia: null
+    para: 'PERFUMES Y DISEÑO COMERCIAL S.L'
+    direccion: 'MECO MADRID CARRETERA DE AZUQUECA 9 MECO 28880'
+    telefono: 91-886-01-61
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_86:
+    Pais: Pais_201
+    nombre: 'PAKSEL KIMYA SANAYI VE TICARET A.S'
+    bajo_licencia: null
+    para: 'JELLICO BOLIVIA'
+    direccion: 'CERKESKOY ORGANIZE SANAYI SITESI POSTA KODU 95500 CERKESZKOY'
+    telefono: '(0282) 7581858'
+    fax: (0282)7581861
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_87:
+    Pais: Pais_58
+    nombre: 'KENZO PARFUMS S.A'
+    bajo_licencia: null
+    para: 'LVMH FRAGRANCE BRANDS'
+    direccion: '3 PLACE DES  VICTOIRES -75001 PARIS'
+    telefono: '01 40 39 72 02'
+    fax: '01 45 08 10 99'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_88:
+    Pais: Pais_12
+    nombre: 'CLOROX ARGENTINA S.A'
+    bajo_licencia: null
+    para: null
+    direccion: 'CALLE 13 Y 9 RUTA 8 KM 60 PARQUE INDUSTRIAL PILAR'
+    telefono: '  (54) 2322-496-080'
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_138:
+    Pais: Pais_17
+    nombre: 'INCEPTA PHARMACEUTICALS LTD'
+    bajo_licencia: null
+    para: null
+    direccion: '40 SHAHID TAJUDDIN AHMED SARANI TEIGAON I/A DHAKA-1208'
+    telefono: +880-2-8891688-703
+    fax: +880-2-8891190
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_89:
+    Pais: Pais_135
+    nombre: 'UNIVERSAL PRODUCTORA S.A DE C.V.'
+    bajo_licencia: null
+    para: null
+    direccion: '24 ORIENTE Nº 602 BARRIO DE JESUS C.P 72760 CHOLULA PUEBLA'
+    telefono: 01(222)225-9123
+    fax: 01(222)225-9525
+    email: www.zuum.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_90:
+    Pais: Pais_53
+    nombre: ALLERGAN
+    bajo_licencia: null
+    para: null
+    direccion: 'SANTA BARBARA  5540 EKWILL STREET'
+    telefono: (805)683-6761
+    fax: '(805) 681-5765'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_91:
+    Pais: Pais_58
+    nombre: 'PARFUMS ROCHAS S.A.S'
+    bajo_licencia: null
+    para: null
+    direccion: '75 RUE D'' IGREMONT 78300 POISSY FRANCE'
+    telefono: '+33 3 30 74 94 00'
+    fax: '+33 1 30 74 94 19'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_92:
+    Pais: Pais_58
+    nombre: 'SCANNON S.A.S.'
+    bajo_licencia: null
+    para: null
+    direccion: '75. RUE D'' AIGREMONT B.P 1163'
+    telefono: '(33) 1 30 74 94 00'
+    fax: '(33) 1 30 74 94 19'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_93:
+    Pais: Pais_38
+    nombre: 'PRODUSA S.A'
+    bajo_licencia: null
+    para: null
+    direccion: 'AV. 33 DIAGONAL 51-07 BELLO (ANT)-COLOMBIA'
+    telefono: '482 4040'
+    fax: '453 7205'
+    email: www.ellas.com.co
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_94:
+    Pais: Pais_53
+    nombre: 'ULTRADENT PRODUCTS.INC'
+    bajo_licencia: null
+    para: null
+    direccion: '505 WEST 10200 SOUTH SOUTH JORDAN UTAH 84095'
+    telefono: 801.552.5512
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_96:
+    Pais: Pais_12
+    nombre: 'JOSE GUMA S. A.'
+    bajo_licencia: null
+    para: null
+    direccion: 'LOT.1 G MALABRIGO-COLONIA CAROYA-CORDOBA CP (5223)'
+    telefono: (54-3525)420659
+    fax: (54-3525)421312
+    email: WWW.JOSEGUMA.COM
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_97:
+    Pais: Pais_58
+    nombre: 'LOCCITANE S.A.'
+    bajo_licencia: null
+    para: null
+    direccion: null
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_98:
+    Pais: Pais_52
+    nombre: 'ANTONIO PUIG S. A.'
+    bajo_licencia: null
+    para: null
+    direccion: 'MANIZALES - CALDAS CARRERA 30 CALLES 49 Y 50 APARTADO 319'
+    telefono: '57 (6) 886 26 00'
+    fax: '57 (6) 886 35 35'
+    email: hada@hada.com.co
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_99:
+    Pais: Pais_52
+    nombre: 'IBERPACKING S. L.'
+    bajo_licencia: null
+    para: null
+    direccion: 'CARRETERA M - 300 KM 28.7 DE ALCALA DE HENARES'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_100:
+    Pais: Pais_78
+    nombre: 'PT. MEGASURYA MAS'
+    bajo_licencia: null
+    para: null
+    direccion: 'JL. TAMBAK SAWAH 32 WARU-SIDOARJO JAWA TIMUR-INDONESIA'
+    telefono: '62 - 318662390'
+    fax: '62 - 8665521'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_101:
+    Pais: Pais_35
+    nombre: 'JIANGSU RUINIAN JIANJIN PHARMACEUTICAL CO. LTD'
+    bajo_licencia: null
+    para: 'ZHEJIANG MEDICINES & HEALTH PRODUCTS IMPORT & EXPORT CO. LTD'
+    direccion: 'CHUANBU VILLAGE YIXING ECONOMIC DEVELOPMENT ZONE JIANGSU PROVINCE. CHINA'
+    telefono: '86 51066529917'
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_102:
+    Pais: Pais_35
+    nombre: 'JIANGSU KANGBAO PHARMACEUTICAL CO. LTD'
+    bajo_licencia: null
+    para: 'ZHEJIANG MEDICINES & HEALTH PRODUCTS IMPORT & EXPORT CO. LTD'
+    direccion: 'Nº 46 ANQING ROAD XINYI JIANGSU CHINA'
+    telefono: '8651688985411'
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_103:
+    Pais: Pais_23
+    nombre: 'ARTESANAL CESAR DE LA ARENA'
+    bajo_licencia: null
+    para: null
+    direccion: 'CALLE CONCHITAS Nº 499'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_104:
+    Pais: Pais_35
+    nombre: 'SHANXI LIANBANG PHARMACEUTICALS CO. LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'HUITONG  ROAD JINZHONG CITY SHANXI PROVINCE CHINA'
+    telefono: 86-574-87019336
+    fax: 86-574-87019333
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_105:
+    Pais: Pais_58
+    nombre: 'CHANEL  S.A.S'
+    bajo_licencia: null
+    para: null
+    direccion: 'BURGSTRASSE 26 8775'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_106:
+    Pais: Pais_25
+    nombre: 'CASA GRANADO'
+    bajo_licencia: null
+    para: null
+    direccion: 'RUA DO SENADO 46/48 - CENTRO RIO DE JANEIRO'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_107:
+    Pais: Pais_48
+    nombre: 'ECOBEL ECUATORIANA DE COLOR Y BELLEZA S. A.'
+    bajo_licencia: null
+    para: null
+    direccion: 'LOT. INMACONSA MS.3 S. 23 KM. 10.5 VIA A DAULE'
+    telefono: '2 - 110910'
+    fax: '2 - 110910'
+    email: ecobel@gye.satnet.net
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_108:
+    Pais: Pais_35
+    nombre: 'SHANG DE INTERNATIONAL TRADE CO.  LTD.'
+    bajo_licencia: null
+    para: 'I.T.K.A SRL.'
+    direccion: 'GUANDONG PROVINCE SHENZHEN - CHINA  Nº3780'
+    telefono: 0512-86165595
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_109:
+    Pais: Pais_35
+    nombre: 'FUZHOU KINGEDENTRADE CO.  LTD.'
+    bajo_licencia: null
+    para: 'I. T. K. A. SRL.'
+    direccion: '23 RD FLOOR  C-1 SKILAND MANSION 157 ; 5-  4 ROAD CHINA 350001'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_110:
+    Pais: Pais_35
+    nombre: 'T - ANTSINTERNATIONAL ENTERPRICE INC. JIANGYANG INDUSTRIAL PARK.'
+    bajo_licencia: null
+    para: 'I. T. K. A. SRL.'
+    direccion: 'Nº2 JIANGYANG INDUSTRIAL PARK. JANGZHOU - 225008 - CHINA'
+    telefono: +86-514-5128210
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_112:
+    Pais: Pais_190
+    nombre: 'FCC FRAGRANCES COSMETICS & CONSULTING ZI'
+    bajo_licencia: null
+    para: null
+    direccion: '10 CH DES. ORLONS CH- 1860 AIGLE SWITTZERLAND'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_156:
+    Pais: Pais_110
+    nombre: 'ICR INDUSTRIE COSMETICHE RIUNITE SPA'
+    bajo_licencia: null
+    para: 'BVLGARI PARFUMS S. A.'
+    direccion: 'VIA TORONTA 15 20144 MILANO - ITALIA'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_111:
+    Pais: Pais_79
+    nombre: 'PROGTER & GAMBLE PRODUCT SUPPLY (UK) LIMITED'
+    bajo_licencia: null
+    para: 'PROGTER & GAMBLE INTERNATIONAL OPERATIONS S. A.'
+    direccion: 'LONDON INNOVATION CENTRE WHITEHALL LANE EGHAM SUNTEY'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_114:
+    Pais: Pais_35
+    nombre: 'FUZHOU KINGEDENTRADE CO LTD.'
+    bajo_licencia: null
+    para: null
+    direccion: '23 RD FLOORC - 1 SKILAND MANSION 157; 5 - 4 RIAD CHINA 350001'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_115:
+    Pais: Pais_35
+    nombre: 'T - ANTS INTERNATIONAL ENTERPRICE INC.'
+    bajo_licencia: null
+    para: 'I. T. K. A. SRL.'
+    direccion: 'JIANGIANG INDUSTRIAL PARK YANCLOU'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_116:
+    Pais: Pais_25
+    nombre: 'EUROFARMA LABORATORIOS LTDA'
+    bajo_licencia: null
+    para: null
+    direccion: 'AV. VEREADOR JOSE DINIZ 3.465-CAMPO VELO CEP 4603-003'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_117:
+    Pais: Pais_35
+    nombre: 'NINGBO  HAISHU ZONE RESTO MEDICAL INSTRUMENTS CO. LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'ROOM 306 MOON LAKE TOWER Nº 16 NANZHAN EAST ROAD.'
+    telefono: +86-574-27899000
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_118:
+    Pais: Pais_38
+    nombre: 'BAFRY HESS PRODUCT E.K'
+    bajo_licencia: null
+    para: null
+    direccion: 'BODELSHWINGHER STRASSE 206; 44357 DORTMUND'
+    telefono: 0049(0)8034-707964
+    fax: null
+    email: hess-products@t-online.de
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_119:
+    Pais: Pais_35
+    nombre: 'WELL LEAD MEDICAL CO. LTD. PARA FORSURE MEDICAL'
+    bajo_licencia: null
+    para: 'FORSURE MEDICAL'
+    direccion: 'C-4 JINHU INDUSTRIAL ESTATE HUALONG PAN YU GUANGZHOU CHINA 511434'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_120:
+    Pais: Pais_35
+    nombre: 'CHANGSHU SENLIN MEDICAL APPLIANCE CO. LTD PARA FORSURE MEDICAL'
+    bajo_licencia: null
+    para: null
+    direccion: 'BAIMAO LISHI GULI TOWN'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_121:
+    Pais: Pais_35
+    nombre: 'PIETRASANTA PHARMA S.P.A PARA TRUSENTAL VERBANDSTOFFWERK GMBH'
+    bajo_licencia: null
+    para: null
+    direccion: 'VIA S.FRACESCO Nº 67-55049 VIAREGGIO'
+    telefono: 05207/991688-0
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_122:
+    Pais: Pais_35
+    nombre: 'NINGBO HAISHU ZONE RESTO MEDICAL INSTRUMENTS CO. LIMITED'
+    bajo_licencia: null
+    para: null
+    direccion: 'ROOM 306 MOON LAKE TOWER Nº 16 NANZHAN EAST ROAD NINGBO'
+    telefono: +86-574-2789900
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_123:
+    Pais: Pais_52
+    nombre: 'VISESMIN S.L'
+    bajo_licencia: null
+    para: null
+    direccion: 'GRAN VIA DE CARLOS III 94-8º 3A'
+    telefono: '+34 934 095 301'
+    fax: '+34  933 396 628'
+    email: ' www. vesismin.com'
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_124:
+    Pais: Pais_77
+    nombre: 'SAGA LABORATORIES'
+    bajo_licencia: null
+    para: null
+    direccion: 'SURVEY Nº 198/2 & 198/3 CHACHRAWADI VASNA TA. SANAND INDIA'
+    telefono: 91-2717-294272-76
+    fax: 91-79-25835739
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_125:
+    Pais: Pais_77
+    nombre: 'AMBICA PHARMA SALES'
+    bajo_licencia: null
+    para: null
+    direccion: '9 VASANI CENTRE 28 BABU GENU ROAD MUMBAI - 400 002'
+    telefono: '(022) 2678 0659 2678 932'
+    fax: '  (022 ) 9 2678 0784'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_127:
+    Pais: Pais_204
+    nombre: 'LABORATORIOS GAUTIER'
+    bajo_licencia: null
+    para: null
+    direccion: 'DEMOCRACIA 2132 C.P 11.800'
+    telefono: '4015454'
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_128:
+    Pais: Pais_153
+    nombre: 'FASHIONBOX PARA IMP. RUBEN LIMA TAPIA'
+    bajo_licencia: null
+    para: null
+    direccion: 'ZONA LIBRE DE COLON 0302-00748'
+    telefono: '(507) 446-2600'
+    fax: '(50)7 446-2626'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_129:
+    Pais: Pais_153
+    nombre: 'HAMZI S.A  PARA IMP. RUBEN LIMA TAPIA'
+    bajo_licencia: null
+    para: null
+    direccion: 'ZONA LIBRE DE COLON 0302-00724'
+    telefono: '(507) 431-0022'
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_130:
+    Pais: Pais_135
+    nombre: 'INTERNATIONAL FARMACEUTICA S.A DE C.V'
+    bajo_licencia: null
+    para: null
+    direccion: 'CARRETERACO Nº.44 COL PARQUE SAN ANDRES DELEGACION COYOACAN C.P 04040'
+    telefono: (52)5554841700
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_131:
+    Pais: Pais_53
+    nombre: 'S.S WHITE BURS  INC'
+    bajo_licencia: null
+    para: null
+    direccion: '1145 TOWBIN AVENUE'
+    telefono: '(732)905 -1100'
+    fax: '(732) 905-0987'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_132:
+    Pais: Pais_152
+    nombre: 'MEHRISH INDUSTRIES'
+    bajo_licencia: null
+    para: null
+    direccion: '86 B INDUSTRIAL ESTATE SIALKOT PAKISTAN'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_133:
+    Pais: Pais_184
+    nombre: 'BARAKAT PHARMACEUTICAL IND.'
+    bajo_licencia: null
+    para: null
+    direccion: 'ALMANSORAH - ALEPPO-SYRIA BOX:5412'
+    telefono: '(00963-21) 5210303'
+    fax: '5210276'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_134:
+    Pais: Pais_25
+    nombre: 'DENTSPLY  INDUSTRIA Y COMERCIO LTDA'
+    bajo_licencia: null
+    para: null
+    direccion: 'RUA. ALICE HERVE 86 BINGEN METROPOLIS/ RIO DE JANEIRO BRASIL'
+    telefono: '(24) 2233-1800'
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_135:
+    Pais: Pais_38
+    nombre: 'NEW STETIC S.A'
+    bajo_licencia: null
+    para: null
+    direccion: 'CARRERA 53 Nº 50-09 GUARNE ANTIOQUIA -COLOMBIA'
+    telefono: '(574) 550 00 00'
+    fax: '(574)551 31 34'
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_136:
+    Pais: Pais_40
+    nombre: 'CK DENTAL IND. CO. LTD'
+    bajo_licencia: null
+    para: null
+    direccion: '126 NAE: DONG OJEONG:-KU BUCHEON-CITY KYUNGKI-DO'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_137:
+    Pais: Pais_35
+    nombre: 'QIAOPAI GROUP CO. LTD.'
+    bajo_licencia: null
+    para: null
+    direccion: 'Nº13 QINGHE ROAD. GAOQING COUNTY ZIBO SHANDONG PROVINCE CHINA'
+    telefono: 0086-13964390145
+    fax: 0086-533-6960339
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_139:
+    Pais: Pais_40
+    nombre: 'SUREDENT CORPORATION'
+    bajo_licencia: null
+    para: null
+    direccion: '*809 SUNTECH CITY 2 307-2 SANGDAEWON-DOG JUNGWON-GU SEONGNAMSI 462-806'
+    telefono: 82-31-7374720
+    fax: 82-31-7374724
+    email: www.suredent.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_140:
+    Pais: Pais_156
+    nombre: 'PENTA INDUSTRIAS S.A.C.'
+    bajo_licencia: null
+    para: null
+    direccion: 'AV. VICTOR ALZAMORA 286 URB. BARRIO MEDICO-LIMA 34 PERU'
+    telefono: 511-4448355
+    fax: 511-248-0050
+    email: pentaindustrias@terra.com.pe
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_141:
+    Pais: Pais_25
+    nombre: 'CONEXAO SISTEMAS DE PROTESE'
+    bajo_licencia: null
+    para: null
+    direccion: 'AVENIDA OSAKA 950 ARUJA SP'
+    telefono: '114622.0900'
+    fax: 07400-000
+    email: conexao@conexao.com.br
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_142:
+    Pais: Pais_25
+    nombre: 'MICRODONT MICRO USINAGEM DE PRECISAO LTDA PARA CODENSA'
+    bajo_licencia: null
+    para: null
+    direccion: 'RUA AUGUSTO FERREIRA DE MORALES 224- SOCORRO SAO PAULO SP'
+    telefono: '55 113039 5500'
+    fax: '551130395508'
+    email: microdont@.com.br
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_143:
+    Pais: Pais_35
+    nombre: 'CHANGZHOU HUICHUN MEDICAL EQUIPMENT CO. LTD.'
+    bajo_licencia: null
+    para: 'BLANCO & NEGRO'
+    direccion: 'SANHEKOU ZHENGLU TOWN CHANGZHOU JIANGSU'
+    telefono: 0519-88670653-88675214
+    fax: 0519-88910533
+    email: huichun@huichun.cn
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_145:
+    Pais: Pais_77
+    nombre: 'GENPHARMA INTERNATIONAL PVT.LTD'
+    bajo_licencia: null
+    para: null
+    direccion: 'C-7-8 (2) MIDC BHOSARI PUNE 411026'
+    telefono: +9120-66115084/85
+    fax: null
+    email: mail@genpharma.net
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_146:
+    Pais: Pais_25
+    nombre: 'METALURGICA FAVA INDUSTRIA E COMERCIO LTDA.'
+    bajo_licencia: null
+    para: null
+    direccion: 'AVENIDA ITARARE 1500 FRANCO DA ROCHA SP 07844000 SAN PABLO'
+    telefono: '11 3977-1000'
+    fax: '11 3977-1000'
+    email: exportacao@fava.com.br.
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_147:
+    Pais: Pais_35
+    nombre: 'YIWU AQIN PLASTIC CO. LTD  PARA BLANCO Y NEGRO'
+    bajo_licencia: null
+    para: 'BLANCO Y NEGRO'
+    direccion: '59 CHAOYANG EACST ROAD YINAN INDUSTRIAL ZONE FOTANG YIWU'
+    telefono: 0579-85781380
+    fax: 0579-85780660
+    email: aqin@aqin.com.cn
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_148:
+    Pais: Pais_79
+    nombre: 'STODDARD MANUFACTURING COMPANY LIMITED'
+    bajo_licencia: null
+    para: null
+    direccion: 'BLACKHORSE ROAD LETCHWORTH GARDEN CITY HERTFORDSHIRE SG6 1HB UK'
+    telefono: '+44 (0) 1462 686221'
+    fax: '+44 (0) 1462 480711'
+    email: admin@stoddard.co.uk
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_149:
+    Pais: Pais_48
+    nombre: 'LAMOSAN CIA. LTDA'
+    bajo_licencia: null
+    para: null
+    direccion: 'URB. JHON F KENNEDY CALLE PASEO DEL SOL S/N Y DE LOS LUCEROS PUSUQUI'
+    telefono: '+593(2) 3430-536'
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_150:
+    Pais: Pais_126
+    nombre: 'SUPERMAX LATEX PRODUCTS SDN. BHD.   PARA: BESTENS S.R.L.'
+    bajo_licencia: null
+    para: 'BESTENS S.R.L.'
+    direccion: 'LOT 38 PUTRA INDUSTRIAL PARK BUKIT RAHMAN PUTRA 47000 SUNGAI BULOH SELANGOR'
+    telefono: 603-61452328
+    fax: 603-61562191
+    email: smax@po.jaring.my
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_151:
+    Pais: Pais_23
+    nombre: TEXSABOL
+    bajo_licencia: null
+    para: null
+    direccion: 'AV. BELZU Nº267 ZONA LAS CUADRAS'
+    telefono: 4-545411
+    fax: null
+    email: inotgabas@hotmail.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_152:
+    Pais: Pais_135
+    nombre: 'LABORATORIOS GRIN S.A. DE C.V.'
+    bajo_licencia: null
+    para: null
+    direccion: 'RODRIGUEZ SARO Nº 630 COL. DEL VALLE DELEGACION BENITO JUAREZ MEXICO D.F.'
+    telefono: '52002300 EXT. 141'
+    fax: '55344005'
+    email: documentacion1@laboratoriosgrin.com
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_153:
+    Pais: Pais_35
+    nombre: 'REYOUNG PHARMACEUTICAL CO.LTD'
+    bajo_licencia: null
+    para: 'UNIVERSAL PHARMA'
+    direccion: 'Nº 6 ERLANGSHAN ROAD YIYUAN COUNTY SHANDONG PROVINCE'
+    telefono: null
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_154:
+    Pais: Pais_12
+    nombre: 'LABORATORIO KEMEX S.A.'
+    bajo_licencia: null
+    para: 'G.P. PHARMA S.A.'
+    direccion: 'NAZARRE 3446/54 CIUDAD AUTONOMA DE BUENOS AIRES'
+    telefono: 419191018-20
+    fax: null
+    email: INFO@BASELUX.CH
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
+  LaboratorioFabricante_155:
+    Pais: Pais_35
+    nombre: 'YIWU MILER IMP& EXP CO. LTD.   PARA COMERCIAL XK DE GLORIA'
+    bajo_licencia: null
+    para: null
+    direccion: 'Nº18 YIWU CITY ZHEJIANG'
+    telefono: '0086 0579-85547686'
+    fax: null
+    email: null
+    observaciones: null
+    created_at: '2013-06-15 00:00:00'
+    updated_at: '2013-06-15 00:00:00'
