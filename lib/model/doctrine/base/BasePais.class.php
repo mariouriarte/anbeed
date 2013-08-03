@@ -8,7 +8,7 @@
  * @property string $nombre
  * @property string $bandera
  * @property LaboratorioFabricante $LaboratorioFabricante
- * @property Doctrine_Collection $Ciudad
+ * @property Doctrine_Collection $Ciudades
  * @property Cosmetico $Cosmetico
  * @property Doctrine_Collection $Formularios706
  * @property Doctrine_Collection $Higiene
@@ -17,7 +17,7 @@
  * @method string                getNombre()                Returns the current record's "nombre" value
  * @method string                getBandera()               Returns the current record's "bandera" value
  * @method LaboratorioFabricante getLaboratorioFabricante() Returns the current record's "LaboratorioFabricante" value
- * @method Doctrine_Collection   getCiudad()                Returns the current record's "Ciudad" collection
+ * @method Doctrine_Collection   getCiudades()              Returns the current record's "Ciudades" collection
  * @method Cosmetico             getCosmetico()             Returns the current record's "Cosmetico" value
  * @method Doctrine_Collection   getFormularios706()        Returns the current record's "Formularios706" collection
  * @method Doctrine_Collection   getHigiene()               Returns the current record's "Higiene" collection
@@ -25,7 +25,7 @@
  * @method Pais                  setNombre()                Sets the current record's "nombre" value
  * @method Pais                  setBandera()               Sets the current record's "bandera" value
  * @method Pais                  setLaboratorioFabricante() Sets the current record's "LaboratorioFabricante" value
- * @method Pais                  setCiudad()                Sets the current record's "Ciudad" collection
+ * @method Pais                  setCiudades()              Sets the current record's "Ciudades" collection
  * @method Pais                  setCosmetico()             Sets the current record's "Cosmetico" value
  * @method Pais                  setFormularios706()        Sets the current record's "Formularios706" collection
  * @method Pais                  setHigiene()               Sets the current record's "Higiene" collection
@@ -58,7 +58,7 @@ abstract class BasePais extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'pais_id'));
 
-        $this->hasMany('Ciudad', array(
+        $this->hasMany('Ciudad as Ciudades', array(
              'local' => 'id',
              'foreign' => 'pais_id'));
 

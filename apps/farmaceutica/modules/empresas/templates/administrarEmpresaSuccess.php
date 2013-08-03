@@ -22,17 +22,17 @@
                             
                             <li>
                                 <?php if($empresa->RepresentanteLegal->Persona->getId()): ?>
-                                    <?php echo link_to('Editar representante legal','personalegal/edit?id=' . $empresa->RepresentanteLegal->Persona->getId()) ?>
+                                    <?php echo link_to('Representante legal','personalegal/edit?id=' . $empresa->RepresentanteLegal->Persona->getId()) ?>
                                 <?php else: ?>
-                                    <?php echo link_to('Asignar representante legal','personalegal/index') ?>
+                                    <?php echo link_to('Representante legal','personalegal/index') ?>
                                 <?php endif; ?>
                             </li>
                             
                             <li>
                                 <?php if($empresa->RegenteFarmaceutico->Persona->getId()): ?>
-                                    <?php echo link_to('Editar regente farmaceútico', 'personaregente/edit?id=' . $empresa->RegenteFarmaceutico->Persona->getId()) ?>
+                                    <?php echo link_to('Regente farmaceútico', 'personaregente/edit?id=' . $empresa->RegenteFarmaceutico->Persona->getId()) ?>
                                 <?php else: ?>
-                                    <?php echo link_to('Asignar regente farmaceútico', 'personaregente/index') ?>
+                                    <?php echo link_to('Regente farmaceútico', 'personaregente/index') ?>
                                 <?php endif; ?>
                             </li>
                             

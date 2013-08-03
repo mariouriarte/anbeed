@@ -13,10 +13,16 @@ sfGuardGroup:
     name:           Administradores
     description:    Grupo de administradores
     Permissions:    [Permission_admin]
+  Group_cliente:
+    name:           Clientes
+    description:    Grupo de clientes de ANBEED
+    Permissions:    [Permission_cliente]
     
 ## permisos para los grupos
 sfGuardPermission:
   Permission_admin:
     name:           Administración
     description:    permisos de administración
-    
+  Permission_cliente:
+    name:           Cliente
+    description:    permisos de cliente

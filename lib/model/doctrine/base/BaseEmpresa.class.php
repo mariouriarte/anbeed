@@ -29,7 +29,7 @@
  * @property Doctrine_Collection $Medicamento
  * @property Doctrine_Collection $DispositivoMedico
  * @property Doctrine_Collection $Cosmetico
- * @property Doctrine_Collection $Higiene
+ * @property Doctrine_Collection $Higienes
  * @property Ciudad $Ciudad
  * @property Doctrine_Collection $Reactivos
  * @property Doctrine_Collection $Formulario11
@@ -58,7 +58,7 @@
  * @method Doctrine_Collection getMedicamento()             Returns the current record's "Medicamento" collection
  * @method Doctrine_Collection getDispositivoMedico()       Returns the current record's "DispositivoMedico" collection
  * @method Doctrine_Collection getCosmetico()               Returns the current record's "Cosmetico" collection
- * @method Doctrine_Collection getHigiene()                 Returns the current record's "Higiene" collection
+ * @method Doctrine_Collection getHigienes()                Returns the current record's "Higienes" collection
  * @method Ciudad              getCiudad()                  Returns the current record's "Ciudad" value
  * @method Doctrine_Collection getReactivos()               Returns the current record's "Reactivos" collection
  * @method Doctrine_Collection getFormulario11()            Returns the current record's "Formulario11" collection
@@ -86,7 +86,7 @@
  * @method Empresa             setMedicamento()             Sets the current record's "Medicamento" collection
  * @method Empresa             setDispositivoMedico()       Sets the current record's "DispositivoMedico" collection
  * @method Empresa             setCosmetico()               Sets the current record's "Cosmetico" collection
- * @method Empresa             setHigiene()                 Sets the current record's "Higiene" collection
+ * @method Empresa             setHigienes()                Sets the current record's "Higienes" collection
  * @method Empresa             setCiudad()                  Sets the current record's "Ciudad" value
  * @method Empresa             setReactivos()               Sets the current record's "Reactivos" collection
  * @method Empresa             setFormulario11()            Sets the current record's "Formulario11" collection
@@ -219,7 +219,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'empresa_id'));
 
-        $this->hasMany('Higiene', array(
+        $this->hasMany('Higiene as Higienes', array(
              'local' => 'id',
              'foreign' => 'empresa_id'));
 

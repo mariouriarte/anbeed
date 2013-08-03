@@ -70,7 +70,7 @@ Empresa:
     Medicamento:         {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
     DispositivoMedico:   {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
     Cosmetico:           {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
-    Higiene:             {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
+    Higienes:            {local: id, foreign: empresa_id, type: many, class: Higiene}
     Ciudad:              {local: ciudad_id, foreign: id, type: one, foreignAlias: Empresa}
     
 LaboratorioFabricante:
@@ -101,7 +101,7 @@ Pais:
     bandera: {type: string(50)}
   relations:
     LaboratorioFabricante: {local: id, foreign: pais_id, type: one, foreignAlias: Pais}
-    Ciudad:                {local: id, foreign: pais_id, type: many, foreignAlias: Pais}
+    Ciudades:              {local: id, foreign: pais_id, type: many, class: Ciudad}
     Cosmetico:             {local: id, foreign: pais_id, type: one, foreignAlias: Pais}
     Formularios706:        {local: id, foreign: rescom_ciudad_id, type: many, class: Formulario706}
 
@@ -112,7 +112,7 @@ Ciudad:
     nombre:  {type: string(150)}
   relations:
     Pais:                  {local: pais_id, foreign: id, type: one, foreignAlias: Ciudades}
-    Empresa:               {local: id, foreign: ciudad_id, type: one, foreignAlias: Ciudad}
+    Empresas:              {local: id, foreign: ciudad_id, type: many, class: Empresa}
     LaboratorioFabricante: {local: id, foreign: ciudad_id, type: one, foreignAlias: Ciudad}
 ######### PRODUCTO
 Producto:
