@@ -12,4 +12,13 @@
  */
 class Formulario706 extends BaseFormulario706
 {
+    public function getEmpresa()
+    {
+        return $this-> Higiene -> Empresa;
+    }
+    
+    public function getLaboratorioFabricante()
+    {
+        return $this-> Higiene -> LaboratorioFabricante;
+    }
 }

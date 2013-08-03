@@ -15,14 +15,17 @@ generator:
       actions: ~
       fields:  
         empresa_id:                   {label: 'Empresa'}
+        empresa:                      {label: 'Empresa'}
+        laboratorio_fabricante:       {label: 'Laboratorio Fabricante'}
         fecha:                        {label: 'Fecha de Registro'}
         tipo_tramite_formulario5_id:  {label: 'Tipo de Trámite'}
         tipo_producto_formulario5_id: {label: 'Tipo de Producto'}
-        origen_formulario_id:        {label: 'Origen'}
+        origen_formulario_id:         {label: 'Origen'}
+        tipo_tramite_formulario5:     {label: 'Tipo de Trámite'}
       
       list:    
         title: Listado de Solicitudes para Registro y Control de Calidad de Medicamentos
-        display: [fecha, tipo_tramite_formulario5, tipo_producto_formulario5, origen_formulario, medicamento]
+        display: [fecha, tipo_tramite_formulario5, empresa, laboratorio_fabricante, medicamento]
         actions:
           ir_portal: {label: Volver al Portal}
       filter:

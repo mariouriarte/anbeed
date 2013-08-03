@@ -76,7 +76,7 @@ abstract class BaseDispositivoMedico extends sfDoctrineRecord
         $this->setTableName('dispositivo_medico');
         $this->hasColumn('producto_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('empresa_id', 'integer', null, array(
              'type' => 'integer',

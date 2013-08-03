@@ -17,5 +17,13 @@ class Formulario5 extends BaseFormulario5
        return $this->getNombre();
     }
     
+    public function getEmpresa()
+    {
+        return $this-> Medicamento -> Empresa;
+    }
     
+    public function getLaboratorioFabricante()
+    {
+        return $this-> Medicamento -> LaboratorioFabricante;
+    }
 }

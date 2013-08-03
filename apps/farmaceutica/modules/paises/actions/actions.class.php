@@ -13,10 +13,12 @@ require_once dirname(__FILE__).'/../lib/paisesGeneratorHelper.class.php';
  */
 class paisesActions extends autoPaisesActions
 {
+    
     public function executeListIrPortal(sfWebRequest $request)
     {
         $this->redirect('/portal_dev.php/inicio/index');
     }
+    
     public function executeBuscar(sfWebRequest $request)
     {
         $this->getResponse()->setContentType('application/json');

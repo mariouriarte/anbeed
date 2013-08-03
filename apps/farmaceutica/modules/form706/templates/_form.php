@@ -252,7 +252,7 @@
       </tr>
       <tr>
           <th>Marca</th>
-          <td><?php echo $higiene->Marca ?></td>
+          <td><?php echo $higiene->getMarca() ?></td>
       </tr>
       <tr>
           <th>Código de identificación de la NSO:</th>

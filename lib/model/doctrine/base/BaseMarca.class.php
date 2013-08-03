@@ -7,14 +7,11 @@
  * 
  * @property string $nombre
  * @property Cosmetico $Cosmetico
- * @property Doctrine_Collection $Higiene
  * 
- * @method string              getNombre()    Returns the current record's "nombre" value
- * @method Cosmetico           getCosmetico() Returns the current record's "Cosmetico" value
- * @method Doctrine_Collection getHigiene()   Returns the current record's "Higiene" collection
- * @method Marca               setNombre()    Sets the current record's "nombre" value
- * @method Marca               setCosmetico() Sets the current record's "Cosmetico" value
- * @method Marca               setHigiene()   Sets the current record's "Higiene" collection
+ * @method string    getNombre()    Returns the current record's "nombre" value
+ * @method Cosmetico getCosmetico() Returns the current record's "Cosmetico" value
+ * @method Marca     setNombre()    Sets the current record's "nombre" value
+ * @method Marca     setCosmetico() Sets the current record's "Cosmetico" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -37,10 +34,6 @@ abstract class BaseMarca extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasOne('Cosmetico', array(
-             'local' => 'id',
-             'foreign' => 'marca_id'));
-
-        $this->hasMany('Higiene', array(
              'local' => 'id',
              'foreign' => 'marca_id'));
 

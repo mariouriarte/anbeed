@@ -16,4 +16,14 @@ class Formulario27 extends BaseFormulario27
     {
        return $this->getNombre();
     }
+    
+    public function getEmpresa()
+    {
+        return $this-> DispositivoMedico -> Empresa;
+    }
+    
+    public function getLaboratorioFabricante()
+    {
+        return $this-> DispositivoMedico -> LaboratorioFabricante;
+    }
 }

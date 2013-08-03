@@ -20,7 +20,7 @@ generator:
       list:
         title: Desiciones 706 registrados
         table_method: selectForms706DeHigiene
-        display: [higiene, laboratorio, tipo_tramite_formulario]
+        display: [fecha, tipo_tramite_formulario, empresa, laboratorio, higiene]
         actions:
           ir_empresa:   {label: Volver a empresa}
           ir_productos: {label: Volver a higiéne}

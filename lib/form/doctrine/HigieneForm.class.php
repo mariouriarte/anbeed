@@ -21,6 +21,10 @@ class HigieneForm extends BaseHigieneForm
         $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden(
             array(), array('value' => $empresa->getId()));
         
+        //// Empresa
+//        $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden();
+//        $this->validatorSchema['producto_id'] = new sfValidatorString(array('required' => false));
+        
         //// Laboratorio
         $this->widgetSchema['laboratorio_fabricante_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
             array('model' => 'LaboratorioFabricante',
@@ -28,9 +32,9 @@ class HigieneForm extends BaseHigieneForm
         ));
         
         //// Marca
-        $this->widgetSchema['marca_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
-            array('model'=>'Marca',
-                  'url'=>sfContext::getInstance()->getRouting()->generate('buscar_marca')
+        $this->widgetSchema['grupo_higiene_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+            array('model'=>'GrupoHigiene',
+                  'url'=>sfContext::getInstance()->getRouting()->generate('buscar_grupo_higiene')
         ));
         
         //// Pais de codigo NSO 

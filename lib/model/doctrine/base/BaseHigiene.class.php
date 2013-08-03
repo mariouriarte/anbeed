@@ -8,7 +8,7 @@
  * @property integer $producto_id
  * @property integer $empresa_id
  * @property integer $laboratorio_fabricante_id
- * @property string $grupo_higiene
+ * @property integer $grupo_higiene_id
  * @property string $marca
  * @property integer $pais_id
  * @property string $nombre
@@ -27,7 +27,7 @@
  * @method integer               getProductoId()                Returns the current record's "producto_id" value
  * @method integer               getEmpresaId()                 Returns the current record's "empresa_id" value
  * @method integer               getLaboratorioFabricanteId()   Returns the current record's "laboratorio_fabricante_id" value
- * @method string                getGrupoHigiene()              Returns the current record's "grupo_higiene" value
+ * @method integer               getGrupoHigieneId()            Returns the current record's "grupo_higiene_id" value
  * @method string                getMarca()                     Returns the current record's "marca" value
  * @method integer               getPaisId()                    Returns the current record's "pais_id" value
  * @method string                getNombre()                    Returns the current record's "nombre" value
@@ -45,7 +45,7 @@
  * @method Higiene               setProductoId()                Sets the current record's "producto_id" value
  * @method Higiene               setEmpresaId()                 Sets the current record's "empresa_id" value
  * @method Higiene               setLaboratorioFabricanteId()   Sets the current record's "laboratorio_fabricante_id" value
- * @method Higiene               setGrupoHigiene()              Sets the current record's "grupo_higiene" value
+ * @method Higiene               setGrupoHigieneId()            Sets the current record's "grupo_higiene_id" value
  * @method Higiene               setMarca()                     Sets the current record's "marca" value
  * @method Higiene               setPaisId()                    Sets the current record's "pais_id" value
  * @method Higiene               setNombre()                    Sets the current record's "nombre" value
@@ -73,7 +73,7 @@ abstract class BaseHigiene extends sfDoctrineRecord
         $this->setTableName('higiene');
         $this->hasColumn('producto_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('empresa_id', 'integer', null, array(
              'type' => 'integer',
@@ -83,10 +83,9 @@ abstract class BaseHigiene extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('grupo_higiene', 'string', 255, array(
-             'type' => 'string',
-             'notnull' => true,
-             'length' => 255,
+        $this->hasColumn('grupo_higiene_id', 'integer', null, array(
+             'type' => 'integer',
+             'notnull' => false,
              ));
         $this->hasColumn('marca', 'string', 255, array(
              'type' => 'string',

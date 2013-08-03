@@ -16,10 +16,10 @@ abstract class BaseHigieneForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'                        => new sfWidgetFormInputHidden(),
-      'producto_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => false)),
+      'producto_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => true)),
       'empresa_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => false)),
       'laboratorio_fabricante_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('LaboratorioFabricante'), 'add_empty' => false)),
-      'grupo_higiene'             => new sfWidgetFormInputText(),
+      'grupo_higiene_id'          => new sfWidgetFormInputText(),
       'marca'                     => new sfWidgetFormInputText(),
       'pais_id'                   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'add_empty' => true)),
       'nombre'                    => new sfWidgetFormInputText(),
@@ -35,10 +35,10 @@ abstract class BaseHigieneForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'                        => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'producto_id'               => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'))),
+      'producto_id'               => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'required' => false)),
       'empresa_id'                => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'))),
       'laboratorio_fabricante_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('LaboratorioFabricante'))),
-      'grupo_higiene'             => new sfValidatorString(array('max_length' => 255)),
+      'grupo_higiene_id'          => new sfValidatorInteger(array('required' => false)),
       'marca'                     => new sfValidatorString(array('max_length' => 255)),
       'pais_id'                   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'required' => false)),
       'nombre'                    => new sfValidatorString(array('max_length' => 255)),

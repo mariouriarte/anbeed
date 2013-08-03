@@ -64,7 +64,7 @@ abstract class BaseReactivo extends sfDoctrineRecord
         $this->setTableName('reactivo');
         $this->hasColumn('producto_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('empresa_id', 'integer', null, array(
              'type' => 'integer',

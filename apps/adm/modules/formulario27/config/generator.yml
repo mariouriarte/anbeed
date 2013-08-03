@@ -18,10 +18,13 @@ generator:
         datos_formulario27_id:         {label: 'Datos'}
         tipo_tramite_formulario27_id:  {label: 'Tipo de Trámite'}
         origen_formulario_id:          {label: 'Origen'}
+        empresa:                       {label: 'Empresa'}
+        laboratorio_fabricante:        {label: 'Laboratorio Fabricante'}
+        tipo_tramite_formulario27:     {label: 'Tipo de Trámite'}
       
       list:    
         title: Listado de Solicitudes para Registro y Control de Calidad de Dispositivos Medicos
-        display: [fecha, tipo_tramite_formulario27, datos_formulario27, origen_formulario, dispositivo_medico]
+        display: [fecha, tipo_tramite_formulario27, empresa, laboratorio_fabricante, dispositivo_medico]
         actions:
           ir_portal: {label: Volver al Portal} 
       filter:  

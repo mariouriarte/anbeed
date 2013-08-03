@@ -1,0 +1,48 @@
+## ciudades de bolivia.
+
+Ciudad:
+  Ciudad_1:
+    Pais: Pais_23
+    nombre: 'LA PAZ'
+    created_at: '2013-07-20 11:06:39'
+    updated_at: '2013-07-20 11:06:39'
+  Ciudad_2:
+    Pais: Pais_23
+    nombre: 'SANTA CRUZ'
+    created_at: '2013-07-20 11:06:47'
+    updated_at: '2013-07-20 11:06:47'
+  Ciudad_3:
+    Pais: Pais_23
+    nombre: COCHABAMBA
+    created_at: '2013-07-20 11:06:54'
+    updated_at: '2013-07-20 11:06:54'
+  Ciudad_4:
+    Pais: Pais_23
+    nombre: ORURO
+    created_at: '2013-08-01 23:40:49'
+    updated_at: '2013-08-01 23:40:49'
+  Ciudad_6:
+    Pais: Pais_23
+    nombre: SUCRE
+    created_at: '2013-08-01 23:41:08'
+    updated_at: '2013-08-01 23:41:08'
+  Ciudad_7:
+    Pais: Pais_23
+    nombre: TARIJA
+    created_at: '2013-08-01 23:41:15'
+    updated_at: '2013-08-01 23:41:15'
+  Ciudad_8:
+    Pais: Pais_23
+    nombre: POTOSI
+    created_at: '2013-08-01 23:41:21'
+    updated_at: '2013-08-01 23:41:21'
+  Ciudad_9:
+    Pais: Pais_23
+    nombre: PANDO
+    created_at: '2013-08-01 23:41:41'
+    updated_at: '2013-08-01 23:41:41'
+  Ciudad_5:
+    Pais: Pais_23
+    nombre: TRINIDAD
+    created_at: '2013-08-01 23:41:00'
+    updated_at: '2013-08-01 23:41:56'

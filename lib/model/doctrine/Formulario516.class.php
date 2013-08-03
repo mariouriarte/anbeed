@@ -12,8 +12,12 @@
  */
 class Formulario516 extends BaseFormulario516
 {
-    public function getLaboratorio() 
+    public function getLaboratorioFabricante() 
     {
         return $this->Cosmetico->LaboratorioFabricante;
+    }
+    public function getEmpresa()
+    {
+        return $this-> Cosmetico -> Empresa;
     }
 }
