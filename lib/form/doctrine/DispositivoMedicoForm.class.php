@@ -22,8 +22,5 @@ class DispositivoMedicoForm extends BaseDispositivoMedicoForm
                 array( 'model'=>'LaboratorioFabricante',
                         'url'=>sfContext::getInstance()->getRouting()->generate('buscar_labs')
          ));
-      
-      $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden(
-            array());
   }
 }

@@ -48,10 +48,10 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica_dev.php/medicamentos"><span>Medicamentos</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/reactivos"><span>Reactivos para Diagnóstico</span></a></li>
                             <li><a href="/farmaceutica_dev.php/dispositivos"><span>Dispositivos medicos</span></a></li>
                             <li><a href="/farmaceutica_dev.php/cosmetico"><span>Cosméticos</span></a></li>
                             <li><a href="/farmaceutica_dev.php/higiene"><span>Higiene y limpieza</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/reactivos"><span>Reactivos para Diagnóstico</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,6 +64,7 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica_dev.php/formulario5porempresa"><span>Formulario 005</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/formulario12porempresa"><span>Formulario 012</span></a></li>
                             <li><a href="/farmaceutica_dev.php/formulario27porempresa"><span>Formulario 027</span></a></li>
                             <li><a href="/farmaceutica_dev.php/form516porempresa"><span>Desición 516</span></a></li>
                             <li><a href="/farmaceutica_dev.php/form706porempresa"><span>Desición 706</span></a></li>

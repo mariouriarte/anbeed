@@ -21,7 +21,7 @@ abstract class BaseFormulario12FormFilter extends BaseFormFilterDoctrine
       'reactivo_id'                  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Reactivo'), 'add_empty' => true)),
       'tipo_tramite_formulario12_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoTramiteFormulario12'), 'add_empty' => true)),
       'origen_formulario_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('OrigenFormulario'), 'add_empty' => true)),
-      'modificacion'                 => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'modificacion'                 => new sfWidgetFormFilterInput(),
       'created_at'                   => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'                   => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));

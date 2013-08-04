@@ -16,4 +16,29 @@ class Formulario12Table extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Formulario12');
     }
+    
+    public function selectForms12DeReactivo()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $reactivo = $user->getAttribute('reactivo');
+        $q = Doctrine_Query::create()
+                    ->from('Formulario12 f')
+                    ->leftJoin('f.TipoTramiteFormulario12 tf')
+                    ->leftJoin('f.OrigenFormulario of')
+                    ->where('f.reactivo_id = ?', $reactivo->getId())
+                    ->orderBy('f.id ASC');
+        return $q;
+    }
+    public function selectForms12DeEmpresa()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $q = Doctrine_Query::create()
+                    ->from('Formulario12 f')
+                    ->leftJoin('f.Reactivo r')
+                    ->leftJoin('r.Empresa e') 
+                    ->where('r.empresa_id = ?', $empresa->getId())
+                    ->orderBy('f.id ASC');
+        return $q;
+    }
 }

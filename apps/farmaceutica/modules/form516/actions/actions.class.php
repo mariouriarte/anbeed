@@ -69,6 +69,10 @@ class form516Actions extends sfActions
         try
         {
             $formulario516 = $form->save();
+            $formulario = new Formulario();
+            $formulario -> save();
+            $formulario516 -> setFormulario($formulario);
+            $formulario516 -> save();
         }
         catch (Doctrine_Validator_Exception $e) 
         {

@@ -58,7 +58,7 @@ abstract class BaseFormulario12 extends sfDoctrineRecord
         $this->setTableName('formulario12');
         $this->hasColumn('formulario_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('fecha', 'date', null, array(
              'type' => 'date',
@@ -90,7 +90,7 @@ abstract class BaseFormulario12 extends sfDoctrineRecord
              ));
         $this->hasColumn('modificacion', 'string', 250, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 250,
              ));
     }

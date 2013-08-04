@@ -17,11 +17,13 @@ generator:
         fecha:                         {label: 'Fecha de Registro'}
         tipo_tramite_formulario12_id:  {label: 'Tipo de Trámite'}
         origen_formulario_id:          {label: 'Origen'}
+        empresa:                       {label: 'Empresa'}
+        laboratorio_fabricante:        {label: 'Laboratorio Fabricante'}
       
       list:    
         title: Listado de Solicitudes para Registro Reactivos para Diagnostico
-        display: [fecha, tipo_tramite_formulario12, origen_formulario, reactivo]
-#        table_method: selectForms12DeDispositivo
+        display: [fecha, tipo_tramite_formulario12, empresa, laboratorio_fabricante, reactivo]
+        table_method: selectForms12DeReactivo
         actions:
           ir_productos: {label: Regresar a Reactivos}
           ir_empresa:   {label: Volver a Empresa}
@@ -30,16 +32,16 @@ generator:
         display: [numero_ruta, tipo_tramite_formulario12_id, origen_formulario_id]
       
       form:    
-        display: [fecha, tipo_tramite_formulario12_id, origen_formulario_id, vigencia, fecha_inicio_vigencia, numero_ruta, modificacion]
+
       edit:    
         title: Editar Listado de Solicitudes para Registro Reactivos para Diagnostico
-        display: [fecha, tipo_tramite_formulario12_id, origen_formulario_id, dispositivo_medico_id, vigencia, fecha_inicio_vigencia, numero_ruta]
+        display: [fecha, tipo_tramite_formulario12_id, origen_formulario_id, vigencia, fecha_inicio_vigencia, numero_ruta, reactivo_id]
         actions:
           _list: ~  
           _save: ~  
       new:     
         title: Solicitud para Registro y Control de Calidad de Dispositivos Medicos
-        display: [fecha, tipo_tramite_formulario12_id, origen_formulario_id, reactivo_id, vigencia, fecha_inicio_vigencia, numero_ruta, modificacion]
+        display: [fecha, tipo_tramite_formulario12_id, origen_formulario_id, vigencia, fecha_inicio_vigencia, numero_ruta, modificacion, reactivo_id]
         actions:
           _list: ~  
           _save: ~

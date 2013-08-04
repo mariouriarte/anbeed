@@ -82,7 +82,7 @@ abstract class BaseFormulario7 extends sfDoctrineRecord
         $this->setTableName('formulario7');
         $this->hasColumn('formulario_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('fecha', 'date', null, array(
              'type' => 'date',

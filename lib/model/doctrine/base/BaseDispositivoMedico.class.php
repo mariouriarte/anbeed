@@ -20,6 +20,7 @@
  * @property string $metodo_desecho
  * @property string $registro_sanitario
  * @property string $descripcion
+ * @property string $formula_cc
  * @property Producto $Producto
  * @property Doctrine_Collection $Formulario27
  * @property Empresa $Empresa
@@ -40,6 +41,7 @@
  * @method string                getMetodoDesecho()             Returns the current record's "metodo_desecho" value
  * @method string                getRegistroSanitario()         Returns the current record's "registro_sanitario" value
  * @method string                getDescripcion()               Returns the current record's "descripcion" value
+ * @method string                getFormulaCc()                 Returns the current record's "formula_cc" value
  * @method Producto              getProducto()                  Returns the current record's "Producto" value
  * @method Doctrine_Collection   getFormulario27()              Returns the current record's "Formulario27" collection
  * @method Empresa               getEmpresa()                   Returns the current record's "Empresa" value
@@ -59,6 +61,7 @@
  * @method DispositivoMedico     setMetodoDesecho()             Sets the current record's "metodo_desecho" value
  * @method DispositivoMedico     setRegistroSanitario()         Sets the current record's "registro_sanitario" value
  * @method DispositivoMedico     setDescripcion()               Sets the current record's "descripcion" value
+ * @method DispositivoMedico     setFormulaCc()                 Sets the current record's "formula_cc" value
  * @method DispositivoMedico     setProducto()                  Sets the current record's "Producto" value
  * @method DispositivoMedico     setFormulario27()              Sets the current record's "Formulario27" collection
  * @method DispositivoMedico     setEmpresa()                   Sets the current record's "Empresa" value
@@ -145,6 +148,11 @@ abstract class BaseDispositivoMedico extends sfDoctrineRecord
              'type' => 'string',
              'notnull' => false,
              'length' => 2000,
+             ));
+        $this->hasColumn('formula_cc', 'string', 5000, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => 5000,
              ));
     }
 

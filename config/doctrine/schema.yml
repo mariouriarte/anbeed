@@ -224,7 +224,7 @@ Formulario5:
   actAs: {Timestampable: ~}
   columns:
     ## se agrega este campo para generalizar, revisar en el programa para evitar errores
-    formulario_id:                {type: integer, notnull: true}
+    formulario_id:                {type: integer, notnull: false}
     fecha:                        {type: date, notnull: false}
     vigencia:                     {type: integer(2), notnull: false}
     fecha_inicio_vigencia:        {type: date, notnull: false}
@@ -282,6 +282,7 @@ DispositivoMedico:
     metodo_desecho:            {type: string(2000), notnull: false}
     registro_sanitario:        {type: string(50), unique: false, default: NULL}
     descripcion:               {type: string(2000), notnull: false}
+    formula_cc:                {type: string(5000), notnull: false}
   relations:
     Producto:              {local: producto_id, foreign: id, type: one, foreignAlias: Medicamento}
     Formulario27:          {local: id, foreign: dispositivo_medico_id, type: many, foreignAlias: Dispositivos}
@@ -291,7 +292,7 @@ DispositivoMedico:
 Formulario27:
   actAs: {Timestampable: ~}
   columns:
-    formulario_id:                {type: integer, notnull: true}
+    formulario_id:                {type: integer, notnull: false}
     fecha:                        {type: date}
     vigencia:                     {type: integer(2), notnull: false}
     fecha_inicio_vigencia:        {type: date, notnull: false}
@@ -367,7 +368,7 @@ Formulario516:
   actAs: {Timestampable: ~}
   columns:
     ## se agrega este campo para generalizar, revisar en el programa para evitar errores
-    formulario_id:              {type: integer, notnull: true}
+    formulario_id:              {type: integer, notnull: false}
     fecha:                      {type: date}
     cosmetico_id:               {type: integer, notnull: true}
     vigencia:                   {type: integer(2), notnull: false}
@@ -422,7 +423,7 @@ Formulario706:
   actAs: {Timestampable: ~}
   columns:
     ## se agrega este campo para generalizar, revisar en el programa para evitar errores
-    formulario_id:              {type: integer, notnull: true}
+    formulario_id:              {type: integer, notnull: false}
     fecha:                      {type: date}
     higiene_id:                 {type: integer, notnull: true}
     vigencia:                   {type: integer(2), notnull: false}
@@ -498,7 +499,7 @@ Formulario12:
   actAs: {Timestampable: ~}
   columns:
     ## se agrega este campo para generalizar, revisar en el programa para evitar errores
-    formulario_id:                {type: integer, notnull: true}
+    formulario_id:                {type: integer, notnull: false}
     fecha:                        {type: date}
     vigencia:                     {type: integer(2), notnull: false}
     fecha_inicio_vigencia:        {type: date, notnull: false}
@@ -506,7 +507,7 @@ Formulario12:
     reactivo_id:                  {type: integer, notnull: true}
     tipo_tramite_formulario12_id: {type: integer, notnull: true}
     origen_formulario_id:         {type: integer, notnull: true}
-    modificacion:                 {type: string(250), notnull: true}
+    modificacion:                 {type: string(250), notnull: false}
   relations:
     Formulario:              {local: formulario_id, foreign: id, type: one, foreignAlias: Formulario12}
     Reactivo:                {local: reactivo_id, foreign: id, type: one, foreignAlias: Formularios12}
@@ -525,7 +526,7 @@ Formulario7:
   actAs: {Timestampable: ~}
   columns:
     ## se agrega este campo para generalizar, revisar en el programa para evitar errores
-    formulario_id:         {type: integer, notnull: true}
+    formulario_id:         {type: integer, notnull: false}
     fecha:                 {type: date}
     vigencia:              {type: integer(2), notnull: false}
     fecha_inicio_vigencia: {type: date, notnull: false}
@@ -554,7 +555,7 @@ Formulario11:
   actAs: {Timestampable: ~}
   columns:
     ## se agrega este campo para generalizar, revisar en el programa para evitar errores
-    formulario_id:         {type: integer, notnull: true}
+    formulario_id:         {type: integer, notnull: false}
     fecha:                 {type: date}
     vigencia:              {type: integer(2), notnull: false}
     fecha_inicio_vigencia: {type: date, notnull: false}

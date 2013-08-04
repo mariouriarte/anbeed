@@ -26,15 +26,23 @@ if($empresa->RepresentanteLegal->getPersonaId() =='')
     $classRepresentante= 'td-warning';
     $iconoRepresentante = "<img src=\"/images/icons/16/help-hint.svg\">";
 }
-if($empresa->RegenteFarmaceutico->getMatriculaProfesional() == '')
+if($empresa->RegenteFarmaceutico->getPersonaId() =='')
 {
     $classRegente = 'td-warning';
-    $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\"> <font color=red> Sin Matricula inexistente </font> ";
+    $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\">";
 }
-if($empresa->RegenteFarmaceutico->getCarnetColegiado() =='')
+else
 {
-    $classRegente = 'td-warning';
-    $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\"> <font color=red> Carnet Colegiado inexistente </font> ";
+    if($empresa->RegenteFarmaceutico->getMatriculaProfesional() == '')
+    {
+        $classRegente = 'td-warning';
+        $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\"> <font color=red> Sin Matricula inexistente </font> ";
+    }
+    if($empresa->RegenteFarmaceutico->getCarnetColegiado() =='')
+    {
+        $classRegente = 'td-warning';
+        $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\"> <font color=red> Carnet Colegiado inexistente </font> ";
+    }
 }
 ?>
 

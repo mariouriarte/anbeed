@@ -67,7 +67,7 @@ abstract class BaseFormulario516 extends sfDoctrineRecord
         $this->setTableName('formulario516');
         $this->hasColumn('formulario_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('fecha', 'date', null, array(
              'type' => 'date',

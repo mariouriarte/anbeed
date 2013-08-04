@@ -66,6 +66,10 @@ class form706Actions extends sfActions
     if ($form->isValid())
     {
       $formulario706 = $form->save();
+      $formulario = new Formulario();
+      $formulario -> save();
+      $formulario706 -> setFormulario($formulario);
+      $formulario706 -> save();
 
       $this->redirect('form706/edit?id='.$formulario706->getId());
     }

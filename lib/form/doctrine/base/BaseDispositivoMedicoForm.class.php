@@ -31,6 +31,7 @@ abstract class BaseDispositivoMedicoForm extends BaseFormDoctrine
       'metodo_desecho'            => new sfWidgetFormTextarea(),
       'registro_sanitario'        => new sfWidgetFormInputText(),
       'descripcion'               => new sfWidgetFormTextarea(),
+      'formula_cc'                => new sfWidgetFormTextarea(),
       'created_at'                => new sfWidgetFormDateTime(),
       'updated_at'                => new sfWidgetFormDateTime(),
     ));
@@ -52,6 +53,7 @@ abstract class BaseDispositivoMedicoForm extends BaseFormDoctrine
       'metodo_desecho'            => new sfValidatorString(array('max_length' => 2000, 'required' => false)),
       'registro_sanitario'        => new sfValidatorString(array('max_length' => 50, 'required' => false)),
       'descripcion'               => new sfValidatorString(array('max_length' => 2000, 'required' => false)),
+      'formula_cc'                => new sfValidatorString(array('max_length' => 5000, 'required' => false)),
       'created_at'                => new sfValidatorDateTime(),
       'updated_at'                => new sfValidatorDateTime(),
     ));

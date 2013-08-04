@@ -16,7 +16,7 @@ abstract class BaseFormulario12Form extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'                           => new sfWidgetFormInputHidden(),
-      'formulario_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'), 'add_empty' => false)),
+      'formulario_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'), 'add_empty' => true)),
       'fecha'                        => new sfWidgetFormDate(),
       'vigencia'                     => new sfWidgetFormInputText(),
       'fecha_inicio_vigencia'        => new sfWidgetFormDate(),
@@ -31,7 +31,7 @@ abstract class BaseFormulario12Form extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'                           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'formulario_id'                => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'))),
+      'formulario_id'                => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'), 'required' => false)),
       'fecha'                        => new sfValidatorDate(array('required' => false)),
       'vigencia'                     => new sfValidatorInteger(array('required' => false)),
       'fecha_inicio_vigencia'        => new sfValidatorDate(array('required' => false)),
@@ -39,7 +39,7 @@ abstract class BaseFormulario12Form extends BaseFormDoctrine
       'reactivo_id'                  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Reactivo'))),
       'tipo_tramite_formulario12_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TipoTramiteFormulario12'))),
       'origen_formulario_id'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('OrigenFormulario'))),
-      'modificacion'                 => new sfValidatorString(array('max_length' => 250)),
+      'modificacion'                 => new sfValidatorString(array('max_length' => 250, 'required' => false)),
       'created_at'                   => new sfValidatorDateTime(),
       'updated_at'                   => new sfValidatorDateTime(),
     ));

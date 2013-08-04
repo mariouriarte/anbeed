@@ -1,3 +1,39 @@
+formulario12_formulario12porempresa:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario12
+    module:               formulario12porempresa
+    prefix_path:          /formulario12porempresa
+    column:               id
+    with_wildcard_routes: true
+
+tipo_calificacion_tiposcalificacion:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoCalificacion
+    module:               tiposcalificacion
+    prefix_path:          /tiposcalificacion
+    column:               id
+    with_wildcard_routes: true
+
+tipo_calificacion:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoCalificacion
+    module:               tiposcalificaciion
+    prefix_path:          /tiposcalificaciion
+    column:               id
+    with_wildcard_routes: true
+
+formulario7:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario7
+    module:               formulario7
+    prefix_path:          /formulario7
+    column:               id
+    with_wildcard_routes: true
+
 formulario12:
   class: sfDoctrineRouteCollection
   options:

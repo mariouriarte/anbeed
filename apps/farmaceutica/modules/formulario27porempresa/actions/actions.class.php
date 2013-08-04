@@ -19,4 +19,11 @@ class formulario27porempresaActions extends autoFormulario27porempresaActions
         $empresa = $user->getAttribute('empresa');
         $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
     }
+    public function executeEdit(sfWebRequest $request)
+    { 
+        $this->formulario27 = $this->getRoute()->getObject();
+        $user = sfContext::getInstance()->getUser();
+        $user->setAttribute('dispositivo_medico3', $this->formulario27->DispositivoMedico);
+        $this->form = $this->configuration->getForm($this->formulario27);
+    }
 }

@@ -1,0 +1,104 @@
+Producto:
+  Producto_1:
+    created_at: '2013-08-03 21:49:25'
+    updated_at: '2013-08-03 21:49:25'
+  Producto_2:
+    created_at: '2013-08-03 21:50:16'
+    updated_at: '2013-08-03 21:50:16'
+  Producto_3:
+    created_at: '2013-08-03 21:53:27'
+    updated_at: '2013-08-03 21:53:27'
+  Producto_4:
+    created_at: '2013-08-03 21:54:29'
+    updated_at: '2013-08-03 21:54:29'
+  Producto_5:
+    created_at: '2013-08-03 21:55:13'
+    updated_at: '2013-08-03 21:55:13'
+Medicamento:
+  Medicamento_1:
+    Producto: Producto_1
+    Empresa: Empresa_1
+    LaboratorioFabricante: LaboratorioFabricante_1
+    FormaFarmaceutica: Comprimido
+    ViaAdministracion: Oral
+    TipoVenta: Libre
+    nombre_comercial: TYPIREC
+    nombre_generico: ANTIGRIPAL
+    concentracion: NO
+    accion_terapeutica: no
+    conservacion: NO
+    periodo_validez: NO
+    especificacion_envase: no
+    envase_clinico: no
+    aval: NO
+    registro_sanitario: ''
+    certificado_control: ''
+    descripcion: ''
+    created_at: '2013-08-03 21:49:25'
+    updated_at: '2013-08-03 21:49:25'
+DispositivoMedico:
+  DispositivoMedico_1:
+    Producto: Producto_2
+    Empresa: Empresa_1
+    LaboratorioFabricante: LaboratorioFabricante_1
+    nombre_comercial: JERINGUIN
+    nombre_generico: JERINGA
+    clasificacion_riesgo: no
+    codigo_internacional: no
+    manual: true
+    indicaciones: no
+    presentacion: no
+    condicion_empaque: no
+    vida_util: no
+    metodo_desecho: no
+    registro_sanitario: ''
+    descripcion: ''
+    created_at: '2013-08-03 21:50:16'
+    updated_at: '2013-08-03 21:50:16'
+Cosmetico:
+  Cosmetico_1:
+    Producto: Producto_3
+    Empresa: Empresa_1
+    LaboratorioFabricante: LaboratorioFabricante_3
+    FormaCosmetica: FormaCosmetica_7
+    GrupoCosmetico: GrupoCosmetico_5
+    marca: PANTENE
+    nombre: SHAMPU
+    codigo_nso: NO
+    vigencia_nso: NO
+    expediente: NO
+    registro_sanitario: ''
+    descripcion: ''
+    created_at: '2013-08-03 21:53:27'
+    updated_at: '2013-08-03 21:53:27'
+Higiene:
+  Higiene_1:
+    Producto: Producto_4
+    Empresa: Empresa_1
+    LaboratorioFabricante: LaboratorioFabricante_1
+    grupo_higiene_id: null
+    marca: PAPERS
+    nombre: PAÑAL
+    nombre_detalle: PHD
+    variedades: ''
+    codigo_nso: no
+    vigencia_nso: ''
+    expediente: NO
+    registro_sanitario: ''
+    created_at: '2013-08-03 21:54:29'
+    updated_at: '2013-08-03 21:54:29'
+Reactivo:
+  Reactivo_1:
+    Producto: Producto_5
+    Empresa: Empresa_1
+    LaboratorioFabricante: LaboratorioFabricante_3
+    nombre_comercial: RACTIVIN
+    catalogo: NO
+    uso: no
+    presentacion: NO
+    conservacion: NO
+    periodo_validez: ''
+    componente: on
+    registro_sanitario: ''
+    created_at: '2013-08-03 21:55:13'
+    updated_at: '2013-08-03 21:55:13'

@@ -26,6 +26,7 @@ generator:
         metodo_desecho:            {label: Método de Desecho o Disposición Final del Producto}
         registro_sanitario:        {label: N° de Registro Sanitario}
         descripcion:               {label: Descripción}
+        formula_cc:                {label: Fórmula Cualicuantitativa}
       list:    
         title: Dispositivos Medicos Registrados
         display: [nombre_comercial, nombre_generico, laboratorio_fabricante, registro_sanitario]
@@ -40,7 +41,7 @@ generator:
         display: [nombre_comercial, nombre_generico, laboratorio_fabricante_id, registro_sanitario]
       form:    
         display:
-          Datos Generales del Producto: [laboratorio_fabricante_id, nombre_comercial, nombre_generico, clasificacion_riesgo, codigo_internacional, manual, indicaciones, presentacion, condicion_empaque, vida_util, metodo_desecho, registro_sanitario, descripcion]
+          Datos Generales del Producto: [laboratorio_fabricante_id, nombre_comercial, nombre_generico, clasificacion_riesgo, codigo_internacional, manual, indicaciones, presentacion, condicion_empaque, vida_util, metodo_desecho, registro_sanitario, descripcion, formula_cc]
         actions:    
           _delete: ~
           _list: ~

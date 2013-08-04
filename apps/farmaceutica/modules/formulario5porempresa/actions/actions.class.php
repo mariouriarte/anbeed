@@ -19,4 +19,11 @@ class formulario5porempresaActions extends autoFormulario5porempresaActions
         $empresa = $user->getAttribute('empresa');
         $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
     }
+    public function executeEdit(sfWebRequest $request)
+    { 
+        $this->formulario5 = $this->getRoute()->getObject();
+        $user = sfContext::getInstance()->getUser();
+        $user->setAttribute('medicamento3', $this->formulario5->Medicamento);
+        $this->form = $this->configuration->getForm($this->formulario5);
+    }
 }

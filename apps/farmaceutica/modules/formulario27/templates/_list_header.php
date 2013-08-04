@@ -7,14 +7,14 @@ if(!$sf_user->hasAttribute('empresa'))
 }
 $empresa = $sf_user->getAttribute('empresa');
    
-/*Recuperamos el dispositivo_medico*/
-if(!$sf_user->hasAttribute('dispositivo_medico'))
+/*Recuperamos el medicamento*/
+if(!$sf_user->hasAttribute('medicamento'))
 {
     $context = sfContext::getInstance(); 
     $controller = $context->getController();
     $controller->redirect('/portal_dev.php/inicio/index');
 }
-$dispositivo_medico = $sf_user->getAttribute('dispositivo_medico');
+$medicamento = $sf_user->getAttribute('medicamento');
 
 $classRepresentante = null;
 $iconoRepresentante = null;
@@ -26,15 +26,23 @@ if($empresa->RepresentanteLegal->getPersonaId() =='')
     $classRepresentante= 'td-warning';
     $iconoRepresentante = "<img src=\"/images/icons/16/help-hint.svg\">";
 }
-if($empresa->RegenteFarmaceutico->getMatriculaProfesional() == '')
+if($empresa->RegenteFarmaceutico->getPersonaId() =='')
 {
     $classRegente = 'td-warning';
-    $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\"> <font color=red> Sin Matricula inexistente </font> ";
+    $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\">";
 }
-if($empresa->RegenteFarmaceutico->getCarnetColegiado() =='')
+else
 {
-    $classRegente = 'td-warning';
-    $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\"> <font color=red> Carnet Colegiado inexistente </font> ";
+    if($empresa->RegenteFarmaceutico->getMatriculaProfesional() == '')
+    {
+        $classRegente = 'td-warning';
+        $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\"> <font color=red> Sin Matricula inexistente </font> ";
+    }
+    if($empresa->RegenteFarmaceutico->getCarnetColegiado() =='')
+    {
+        $classRegente = 'td-warning';
+        $iconoRegente = "<img src=\"/images/icons/16/help-hint.svg\"> <font color=red> Carnet Colegiado inexistente </font> ";
+    }
 }
 ?>
 
@@ -66,8 +74,8 @@ $(document).ready(function()
                 echo $iconoRepresentante.' '.$empresa->RepresentanteLegal 
                 ?>
             </td>
-            <th>dispositivo_medico</th>
-            <td><?php echo $dispositivo_medico ?></td>
+            <th>medicamento</th>
+            <td><?php echo $medicamento ?></td>
         </tr>
         <tr>
             <th>NIT:</th>
@@ -79,7 +87,7 @@ $(document).ready(function()
                 ?>
             </td>
             <th>laboratorio fabricante:</th>
-            <td><?php echo $dispositivo_medico->LaboratorioFabricante ?></td>
+            <td><?php echo $medicamento->LaboratorioFabricante ?></td>
         </tr>
     </tbody>
 </table>

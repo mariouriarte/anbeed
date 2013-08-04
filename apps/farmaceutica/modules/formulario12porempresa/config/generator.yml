@@ -1,0 +1,40 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Formulario12
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario12_formulario12porempresa
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        fecha:                         {label: 'Fecha de Registro'}
+        tipo_tramite_formulario12_id:  {label: 'Tipo de Trámite'}
+        origen_formulario_id:          {label: 'Origen'}
+        empresa:                       {label: 'Empresa'}
+        laboratorio_fabricante:        {label: 'Laboratorio Fabricante'}
+      
+      list:    
+        title: Listado de Solicitudes para Registro Reactivos para Diagnostico
+        display: [fecha, tipo_tramite_formulario12, empresa, laboratorio_fabricante, reactivo]
+        table_method: selectForms12DeEmpresa
+        actions:
+          ir_empresa:   {label: Volver a Empresa}
+      filter:  
+        display: [numero_ruta, tipo_tramite_formulario12_id, origen_formulario_id]
+      
+      form:    
+        display: [fecha, tipo_tramite_formulario12_id, origen_formulario_id, vigencia, fecha_inicio_vigencia, numero_ruta]
+      edit:    
+        title: Editar Listado de Solicitudes para Registro Reactivos para Diagnostico
+        display: [fecha, tipo_tramite_formulario12_id, origen_formulario_id, vigencia, fecha_inicio_vigencia, numero_ruta, reactivo_id]
+        actions:
+          _list: ~  
+          _save: ~  
+      new:   ~
