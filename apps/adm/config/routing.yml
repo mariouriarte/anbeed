@@ -1,3 +1,52 @@
+producto:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Producto
+    module:               productos
+    prefix_path:          /productos
+    column:               id
+    with_wildcard_routes: true
+
+listar_productos:
+    url:   /productos/buscar
+    param: { module: productos, action: buscar }
+
+codigo_producto:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                CodigoProducto
+    module:               codprod
+    prefix_path:          /codprod
+    column:               id
+    with_wildcard_routes: true
+
+emisor:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Emisor
+    module:               emisor
+    prefix_path:          /emisor
+    column:               id
+    with_wildcard_routes: true
+
+tipo_documento:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipoDocumento
+    module:               tipodoc
+    prefix_path:          /tipodoc
+    column:               id
+    with_wildcard_routes: true
+
+emision_correspondencia:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                EmisionCorrespondencia
+    module:               emisionc
+    prefix_path:          /emisionc
+    column:               id
+    with_wildcard_routes: true
+
 formulario706:
   class: sfDoctrineRouteCollection
   options:

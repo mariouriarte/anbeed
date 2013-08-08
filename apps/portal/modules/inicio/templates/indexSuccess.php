@@ -74,5 +74,20 @@
                 </div>
             </div>
         </div>
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <h2 class="titulo"><img src="/images/icons/correspondencia.svg" />Correspondecia</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/emisionc"><span>Emsión de Correspondecia</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tipodoc"><span>Tipo Documento</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/emisor"><span>Emisor Correspondecia</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Código Producto</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

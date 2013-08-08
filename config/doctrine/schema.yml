@@ -65,13 +65,14 @@ Empresa:
     licencia_funcionamiento: {type: string(30), notnull: true, unique: true}
     is_active:               {type: boolean, default: true, notnull: true}
   relations:
-    RepresentanteLegal:  {local: representante_legal_id, foreign: id, type: one, foreignAlias: Empresa}
-    RegenteFarmaceutico: {local: regente_farmaceutico_id, foreign: id, type: one, foreignAlias: Empresa}
-    Medicamento:         {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
-    DispositivoMedico:   {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
-    Cosmetico:           {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
-    Higiene:             {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
-    Ciudad:              {local: ciudad_id, foreign: id, type: one, foreignAlias: Empresa}
+    RepresentanteLegal:     {local: representante_legal_id, foreign: id, type: one, foreignAlias: Empresa}
+    RegenteFarmaceutico:    {local: regente_farmaceutico_id, foreign: id, type: one, foreignAlias: Empresa}
+    Medicamento:            {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
+    DispositivoMedico:      {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
+    Cosmetico:              {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
+    Higiene:                {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
+    Ciudad:                 {local: ciudad_id, foreign: id, type: one, foreignAlias: Empresa}
+    EmisionCorrespondencia: {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
     
 LaboratorioFabricante:
   actAs: {Timestampable: ~}
@@ -119,10 +120,10 @@ Producto:
   actAs: {Timestampable: ~}
   columns:
   relations:
-    Medicamento:       {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
-    DispositivoMedico: {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
-    Cosmetico:         {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
-    Higiene:           {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
+    Medicamento:            {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
+    DispositivoMedico:      {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
+    Cosmetico:              {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
+    Higiene:                {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
     
 ######### FORMULARIOS
 Formulario:
@@ -353,7 +354,8 @@ FormaCosmetica:
   columns:
     nombre: {type: string(250), notnull: true}
   relations:
-    Cosmetico: {local: id, foreign: forma_cosmetica_id, type: one, foreignAlias: FormaCosmetica}
+    Cosmetico:             {local: id, foreign: forma_cosmetica_id, type: one, foreignAlias: FormaCosmetica}
+    EmisionCorrespondecia: {local: id, foreign: forma_cosmetica_id, type: many, foreignAlias: FormaCosmetica}
 
 GrupoCosmetico:
   actAs: {Timestampable: ~}
@@ -411,7 +413,7 @@ Higiene:
     expediente:                {type: string(250), notnull: false}
     registro_sanitario:        {type: string(50), unique: false, default: NULL}
   relations:
-    Producto:              {local: producto_id, foreign: id, type: one, foreignAlias: Medicamento}
+    Producto:              {local: producto_id, foreign: id, type: one, foreignAlias: Higiene}
     Formulario706:         {local: id, foreign: higiene_id, type: many, foreignAlias: Higienes}
     Empresa:               {local: empresa_id, foreign: id, type: one, foreignAlias: Higienes}
     LaboratorioFabricante: {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Higienes}
@@ -483,7 +485,7 @@ Reactivo:
     descripcion:               {type: string(2000), notnull: false}
   relations:
     Formulario12:          {local: id, foreign: reactivo_id, type: many, foreignAlias: Reactivos}
-    Producto:              {local: producto_id, foreign: id, type: one, foreignAlias: Reactivto}
+    Producto:              {local: producto_id, foreign: id, type: one, foreignAlias: Reactivo}
     Empresa:               {local: empresa_id, foreign: id, type: one, foreignAlias: Reactivos}
     LaboratorioFabricante: {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Reactivos}
     
@@ -583,3 +585,52 @@ TipoCalificacion:
     nombre: {type: string(30), notnull: true}
   relations:
     Formulario11: {local: id, foreign: tipo_calificacion_id, type: one, foreignAlias: TipoCalificacion}
+
+########### CORRESPONDENCIA ··············
+
+EmisionCorrespondencia:
+  actAs: {Timestampable: ~}
+  columns:
+    tipo_documento_id:     {type: integer, notnull: true}
+    empresa_id:            {type: integer, notnull: true}
+    emisor_id:             {type: integer, notnull: true}
+    factura:               {type: string(150), notnull: false}
+    factura_fecha:         {type: date}
+    monto_item:            {type: string(50)}
+    nombre:                {type: string(500), notnull: true }
+    numero:                {type: string(50)}
+    codigo_producto_id:    {type: integer}
+    forma_cosmetica_id:    {type: integer}
+    fecha_inicio_vigencia: {type: date}
+    vigencia:              {type: string(150)} 
+    fecha_envio:           {type: date, notnull: true}
+    numero_guia:           {type: string(150), notnull: true}
+  relations:
+    TipoDocumento:         {local: tipo_documento_id, foreign: id, type: one, foreignAlias: Emision}
+    Empresa:               {local: empresa_id, foreign: id, type: one, foreignAlias: Emision}
+    Emisor:                {local: emisor_id, foreign: id, type: one, foreignAlias: Emision}
+    FormaCosmetica:        {local: forma_cosmetica_id, foreign: id, type: one, foreignAlias: Emision}
+    CodigoProducto:        {local: codigo_producto_id, foreign: id, type: one, foreignAlias: Emision}
+    
+TipoDocumento:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre: {type: string(30), notnull: true}
+  relations:
+    EmisionCorrespondencia: {local: id, foreign: tipo_documento_id, type: many, foreignAlias: TipoDocumentos}   
+
+
+Emisor:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre: {type: string(30), notnull: true}
+  relations:
+    EmisionCorrespondencia: {local: id, foreign: emisor_id, type: many, foreignAlias: Emisores}   
+
+CodigoProducto:
+  actAs: {Timestampable: ~}
+  columns:
+    nombre: {type: string(30), notnull: true}
+  relations:
+    EmisionCorrespondencia: {local: id, foreign: codigo_producto_id, type: many, foreignAlias: Emisores}   
+

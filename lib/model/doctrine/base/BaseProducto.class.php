@@ -9,20 +9,20 @@
  * @property DispositivoMedico $DispositivoMedico
  * @property Cosmetico $Cosmetico
  * @property Higiene $Higiene
- * @property Doctrine_Collection $Reactivto
+ * @property Doctrine_Collection $Reactivo
  * @property Doctrine_Collection $Formulario7
  * 
  * @method Medicamento         getMedicamento()       Returns the current record's "Medicamento" value
  * @method DispositivoMedico   getDispositivoMedico() Returns the current record's "DispositivoMedico" value
  * @method Cosmetico           getCosmetico()         Returns the current record's "Cosmetico" value
  * @method Higiene             getHigiene()           Returns the current record's "Higiene" value
- * @method Doctrine_Collection getReactivto()         Returns the current record's "Reactivto" collection
+ * @method Doctrine_Collection getReactivo()          Returns the current record's "Reactivo" collection
  * @method Doctrine_Collection getFormulario7()       Returns the current record's "Formulario7" collection
  * @method Producto            setMedicamento()       Sets the current record's "Medicamento" value
  * @method Producto            setDispositivoMedico() Sets the current record's "DispositivoMedico" value
  * @method Producto            setCosmetico()         Sets the current record's "Cosmetico" value
  * @method Producto            setHigiene()           Sets the current record's "Higiene" value
- * @method Producto            setReactivto()         Sets the current record's "Reactivto" collection
+ * @method Producto            setReactivo()          Sets the current record's "Reactivo" collection
  * @method Producto            setFormulario7()       Sets the current record's "Formulario7" collection
  * 
  * @package    anbeed
@@ -56,7 +56,7 @@ abstract class BaseProducto extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'producto_id'));
 
-        $this->hasMany('Reactivo as Reactivto', array(
+        $this->hasMany('Reactivo', array(
              'local' => 'id',
              'foreign' => 'producto_id'));
 

@@ -12,4 +12,26 @@
  */
 class Producto extends BaseProducto
 {
+    public function __toString()
+    {
+       if($this->Medicamento->getId())
+       {
+           return $this->Medicamento;
+       }
+       else if($this->DispositivoMedico->getId())
+       {  
+           return $this->DispositivoMedico;
+       } 
+       else if($this->Cosmetico->getId())
+       {  
+           return $this->Cosmetico;
+       } 
+       else if($this->Higiene->getId())
+       {  
+           return $this->Higiene;
+       }
+       else
+           return $this->Reactivo;
+       //return $this->getNombre().' '.$this->getApPaterno().' '.$this->getApMaterno();
+    }
 }

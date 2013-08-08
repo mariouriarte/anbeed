@@ -1,0 +1,41 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           EmisionCorrespondencia
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          emision_correspondencia
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        tipo_documento_id:      {label: 'tipo de documento' }
+        tipo_documento:         {label: 'Tipo de Documento' }
+        factura:                {label: 'Nº factura' }
+        factura_fecha:          {label: 'fecha de factura' }
+        monto_item:             {label: 'monto Bs. y item' }
+        nombre:                 {label: 'Detalle o Nombre' }
+        numero:                 {label: 'Nº Reg. San. o despacho' }
+        codigo_producto:        {label: 'código' }
+        fecha_inicio_vigencia:  {label: 'Fecha de reg. san. o despacho' }
+        vigencia:               {label: 'plazo de vencimiento' }
+        fecha_envio:            {label: 'Fecha de Envío' }
+        numero_guia:            {label: 'Número de Guía' }
+      list:
+        title:   Listado Emisión de Correspondencia
+        display: [tipo_documento, empresa, emisor, nombre, fecha_envio, numero_guia]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [tipo_documento_id, empresa_id, emisor_id, nombre, fecha_envio, numero_guia]
+      form:    ~
+      edit:    
+        title:   Editar Emisión de Correspondencia
+      new:     
+        title:   Registrar Emisión de Correspondencia

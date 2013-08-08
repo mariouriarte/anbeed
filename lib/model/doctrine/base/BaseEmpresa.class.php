@@ -31,6 +31,7 @@
  * @property Doctrine_Collection $Cosmetico
  * @property Doctrine_Collection $Higiene
  * @property Ciudad $Ciudad
+ * @property Doctrine_Collection $EmisionCorrespondencia
  * @property Doctrine_Collection $Reactivos
  * @property Doctrine_Collection $Formulario11
  * 
@@ -60,6 +61,7 @@
  * @method Doctrine_Collection getCosmetico()               Returns the current record's "Cosmetico" collection
  * @method Doctrine_Collection getHigiene()                 Returns the current record's "Higiene" collection
  * @method Ciudad              getCiudad()                  Returns the current record's "Ciudad" value
+ * @method Doctrine_Collection getEmisionCorrespondencia()  Returns the current record's "EmisionCorrespondencia" collection
  * @method Doctrine_Collection getReactivos()               Returns the current record's "Reactivos" collection
  * @method Doctrine_Collection getFormulario11()            Returns the current record's "Formulario11" collection
  * @method Empresa             setRepresentanteLegalId()    Sets the current record's "representante_legal_id" value
@@ -88,6 +90,7 @@
  * @method Empresa             setCosmetico()               Sets the current record's "Cosmetico" collection
  * @method Empresa             setHigiene()                 Sets the current record's "Higiene" collection
  * @method Empresa             setCiudad()                  Sets the current record's "Ciudad" value
+ * @method Empresa             setEmisionCorrespondencia()  Sets the current record's "EmisionCorrespondencia" collection
  * @method Empresa             setReactivos()               Sets the current record's "Reactivos" collection
  * @method Empresa             setFormulario11()            Sets the current record's "Formulario11" collection
  * 
@@ -226,6 +229,10 @@ abstract class BaseEmpresa extends sfDoctrineRecord
         $this->hasOne('Ciudad', array(
              'local' => 'ciudad_id',
              'foreign' => 'id'));
+
+        $this->hasMany('EmisionCorrespondencia', array(
+             'local' => 'id',
+             'foreign' => 'empresa_id'));
 
         $this->hasMany('Reactivo as Reactivos', array(
              'local' => 'id',

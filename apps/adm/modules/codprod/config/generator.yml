@@ -1,0 +1,31 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           CodigoProducto
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          codigo_producto
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        created_at:   {label: 'Creado'}
+        nombre:       {label: 'Código  Producto'}
+      list:    
+        title:   Listado Código  Producto  
+        display: [nombre, created_at]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter: 
+        display: [nombre]
+      form:    ~
+      edit:    
+        title:   Editar Código Producto %%nombre%%
+      new:     
+        title:   Registrar Código Producto 
