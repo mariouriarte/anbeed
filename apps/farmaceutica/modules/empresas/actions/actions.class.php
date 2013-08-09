@@ -25,7 +25,79 @@ function FechaEspanol($fecha)
 
 class empresasActions extends autoEmpresasActions
 {
-    
+ 
+    public function executePrint(sfWebRequest $request)
+    {
+        $this->empresa = $this->getRoute()->getObject();
+        $config = sfTCPDFPluginConfigHandler::loadConfig();
+                  sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
+
+        $pdf = new sfTCPDF();
+        // set document information
+        $pdf->SetCreator(PDF_CREATOR);
+        $pdf->SetAuthor('Capsule Systems');
+        $pdf->SetTitle('Formulario');
+        $pdf->SetSubject('ANBEED SRL');
+        $pdf->SetKeywords('TCPDF, PDF, ANBEED SRL, Formulario003, impresion');
+
+        // set default header data
+        //$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 001', PDF_HEADER_STRING);
+
+        // set header and footer fonts
+        //$pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+        //$pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+
+        // set default monospaced font
+        //
+        //set margins
+        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+       // $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+        //$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+        //set auto page breaks
+        //$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+
+        //set image scale factor
+        //$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+
+        // ---------------------------------------------------------
+
+        // set default font subsetting mode
+        //$pdf->setFontSubsetting(true);
+
+        // Set font
+        // dejavusans is a UTF-8 Unicode font, if you only need to
+        // print standard ASCII chars, you can use core fonts like
+        // helvetica or times to reduce file size.
+        $pdf->SetFont('dejavusans', '', 8, '', true);
+
+        // Add a page
+        // This method has several options, check the source code documentation for more information.
+        $pdf->AddPage();
+        $pdf->MultiCell(55, 0, $this->empresa, 1, 'C', 0, 0, '50', '20', true);
+        $pdf->MultiCell(55, 0, $this->empresa->getNumResolucion(), 1, 'C', 0, 0, '50', '25', true);
+        $pdf->MultiCell(55, 0, $this->empresa->getFechaResolucion(), 1, 'C', 0, 0, '50', '30', true);
+        $pdf->MultiCell(75, 0, $this->empresa->getDireccion(), 1, 'C', 0, 0, '50', '35', true);
+        $pdf->MultiCell(55, 0, $this->empresa->getCasilla(), 1, 'C', 0, 0, '50', '40', true);
+        $pdf->MultiCell(55, 0, $this->empresa->getTelefono1().' '.$this->empresa->getTelefono2(), 1, 'C', 0, 0, '50', '45', true);
+        $pdf->MultiCell(55, 0, $this->empresa->getEmail(), 1, 'C', 0, 0, '50', '50', true);
+        
+        
+        $pdf->MultiCell(55, 0, $this->empresa, 1, 'C', 0, 0, '50', '20', true);
+        $pdf->MultiCell(55, 0, $this->empresa, 1, 'C', 0, 0, '50', '20', true);
+        $pdf->MultiCell(55, 0, $this->empresa, 1, 'C', 0, 0, '50', '20', true);
+        $pdf->MultiCell(55, 0, $this->empresa, 1, 'C', 0, 0, '50', '20', true);
+        $pdf->MultiCell(55, 0, $this->empresa, 1, 'C', 0, 0, '50', '20', true);
+        $pdf->MultiCell(55, 0, $this->empresa, 1, 'C', 0, 0, '50', '20', true);
+        $pdf->MultiCell(55, 0, $this->empresa, 1, 'C', 0, 0, '50', '20', true);
+        
+        
+        //$html = "Imprimiremos la empresa $this->empresa";
+        //$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
+        //$pdf->writeHTML($html, true, false, false, 0);
+        $pdf->Output('Formulario003.pdf', 'I');
+        throw new sfStopException();
+    }
     public function executeIndex(sfWebRequest $request)
     {
         parent::executeIndex($request);
