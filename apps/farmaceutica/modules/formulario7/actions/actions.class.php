@@ -1,7 +1,7 @@
 <?php
 
-require_once dirname(__FILE__).'/../lib/formulario7GeneratorConfiguration.class.php';
-require_once dirname(__FILE__).'/../lib/formulario7GeneratorHelper.class.php';
+//require_once dirname(__FILE__).'/../lib/formulario7GeneratorConfiguration.class.php';
+//require_once dirname(__FILE__).'/../lib/formulario7GeneratorHelper.class.php';
 
 /**
  * formulario7 actions.
@@ -13,14 +13,18 @@ require_once dirname(__FILE__).'/../lib/formulario7GeneratorHelper.class.php';
  */
 class formulario7Actions extends autoFormulario7Actions
 {
-   public function executeListIrProductos(sfWebRequest $request)
-   {
-        $this->redirect(sfContext::getInstance()->getRouting()->generate('medicamento'));
-   }
-   public function executeListIrEmpresa(sfWebRequest $request)
-   {
-        $user = sfContext::getInstance()->getUser();
-        $empresa = $user->getAttribute('empresa');
-        $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
-   }
+    public function executeListIrPortal(sfWebRequest $request)
+    {
+        $this->redirect('/portal_dev.php/inicio/index');
+    }
+    public function executeNuevo(sfWebRequest $request)
+    {
+        $this->redirect('form7/new');
+    }
+    
+    public function executeEditar(sfWebRequest $request)
+    {
+        $id = $request->getParameter('id');
+        $this->redirect("form7/edit?id=$id");
+    }
 }

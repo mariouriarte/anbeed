@@ -12,4 +12,8 @@
  */
 class TipoCalificacion extends BaseTipoCalificacion
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+    }
 }

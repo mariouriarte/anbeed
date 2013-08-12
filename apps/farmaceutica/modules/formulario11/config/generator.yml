@@ -1,0 +1,42 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Formulario11
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario11
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        fecha_inicio_vigencia:  {label: Fecha de inicio de vigencia}
+        empresa_id:             {label: Empresa}
+        tipo_despacho_id:       {label: Tipo de despacho}
+        otro:                   {label: Otro}
+        sustancias_quimica:     {label: Sustancias quimicas}
+        licencia_previa:        {label: Licencia Previa}
+        licencia_resolucion:    {label: No de Resolucion de Licencia}
+        licencia_fecha:         {label: Fecha de Licencia}
+        numero_item:            {label: Numero de item}
+        foja:                   {label: Foja}
+        pais_id:                {label: Pais}
+        factura:                {label: Factura}
+        factura_fecha:          {label: Feca de factura}
+        para:                   {label: Para}
+      list:    
+        title: Despachos Aduaneros Registrados
+        display: [fecha]
+        actions:
+          new:  {label: Nuevo, action: nuevo}
+        object_actions:
+          edit: {label: Editar, action: editar}
+      filter:  
+        display: [fecha]
+      form:    ~
+      edit:    ~
+      new:     ~

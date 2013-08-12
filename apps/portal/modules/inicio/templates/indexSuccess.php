@@ -37,6 +37,7 @@
                             <li><a href="/adm<?php echo $env ?>.php/formulario27"><span>Reportes Formulario 027</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/formulario516"><span>Reportes Desición 516</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/formulario706"><span>Reportes Desición 706</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/formulario7"><span>Solicitudes de Calificación</span></a></li>
                         </ul>
                     </div>
                 </div>
