@@ -12,5 +12,6 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfFormExtraPlugin');
     //$this->enablePlugins('sfJqueryReloadedPlugin');
     $this->enablePlugins('sfDependentSelectPlugin');
+    $this->enablePlugins('sfTCPDFPlugin');
   }
 }

@@ -1,3 +1,115 @@
+CodigoProducto:
+  CodigoProducto_1:
+    nombre: II
+    created_at: '2013-08-05 20:53:19'
+    updated_at: '2013-08-05 20:53:19'
+  CodigoProducto_2:
+    nombre: DI
+    created_at: '2013-08-05 20:53:27'
+    updated_at: '2013-08-05 20:53:27'
+  CodigoProducto_3:
+    nombre: NSOC
+    created_at: '2013-08-05 20:53:37'
+    updated_at: '2013-08-05 20:53:37'
+  CodigoProducto_4:
+    nombre: NSOH
+    created_at: '2013-08-05 20:53:44'
+    updated_at: '2013-08-05 20:53:44'
+Emisor:
+  Emisor_1:
+    nombre: 'ANBEED SRL'
+    created_at: '2013-08-02 20:18:48'
+    updated_at: '2013-08-02 20:18:48'
+  Emisor_2:
+    nombre: 'BLANCO Y NEGRO'
+    created_at: '2013-08-02 20:19:02'
+    updated_at: '2013-08-02 20:19:02'
+  Emisor_3:
+    nombre: INLASA
+    created_at: '2013-08-02 20:19:07'
+    updated_at: '2013-08-02 20:19:07'
+  Emisor_4:
+    nombre: 'MIN. REL. EXT.'
+    created_at: '2013-08-02 20:19:21'
+    updated_at: '2013-08-02 20:19:21'
+  Emisor_5:
+    nombre: 'MIN. SAL. DEP.'
+    created_at: '2013-08-02 20:19:29'
+    updated_at: '2013-08-02 20:19:29'
+  Emisor_6:
+    nombre: UNIMED
+    created_at: '2013-08-02 20:19:33'
+    updated_at: '2013-08-02 20:19:33'
+TipoDocumento:
+  TipoDocumento_1:
+    nombre: AVALES
+    created_at: '2013-08-02 20:30:31'
+    updated_at: '2013-08-02 20:30:31'
+  TipoDocumento_2:
+    nombre: BOLETA
+    created_at: '2013-08-02 20:31:06'
+    updated_at: '2013-08-02 20:31:06'
+  TipoDocumento_3:
+    nombre: CARTA
+    created_at: '2013-08-02 20:31:09'
+    updated_at: '2013-08-02 20:31:09'
+  TipoDocumento_4:
+    nombre: CERT-CALIDAD
+    created_at: '2013-08-02 20:31:27'
+    updated_at: '2013-08-02 20:31:27'
+  TipoDocumento_5:
+    nombre: CERTIFICADO
+    created_at: '2013-08-02 20:31:48'
+    updated_at: '2013-08-02 20:31:48'
+  TipoDocumento_6:
+    nombre: CHEQUE
+    created_at: '2013-08-02 20:31:55'
+    updated_at: '2013-08-02 20:31:55'
+  TipoDocumento_7:
+    nombre: 'DESPACHO ADUANERO'
+    created_at: '2013-08-02 20:32:15'
+    updated_at: '2013-08-02 20:32:15'
+  TipoDocumento_8:
+    nombre: FACTURA
+    created_at: '2013-08-02 20:32:31'
+    updated_at: '2013-08-02 20:32:31'
+  TipoDocumento_9:
+    nombre: FORMULARIOS
+    created_at: '2013-08-02 20:32:36'
+    updated_at: '2013-08-02 20:32:36'
+  TipoDocumento_10:
+    nombre: INFORME
+    created_at: '2013-08-02 20:32:55'
+    updated_at: '2013-08-02 20:32:55'
+  TipoDocumento_11:
+    nombre: INGRESOS
+    created_at: '2013-08-02 20:33:02'
+    updated_at: '2013-08-02 20:33:02'
+  TipoDocumento_12:
+    nombre: LEGALIZACIONES
+    created_at: '2013-08-02 20:33:56'
+    updated_at: '2013-08-02 20:33:56'
+  TipoDocumento_13:
+    nombre: 'LICENCIA PREVIA'
+    created_at: '2013-08-02 20:34:25'
+    updated_at: '2013-08-02 20:34:25'
+  TipoDocumento_14:
+    nombre: OBSERVACIONES
+    created_at: '2013-08-02 20:34:48'
+    updated_at: '2013-08-02 20:34:48'
+  TipoDocumento_15:
+    nombre: OTROS
+    created_at: '2013-08-02 20:35:02'
+    updated_at: '2013-08-02 20:35:02'
+  TipoDocumento_16:
+    nombre: 'REGISTRO SANITARIO'
+    created_at: '2013-08-02 20:35:09'
+    updated_at: '2013-08-02 20:35:09'
+  TipoDocumento_17:
+    nombre: RESOLUCION
+    created_at: '2013-08-02 20:35:19'
+    updated_at: '2013-08-02 20:35:19'
+
 RepresentanteLegal:
   RepresentanteLegal_1:
     Persona: Persona_2

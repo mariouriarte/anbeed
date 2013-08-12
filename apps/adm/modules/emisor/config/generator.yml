@@ -1,0 +1,31 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Emisor
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          emisor
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        created_at:   {label: 'Creado'}
+        nombre:       {label: 'Emisor'}
+      list:    
+        title:   Listado Emisores de Correspondencia  
+        display: [nombre, created_at]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter: 
+        display: [nombre]
+      form:    ~
+      edit:    
+        title:   Editar Emisor de Correspondencia %%nombre%%
+      new:     
+        title:   Registrar Emisor de Correspondencia

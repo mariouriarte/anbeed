@@ -25,50 +25,47 @@
  * @property Formulario $Formulario
  * @property Empresa $Empresa
  * @property Pais $Pais
- * @property Doctrine_Collection $TipoCalificacion
  * 
- * @method integer             getFormularioId()          Returns the current record's "formulario_id" value
- * @method date                getFecha()                 Returns the current record's "fecha" value
- * @method integer             getVigencia()              Returns the current record's "vigencia" value
- * @method date                getFechaInicioVigencia()   Returns the current record's "fecha_inicio_vigencia" value
- * @method integer             getEmpresaId()             Returns the current record's "empresa_id" value
- * @method integer             getTipoDespachoId()        Returns the current record's "tipo_despacho_id" value
- * @method string              getOtro()                  Returns the current record's "otro" value
- * @method boolean             getSustanciasQuimicas()    Returns the current record's "sustancias_quimicas" value
- * @method boolean             getLicenciaPrevia()        Returns the current record's "licencia_previa" value
- * @method string              getLicenciaResolucion()    Returns the current record's "licencia_resolucion" value
- * @method date                getLicenciaFecha()         Returns the current record's "licencia_fecha" value
- * @method integer             getNumeroItem()            Returns the current record's "numero_item" value
- * @method integer             getFoja()                  Returns the current record's "foja" value
- * @method integer             getPaisId()                Returns the current record's "pais_id" value
- * @method string              getFactura()               Returns the current record's "factura" value
- * @method date                getFacturaFecha()          Returns the current record's "factura_fecha" value
- * @method string              getPara()                  Returns the current record's "para" value
- * @method Formulario          getFormulario()            Returns the current record's "Formulario" value
- * @method Empresa             getEmpresa()               Returns the current record's "Empresa" value
- * @method Pais                getPais()                  Returns the current record's "Pais" value
- * @method Doctrine_Collection getTipoCalificacion()      Returns the current record's "TipoCalificacion" collection
- * @method Formulario11        setFormularioId()          Sets the current record's "formulario_id" value
- * @method Formulario11        setFecha()                 Sets the current record's "fecha" value
- * @method Formulario11        setVigencia()              Sets the current record's "vigencia" value
- * @method Formulario11        setFechaInicioVigencia()   Sets the current record's "fecha_inicio_vigencia" value
- * @method Formulario11        setEmpresaId()             Sets the current record's "empresa_id" value
- * @method Formulario11        setTipoDespachoId()        Sets the current record's "tipo_despacho_id" value
- * @method Formulario11        setOtro()                  Sets the current record's "otro" value
- * @method Formulario11        setSustanciasQuimicas()    Sets the current record's "sustancias_quimicas" value
- * @method Formulario11        setLicenciaPrevia()        Sets the current record's "licencia_previa" value
- * @method Formulario11        setLicenciaResolucion()    Sets the current record's "licencia_resolucion" value
- * @method Formulario11        setLicenciaFecha()         Sets the current record's "licencia_fecha" value
- * @method Formulario11        setNumeroItem()            Sets the current record's "numero_item" value
- * @method Formulario11        setFoja()                  Sets the current record's "foja" value
- * @method Formulario11        setPaisId()                Sets the current record's "pais_id" value
- * @method Formulario11        setFactura()               Sets the current record's "factura" value
- * @method Formulario11        setFacturaFecha()          Sets the current record's "factura_fecha" value
- * @method Formulario11        setPara()                  Sets the current record's "para" value
- * @method Formulario11        setFormulario()            Sets the current record's "Formulario" value
- * @method Formulario11        setEmpresa()               Sets the current record's "Empresa" value
- * @method Formulario11        setPais()                  Sets the current record's "Pais" value
- * @method Formulario11        setTipoCalificacion()      Sets the current record's "TipoCalificacion" collection
+ * @method integer      getFormularioId()          Returns the current record's "formulario_id" value
+ * @method date         getFecha()                 Returns the current record's "fecha" value
+ * @method integer      getVigencia()              Returns the current record's "vigencia" value
+ * @method date         getFechaInicioVigencia()   Returns the current record's "fecha_inicio_vigencia" value
+ * @method integer      getEmpresaId()             Returns the current record's "empresa_id" value
+ * @method integer      getTipoDespachoId()        Returns the current record's "tipo_despacho_id" value
+ * @method string       getOtro()                  Returns the current record's "otro" value
+ * @method boolean      getSustanciasQuimicas()    Returns the current record's "sustancias_quimicas" value
+ * @method boolean      getLicenciaPrevia()        Returns the current record's "licencia_previa" value
+ * @method string       getLicenciaResolucion()    Returns the current record's "licencia_resolucion" value
+ * @method date         getLicenciaFecha()         Returns the current record's "licencia_fecha" value
+ * @method integer      getNumeroItem()            Returns the current record's "numero_item" value
+ * @method integer      getFoja()                  Returns the current record's "foja" value
+ * @method integer      getPaisId()                Returns the current record's "pais_id" value
+ * @method string       getFactura()               Returns the current record's "factura" value
+ * @method date         getFacturaFecha()          Returns the current record's "factura_fecha" value
+ * @method string       getPara()                  Returns the current record's "para" value
+ * @method Formulario   getFormulario()            Returns the current record's "Formulario" value
+ * @method Empresa      getEmpresa()               Returns the current record's "Empresa" value
+ * @method Pais         getPais()                  Returns the current record's "Pais" value
+ * @method Formulario11 setFormularioId()          Sets the current record's "formulario_id" value
+ * @method Formulario11 setFecha()                 Sets the current record's "fecha" value
+ * @method Formulario11 setVigencia()              Sets the current record's "vigencia" value
+ * @method Formulario11 setFechaInicioVigencia()   Sets the current record's "fecha_inicio_vigencia" value
+ * @method Formulario11 setEmpresaId()             Sets the current record's "empresa_id" value
+ * @method Formulario11 setTipoDespachoId()        Sets the current record's "tipo_despacho_id" value
+ * @method Formulario11 setOtro()                  Sets the current record's "otro" value
+ * @method Formulario11 setSustanciasQuimicas()    Sets the current record's "sustancias_quimicas" value
+ * @method Formulario11 setLicenciaPrevia()        Sets the current record's "licencia_previa" value
+ * @method Formulario11 setLicenciaResolucion()    Sets the current record's "licencia_resolucion" value
+ * @method Formulario11 setLicenciaFecha()         Sets the current record's "licencia_fecha" value
+ * @method Formulario11 setNumeroItem()            Sets the current record's "numero_item" value
+ * @method Formulario11 setFoja()                  Sets the current record's "foja" value
+ * @method Formulario11 setPaisId()                Sets the current record's "pais_id" value
+ * @method Formulario11 setFactura()               Sets the current record's "factura" value
+ * @method Formulario11 setFacturaFecha()          Sets the current record's "factura_fecha" value
+ * @method Formulario11 setPara()                  Sets the current record's "para" value
+ * @method Formulario11 setFormulario()            Sets the current record's "Formulario" value
+ * @method Formulario11 setEmpresa()               Sets the current record's "Empresa" value
+ * @method Formulario11 setPais()                  Sets the current record's "Pais" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -167,10 +164,6 @@ abstract class BaseFormulario11 extends sfDoctrineRecord
 
         $this->hasOne('Pais', array(
              'local' => 'pais_id',
-             'foreign' => 'id'));
-
-        $this->hasMany('TipoCalificacion', array(
-             'local' => 'tipo_calificacion_id',
              'foreign' => 'id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();

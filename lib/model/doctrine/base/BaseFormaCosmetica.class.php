@@ -7,11 +7,14 @@
  * 
  * @property string $nombre
  * @property Cosmetico $Cosmetico
+ * @property Doctrine_Collection $Emision
  * 
- * @method string         getNombre()    Returns the current record's "nombre" value
- * @method Cosmetico      getCosmetico() Returns the current record's "Cosmetico" value
- * @method FormaCosmetica setNombre()    Sets the current record's "nombre" value
- * @method FormaCosmetica setCosmetico() Sets the current record's "Cosmetico" value
+ * @method string              getNombre()    Returns the current record's "nombre" value
+ * @method Cosmetico           getCosmetico() Returns the current record's "Cosmetico" value
+ * @method Doctrine_Collection getEmision()   Returns the current record's "Emision" collection
+ * @method FormaCosmetica      setNombre()    Sets the current record's "nombre" value
+ * @method FormaCosmetica      setCosmetico() Sets the current record's "Cosmetico" value
+ * @method FormaCosmetica      setEmision()   Sets the current record's "Emision" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -34,6 +37,10 @@ abstract class BaseFormaCosmetica extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasOne('Cosmetico', array(
+             'local' => 'id',
+             'foreign' => 'forma_cosmetica_id'));
+
+        $this->hasMany('EmisionCorrespondencia as Emision', array(
              'local' => 'id',
              'foreign' => 'forma_cosmetica_id'));
 
