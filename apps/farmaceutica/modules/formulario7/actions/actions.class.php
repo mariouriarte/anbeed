@@ -13,9 +13,11 @@
  */
 class formulario7Actions extends autoFormulario7Actions
 {
-    public function executeListIrPortal(sfWebRequest $request)
+    public function executeListIrEmpresa(sfWebRequest $request)
     {
-        $this->redirect('/portal_dev.php/inicio/index');
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
     }
     public function executeNuevo(sfWebRequest $request)
     {

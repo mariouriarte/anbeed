@@ -2,7 +2,10 @@
 <?php use_javascripts_for_form($form) ?>
 <?php use_stylesheet('formulario_decision.css') ?>
 
-
+<div class="content-info-empresa">
+    <?php $empresa = $sf_user->getAttribute('empresa'); ?>
+    <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
+</div>
 <form action="<?php echo url_for('form7/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />

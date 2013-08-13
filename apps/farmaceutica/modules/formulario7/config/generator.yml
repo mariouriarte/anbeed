@@ -24,7 +24,7 @@ generator:
         title: Listado de Solicitudes de Calificación
         display: [producto_id, observaciones, calificacion]
         actions:
-          ir_portal: {label: Volver al Portal}
+          ir_empresa: {label: Volver a Empresa}
           new:      {label: Nuevo, action: nuevo}
         object_actions:
           edit: {label: Editar, action: editar}
