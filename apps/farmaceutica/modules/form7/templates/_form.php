@@ -30,14 +30,16 @@
       <?php echo $form->renderGlobalErrors() ?>
       <tr>
           <th> Dr(a) </th>
-          <td></td>
+          <td><? echo $empresa->RegenteFarmaceutico->Persona->getNombre();
+          echo $empresa->RegenteFarmaceutico->Persona->getApPaterno();
+          echo $empresa->RegenteFarmaceutico->Persona->getApMaterno();?></td>
       <tr>
           <th> Con Matricula No. </th>
-          <td></td>
+          <td><? echo $empresa->RegenteFarmaceutico->getMatriculaProfesional();?></td>
       </tr>
       <tr>
           <th> Regente Farmacéutico de </th>
-          <td></td>
+          <td><? echo $empresa;?></td>
       </tr>
       <tr>
           <th colspan="2" class="celda-entera"> Solicita a la Comisión Farmacológica Nacional la calificación del producto de: </th>
