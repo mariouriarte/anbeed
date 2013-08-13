@@ -10,7 +10,11 @@
 
 <table bordercolor="#FFFFFF">
     <tr>
-        <td>Fecha </td>
+        <th>Seleccione el Producto</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>Fecha </th>
         <td><?php echo $form['fecha']->renderError() ?>
           <?php echo $form['fecha'] ?>
         </td>
