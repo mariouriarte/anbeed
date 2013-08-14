@@ -51,11 +51,12 @@
       </tr>
       <tr>
           <th>Ciudad / Distrito / Provincia / Departamento</th>
-          <td><?php echo $higiene->Empresa->Ciudad ?></td>
+          <td><?php echo $higiene->Empresa->Ciudad->getNombre();
+          ?></td>
       </tr>
       <tr>
         <th>País</th>
-        <td><?php  echo $higiene->Empresa->Ciudad->Pais ?></td>
+        <td><?php echo $higiene->Empresa->Ciudad->Pais->getNombre(); ?></td>
       </tr>
       <tr>
         <th>Teléfono</th>
@@ -77,7 +78,16 @@
           </td>
       </tr>
       <tr>
-          <td colspan="2" class="celda-entera"><?php  echo $higiene->Empresa->RepresentanteLegal ?></td>
+          <td colspan="2" class="celda-entera">
+              <?php 
+              if($higiene->Empresa->RepresentanteLegal->getId() == null)
+              {
+                  echo 'Establesca al representante legal de la empresa.';
+              }else{
+                  echo $higiene->Empresa->RepresentanteLegal;
+              }
+              ?>
+          </td>
       </tr>
       <tr>
           <th>Teléfono</th>
@@ -164,11 +174,11 @@
       </tr>
       <tr>
           <th>Ciudad / Distrito / Provincia / Departamento</th>
-          <td><?php echo $higiene->LaboratorioFabricante->Ciudad ?></td>
+          <td><?php echo $higiene->LaboratorioFabricante->Ciudad->getNombre() ?></td>
       </tr>
       <tr>
         <th>País</th>
-        <td><?php echo $higiene->LaboratorioFabricante->Ciudad->Pais ?></td>
+        <td><?php echo $higiene->LaboratorioFabricante->Ciudad->Pais->getNombre() ?></td>
       </tr>
       <tr>
         <th>Teléfono</th>
@@ -186,7 +196,16 @@
           <th colspan="2">Nombre del responsable médico</th>
       </tr>
       <tr>
-          <td colspan="2" class="celda-entera"><?php echo $higiene->Empresa->RegenteFarmaceutico ?></td>
+          <td colspan="2" class="celda-entera">
+              <?php 
+              if($higiene->Empresa->RegenteFarmaceutico->getId() == null)
+              {
+                  echo 'Establesca al regente farmacéutico del laboratorio.';
+              }else{
+                  echo $higiene->Empresa->RegenteFarmaceutico;
+              }
+              ?>
+          </td>
       </tr>
       <tr>
           <th>Teléfono</th>
@@ -244,7 +263,7 @@
       </tr>
       <tr>
           <th>Grupo</th>
-          <td><?php echo $higiene->getGrupoHigiene() ?></td>
+          <td><?php //echo $higiene->getGrupoHigiene() ?></td>
       </tr>
       <tr>
           <th>variedades</th>
