@@ -1,6 +1,8 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 <?php use_stylesheet('formulario_decision.css') ?>
+<?php // use_javascript('/sfDependentSelectPlugin/js/SelectDependiente.min.js') ?>
+<?php  use_javascript('/js/jquery-migrate.js') ?>
 
 <?php $higiene = $sf_user->getAttribute('higiene'); ?>
 <div class="content-info-empresa">

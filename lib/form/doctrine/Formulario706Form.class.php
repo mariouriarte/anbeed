@@ -62,17 +62,17 @@ class Formulario706Form extends BaseFormulario706Form
         ///// Responsable comercial Pais
         $this->widgetSchema['rescom_pais_id'] = new sfWidgetFormDoctrineChoice(
             array('model'        => 'Pais',
-                  'add_empty'    => 'Seleccione país'));
+                  'add_empty'    => ' - Seleccione país'));
         $this->validatorSchema['rescom_pais_id'] = new sfValidatorDoctrineChoice(
             array('model' => 'Pais', 'required' => false));
         
         ////// Responsable comercial ciudad
-        $this->widgetSchema['rescom_ciudad_id'] = new sfWidgetFormDoctrineDependentSelect(
-            array('model'     => 'Ciudad',
-                  'depends'   => 'Pais',
-                  'add_empty' => 'Seleccione ciudad'));
-        $this->validatorSchema['rescom_ciudad_id'] = new sfValidatorDoctrineChoice(
-            array('model' => 'Ciudad', 'required' => true));
+//        $this->widgetSchema['rescom_ciudad_id'] = new sfWidgetFormDoctrineDependentSelect(
+//            array('model'     => 'Ciudad',
+//                  'depends'   => 'Pais',
+//                  'add_empty' => ' - Seleccione ciudad'));
+//        $this->validatorSchema['rescom_ciudad_id'] = new sfValidatorDoctrineChoice(
+//            array('model' => 'Ciudad', 'required' => true));
         
     }
 }

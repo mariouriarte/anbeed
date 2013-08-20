@@ -33,8 +33,8 @@ generator:
         title: Listado de Empresas Registradas
         display: [razon_social, nit]
         object_actions:
-          imprimir:    {label: Imprimir, action: print}
           adm_empresa: {label: Ingresar, action: administrarEmpresa}
+          imprimir:    {label: Imprimir, action: print}
         actions:
           ir_portal: {label: Volver al Portal}
           _new: ~
