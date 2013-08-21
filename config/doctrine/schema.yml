@@ -63,6 +63,7 @@ Empresa:
     fundempresa:             {type: string(30), notnull: true}
     nit:                     {type: string(30), notnull: true, unique: true}
     licencia_funcionamiento: {type: string(30), notnull: true, unique: true}
+    observacion:             {type: string(2000)}
     is_active:               {type: boolean, default: true, notnull: true}
   relations:
     RepresentanteLegal:     {local: representante_legal_id, foreign: id, type: one, foreignAlias: Empresa}
@@ -592,7 +593,8 @@ EmisionCorrespondencia:
   actAs: {Timestampable: ~}
   columns:
     tipo_documento_id:     {type: integer, notnull: true}
-    empresa_id:            {type: integer, notnull: true}
+    empresa_id:            {type: integer, notnull: false}
+    otro_destino:          {type: string(255)}
     emisor_id:             {type: integer, notnull: true}
     factura:               {type: string(150), notnull: false}
     factura_fecha:         {type: date}

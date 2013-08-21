@@ -15,6 +15,7 @@ abstract class BaseEmisionCorrespondenciaFormFilter extends BaseFormFilterDoctri
     $this->setWidgets(array(
       'tipo_documento_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoDocumento'), 'add_empty' => true)),
       'empresa_id'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => true)),
+      'otro_destino'          => new sfWidgetFormFilterInput(),
       'emisor_id'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Emisor'), 'add_empty' => true)),
       'factura'               => new sfWidgetFormFilterInput(),
       'factura_fecha'         => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
@@ -34,6 +35,7 @@ abstract class BaseEmisionCorrespondenciaFormFilter extends BaseFormFilterDoctri
     $this->setValidators(array(
       'tipo_documento_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('TipoDocumento'), 'column' => 'id')),
       'empresa_id'            => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Empresa'), 'column' => 'id')),
+      'otro_destino'          => new sfValidatorPass(array('required' => false)),
       'emisor_id'             => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Emisor'), 'column' => 'id')),
       'factura'               => new sfValidatorPass(array('required' => false)),
       'factura_fecha'         => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
@@ -70,6 +72,7 @@ abstract class BaseEmisionCorrespondenciaFormFilter extends BaseFormFilterDoctri
       'id'                    => 'Number',
       'tipo_documento_id'     => 'ForeignKey',
       'empresa_id'            => 'ForeignKey',
+      'otro_destino'          => 'Text',
       'emisor_id'             => 'ForeignKey',
       'factura'               => 'Text',
       'factura_fecha'         => 'Date',

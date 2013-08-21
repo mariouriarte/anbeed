@@ -7,6 +7,7 @@
  * 
  * @property integer $tipo_documento_id
  * @property integer $empresa_id
+ * @property string $otro_destino
  * @property integer $emisor_id
  * @property string $factura
  * @property date $factura_fecha
@@ -27,6 +28,7 @@
  * 
  * @method integer                getTipoDocumentoId()       Returns the current record's "tipo_documento_id" value
  * @method integer                getEmpresaId()             Returns the current record's "empresa_id" value
+ * @method string                 getOtroDestino()           Returns the current record's "otro_destino" value
  * @method integer                getEmisorId()              Returns the current record's "emisor_id" value
  * @method string                 getFactura()               Returns the current record's "factura" value
  * @method date                   getFacturaFecha()          Returns the current record's "factura_fecha" value
@@ -46,6 +48,7 @@
  * @method CodigoProducto         getCodigoProducto()        Returns the current record's "CodigoProducto" value
  * @method EmisionCorrespondencia setTipoDocumentoId()       Sets the current record's "tipo_documento_id" value
  * @method EmisionCorrespondencia setEmpresaId()             Sets the current record's "empresa_id" value
+ * @method EmisionCorrespondencia setOtroDestino()           Sets the current record's "otro_destino" value
  * @method EmisionCorrespondencia setEmisorId()              Sets the current record's "emisor_id" value
  * @method EmisionCorrespondencia setFactura()               Sets the current record's "factura" value
  * @method EmisionCorrespondencia setFacturaFecha()          Sets the current record's "factura_fecha" value
@@ -80,7 +83,11 @@ abstract class BaseEmisionCorrespondencia extends sfDoctrineRecord
              ));
         $this->hasColumn('empresa_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
+             ));
+        $this->hasColumn('otro_destino', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
              ));
         $this->hasColumn('emisor_id', 'integer', null, array(
              'type' => 'integer',

@@ -17,7 +17,8 @@ abstract class BaseEmisionCorrespondenciaForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'                    => new sfWidgetFormInputHidden(),
       'tipo_documento_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoDocumento'), 'add_empty' => false)),
-      'empresa_id'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => false)),
+      'empresa_id'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => true)),
+      'otro_destino'          => new sfWidgetFormInputText(),
       'emisor_id'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Emisor'), 'add_empty' => false)),
       'factura'               => new sfWidgetFormInputText(),
       'factura_fecha'         => new sfWidgetFormDate(),
@@ -37,7 +38,8 @@ abstract class BaseEmisionCorrespondenciaForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'                    => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'tipo_documento_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TipoDocumento'))),
-      'empresa_id'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'))),
+      'empresa_id'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'required' => false)),
+      'otro_destino'          => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'emisor_id'             => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Emisor'))),
       'factura'               => new sfValidatorString(array('max_length' => 150, 'required' => false)),
       'factura_fecha'         => new sfValidatorDate(array('required' => false)),

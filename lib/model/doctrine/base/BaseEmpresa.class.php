@@ -23,6 +23,7 @@
  * @property string $fundempresa
  * @property string $nit
  * @property string $licencia_funcionamiento
+ * @property string $observacion
  * @property boolean $is_active
  * @property RepresentanteLegal $RepresentanteLegal
  * @property RegenteFarmaceutico $RegenteFarmaceutico
@@ -53,6 +54,7 @@
  * @method string              getFundempresa()             Returns the current record's "fundempresa" value
  * @method string              getNit()                     Returns the current record's "nit" value
  * @method string              getLicenciaFuncionamiento()  Returns the current record's "licencia_funcionamiento" value
+ * @method string              getObservacion()             Returns the current record's "observacion" value
  * @method boolean             getIsActive()                Returns the current record's "is_active" value
  * @method RepresentanteLegal  getRepresentanteLegal()      Returns the current record's "RepresentanteLegal" value
  * @method RegenteFarmaceutico getRegenteFarmaceutico()     Returns the current record's "RegenteFarmaceutico" value
@@ -82,6 +84,7 @@
  * @method Empresa             setFundempresa()             Sets the current record's "fundempresa" value
  * @method Empresa             setNit()                     Sets the current record's "nit" value
  * @method Empresa             setLicenciaFuncionamiento()  Sets the current record's "licencia_funcionamiento" value
+ * @method Empresa             setObservacion()             Sets the current record's "observacion" value
  * @method Empresa             setIsActive()                Sets the current record's "is_active" value
  * @method Empresa             setRepresentanteLegal()      Sets the current record's "RepresentanteLegal" value
  * @method Empresa             setRegenteFarmaceutico()     Sets the current record's "RegenteFarmaceutico" value
@@ -191,6 +194,10 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'notnull' => true,
              'unique' => true,
              'length' => 30,
+             ));
+        $this->hasColumn('observacion', 'string', 2000, array(
+             'type' => 'string',
+             'length' => 2000,
              ));
         $this->hasColumn('is_active', 'boolean', null, array(
              'type' => 'boolean',
