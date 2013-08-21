@@ -8,7 +8,7 @@ generator:
     singular:              ~
     plural:                ~
     route_prefix:          emision_correspondencia
-    with_doctrine_route:   true
+    with_doctrine_route:   true 
     actions_base_class:    sfActions
 
     config:
