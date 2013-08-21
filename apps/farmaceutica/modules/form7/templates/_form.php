@@ -1,7 +1,34 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 <?php use_stylesheet('formulario_decision.css') ?>
+<?php use_javascript('jquery-migrate.js') ?>
 
+
+<script type='text/javascript'>
+
+$(document).ready(function()
+{
+    //Formula Farmaceutica
+    $('#autocomplete_formulario7_forma_farmaceutica_id')
+        .after("&nbsp;&nbsp;<a href='/farmaceutica_dev.php/ffarmaceuticas/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nueva Forma Farmaceutica\"/></a>");
+    $('#autocomplete_formulario7_via_administracion_id')
+        .after("&nbsp;&nbsp;<a href='/farmaceutica_dev.php/administraciones/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nueva Via de Administración\"/></a>");
+});
+</script>
+
+<?php 
+$tabla = $sf_user->getAttribute('tabla');
+if($tabla == 'medicamento')
+    $producto = $sf_user->getAttribute('medicamento');
+if($tabla == 'reactivo')
+    $producto = $sf_user->getAttribute('reactivo');
+if($tabla == 'dispositivo_medico')
+    $producto = $sf_user->getAttribute('dispositivo_medico');
+if($tabla == 'cosmetico')
+    $producto = $sf_user->getAttribute('cosmetico');
+if($tabla == 'higiene')
+    $producto = $sf_user->getAttribute('higiene');
+?>
 <div class="content-info-empresa">
     <?php $empresa = $sf_user->getAttribute('empresa'); ?>
     <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
@@ -12,10 +39,6 @@
 <?php endif; ?>
 
 <table bordercolor="#FFFFFF">
-    <tr>
-        <th>Seleccione el Producto</th>
-        <td></td>
-    </tr>
     <tr>
         <th>Fecha </th>
         <td><?php echo $form['fecha']->renderError() ?>
@@ -30,9 +53,7 @@
       <?php echo $form->renderGlobalErrors() ?>
       <tr>
           <th> Dr(a) </th>
-          <td><? echo $empresa->RegenteFarmaceutico->Persona->getNombre();
-          echo $empresa->RegenteFarmaceutico->Persona->getApPaterno();
-          echo $empresa->RegenteFarmaceutico->Persona->getApMaterno();?></td>
+          <td><? echo $empresa->RegenteFarmaceutico;?></td>
       <tr>
           <th> Con Matricula No. </th>
           <td><? echo $empresa->RegenteFarmaceutico->getMatriculaProfesional();?></td>
@@ -45,7 +66,7 @@
           <th colspan="2" class="celda-entera"> Solicita a la Comisión Farmacológica Nacional la calificación del producto de: </th>
       </tr>
       <tr>
-        <td></td>
+        <th></th>
         <td>
           <?php echo $form['tipo_calificacion_id']->renderError() ?>
           <?php echo $form['tipo_calificacion_id'] ?>
@@ -53,23 +74,50 @@
       </tr>
       <tr>
           <th> Nombre Comercial: </th>
-          <td></td>
+          <td><?if($tabla == 'medicamento')
+                    echo $producto-> getNombreComercial();
+                if($tabla == 'reactivo')
+                    echo $producto-> getNombreComercial();
+                if($tabla == 'dispositivo_medico')
+                    echo $producto-> getNombreComercial();
+                if($tabla == 'cosmetico')
+                    echo $producto-> getMarca();
+                if($tabla == 'higiene')
+                    echo $producto-> getMarca();
+          ?></td>
       </tr>
       <tr>
           <th>Nombre Generico (D.C.I.): </th>
-          <td></td>
+          <td><?if($tabla == 'medicamento')
+                    echo $producto -> getNombreGenerico();
+                if($tabla == 'dispositivo_medico')
+                    echo $producto-> getNombreGenerico();
+                if($tabla == 'cosmetico')
+                    echo $producto-> getNombre();
+                if($tabla == 'higiene')
+                    echo $producto-> getNombre();
+          ?></td>
       </tr>
       <tr>
           <th>Laboratorio Productor: </th>
-          <td></td>
+          <td> <? echo $producto-> LaboratorioFabricante?></td>
       </tr>
       <tr>
           <th>Forma Farmacéutica: </th>
-          <td></td>
+          <td><?if($tabla == 'medicamento')
+                    echo $producto -> getFormaFarmaceutica();
+                else {
+                    echo $form['forma_farmaceutica_id']->renderError();
+                    echo $form['forma_farmaceutica_id'];
+                }
+           ?></td>
       </tr>
       <tr>
           <th>Concentración: </th>
-          <td></td>
+          <td>
+            <?php echo $form['concentracion']->renderError() ?>
+            <?php echo $form['concentracion'] ?>
+          </td>
       </tr>
       <tr>
         <th>Vía de Administración: </th>
@@ -192,7 +240,7 @@
     </li>
     <?php endif; ?>
     <li class="sf_admin_action_list">
-        <a href="<?php echo url_for('formulario7/index') ?>">Volver al listado</a>
+        <a href="<?php echo url_for('formulario7/index') ?>">Listar</a>
     </li>
     <li class="sf_admin_action_save">
         <input type="submit" value="Guardar" />

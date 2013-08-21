@@ -14,29 +14,39 @@ class Formulario7Form extends BaseFormulario7Form
   {
         unset($this['created_at'], $this['updated_at']);
         $years = range(date('Y') - 0, date('Y'));   
-        
-        //$producto = sfContext::getInstance()->getUser()->getAttribute('producto');
-        
-        //// pproducto
+                
+        // producto
         $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden(
             array());
         
-        //// fecha
+        // fecha
         $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
             array('culture'     => 'es',
                   'default'     => date('Y-m-d'),
                   'date_widget' => new sfWidgetFormDate(array(
                   'years'       => array_combine($years, $years)))));
         
-        //// fecha inicio vigencia
+        // fecha inicio vigencia
         $this->widgetSchema['fecha_inicio_vigencia'] = new sfWidgetFormJQueryDate(
             array('culture'     => 'es',
                   'date_widget' => new sfWidgetFormDate(array(
                   'years'       => array_combine($years, $years)))));
         
-        //// tipo de calificacion
+        // tipo de calificacion
         $this->widgetSchema['tipo_calificacion_id'] = new sfWidgetFormDoctrineChoice(
             array('expanded' => true,
                  'model'     => 'TipoCalificacion'));
+         
+        // Autocompletar Via de Administracion
+        $this->widgetSchema['via_administracion_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+                array( 'model'=>'ViaAdministracion',
+                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_via')
+        ));
+      
+        // Autocompletar Forma Farmaceutica
+        $this->widgetSchema['forma_farmaceutica_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+                array( 'model'=>'FormaFarmaceutica',
+                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_ffarmaceutica')
+        ));
   }
 }

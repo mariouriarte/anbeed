@@ -16,22 +16,21 @@ class Producto extends BaseProducto
     {
        if($this->Medicamento->getId())
        {
-           return $this->Medicamento;
+           return $this->Medicamento->getNombreComercial();
        }
        else if($this->DispositivoMedico->getId())
        {  
-           return $this->DispositivoMedico;
+           return $this->DispositivoMedico->getNombreComercial();
        } 
        else if($this->Cosmetico->getId())
        {  
-           return $this->Cosmetico;
+           return $this->Cosmetico->getMarca();
        } 
        else if($this->Higiene->getId())
        {  
-           return $this->Higiene;
+           return $this->Higiene->getMarca();
        }
        else
-           return $this->Reactivo;
-       //return $this->getNombre().' '.$this->getApPaterno().' '.$this->getApMaterno();
+           return $this->Reactivo->getNombreComercial();
     }
 }

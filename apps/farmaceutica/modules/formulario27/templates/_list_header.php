@@ -8,13 +8,13 @@ if(!$sf_user->hasAttribute('empresa'))
 $empresa = $sf_user->getAttribute('empresa');
    
 /*Recuperamos el medicamento*/
-if(!$sf_user->hasAttribute('medicamento'))
+if(!$sf_user->hasAttribute('dispositivo_medico'))
 {
     $context = sfContext::getInstance(); 
     $controller = $context->getController();
     $controller->redirect('/portal_dev.php/inicio/index');
 }
-$medicamento = $sf_user->getAttribute('medicamento');
+$dispositivo = $sf_user->getAttribute('dispositivo_medico');
 
 $classRepresentante = null;
 $iconoRepresentante = null;
@@ -75,7 +75,7 @@ $(document).ready(function()
                 ?>
             </td>
             <th>medicamento</th>
-            <td><?php echo $medicamento ?></td>
+            <td><?php echo $dispositivo ?></td>
         </tr>
         <tr>
             <th>NIT:</th>
@@ -87,7 +87,7 @@ $(document).ready(function()
                 ?>
             </td>
             <th>laboratorio fabricante:</th>
-            <td><?php echo $medicamento->LaboratorioFabricante ?></td>
+            <td><?php echo $dispositivo->LaboratorioFabricante ?></td>
         </tr>
     </tbody>
 </table>

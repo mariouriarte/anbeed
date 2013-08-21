@@ -68,7 +68,7 @@
                             <li><a href="/farmaceutica_dev.php/formulario27porempresa"><span>Formulario 027</span></a></li>
                             <li><a href="/farmaceutica_dev.php/form516porempresa"><span>Desición 516</span></a></li>
                             <li><a href="/farmaceutica_dev.php/form706porempresa"><span>Desición 706</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/formulario7"><span>Solicitud de Calificacion</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/formulario7?table=empresa"><span>Solicitud de Calificacion</span></a></li>
                             <li><a href="/farmaceutica_dev.php/formulario11"><span>Despacho Aduanero</span></a></li>
                         </ul>
                     </div>

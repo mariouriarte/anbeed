@@ -45,9 +45,10 @@ class medicamentosActions extends autoMedicamentosActions
     public function executeIrForm7(sfWebRequest $request)
     {
         $user = $this->getUser();
-        $this->medicamento = $this->getRoute()->getObject();
-        $user->setAttribute('medicamento', $this->medicamento);
-        $this->redirect('/farmaceutica_dev.php/formulario7');
+        $medicamento = $this->getRoute()->getObject();
+        $user->setAttribute('medicamento', $medicamento);
+        $user->setAttribute('tabla', 'medicamento');
+        $this->redirect('formulario7/index');
     }
     
     protected function processForm(sfWebRequest $request, sfForm $form)

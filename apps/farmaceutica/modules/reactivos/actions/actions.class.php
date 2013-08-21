@@ -27,6 +27,15 @@ class reactivosActions extends autoReactivosActions
         $user->setAttribute('reactivo', $this->reactivo);
         $this->redirect('/farmaceutica_dev.php/formulario12');
     }
+    
+    public function executeIrForm7(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        $reactivo = $this->getRoute()->getObject();
+        $user->setAttribute('reactivo', $reactivo);
+        $user->setAttribute('tabla', 'reactivo');
+        $this->redirect('formulario7/index');
+    }
     protected function processForm(sfWebRequest $request, sfForm $form)
     {
       $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));

@@ -7,13 +7,6 @@ if(!$sf_user->hasAttribute('empresa'))
 }
 $empresa = $sf_user->getAttribute('empresa');
 
-if(!$sf_user->hasAttribute('medicamento'))
-{
-    $context = sfContext::getInstance(); 
-    $controller = $context->getController();
-    $controller->redirect('/portal_dev.php/inicio/index');
-}
-
 $classRepresentante = null;
 $iconoRepresentante = null;
 $classRegente = null;

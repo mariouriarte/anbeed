@@ -14,11 +14,12 @@ abstract class BaseFormulario11FormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'formulario_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'), 'add_empty' => true)),
+      'numero_ruta'           => new sfWidgetFormFilterInput(),
       'fecha'                 => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'vigencia'              => new sfWidgetFormFilterInput(),
       'fecha_inicio_vigencia' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'empresa_id'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => true)),
-      'tipo_despacho_id'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'tipo_despacho_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoDespacho'), 'add_empty' => true)),
       'otro'                  => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'sustancias_quimicas'   => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'licencia_previa'       => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
@@ -36,11 +37,12 @@ abstract class BaseFormulario11FormFilter extends BaseFormFilterDoctrine
 
     $this->setValidators(array(
       'formulario_id'         => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Formulario'), 'column' => 'id')),
+      'numero_ruta'           => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'fecha'                 => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
       'vigencia'              => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'fecha_inicio_vigencia' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
       'empresa_id'            => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Empresa'), 'column' => 'id')),
-      'tipo_despacho_id'      => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'tipo_despacho_id'      => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('TipoDespacho'), 'column' => 'id')),
       'otro'                  => new sfValidatorPass(array('required' => false)),
       'sustancias_quimicas'   => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
       'licencia_previa'       => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
@@ -75,11 +77,12 @@ abstract class BaseFormulario11FormFilter extends BaseFormFilterDoctrine
     return array(
       'id'                    => 'Number',
       'formulario_id'         => 'ForeignKey',
+      'numero_ruta'           => 'Number',
       'fecha'                 => 'Date',
       'vigencia'              => 'Number',
       'fecha_inicio_vigencia' => 'Date',
       'empresa_id'            => 'ForeignKey',
-      'tipo_despacho_id'      => 'Number',
+      'tipo_despacho_id'      => 'ForeignKey',
       'otro'                  => 'Text',
       'sustancias_quimicas'   => 'Boolean',
       'licencia_previa'       => 'Boolean',

@@ -32,6 +32,7 @@ generator:
         display: [nombre, marca, laboratorio_fabricante]
         object_actions:
           ir_form706:   {label: Desicion 706}
+          ir_form7:     {label: Form 007}
           _edit: ~ 
         actions:
           adm_empresa: {label: Volver a Empresa}

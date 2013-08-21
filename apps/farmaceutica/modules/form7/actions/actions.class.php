@@ -20,6 +20,36 @@ class form7Actions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new Formulario7Form();
+    $user = $this->getUser();
+    $tabla = $user->getAttribute('tabla');
+    if($tabla == "medicamento")
+    {
+        $medicamento = $this->getUser()->getAttribute('medicamento');
+        $this->form->setDefault('producto_id', $medicamento->Producto->getId());
+        $this->form->setDefault('via_administracion_id', $medicamento->ViaAdministracion->getId());
+        $this->form->setDefault('concentracion', $medicamento->getConcentracion());
+    }
+    if($tabla == "reactivo")
+    {
+        $reactivo = $this->getUser()->getAttribute('reactivo');
+        $this->form->setDefault('producto_id', $reactivo->Producto->getId());
+    }
+    
+    if($tabla == "dispositivo_medico")
+    {
+        $dispositivo = $this->getUser()->getAttribute('dispositivo_medico');
+        $this->form->setDefault('producto_id', $dispositivo->Producto->getId());
+    }
+    if($tabla == "cosmetico")
+    {
+        $cosmetico = $this->getUser()->getAttribute('cosmetico');
+        $this->form->setDefault('producto_id', $cosmetico->Producto->getId());
+    }
+    if($tabla == "higiene")
+    {
+        $higiene = $this->getUser()->getAttribute('higiene');
+        $this->form->setDefault('producto_id', $higiene->Producto->getId());
+    }
   }
 
   public function executeCreate(sfWebRequest $request)

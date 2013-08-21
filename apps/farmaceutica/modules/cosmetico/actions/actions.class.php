@@ -27,6 +27,15 @@ class cosmeticoActions extends autoCosmeticoActions
         $this->redirect('/farmaceutica_dev.php/formulario516');
     }
     
+    public function executeIrForm7(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        $cosmetico = $this->getRoute()->getObject();
+        $user->setAttribute('cosmetico', $cosmetico);
+        $user->setAttribute('tabla', 'cosmetico');
+        $this->redirect('formulario7/index');
+    }
+    
     protected function processForm(sfWebRequest $request, sfForm $form)
     {
       $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));

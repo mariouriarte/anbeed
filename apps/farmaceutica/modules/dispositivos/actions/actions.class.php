@@ -28,6 +28,15 @@ class dispositivosActions extends autoDispositivosActions
         $this->redirect('/farmaceutica_dev.php/formulario27');
     }
     
+    public function executeIrForm7(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        $dispositivo = $this->getRoute()->getObject();
+        $user->setAttribute('dispositivo_medico', $dispositivo);
+        $user->setAttribute('tabla', 'dispositivo_medico');
+        $this->redirect('formulario7/index');
+    }
+    
     protected function processForm(sfWebRequest $request, sfForm $form)
       {
         $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));

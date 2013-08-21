@@ -29,6 +29,7 @@ generator:
         table_method: selectReactivosDeEmpresa
         object_actions:
           ir_form12:   {label: Form 012, action: irForm12}
+          ir_form7:    {label: Form 007, action: irForm7}
           _edit:  ~
         actions:
           adm_empresa: {label: Volver a Empresa}

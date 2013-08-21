@@ -11,6 +11,8 @@
  * @property date $fecha_inicio_vigencia
  * @property string $referencia_aval
  * @property integer $producto_id
+ * @property integer $forma_farmaceutica_id
+ * @property string $concentracion
  * @property integer $tipo_calificacion_id
  * @property integer $via_administracion_id
  * @property string $accion_terapeutica
@@ -26,6 +28,7 @@
  * @property Producto $Producto
  * @property TipoCalificacion $TipoCalificacion
  * @property ViaAdministracion $ViaAdministracion
+ * @property FormaFarmaceutica $FormaFarmaceutica
  * @property Doctrine_Collection $TipoTramitef7
  * 
  * @method integer             getFormularioId()          Returns the current record's "formulario_id" value
@@ -34,6 +37,8 @@
  * @method date                getFechaInicioVigencia()   Returns the current record's "fecha_inicio_vigencia" value
  * @method string              getReferenciaAval()        Returns the current record's "referencia_aval" value
  * @method integer             getProductoId()            Returns the current record's "producto_id" value
+ * @method integer             getFormaFarmaceuticaId()   Returns the current record's "forma_farmaceutica_id" value
+ * @method string              getConcentracion()         Returns the current record's "concentracion" value
  * @method integer             getTipoCalificacionId()    Returns the current record's "tipo_calificacion_id" value
  * @method integer             getViaAdministracionId()   Returns the current record's "via_administracion_id" value
  * @method string              getAccionTerapeutica()     Returns the current record's "accion_terapeutica" value
@@ -49,6 +54,7 @@
  * @method Producto            getProducto()              Returns the current record's "Producto" value
  * @method TipoCalificacion    getTipoCalificacion()      Returns the current record's "TipoCalificacion" value
  * @method ViaAdministracion   getViaAdministracion()     Returns the current record's "ViaAdministracion" value
+ * @method FormaFarmaceutica   getFormaFarmaceutica()     Returns the current record's "FormaFarmaceutica" value
  * @method Doctrine_Collection getTipoTramitef7()         Returns the current record's "TipoTramitef7" collection
  * @method Formulario7         setFormularioId()          Sets the current record's "formulario_id" value
  * @method Formulario7         setFecha()                 Sets the current record's "fecha" value
@@ -56,6 +62,8 @@
  * @method Formulario7         setFechaInicioVigencia()   Sets the current record's "fecha_inicio_vigencia" value
  * @method Formulario7         setReferenciaAval()        Sets the current record's "referencia_aval" value
  * @method Formulario7         setProductoId()            Sets the current record's "producto_id" value
+ * @method Formulario7         setFormaFarmaceuticaId()   Sets the current record's "forma_farmaceutica_id" value
+ * @method Formulario7         setConcentracion()         Sets the current record's "concentracion" value
  * @method Formulario7         setTipoCalificacionId()    Sets the current record's "tipo_calificacion_id" value
  * @method Formulario7         setViaAdministracionId()   Sets the current record's "via_administracion_id" value
  * @method Formulario7         setAccionTerapeutica()     Sets the current record's "accion_terapeutica" value
@@ -71,6 +79,7 @@
  * @method Formulario7         setProducto()              Sets the current record's "Producto" value
  * @method Formulario7         setTipoCalificacion()      Sets the current record's "TipoCalificacion" value
  * @method Formulario7         setViaAdministracion()     Sets the current record's "ViaAdministracion" value
+ * @method Formulario7         setFormaFarmaceutica()     Sets the current record's "FormaFarmaceutica" value
  * @method Formulario7         setTipoTramitef7()         Sets the current record's "TipoTramitef7" collection
  * 
  * @package    anbeed
@@ -106,6 +115,15 @@ abstract class BaseFormulario7 extends sfDoctrineRecord
         $this->hasColumn('producto_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => false,
+             ));
+        $this->hasColumn('forma_farmaceutica_id', 'integer', null, array(
+             'type' => 'integer',
+             'notnull' => false,
+             ));
+        $this->hasColumn('concentracion', 'string', 150, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => 150,
              ));
         $this->hasColumn('tipo_calificacion_id', 'integer', null, array(
              'type' => 'integer',
@@ -176,6 +194,10 @@ abstract class BaseFormulario7 extends sfDoctrineRecord
 
         $this->hasOne('ViaAdministracion', array(
              'local' => 'via_administracion_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('FormaFarmaceutica', array(
+             'local' => 'forma_farmaceutica_id',
              'foreign' => 'id'));
 
         $this->hasMany('TipoCalificacion as TipoTramitef7', array(
