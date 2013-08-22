@@ -4,7 +4,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/portafolio1.png" width="48" height="40"/> Empresas</h2>
+                    <!--<h2 class="titulo"><img src="/images/icons/portafolio1.png" width="48" height="40"/> Empresas</h2>-->
+                    <h2 class="titulo">Empresas</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica<?php echo $env ?>.php/empresas"><span>Empresas</span></a></li>
@@ -16,7 +17,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/applications-development.svg" /> Laboratorios</h2>
+                    <!--<h2 class="titulo"><img src="/images/icons/applications-development.svg" /> Laboratorios</h2>-->
+                    <h2 class="titulo">Laboratorios</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm_dev.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
@@ -28,7 +30,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/text.svg" /> Formularios</h2>
+                    <!--<h2 class="titulo"><img src="/images/icons/text.svg" /> Formularios</h2>-->
+                    <h2 class="titulo">Formularios</h2>
                     <div class="contenido">
                         
                         <ul>
@@ -45,7 +48,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/preferences-desktop.png" />Administración del Sistema</h2>
+                    <!--<h2 class="titulo"><img src="/images/icons/preferences-desktop.png" />Administración del Sistema</h2>-->
+                    <h2 class="titulo">Administración del Sistema</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/ingredientes"><span>Ingredientes</span></a></li>
@@ -70,21 +74,6 @@
                             <?php else: ?>
                                 <li><a href="<?php echo url_for('@sf_guard_signin') ?>"><span>Ingresar</span></a></li>
                             <?php endif ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columna">
-            <div class="cubo">
-                <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/correspondencia.svg" />Correspondecia</h2>
-                    <div class="contenido">
-                        <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/emisionc"><span>Emsión de Correspondecia</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tipodoc"><span>Tipo Documento</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/emisor"><span>Emisor Correspondecia</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Código Producto</span></a></li>
                         </ul>
                     </div>
                 </div>

@@ -20,6 +20,9 @@ class form706Actions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new Formulario706Form();
+    
+    //$this->form->setDefault('notes', $text);
+    
   }
 
   public function executeCreate(sfWebRequest $request)

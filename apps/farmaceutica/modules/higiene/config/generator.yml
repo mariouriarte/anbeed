@@ -31,8 +31,8 @@ generator:
         title:   Productos de higiene registrados
         display: [nombre, marca, laboratorio_fabricante]
         object_actions:
+          _edit: ~
           ir_form706:   {label: Desicion 706}
-          _edit: ~ 
         actions:
           adm_empresa: {label: Volver a Empresa}
           _new: ~ 

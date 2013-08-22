@@ -20,13 +20,14 @@ generator:
       list:
         title: Desiciones 706 registrados
         table_method: selectForms706DeHigiene
-        display: [fecha, tipo_tramite_formulario, empresa, laboratorio, higiene]
+        display: [fecha, tipo_tramite_formulario, empresa, higiene]
         actions:
-          ir_empresa:   {label: Volver a empresa}
+#          ir_empresa:   {label: Volver a empresa}
           ir_productos: {label: Volver a higiéne}
-          new:  {label: Nuevo, action: nuevo}
+          new:          {label: Nuevo, action: nuevo}
         object_actions:
-          edit: {label: Editar, action: editar}
+          edit:         {label: Editar, action: editar}
+          imprimir:     {label: Imprimir, action: imprimir}
       
       filter:
         display: [higiene_id, tipo_tramite_formulario_id]
