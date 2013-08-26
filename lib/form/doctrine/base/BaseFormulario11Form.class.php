@@ -47,7 +47,7 @@ abstract class BaseFormulario11Form extends BaseFormDoctrine
       'fecha_inicio_vigencia' => new sfValidatorDate(array('required' => false)),
       'empresa_id'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'))),
       'tipo_despacho_id'      => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TipoDespacho'))),
-      'otro'                  => new sfValidatorString(array('max_length' => 250)),
+      'otro'                  => new sfValidatorString(array('max_length' => 250, 'required' => false)),
       'sustancias_quimicas'   => new sfValidatorBoolean(),
       'licencia_previa'       => new sfValidatorBoolean(),
       'licencia_resolucion'   => new sfValidatorString(array('max_length' => 150)),

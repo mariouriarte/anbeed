@@ -20,7 +20,7 @@ abstract class BaseFormulario11FormFilter extends BaseFormFilterDoctrine
       'fecha_inicio_vigencia' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'empresa_id'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => true)),
       'tipo_despacho_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoDespacho'), 'add_empty' => true)),
-      'otro'                  => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'otro'                  => new sfWidgetFormFilterInput(),
       'sustancias_quimicas'   => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'licencia_previa'       => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'licencia_resolucion'   => new sfWidgetFormFilterInput(array('with_empty' => false)),

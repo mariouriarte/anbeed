@@ -119,7 +119,7 @@ abstract class BaseFormulario11 extends sfDoctrineRecord
              ));
         $this->hasColumn('otro', 'string', 250, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 250,
              ));
         $this->hasColumn('sustancias_quimicas', 'boolean', null, array(

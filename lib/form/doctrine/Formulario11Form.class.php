@@ -15,6 +15,10 @@ class Formulario11Form extends BaseFormulario11Form
         unset($this['created_at'], $this['updated_at']);
         $years = range(date('Y') - 0, date('Y'));   
         
+        $this->setWidget('por_tratarse', new sfWidgetFormInputText());
+        $this->setValidator('por_tratarse', new sfValidatorString(array(
+            'max_length' => 150)));
+        
         // empresa
         $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden(
             array());
@@ -35,7 +39,8 @@ class Formulario11Form extends BaseFormulario11Form
         // tipo de despacho
         $this->widgetSchema['tipo_despacho_id'] = new sfWidgetFormDoctrineChoice(
             array('expanded' => true,
-                 'model'     => 'TipoDespacho'));
+                 'model'     => 'TipoDespacho'), 
+            array('onclick'  => 'chMd();'));
         
         // fecha licencia
         $this->widgetSchema['licencia_fecha'] = new sfWidgetFormJQueryDate(
@@ -48,5 +53,12 @@ class Formulario11Form extends BaseFormulario11Form
             array('culture'     => 'es',
                   'date_widget' => new sfWidgetFormDate(array(
                   'years'       => array_combine($years, $years)))));
+        
+        $this->widgetSchema['sustancias_quimicas']->setAttribute('onClick','siSustanciaLicencia();');
+        $this->widgetSchema['licencia_previa']->setAttribute('onClick','siLicenciaSustancia();');
+        
+        $this->widgetSchema['otro']->setAttribute('onKeyUp','copiarOtro();');
+        $this->widgetSchema['otro']->setAttribute('disabled', 'disabled');
+        $this->widgetSchema['por_tratarse']->setAttribute('disabled', 'disabled');
   }
 }

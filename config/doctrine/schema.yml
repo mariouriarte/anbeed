@@ -572,7 +572,7 @@ Formulario11:
     fecha_inicio_vigencia: {type: date, notnull: false}
     empresa_id:            {type: integer, notnull: true}
     tipo_despacho_id:      {type: integer, notnull: true}
-    otro:                  {type: string(250), notnull: true}
+    otro:                  {type: string(250), notnull: false}
     sustancias_quimicas:   {type: boolean, notnull: true}
     licencia_previa:       {type: boolean, notnull: true}
     licencia_resolucion:   {type: string(150), notnull: true}

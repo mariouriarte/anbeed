@@ -6,10 +6,74 @@
     <?php $empresa = $sf_user->getAttribute('empresa'); ?>
     <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
 </div>
-<form action="<?php echo url_for('form11/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+<form name="form11" action="<?php echo url_for('form11/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
 <?php endif; ?>
+
+<script>
+ function chMd()
+ {
+     if(document.form11.formulario11_tipo_despacho_id_5.checked==true)
+     {
+          document.form11.formulario11_otro.disabled=false;
+     }
+     else
+     {
+         document.form11.formulario11_otro.disabled=true;
+     }
+     copiar();
+ }
+ 
+ function copiar()
+ {
+    if(document.form11.formulario11_tipo_despacho_id_1.checked==true)
+     {
+          document.form11.formulario11_por_tratarse.value="MATERIA PRIMA";
+     }  
+    if(document.form11.formulario11_tipo_despacho_id_2.checked==true)
+     {
+          document.form11.formulario11_por_tratarse.value="MUESTRAS PARA R.S.";
+     }  
+    if(document.form11.formulario11_tipo_despacho_id_3.checked==true)
+     {
+          document.form11.formulario11_por_tratarse.value="MEDICAMENTOS - MERCADERIA";
+     }  
+    if(document.form11.formulario11_tipo_despacho_id_4.checked==true)
+     {
+          document.form11.formulario11_por_tratarse.value="MEDICAMENTOS - MUESTRAS MEDICAS";
+     }   
+ }
+ 
+ function copiarOtro()
+ {
+     document.form11.formulario11_por_tratarse.value = document.form11.formulario11_otro.value;
+ }
+ 
+ function siSustanciaLicencia()
+ {
+     if(document.form11.formulario11_sustancias_quimicas.checked == true)
+     {
+         document.form11.formulario11_licencia_previa.checked = true
+     }
+     else
+     {
+         document.form11.formulario11_licencia_previa.checked = false
+     }
+ }
+ 
+ function siLicenciaSustancia()
+ {
+     if(document.form11.formulario11_licencia_previa.checked == true)
+     {
+         document.form11.formulario11_sustancias_quimicas.checked = true
+     }
+     else
+     {
+         document.form11.formulario11_sustancias_quimicas.checked = false
+     }
+ }
+</script>
 
 
 <table bordercolor="#FFFFFF">
@@ -51,7 +115,7 @@
       </tr>
       <tr>
           <th> de fecha </th>
-          <td><? echo FechaEspanol($empresa-> getFechaResolucion());?></td>
+          <td><? echo funciones::FechaEspanol($empresa-> getFechaResolucion());?></td>
       </tr>
       <tr>
         <th colspan="2" class="celda-entera"> Requiriendo autorización para DESPACHO ADUANERO de : </th>
@@ -60,8 +124,8 @@
         <th></th>
         <td>
           <?php echo $form['tipo_despacho_id']->renderError() ?>
-          <?php echo $form['tipo_despacho_id'] ?>  
-          OTRO: 
+          <?php echo $form['tipo_despacho_id'] ?>
+            
           <?php echo $form['otro']->renderError() ?>
           <?php echo $form['otro'] ?>
         </td>
@@ -186,7 +250,7 @@
              continuación, por tratarse de
         </th>
         <td>
-
+            <?php echo $form['por_tratarse'] ?>
         </td>
       </tr>
       <tr>
