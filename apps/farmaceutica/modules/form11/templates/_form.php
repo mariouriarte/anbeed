@@ -250,6 +250,7 @@
              continuación, por tratarse de
         </th>
         <td>
+            <?php echo $form['por_tratarse']->renderError() ?>
             <?php echo $form['por_tratarse'] ?>
         </td>
       </tr>
