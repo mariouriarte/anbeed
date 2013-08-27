@@ -1,0 +1,28 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Item
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          item
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        title: Items Despacho Aduanero Registrados
+        display: [producto, cantidad, num_lote]
+        actions:
+          ir_empresa:   {label: Volver a Empresa}
+          ir_form11:    {label: Volver a Formulario 11}
+          _new: ~
+      filter:  
+        display: [producto_id , cantidad, num_lote]
+      form:    ~
+      edit:    ~
+      new:     ~

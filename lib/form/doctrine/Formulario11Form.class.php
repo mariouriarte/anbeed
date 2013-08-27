@@ -15,10 +15,6 @@ class Formulario11Form extends BaseFormulario11Form
         unset($this['created_at'], $this['updated_at']);
         $years = range(date('Y') - 0, date('Y'));   
         
-        $this->setWidget('por_tratarse', new sfWidgetFormInputText());
-        $this->setValidator('por_tratarse', new sfValidatorString(array(
-            'max_length' => 150)));
-        
         // empresa
         $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden(
             array());
@@ -58,7 +54,8 @@ class Formulario11Form extends BaseFormulario11Form
         $this->widgetSchema['licencia_previa']->setAttribute('onClick','siLicenciaSustancia();');
         
         $this->widgetSchema['otro']->setAttribute('onKeyUp','copiarOtro();');
+        $this->widgetSchema['otro']->setAttribute('onBlur','copiarOtro();');
         $this->widgetSchema['otro']->setAttribute('disabled', 'disabled');
-        $this->widgetSchema['por_tratarse']->setAttribute('disabled', 'disabled');
+        //  $this->widgetSchema['por_tratarse']->setAttribute('disabled', 'disabled');
   }
 }

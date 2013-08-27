@@ -13,7 +13,7 @@ class form11Actions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->formulario11s = Doctrine_Core::getTable('Formulario11')
+    $this->formulario11 = Doctrine_Core::getTable('Formulario11')
       ->createQuery('a')
       ->execute();
   }
@@ -21,6 +21,8 @@ class form11Actions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new Formulario11Form();
+    $empresa = $this->getUser()->getAttribute('empresa');
+    $this->form->setDefault('empresa_id', $empresa->getId());
   }
 
   public function executeCreate(sfWebRequest $request)

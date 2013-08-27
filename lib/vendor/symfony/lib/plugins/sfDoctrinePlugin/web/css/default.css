@@ -52,7 +52,7 @@ td.sf_admin_text
   /*background-color: #f33;*/
 }
 
-#sf_admin_container ul.error_list li, .tablas_form ul.error_list li
+#sf_admin_container ul.error_list li, .tbl-form-decision ul.error_list li
 {
   padding: 4px;
   padding-left: 25px;

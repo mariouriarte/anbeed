@@ -465,3 +465,7 @@ ul li.sf_admin_action_edit a
 {
   background: url(../images/icons/print.svg) no-repeat 0 0;
 }
+#sf_admin_container ul li.sf_admin_action_items a
+{
+  background: url(../images/icons/item.png) no-repeat 0 0;
+}

@@ -16,8 +16,8 @@ generator:
       fields:
         numero_ruta:            {label: Numero de Ruta}
         fecha_inicio_vigencia:  {label: Fecha de inicio de vigencia}
-        empresa:                {label: Empresa}
-        tipo_despacho_id:       {label: Tipo de despacho}
+        empresa_id:             {label: Empresa}
+        tipo_despacho_id:       {label: Tipo de Despacho}
         otro:                   {label: Otro}
         sustancias_quimica:     {label: Sustancias quimicas}
         licencia_previa:        {label: Licencia Previa}
@@ -29,14 +29,16 @@ generator:
         factura:                {label: Factura}
         factura_fecha:          {label: Fecha de Factura}
         para:                   {label: Para}
+        tipo:                   {label: Tipo de Despacho}
       list:    
         title: Despachos Aduaneros Registrados
-        display: [fecha, numero_ruta, producto]
+        display: [fecha, tipo, numero_ruta, empresa ]
         actions:
           ir_empresa:   {label: Volver a Empresa}
           new:          {label: Nuevo, action: nuevo}
         object_actions:
-          edit: {label: Editar, action: editar}
+          items: {label: Items,  action: item}
+          edit:  {label: Editar, action: editar}
       filter:  
         display: [numero_ruta]
       form:    ~

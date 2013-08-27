@@ -13,6 +13,15 @@ require_once dirname(__FILE__).'/../lib/formulario11GeneratorHelper.class.php';
  */
 class formulario11Actions extends autoFormulario11Actions
 {
+    public function executeItem(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        
+        $this->formulario11 = $this->getRoute()->getObject();
+        
+        $user->setAttribute('form11', $this->formulario11);
+        $this->redirect('/farmaceutica_dev.php/items');
+    }
     public function executeListIrEmpresa(sfWebRequest $request)
     {
         $user = sfContext::getInstance()->getUser();

@@ -91,31 +91,31 @@
       <?php echo $form->renderGlobalErrors() ?>
       <tr>
           <th> A solicitud expresa presentada por Sr. (a) </th>
-          <td><? echo $empresa->RepresentanteLegal;?></td>
+          <td><?php echo $empresa->RepresentanteLegal?></td>
       </tr>
       <tr>
           <th> con C.I. </th>
-          <td> <? echo $empresa->RepresentanteLegal-> Persona->getCi();?> </td>
+          <td> <?php echo $empresa->RepresentanteLegal->Persona->getCi()?> </td>
       </tr>
       <tr>
           <th> y Dr. (a) </th>
-          <td><? echo $empresa->RegenteFarmaceutico;?></td>
+          <td><?php echo $empresa->RegenteFarmaceutico ?></td>
       </tr>
       <tr>
           <th> con Matricula Profesional N° </th>
-          <td><? echo $empresa->RegenteFarmaceutico-> getMatriculaProfesional();?></td>
+          <td><?php echo $empresa->RegenteFarmaceutico-> getMatriculaProfesional()?></td>
       </tr>
       <tr>
           <th> representante legal y regente farmacéutico (a) respectivamente de </th>
-          <td><? echo $empresa; ?></td>
+          <td><?php echo $empresa; ?></td>
       </tr>
       <tr>
           <th> Empresa legalmente establecida mediante Resolucion Ministerial N° </th>
-          <td><? echo $empresa-> getNumResolucion();?></td>
+          <td><?php echo $empresa-> getNumResolucion();?></td>
       </tr>
       <tr>
           <th> de fecha </th>
-          <td><? echo funciones::FechaEspanol($empresa-> getFechaResolucion());?></td>
+          <td><?php echo funciones::FechaEspanol($empresa-> getFechaResolucion());?></td>
       </tr>
       <tr>
         <th colspan="2" class="celda-entera"> Requiriendo autorización para DESPACHO ADUANERO de : </th>

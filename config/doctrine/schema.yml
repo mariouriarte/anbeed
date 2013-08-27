@@ -582,6 +582,7 @@ Formulario11:
     pais_id:               {type: integer, notnull: true}
     factura:               {type: string(150), notnull: true}
     factura_fecha:         {type: date, notnull: true}
+    por_tratarse:          {type: string(150), notnull: true}
     para:                  {type: string(150), notnull: true}
   relations:
     Formulario:   {local: formulario_id, foreign: id, type: one, foreignAlias: Formulario11}

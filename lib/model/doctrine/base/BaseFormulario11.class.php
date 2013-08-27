@@ -22,6 +22,7 @@
  * @property integer $pais_id
  * @property string $factura
  * @property date $factura_fecha
+ * @property string $por_tratarse
  * @property string $para
  * @property Formulario $Formulario
  * @property Empresa $Empresa
@@ -47,6 +48,7 @@
  * @method integer             getPaisId()                Returns the current record's "pais_id" value
  * @method string              getFactura()               Returns the current record's "factura" value
  * @method date                getFacturaFecha()          Returns the current record's "factura_fecha" value
+ * @method string              getPorTratarse()           Returns the current record's "por_tratarse" value
  * @method string              getPara()                  Returns the current record's "para" value
  * @method Formulario          getFormulario()            Returns the current record's "Formulario" value
  * @method Empresa             getEmpresa()               Returns the current record's "Empresa" value
@@ -71,6 +73,7 @@
  * @method Formulario11        setPaisId()                Sets the current record's "pais_id" value
  * @method Formulario11        setFactura()               Sets the current record's "factura" value
  * @method Formulario11        setFacturaFecha()          Sets the current record's "factura_fecha" value
+ * @method Formulario11        setPorTratarse()           Sets the current record's "por_tratarse" value
  * @method Formulario11        setPara()                  Sets the current record's "para" value
  * @method Formulario11        setFormulario()            Sets the current record's "Formulario" value
  * @method Formulario11        setEmpresa()               Sets the current record's "Empresa" value
@@ -159,6 +162,11 @@ abstract class BaseFormulario11 extends sfDoctrineRecord
         $this->hasColumn('factura_fecha', 'date', null, array(
              'type' => 'date',
              'notnull' => true,
+             ));
+        $this->hasColumn('por_tratarse', 'string', 150, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => 150,
              ));
         $this->hasColumn('para', 'string', 150, array(
              'type' => 'string',
