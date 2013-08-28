@@ -1,6 +1,5 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
-<?php use_stylesheet('formulario_decision.css') ?>
 
 <?php $higiene = $sf_user->getAttribute('higiene'); ?>
 <div class="content-info-empresa">
@@ -51,11 +50,11 @@
       </tr>
       <tr>
           <th>Ciudad / Distrito / Provincia / Departamento</th>
-          <td><?php echo $higiene->Empresa->Ciudad ?></td>
+          <td><?php echo $higiene->Empresa->Ciudad->getNombre() ?></td>
       </tr>
       <tr>
         <th>País</th>
-        <td><?php  echo $higiene->Empresa->Ciudad->Pais ?></td>
+        <td><?php  echo $higiene->Empresa->Ciudad->Pais->getNombre() ?></td>
       </tr>
       <tr>
         <th>Teléfono</th>
@@ -104,8 +103,8 @@
       <tr>
           <th>País</th>
           <td>
-            <?php echo $form['rescom_pais_id']->renderError() ?>
-            <?php echo $form['rescom_pais_id'] ?>
+            <?php echo $form['pais_id']->renderError() ?>
+            <?php echo $form['pais_id'] ?>
           </td>
       </tr>
       <tr>
@@ -164,11 +163,11 @@
       </tr>
       <tr>
           <th>Ciudad / Distrito / Provincia / Departamento</th>
-          <td><?php echo $higiene->LaboratorioFabricante->Ciudad ?></td>
+          <td><?php echo $higiene->LaboratorioFabricante->Ciudad->getNombre() ?></td>
       </tr>
       <tr>
         <th>País</th>
-        <td><?php echo $higiene->LaboratorioFabricante->Ciudad->Pais ?></td>
+        <td><?php echo $higiene->LaboratorioFabricante->Ciudad->Pais->getNombre() ?></td>
       </tr>
       <tr>
         <th>Teléfono</th>

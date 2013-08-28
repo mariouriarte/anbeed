@@ -46,7 +46,10 @@ class dispositivosActions extends autoDispositivosActions
 
           try {
               $dispositivo_medico = $form->save();
+              
               $producto = new Producto();
+              // agregamos el codigo del producto codigo:DI
+              $producto->setCodigoProductoId(2); 
               $producto -> save();
               $dispositivo_medico -> setProducto($producto);
               $dispositivo_medico -> save();            

@@ -13,4 +13,16 @@ require_once dirname(__FILE__).'/../lib/itemsGeneratorHelper.class.php';
  */
 class itemsActions extends autoItemsActions
 {
+    public function executeListIrForm11(sfWebRequest $request)
+    {
+        $this->redirect('formulario11');
+    }
+    
+    public function executeListIrEmpresa(sfWebRequest $request)
+    {
+        $user = sfContext::getInstance()->getUser();
+        
+        $empresa = $user->getAttribute('empresa');
+        $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
+    }
 }

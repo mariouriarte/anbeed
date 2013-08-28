@@ -68,14 +68,21 @@ class form11Actions extends sfActions
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
+      $notice = $form->getObject()->isNew() ? 'El elemento fue creado correctamente.' : 'El elemento fue actualizado correctamente.';
       $formulario11 = $form->save();
       $formulario = new Formulario();
       $formulario-> save();
       
       $formulario11-> setFormulario($formulario);
       $formulario11-> save();
-
+      
+      // Añadimos los mensajes de notificacion
+      $this->getUser()->setFlash('notice', $notice);
       $this->redirect('form11/edit?id='.$formulario11->getId());
+    }
+    else
+    {
+        $this->getUser()->setFlash('error', 'El elemento no ha sido guardado debido a que contiene algunos errores.');
     }
   }
 }

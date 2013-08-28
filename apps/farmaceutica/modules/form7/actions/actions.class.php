@@ -95,13 +95,19 @@ class form7Actions extends sfActions
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
-      $formulario7 = $form->save();
-      $formulario = new Formulario();
-      $formulario -> save();
-      $formulario7 -> setFormulario($formulario);
-      $formulario7 -> save();
+        $notice = $form->getObject()->isNew() ? 'El elemento fue creado correctamente.' : 'El elemento fue actualizado correctamente.';
+        $formulario7 = $form->save();
+        $formulario = new Formulario();
+        $formulario -> save();
+        $formulario7 -> setFormulario($formulario);
+        $formulario7 -> save();
 
-      $this->redirect('form7/edit?id='.$formulario7->getId());
+        $this->getUser()->setFlash('notice', $notice);
+        $this->redirect('form7/edit?id='.$formulario7->getId());
+    }
+    else
+    {
+        $this->getUser()->setFlash('error', 'El elemento no ha sido guardado debido a que contiene algunos errores.');
     }
   }
 }
