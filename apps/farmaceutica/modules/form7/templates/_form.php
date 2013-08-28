@@ -53,14 +53,14 @@ if($tabla == 'higiene')
       <?php echo $form->renderGlobalErrors() ?>
       <tr>
           <th> Dr(a) </th>
-          <td><? echo $empresa->RegenteFarmaceutico;?></td>
+          <td><?php echo $empresa->RegenteFarmaceutico;?></td>
       <tr>
           <th> Con Matricula No. </th>
-          <td><? echo $empresa->RegenteFarmaceutico->getMatriculaProfesional();?></td>
+          <td><?php echo $empresa->RegenteFarmaceutico->getMatriculaProfesional();?></td>
       </tr>
       <tr>
           <th> Regente Farmacéutico de </th>
-          <td><? echo $empresa;?></td>
+          <td><?php echo $empresa;?></td>
       </tr>
       <tr>
           <th colspan="2" class="celda-entera"> Solicita a la Comisión Farmacológica Nacional la calificación del producto de: </th>
@@ -74,7 +74,8 @@ if($tabla == 'higiene')
       </tr>
       <tr>
           <th> Nombre Comercial: </th>
-          <td><?if($tabla == 'medicamento')
+          <td><?php 
+                if($tabla == 'medicamento')
                     echo $producto-> getNombreComercial();
                 if($tabla == 'reactivo')
                     echo $producto-> getNombreComercial();
@@ -88,7 +89,7 @@ if($tabla == 'higiene')
       </tr>
       <tr>
           <th>Nombre Generico (D.C.I.): </th>
-          <td><?if($tabla == 'medicamento')
+          <td><?php if($tabla == 'medicamento')
                     echo $producto -> getNombreGenerico();
                 if($tabla == 'dispositivo_medico')
                     echo $producto-> getNombreGenerico();
@@ -100,11 +101,12 @@ if($tabla == 'higiene')
       </tr>
       <tr>
           <th>Laboratorio Productor: </th>
-          <td> <? echo $producto-> LaboratorioFabricante?></td>
+          <td> <?php echo $producto-> LaboratorioFabricante?></td>
       </tr>
       <tr>
           <th>Forma Farmacéutica: </th>
-          <td><?if($tabla == 'medicamento')
+          <td><?php
+                if($tabla == 'medicamento')
                     echo $producto -> getFormaFarmaceutica();
                 else {
                     echo $form['forma_farmaceutica_id']->renderError();
@@ -218,14 +220,16 @@ if($tabla == 'higiene')
         <th>La Comisión Farmacológica Nacional </th>
         <td>
           <?php echo $form['comision']->renderError() ?>
-          <?php echo $form['comision'] ?> solicita mayor información
+          <?php echo $form['comision'] ?>
+            <span class="help-descripcion-tabla">solicita mayor información</span>
         </td>
       </tr>
       <tr>
         <th>Por consiguiente el citado producto es </th>
         <td>
           <?php echo $form['calificacion']->renderError() ?>
-          <?php echo $form['calificacion'] ?> pudiendo proseguir con el correspondiente trámite de inscripción y/o reinscripción
+          <?php echo $form['calificacion'] ?> 
+          <span class="help-descripcion-tabla">pudiendo proseguir con el correspondiente trámite de inscripción y/o reinscripción </spam>
         </td>
       </tr>
     </tbody>

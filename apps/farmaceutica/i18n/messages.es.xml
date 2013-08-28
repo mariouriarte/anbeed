@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.0">
     <file orginal="global" source-language="en_US" datatype="plaintext">
         <body>   
@@ -124,7 +124,19 @@
             </trans-unit>
             <trans-unit id="31">
                 <source>is empty</source>
-                <target>esta vacío</target>
+                <target>está vacío</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>The item was updated successfully.</source>
+                    <target>El elemento fue actualizado correctamente.</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>The item was created successfully.</source>
+                <target>El elemento fue creado correctamente.</target>
+            </trans-unit>
+            <trans-unit id="34">
+                <source>The item has not been saved due to some errors.</source>
+                <target>El elemento no ha sido guardado debido a que contiene algunos errores.</target>
             </trans-unit>
         </body>
     </file>

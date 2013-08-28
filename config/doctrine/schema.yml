@@ -117,11 +117,16 @@ Ciudad:
     Pais:                  {local: pais_id, foreign: id, type: one, foreignAlias: Ciudades}
     Empresa:               {local: id, foreign: ciudad_id, type: one, foreignAlias: Ciudad}
     LaboratorioFabricante: {local: id, foreign: ciudad_id, type: one, foreignAlias: Ciudad}
+    Formulario706:         {local: id, foreign: rescom_ciudad_id, type: one, foreignAlias: Ciudad}
+    
 ######### PRODUCTO
 Producto:
   actAs: {Timestampable: ~}
   columns:
+    codigo_producto_id:     {type: integer}
+    observacion:            {type: varchar(2000)}
   relations:
+    CodigoProducto:         {local: codigo_producto_id, foreign: id, type: one, foreignAlias: Producto}
     Medicamento:            {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
     DispositivoMedico:      {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
     Cosmetico:              {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
@@ -654,6 +659,8 @@ Emisor:
 CodigoProducto:
   actAs: {Timestampable: ~}
   columns:
-    nombre: {type: string(30), notnull: true}
+    nombre:      {type: string(30), notnull: true}
+    descripcion: {type: string(150), notnull: true}
   relations:
     EmisionCorrespondencia: {local: id, foreign: codigo_producto_id, type: many, foreignAlias: Emisores}   
+    Producto:               {local: id, foreign: codigo_producto_id, type: many, foreignAlias: Productos}   

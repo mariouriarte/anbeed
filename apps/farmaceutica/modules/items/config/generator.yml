@@ -24,5 +24,7 @@ generator:
       filter:  
         display: [producto_id , cantidad, num_lote]
       form:    ~
-      edit:    ~
-      new:     ~
+      edit:    
+        title: Editar Item Despacho Aduanero
+      new:     
+        title: Registro Item Despacho Aduanero

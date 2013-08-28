@@ -60,10 +60,10 @@ class Formulario706Form extends BaseFormulario706Form
         $this->validatorSchema['maquila_tipo'] = new sfValidatorString(array('required' => true));
         
         ///// Responsable comercial Pais
-        $this->widgetSchema['rescom_pais_id'] = new sfWidgetFormDoctrineChoice(
+        $this->widgetSchema['pais_id'] = new sfWidgetFormDoctrineChoice(
             array('model'        => 'Pais',
                   'add_empty'    => 'Seleccione país'));
-        $this->validatorSchema['rescom_pais_id'] = new sfValidatorDoctrineChoice(
+        $this->validatorSchema['pais_id'] = new sfValidatorDoctrineChoice(
             array('model' => 'Pais', 'required' => false));
         
         ////// Responsable comercial ciudad
@@ -73,6 +73,6 @@ class Formulario706Form extends BaseFormulario706Form
                   'add_empty' => 'Seleccione ciudad'));
         $this->validatorSchema['rescom_ciudad_id'] = new sfValidatorDoctrineChoice(
             array('model' => 'Ciudad', 'required' => true));
-        
+                
     }
 }

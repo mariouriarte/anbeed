@@ -46,6 +46,8 @@ class cosmeticoActions extends autoCosmeticoActions
         try {
           $cosmetico = $form->save();
           $producto = new Producto();
+          // agregamos el codigo del producto codigo:NSOC
+          $producto->setCodigoProductoId(3); 
           $producto -> save();
           
           $cosmetico -> setProducto($producto);

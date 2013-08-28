@@ -469,3 +469,26 @@ ul li.sf_admin_action_edit a
 {
   background: url(../images/icons/item.png) no-repeat 0 0;
 }
+
+#content .notice
+{
+  margin: 4px 0;
+  padding: 4px 4px 4px 30px;
+  background: url(../sfDoctrinePlugin/images/tick.png) no-repeat 10px 4px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffc;
+}
+
+#content .error
+{
+  margin: 4px 0;
+  padding: 4px 4px 4px 30px;
+  background: url(../sfDoctrinePlugin/images/error.png) no-repeat 10px 4px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+/*  background-color: #f33;*/
+  color: #f33;
+}
+
+
