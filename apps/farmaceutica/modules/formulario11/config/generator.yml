@@ -36,7 +36,8 @@ generator:
           ir_empresa:   {label: Volver a Empresa}
           new:          {label: Nuevo, action: nuevo}
         object_actions:
-          edit: {label: Editar, action: editar}
+          imprimir:    {label: Imprimir, action: print}
+          edit:        {label: Editar, action: editar}
       filter:  
         display: [numero_ruta]
       form:    ~

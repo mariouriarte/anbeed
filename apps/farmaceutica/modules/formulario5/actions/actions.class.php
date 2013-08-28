@@ -75,11 +75,11 @@ class formulario5Actions extends autoFormulario5Actions
         
         /*Revisamos el origen*/
         $y_origen = 109; // inicializamos en el primero
-        if($this->formulario5->getTipoTramiteFormulario5Id() == 2)
+        if($this->formulario5->getOrigenFormularioId() == 2)
             $y_origen += 5;
         
         
-        /*Imprimimos X del tipo de tramite*/
+        /*Imprimimos X del Origen*/
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, '72', $y_origen, true);
         
         /*tamaño y tipo de letra*/
