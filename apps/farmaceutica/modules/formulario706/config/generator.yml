@@ -27,7 +27,7 @@ generator:
           new:          {label: Nuevo, action: nuevo}
         object_actions:
           edit:         {label: Editar, action: editar}
-          imprimir:     {label: Imprimir, action: imprimir}
+          imprimir:     {label: Imprimir, action: exportPdf}
       
       filter:
         display: [higiene_id, tipo_tramite_formulario_id]

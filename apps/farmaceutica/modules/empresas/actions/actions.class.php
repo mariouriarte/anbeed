@@ -98,6 +98,7 @@ class empresasActions extends autoEmpresasActions
         $pdf->Output('Formulario003.pdf', 'I');
         throw new sfStopException();
     }
+    
     public function executeIndex(sfWebRequest $request)
     {
         parent::executeIndex($request);

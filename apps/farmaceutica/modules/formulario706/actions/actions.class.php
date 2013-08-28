@@ -38,89 +38,112 @@ class formulario706Actions extends autoFormulario706Actions
     }
     
     // pdf
-    public function executeImprimir(sfWebRequest $request)
+    public function executeExportPdf(sfWebRequest $request)
     {
-//        $user = $this->getUser();
+        //$user = $this->getUser();
 //        $regional_id = $user->getAttribute('regional_id');
         
         // estilos para este tipo de documento
-        $css = file_get_contents(sfConfig::get('sf_root_dir') . '/web/css/listado_general_pdf.css');
-        $css = '<style>'.$css.'</style>';
-        
-        // Cabecera
-        $tbl_header = $this->getPartial('listado_general_rubro/cabecera_listado',
-                                        array('fecha_inicio' => $fecha_inicio,
-                                              'fecha_fin'    => $fecha_fin,
-                                              'resumen'      => 0,
-                                              'letras'       => 0));
+//        $css = file_get_contents(sfConfig::get('sf_root_dir') . '/web/css/listado_general_pdf.css');
+//        $css = '<style>'.$css.'</style>';
+//        
+        $html = $this->getPartial('formulario706/contenido_impresion');
         
         // PDF
         // ------------------------------------
+        $this->empresa = $this->getRoute()->getObject();
         $config = sfTCPDFPluginConfigHandler::loadConfig();
-        sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
+                  sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
 
         // pdf object, reescrito
-        $pdf = new ReportePDF("L", PDF_UNIT, 'A4', true, 'UTF-8');
-        $pdf->setHtmlHeader($css . $tbl_header);
-        $pdf->setFechaInicio($fecha_inicio);
-        $pdf->setFechaFin($fecha_fin);
-        
+        $pdf = new sfTCPDF();
         // set document information
         $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('Sistema SACFI');
-        $pdf->SetTitle('Sistema de Activos Fijos');
-        $pdf->SetSubject('ACTIVOS FIJOS');
-        $pdf->SetKeywords('CPS, SACFI, ACTIVOS');
-
+        $pdf->SetAuthor('Capsule Systems');
+        $pdf->SetTitle('Formulario');
+        $pdf->SetSubject('ANBEED SRL');
+        $pdf->SetKeywords('TCPDF, PDF, ANBEED SRL, Formulario706, impresion');
+        
+        //$pdf->setHtmlHeader($css . $tbl_header);
+        
         // set default header data
-        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
+//        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
 
         // set header and footer fonts
-        $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
-        $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+//        $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+//        $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
 
         // set default monospaced font
-        $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
-
-        //set margins
-        $pdf->SetMargins(15, 40, 15);
-        
-        // set margen del header hacia arriba
-        $pdf->SetHeaderMargin(10);
-        
-        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
-
-        //set auto page breaks
-        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-
-        //set image scale factor
-        $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-
-        // ---------------------------------------------------------
-        // set default font subsetting mode
-        $pdf->setFontSubsetting(true);
-
-        //$pdf->SetPrintHeader(true);
-        
-        // Add a page
-        $resolution= array(377, 279);
-        // This method has several options, check the source code documentation for more information.
-        $pdf->AddPage('L', $resolution, false, false);
-        //$pdf->Write(0, 'Titulo 1', '', 0, 'L', true, 0, false, false, 0);
-        
-        // -------------------------------------------------------------
-        //echo $css;
-        foreach($html as $table)
-        {
-            //echo '<table ' .$table;
-            $pdf->writeHTML($css . '<table ' . $table, true, false, false, false, '');
-        }
+//         $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+        $pdf->SetFont('dejavusans', '', 8, '', true);
+        $pdf->AddPage();
+        //echo '<table ' .$table;
+        //$pdf->writeHTML($html, true, false, false, false, '');
+        $pdf->writeHTML($html, true, false, true, false, '');
         
         // ---------------------------------------------------------
         // Close and output PDF document
-        $pdf->Output('example_001.pdf', 'I');
+        $pdf->Output('Formulario706.pdf', 'I');
 
         // Stop symfony process
+        throw new sfStopException();
+    }
+    
+    public function executePrint(sfWebRequest $request)
+    {
+        $this->empresa = $this->getRoute()->getObject();
+        $config = sfTCPDFPluginConfigHandler::loadConfig();
+                  sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
+
+        $pdf = new sfTCPDF();
+        // set document information
+        $pdf->SetCreator(PDF_CREATOR);
+        $pdf->SetAuthor('Capsule Systems');
+        $pdf->SetTitle('Formulario');
+        $pdf->SetSubject('ANBEED SRL');
+        $pdf->SetKeywords('TCPDF, PDF, ANBEED SRL, Formulario003, impresion');
+
+        // set default header data
+        //$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 001', PDF_HEADER_STRING);
+
+        // set header and footer fonts
+        //$pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+        //$pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+
+        // set default monospaced font
+        //
+        //set margins
+        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+       // $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+        //$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+        //set auto page breaks
+        //$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+
+        //set image scale factor
+        //$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+
+        // ---------------------------------------------------------
+
+        // set default font subsetting mode
+        //$pdf->setFontSubsetting(true);
+
+        // Set font
+        // dejavusans is a UTF-8 Unicode font, if you only need to
+        // print standard ASCII chars, you can use core fonts like
+        // helvetica or times to reduce file size.
+        $pdf->SetFont('dejavusans', '', 8, '', true);
+
+        // Add a page
+        // This method has several options, check the source code documentation for more information.
+        $pdf->AddPage();
+        
+        
+        
+        //$html = "Imprimiremos la empresa $this->empresa";
+        //$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
+        //$pdf->writeHTML($html, true, false, false, 0);
+        $pdf->Output('Formulario003.pdf', 'I');
         throw new sfStopException();
     }
 }
