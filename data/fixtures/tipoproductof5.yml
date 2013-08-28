@@ -1,25 +1,25 @@
 TipoProductoFormulario5:
-  TipoProductoFormulario5_1:
+  MEDICAMENTO:
     nombre: MEDICAMENTO
     created_at: '2008-01-01 00:00:00'
     updated_at: '2008-01-01 00:00:00'
-  TipoProductoFormulario5_2:
+  COSMETICO:
     nombre: COSMÉTICO
     created_at: '2008-01-01 00:00:00'
     updated_at: '2008-01-01 00:00:00'
-  TipoProductoFormulario5_3:
+  HOMEOPATICO:
     nombre: HOMEOPÁTICO
     created_at: '2008-01-01 00:00:00'
     updated_at: '2008-01-01 00:00:00'
-  TipoProductoFormulario5_4:
+  MISCELANEO:
     nombre: MISCELANEO
     created_at: '2008-01-01 00:00:00'
     updated_at: '2008-01-01 00:00:00'
-  TipoProductoFormulario5_5:
+  NATURAL:
     nombre: NATURAL
     created_at: '2008-01-01 00:00:00'
     updated_at: '2008-01-01 00:00:00'
-  TipoProductoFormulario5_6:
+  VACUNA:
     nombre: VACUNA
     created_at: '2008-01-01 00:00:00'
     updated_at: '2008-01-01 01:00:00'

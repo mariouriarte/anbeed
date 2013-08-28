@@ -1,7 +1,7 @@
 ## YAML Template.
 ---
 ViaAdministracion:
-  Oral:
+  ORAL:
     nombre: VÍA ORAL
   Sublingual:
     nombre: VÍA SUBLINGUAL

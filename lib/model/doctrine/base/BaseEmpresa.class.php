@@ -122,7 +122,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
         $this->hasColumn('razon_social', 'string', 255, array(
              'type' => 'string',
              'notnull' => true,
-             'unique' => true,
+             'unique' => false,
              'length' => 255,
              ));
         $this->hasColumn('fecha_registro', 'date', null, array(
@@ -131,7 +131,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
         $this->hasColumn('num_resolucion', 'string', 30, array(
              'type' => 'string',
              'notnull' => false,
-             'unique' => true,
+             'unique' => false,
              'length' => 30,
              ));
         $this->hasColumn('fecha_resolucion', 'date', null, array(
@@ -165,7 +165,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
         $this->hasColumn('email', 'string', 255, array(
              'type' => 'string',
              'notnull' => false,
-             'unique' => true,
+             'unique' => false,
              'length' => 255,
              ));
         $this->hasColumn('actividad', 'string', 255, array(
@@ -185,14 +185,14 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              ));
         $this->hasColumn('nit', 'string', 30, array(
              'type' => 'string',
-             'notnull' => true,
-             'unique' => true,
+             'notnull' => false,
+             'unique' => false,
              'length' => 30,
              ));
         $this->hasColumn('licencia_funcionamiento', 'string', 30, array(
              'type' => 'string',
-             'notnull' => true,
-             'unique' => true,
+             'notnull' => false,
+             'unique' => false,
              'length' => 30,
              ));
         $this->hasColumn('observacion', 'string', 2000, array(

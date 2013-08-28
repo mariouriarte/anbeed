@@ -48,21 +48,26 @@ Empresa:
     representante_legal_id:  {type: integer, notnull: false}
     regente_farmaceutico_id: {type: integer, notnull: false}
     ciudad_id:               {type: integer, notnull: false}
-    razon_social:            {type: string(255), notnull: true, unique: true}
+    # debe ser unique: true
+    razon_social:            {type: string(255), notnull: true, unique: false}
     fecha_registro:          {type: date}
-    num_resolucion:          {type: string(30), notnull: false, unique: true}
+    # debe ser unique: true
+    num_resolucion:          {type: string(30), notnull: false, unique: false}
     fecha_resolucion:        {type: date, notnull: false}
     fax:                     {type: string(20), notnull: false}
     direccion:               {type: string(255)}
     casilla:                 {type: string(20), notnull: false}
     telefono1:               {type: string(20), notnull: true}
     telefono2:               {type: string(20), notnull: false}
-    email:                   {type: string(255), notnull: false, unique: true}
+    # debe ser unique: true
+    email:                   {type: string(255), notnull: false, unique: false}
     actividad:               {type: string(255), notnull: true}
     registro_camara:         {type: string(30), notnull: false}
     fundempresa:             {type: string(30), notnull: true}
-    nit:                     {type: string(30), notnull: true, unique: true}
-    licencia_funcionamiento: {type: string(30), notnull: true, unique: true}
+    # debe ser unique: true
+    nit:                     {type: string(30), notnull: false, unique: false}
+    # debe ser unique: true
+    licencia_funcionamiento: {type: string(30), notnull: false, unique: false}
     observacion:             {type: string(2000)}
     is_active:               {type: boolean, default: true, notnull: true}
   relations:
@@ -151,7 +156,7 @@ Medicamento:
     empresa_id:                {type: integer, notnull: true}
     laboratorio_fabricante_id: {type: integer, notnull: true}
     forma_farmaceutica_id:     {type: integer, notnull: true}
-    via_administracion_id:     {type: integer, notnull: true}
+    via_administracion_id:     {type: integer, notnull: false}
     tipo_venta_id:             {type: integer, notnull: true}    
     formula_cc_id:             {type: integer, notnull: false}
     nombre_comercial:          {type: string(255), notnull: true}

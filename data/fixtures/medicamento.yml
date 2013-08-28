@@ -1,0 +1,46 @@
+#    producto_id:               {type: integer, notnull: false}
+#    empresa_id:                {type: integer, notnull: true}
+#    laboratorio_fabricante_id: {type: integer, notnull: true}
+#    forma_farmaceutica_id:     {type: integer, notnull: true}
+#    via_administracion_id:     {type: integer, notnull: true}
+#    tipo_venta_id:             {type: integer, notnull: true}    
+#    formula_cc_id:             {type: integer, notnull: false}
+#    nombre_comercial:          {type: string(255), notnull: true}
+#    nombre_generico:           {type: string(255), notnull: true}
+#    concentracion:             {type: string(150), notnull: true}
+#    accion_terapeutica:        {type: string(2000)}
+#    conservacion:              {type: string(255)}
+#    periodo_validez:           {type: string(50)}
+#    especificacion_envase:     {type: string(2000)}
+#    envase_clinico:            {type: string(2000)}
+#    aval:                      {type: string(255)}
+#    registro_sanitario:        {type: string(50), unique: false, default: NULL}
+#    certificado_control:       {type: string(30)}
+#    descripcion:               {type: string(2000), notnull: false}
+
+Medicamento:
+  Medicamento_1:
+    Producto: Producto_1
+    Empresa: Empresa_1
+    LaboratorioFabricante: LaboratorioFabricante_1
+    FormaFarmaceutica: COMPRIMIDO
+    ViaAdministracion: ORAL
+    TipoVenta: Libre
+    nombre_comercial: TYPIREC
+    nombre_generico: ANTIGRIPAL
+    concentracion: NO
+    accion_terapeutica: no
+    conservacion: NO
+    periodo_validez: NO
+    especificacion_envase: no
+    envase_clinico: no
+    aval: NO
+    registro_sanitario: ''
+    certificado_control: ''
+    descripcion: ''
+#^(\d+)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|([^\|]*)\|
+    
+#1|Inscripción|Medicamento|||Importado|NORFLOXACIN|NORFLOXACINO||1|2|COMP. RECUB.|400 MG||||ORAL|#N/D|RECETA MEDICA|LUGAR FRESCO Y SECO|36 MESES||CAJA X 100 COMPRIMIDOS EN BLISTER DE 10 C/U||MEDICAMENTO ESENCIAL|||||||||||||||||||||||||||||05/04/07||||||||II||||||||||||||||||||||||||||||||INSCRIPCION|#N/D|#N/D|#N/D|#N/D|#N/D|#N/D|||MED|05/04/07|NOR1||ANA RUTH
+#34||||||ERECTO - 50|SILDENAFIL CITRATO||6|0|COMP.RECUBIERTO|50 MG||||ORAL|#N/D||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||REINSCRIPCION|#N/D|#N/D|#N/D|#N/D|#N/D|#N/D|||MED|30/04/07|ERE44||ANA RUTH
+#
+  Medicamento_$1: {Producto: Producto_$1, Empresa: Empresa}

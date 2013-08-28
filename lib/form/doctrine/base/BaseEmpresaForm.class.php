@@ -58,23 +58,13 @@ abstract class BaseEmpresaForm extends BaseFormDoctrine
       'actividad'               => new sfValidatorString(array('max_length' => 255)),
       'registro_camara'         => new sfValidatorString(array('max_length' => 30, 'required' => false)),
       'fundempresa'             => new sfValidatorString(array('max_length' => 30)),
-      'nit'                     => new sfValidatorString(array('max_length' => 30)),
-      'licencia_funcionamiento' => new sfValidatorString(array('max_length' => 30)),
+      'nit'                     => new sfValidatorString(array('max_length' => 30, 'required' => false)),
+      'licencia_funcionamiento' => new sfValidatorString(array('max_length' => 30, 'required' => false)),
       'observacion'             => new sfValidatorString(array('max_length' => 2000, 'required' => false)),
       'is_active'               => new sfValidatorBoolean(array('required' => false)),
       'created_at'              => new sfValidatorDateTime(),
       'updated_at'              => new sfValidatorDateTime(),
     ));
-
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorAnd(array(
-        new sfValidatorDoctrineUnique(array('model' => 'Empresa', 'column' => array('razon_social'))),
-        new sfValidatorDoctrineUnique(array('model' => 'Empresa', 'column' => array('num_resolucion'))),
-        new sfValidatorDoctrineUnique(array('model' => 'Empresa', 'column' => array('email'))),
-        new sfValidatorDoctrineUnique(array('model' => 'Empresa', 'column' => array('nit'))),
-        new sfValidatorDoctrineUnique(array('model' => 'Empresa', 'column' => array('licencia_funcionamiento'))),
-      ))
-    );
 
     $this->widgetSchema->setNameFormat('empresa[%s]');
 

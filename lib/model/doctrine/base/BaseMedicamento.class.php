@@ -116,7 +116,7 @@ abstract class BaseMedicamento extends sfDoctrineRecord
              ));
         $this->hasColumn('via_administracion_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('tipo_venta_id', 'integer', null, array(
              'type' => 'integer',
