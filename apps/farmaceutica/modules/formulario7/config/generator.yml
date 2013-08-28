@@ -30,7 +30,8 @@ generator:
           new:          {label: Nuevo, action: nuevo}
         object_actions:
           imprimir:    {label: Imprimir, action: print}
-#          edit: {label: Editar, action: editar}
+          edit:        {label: Editar, action: editar}
+          _delete: ~
       filter: 
         display: [producto_id, tipo_calificacion_id]
       form:    ~

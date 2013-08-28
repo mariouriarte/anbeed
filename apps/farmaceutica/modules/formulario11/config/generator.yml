@@ -37,6 +37,7 @@ generator:
           ir_empresa:   {label: Volver a Empresa}
           new:          {label: Nuevo, action: nuevo}
         object_actions:
+          imprimir:    {label: Imprimir, action: print}
           items: {label: Items,  action: item}
           edit:  {label: Editar, action: editar}
       filter:  

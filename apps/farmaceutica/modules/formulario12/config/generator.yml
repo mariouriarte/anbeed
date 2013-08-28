@@ -24,6 +24,10 @@ generator:
         title: Listado de Solicitudes para Registro Reactivos para Diagnostico
         display: [fecha, tipo_tramite_formulario12, empresa, laboratorio_fabricante, reactivo]
         table_method: selectForms12DeReactivo
+        object_actions:
+          imprimir:    {label: Imprimir, action: print}
+          _edit: ~
+          _delete: ~
         actions:
           ir_productos: {label: Regresar a Reactivos}
           ir_empresa:   {label: Volver a Empresa}
