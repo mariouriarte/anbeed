@@ -47,13 +47,14 @@ class formulario7Actions extends autoFormulario7Actions
         $pdf->SetFont('dejavusans', '', 9, '', true);
         
         //Datos de la Empresa
-        $pdf->MultiCell(110, 0, $this->formulario7->Producto->Medicamento->Empresa->
-                RegenteFarmaceutico, 0, 'L', 0, 0, '25', '41', true);
-        $pdf->MultiCell(30, 0, $this->formulario7->Producto->Medicamento->Empresa->
-                RegenteFarmaceutico->getMatriculaProfesional(),
-                0, 'L', 0, 0, '130', '41', true);
+        $pdf->MultiCell(110, 0, $this->formulario7->Producto->Medicamento->Empresa
+            ->RegenteFarmaceutico, 
+            0, 'L', 0, 0, '25', '41', true);
+        $pdf->MultiCell(30, 0, $this->formulario7->Producto->Medicamento->Empresa
+            ->RegenteFarmaceutico->getMatriculaProfesional(),
+            0, 'L', 0, 0, '130', '41', true);
         $pdf->MultiCell(30, 0, $this->formulario7->Producto->Medicamento->Empresa,
-                0, 'L', 0, 0, '25', '46', true);        
+            0, 'L', 0, 0, '25', '46', true);        
         
         //Tamaño letra para X's
         $pdf->SetFont('dejavusans', 'B', 13, '', true);
@@ -75,45 +76,45 @@ class formulario7Actions extends autoFormulario7Actions
         
         //Datos del Producto
         $pdf->MultiCell(150, 0, $this->formulario7->Producto->Medicamento->getNombreComercial(),
-                0, 'L', 0, 0, '50', '65', true);
+            0, 'L', 0, 0, '50', '65', true);
         $pdf->MultiCell(150, 0, $this->formulario7->Producto->Medicamento->getNombreGenerico(),
-                0, 'L', 0, 0, '50', '70', true);
+            0, 'L', 0, 0, '50', '70', true);
         
         //Datos del laboratorio
         $pdf->MultiCell(145, 0, $this->formulario7->Producto->Medicamento->LaboratorioFabricante,
-                0, 'L', 0, 0, '55', '75', true);
+            0, 'L', 0, 0, '55', '75', true);
         $pdf->MultiCell(145, 0, $this->formulario7->Producto->Medicamento->FormaFarmaceutica,
-                0, 'L', 0, 0, '55', '80', true);
+            0, 'L', 0, 0, '55', '80', true);
         $pdf->MultiCell(145, 0, $this->formulario7->getConcentracion(),
-                0, 'L', 0, 0, '130', '80', true);
+            0, 'L', 0, 0, '130', '80', true);
         
         //Formula Cuali-Cauntitaviva
         $pdf->MultiCell(170, 30, $this->formulario7->Producto->Medicamento->FormulaCc,
-                0, 'L', 0, 0, '25', '95', true);    
+            0, 'L', 0, 0, '25', '95', true);    
         
         //Datos del Formulario
         $pdf->MultiCell(145, 0, $this->formulario7->Producto->Medicamento->ViaAdministracion,
-                0, 'L', 0, 0, '50', '125', true);
+            0, 'L', 0, 0, '50', '125', true);
         $pdf->MultiCell(145, 0, $this->formulario7->getAccionTerapeutica(),
-                0, 'L', 0, 0, '50', '130', true);
+            0, 'L', 0, 0, '50', '130', true);
         $pdf->MultiCell(145, 15, $this->formulario7->getDosis(),
-                0, 'L', 0, 0, '50', '140', true);
+            0, 'L', 0, 0, '50', '140', true);
         $pdf->MultiCell(145, 25, $this->formulario7->getIndicaciones(),
-                0, 'L', 0, 0, '50', '155', true);
+            0, 'L', 0, 0, '50', '155', true);
         $pdf->MultiCell(145, 20, $this->formulario7->getContraindicaciones(),
-                0, 'L', 0, 0, '50', '175', true);
+            0, 'L', 0, 0, '50', '175', true);
         $pdf->MultiCell(145, 20, $this->formulario7->getContraindicaciones(),
-                0, 'L', 0, 0, '50', '195', true);        
+            0, 'L', 0, 0, '50', '195', true);        
         $pdf->MultiCell(145, 20, $this->formulario7->getPrecauciones(),
-                0, 'L', 0, 0, '50', '215', true);  
+            0, 'L', 0, 0, '50', '215', true);  
         $pdf->MultiCell(145, 25, $this->formulario7->getEfectosSecundarios(),
-                0, 'L', 0, 0, '50', '225', true);  
+            0, 'L', 0, 0, '50', '225', true);  
         $pdf->MultiCell(145, 10, $this->formulario7->getObservaciones(),
-                0, 'L', 0, 0, '50', '240', true);
+            0, 'L', 0, 0, '50', '240', true);
         $pdf->MultiCell(20, 0, $this->formulario7->getComision(),
-                0, 'L', 0, 0, '50', '250', true);        
+            0, 'L', 0, 0, '50', '250', true);        
         $pdf->MultiCell(20, 0, $this->formulario7->getCalificacion(),
-                0, 'L', 0, 0, '50', '255', true);   
+            0, 'L', 0, 0, '50', '255', true);   
         
         $pdf->Output('Formulario007.pdf', 'I');
         throw new sfStopException();
