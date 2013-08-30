@@ -33,12 +33,13 @@ generator:
       list:    
         title: Despachos Aduaneros Registrados
         display: [fecha, tipo, numero_ruta, empresa ]
+        table_method: selectForm11DeEmpresa
         actions:
           ir_empresa:   {label: Volver a Empresa}
           new:          {label: Nuevo, action: nuevo}
         object_actions:
           imprimir:    {label: Imprimir, action: print}
-          items: {label: Items,  action: item}
+          items: {label: Producto(s),  action: item}
           edit:  {label: Editar, action: editar}
       filter:  
         display: [numero_ruta]

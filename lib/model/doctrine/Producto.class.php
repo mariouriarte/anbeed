@@ -14,23 +14,23 @@ class Producto extends BaseProducto
 {
     public function __toString()
     {
-       if($this->Medicamento->getId())
+       if(isset($this->Medicamento))
        {
-           return $this->Medicamento->getNombreComercial();
+           return $this->CodigoProducto->getNombre()." - ".$this->Medicamento->getNombreComercial();
        }
-       else if($this->DispositivoMedico->getId())
+       else if(isset($this->DispositivoMedico))
        {  
-           return $this->DispositivoMedico->getNombreComercial();
+           return $this->CodigoProducto->getNombre()." - ".$this->DispositivoMedico->getNombreComercial();
        } 
-       else if($this->Cosmetico->getId())
+       else if(isset($this->Cosmetico))
        {  
-           return $this->Cosmetico->getMarca();
+           return $this->CodigoProducto->getNombre()." - ".$this->Cosmetico->getNombre();
        } 
-       else if($this->Higiene->getId())
+       else if(isset($this->Higiene))
        {  
-           return $this->Higiene->getMarca();
+           return $this->CodigoProducto->getNombre()." - ".$this->Higiene->getNombre();
        }
        else
-           return $this->Reactivo->getNombreComercial();
+           return $this->CodigoProducto->getNombre()." - ".$this->Reactivo->getNombreComercial();
     }
 }

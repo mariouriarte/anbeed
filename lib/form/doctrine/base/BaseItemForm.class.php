@@ -27,7 +27,7 @@ abstract class BaseItemForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'              => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'formulario11_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario11'))),
-      'cantidad'        => new sfValidatorInteger(),
+      'cantidad'        => new sfValidatorString(array('max_length' => 150)),
       'producto_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'))),
       'num_lote'        => new sfValidatorInteger(),
       'created_at'      => new sfValidatorDateTime(),

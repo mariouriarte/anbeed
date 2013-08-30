@@ -607,7 +607,7 @@ Item:
   actAs: {Timestampable: ~}
   columns:
     formulario11_id:  {type: integer, notnull: true}
-    cantidad:    {type: integer, notnull: true}
+    cantidad:    {type: string(150), notnull: true}
     producto_id: {type: integer, notnull: true}
     num_lote:    {type: integer, notnull: true}
   relations:

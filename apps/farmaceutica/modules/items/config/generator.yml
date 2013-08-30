@@ -13,9 +13,15 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:  
+        cantidad:             {label: 'cantidad'}
+        producto:             {label: 'producto'}
+        num_lote:             {label: 'número de lote'}
+#        registro_sanitario:   {label: 'número de registro sanitario'}
+#        fecha_vencimiento:    {label: 'fecha de vencimiento'}
       list:    
-        title: Items Despacho Aduanero Registrados
+        title: Productos Registrados del Despacho Aduanero
+        table_method: selectItemDeForm11
         display: [producto, cantidad, num_lote]
         actions:
           ir_empresa:   {label: Volver a Empresa}
@@ -23,8 +29,9 @@ generator:
           _new: ~
       filter:  
         display: [producto_id , cantidad, num_lote]
-      form:    ~
+      form:    
+        display: [producto_id , cantidad, num_lote]
       edit:    
-        title: Editar Item Despacho Aduanero
+        title: Editar Productos del Despacho Aduanero
       new:     
-        title: Registro Item Despacho Aduanero
+        title: Registro de Productos del Despacho Aduanero

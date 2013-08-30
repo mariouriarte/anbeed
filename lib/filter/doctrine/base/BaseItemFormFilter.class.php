@@ -23,7 +23,7 @@ abstract class BaseItemFormFilter extends BaseFormFilterDoctrine
 
     $this->setValidators(array(
       'formulario11_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Formulario11'), 'column' => 'id')),
-      'cantidad'        => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'cantidad'        => new sfValidatorPass(array('required' => false)),
       'producto_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Producto'), 'column' => 'id')),
       'num_lote'        => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'created_at'      => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
@@ -49,7 +49,7 @@ abstract class BaseItemFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'              => 'Number',
       'formulario11_id' => 'ForeignKey',
-      'cantidad'        => 'Number',
+      'cantidad'        => 'Text',
       'producto_id'     => 'ForeignKey',
       'num_lote'        => 'Number',
       'created_at'      => 'Date',

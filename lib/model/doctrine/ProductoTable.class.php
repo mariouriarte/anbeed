@@ -36,4 +36,25 @@ class ProductoTable extends Doctrine_Table
             
         return $q;
     }
+    public function ProductosEmpresa()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $q = Doctrine_Query::create()
+                    ->from('Producto p')
+                    ->leftJoin('p.Medicamento m')
+                    ->leftJoin('p.DispositivoMedico dm')
+                    ->leftJoin('p.Cosmetico c')
+                    ->leftJoin('p.Higiene h')
+                    ->leftJoin('p.Reactivo r')
+                    ->where('m.empresa_id = ?', $empresa->getId())
+                    ->orwhere('dm.empresa_id = ?', $empresa->getId())
+                    ->orwhere('c.empresa_id = ?', $empresa->getId())
+                    ->orwhere('h.empresa_id = ?', $empresa->getId())
+                    ->orwhere('r.empresa_id = ?', $empresa->getId())
+                    ->orderBy('p.codigo_producto_id ASC');
+            
+        return $q;
+        
+    }
 }

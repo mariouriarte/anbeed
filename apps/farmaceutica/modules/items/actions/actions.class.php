@@ -25,4 +25,13 @@ class itemsActions extends autoItemsActions
         $empresa = $user->getAttribute('empresa');
         $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
     }
+    public function executeNew(sfWebRequest $request)
+    {
+        $this->form = $this->configuration->getForm();
+        $this->item = $this->form->getObject();
+        
+        $form11 = $this->getUser()->getAttribute('form11');
+        $this->form->setDefault('formulario11_id', $form11->getId());
+    }
+    
 }
