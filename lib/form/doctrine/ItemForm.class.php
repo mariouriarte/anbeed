@@ -19,7 +19,7 @@ class ItemForm extends BaseItemForm
       //prodcutos
       $this->widgetSchema['producto_id']
             ->setOption('add_empty', 'Seleccione producto')
-            ->setOption('table_method', 'ProductosEmpresa');
+            ->setOption('table_method', 'ProductosItemsEmpresa');
       
       //formulario11    
       $this->widgetSchema['formulario11_id'] = new sfWidgetFormInputHidden(

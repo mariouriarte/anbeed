@@ -4,9 +4,9 @@ $q = Doctrine_Core::getTable('Item')->selectItemDeForm11();
 
 $items = $q->execute();
 ?>
-
+<div class="sf_admin_list">
 <legend>PRODUCTOS REGISTRADOS</legend>
-    <table class="tabla-info-empresa">
+    <table>
         <thead>
             <tr>
                 <th>No. ITEM</th>
@@ -15,8 +15,10 @@ $items = $q->execute();
                 <th>No. REGISTRO SANITARIO</th>
                 <th>FECHA VENCIMIENTO</th>
                 <th>No. LOTE</th>
+                <th>ACCIONES</th>
             </tr>
-            
+        </thead>
+        <tbody>
                 <?php
                 $num_items=1;
                 foreach ($items as $item) 
@@ -86,12 +88,15 @@ $items = $q->execute();
                 <td><?php echo $reg_sanitario?></td>
                 <td><?php ?></td>
                 <td><?php echo $item->getNumLote()?></td>
+                <td>
+                    <ul class="sf_admin_td_actions">
+                      <?php $helper = new itemsGeneratorHelper();
+                        echo $helper->linkToEdit($item, array(  'params' =>   array(  ),  'class_suffix' => 'edit',  'label' => 'Edit',)) ?>
+                      <?php echo $helper->linkToDelete($item, array(  'params' =>   array(  ),  'confirm' => 'Are you sure?',  'class_suffix' => 'delete',  'label' => 'Delete',)) ?>
+                    </ul>
+                </td>
             </tr>
         <?php $num_items++; } ?>    
-        </thead>
-        <tbody>
-            <tr>
-
-            </tr>
         </tbody>
 </table>
+</div>

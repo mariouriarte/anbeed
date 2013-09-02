@@ -57,4 +57,60 @@ class ProductoTable extends Doctrine_Table
         return $q;
         
     }
+     public function ProductosItemsEmpresa()
+    {
+        //ESTA FUNCION SIRVE PARA DISCRIMINAR QUE ITEMS HAY DISPONIBLES, ES DECIR QUE NO ESTEN REGISTRADOS EN LOS DESPACHOS ADUANEROS
+        //  DE LA EMPRESA//
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $item = $user->getAttribute('item_producto');
+        // SI EL ACTION ES EDITAR OBTENEMOS EL PRODUCTO DEL ITEM
+        if($item != NULL)
+        {
+            $q = Doctrine_Query::create()
+                        ->from('Producto p')
+                        ->leftJoin('p.Medicamento m')
+                        ->leftJoin('p.DispositivoMedico dm')
+                        ->leftJoin('p.Cosmetico c')
+                        ->leftJoin('p.Higiene h')
+                        ->leftJoin('p.Reactivo r')
+                        ->leftJoin('p.Item i')
+                        ->where("(m.empresa_id = ".$empresa->getId()."
+                                  OR dm.empresa_id = ".$empresa->getId()." 
+                                  OR c.empresa_id = ".$empresa->getId()." 
+                                  OR h.empresa_id = ".$empresa->getId()."
+                                  OR r.empresa_id = ".$empresa->getId()."
+                                 ) AND 
+                                 ( NOT EXISTS (select i.producto_id from item 
+                                    WHERE i.producto_id = p.id ) 
+                                    OR ( p.id = ".$item->Producto->getId().")
+                                  )")
+                        ->orderBy('p.codigo_producto_id ASC');
+            
+        }
+        else
+        {
+           //SOLO MOSTRAMOS TODOS LOS PRODUCTOS QUE NO ESTAN AGREGADOS AL ITEM DEL DESPACHO ADUANERO
+            $q = Doctrine_Query::create()
+                    ->from('Producto p')
+                    ->leftJoin('p.Medicamento m')
+                    ->leftJoin('p.DispositivoMedico dm')
+                    ->leftJoin('p.Cosmetico c')
+                    ->leftJoin('p.Higiene h')
+                    ->leftJoin('p.Reactivo r')
+                    ->leftJoin('p.Item i')
+                    ->where("(m.empresa_id = ".$empresa->getId()."
+                              OR dm.empresa_id = ".$empresa->getId()." 
+                              OR c.empresa_id = ".$empresa->getId()." 
+                              OR h.empresa_id = ".$empresa->getId()."
+                              OR r.empresa_id = ".$empresa->getId()."
+                             ) AND (NOT EXISTS (select i.producto_id from item WHERE i.producto_id = p.id))")
+                    ->orderBy('p.codigo_producto_id ASC');
+            
+
+        }
+        
+        return $q;
+        
+    }
 }
