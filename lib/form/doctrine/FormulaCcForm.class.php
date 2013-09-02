@@ -13,7 +13,7 @@ class FormulaCcForm extends BaseFormulaCcForm
   protected $detallesAEliminar = array();
   public function configure()
   {
-      unset($this['created_at'], $this['updated_at']);
+      unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
       $detalle = new DetalleFormulaCc();
       $detalle->setFormulaCc($this->object);
       $detalleForm = new DetalleFormulaCcForm($detalle);

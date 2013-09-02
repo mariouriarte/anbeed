@@ -12,7 +12,7 @@ class EmisionCorrespondenciaForm extends BaseEmisionCorrespondenciaForm
 {
   public function configure()
   {
-      unset($this['created_at'], $this['updated_at']);
+      unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
       
       $this->widgetSchema['tipo_documento_id']->setOption('add_empty', 'Seleccione Tipo Documento');
       

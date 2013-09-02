@@ -12,6 +12,6 @@ class TipoDocumentoForm extends BaseTipoDocumentoForm
 {
   public function configure()
   {
-      unset($this['created_at'], $this['updated_at'], $this['producto_id']);
+      unset($this['created_at'], $this['updated_at'], $this['producto_id'], $this['created_by'], $this['updated_by']);
   }
 }

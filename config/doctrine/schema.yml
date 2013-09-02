@@ -1,7 +1,22 @@
 # config/doctrine/schema.yml
 ---
+actAs:
+  Signable:
+    created:
+      name: created_by
+      type: integer
+      onUpdate: CASCADE
+      onDelete: SET NULL
+      options:
+        notnull: true
+        default: 1
+    updated:
+      name: updated_by
+      type: integer
+
+
 Persona:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre:           {type: string(50), notnull: true}
     ap_paterno:       {type: string(30), notnull: true}
@@ -23,7 +38,7 @@ Persona:
     RegenteFarmaceutico: {local: id, foreign: persona_id, type: one, foreignAlias: Persona}
 
 RepresentanteLegal:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     persona_id: {type: integer, notnull: true}
     is_active:  {type: boolean, default: true, notnull: true}
@@ -32,7 +47,7 @@ RepresentanteLegal:
     Empresa: {local: id, foreign: representante_legal_id, type: one, foreignAlias: Representante}
     
 RegenteFarmaceutico:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     persona_id:            {type: integer, notnull: true}
     matricula_profesional: {type: string(20), notnull: false}
@@ -43,7 +58,7 @@ RegenteFarmaceutico:
     Empresa: {local: id, foreign: regente_farmaceutico_id, type: one, foreignAlias: Regente}
     
 Empresa:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     representante_legal_id:  {type: integer, notnull: false}
     regente_farmaceutico_id: {type: integer, notnull: false}
@@ -76,7 +91,7 @@ Empresa:
     EmisionCorrespondencia: {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
     
 LaboratorioFabricante:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     pais_id:       {type: integer, notnull: true}
     ciudad_id:     {type: integer, notnull: false}
@@ -98,7 +113,7 @@ LaboratorioFabricante:
     Ciudad:             {local: ciudad_id, foreign: id, type: one, foreignAlias: Laboratorio}
     
 Pais:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre:  {type: string(150)}
     bandera: {type: string(50)}
@@ -109,7 +124,7 @@ Pais:
     Formularios706:        {local: id, foreign: rescom_ciudad_id, type: many, class: Formulario706}
 
 Ciudad:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     pais_id: {type: integer, notnull: false}
     nombre:  {type: string(150)}
@@ -121,7 +136,7 @@ Ciudad:
     
 ######### PRODUCTO
 Producto:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     codigo_producto_id:     {type: integer}
     observacion:            {type: varchar(2000)}
@@ -136,7 +151,7 @@ Producto:
     
 ######### FORMULARIOS
 Formulario:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
   relations:
     Formulario5:   {local: id, foreign: formulario_id, type: one, foreignAlias: Formulario}
@@ -150,7 +165,7 @@ Formulario:
 #-----------------------------
 # Medicamento y su Formulario
 Medicamento:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
@@ -183,7 +198,7 @@ Medicamento:
 #    debria ser many aca arriba
 
 FormaFarmaceutica:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(255), notnull: true}
   relations:
@@ -191,7 +206,7 @@ FormaFarmaceutica:
     Formulario7: {local: id, foreign: forma_farmaceutica_id, type: many, foreignAlias: Forma}
     
 ViaAdministracion:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(100), notnull: true}
   relations:
@@ -199,14 +214,14 @@ ViaAdministracion:
     Formulario7: {local: id, foreign: via_administracion_id, type: many, foreignAlias: Administracion}
     
 TipoVenta:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(100), notnull: true}
   relations:
     Medicamento: {local: id, foreign: tipo_venta_id, type: many, foreignAlias: TipoVenta}
     
 FormulaCc:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     observaciones: {type: string(2000), notnull: false}
   relations:
@@ -214,7 +229,7 @@ FormulaCc:
     Medicamento:      {local: id, foreign: formula_cc_id, type: many, foreignAlias: FormulaCc}
     
 DetalleFormulaCc:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     formula_cc_id:  {type: integer, notnull: true}
     ingrediente_id: {type: integer, notnull: false}
@@ -225,14 +240,14 @@ DetalleFormulaCc:
     Ingrediente: {local: ingrediente_id, foreign: id, type: many, foreignAlias: Detalles}
     
 Ingrediente:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(100), notnull: true}
   relations:
     DetalleFormulaCc: {local: id, foreign: ingrediente_id, type: one, foreignAlias: Ingrediente}
 
 Formulario5:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     ## se agrega este campo para generalizar, revisar en el programa para evitar errores
     formulario_id:                {type: integer, notnull: false}
@@ -252,21 +267,21 @@ Formulario5:
     OrigenFormulario:        {local: origen_formulario_id, foreign: id, type: one, foreignAlias: Formulario5}
     
 TipoTramiteFormulario5:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(30), notnull: true}
   relations:
     Formulario5: {local: id, foreign: tipo_tramite_formulario5_id, type: one, foreignAlias: TipoTramite}
 
 TipoProductoFormulario5:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(30), notnull: true}
   relations:
     Formulario5: {local: id, foreign: tipo_producto_formulario5_id, type: one, foreignAlias: TipoProducto}
 
 OrigenFormulario:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(30), notnull: true}
   relations:
@@ -276,7 +291,7 @@ OrigenFormulario:
 #-----------------------------------------
 # Dispositivo Medico y su Formulario
 DispositivoMedico:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
@@ -301,7 +316,7 @@ DispositivoMedico:
     LaboratorioFabricante: {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Dispositivos}
 
 Formulario27:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     formulario_id:                {type: integer, notnull: false}
     fecha:                        {type: date}
@@ -320,14 +335,14 @@ Formulario27:
     OrigenFormulario:        {local: origen_formulario_id, foreign: id, type: one, foreignAlias: Formulario27}
 
 TipoTramiteFormulario27:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(30), notnull: true}
   relations:
     Formulario27: {local: id, foreign: tipo_tramite_formulario27_id, type: one, foreignAlias: TipoTramite}
     
 DatosFormulario27:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(30), notnull: true}
   relations:
@@ -336,7 +351,7 @@ DatosFormulario27:
 #--------------------------------------------
 # Cosmeticos y su formulario
 Cosmetico:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
@@ -362,7 +377,7 @@ Cosmetico:
     
 
 FormaCosmetica:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(250), notnull: true}
   relations:
@@ -370,14 +385,14 @@ FormaCosmetica:
     EmisionCorrespondecia: {local: id, foreign: forma_cosmetica_id, type: many, foreignAlias: FormaCosmetica}
 
 GrupoCosmetico:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(250), notnull: true}
   relations:
     Cosmetico: {local: id, foreign: grupo_cosmetico_id, type: one, foreignAlias: GrupoCosmetico}
 
 Formulario516:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     ## se agrega este campo para generalizar, revisar en el programa para evitar errores
     formulario_id:              {type: integer, notnull: false}
@@ -400,7 +415,7 @@ Formulario516:
     TipoTramiteFormulario: {local: tipo_tramite_formulario_id, foreign: id, type: one, foreignAlias: Formulario516}
 
 TipoTramiteFormulario:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(100), notnull: true}
   relations:
@@ -409,7 +424,7 @@ TipoTramiteFormulario:
 #--------------------------------------------
 # Higiene y su formulario
 Higiene:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
@@ -432,7 +447,7 @@ Higiene:
     Pais:                  {local: pais_id, foreign: id, type: one, foreignAlias: Higiene}
 
 Formulario706:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     ## se agrega este campo para generalizar, revisar en el programa para evitar errores
     formulario_id:              {type: integer, notnull: false}
@@ -461,7 +476,7 @@ Formulario706:
     
 #--------------------------------------------
 Etapa:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     formulario_id: {type: integer, notnull: false}
     tipo_etapa_id: {type: integer, notnull: true}
@@ -472,7 +487,7 @@ Etapa:
     Formulario: {local: formulario_id, foreign: id, type: one, foreignAlias: Etapas}
     
 TipoEtapa:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre:      {type: string(250), notnull: true}
     descripcion: {type: string(2000), notnull: false}
@@ -481,7 +496,7 @@ TipoEtapa:
 
 ######## REACTIVO###############
 Reactivo:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
@@ -501,14 +516,14 @@ Reactivo:
     LaboratorioFabricante: {local: laboratorio_fabricante_id, foreign: id, type: one, foreignAlias: Reactivos}
     
 TipoTramiteFormulario12:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(30), notnull: true}
   relations:
     Formulario12: {local: id, foreign: tipo_tramite_formulario12_id, type: one, foreignAlias: TipoTramitef12}
 
 Formulario12:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     ## se agrega este campo para generalizar, revisar en el programa para evitar errores
     formulario_id:                {type: integer, notnull: false}
@@ -528,14 +543,14 @@ Formulario12:
     
   ################3 FORMULARIO 007################
 TipoCalificacion:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(30), notnull: true}
   relations:
     Formulario7: {local: id, foreign: tipo_tramite_formulario7_id, type: one, foreignAlias: TipoTramitef7}
 
 Formulario7:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     ## se agrega este campo para generalizar, revisar en el programa para evitar errores
     formulario_id:         {type: integer, notnull: false}
@@ -567,7 +582,7 @@ Formulario7:
 
 ############DESPACHO ADUANERO ################
 Formulario11:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     ## se agrega este campo para generalizar, revisar en el programa para evitar errores
     formulario_id:         {type: integer, notnull: false}
@@ -597,14 +612,14 @@ Formulario11:
     Item:         {local: id, foreign: item_id, type: many, foreignAlias: Formulario11}
 
 TipoDespacho:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(50), notnull: true}
   relations:
     Formulario11: {local: id, foreign: tipo_despacho_id, type: one, foreignAlias: TipoCalificacion}
 
 Item:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     formulario11_id:  {type: integer, notnull: true}
     cantidad:    {type: string(150), notnull: true}
@@ -617,7 +632,7 @@ Item:
 ########### CORRESPONDENCIA ··············
 
 EmisionCorrespondencia:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     tipo_documento_id:     {type: integer, notnull: true}
     empresa_id:            {type: integer, notnull: false}
@@ -642,7 +657,7 @@ EmisionCorrespondencia:
     CodigoProducto:        {local: codigo_producto_id, foreign: id, type: one, foreignAlias: Emision}
     
 TipoDocumento:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(30), notnull: true}
   relations:
@@ -650,14 +665,14 @@ TipoDocumento:
 
 
 Emisor:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre: {type: string(30), notnull: true}
   relations:
     EmisionCorrespondencia: {local: id, foreign: emisor_id, type: many, foreignAlias: Emisores}   
 
 CodigoProducto:
-  actAs: {Timestampable: ~}
+  actAs: [Timestampable, Signable]
   columns:
     nombre:      {type: string(30), notnull: true}
     descripcion: {type: string(150), notnull: true}

@@ -64,7 +64,11 @@ abstract class BaseCiudad extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'rescom_ciudad_id'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable();
+        $timestampable0 = new Doctrine_Template_Timestampable(array(
+             ));
+        $signable0 = new Doctrine_Template_Signable(array(
+             ));
         $this->actAs($timestampable0);
+        $this->actAs($signable0);
     }
 }

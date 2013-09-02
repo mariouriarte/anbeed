@@ -160,7 +160,7 @@ text-align: center*/
     padding-bottom: 0;
 /* padding-left: auto;
 padding-right: auto;*/
-    padding-top: 20px !important;
+    padding-top: 0px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
     width: 1055px;
@@ -467,7 +467,7 @@ ul li.sf_admin_action_edit a
 }
 #sf_admin_container ul li.sf_admin_action_items a
 {
-  background: url(../images/icons/item.png) no-repeat 0 0;
+  background: url(../images/icons/item.svg) no-repeat 0 0;
 }
 
 #content .notice

@@ -12,7 +12,7 @@ class CosmeticoForm extends BaseCosmeticoForm
 {
   public function configure()
   {
-       unset($this['created_at'], $this['updated_at'], $this['producto_id']);
+       unset($this['created_at'], $this['updated_at'], $this['producto_id'], $this['created_by'], $this['updated_by']);
       //La empresa_id lo haremos hidden por que ya tenemos ese id
       $empresa = sfContext::getInstance()->getUser()->getAttribute('empresa');
       $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden(

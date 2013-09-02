@@ -42,7 +42,7 @@ generator:
           items: {label: Producto(s),  action: item}
           edit:  {label: Editar, action: editar}
       filter:  
-        display: [numero_ruta]
+        display: [numero_ruta, empresa_id, tipo_despacho_id]
       form:    ~
       edit:    ~
       new:     ~

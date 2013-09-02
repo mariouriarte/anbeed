@@ -12,7 +12,7 @@ class Formulario11Form extends BaseFormulario11Form
 {
   public function configure()
   {
-        unset($this['created_at'], $this['updated_at']);
+        unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
         $years = range(date('Y') - 0, date('Y'));   
         
         // empresa
