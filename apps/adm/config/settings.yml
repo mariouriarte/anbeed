@@ -24,8 +24,6 @@ test:
 
 all:
   .settings:
-    #session lifetime value in seconds (12 horas)
-    timeout:    43200  
     #internacionalizacion
     i18n: on
     # Form security secret (CSRF protection)

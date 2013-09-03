@@ -67,12 +67,12 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica_dev.php/formulario5porempresa"><span>Formulario 005</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/formulario7?table=empresa"><span>Formulario 007</span></a></li>
+                            <li><a href="/farmaceutica_dev.php/formulario11"><span>Formulario 11</span></a></li>
                             <li><a href="/farmaceutica_dev.php/formulario12porempresa"><span>Formulario 012</span></a></li>
                             <li><a href="/farmaceutica_dev.php/formulario27porempresa"><span>Formulario 027</span></a></li>
                             <li><a href="/farmaceutica_dev.php/form516porempresa"><span>Desición 516</span></a></li>
                             <li><a href="/farmaceutica_dev.php/form706porempresa"><span>Desición 706</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/formulario7?table=empresa"><span>Solicitud de Calificacion</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/formulario11"><span>Despacho Aduanero</span></a></li>
                         </ul>
                     </div>
                 </div>

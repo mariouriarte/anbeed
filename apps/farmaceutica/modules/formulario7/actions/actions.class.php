@@ -121,15 +121,20 @@ class formulario7Actions extends autoFormulario7Actions
     public function executeIndex(sfWebRequest $request)
     {
         parent::executeIndex($request);
-        $tabla = $this->getRequestParameter('table');
-        //var_dump($tabla);
-        if(!$empresa){
-            $this->pager->setQuery(Formulario7Table::selectForms7DeEmpresaProducto());
-        }
-        else {
+        
+        $user = $this->getUser();
+        $band = $this->getRequestParameter('table');
+        //var_dump("<br><br><br><br>".$tabla);
+        if($band)
+        {
             $this->pager->setQuery(Formulario7Table::selectForms7DeEmpresa());
         }
-        
+        else 
+        {
+            $this->pager->setQuery(Formulario7Table::selectForms7DeEmpresaProducto());
+        }
+        $this->pager->setPage($request->getParameter('page', 1));
+        $this->pager->init();
     }
     public function executeListIrProductos(sfWebRequest $request)
     {
