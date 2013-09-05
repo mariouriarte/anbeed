@@ -595,8 +595,8 @@ Formulario11:
     otro:                  {type: string(250), notnull: false}
     sustancias_quimicas:   {type: boolean, notnull: true}
     licencia_previa:       {type: boolean, notnull: true}
-    licencia_resolucion:   {type: string(150), notnull: true}
-    licencia_fecha:        {type: date, notnull: true}
+    licencia_resolucion:   {type: string(150), notnull: false}
+    licencia_fecha:        {type: date, notnull: false}
     numero_item:           {type: integer, notnull: true}
     foja:                  {type: integer, notnull: true}
     pais_id:               {type: integer, notnull: true}
@@ -609,7 +609,7 @@ Formulario11:
     Empresa:      {local: empresa_id, foreign: id, type: one, foreignAlias: Formulario11}
     TipoDespacho: {local: tipo_despacho_id, foreign: id, type: one, foreignAlias: Formulario11}
     Pais:         {local: pais_id, foreign: id, type: one, foreignAlias: Formulario11}
-    Item:         {local: id, foreign: item_id, type: many, foreignAlias: Formulario11}
+    Item:         {local: id, foreign: formulario11_id, type: many, foreignAlias: Formulario11}
 
 TipoDespacho:
   actAs: [Timestampable, Signable]
@@ -622,12 +622,12 @@ Item:
   actAs: [Timestampable, Signable]
   columns:
     formulario11_id:  {type: integer, notnull: true}
-    cantidad:    {type: string(150), notnull: true}
-    producto_id: {type: integer, notnull: true}
-    num_lote:    {type: integer, notnull: true}
+    cantidad:         {type: string(150), notnull: true}
+    producto_id:      {type: integer, notnull: true}
+    num_lote:         {type: integer, notnull: true}
   relations:
-    Formulario11: {local: formulario11_id, foreign: id, type: one, foreignAlias: Items}
-    Producto:     {local: producto_id, foreign: id, type: one, foreignAlias: Item}
+    Formulario11:     {local: formulario11_id, foreign: id, type: one, foreignAlias: Items}
+    Producto:         {local: producto_id, foreign: id, type: one, foreignAlias: Item}
 
 ########### CORRESPONDENCIA ··············
 

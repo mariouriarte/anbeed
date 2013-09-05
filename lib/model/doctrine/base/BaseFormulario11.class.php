@@ -29,7 +29,6 @@
  * @property TipoDespacho $TipoDespacho
  * @property Pais $Pais
  * @property Doctrine_Collection $Item
- * @property Doctrine_Collection $Items
  * 
  * @method integer             getFormularioId()          Returns the current record's "formulario_id" value
  * @method integer             getNumeroRuta()            Returns the current record's "numero_ruta" value
@@ -55,7 +54,6 @@
  * @method TipoDespacho        getTipoDespacho()          Returns the current record's "TipoDespacho" value
  * @method Pais                getPais()                  Returns the current record's "Pais" value
  * @method Doctrine_Collection getItem()                  Returns the current record's "Item" collection
- * @method Doctrine_Collection getItems()                 Returns the current record's "Items" collection
  * @method Formulario11        setFormularioId()          Sets the current record's "formulario_id" value
  * @method Formulario11        setNumeroRuta()            Sets the current record's "numero_ruta" value
  * @method Formulario11        setFecha()                 Sets the current record's "fecha" value
@@ -80,7 +78,6 @@
  * @method Formulario11        setTipoDespacho()          Sets the current record's "TipoDespacho" value
  * @method Formulario11        setPais()                  Sets the current record's "Pais" value
  * @method Formulario11        setItem()                  Sets the current record's "Item" collection
- * @method Formulario11        setItems()                 Sets the current record's "Items" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -135,12 +132,12 @@ abstract class BaseFormulario11 extends sfDoctrineRecord
              ));
         $this->hasColumn('licencia_resolucion', 'string', 150, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 150,
              ));
         $this->hasColumn('licencia_fecha', 'date', null, array(
              'type' => 'date',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('numero_item', 'integer', null, array(
              'type' => 'integer',
@@ -195,10 +192,6 @@ abstract class BaseFormulario11 extends sfDoctrineRecord
              'foreign' => 'id'));
 
         $this->hasMany('Item', array(
-             'local' => 'id',
-             'foreign' => 'item_id'));
-
-        $this->hasMany('Item as Items', array(
              'local' => 'id',
              'foreign' => 'formulario11_id'));
 
