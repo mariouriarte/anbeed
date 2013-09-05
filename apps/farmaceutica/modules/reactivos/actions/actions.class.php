@@ -34,6 +34,7 @@ class reactivosActions extends autoReactivosActions
         $reactivo = $this->getRoute()->getObject();
         $user->setAttribute('reactivo', $reactivo);
         $user->setAttribute('tabla', 'reactivo');
+        $user->setAttribute('producto', 'Reactivo');
         $this->redirect('formulario7/index');
     }
     protected function processForm(sfWebRequest $request, sfForm $form)

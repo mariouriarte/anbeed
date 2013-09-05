@@ -48,6 +48,7 @@ class medicamentosActions extends autoMedicamentosActions
         $medicamento = $this->getRoute()->getObject();
         $user->setAttribute('medicamento', $medicamento);
         $user->setAttribute('tabla', 'medicamento');
+        $user->setAttribute('producto', 'Medicamento');
         $this->redirect('formulario7/index');
     }
     

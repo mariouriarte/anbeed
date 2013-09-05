@@ -37,6 +37,7 @@ class higieneActions extends autoHigieneActions
         $higiene = $this->getRoute()->getObject();
         $user->setAttribute('higiene', $higiene);
         $user->setAttribute('tabla', 'higiene');
+        $user->setAttribute('producto', 'Higiene');
         $this->redirect('formulario7/index');
     }
     protected function processForm(sfWebRequest $request, sfForm $form) 

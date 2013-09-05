@@ -35,6 +35,11 @@ class Formulario27Form extends BaseFormulario27Form
                   'date_widget' => new sfWidgetFormDate(array(
                   'years' => array_combine($years, $years)))));
        
+       $this->widgetSchema['fecha_inicio_vigencia'] = new sfWidgetFormJQueryDate(
+            array('culture' => 'es',
+                  'date_widget' => new sfWidgetFormDate(array(
+                  'years' => array_combine($years, $years)))));
+       
        $this->widgetSchema['tipo_tramite_formulario27_id'] = new sfWidgetFormDoctrineChoice(
            array('expanded' => true,
                  'model'    => 'TipoTramiteFormulario27'));
