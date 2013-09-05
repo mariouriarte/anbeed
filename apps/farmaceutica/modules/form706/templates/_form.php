@@ -4,7 +4,7 @@
 <?php $higiene = $sf_user->getAttribute('higiene'); ?>
 <div class="content-info-empresa">
     <?php $empresa = $sf_user->getAttribute('empresa'); ?>
-    <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
+    <?php include_partial('formulario706/list_header', array('empresa' => $empresa)) ?>
 </div>
 
 <form action="<?php echo url_for('form706/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>

@@ -46,7 +46,10 @@ class reactivosActions extends autoReactivosActions
 
         try {
           $reactivo = $form->save();
+          
           $producto = new Producto();
+          // agregamos el codigo del producto codigo:RI
+          $producto->setCodigoProductoId(5); 
           $producto -> save();
           $reactivo -> setProducto($producto);
           $reactivo -> save();

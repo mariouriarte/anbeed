@@ -21,8 +21,30 @@ class itemsActions extends autoItemsActions
     public function executeListIrEmpresa(sfWebRequest $request)
     {
         $user = sfContext::getInstance()->getUser();
-        
         $empresa = $user->getAttribute('empresa');
         $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
     }
+    public function executeNew(sfWebRequest $request)
+    {
+        $this->form = $this->configuration->getForm();
+        $this->item = $this->form->getObject();
+        
+        $form11 = $this->getUser()->getAttribute('form11');
+        $this->form->setDefault('formulario11_id', $form11->getId());
+        $user = $this->getUser();
+        $user->getAttributeHolder()->remove('item_producto');
+    }
+    public function executeEdit(sfWebRequest $request)
+    {
+        $this->item = $this->getRoute()->getObject();
+        $this->form = $this->configuration->getForm($this->item);
+        
+        
+        $user = $this->getUser();
+        $this->item = $this->getRoute()->getObject();
+        
+        $user->setAttribute('item_producto', $this->item);
+        
+    }
+    
 }

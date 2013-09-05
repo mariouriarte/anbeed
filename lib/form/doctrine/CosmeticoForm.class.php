@@ -12,7 +12,7 @@ class CosmeticoForm extends BaseCosmeticoForm
 {
   public function configure()
   {
-       unset($this['created_at'], $this['updated_at'], $this['producto_id']);
+       unset($this['created_at'], $this['updated_at'], $this['producto_id'], $this['created_by'], $this['updated_by']);
       //La empresa_id lo haremos hidden por que ya tenemos ese id
       $empresa = sfContext::getInstance()->getUser()->getAttribute('empresa');
       $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden(
@@ -44,5 +44,13 @@ class CosmeticoForm extends BaseCosmeticoForm
                 array( 'model'=>'Pais',
                         'url'=>sfContext::getInstance()->getRouting()->generate('buscar_paises')
       ));
+      
+      /*AJUSTANDO LOS TAMAños*/
+      $this->widgetSchema['laboratorio_fabricante_id']->setAttribute('size' , 80);
+      $this->widgetSchema['nombre']->setAttribute('size' , 50);
+      $this->widgetSchema['forma_cosmetica_id']->setAttribute('size' , 50);
+      $this->widgetSchema['grupo_cosmetico_id']->setAttribute('size' , 50);
+      $this->widgetSchema['marca']->setAttribute('size' , 50);
+      $this->widgetSchema['descripcion']->setAttribute('cols' , 80);
   }
 }

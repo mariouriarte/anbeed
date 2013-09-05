@@ -64,6 +64,10 @@ $(document).ready(function()
                 echo $iconoRepresentante.' '.$empresa->RepresentanteLegal 
                 ?>
             </td>
+            <?php if (isset($producto)) {?>
+            <th>Producto</th>
+            <td><?php echo $producto ?></td>
+            <?php }?>
         </tr>
         <tr>
             <th>NIT:</th>
@@ -74,6 +78,10 @@ $(document).ready(function()
                 echo $iconoRegente.' '.$empresa->RegenteFarmaceutico;
                 ?>
             </td>
+            <?php if (isset($producto)) {?>
+            <th>Laboratorio Fabricante</th>
+            <td><?php echo $producto->LaboratorioFabricante ?></td>
+            <?php }?>
         </tr>
     </tbody>
 </table>

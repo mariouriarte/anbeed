@@ -12,7 +12,7 @@ class Formulario7Form extends BaseFormulario7Form
 {
   public function configure()
   {
-        unset($this['created_at'], $this['updated_at']);
+        unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
         $years = range(date('Y') - 0, date('Y'));   
                 
         // producto
@@ -39,14 +39,14 @@ class Formulario7Form extends BaseFormulario7Form
          
         // Autocompletar Via de Administracion
         $this->widgetSchema['via_administracion_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
-                array( 'model'=>'ViaAdministracion',
-                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_via')
+                array( 'model'=> 'ViaAdministracion',
+                        'url' => sfContext::getInstance()->getRouting()->generate('buscar_via')
         ));
       
         // Autocompletar Forma Farmaceutica
         $this->widgetSchema['forma_farmaceutica_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
-                array( 'model'=>'FormaFarmaceutica',
-                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_ffarmaceutica')
+                array( 'model'=> 'FormaFarmaceutica',
+                        'url' => sfContext::getInstance()->getRouting()->generate('buscar_ffarmaceutica')
         ));
   }
 }

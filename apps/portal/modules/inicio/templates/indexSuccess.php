@@ -8,6 +8,7 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica<?php echo $env ?>.php/empresas"><span>Empresas</span></a></li>
+                            <li><a href="/farmaceutica<?php echo $env ?>.php/empresas/new"><span>Nueva Empresa</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -20,6 +21,7 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm_dev.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
+                            <li><a href="/adm_dev.php/laboratorios/new"><span>Nuevo Laboratorios Fabricantes</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -45,7 +47,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/preferences-desktop.png" />Administración del Sistema</h2>
+                    <h2 class="titulo"><img src="/images/icons/applications-debugging.svg" />Administración</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/ingredientes"><span>Ingredientes</span></a></li>
@@ -61,7 +63,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/locked.png" />Cuenta</h2>
+                    <h2 class="titulo"><img src="/images/icons/cuenta.svg" />Cuenta</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/usuarios"><span>Usuarios</span></a></li>

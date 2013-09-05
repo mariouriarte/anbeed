@@ -16,7 +16,7 @@ class Formulario706Form extends BaseFormulario706Form
     
     public function configure()
     {
-        unset($this['created_at'], $this['updated_at']);
+        unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
         $years = range(date('Y') - 0, date('Y'));   
         
         $higiene = sfContext::getInstance()->getUser()->getAttribute('higiene');

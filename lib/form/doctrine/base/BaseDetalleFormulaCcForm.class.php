@@ -22,6 +22,8 @@ abstract class BaseDetalleFormulaCcForm extends BaseFormDoctrine
       'unidad'         => new sfWidgetFormInputText(),
       'created_at'     => new sfWidgetFormDateTime(),
       'updated_at'     => new sfWidgetFormDateTime(),
+      'created_by'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'add_empty' => true)),
+      'updated_by'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Updator'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
@@ -32,6 +34,8 @@ abstract class BaseDetalleFormulaCcForm extends BaseFormDoctrine
       'unidad'         => new sfValidatorString(array('max_length' => 20)),
       'created_at'     => new sfValidatorDateTime(),
       'updated_at'     => new sfValidatorDateTime(),
+      'created_by'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'required' => false)),
+      'updated_by'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Updator'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('detalle_formula_cc[%s]');

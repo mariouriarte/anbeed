@@ -12,7 +12,7 @@ class Formulario11Form extends BaseFormulario11Form
 {
   public function configure()
   {
-        unset($this['created_at'], $this['updated_at']);
+        unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
         $years = range(date('Y') - 0, date('Y'));   
         
         // empresa
@@ -57,5 +57,10 @@ class Formulario11Form extends BaseFormulario11Form
         $this->widgetSchema['otro']->setAttribute('onBlur','copiarOtro();');
         $this->widgetSchema['otro']->setAttribute('disabled', 'disabled');
         //  $this->widgetSchema['por_tratarse']->setAttribute('disabled', 'disabled');
+        
+        /*AJUSTANDO LOS TAMAños*/
+        $this->widgetSchema['otro']->setAttribute('size' , 80);
+        $this->widgetSchema['por_tratarse']->setAttribute('size' , 280);
+        $this->widgetSchema['para']->setAttribute('size' , 80);
   }
 }

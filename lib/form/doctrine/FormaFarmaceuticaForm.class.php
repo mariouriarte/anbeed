@@ -12,6 +12,8 @@ class FormaFarmaceuticaForm extends BaseFormaFarmaceuticaForm
 {
   public function configure()
   {
-      unset($this['created_at'], $this['updated_at']);
+      unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
+      /*AJUSTANDO LOS TAMAños*/
+      $this->widgetSchema['nombre']->setAttribute('size' , 80);
   }
 }

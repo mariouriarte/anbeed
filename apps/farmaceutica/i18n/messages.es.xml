@@ -138,6 +138,10 @@
                 <source>The item has not been saved due to some errors.</source>
                 <target>El elemento no ha sido guardado debido a que contiene algunos errores.</target>
             </trans-unit>
+            <trans-unit id="34">
+                <source>is not an integer.</source>
+                <target>no es un número.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

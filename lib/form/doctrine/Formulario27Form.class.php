@@ -12,7 +12,7 @@ class Formulario27Form extends BaseFormulario27Form
 {
   public function configure()
   {
-       unset($this['created_at'], $this['updated_at']);
+       unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
        $years = range(date('Y') - 0, date('Y'));   
        
        // Asigna el id del dispositivo para el form27
