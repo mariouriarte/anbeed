@@ -44,5 +44,13 @@ class CosmeticoForm extends BaseCosmeticoForm
                 array( 'model'=>'Pais',
                         'url'=>sfContext::getInstance()->getRouting()->generate('buscar_paises')
       ));
+      
+      /*AJUSTANDO LOS TAMAños*/
+      $this->widgetSchema['laboratorio_fabricante_id']->setAttribute('size' , 80);
+      $this->widgetSchema['nombre']->setAttribute('size' , 50);
+      $this->widgetSchema['forma_cosmetica_id']->setAttribute('size' , 50);
+      $this->widgetSchema['grupo_cosmetico_id']->setAttribute('size' , 50);
+      $this->widgetSchema['marca']->setAttribute('size' , 50);
+      $this->widgetSchema['descripcion']->setAttribute('cols' , 80);
   }
 }

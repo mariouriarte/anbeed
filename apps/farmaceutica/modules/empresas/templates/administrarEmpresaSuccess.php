@@ -66,13 +66,14 @@
                     <h2 class="titulo"><img src="/images/icons/text.svg" /> Formularios</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/farmaceutica_dev.php/formulario5porempresa"><span>Formulario 005</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/formulario7?table=empresa"><span>Formulario 007</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/formulario11"><span>Formulario 11</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/formulario12porempresa"><span>Formulario 012</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/formulario27porempresa"><span>Formulario 027</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/form516porempresa"><span>Desición 516</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/form706porempresa"><span>Desición 706</span></a></li>
+                            <li><?php echo link_to('Formulario 003', 'empresas/edit?id=' . $empresa->getId()) ?></li>
+                            <li><?php echo link_to('Formulario 005', 'formulario5porempresa/index') ?></li>
+                            <li><?php echo link_to('Formulario 007', 'formulario7porempresa/index') ?></li>
+                            <li><?php echo link_to('Formulario 011', 'formulario11/index') ?></li>
+                            <li><?php echo link_to('Formulario 012', 'formulario12porempresa/index') ?></li>
+                            <li><?php echo link_to('Formulario 027', 'formulario27porempresa/index') ?></li>
+                            <li><?php echo link_to('Desicion 516', 'form516porempresa/index') ?></li>
+                            <li><?php echo link_to('Desicion 706', 'form706porempresa/index') ?></li>
                         </ul>
                     </div>
                 </div>

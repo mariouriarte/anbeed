@@ -57,5 +57,10 @@ class EmisionCorrespondenciaForm extends BaseEmisionCorrespondenciaForm
 //                  'add_empty'    => 'Seleccione un producto'));
 ////       $this->validatorSchema['producto_id'] = new sfValidatorCallback(
 ////           array('callback' => array($this, 'ListarProductos')));
+       
+       
+      /*AJUSTANDO LOS TAMAños*/
+      $this->widgetSchema['otro_destino']->setAttribute('size' , 50);
+      $this->widgetSchema['nombre']->setAttribute('cols' , 80);
   }
 }

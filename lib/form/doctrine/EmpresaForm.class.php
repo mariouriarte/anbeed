@@ -62,6 +62,13 @@ class EmpresaForm extends BaseEmpresaForm
          ));
         $this->widgetSchema['regente_farmaceutico_id']->addOption('method', '__toString');
          */
+        
+        /*AJUSTANDO LOS TAMAños*/
+        $this->widgetSchema['razon_social']->setAttribute('size' , 80);
+        $this->widgetSchema['direccion']->setAttribute('size' , 80);
+        $this->widgetSchema['email']->setAttribute('size' , 80);
+        $this->widgetSchema['actividad']->setAttribute('size' , 80);
+        $this->widgetSchema['observacion']->setAttribute('cols' , 80);
          
     }
 }

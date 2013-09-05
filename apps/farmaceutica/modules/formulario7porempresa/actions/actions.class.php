@@ -1,20 +1,19 @@
 <?php
 
-//require_once dirname(__FILE__).'/../lib/formulario7GeneratorConfiguration.class.php';
-//require_once dirname(__FILE__).'/../lib/formulario7GeneratorHelper.class.php';
+require_once dirname(__FILE__).'/../lib/formulario7porempresaGeneratorConfiguration.class.php';
+require_once dirname(__FILE__).'/../lib/formulario7porempresaGeneratorHelper.class.php';
 
 /**
- * formulario7 actions.
+ * formulario7porempresa actions.
  *
  * @package    anbeed
- * @subpackage formulario7
+ * @subpackage formulario7porempresa
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class formulario7Actions extends autoFormulario7Actions
+class formulario7porempresaActions extends autoFormulario7porempresaActions
 {
-    
-    public function executePrint(sfWebRequest $request)
+        public function executePrint(sfWebRequest $request)
     {
         $this->formulario7 = $this->getRoute()->getObject();
         
@@ -121,17 +120,10 @@ class formulario7Actions extends autoFormulario7Actions
     public function executeIndex(sfWebRequest $request)
     {
         parent::executeIndex($request);
-        $this->pager->setQuery(Formulario7Table::selectForms7DeEmpresaProducto());
+        $this->pager->setQuery(Formulario7Table::selectForms7DeEmpresa());
         $this->pager->setPage($request->getParameter('page', 1));
         $this->pager->init();
     }
-    public function executeListIrProductos(sfWebRequest $request)
-    {
-        $user = sfContext::getInstance()->getUser();
-        $producto = $user->getAttribute('tabla');
-        $this->redirect($producto);
-    }
-    
     public function executeListIrEmpresa(sfWebRequest $request)
     {
         $user = sfContext::getInstance()->getUser();
@@ -140,12 +132,12 @@ class formulario7Actions extends autoFormulario7Actions
     }
     public function executeNuevo(sfWebRequest $request)
     {
-        $this->redirect('form7/new');
+        $this->redirect('form7porempresa/new');
     }
     
     public function executeEditar(sfWebRequest $request)
     {
         $id = $request->getParameter('id');
-        $this->redirect("form7/edit?id=$id");
+        $this->redirect("form7porempresa/edit?id=$id");
     }
 }

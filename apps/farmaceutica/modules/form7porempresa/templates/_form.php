@@ -16,26 +16,14 @@ $(document).ready(function()
 });
 </script>
 
-<?php 
-$tabla = $sf_user->getAttribute('tabla');
-if($tabla == 'medicamento')
-    $producto = $sf_user->getAttribute('medicamento');
-if($tabla == 'reactivo')
-    $producto = $sf_user->getAttribute('reactivo');
-if($tabla == 'dispositivo_medico')
-    $producto = $sf_user->getAttribute('dispositivo_medico');
-if($tabla == 'cosmetico')
-    $producto = $sf_user->getAttribute('cosmetico');
-if($tabla == 'higiene')
-    $producto = $sf_user->getAttribute('higiene');
-?>
+<?php $producto = $sf_user->getAttribute('productof7'); ?>
+
 <div class="content-info-empresa">
     <?php $empresa = $sf_user->getAttribute('empresa'); ?>
    
-    <?php include_partial('empresas/info_empresa', array('empresa'  => $empresa, 
-                                                         'producto' => $producto)) ?>
+    <?php include_partial('empresas/info_empresa', array('empresa'  => $empresa)) ?>
 </div>
-<form action="<?php echo url_for('form7/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+<form action="<?php echo url_for('form7porempresa/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
 <?php endif; ?>
@@ -76,29 +64,18 @@ if($tabla == 'higiene')
       </tr>
       <tr>
           <th> Nombre Comercial: </th>
-          <td><?php 
-                if($tabla == 'medicamento')
-                    echo $producto-> getNombreComercial();
-                if($tabla == 'reactivo')
-                    echo $producto-> getNombreComercial();
-                if($tabla == 'dispositivo_medico')
-                    echo $producto-> getNombreComercial();
-                if($tabla == 'cosmetico')
-                    echo $producto-> getNombre();
-                if($tabla == 'higiene')
-                    echo $producto-> getNombre();
-          ?></td>
+          <td><?php
+                if($producto->Producto->getCodigoProductoId() <= 2  || $producto->Producto->getCodigoProductoId() == 5)
+                  echo $producto;?>
+          </td>
       </tr>
       <tr>
           <th>Nombre Generico (D.C.I.): </th>
-          <td><?php if($tabla == 'medicamento')
-                    echo $producto -> getNombreGenerico();
-                if($tabla == 'dispositivo_medico')
-                    echo $producto-> getNombreGenerico();
-                if($tabla == 'cosmetico')
-                    echo $producto-> getNombre();
-                if($tabla == 'higiene')
-                    echo $producto-> getNombre();
+          <td><?php 
+                if($producto->Producto->getCodigoProductoId() <= 2 and $producto->Producto->getCodigoProductoId() != 5 )
+                    echo $producto->getNombreGenerico();
+                else
+                    echo $producto;
           ?></td>
       </tr>
       <tr>
@@ -108,7 +85,7 @@ if($tabla == 'higiene')
       <tr>
           <th>Forma Farmacéutica: </th>
           <td><?php
-                if($tabla == 'medicamento')
+                if($producto->Producto->getCodigoProductoId() == 1)
                     echo $producto -> getFormaFarmaceutica();
                 else {
                     echo $form['forma_farmaceutica_id']->renderError();

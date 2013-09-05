@@ -1,3 +1,21 @@
+formulario7_formulario7porempresa:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario7
+    module:               formulario7porempresa
+    prefix_path:          /formulario7porempresa
+    column:               id
+    with_wildcard_routes: true
+
+formulario7_form7porempresa:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario7
+    module:               form7porempresa
+    prefix_path:          /form7porempresa
+    column:               id
+    with_wildcard_routes: true
+
 item:
   class: sfDoctrineRouteCollection
   options:

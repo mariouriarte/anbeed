@@ -38,5 +38,20 @@ class MedicamentoForm extends BaseMedicamentoForm
                 array( 'model'=>'TipoVenta',
                         'url'=>sfContext::getInstance()->getRouting()->generate('buscar_venta')
       ));
+      
+      /*AJUSTANDO LOS TAMAños*/
+      $this->widgetSchema['laboratorio_fabricante_id']->setAttribute('size' , 80);
+      $this->widgetSchema['nombre_comercial']->setAttribute('size' , 50);
+      $this->widgetSchema['nombre_generico']->setAttribute('size' , 50);
+      $this->widgetSchema['forma_farmaceutica_id']->setAttribute('size' , 50);
+      $this->widgetSchema['concentracion']->setAttribute('size' , 50);
+      $this->widgetSchema['via_administracion_id']->setAttribute('size' , 50);
+      $this->widgetSchema['accion_terapeutica']->setAttribute('cols' , 80);
+      $this->widgetSchema['tipo_venta_id']->setAttribute('size' , 50);
+      $this->widgetSchema['conservacion']->setAttribute('size' , 50);
+      $this->widgetSchema['especificacion_envase']->setAttribute('cols' , 80);
+      $this->widgetSchema['envase_clinico']->setAttribute('cols' , 80);
+      $this->widgetSchema['descripcion']->setAttribute('cols' , 80);
+      
   }
 }
