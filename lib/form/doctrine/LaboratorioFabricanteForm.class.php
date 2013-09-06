@@ -21,6 +21,8 @@ class LaboratorioFabricanteForm extends BaseLaboratorioFabricanteForm
                 'add_empty' => 'Seleccione ciudad'));
       $this->validatorSchema['ciudad_id'] = new sfValidatorDoctrineChoice(
           array('model' => 'Ciudad', 'required' => true));
-      
+   
+      /*AJUSTANDO LOS TAMAños*/
+      $this->widgetSchema['nombre']->setAttribute('size' , 50);
   }
 }

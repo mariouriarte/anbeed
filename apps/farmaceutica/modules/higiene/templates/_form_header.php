@@ -17,7 +17,7 @@ $(document).ready(function()
  
     //Marca
     $('#autocomplete_higiene_grupo_higiene_id')
-        .after("&nbsp;&nbsp;<a href='/farmaceutica_dev.php/grupo_higiene/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nuevo Laboratorio Fabricante\"/></a>");
+        .after("&nbsp;&nbsp;<a href='/farmaceutica_dev.php/grupo_higiene/new' onclick=\"var w=window.open(this.href,'popupWindow','width=600,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nuevo Laboratorio Fabricante\"/></a>");
         
     //Paises
     $('#autocomplete_higiene_pais_id')

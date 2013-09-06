@@ -17,7 +17,7 @@ class Formulario706 extends BaseFormulario706
         return $this-> Higiene -> Empresa;
     }
     
-    public function getLaboratorioFabricante()
+    public function getLaboratorio()
     {
         return $this-> Higiene -> LaboratorioFabricante;
     }

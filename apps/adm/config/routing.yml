@@ -1,3 +1,21 @@
+grupo_higiene:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                GrupoHigiene
+    module:               ghigiene
+    prefix_path:          /ghigiene
+    column:               id
+    with_wildcard_routes: true
+
+grupo_cosmetico:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                GrupoCosmetico
+    module:               gcosmetico
+    prefix_path:          /gcosmetico
+    column:               id
+    with_wildcard_routes: true
+
 formulario12:
   class: sfDoctrineRouteCollection
   options:

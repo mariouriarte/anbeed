@@ -44,7 +44,23 @@
                 </div>
             </div>
         </div>
+
         <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <h2 class="titulo"><img src="/images/icons/correspondencia.svg" />Correspondecia</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/emisionc"><span>Emsión de Correspondecia</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tipodoc"><span>Tipo Documento</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/emisor"><span>Emisor Correspondecia</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Código Producto</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="columna">
             <div class="cubo">
                 <div class="adentro">
                     <h2 class="titulo"><img src="/images/icons/applications-debugging.svg" />Administración</h2>
@@ -52,9 +68,12 @@
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/ingredientes"><span>Ingredientes</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/paises"><span>Paises</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/ciudades"><span>Ciudades</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/personas"><span>Personas</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/tventas"><span>Tipo Venta</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/administraciones"><span>Vía de Administración</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/gcosmetico"><span>Grupo Cosmético</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/ghigiene"><span>Grupo de Higiene</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -72,21 +91,6 @@
                             <?php else: ?>
                                 <li><a href="<?php echo url_for('@sf_guard_signin') ?>"><span>Ingresar</span></a></li>
                             <?php endif ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columna">
-            <div class="cubo">
-                <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/correspondencia.svg" />Correspondecia</h2>
-                    <div class="contenido">
-                        <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/emisionc"><span>Emsión de Correspondecia</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tipodoc"><span>Tipo Documento</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/emisor"><span>Emisor Correspondecia</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Código Producto</span></a></li>
                         </ul>
                     </div>
                 </div>

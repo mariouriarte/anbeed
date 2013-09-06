@@ -13,6 +13,14 @@ require_once dirname(__FILE__).'/../lib/cosmeticoGeneratorHelper.class.php';
  */
 class cosmeticoActions extends autoCosmeticoActions
 {
+    public function executeNew(sfWebRequest $request)
+    {
+        $this->form = $this->configuration->getForm();
+        $this->cosmetico = $this->form->getObject();
+        
+        $empresa = $this->getUser()->getAttribute('empresa');
+        $this->form->setDefault('empresa_id', $empresa->getId());
+    }
     public function executeListAdmEmpresa(sfWebRequest $request)
     {
         $user = $this->getUser();
@@ -43,16 +51,19 @@ class cosmeticoActions extends autoCosmeticoActions
       if ($form->isValid())
       {
         $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
-
+        $is_new = $form->getObject()->isNew();
         try {
           $cosmetico = $form->save();
-          $producto = new Producto();
-          // agregamos el codigo del producto codigo:NSOC
-          $producto->setCodigoProductoId(3); 
-          $producto -> save();
-          
-          $cosmetico -> setProducto($producto);
-          $cosmetico -> save();
+          if ($is_new)
+          {    
+            $producto = new Producto();
+            // agregamos el codigo del producto codigo:NSOC
+            $producto->setCodigoProductoId(3); 
+            $producto -> save();
+
+            $cosmetico -> setProducto($producto);
+            $cosmetico -> save();
+          }
         } catch (Doctrine_Validator_Exception $e) {
 
           $errorStack = $form->getObject()->getErrorStack();

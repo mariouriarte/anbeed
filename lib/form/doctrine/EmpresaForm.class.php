@@ -64,10 +64,10 @@ class EmpresaForm extends BaseEmpresaForm
          */
         
         /*AJUSTANDO LOS TAMAños*/
-        $this->widgetSchema['razon_social']->setAttribute('size' , 80);
-        $this->widgetSchema['direccion']->setAttribute('size' , 80);
-        $this->widgetSchema['email']->setAttribute('size' , 80);
-        $this->widgetSchema['actividad']->setAttribute('size' , 80);
+        $this->widgetSchema['razon_social']->setAttribute('size' , 50);
+        $this->widgetSchema['direccion']->setAttribute('size' , 50);
+        $this->widgetSchema['email']->setAttribute('size' , 50);
+        $this->widgetSchema['actividad']->setAttribute('size' , 50);
         $this->widgetSchema['observacion']->setAttribute('cols' , 80);
          
     }

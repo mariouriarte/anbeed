@@ -13,7 +13,15 @@ require_once dirname(__FILE__).'/../lib/medicamentosGeneratorHelper.class.php';
  */
 class medicamentosActions extends autoMedicamentosActions
 {
-     public function executeListAdmEmpresa(sfWebRequest $request)
+    public function executeNew(sfWebRequest $request)
+    {
+        $this->form = $this->configuration->getForm();
+        $this->medicamento = $this->form->getObject();
+        $empresa = $this->getUser()->getAttribute('empresa');
+        $this->form->setDefault('empresa_id', $empresa->getId());
+    }
+    
+    public function executeListAdmEmpresa(sfWebRequest $request)
     {
         $user = $this->getUser();
         $empresa = $user->getAttribute('empresa');
@@ -58,17 +66,20 @@ class medicamentosActions extends autoMedicamentosActions
       if ($form->isValid())
       {
         $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
-
+        $is_new = $form->getObject()->isNew();
         try {
           $medicamento = $form->save();
           
-          $producto = new Producto();
-          // agregamos el codigo del producto codigo:II
-          $producto->setCodigoProductoId(1); 
-          $producto -> save();
-          
-          $medicamento -> setProducto($producto);
-          $medicamento -> save();
+          if($is_new)
+          {
+            $producto = new Producto();
+            // agregamos el codigo del producto codigo:II
+            $producto->setCodigoProductoId(1); 
+            $producto -> save();
+
+            $medicamento -> setProducto($producto);
+            $medicamento -> save();
+          }
         } catch (Doctrine_Validator_Exception $e) {
 
           $errorStack = $form->getObject()->getErrorStack();

@@ -69,12 +69,16 @@ class form11Actions extends sfActions
     if ($form->isValid())
     {
       $notice = $form->getObject()->isNew() ? 'El elemento fue creado correctamente.' : 'El elemento fue actualizado correctamente.';
-      $formulario11 = $form->save();
-      $formulario = new Formulario();
-      $formulario-> save();
+      $is_new = $form->getObject()->isNew();
       
-      $formulario11-> setFormulario($formulario);
-      $formulario11-> save();
+      $formulario11 = $form->save();
+      if($is_new)
+      {
+        $formulario = new Formulario();
+        $formulario-> save();
+        $formulario11-> setFormulario($formulario);
+        $formulario11-> save();
+      }
       
       // Añadimos los mensajes de notificacion
       $this->getUser()->setFlash('notice', $notice);

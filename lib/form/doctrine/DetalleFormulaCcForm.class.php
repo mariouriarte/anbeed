@@ -27,5 +27,7 @@ class DetalleFormulaCcForm extends BaseDetalleFormulaCcForm
         $this->widgetSchema['Eliminar'] = new sfWidgetFormInputCheckbox();
         $this->validatorSchema['Eliminar'] = new sfValidatorPass();
       }
+      /*AJUSTANDO LOS TAMAños*/
+      $this->widgetSchema['ingrediente_id']->setAttribute('size' , 50);
   }
 }

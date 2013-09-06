@@ -156,13 +156,16 @@ class formulario12Actions extends autoFormulario12Actions
       if ($form->isValid())
       {
         $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
-
+        $is_new = $form->getObject()->isNew();
         try {
           $formulario12 = $form->save();
-          $formulario = new Formulario();
-          $formulario -> save();
-          $formulario12 -> setFormulario($formulario);
-          $formulario12 -> save();
+          if($is_new)
+          {
+            $formulario = new Formulario();
+            $formulario -> save();
+            $formulario12 -> setFormulario($formulario);
+            $formulario12 -> save();
+          }
         } catch (Doctrine_Validator_Exception $e) {
 
           $errorStack = $form->getObject()->getErrorStack();
