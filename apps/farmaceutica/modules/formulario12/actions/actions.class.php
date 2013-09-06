@@ -19,7 +19,8 @@ class formulario12Actions extends autoFormulario12Actions
         $config = sfTCPDFPluginConfigHandler::loadConfig();
                   sfTCPDFPluginConfigHandler::includeLangFile(
                           $this->getUser()->getCulture());
-        $pdf = new sfTCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+        $page_size = array(210,320);
+        $pdf = new sfTCPDF('P', PDF_UNIT, $page_size, true, 'UTF-8', false);
         
         // Informacion el documento
         $pdf->SetCreator(PDF_CREATOR);
@@ -39,7 +40,7 @@ class formulario12Actions extends autoFormulario12Actions
         $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
         
         // Set font
-        $pdf->SetFont('dejavusans', 'B', 13, '', true);
+        $pdf->SetFont('dejavusans', 'B', 9, '', true);
         
         // Add a page
         $pdf->AddPage();

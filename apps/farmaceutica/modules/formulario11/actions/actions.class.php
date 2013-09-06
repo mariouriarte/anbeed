@@ -20,9 +20,11 @@ class formulario11Actions extends autoFormulario11Actions
         $user->setAttribute('form11', $this->formulario11);
         
         $config = sfTCPDFPluginConfigHandler::loadConfig();
-                  sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
-
-        $pdf = new sfTCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+                  sfTCPDFPluginConfigHandler::includeLangFile(
+                          $this->getUser()->getCulture());
+        
+        $page_size = array(210,320);
+        $pdf = new sfTCPDF('P', PDF_UNIT, $page_size, true, 'UTF-8', false);
         
         // Informacion el documento
         $pdf->SetCreator(PDF_CREATOR);
@@ -39,7 +41,8 @@ class formulario11Actions extends autoFormulario11Actions
         $pdf->SetPrintFooter(false);
         
         //set auto page breaks
-        $pdf->SetAutoPageBreak(TRUE, 5);
+        $pdf->SetAutoPageBreak(TRUE, 0);
+        
         
         // Add a page
         $pdf->AddPage();
@@ -83,7 +86,8 @@ class formulario11Actions extends autoFormulario11Actions
             }
             
             //Imprimimos X en el dato general
-        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_datos_generales, $y_datos_generales, true);
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, 
+            $x_datos_generales, $y_datos_generales, true);
 
         //Tamaño de letra para datos
         $pdf->SetFont('dejavusans', '', 9, '', true);
@@ -145,8 +149,14 @@ class formulario11Actions extends autoFormulario11Actions
         $q=  Doctrine_Core::getTable('Item')->selectItemDeForm11();
         $items=$q->execute();
         $y_fila_items = 269;
+        $contador_item=1;
         foreach ($items as $item)
         {
+            if($contador_item==7 || $contador_item==42 || $contador_item==77 ||$contador_item==112)
+            {
+                $pdf->AddPage();
+                $y_fila_items = 25;
+            }
             $pdf->MultiCell(75, 0, $item->getCantidad(),
                 0, 'L', 0, 0, '45', $y_fila_items, true);
             $pdf->MultiCell(75, 0, $item->Producto,
@@ -154,17 +164,22 @@ class formulario11Actions extends autoFormulario11Actions
             $pdf->MultiCell(75, 0, $item->getNumLote(),
                 0, 'L', 0, 0, '100', $y_fila_items, true);
             $y_fila_items+=5;
+            $contador_item++;
         }
-        foreach ($items as $item)
-        {
-            $pdf->MultiCell(75, 0, $item->getCantidad(),
-                0, 'L', 0, 0, '45', $y_fila_items, true);
-            $pdf->MultiCell(75, 0, $item->Producto,
-                0, 'L', 0, 0, '65', $y_fila_items, true);
-            $pdf->MultiCell(75, 0, $item->getNumLote(),
-                0, 'L', 0, 0, '100', $y_fila_items, true);
-            $y_fila_items+=5;
-        }
+        
+//        $pdf->AddPage();
+//        
+//        $y_fila_items = 269;
+//        foreach ($items as $item)
+//        {
+//            $pdf->MultiCell(75, 0, $item->getCantidad(),
+//                0, 'L', 0, 0, '45', $y_fila_items, true);
+//            $pdf->MultiCell(75, 0, $item->Producto,
+//                0, 'L', 0, 0, '65', $y_fila_items, true);
+//            $pdf->MultiCell(75, 0, $item->getNumLote(),
+//                0, 'L', 0, 0, '100', $y_fila_items, true);
+//            $y_fila_items+=5;
+//        }
         $pdf->Output('Formulario011.pdf', 'I');
         throw new sfStopException();
     }

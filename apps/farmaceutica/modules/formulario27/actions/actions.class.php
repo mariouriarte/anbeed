@@ -18,9 +18,11 @@ class formulario27Actions extends autoFormulario27Actions
         $this->formulario27 = $this->getRoute()->getObject();
         
         $config = sfTCPDFPluginConfigHandler::loadConfig();
-                  sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
-
-        $pdf = new sfTCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+                  sfTCPDFPluginConfigHandler::includeLangFile(
+                          $this->getUser()->getCulture());
+        
+        $page_size = array(210,320);
+        $pdf = new sfTCPDF('P', PDF_UNIT, $page_size, true, 'UTF-8', false);
         
         // Informacion el documento
         $pdf->SetCreator(PDF_CREATOR);
