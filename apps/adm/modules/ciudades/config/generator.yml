@@ -13,9 +13,15 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
+      fields:  
+        nombre: {label: 'Ciudad' }
+      list:    
+        title: Listado de Ciudades
+        display: [pais, nombre]
+      filter:  
+        display: [pais_id, nombre]
       form:    ~
-      edit:    ~
-      new:     ~
+      edit:    
+        title: Editar la Ciudad de %%nombre%%
+      new:     
+        title: Registrar Ciudad

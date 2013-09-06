@@ -19,11 +19,10 @@ class Formulario706Form extends BaseFormulario706Form
         unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
         $years = range(date('Y') - 0, date('Y'));   
         
-        $higiene = sfContext::getInstance()->getUser()->getAttribute('higiene');
+        $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();
         
         //// higiene
-        $this->widgetSchema['higiene_id'] = new sfWidgetFormInputHidden(
-            array(), array('value' => $higiene->getId()));
+        $this->widgetSchema['higiene_id'] = new sfWidgetFormInputHidden();
       
         //// datos
         $this->widgetSchema['datos'] = new sfWidgetFormChoice(
@@ -57,7 +56,7 @@ class Formulario706Form extends BaseFormulario706Form
         $this->widgetSchema['maquila_tipo'] = new sfWidgetFormChoice(
             array('expanded' => true, 
                   'choices'  => $this->tipo_maquila));
-        $this->validatorSchema['maquila_tipo'] = new sfValidatorString(array('required' => true));
+        $this->validatorSchema['maquila_tipo'] = new sfValidatorString(array('required' => false));
         
         ///// Responsable comercial Pais
         $this->widgetSchema['pais_id'] = new sfWidgetFormDoctrineChoice(

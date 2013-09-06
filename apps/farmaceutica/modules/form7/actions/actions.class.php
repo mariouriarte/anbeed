@@ -96,12 +96,16 @@ class form7Actions extends sfActions
     if ($form->isValid())
     {
         $notice = $form->getObject()->isNew() ? 'El elemento fue creado correctamente.' : 'El elemento fue actualizado correctamente.';
+        $is_new = $form->getObject()->isNew();
+        
         $formulario7 = $form->save();
-        $formulario = new Formulario();
-        $formulario -> save();
-        $formulario7 -> setFormulario($formulario);
-        $formulario7 -> save();
-
+        if($is_new)
+        {
+            $formulario = new Formulario();
+            $formulario -> save();
+            $formulario7 -> setFormulario($formulario);
+            $formulario7 -> save();
+        }
         $this->getUser()->setFlash('notice', $notice);
         $this->redirect('form7/edit?id='.$formulario7->getId());
     }

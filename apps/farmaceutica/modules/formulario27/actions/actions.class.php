@@ -149,10 +149,10 @@ class formulario27Actions extends autoFormulario27Actions
     
     public function executeNew(sfWebRequest $request)
     {
-    $this->form = $this->configuration->getForm();
-    $this->formulario27 = $this->form->getObject();
-    $reactivo = $this->getUser()->getAttribute('dispositivo_medico');
-    $this->form->setDefault('dispositivo_medico_id', $reactivo->getId());
+        $this->form = $this->configuration->getForm();
+        $this->formulario27 = $this->form->getObject();
+        $dispositivo = $this->getUser()->getAttribute('dispositivo_medico');
+        $this->form->setDefault('dispositivo_medico_id', $dispositivo->getId());
     }
     
     protected function processForm(sfWebRequest $request, sfForm $form)
@@ -161,13 +161,17 @@ class formulario27Actions extends autoFormulario27Actions
       if ($form->isValid())
       {
         $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
-
+        $is_new = $form->getObject()->isNew();
         try {
           $formulario27 = $form->save();
-          $formulario = new Formulario();
-          $formulario -> save();
-          $formulario27 -> setFormulario($formulario);
-          $formulario27 -> save();
+          if($is_new)
+          {
+              $formulario = new Formulario();
+              $formulario -> save();
+              $formulario27 -> setFormulario($formulario);
+              $formulario27 -> save();
+          }
+          
         } catch (Doctrine_Validator_Exception $e) {
 
           $errorStack = $form->getObject()->getErrorStack();

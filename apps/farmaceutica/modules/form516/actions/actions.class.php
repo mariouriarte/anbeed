@@ -20,6 +20,9 @@ class form516Actions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new Formulario516Form();
+        
+    $cosmetico = $this->getUser()->getAttribute('cosmetico');
+    $this->form->setDefault('cosmetico_id', $cosmetico->getId());
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -66,12 +69,15 @@ class form516Actions extends sfActions
     if ($form->isValid())
     {
         $notice = $form->getObject()->isNew() ? 'El elemento fue creado correctamente.' : 'El elemento fue actualizado correctamente.';
-        
+        $is_new = $form->getObject()->isNew();
         $formulario516 = $form->save();
-        $formulario = new Formulario();
-        $formulario -> save();
-        $formulario516 -> setFormulario($formulario);
-        $formulario516 -> save();
+        if($is_new)
+        {
+            $formulario = new Formulario();
+            $formulario -> save();
+            $formulario516 -> setFormulario($formulario);
+            $formulario516 -> save();
+        }
         $this->getUser()->setFlash('notice', $notice);
         $this->redirect('form516/edit?id='.$formulario516->getId());
         

@@ -14,13 +14,15 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list:    
+        title:  Listado de Grupos de Higiene
+        display: [nombre]
+        actions:
+          ir_portal:   {label: Volver al Portal}
+          _new: ~
       filter:  
         display: [nombre]
       form:    
-        actions:
-          _save: ~
-          cerrar: 
       edit:    
         title: Editar Grupo Higiene %%nombre%%
       new:     

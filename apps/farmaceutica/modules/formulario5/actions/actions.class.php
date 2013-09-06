@@ -150,13 +150,16 @@ class formulario5Actions extends autoFormulario5Actions
       if ($form->isValid())
       {
         $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
-
+        $is_new = $form->getObject()->isNew();
         try {
           $formulario5 = $form->save();
-          $formulario = new Formulario();
-          $formulario -> save();
-          $formulario5 -> setFormulario($formulario);
-          $formulario5 -> save();
+          if($is_new)
+          {
+                $formulario = new Formulario();
+                $formulario -> save();
+                $formulario5 -> setFormulario($formulario);
+                $formulario5 -> save();
+          }
         } catch (Doctrine_Validator_Exception $e) {
 
           $errorStack = $form->getObject()->getErrorStack();

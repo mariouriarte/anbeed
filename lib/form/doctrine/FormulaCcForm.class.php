@@ -21,6 +21,9 @@ class FormulaCcForm extends BaseFormulaCcForm
 
       $this->embedRelation('DetalleFormulaCc');
       
+      /*AJUSTANDO LOS TAMAños*/
+      $this->widgetSchema['observaciones']->setAttribute('cols' , 80);
+      $this->widgetSchema['observaciones']->setAttribute('rows' , 1);
       
   }
   protected function doBind(array $values) {

@@ -15,9 +15,9 @@ class Formulario11Form extends BaseFormulario11Form
         unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
         $years = range(date('Y') - 0, date('Y'));   
         
+        $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();
         // empresa
-        $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden(
-            array());
+        $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden();
         
         // fecha
         $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
@@ -59,8 +59,5 @@ class Formulario11Form extends BaseFormulario11Form
         //  $this->widgetSchema['por_tratarse']->setAttribute('disabled', 'disabled');
         
         /*AJUSTANDO LOS TAMAños*/
-        $this->widgetSchema['otro']->setAttribute('size' , 80);
-        $this->widgetSchema['por_tratarse']->setAttribute('size' , 280);
-        $this->widgetSchema['para']->setAttribute('size' , 80);
   }
 }
