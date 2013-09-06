@@ -61,13 +61,16 @@ class medicamentosActions extends autoMedicamentosActions
         try {
           $medicamento = $form->save();
           
-          $producto = new Producto();
-          // agregamos el codigo del producto codigo:II
-          $producto->setCodigoProductoId(1); 
-          $producto -> save();
-          
-          $medicamento -> setProducto($producto);
-          $medicamento -> save();
+          if($medicamento->isNew())
+          {
+            $producto = new Producto();
+            // agregamos el codigo del producto codigo:II
+            $producto->setCodigoProductoId(1); 
+            $producto -> save();
+
+            $medicamento -> setProducto($producto);
+            $medicamento -> save();
+          }
         } catch (Doctrine_Validator_Exception $e) {
 
           $errorStack = $form->getObject()->getErrorStack();

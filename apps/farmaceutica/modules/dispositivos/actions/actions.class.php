@@ -46,13 +46,18 @@ class dispositivosActions extends autoDispositivosActions
 
           try {
               $dispositivo_medico = $form->save();
-              
-              $producto = new Producto();
-              // agregamos el codigo del producto codigo:DI
-              $producto->setCodigoProductoId(2); 
-              $producto -> save();
-              $dispositivo_medico -> setProducto($producto);
-              $dispositivo_medico -> save();            
+              var_dump($form->getObject()->isNew());
+              die();
+                      
+              if ($dispositivo_medico->isNew())
+              {
+                $producto = new Producto();
+                // agregamos el codigo del producto codigo:DI
+                $producto->setCodigoProductoId(2); 
+                $producto -> save();
+                $dispositivo_medico -> setProducto($producto);
+                $dispositivo_medico -> save();            
+              }
           } catch (Doctrine_Validator_Exception $e) {
 
             $errorStack = $form->getObject()->getErrorStack();

@@ -52,14 +52,17 @@ class higieneActions extends autoHigieneActions
                 // ---------------------
                 $higiene = $form->save();
                 
-                $producto = new Producto();
-                // agregamos el codigo del producto codigo: NSOH
-                $producto->setCodigoProductoId(4); 
-                $producto->save();
-                
-                $higiene->setProducto($producto);
-                $higiene->save();
-                // ---------------------
+                if ($higiene->isNew())
+                {
+                    $producto = new Producto();
+                    // agregamos el codigo del producto codigo: NSOH
+                    $producto->setCodigoProductoId(4); 
+                    $producto->save();
+
+                    $higiene->setProducto($producto);
+                    $higiene->save();
+                    // ---------------------
+                }
             }
             catch (Doctrine_Validator_Exception $e) 
             {

@@ -17,6 +17,8 @@ class DispositivoMedicoForm extends BaseDispositivoMedicoForm
       $empresa = sfContext::getInstance()->getUser()->getAttribute('empresa');
       $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden(
             array(), array('value' => $empresa->getId()));
+      
+      $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden();
       //Autocompletar Labs
       $this->widgetSchema['laboratorio_fabricante_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
                 array( 'model'=>'LaboratorioFabricante',

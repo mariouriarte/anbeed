@@ -45,13 +45,16 @@ class cosmeticoActions extends autoCosmeticoActions
 
         try {
           $cosmetico = $form->save();
-          $producto = new Producto();
-          // agregamos el codigo del producto codigo:NSOC
-          $producto->setCodigoProductoId(3); 
-          $producto -> save();
-          
-          $cosmetico -> setProducto($producto);
-          $cosmetico -> save();
+          if ($cosmetico->isNew())
+          {    
+            $producto = new Producto();
+            // agregamos el codigo del producto codigo:NSOC
+            $producto->setCodigoProductoId(3); 
+            $producto -> save();
+
+            $cosmetico -> setProducto($producto);
+            $cosmetico -> save();
+          }
         } catch (Doctrine_Validator_Exception $e) {
 
           $errorStack = $form->getObject()->getErrorStack();
