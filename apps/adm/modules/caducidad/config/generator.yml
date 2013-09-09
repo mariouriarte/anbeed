@@ -1,32 +1,31 @@
 generator:
   class: sfDoctrineGenerator
   param:
-    model_class:           Formulario706
+    model_class:           Producto
     theme:                 admin
     non_verbose_templates: true
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          formulario706
+    route_prefix:          producto_caducidad
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
     config:
       actions: ~
-      fields: 
+      fields:  
         empresa:           {label: 'Empresa'}
+        producto:          {label: 'Producto'}
         laboratorio:       {label: 'Laboratorio Fabricante'}
-        
-      list:
-        title: Desiciones 706 registrados
-        display: [fecha, tipo_tramite_formulario, empresa, laboratorio, higiene]
+        fecha_vencimiento: {label: 'Fecha de vencimiento'}
+        vigencia:          {label: 'Vigencia'}
+      list:    
+        title:   Listado de productos con vencimiento del Registro Sanitario 
+        #display: [empresa, producto, laboratorio, fecha_vencimiento, vigencia]
+        display: [empresa, producto, laboratorio]
         actions:
           ir_portal: {label: Volver al Portal}
-        object_actions:
-          edit: {label: Editar, action: editar}
-      
-      filter:
-        display: [empresa_id, higiene_id, tipo_tramite_formulario_id]
+      filter:  ~
       form:    ~
       edit:    ~
       new:     ~

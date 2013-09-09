@@ -33,4 +33,71 @@ class Producto extends BaseProducto
        else
            return $this->CodigoProducto->getNombre()." - ".$this->Reactivo->getNombreComercial();
     }
+    
+    public function getProducto()
+    {
+       if(isset($this->Medicamento))
+       {
+           return $this->CodigoProducto->getNombre()." - ".$this->Medicamento->getNombreComercial();
+       }
+       else if(isset($this->DispositivoMedico))
+       {  
+           return $this->CodigoProducto->getNombre()." - ".$this->DispositivoMedico->getNombreComercial();
+       } 
+       else if(isset($this->Cosmetico))
+       {  
+           return $this->CodigoProducto->getNombre()." - ".$this->Cosmetico->getNombre();
+       } 
+       else if(isset($this->Higiene))
+       {  
+           return $this->CodigoProducto->getNombre()." - ".$this->Higiene->getNombre();
+       }
+       else
+           return $this->CodigoProducto->getNombre()." - ".$this->Reactivo->getNombreComercial();
+    }
+    
+    public function getEmpresa()
+    {
+       if(isset($this->Medicamento))
+       {
+           $this->Medicamento->Empresa->getRazonSocial();
+       }
+       else if(isset($this->DispositivoMedico))
+       {  
+           return $this->DispositivoMedico->Empresa->getRazonSocial();
+       } 
+       else if(isset($this->Cosmetico))
+       {  
+           return $this->Cosmetico->Empresa->getRazonSocial();
+       } 
+       else if(isset($this->Higiene))
+       {  
+           return $this->Higiene->Empresa->getRazonSocial();
+       }
+       else
+           return $this->Reactivo->Empresa->getRazonSocial();
+    }
+    
+    public function getLaboratorio()
+    {
+       if(isset($this->Medicamento))
+       {
+           $this->Medicamento->LaboratorioFabricante->getNombre();
+       }
+       else if(isset($this->DispositivoMedico))
+       {  
+           return $this->DispositivoMedico->LaboratorioFabricante->getNombre();
+       } 
+       else if(isset($this->Cosmetico))
+       {  
+           return $this->Cosmetico->LaboratorioFabricante->getNombre();
+       } 
+       else if(isset($this->Higiene))
+       {  
+           return $this->Higiene->LaboratorioFabricante->getNombre();
+       }
+       else
+           return $this->Reactivo->LaboratorioFabricante->getNombre();
+    }
+    
 }

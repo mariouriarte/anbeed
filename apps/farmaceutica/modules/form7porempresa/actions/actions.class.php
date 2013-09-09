@@ -37,15 +37,16 @@ class form7porempresaActions extends sfActions
   {
     $this->forward404Unless($formulario7 = Doctrine_Core::getTable('Formulario7')->find(array($request->getParameter('id'))), sprintf('Object formulario7 does not exist (%s).', $request->getParameter('id')));
     $this->form = new Formulario7Form($formulario7);
-    if($formulario7->Producto->getCodigoProductoId()==1);
+    //echo $formulario7->Producto->getCodigoProductoId(); 
+    if($formulario7->Producto->getCodigoProductoId()==1)
         $producto = Doctrine_Core::getTable('Medicamento')->find($formulario7->Producto->Medicamento->getId());
-    if($formulario7->Producto->getCodigoProductoId()==2);
+    if($formulario7->Producto->getCodigoProductoId()==2)
         $producto = Doctrine_Core::getTable('DispositivoMedico')->find($formulario7->Producto->DispositivoMedico->getId());
-    if($formulario7->Producto->getCodigoProductoId()==3);
+    if($formulario7->Producto->getCodigoProductoId()==3)
         $producto = Doctrine_Core::getTable('Cosmetico')->find($formulario7->Producto->Cosmetico->getId());
-    if($formulario7->Producto->getCodigoProductoId()==4);
+    if($formulario7->Producto->getCodigoProductoId()==4)
         $producto = Doctrine_Core::getTable('Higiene')->find($formulario7->Producto->Higiene->getId());
-    if($formulario7->Producto->getCodigoProductoId()==5);
+    if($formulario7->Producto->getCodigoProductoId()==5)
         $producto = Doctrine_Core::getTable('Reactivo')->find($formulario7->Producto->Reactivo->getId());
     
     $user = sfContext::getInstance()->getUser();

@@ -60,7 +60,24 @@
                 </div>
             </div>
         </div>
-                <div class="columna">
+        
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <h2 class="titulo"><img src="/images/icons/notificacion.svg" />Caducidad</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/caducidad?time=1"><span>Alerta de Caducidad <br />1 Mes</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/caducidad?time=2"><span>Alerta de Caducidad<br />6 meses</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/caducidad?time=3"><span>Alerta de Caducidad<br />12 meses</span></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="columna">
             <div class="cubo">
                 <div class="adentro">
                     <h2 class="titulo"><img src="/images/icons/applications-debugging.svg" />Administración</h2>

@@ -31,7 +31,7 @@ generator:
           edit:        {label: Editar, action: editar}
           _delete: ~
       filter: 
-        display: [producto_id, tipo_calificacion_id]
+        display: [tipo_calificacion_id]
       form:    ~
       edit:   
         title: Editar Solicitud de Calificacion

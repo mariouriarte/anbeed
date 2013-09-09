@@ -1,3 +1,12 @@
+producto_caducidad:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Producto
+    module:               caducidad
+    prefix_path:          /caducidad
+    column:               id
+    with_wildcard_routes: true
+
 grupo_higiene:
   class: sfDoctrineRouteCollection
   options:

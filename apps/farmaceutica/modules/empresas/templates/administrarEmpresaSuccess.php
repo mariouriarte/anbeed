@@ -9,6 +9,9 @@
 <?php end_slot(); ?>
 
 <h1>Administrador de Empresa</h1>
+<?php if ($sf_user->hasFlash('notice')): ?>
+  <div class="notice"><?php echo $sf_user->getFlash('notice') ?></div>
+<?php endif; ?>
 <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
 <div class="portal">
     <div class="linea">
@@ -47,7 +50,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/package-x-generic.svg" />Productos</h2>
+                    <h2 class="titulo"><img src="/images/icons/productos.svg" /> &nbsp; Productos</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica_dev.php/medicamentos"><span>Medicamentos</span></a></li>
