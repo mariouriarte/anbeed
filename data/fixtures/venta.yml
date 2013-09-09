@@ -1,12 +1,12 @@
 ## YAML Template.
 ---
 TipoVenta:
-  Receta:
+  RECETAMEDICA:
     nombre: RECETA MÉDICA
-  Archivada:
+  RECETAMEDICAARCHIVADA:
     nombre: RECETA MÉDICA ARCHIVADA
-  Valorada:
+  VALORADA:
     nombre: RECETA VALORADA
-  Libre:
+  VENTALIBRE:
     nombre: VENTA LIBRE
   

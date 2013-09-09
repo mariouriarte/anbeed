@@ -70,7 +70,7 @@ abstract class BaseLaboratorioFabricante extends sfDoctrineRecord
         $this->setTableName('laboratorio_fabricante');
         $this->hasColumn('pais_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('ciudad_id', 'integer', null, array(
              'type' => 'integer',
@@ -79,7 +79,7 @@ abstract class BaseLaboratorioFabricante extends sfDoctrineRecord
         $this->hasColumn('nombre', 'string', 255, array(
              'type' => 'string',
              'notnull' => true,
-             'unique' => true,
+             'unique' => false,
              'length' => 255,
              ));
         $this->hasColumn('bajo_licencia', 'string', 255, array(

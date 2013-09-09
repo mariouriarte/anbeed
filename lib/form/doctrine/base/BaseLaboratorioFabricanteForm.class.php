@@ -16,7 +16,7 @@ abstract class BaseLaboratorioFabricanteForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'            => new sfWidgetFormInputHidden(),
-      'pais_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'add_empty' => false)),
+      'pais_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'add_empty' => true)),
       'ciudad_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Ciudad'), 'add_empty' => true)),
       'nombre'        => new sfWidgetFormInputText(),
       'bajo_licencia' => new sfWidgetFormInputText(),
@@ -32,7 +32,7 @@ abstract class BaseLaboratorioFabricanteForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'pais_id'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'))),
+      'pais_id'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'required' => false)),
       'ciudad_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Ciudad'), 'required' => false)),
       'nombre'        => new sfValidatorString(array('max_length' => 255)),
       'bajo_licencia' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
@@ -47,10 +47,7 @@ abstract class BaseLaboratorioFabricanteForm extends BaseFormDoctrine
     ));
 
     $this->validatorSchema->setPostValidator(
-      new sfValidatorAnd(array(
-        new sfValidatorDoctrineUnique(array('model' => 'LaboratorioFabricante', 'column' => array('nombre'))),
-        new sfValidatorDoctrineUnique(array('model' => 'LaboratorioFabricante', 'column' => array('email'))),
-      ))
+      new sfValidatorDoctrineUnique(array('model' => 'LaboratorioFabricante', 'column' => array('email')))
     );
 
     $this->widgetSchema->setNameFormat('laboratorio_fabricante[%s]');

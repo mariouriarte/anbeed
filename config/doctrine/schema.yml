@@ -83,9 +83,9 @@ Empresa:
 LaboratorioFabricante:
   actAs: {Timestampable: ~}
   columns:
-    pais_id:       {type: integer, notnull: true}
+    pais_id:       {type: integer, notnull: false}
     ciudad_id:     {type: integer, notnull: false}
-    nombre:        {type: string(255), notnull: true, unique: true}
+    nombre:        {type: string(255), notnull: true, unique: false}
     bajo_licencia: {type: string(255), notnull: false}
     para:          {type: string(255), notnull: false}
     direccion:     {type: string(255)}

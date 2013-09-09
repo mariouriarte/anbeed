@@ -2,26 +2,38 @@
 ---
 ViaAdministracion:
   ORAL:
-    nombre: VÍA ORAL
-  Sublingual:
-    nombre: VÍA SUBLINGUAL
-  Nasal:
-    nombre: VÍA NASAL
-  Oftalmica:
-    nombre: VÍA OFTÁLMICA
-  Topica:
-    nombre: VÍA TÓPICA
-  Subcutaneas:
-    nombre: VÍA SUBCUTÁNEA
-  Intramuscular:
-    nombre: VÍA INTRAMUSCULAR
-  Inaladora:
-    nombre: VÍA INALADORA
-  Inalatoria:
-    nombre: VÍA INALATORIA
-  Intravenosa:
-    nombre: VÍA INTRAVENOSA
-  Rectal:
-    nombre: VÍA RECTAL
-  Parenteral:
-    nombre: VÍA PARENTERAL
+    nombre: ORAL
+  CONJUNTIVAL:
+    nombre: CONJUNTIVAL
+  IMIV:
+    nombre: 'IM / IV'
+  SUBLINGUAL:
+    nombre: SUBLINGUAL
+  NASAL:
+    nombre: NASAL
+  OFTALMICA:
+    nombre: OFTÁLMICA
+  TOPICA:
+    nombre: TÓPICA
+  TOPICAOFTALMICA:
+    nombre: TOPICA OFTALMICA
+  TOPICA - RECTAL:
+    nombre: TÓPICA - RECTAL
+  TOPICADERMICA:
+    nombre: TÓPICA DERMICA
+  SUBCUTANEA:
+    nombre: SUBCUTÁNEA
+  INTRAMUSCULAR:
+    nombre: INTRAMUSCULAR
+  INALADORA:
+    nombre: INALADORA
+  INALATORIA:
+    nombre: INALATORIA
+  INTRAVENOSA:
+    nombre: INTRAVENOSA
+  RECTAL:
+    nombre: RECTAL
+  PARENTERAL:
+    nombre: PARENTERAL
+  INTRAVENOSAINTRAMUSCULAR.:
+    nombre: INTRAVENOSA INTRAMUSCULAR.
