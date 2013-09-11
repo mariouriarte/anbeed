@@ -1,0 +1,79 @@
+## YAML Template.
+---
+#^\|([^\|]*)\|(.*)
+#  RepresentanteLegal_$2: {Persona: Persona_$2}
+
+RepresentanteLegal:
+  RepresentanteLegal_527898 OR: {Persona: Persona_527898 OR}
+  RepresentanteLegal_1853213: {Persona: Persona_1853213}
+  RepresentanteLegal_4569995 SC: {Persona: Persona_4569995 SC}
+  RepresentanteLegal_4569995 SC: {Persona: Persona_4569995 SC}
+  RepresentanteLegal_E-65582: {Persona: Persona_E-65582}
+  RepresentanteLegal_desconocido1: {Persona: Persona_desconocido1}
+  RepresentanteLegal_desconocido2: {Persona: Persona_desconocido2}
+  RepresentanteLegal_2863320: {Persona: Persona_2863320}
+  RepresentanteLegal_3506505: {Persona: Persona_3506505}
+  RepresentanteLegal_339477 LP: {Persona: Persona_339477 LP}
+  RepresentanteLegal_837785 CBBA.: {Persona: Persona_837785 CBBA.}
+  RepresentanteLegal_2203929 LP: {Persona: Persona_2203929 LP}
+  RepresentanteLegal_E0001798: {Persona: Persona_E0001798}
+  RepresentanteLegal_2440816: {Persona: Persona_2440816}
+  RepresentanteLegal_desconocido3: {Persona: Persona_desconocido3}
+  RepresentanteLegal_2863320: {Persona: Persona_2863320}
+  RepresentanteLegal_desconocido4: {Persona: Persona_desconocido4}
+  RepresentanteLegal_0017197: {Persona: Persona_0017197}
+  RepresentanteLegal_3277055 SC: {Persona: Persona_3277055 SC}
+  RepresentanteLegal_3864618 SC: {Persona: Persona_3864618 SC}
+  RepresentanteLegal_1853215 SC: {Persona: Persona_1853215 SC}
+  RepresentanteLegal_466951 L.P: {Persona: Persona_466951 L.P}
+  RepresentanteLegal_3386479 LP: {Persona: Persona_3386479 LP}
+  RepresentanteLegal_2353487 LP: {Persona: Persona_2353487 LP}
+  RepresentanteLegal_2780252: {Persona: Persona_2780252}
+  RepresentanteLegal_4543704 SC: {Persona: Persona_4543704 SC}
+  RepresentanteLegal_desconocido5: {Persona: Persona_desconocido5}
+  RepresentanteLegal_2018270 LP: {Persona: Persona_2018270 LP}
+  RepresentanteLegal_25210650 LP: {Persona: Persona_25210650 LP}
+  RepresentanteLegal_243910 LP: {Persona: Persona_243910 LP}
+  RepresentanteLegal_487568 LP: {Persona: Persona_487568 LP}
+  RepresentanteLegal_4869715 LP: {Persona: Persona_4869715 LP}
+  RepresentanteLegal_972307 CBB: {Persona: Persona_972307 CBB}
+  RepresentanteLegal_4613684 SC: {Persona: Persona_4613684 SC}
+  RepresentanteLegal_811951CBBA: {Persona: Persona_811951CBBA}
+  RepresentanteLegal_2378191LP: {Persona: Persona_2378191LP}
+  RepresentanteLegal_1731805 SC: {Persona: Persona_1731805 SC}
+  RepresentanteLegal_4842984: {Persona: Persona_4842984}
+  RepresentanteLegal_823237CBB: {Persona: Persona_823237CBB}
+  RepresentanteLegal_2906907: {Persona: Persona_2906907}
+  RepresentanteLegal_3168927SC: {Persona: Persona_3168927SC}
+  RepresentanteLegal_3468918 LP: {Persona: Persona_3468918 LP}
+  RepresentanteLegal_1853213: {Persona: Persona_1853213}
+  RepresentanteLegal_3468918 LP: {Persona: Persona_3468918 LP}
+  RepresentanteLegal_624772 OR: {Persona: Persona_624772 OR}
+  RepresentanteLegal_792931 CBB: {Persona: Persona_792931 CBB}
+  RepresentanteLegal_2473027: {Persona: Persona_2473027}
+  RepresentanteLegal_  2557657 LP: {Persona: Persona_  2557657 LP}
+  RepresentanteLegal_1026613: {Persona: Persona_1026613}
+  RepresentanteLegal_3903927: {Persona: Persona_3903927}
+  RepresentanteLegal_2286453 L.P.: {Persona: Persona_2286453 L.P.}
+  RepresentanteLegal_3377448 LP: {Persona: Persona_3377448 LP}
+  RepresentanteLegal_823075  CBBA.: {Persona: Persona_823075  CBBA.}
+  RepresentanteLegal_3848244-SC: {Persona: Persona_3848244-SC}
+  RepresentanteLegal_6537925 CBBA.: {Persona: Persona_6537925 CBBA.}
+  RepresentanteLegal_2366750 LP.: {Persona: Persona_2366750 LP.}
+  RepresentanteLegal_1007708 C.H.: {Persona: Persona_1007708 C.H.}
+  RepresentanteLegal_855696 CBBA.: {Persona: Persona_855696 CBBA.}
+  RepresentanteLegal_1576729 SC.: {Persona: Persona_1576729 SC.}
+  RepresentanteLegal_1562522 S.C: {Persona: Persona_1562522 S.C}
+  RepresentanteLegal_desconocido6: {Persona: Persona_desconocido6}
+  RepresentanteLegal_1006947 CH: {Persona: Persona_1006947 CH}
+  RepresentanteLegal_3339717: {Persona: Persona_3339717}
+  RepresentanteLegal_1853215 T.J.: {Persona: Persona_1853215 T.J.}
+  RepresentanteLegal_182940 LP: {Persona: Persona_182940 LP}
+  RepresentanteLegal_4577489 S.C: {Persona: Persona_4577489 S.C}
+  RepresentanteLegal_CE.- 10130904: {Persona: Persona_CE.- 10130904}
+  RepresentanteLegal_3090505 OR: {Persona: Persona_3090505 OR}
+  RepresentanteLegal_1109558 CH: {Persona: Persona_1109558 CH}
+  RepresentanteLegal_E-4564554: {Persona: Persona_E-4564554}
+  RepresentanteLegal_3549608 OR: {Persona: Persona_3549608 OR}
+  RepresentanteLegal_1078787 CH: {Persona: Persona_1078787 CH}
+  RepresentanteLegal_1078787 CH: {Persona: Persona_1078787 CH}

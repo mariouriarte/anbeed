@@ -1,0 +1,586 @@
+Sep 11 13:50:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:50:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:50:47 symfony [info] {sfPatternRouting} Match route "persona" (/personas.:sf_format) for /personas with parameters array (  'module' => 'personas',  'action' => 'index',  'sf_format' => 'html',)
+Sep 11 13:50:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:50:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:50:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:50:47 symfony [info] {personasActions} Call "personasActions->executeIndex()"
+Sep 11 13:50:47 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:50:47 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT COUNT(*) AS num_results FROM persona p - ()
+Sep 11 13:50:47 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/indexSuccess.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_assets.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_flashes.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_header.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_th_tabular.php"
+Sep 11 13:50:47 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:50:47 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:50:47 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:50:47 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:50:47 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:50:47 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:50:47 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:50:47 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:50:47 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:50:47 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_pagination.php"
+Sep 11 13:50:47 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT p.id AS p__id, p.nombre AS p__nombre, p.ap_paterno AS p__ap_paterno, p.ap_materno AS p__ap_materno, p.ci AS p__ci, p.expedido AS p__expedido, p.direccion AS p__direccion, p.telefono AS p__telefono, p.celular AS p__celular, p.fax AS p__fax, p.casilla AS p__casilla, p.email AS p__email, p.fecha_nacimiento AS p__fecha_nacimiento, p.is_active AS p__is_active, p.foto AS p__foto, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM persona p LIMIT 15 - ()
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_batch_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_actions.php"
+Sep 11 13:50:47 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_footer.php"
+Sep 11 13:50:47 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/adm/templates/layout.php"
+Sep 11 13:50:47 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/adm/templates/layout.php"
+Sep 11 13:50:47 symfony [info] {main} Get slot "title"
+Sep 11 13:50:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:50:47 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:50:47 symfony [info] {main} Get slot "navegador"
+Sep 11 13:50:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:50:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Configuration 361.18 ms (11)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Factories 184.28 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Action "personas/index" 49.93 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 25.32 ms (4)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} View "Success" for "personas/index" 96.52 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_assets" 0.38 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_flashes" 0.41 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_list_header" 0.34 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_filters" 9.42 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_filters_field" 2.95 ms (3)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_list" 58.05 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_list_th_tabular" 2.37 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_pagination" 1.70 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_batch_actions" 6.11 ms (15)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_tabular" 12.11 ms (15)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_actions" 19.75 ms (15)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_list_batch_actions" 1.00 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_list_actions" 4.16 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebDebugLogger} Partial "personas/_list_footer" 0.37 ms (1)
+Sep 11 13:50:47 symfony [info] {sfWebResponse} Send content (160377 o)
+Sep 11 13:50:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:50:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:50:52 symfony [info] {sfPatternRouting} Match route "persona" (/personas.:sf_format) for /personas with parameters array (  'module' => 'personas',  'action' => 'index',  'sf_format' => 'html',)
+Sep 11 13:50:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:50:52 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:50:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:50:52 symfony [info] {personasActions} Call "personasActions->executeIndex()"
+Sep 11 13:50:52 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:50:52 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT COUNT(*) AS num_results FROM persona p - ()
+Sep 11 13:50:52 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/indexSuccess.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_assets.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_flashes.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_header.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_th_tabular.php"
+Sep 11 13:50:52 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:50:52 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:50:52 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:50:52 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:50:52 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:50:52 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:50:52 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:50:52 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:50:52 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:50:52 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_pagination.php"
+Sep 11 13:50:52 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT p.id AS p__id, p.nombre AS p__nombre, p.ap_paterno AS p__ap_paterno, p.ap_materno AS p__ap_materno, p.ci AS p__ci, p.expedido AS p__expedido, p.direccion AS p__direccion, p.telefono AS p__telefono, p.celular AS p__celular, p.fax AS p__fax, p.casilla AS p__casilla, p.email AS p__email, p.fecha_nacimiento AS p__fecha_nacimiento, p.is_active AS p__is_active, p.foto AS p__foto, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM persona p LIMIT 15 OFFSET 15 - ()
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_batch_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_actions.php"
+Sep 11 13:50:52 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_footer.php"
+Sep 11 13:50:52 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/adm/templates/layout.php"
+Sep 11 13:50:52 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/adm/templates/layout.php"
+Sep 11 13:50:52 symfony [info] {main} Get slot "title"
+Sep 11 13:50:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:50:52 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:50:52 symfony [info] {main} Get slot "navegador"
+Sep 11 13:50:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:50:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Configuration 1.26 ms (11)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Factories 55.04 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Action "personas/index" 41.24 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.63 ms (4)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} View "Success" for "personas/index" 97.40 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_assets" 0.42 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_flashes" 0.42 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_list_header" 0.34 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_filters" 8.47 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_filters_field" 2.99 ms (3)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_list" 60.87 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_list_th_tabular" 2.43 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_pagination" 1.78 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_batch_actions" 6.60 ms (15)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_tabular" 12.12 ms (15)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_actions" 21.34 ms (15)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_list_batch_actions" 0.87 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_list_actions" 4.26 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebDebugLogger} Partial "personas/_list_footer" 0.35 ms (1)
+Sep 11 13:50:52 symfony [info] {sfWebResponse} Send content (160524 o)
+Sep 11 13:51:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:51:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:51:32 symfony [info] {sfPatternRouting} Match route "persona_edit" (/personas/:id/edit.:sf_format) for /personas/16/edit with parameters array (  'module' => 'personas',  'action' => 'edit',  'sf_format' => 'html',  'id' => '16',)
+Sep 11 13:51:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:51:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:51:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:51:32 symfony [info] {personasActions} Call "personasActions->executeEdit()"
+Sep 11 13:51:32 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:51:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.nombre AS p__nombre, p.ap_paterno AS p__ap_paterno, p.ap_materno AS p__ap_materno, p.ci AS p__ci, p.expedido AS p__expedido, p.direccion AS p__direccion, p.telefono AS p__telefono, p.celular AS p__celular, p.fax AS p__fax, p.casilla AS p__casilla, p.email AS p__email, p.fecha_nacimiento AS p__fecha_nacimiento, p.is_active AS p__is_active, p.foto AS p__foto, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM persona p WHERE (p.id = ?) - (16)
+Sep 11 13:51:32 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/editSuccess.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_assets.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_flashes.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_header.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_fieldset.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_field.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_field.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_field.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_field.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_field.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_field.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_field.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_field.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_field.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_field.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_field.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_field.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_actions.php"
+Sep 11 13:51:32 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_form_footer.php"
+Sep 11 13:51:32 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/adm/templates/layout.php"
+Sep 11 13:51:32 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/adm/templates/layout.php"
+Sep 11 13:51:32 symfony [info] {main} Get slot "title"
+Sep 11 13:51:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:51:32 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:51:32 symfony [info] {main} Get slot "navegador"
+Sep 11 13:51:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:51:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} Configuration 1.24 ms (11)
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} Factories 50.75 ms (1)
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} Action "personas/edit" 50.12 ms (1)
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.09 ms (3)
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} View "Success" for "personas/edit" 45.46 ms (1)
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} Partial "personas/_assets" 0.42 ms (1)
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} Partial "personas/_flashes" 0.43 ms (1)
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} Partial "personas/_form_header" 0.42 ms (1)
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} Partial "personas/_form" 25.55 ms (1)
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} Partial "personas/_form_fieldset" 19.68 ms (1)
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} Partial "personas/_form_field" 16.03 ms (12)
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} Partial "personas/_form_actions" 2.33 ms (1)
+Sep 11 13:51:32 symfony [info] {sfWebDebugLogger} Partial "personas/_form_footer" 0.39 ms (1)
+Sep 11 13:51:32 symfony [info] {sfWebResponse} Send content (146708 o)
+Sep 11 13:51:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:51:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:51:36 symfony [info] {sfPatternRouting} Match route "persona" (/personas.:sf_format) for /personas with parameters array (  'module' => 'personas',  'action' => 'index',  'sf_format' => 'html',)
+Sep 11 13:51:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:51:36 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:51:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:51:36 symfony [info] {personasActions} Call "personasActions->executeIndex()"
+Sep 11 13:51:36 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:51:36 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT COUNT(*) AS num_results FROM persona p - ()
+Sep 11 13:51:36 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/indexSuccess.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_assets.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_flashes.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_header.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_th_tabular.php"
+Sep 11 13:51:36 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:36 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:36 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:36 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:36 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:36 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:36 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:36 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:36 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:36 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_pagination.php"
+Sep 11 13:51:36 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT p.id AS p__id, p.nombre AS p__nombre, p.ap_paterno AS p__ap_paterno, p.ap_materno AS p__ap_materno, p.ci AS p__ci, p.expedido AS p__expedido, p.direccion AS p__direccion, p.telefono AS p__telefono, p.celular AS p__celular, p.fax AS p__fax, p.casilla AS p__casilla, p.email AS p__email, p.fecha_nacimiento AS p__fecha_nacimiento, p.is_active AS p__is_active, p.foto AS p__foto, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM persona p LIMIT 15 OFFSET 15 - ()
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_batch_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_actions.php"
+Sep 11 13:51:36 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_footer.php"
+Sep 11 13:51:36 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/adm/templates/layout.php"
+Sep 11 13:51:36 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/adm/templates/layout.php"
+Sep 11 13:51:36 symfony [info] {main} Get slot "title"
+Sep 11 13:51:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:51:36 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:51:36 symfony [info] {main} Get slot "navegador"
+Sep 11 13:51:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:51:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Configuration 1.15 ms (11)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Factories 47.74 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Action "personas/index" 41.43 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.64 ms (4)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} View "Success" for "personas/index" 99.28 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_assets" 0.42 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_flashes" 0.42 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_list_header" 0.35 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_filters" 8.58 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_filters_field" 3.04 ms (3)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_list" 61.69 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_list_th_tabular" 2.49 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_pagination" 1.75 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_batch_actions" 6.68 ms (15)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_tabular" 12.53 ms (15)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_actions" 21.52 ms (15)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_list_batch_actions" 0.89 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_list_actions" 4.37 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebDebugLogger} Partial "personas/_list_footer" 0.42 ms (1)
+Sep 11 13:51:36 symfony [info] {sfWebResponse} Send content (160510 o)
+Sep 11 13:51:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:51:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:51:53 symfony [info] {sfPatternRouting} Match route "persona" (/personas.:sf_format) for /personas with parameters array (  'module' => 'personas',  'action' => 'index',  'sf_format' => 'html',)
+Sep 11 13:51:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:51:53 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:51:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:51:53 symfony [info] {personasActions} Call "personasActions->executeIndex()"
+Sep 11 13:51:53 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:51:53 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT COUNT(*) AS num_results FROM persona p - ()
+Sep 11 13:51:53 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/indexSuccess.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_assets.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_flashes.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_header.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_th_tabular.php"
+Sep 11 13:51:53 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:53 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:53 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:53 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:53 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:53 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:53 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:53 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:53 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:53 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_pagination.php"
+Sep 11 13:51:53 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT p.id AS p__id, p.nombre AS p__nombre, p.ap_paterno AS p__ap_paterno, p.ap_materno AS p__ap_materno, p.ci AS p__ci, p.expedido AS p__expedido, p.direccion AS p__direccion, p.telefono AS p__telefono, p.celular AS p__celular, p.fax AS p__fax, p.casilla AS p__casilla, p.email AS p__email, p.fecha_nacimiento AS p__fecha_nacimiento, p.is_active AS p__is_active, p.foto AS p__foto, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM persona p LIMIT 15 OFFSET 30 - ()
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_batch_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_actions.php"
+Sep 11 13:51:53 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_footer.php"
+Sep 11 13:51:53 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/adm/templates/layout.php"
+Sep 11 13:51:53 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/adm/templates/layout.php"
+Sep 11 13:51:53 symfony [info] {main} Get slot "title"
+Sep 11 13:51:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:51:53 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:51:53 symfony [info] {main} Get slot "navegador"
+Sep 11 13:51:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:51:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Configuration 1.25 ms (11)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Factories 55.12 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Action "personas/index" 41.74 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.96 ms (4)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} View "Success" for "personas/index" 96.51 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_assets" 0.42 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_flashes" 0.40 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_list_header" 0.34 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_filters" 8.43 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_filters_field" 3.03 ms (3)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_list" 59.80 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_list_th_tabular" 2.38 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_pagination" 1.70 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_batch_actions" 6.33 ms (15)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_tabular" 12.11 ms (15)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_actions" 20.87 ms (15)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_list_batch_actions" 0.88 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_list_actions" 4.16 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebDebugLogger} Partial "personas/_list_footer" 0.37 ms (1)
+Sep 11 13:51:53 symfony [info] {sfWebResponse} Send content (160609 o)
+Sep 11 13:51:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:51:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:51:56 symfony [info] {sfPatternRouting} Match route "persona" (/personas.:sf_format) for /personas with parameters array (  'module' => 'personas',  'action' => 'index',  'sf_format' => 'html',)
+Sep 11 13:51:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:51:56 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:51:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:51:56 symfony [info] {personasActions} Call "personasActions->executeIndex()"
+Sep 11 13:51:56 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:51:56 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT COUNT(*) AS num_results FROM persona p - ()
+Sep 11 13:51:56 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/indexSuccess.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_assets.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_flashes.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_header.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_filters_field.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_th_tabular.php"
+Sep 11 13:51:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:51:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_pagination.php"
+Sep 11 13:51:56 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT p.id AS p__id, p.nombre AS p__nombre, p.ap_paterno AS p__ap_paterno, p.ap_materno AS p__ap_materno, p.ci AS p__ci, p.expedido AS p__expedido, p.direccion AS p__direccion, p.telefono AS p__telefono, p.celular AS p__celular, p.fax AS p__fax, p.casilla AS p__casilla, p.email AS p__email, p.fecha_nacimiento AS p__fecha_nacimiento, p.is_active AS p__is_active, p.foto AS p__foto, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM persona p LIMIT 15 OFFSET 45 - ()
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_tabular.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_td_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_batch_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_actions.php"
+Sep 11 13:51:56 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/adm/dev/modules/autoPersonas/templates/_list_footer.php"
+Sep 11 13:51:56 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/adm/templates/layout.php"
+Sep 11 13:51:56 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/adm/templates/layout.php"
+Sep 11 13:51:56 symfony [info] {main} Get slot "title"
+Sep 11 13:51:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:51:56 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:51:56 symfony [info] {main} Get slot "navegador"
+Sep 11 13:51:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:51:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Configuration 1.20 ms (11)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Factories 48.70 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Action "personas/index" 40.96 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.55 ms (4)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} View "Success" for "personas/index" 95.14 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_assets" 0.40 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_flashes" 0.41 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_list_header" 0.34 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_filters" 8.16 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_filters_field" 2.96 ms (3)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_list" 59.35 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_list_th_tabular" 2.44 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_pagination" 1.70 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_batch_actions" 6.25 ms (15)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_tabular" 12.07 ms (15)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_list_td_actions" 20.84 ms (15)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_list_batch_actions" 0.87 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_list_actions" 4.17 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebDebugLogger} Partial "personas/_list_footer" 0.39 ms (1)
+Sep 11 13:51:56 symfony [info] {sfWebResponse} Send content (160616 o)

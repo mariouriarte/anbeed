@@ -154,7 +154,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              ));
         $this->hasColumn('telefono1', 'string', 20, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 20,
              ));
         $this->hasColumn('telefono2', 'string', 20, array(
@@ -170,7 +170,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              ));
         $this->hasColumn('actividad', 'string', 255, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 255,
              ));
         $this->hasColumn('registro_camara', 'string', 30, array(
@@ -180,7 +180,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              ));
         $this->hasColumn('fundempresa', 'string', 30, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 30,
              ));
         $this->hasColumn('nit', 'string', 30, array(

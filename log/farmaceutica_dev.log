@@ -1,0 +1,238 @@
+Sep 11 13:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:52:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:52:01 symfony [info] {sfPatternRouting} Match route "empresa" (/empresas.:sf_format) for /empresas with parameters array (  'module' => 'empresas',  'action' => 'index',  'sf_format' => 'html',)
+Sep 11 13:52:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:52:01 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:52:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:52:01 symfony [info] {empresasActions} Call "empresasActions->executeIndex()"
+Sep 11 13:52:01 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:52:01 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT COUNT(*) AS num_results FROM empresa e - ()
+Sep 11 13:52:01 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/indexSuccess.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_assets.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_flashes.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_header.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_filters.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_filters_field.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_filters_field.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_th_tabular.php"
+Sep 11 13:52:01 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:52:01 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:52:01 symfony [info] {main} Set slot "sf_admin.current_header"
+Sep 11 13:52:01 symfony [info] {main} Get slot "sf_admin.current_header"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_pagination.php"
+Sep 11 13:52:01 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT e.id AS e__id, e.representante_legal_id AS e__representante_legal_id, e.regente_farmaceutico_id AS e__regente_farmaceutico_id, e.ciudad_id AS e__ciudad_id, e.razon_social AS e__razon_social, e.fecha_registro AS e__fecha_registro, e.num_resolucion AS e__num_resolucion, e.fecha_resolucion AS e__fecha_resolucion, e.fax AS e__fax, e.direccion AS e__direccion, e.casilla AS e__casilla, e.telefono1 AS e__telefono1, e.telefono2 AS e__telefono2, e.email AS e__email, e.actividad AS e__actividad, e.registro_camara AS e__registro_camara, e.fundempresa AS e__fundempresa, e.nit AS e__nit, e.licencia_funcionamiento AS e__licencia_funcionamiento, e.observacion AS e__observacion, e.is_active AS e__is_active, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM empresa e LIMIT 20 - ()
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:01 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_tabular.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_td_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_batch_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_actions.php"
+Sep 11 13:52:02 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoEmpresas/templates/_list_footer.php"
+Sep 11 13:52:02 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/farmaceutica/templates/layout.php"
+Sep 11 13:52:02 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/farmaceutica/templates/layout.php"
+Sep 11 13:52:02 symfony [info] {main} Get slot "title"
+Sep 11 13:52:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:52:02 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:52:02 symfony [info] {main} Get slot "navegador"
+Sep 11 13:52:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:52:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Configuration 529.04 ms (11)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Factories 350.18 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Action "empresas/index" 32.15 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.87 ms (4)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} View "Success" for "empresas/index" 559.44 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_assets" 0.44 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_flashes" 0.43 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_list_header" 0.36 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_filters" 9.88 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_filters_field" 2.27 ms (2)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_list" 512.18 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_list_th_tabular" 1.28 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_pagination" 1.69 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_list_td_batch_actions" 10.59 ms (20)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_list_td_tabular" 11.95 ms (20)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_list_td_actions" 464.44 ms (20)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_list_batch_actions" 1.06 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_list_actions" 8.63 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebDebugLogger} Partial "empresas/_list_footer" 0.40 ms (1)
+Sep 11 13:52:02 symfony [info] {sfWebResponse} Send content (171663 o)
+Sep 11 13:52:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:52:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:52:04 symfony [info] {sfPatternRouting} Match route "empresa_object" (/empresas/:id/:action.:sf_format) for /empresas/12/administrarEmpresa with parameters array (  'module' => 'empresas',  'action' => 'administrarEmpresa',  'sf_format' => 'html',  'id' => '12',)
+Sep 11 13:52:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:52:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:52:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:52:04 symfony [info] {empresasActions} Call "empresasActions->executeAdministrarEmpresa()"
+Sep 11 13:52:04 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:52:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.representante_legal_id AS e__representante_legal_id, e.regente_farmaceutico_id AS e__regente_farmaceutico_id, e.ciudad_id AS e__ciudad_id, e.razon_social AS e__razon_social, e.fecha_registro AS e__fecha_registro, e.num_resolucion AS e__num_resolucion, e.fecha_resolucion AS e__fecha_resolucion, e.fax AS e__fax, e.direccion AS e__direccion, e.casilla AS e__casilla, e.telefono1 AS e__telefono1, e.telefono2 AS e__telefono2, e.email AS e__email, e.actividad AS e__actividad, e.registro_camara AS e__registro_camara, e.fundempresa AS e__fundempresa, e.nit AS e__nit, e.licencia_funcionamiento AS e__licencia_funcionamiento, e.observacion AS e__observacion, e.is_active AS e__is_active, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM empresa e WHERE (e.id = ?) - (12)
+Sep 11 13:52:04 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/farmaceutica/modules/empresas/templates/administrarEmpresaSuccess.php"
+Sep 11 13:52:04 symfony [info] {main} Set slot "header-navegador"
+Sep 11 13:52:04 symfony [info] {main} Set slot "header-tools"
+Sep 11 13:52:04 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/apps/farmaceutica/modules/empresas/templates/_info_empresa.php"
+Sep 11 13:52:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.persona_id AS r__persona_id, r.is_active AS r__is_active, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM representante_legal r WHERE (r.id = ?) - (15)
+Sep 11 13:52:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.persona_id AS r__persona_id, r.matricula_profesional AS r__matricula_profesional, r.carnet_colegiado AS r__carnet_colegiado, r.is_active AS r__is_active, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM regente_farmaceutico r WHERE (r.id = ?) - (15)
+Sep 11 13:52:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.nombre AS p__nombre, p.ap_paterno AS p__ap_paterno, p.ap_materno AS p__ap_materno, p.ci AS p__ci, p.expedido AS p__expedido, p.direccion AS p__direccion, p.telefono AS p__telefono, p.celular AS p__celular, p.fax AS p__fax, p.casilla AS p__casilla, p.email AS p__email, p.fecha_nacimiento AS p__fecha_nacimiento, p.is_active AS p__is_active, p.foto AS p__foto, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM persona p WHERE (p.id = ?) - (21)
+Sep 11 13:52:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.nombre AS p__nombre, p.ap_paterno AS p__ap_paterno, p.ap_materno AS p__ap_materno, p.ci AS p__ci, p.expedido AS p__expedido, p.direccion AS p__direccion, p.telefono AS p__telefono, p.celular AS p__celular, p.fax AS p__fax, p.casilla AS p__casilla, p.email AS p__email, p.fecha_nacimiento AS p__fecha_nacimiento, p.is_active AS p__is_active, p.foto AS p__foto, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM persona p WHERE (p.id = ?) - (89)
+Sep 11 13:52:04 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/farmaceutica/templates/layout.php"
+Sep 11 13:52:04 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/farmaceutica/templates/layout.php"
+Sep 11 13:52:04 symfony [info] {main} Get slot "title"
+Sep 11 13:52:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:52:04 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:52:04 symfony [info] {main} Get slot "navegador"
+Sep 11 13:52:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:52:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:52:04 symfony [info] {sfWebDebugLogger} Configuration 1.21 ms (11)
+Sep 11 13:52:04 symfony [info] {sfWebDebugLogger} Factories 71.16 ms (1)
+Sep 11 13:52:04 symfony [info] {sfWebDebugLogger} Action "empresas/administrarEmpresa" 36.15 ms (1)
+Sep 11 13:52:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 4.13 ms (7)
+Sep 11 13:52:04 symfony [info] {sfWebDebugLogger} View "Success" for "empresas/administrarEmpresa" 74.55 ms (1)
+Sep 11 13:52:04 symfony [info] {sfWebDebugLogger} Partial "empresas/_info_empresa" 17.50 ms (1)
+Sep 11 13:52:04 symfony [info] {sfWebResponse} Send content (60624 o)
+Sep 11 13:52:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:52:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:52:13 symfony [info] {sfPatternRouting} Match route "persona_personaregente_edit" (/personaregente/:id/edit.:sf_format) for /personaregente/89/edit with parameters array (  'module' => 'personaregente',  'action' => 'edit',  'sf_format' => 'html',  'id' => '89',)
+Sep 11 13:52:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:52:13 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:52:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:52:13 symfony [info] {personaregenteActions} Call "personaregenteActions->executeEdit()"
+Sep 11 13:52:13 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:52:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.nombre AS p__nombre, p.ap_paterno AS p__ap_paterno, p.ap_materno AS p__ap_materno, p.ci AS p__ci, p.expedido AS p__expedido, p.direccion AS p__direccion, p.telefono AS p__telefono, p.celular AS p__celular, p.fax AS p__fax, p.casilla AS p__casilla, p.email AS p__email, p.fecha_nacimiento AS p__fecha_nacimiento, p.is_active AS p__is_active, p.foto AS p__foto, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM persona p WHERE (p.id = ?) - (89)
+Sep 11 13:52:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.persona_id AS r__persona_id, r.matricula_profesional AS r__matricula_profesional, r.carnet_colegiado AS r__carnet_colegiado, r.is_active AS r__is_active, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM regente_farmaceutico r WHERE (r.persona_id = ?) - (89)
+Sep 11 13:52:13 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/editSuccess.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_assets.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_flashes.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/apps/farmaceutica/modules/personaregente/templates/_form_header.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/apps/farmaceutica/modules/empresas/templates/_info_empresa.php"
+Sep 11 13:52:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.persona_id AS r__persona_id, r.is_active AS r__is_active, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM representante_legal r WHERE (r.id = ?) - (15)
+Sep 11 13:52:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.persona_id AS r__persona_id, r.matricula_profesional AS r__matricula_profesional, r.carnet_colegiado AS r__carnet_colegiado, r.is_active AS r__is_active, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM regente_farmaceutico r WHERE (r.id = ?) - (15)
+Sep 11 13:52:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.nombre AS p__nombre, p.ap_paterno AS p__ap_paterno, p.ap_materno AS p__ap_materno, p.ci AS p__ci, p.expedido AS p__expedido, p.direccion AS p__direccion, p.telefono AS p__telefono, p.celular AS p__celular, p.fax AS p__fax, p.casilla AS p__casilla, p.email AS p__email, p.fecha_nacimiento AS p__fecha_nacimiento, p.is_active AS p__is_active, p.foto AS p__foto, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM persona p WHERE (p.id = ?) - (21)
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_fieldset.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_fieldset.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_field.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_actions.php"
+Sep 11 13:52:13 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/cache/farmaceutica/dev/modules/autoPersonaregente/templates/_form_footer.php"
+Sep 11 13:52:13 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/farmaceutica/templates/layout.php"
+Sep 11 13:52:13 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/farmaceutica/templates/layout.php"
+Sep 11 13:52:13 symfony [info] {main} Get slot "title"
+Sep 11 13:52:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:52:13 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:52:13 symfony [info] {main} Get slot "navegador"
+Sep 11 13:52:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:52:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Configuration 51.65 ms (12)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Factories 86.08 ms (1)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Action "personaregente/edit" 48.55 ms (1)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Database (Doctrine) 4.04 ms (7)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} View "Success" for "personaregente/edit" 82.56 ms (1)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Partial "personaregente/_assets" 0.41 ms (1)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Partial "personaregente/_flashes" 0.41 ms (1)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Partial "personaregente/_form_header" 11.97 ms (1)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Partial "empresas/_info_empresa" 11.33 ms (1)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Partial "personaregente/_form" 50.27 ms (1)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Partial "personaregente/_form_fieldset" 22.83 ms (2)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Partial "personaregente/_form_field" 18.24 ms (13)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Partial "personaregente/_form_actions" 23.53 ms (1)
+Sep 11 13:52:13 symfony [info] {sfWebDebugLogger} Partial "personaregente/_form_footer" 0.48 ms (1)
+Sep 11 13:52:13 symfony [info] {sfWebResponse} Send content (183391 o)
+Sep 11 13:52:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:52:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:52:16 symfony [info] {sfPatternRouting} Match route "empresa_object" (/empresas/:id/:action.:sf_format) for /empresas/12/administrarEmpresa with parameters array (  'module' => 'empresas',  'action' => 'administrarEmpresa',  'sf_format' => 'html',  'id' => '12',)
+Sep 11 13:52:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:52:16 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:52:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:52:16 symfony [info] {empresasActions} Call "empresasActions->executeAdministrarEmpresa()"
+Sep 11 13:52:17 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:52:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.representante_legal_id AS e__representante_legal_id, e.regente_farmaceutico_id AS e__regente_farmaceutico_id, e.ciudad_id AS e__ciudad_id, e.razon_social AS e__razon_social, e.fecha_registro AS e__fecha_registro, e.num_resolucion AS e__num_resolucion, e.fecha_resolucion AS e__fecha_resolucion, e.fax AS e__fax, e.direccion AS e__direccion, e.casilla AS e__casilla, e.telefono1 AS e__telefono1, e.telefono2 AS e__telefono2, e.email AS e__email, e.actividad AS e__actividad, e.registro_camara AS e__registro_camara, e.fundempresa AS e__fundempresa, e.nit AS e__nit, e.licencia_funcionamiento AS e__licencia_funcionamiento, e.observacion AS e__observacion, e.is_active AS e__is_active, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM empresa e WHERE (e.id = ?) - (12)
+Sep 11 13:52:17 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/farmaceutica/modules/empresas/templates/administrarEmpresaSuccess.php"
+Sep 11 13:52:17 symfony [info] {main} Set slot "header-navegador"
+Sep 11 13:52:17 symfony [info] {main} Set slot "header-tools"
+Sep 11 13:52:17 symfony [info] {sfPartialView} Render "/home/mario/Development/capsule/anbeed/apps/farmaceutica/modules/empresas/templates/_info_empresa.php"
+Sep 11 13:52:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.persona_id AS r__persona_id, r.is_active AS r__is_active, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM representante_legal r WHERE (r.id = ?) - (15)
+Sep 11 13:52:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.persona_id AS r__persona_id, r.matricula_profesional AS r__matricula_profesional, r.carnet_colegiado AS r__carnet_colegiado, r.is_active AS r__is_active, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM regente_farmaceutico r WHERE (r.id = ?) - (15)
+Sep 11 13:52:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.nombre AS p__nombre, p.ap_paterno AS p__ap_paterno, p.ap_materno AS p__ap_materno, p.ci AS p__ci, p.expedido AS p__expedido, p.direccion AS p__direccion, p.telefono AS p__telefono, p.celular AS p__celular, p.fax AS p__fax, p.casilla AS p__casilla, p.email AS p__email, p.fecha_nacimiento AS p__fecha_nacimiento, p.is_active AS p__is_active, p.foto AS p__foto, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM persona p WHERE (p.id = ?) - (21)
+Sep 11 13:52:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.nombre AS p__nombre, p.ap_paterno AS p__ap_paterno, p.ap_materno AS p__ap_materno, p.ci AS p__ci, p.expedido AS p__expedido, p.direccion AS p__direccion, p.telefono AS p__telefono, p.celular AS p__celular, p.fax AS p__fax, p.casilla AS p__casilla, p.email AS p__email, p.fecha_nacimiento AS p__fecha_nacimiento, p.is_active AS p__is_active, p.foto AS p__foto, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM persona p WHERE (p.id = ?) - (89)
+Sep 11 13:52:17 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/farmaceutica/templates/layout.php"
+Sep 11 13:52:17 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/farmaceutica/templates/layout.php"
+Sep 11 13:52:17 symfony [info] {main} Get slot "title"
+Sep 11 13:52:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:52:17 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:52:17 symfony [info] {main} Get slot "navegador"
+Sep 11 13:52:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:52:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:52:17 symfony [info] {sfWebDebugLogger} Configuration 1.20 ms (11)
+Sep 11 13:52:17 symfony [info] {sfWebDebugLogger} Factories 85.39 ms (1)
+Sep 11 13:52:17 symfony [info] {sfWebDebugLogger} Action "empresas/administrarEmpresa" 26.00 ms (1)
+Sep 11 13:52:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 4.14 ms (7)
+Sep 11 13:52:17 symfony [info] {sfWebDebugLogger} View "Success" for "empresas/administrarEmpresa" 79.35 ms (1)
+Sep 11 13:52:17 symfony [info] {sfWebDebugLogger} Partial "empresas/_info_empresa" 19.25 ms (1)
+Sep 11 13:52:17 symfony [info] {sfWebResponse} Send content (60675 o)

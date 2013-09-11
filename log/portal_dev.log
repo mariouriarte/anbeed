@@ -1,0 +1,69 @@
+Sep 11 13:50:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:50:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:50:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inicio/index with parameters array (  'module' => 'inicio',  'action' => 'index',)
+Sep 11 13:50:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:50:45 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:50:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:50:45 symfony [info] {inicioActions} Call "inicioActions->executeIndex()"
+Sep 11 13:50:45 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/portal/modules/inicio/templates/indexSuccess.php"
+Sep 11 13:50:45 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/portal/templates/layout.php"
+Sep 11 13:50:45 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/portal/templates/layout.php"
+Sep 11 13:50:45 symfony [info] {main} Get slot "title"
+Sep 11 13:50:45 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:50:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:50:45 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:50:45 symfony [info] {main} Get slot "navegador"
+Sep 11 13:50:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:50:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:50:45 symfony [info] {sfWebDebugLogger} Configuration 56.37 ms (10)
+Sep 11 13:50:45 symfony [info] {sfWebDebugLogger} Factories 91.98 ms (1)
+Sep 11 13:50:45 symfony [info] {sfWebDebugLogger} Action "inicio/index" 0.13 ms (1)
+Sep 11 13:50:45 symfony [info] {sfWebDebugLogger} View "Success" for "inicio/index" 47.37 ms (1)
+Sep 11 13:50:45 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.34 ms (2)
+Sep 11 13:50:45 symfony [info] {sfWebResponse} Send content (41735 o)
+Sep 11 13:51:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:51:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:51:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'inicio',  'action' => 'index',)
+Sep 11 13:51:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:51:59 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:51:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:51:59 symfony [info] {inicioActions} Call "inicioActions->executeIndex()"
+Sep 11 13:51:59 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/portal/modules/inicio/templates/indexSuccess.php"
+Sep 11 13:51:59 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/portal/templates/layout.php"
+Sep 11 13:51:59 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/portal/templates/layout.php"
+Sep 11 13:51:59 symfony [info] {main} Get slot "title"
+Sep 11 13:51:59 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:51:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:51:59 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:51:59 symfony [info] {main} Get slot "navegador"
+Sep 11 13:51:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:51:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:51:59 symfony [info] {sfWebDebugLogger} Configuration 0.98 ms (9)
+Sep 11 13:51:59 symfony [info] {sfWebDebugLogger} Factories 32.74 ms (1)
+Sep 11 13:51:59 symfony [info] {sfWebDebugLogger} Action "inicio/index" 0.12 ms (1)
+Sep 11 13:51:59 symfony [info] {sfWebDebugLogger} View "Success" for "inicio/index" 42.27 ms (1)
+Sep 11 13:51:59 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.17 ms (2)
+Sep 11 13:51:59 symfony [info] {sfWebResponse} Send content (41723 o)
+Sep 11 13:52:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Sep 11 13:52:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Sep 11 13:52:19 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'inicio',  'action' => 'index',)
+Sep 11 13:52:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 11 13:52:19 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Sep 11 13:52:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 11 13:52:19 symfony [info] {inicioActions} Call "inicioActions->executeIndex()"
+Sep 11 13:52:19 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/portal/modules/inicio/templates/indexSuccess.php"
+Sep 11 13:52:19 symfony [info] {sfPHPView} Decorate content with "/home/mario/Development/capsule/anbeed/apps/portal/templates/layout.php"
+Sep 11 13:52:19 symfony [info] {sfPHPView} Render "/home/mario/Development/capsule/anbeed/apps/portal/templates/layout.php"
+Sep 11 13:52:19 symfony [info] {main} Get slot "title"
+Sep 11 13:52:19 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Sep 11 13:52:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.persona_id AS s__persona_id, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Sep 11 13:52:19 symfony [info] {main} Get slot "header-tools"
+Sep 11 13:52:19 symfony [info] {main} Get slot "navegador"
+Sep 11 13:52:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 11 13:52:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 11 13:52:19 symfony [info] {sfWebDebugLogger} Configuration 0.96 ms (9)
+Sep 11 13:52:19 symfony [info] {sfWebDebugLogger} Factories 42.92 ms (1)
+Sep 11 13:52:19 symfony [info] {sfWebDebugLogger} Action "inicio/index" 0.12 ms (1)
+Sep 11 13:52:19 symfony [info] {sfWebDebugLogger} View "Success" for "inicio/index" 33.79 ms (1)
+Sep 11 13:52:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.26 ms (2)
+Sep 11 13:52:19 symfony [info] {sfWebResponse} Send content (42006 o)

@@ -1,0 +1,67 @@
+## YAML Template.
+#^\|([^\|]*)\|([^\|]*)\|([^\|]*)\|(.*)$
+#  RegenteFarmaceutico_$2: {Persona: Persona_$2, matricula_profesional: '$3', carnet_colegiado: '$4'}
+---
+RegenteFarmaceutico:
+  RegenteFarmaceutico_6444991CBBA: {Persona: Persona_6444991CBBA, matricula_profesional: 'M-1230', carnet_colegiado: 'MTT-1733'}
+  RegenteFarmaceutico_1853513: {Persona: Persona_1853513, matricula_profesional: 'H-91', carnet_colegiado: 'SC-1241-HARE'}
+  RegenteFarmaceutico_5394068: {Persona: Persona_5394068, matricula_profesional: 'S-493', carnet_colegiado: 'SC-1479-SDFA'}
+  RegenteFarmaceutico_desconocido7: {Persona: Persona_desconocido7, matricula_profesional: 'H-621', carnet_colegiado: ''}
+  RegenteFarmaceutico_4627336 SC: {Persona: Persona_4627336 SC, matricula_profesional: 'Y-37', carnet_colegiado: 'SC - 1533'}
+  RegenteFarmaceutico_desconocido8: {Persona: Persona_desconocido8, matricula_profesional: 'L-241', carnet_colegiado: ''}
+  RegenteFarmaceutico_desconocido9: {Persona: Persona_desconocido9, matricula_profesional: 'M-184', carnet_colegiado: ''}
+  RegenteFarmaceutico_desconocido10: {Persona: Persona_desconocido10, matricula_profesional: 'P-308', carnet_colegiado: ''}
+  RegenteFarmaceutico_desconocido11: {Persona: Persona_desconocido11, matricula_profesional: 'N-6', carnet_colegiado: ''}
+  RegenteFarmaceutico_3800989 CBBA.: {Persona: Persona_3800989 CBBA., matricula_profesional: 'A - 815', carnet_colegiado: ''}
+  RegenteFarmaceutico_desconocido12: {Persona: Persona_desconocido12, matricula_profesional: 'M-62', carnet_colegiado: ''}
+  RegenteFarmaceutico_2300743: {Persona: Persona_2300743, matricula_profesional: 'R-15', carnet_colegiado: '984'}
+  RegenteFarmaceutico_4289985: {Persona: Persona_4289985, matricula_profesional: 'C-759', carnet_colegiado: 'LP - 1969'}
+  RegenteFarmaceutico_G-236: {Persona: Persona_G-236, matricula_profesional: '', carnet_colegiado: ''}
+  RegenteFarmaceutico_desconocido13: {Persona: Persona_desconocido13, matricula_profesional: 'B-157', carnet_colegiado: ''}
+  RegenteFarmaceutico_1564793: {Persona: Persona_1564793, matricula_profesional: '', carnet_colegiado: ''}
+  RegenteFarmaceutico_3898483 SC: {Persona: Persona_3898483 SC, matricula_profesional: 'G-236', carnet_colegiado: 'SC-0801'}
+  RegenteFarmaceutico_3081227 OR: {Persona: Persona_3081227 OR, matricula_profesional: 'T-132', carnet_colegiado: '1071'}
+  RegenteFarmaceutico_466951 L.P: {Persona: Persona_466951 L.P, matricula_profesional: 'A-380', carnet_colegiado: ''}
+  RegenteFarmaceutico_3352758 LP: {Persona: Persona_3352758 LP, matricula_profesional: 'C-310', carnet_colegiado: ''}
+  RegenteFarmaceutico_desconocido14: {Persona: Persona_desconocido14, matricula_profesional: 'M-279', carnet_colegiado: ''}
+  RegenteFarmaceutico_desconocido15: {Persona: Persona_desconocido15, matricula_profesional: '', carnet_colegiado: ''}
+  RegenteFarmaceutico_3580086 CBBA: {Persona: Persona_3580086 CBBA, matricula_profesional: 'A-723', carnet_colegiado: 'CB-1539-AFI'}
+  RegenteFarmaceutico_1088152CH: {Persona: Persona_1088152CH, matricula_profesional: 'G-167', carnet_colegiado: 'CH-198'}
+  RegenteFarmaceutico_desconocido16: {Persona: Persona_desconocido16, matricula_profesional: '', carnet_colegiado: ''}
+  RegenteFarmaceutico_243910 LP: {Persona: Persona_243910 LP, matricula_profesional: 'D - 12', carnet_colegiado: 'LP-1.123'}
+  RegenteFarmaceutico_591344 LP: {Persona: Persona_591344 LP, matricula_profesional: 'C-152', carnet_colegiado: 'LP-627'}
+  RegenteFarmaceutico_1815500 TJ: {Persona: Persona_1815500 TJ, matricula_profesional: 'R-220', carnet_colegiado: 'C.B 242 RGM'}
+  RegenteFarmaceutico_451245 SC: {Persona: Persona_451245 SC, matricula_profesional: 'Q-131', carnet_colegiado: 'SC-1562-QDM'}
+  RegenteFarmaceutico_4616684 SC: {Persona: Persona_4616684 SC, matricula_profesional: 'E-138', carnet_colegiado: ''}
+  RegenteFarmaceutico_desconocido17: {Persona: Persona_desconocido17, matricula_profesional: 'I-5', carnet_colegiado: ''}
+  RegenteFarmaceutico_1731805 SC: {Persona: Persona_1731805 SC, matricula_profesional: 'V-320', carnet_colegiado: 'V-220'}
+  RegenteFarmaceutico_4513700 CBB: {Persona: Persona_4513700 CBB, matricula_profesional: 'N-127', carnet_colegiado: 'CB-1721'}
+  RegenteFarmaceutico_2946465 SC: {Persona: Persona_2946465 SC, matricula_profesional: 'V-505', carnet_colegiado: 'SC.1436-VTA'}
+  RegenteFarmaceutico_5048333 LP: {Persona: Persona_5048333 LP, matricula_profesional: 'V-635', carnet_colegiado: 'T-0732-VEGK'}
+  RegenteFarmaceutico_1853513: {Persona: Persona_1853513, matricula_profesional: 'H-91', carnet_colegiado: ''}
+  RegenteFarmaceutico_1765406 OR: {Persona: Persona_1765406 OR, matricula_profesional: 'PDO-020', carnet_colegiado: 'A-623'}
+  RegenteFarmaceutico_desconocido18: {Persona: Persona_desconocido18, matricula_profesional: 'Z-34', carnet_colegiado: ''}
+  RegenteFarmaceutico_1083329 CH.: {Persona: Persona_1083329 CH., matricula_profesional: 'CH - 0156', carnet_colegiado: ''}
+  RegenteFarmaceutico_3277274: {Persona: Persona_3277274, matricula_profesional: 'C-499', carnet_colegiado: 'SC1179CWMR'}
+  RegenteFarmaceutico_1116165: {Persona: Persona_1116165, matricula_profesional: 'C-364', carnet_colegiado: 'CBFB SC770'}
+  RegenteFarmaceutico_2604768: {Persona: Persona_2604768, matricula_profesional: 'R-592', carnet_colegiado: 'LP-2207'}
+  RegenteFarmaceutico_3620851 CH: {Persona: Persona_3620851 CH, matricula_profesional: 'G-313', carnet_colegiado: ''}
+  RegenteFarmaceutico_3243621-SC: {Persona: Persona_3243621-SC, matricula_profesional: 'V - 302', carnet_colegiado: 'C.B. 0726 -V'}
+  RegenteFarmaceutico_5313662 CBBA.: {Persona: Persona_5313662 CBBA., matricula_profesional: 'S - 720', carnet_colegiado: '5353'}
+  RegenteFarmaceutico_465741 LP.: {Persona: Persona_465741 LP., matricula_profesional: 'B - 63', carnet_colegiado: 'LP - 0551'}
+  RegenteFarmaceutico_3956422 S.C: {Persona: Persona_3956422 S.C, matricula_profesional: 'C - 655', carnet_colegiado: 'SC - 1328-CG'}
+  RegenteFarmaceutico_2286882 L.P.: {Persona: Persona_2286882 L.P., matricula_profesional: 'R - 317', carnet_colegiado: 'LP - 1476'}
+  RegenteFarmaceutico_1567729 SC.: {Persona: Persona_1567729 SC., matricula_profesional: 'D - 52', carnet_colegiado: 'SC-49 DJIR'}
+  RegenteFarmaceutico_4696339 S. C.: {Persona: Persona_4696339 S. C., matricula_profesional: 'Y - 29', carnet_colegiado: 'SC 1183-YAEH'}
+  RegenteFarmaceutico_desconocido19: {Persona: Persona_desconocido19, matricula_profesional: 'S-637', carnet_colegiado: ''}
+  RegenteFarmaceutico_1144485 CH: {Persona: Persona_1144485 CH, matricula_profesional: '0-109', carnet_colegiado: ''}
+  RegenteFarmaceutico_desconocido20: {Persona: Persona_desconocido20, matricula_profesional: 'Z-9', carnet_colegiado: ''}
+  RegenteFarmaceutico_1853224: {Persona: Persona_1853224, matricula_profesional: 'H-117', carnet_colegiado: 'SC-1796-HABR'}
+  RegenteFarmaceutico_4584539 SC: {Persona: Persona_4584539 SC, matricula_profesional: 'M-614', carnet_colegiado: 'SC-1074-MSMR'}
+  RegenteFarmaceutico_3268231: {Persona: Persona_3268231, matricula_profesional: 'M-470', carnet_colegiado: 'SC-0938-MMSR'}
+  RegenteFarmaceutico_3499096: {Persona: Persona_3499096, matricula_profesional: 'Z-121', carnet_colegiado: 'LP-1809'}
+  RegenteFarmaceutico_3559102 OR: {Persona: Persona_3559102 OR, matricula_profesional: 'R.N.I 2047', carnet_colegiado: 'R.N.I. 2047'}
+  RegenteFarmaceutico_1875299 TJ: {Persona: Persona_1875299 TJ, matricula_profesional: 'M-372', carnet_colegiado: 'T-201'}
+  RegenteFarmaceutico_392346 LP: {Persona: Persona_392346 LP, matricula_profesional: 'G-48', carnet_colegiado: 'SC-380-GCJA'}
+  RegenteFarmaceutico_4887138 LP: {Persona: Persona_4887138 LP, matricula_profesional: 'R-1872', carnet_colegiado: 'R-0567'}
+  RegenteFarmaceutico_1564793 SC: {Persona: Persona_1564793 SC, matricula_profesional: 'NV-411', carnet_colegiado: 'SC1518UMRK'}

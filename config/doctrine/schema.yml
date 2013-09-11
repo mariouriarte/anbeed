@@ -61,13 +61,15 @@ Empresa:
     fax:                     {type: string(20), notnull: false}
     direccion:               {type: string(255)}
     casilla:                 {type: string(20), notnull: false}
-    telefono1:               {type: string(20), notnull: true}
+    telefono1:               {type: string(20), notnull: false}
     telefono2:               {type: string(20), notnull: false}
     # debe ser unique: true
     email:                   {type: string(255), notnull: false, unique: false}
-    actividad:               {type: string(255), notnull: true}
+    # debe ser notnull: true
+    actividad:               {type: string(255), notnull: false}
     registro_camara:         {type: string(30), notnull: false}
-    fundempresa:             {type: string(30), notnull: true}
+    # debe ser notnull: true
+    fundempresa:             {type: string(30), notnull: false}
     # debe ser unique: true
     nit:                     {type: string(30), notnull: false, unique: false}
     # debe ser unique: true

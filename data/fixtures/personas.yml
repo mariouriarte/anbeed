@@ -164,140 +164,144 @@ Persona:
     celular: 12345
     email: jyva.00@gmail.com
     fecha_nacimiento: '1986-12-22'
-#^(\d+)\|([^\|]*)\|(.*)
-#  Persona_$1: {nombre: '$2', ci: '$3'}
-  Persona_100: {nombre: 'MENECES TERCEROS TREICY VANESSA', ci: '6444991CBBA'}
-  Persona_101: {nombre: 'RENY EVELIN HEREDIA ARACENA', ci: '1853513'}
-  Persona_102: {nombre: 'FATIMA ABIGAIL SUAREZ DORADO', ci: '5394068'}
-  Persona_103: {nombre: 'PURA KAREN HERRERA APONTE', ci: ''}
-  Persona_104: {nombre: 'LIZETH JENNY YUCRA PEREDO', ci: '4627336 SC'}
-  Persona_105: {nombre: 'MARIO PERSI LEAÑOS', ci: ''}
-  Persona_107: {nombre: 'LUZ MARI MELEAN', ci: ''}
-  Persona_108: {nombre: 'HELEN LESLI PUÑA ALANEZ', ci: ''}
-  Persona_109: {nombre: 'TERESA NOGALES', ci: ''}
-  Persona_110: {nombre: 'CECILIA K. ANTEZANA R.', ci: '3800989 CBBA.'}
-  Persona_111: {nombre: 'DR. WALTER MONZON ORELLANA', ci: ''}
-  Persona_112: {nombre: 'MARIA ELENA ROCHA GODOY', ci: '2300743'}
-  Persona_113: {nombre: 'ANGELA ROSA CASTRO CORNEJO', ci: '4289985'}
-  Persona_114: {nombre: 'HILDA GARCIA CALDERON', ci: 'G-236'}
-  Persona_116: {nombre: 'MARIA ELENA BARRIGA PADILLA', ci: ''}
-  Persona_117: {nombre: 'RUTH KATHYA VACA MARCO', ci: '1564793'}
-  Persona_118: {nombre: 'HILDA GARCIA CALDERON', ci: '3898483 SC'}
-  Persona_119: {nombre: 'JANNET TERRAZAS CALIZAYA', ci: '3081227 OR'}
-  Persona_121: {nombre: 'MARINA CELIA ALARCON DE LOPEZ', ci: '466951 L.P'}
-  Persona_122: {nombre: 'NEYSA BEATRIZ CRESPO FLORES', ci: '3352758 LP'}
-  Persona_124: {nombre: 'FABIOLA PAOLA LEON ESPINOZA', ci: ''}
-  Persona_125: {nombre: 'DRA. MARIA EUGENIA VARGAS MIRANDA', ci: ''}
-  Persona_126: {nombre: 'INGRID PRISCILIA ANTEZANA FUENTES', ci: '3580086 CBBA'}
-  Persona_128: {nombre: 'ANA RUTH GUTIERREZ POVEDA', ci: '1088152CH'}
-  Persona_129: {nombre: 'CLARA ROCHA ANDRADE', ci: ''}
-  Persona_130: {nombre: 'DR. VICTOR HUGO DUEÑAS RIVERA', ci: '243910 LP'}
-  Persona_131: {nombre: 'DR. HELMO ERASMO CHOQUE CHOQUE', ci: '591344 LP'}
-  Persona_132: {nombre: 'MARIA DEL CARMEN ROCHA  GUDIÑO', ci: '1815500 TJ'}
-  Persona_133: {nombre: 'MARGOT QUIROZ DURAN', ci: '451245 SC'}
-  Persona_134: {nombre: 'KARLA LORENA EID DE NILLARROEL', ci: '4616684 SC'}
-  Persona_135: {nombre: 'DRA. MARIA TERESA IÑIGUEZ S.', ci: ''}
-  Persona_137: {nombre: 'HERNAN VELARDE ROSAURO', ci: '1731805 SC'}
-  Persona_140: {nombre: 'BETZABETH M. NINA MAGNE', ci: '4513700 CBB'}
-  Persona_141: {nombre: 'ALEIDA VISCARRA TARABILLO', ci: '2946465 SC'}
-  Persona_142: {nombre: 'GLADYS KARINA VALENCIA ESPER', ci: '5048333 LP'}
-  Persona_143: {nombre: 'RENNY EVELIN HEREDIA', ci: '1853513'}
-  Persona_145: {nombre: 'AQUINO COLLARANI HEIDY RITA', ci: '1765406 OR'}
-  Persona_146: {nombre: 'DR. PERCY ZEGARRA', ci: ''}
-  Persona_149: {nombre: 'VIVIANA AMELIO YAÑEZ MERCADO', ci: '1083329 CH.'}
-  Persona_150: {nombre: 'MARIA ROXANA CASTRO WENDE', ci: '3277274'}
-  Persona_151: {nombre: 'CELSA DEL ROSARIO CAMACHO MIRANDA', ci: '1116165'}
-  Persona_152: {nombre: 'JACQUELINE SUSAN RODRIGUEZ PRADO', ci: '2604768'}
-  Persona_153: {nombre: 'DRA. MONICA JOBANA GUTIERREZ POVEDA', ci: '3620851 CH'}
-  Persona_154: {nombre: 'VILLARROEL ZABALA MIRIAM', ci: '3243621-SC'}
-  Persona_155: {nombre: 'VANESA ANDREA SABAG ASFURA', ci: '5313662 CBBA.'}
-  Persona_156: {nombre: 'MARIA LOURDES BUSTILLOS POMMIER', ci: '465741 LP.'}
-  Persona_157: {nombre: 'BERENICE CAMPOS GUTIÉRREZ', ci: '3956422 S.C'}
-  Persona_158: {nombre: 'AMILCAR RADA RIVAS', ci: '2286882 L.P.'}
-  Persona_159: {nombre: 'DRA. INEÉ REBECA DÁVALOS JORDÁN', ci: '1567729 SC.'}
-  Persona_160: {nombre: 'ELIANA HELLEN YQUIZE AGUILAR', ci: '4696339 S. C.'}
-  Persona_161: {nombre: 'DAYANA SANCHEZ RIVERO', ci: ''}
-  Persona_162: {nombre: 'JANETH JOVANNA OSINA CONCHARI', ci: '1144485 CH'}
-  Persona_163: {nombre: 'DRA. JUANA DAISY ZELAYA MENDIVIL', ci: ''}
-  Persona_164: {nombre: 'BRUNY ROXANA HEREDIA ARACENA', ci: '1853224'}
-  Persona_165: {nombre: 'MERCEDES ROSILDE MEDINA SUAREZ', ci: '4584539 SC'}
-  Persona_166: {nombre: 'SANDRA ROSA MOJICA MORON', ci: '3268231'}
-  Persona_167: {nombre: 'MIGUELINA ALEJANDRA ZEGARRA GALVEZ', ci: '3499096'}
-  Persona_168: {nombre: 'IVONNE MONTAÑO LOPEZ', ci: '3559102 OR'}
-  Persona_169: {nombre: 'MAGDALENA ALICIA MERCADO AMEZAGA', ci: '1875299 TJ'}
-  Persona_170: {nombre: 'JOSE ANTONIO GUSMAN CHAVEZ', ci: '392346 LP'}
-  Persona_171: {nombre: 'VANIA RENNE RODRIGUEZ MEJIA', ci: '4887138 LP'}
-  Persona_173: {nombre: 'DRA.RUTH KATHYA VACA MARCO', ci: '1564793 SC'}
-  Persona_174: {nombre: 'VICTOR SORIA GALVARRO', ci: '527898 OR'}
-  Persona_175: {nombre: 'RENY EVELIN HEREDIA ARACENA', ci: '1853213'}
-  Persona_176: {nombre: 'RUBEN LAMOLINA', ci: '4569995 SC'}
-  Persona_177: {nombre: 'RUBEN O. LAMOLINA MONZON', ci: '4569995 SC'}
-  Persona_178: {nombre: 'ELVIO ISIDRO BRUN AYALA', ci: 'E-65582'}
-  Persona_179: {nombre: 'GEORGE BADDOUR DAUBDOUD', ci: ''}
-  Persona_180: {nombre: 'KARINA BEJARANO', ci: ''}
-  Persona_181: {nombre: 'SELIER QUISPE LAURA', ci: '2863320'}
-  Persona_182: {nombre: 'BORIS TERRAZAS CALIZAYA', ci: '3506505'}
-  Persona_183: {nombre: 'MARTHA CLEMENCIA FARAH DE ASBUM', ci: '339477 LP'}
-  Persona_184: {nombre: 'FREDDY QUINTON DAZA', ci: '837785 CBBA.'}
-  Persona_185: {nombre: 'LIC. NANCY BURGOA ALARCON', ci: '2203929 LP'}
-  Persona_186: {nombre: 'GALO RODRIGO GUEVARA SANTAMARIA', ci: 'E0001798'}
-  Persona_187: {nombre: 'CARMEN FATIMA ARAMAYO ESTRADA', ci: '2440816'}
-  Persona_188: {nombre: 'LIC CELIA CAMACHO VACA', ci: ''}
-  Persona_189: {nombre: 'SELIER CIRILO QUISPE LAURA', ci: '2863320'}
-  Persona_190: {nombre: 'MARIBEL EVELIN ENCINAS SALINAS', ci: ''}
-  Persona_191: {nombre: 'ESTEBAN LOMBARDOZZI', ci: '0017197'}
-  Persona_192: {nombre: 'CELIA CAMACHO VACA', ci: '3277055 SC'}
-  Persona_193: {nombre: 'ARVIND SHARMA', ci: '3864618 SC'}
-  Persona_194: {nombre: 'INGRID CELINA HEREDIA ARACENA', ci: '1853215 SC'}
-  Persona_195: {nombre: 'MARINA CELIA ALARCON DE LOPEZ', ci: '466951 L.P'}
-  Persona_196: {nombre: 'ALEJANDRO SEVERO ENCINAS SANTALLA', ci: '3386479 LP'}
-  Persona_197: {nombre: 'NANCY TERESA GASCON HERBAS', ci: '2353487 LP'}
-  Persona_199: {nombre: 'CARMEN ROSA CLAVIJO', ci: '2780252'}
-  Persona_200: {nombre: 'YENNY LEE ASFURA JORDAN', ci: '4543704 SC'}
-  Persona_201: {nombre: 'LUIS CLAURE ALIAGA', ci: ''}
-  Persona_202: {nombre: 'SERGIO GONZALO PAREJA DELOS', ci: '2018270 LP'}
-  Persona_203: {nombre: 'ASENCIA DOMITILA SURCO APAZA', ci: '25210650 LP'}
-  Persona_204: {nombre: 'DR. VICTOR HUGO DUEÑAS RIVERA', ci: '243910 LP'}
-  Persona_205: {nombre: 'MIGUEL JACOBO NEMER CHAIN', ci: '487568 LP'}
-  Persona_206: {nombre: 'NINA YAPO ALEX SERGIO', ci: '4869715 LP'}
-  Persona_207: {nombre: 'DAVID RODOLFO ZAMBRANA TERRAZAS', ci: '972307 CBB'}
-  Persona_208: {nombre: 'KARLA LORENA EID DE VILLARROEL', ci: '4613684 SC'}
-  Persona_209: {nombre: 'JORGE LUIS GOMEZ BARRIENTOS', ci: '811951CBBA'}
-  Persona_210: {nombre: 'MIGUEL ANGEL TERRAZAS RIVAS', ci: '2378191LP'}
-  Persona_211: {nombre: 'HERNAN VELARDE ROSAURO', ci: '1731805 SC'}
-  Persona_212: {nombre: 'LIC. ERIK RAMIL PAREDES TAPIA', ci: '4842984'}
-  Persona_213: {nombre: 'LOURDES GUTIERREZ SUAREZ', ci: '823237CBB'}
-  Persona_214: {nombre: 'FERNANDO GUSMAN CHAMBI', ci: '2906907'}
-  Persona_215: {nombre: '  CHAVEZ MELGAR MILTON', ci: '3168927SC'}
-  Persona_216: {nombre: 'TROCHE ZAMORANO GODOFREDO TOMAS', ci: '3468918 LP'}
-  Persona_217: {nombre: 'RENNY EVELIN HEREDIA', ci: '1853213'}
-  Persona_218: {nombre: 'TROCHE ZAMORANO GODOFREDO TOMAS', ci: '3468918 LP'}
-  Persona_219: {nombre: 'RAMIREZ VILLCA NEMECIO', ci: '624772 OR'}
-  Persona_220: {nombre: 'JUAN RAUL MONTAN TORREZ', ci: '792931 CBB'}
-  Persona_221: {nombre: 'MIRNA MARTHA GUTIERREZ LAZARTE', ci: '2473027'}
-  Persona_222: {nombre: 'PASCUAL YAPU CANAVIRI', ci: '  2557657 LP'}
-  Persona_223: {nombre: 'JUAN CARLOS SABAT CASAP', ci: '1026613'}
-  Persona_224: {nombre: 'VANESA RIOS DE GUMUCIO', ci: '3903927'}
-  Persona_225: {nombre: 'ARCE OROPEZA RODRIGO VICTOR PETRONIO', ci: '2286453 L.P.'}
-  Persona_226: {nombre: 'AYOROA VERA JUAN PABLO', ci: '3377448 LP'}
-  Persona_227: {nombre: 'SR. JULIO SILES VILLARROEL', ci: '823075  CBBA.'}
-  Persona_228: {nombre: 'VILLARROEL ZABALA JUAN CARLOS', ci: '3848244-SC'}
-  Persona_229: {nombre: 'SABAG SABJA VICTOR ANTONIO', ci: '6537925 CBBA.'}
-  Persona_230: {nombre: 'OSSIO DIAZ ROMERO JUAN LUIS OSCAR', ci: '2366750 LP.'}
-  Persona_231: {nombre: 'GUSTAVO SAUMA ROMERO', ci: '1007708 C.H.'}
-  Persona_232: {nombre: 'AMPARO MOLINA DE MORALES', ci: '855696 CBBA.'}
-  Persona_233: {nombre: 'INÉS REBECA DÁVALOS JORDÁN', ci: '1576729 SC.'}
-  Persona_234: {nombre: 'LIMA TAPIA RUBEN', ci: '1562522 S.C'}
-  Persona_235: {nombre: 'PATRICIO AGUSTIN OLIVERA', ci: ''}
-  Persona_236: {nombre: 'MARIA EUGENIA ABUAWAD SLIM', ci: '1006947 CH'}
-  Persona_237: {nombre: 'DR. RICHAR HUGO BOZO LAFUENTE', ci: '3339717'}
-  Persona_238: {nombre: 'INGRID CELINA HEREDIA DE JULIEN', ci: '1853215 T.J.'}
-  Persona_239: {nombre: 'YOLANDA MEJIA MALDONADO', ci: '182940 LP'}
-  Persona_240: {nombre: 'FARIEN FERNANDO OXA FLORES', ci: '4577489 S.C'}
-  Persona_241: {nombre: 'SUSANA AMALIA BATANERO ARAGON', ci: 'CE.- 10130904'}
-  Persona_242: {nombre: 'GLORIA DIANA COLQUE CHOQUE', ci: '3090505 OR'}
-  Persona_243: {nombre: 'ROGER GUSTAVO PACHECO', ci: '1109558 CH'}
-  Persona_244: {nombre: 'JOSE RODRIGO CAJAS BASTIDAS', ci: 'E-4564554'}
-  Persona_245: {nombre: 'RAMIL ISRAEL MARTINEZ CHAVEZ', ci: '3549608 OR'}
-  Persona_246: {nombre: 'JAVIER TORRICO P.', ci: '1078787 CH'}
-  Persona_247: {nombre: 'JAVIER TORRICO P', ci: '1078787 CH'}
+#^\|([^\|]*)\|(.*)
+#  Persona_$2: {nombre: '$1', ci: '$2'}
+
+  ## Representante legal
+  Persona_527898 OR: {nombre: 'VICTOR SORIA GALVARRO', ci: '527898 OR'}
+  Persona_1853213: {nombre: 'RENY EVELIN HEREDIA ARACENA', ci: '1853213'}
+  Persona_4569995 SC: {nombre: 'RUBEN LAMOLINA', ci: '4569995 SC'}
+  Persona_4569995 SC: {nombre: 'RUBEN O. LAMOLINA MONZON', ci: '4569995 SC'}
+  Persona_E-65582: {nombre: 'ELVIO ISIDRO BRUN AYALA', ci: 'E-65582'}
+  Persona_desconocido1: {nombre: 'GEORGE BADDOUR DAUBDOUD', ci: ''}
+  Persona_desconocido2: {nombre: 'KARINA BEJARANO', ci: ''}
+  Persona_2863320: {nombre: 'SELIER QUISPE LAURA', ci: '2863320'}
+  Persona_3506505: {nombre: 'BORIS TERRAZAS CALIZAYA', ci: '3506505'}
+  Persona_339477 LP: {nombre: 'MARTHA CLEMENCIA FARAH DE ASBUM', ci: '339477 LP'}
+  Persona_837785 CBBA.: {nombre: 'FREDDY QUINTON DAZA', ci: '837785 CBBA.'}
+  Persona_2203929 LP: {nombre: 'LIC. NANCY BURGOA ALARCON', ci: '2203929 LP'}
+  Persona_E0001798: {nombre: 'GALO RODRIGO GUEVARA SANTAMARIA', ci: 'E0001798'}
+  Persona_2440816: {nombre: 'CARMEN FATIMA ARAMAYO ESTRADA', ci: '2440816'}
+  Persona_desconocido3: {nombre: 'LIC CELIA CAMACHO VACA', ci: ''}
+  Persona_2863320: {nombre: 'SELIER CIRILO QUISPE LAURA', ci: '2863320'}
+  Persona_desconocido4: {nombre: 'MARIBEL EVELIN ENCINAS SALINAS', ci: ''}
+  Persona_0017197: {nombre: 'ESTEBAN LOMBARDOZZI', ci: '0017197'}
+  Persona_3277055 SC: {nombre: 'CELIA CAMACHO VACA', ci: '3277055 SC'}
+  Persona_3864618 SC: {nombre: 'ARVIND SHARMA', ci: '3864618 SC'}
+  Persona_1853215 SC: {nombre: 'INGRID CELINA HEREDIA ARACENA', ci: '1853215 SC'}
+  Persona_466951 L.P: {nombre: 'MARINA CELIA ALARCON DE LOPEZ', ci: '466951 L.P'}
+  Persona_3386479 LP: {nombre: 'ALEJANDRO SEVERO ENCINAS SANTALLA', ci: '3386479 LP'}
+  Persona_2353487 LP: {nombre: 'NANCY TERESA GASCON HERBAS', ci: '2353487 LP'}
+  Persona_2780252: {nombre: 'CARMEN ROSA CLAVIJO', ci: '2780252'}
+  Persona_4543704 SC: {nombre: 'YENNY LEE ASFURA JORDAN', ci: '4543704 SC'}
+  Persona_desconocido5: {nombre: 'LUIS CLAURE ALIAGA', ci: ''}
+  Persona_2018270 LP: {nombre: 'SERGIO GONZALO PAREJA DELOS', ci: '2018270 LP'}
+  Persona_25210650 LP: {nombre: 'ASENCIA DOMITILA SURCO APAZA', ci: '25210650 LP'}
+  Persona_243910 LP: {nombre: 'DR. VICTOR HUGO DUEÑAS RIVERA', ci: '243910 LP'}
+  Persona_487568 LP: {nombre: 'MIGUEL JACOBO NEMER CHAIN', ci: '487568 LP'}
+  Persona_4869715 LP: {nombre: 'NINA YAPO ALEX SERGIO', ci: '4869715 LP'}
+  Persona_972307 CBB: {nombre: 'DAVID RODOLFO ZAMBRANA TERRAZAS', ci: '972307 CBB'}
+  Persona_4613684 SC: {nombre: 'KARLA LORENA EID DE VILLARROEL', ci: '4613684 SC'}
+  Persona_811951CBBA: {nombre: 'JORGE LUIS GOMEZ BARRIENTOS', ci: '811951CBBA'}
+  Persona_2378191LP: {nombre: 'MIGUEL ANGEL TERRAZAS RIVAS', ci: '2378191LP'}
+  Persona_1731805 SC: {nombre: 'HERNAN VELARDE ROSAURO', ci: '1731805 SC'}
+  Persona_4842984: {nombre: 'LIC. ERIK RAMIL PAREDES TAPIA', ci: '4842984'}
+  Persona_823237CBB: {nombre: 'LOURDES GUTIERREZ SUAREZ', ci: '823237CBB'}
+  Persona_2906907: {nombre: 'FERNANDO GUSMAN CHAMBI', ci: '2906907'}
+  Persona_3168927SC: {nombre: '  CHAVEZ MELGAR MILTON', ci: '3168927SC'}
+  Persona_3468918 LP: {nombre: 'TROCHE ZAMORANO GODOFREDO TOMAS', ci: '3468918 LP'}
+  Persona_1853213: {nombre: 'RENNY EVELIN HEREDIA', ci: '1853213'}
+  Persona_3468918 LP: {nombre: 'TROCHE ZAMORANO GODOFREDO TOMAS', ci: '3468918 LP'}
+  Persona_624772 OR: {nombre: 'RAMIREZ VILLCA NEMECIO', ci: '624772 OR'}
+  Persona_792931 CBB: {nombre: 'JUAN RAUL MONTAN TORREZ', ci: '792931 CBB'}
+  Persona_2473027: {nombre: 'MIRNA MARTHA GUTIERREZ LAZARTE', ci: '2473027'}
+  Persona_  2557657 LP: {nombre: 'PASCUAL YAPU CANAVIRI', ci: '  2557657 LP'}
+  Persona_1026613: {nombre: 'JUAN CARLOS SABAT CASAP', ci: '1026613'}
+  Persona_3903927: {nombre: 'VANESA RIOS DE GUMUCIO', ci: '3903927'}
+  Persona_2286453 L.P.: {nombre: 'ARCE OROPEZA RODRIGO VICTOR PETRONIO', ci: '2286453 L.P.'}
+  Persona_3377448 LP: {nombre: 'AYOROA VERA JUAN PABLO', ci: '3377448 LP'}
+  Persona_823075  CBBA.: {nombre: 'SR. JULIO SILES VILLARROEL', ci: '823075  CBBA.'}
+  Persona_3848244-SC: {nombre: 'VILLARROEL ZABALA JUAN CARLOS', ci: '3848244-SC'}
+  Persona_6537925 CBBA.: {nombre: 'SABAG SABJA VICTOR ANTONIO', ci: '6537925 CBBA.'}
+  Persona_2366750 LP.: {nombre: 'OSSIO DIAZ ROMERO JUAN LUIS OSCAR', ci: '2366750 LP.'}
+  Persona_1007708 C.H.: {nombre: 'GUSTAVO SAUMA ROMERO', ci: '1007708 C.H.'}
+  Persona_855696 CBBA.: {nombre: 'AMPARO MOLINA DE MORALES', ci: '855696 CBBA.'}
+  Persona_1576729 SC.: {nombre: 'INÉS REBECA DÁVALOS JORDÁN', ci: '1576729 SC.'}
+  Persona_1562522 S.C: {nombre: 'LIMA TAPIA RUBEN', ci: '1562522 S.C'}
+  Persona_desconocido6: {nombre: 'PATRICIO AGUSTIN OLIVERA', ci: ''}
+  Persona_1006947 CH: {nombre: 'MARIA EUGENIA ABUAWAD SLIM', ci: '1006947 CH'}
+  Persona_3339717: {nombre: 'DR. RICHAR HUGO BOZO LAFUENTE', ci: '3339717'}
+  Persona_1853215 T.J.: {nombre: 'INGRID CELINA HEREDIA DE JULIEN', ci: '1853215 T.J.'}
+  Persona_182940 LP: {nombre: 'YOLANDA MEJIA MALDONADO', ci: '182940 LP'}
+  Persona_4577489 S.C: {nombre: 'FARIEN FERNANDO OXA FLORES', ci: '4577489 S.C'}
+  Persona_CE.- 10130904: {nombre: 'SUSANA AMALIA BATANERO ARAGON', ci: 'CE.- 10130904'}
+  Persona_3090505 OR: {nombre: 'GLORIA DIANA COLQUE CHOQUE', ci: '3090505 OR'}
+  Persona_1109558 CH: {nombre: 'ROGER GUSTAVO PACHECO', ci: '1109558 CH'}
+  Persona_E-4564554: {nombre: 'JOSE RODRIGO CAJAS BASTIDAS', ci: 'E-4564554'}
+  Persona_3549608 OR: {nombre: 'RAMIL ISRAEL MARTINEZ CHAVEZ', ci: '3549608 OR'}
+  Persona_1078787 CH: {nombre: 'JAVIER TORRICO P.', ci: '1078787 CH'}
+  Persona_1078787 CH: {nombre: 'JAVIER TORRICO P', ci: '1078787 CH'}
+  
+  ## Regentes farmaceuticos --> desconocido7
+  Persona_6444991CBBA: {nombre: 'MENECES TERCEROS TREICY VANESSA', ci: '6444991CBBA'}
+  Persona_1853513: {nombre: 'RENY EVELIN HEREDIA ARACENA', ci: '1853513'}
+  Persona_5394068: {nombre: 'FATIMA ABIGAIL SUAREZ DORADO', ci: '5394068'}
+  Persona_desconocido7: {nombre: 'PURA KAREN HERRERA APONTE', ci: ''}
+  Persona_4627336 SC: {nombre: 'LIZETH JENNY YUCRA PEREDO', ci: '4627336 SC'}
+  Persona_desconocido8: {nombre: 'MARIO PERSI LEAÑOS', ci: ''}
+  Persona_desconocido9: {nombre: 'LUZ MARI MELEAN', ci: ''}
+  Persona_desconocido10: {nombre: 'HELEN LESLI PUÑA ALANEZ', ci: ''}
+  Persona_desconocido11: {nombre: 'TERESA NOGALES', ci: ''}
+  Persona_3800989 CBBA.: {nombre: 'CECILIA K. ANTEZANA R.', ci: '3800989 CBBA.'}
+  Persona_desconocido12: {nombre: 'DR. WALTER MONZON ORELLANA', ci: ''}
+  Persona_2300743: {nombre: 'MARIA ELENA ROCHA GODOY', ci: '2300743'}
+  Persona_4289985: {nombre: 'ANGELA ROSA CASTRO CORNEJO', ci: '4289985'}
+  Persona_G-236: {nombre: 'HILDA GARCIA CALDERON', ci: 'G-236'}
+  Persona_desconocido13: {nombre: 'MARIA ELENA BARRIGA PADILLA', ci: ''}
+  Persona_1564793: {nombre: 'RUTH KATHYA VACA MARCO', ci: '1564793'}
+  Persona_3898483 SC: {nombre: 'HILDA GARCIA CALDERON', ci: '3898483 SC'}
+  Persona_3081227 OR: {nombre: 'JANNET TERRAZAS CALIZAYA', ci: '3081227 OR'}
+  Persona_466951 L.P: {nombre: 'MARINA CELIA ALARCON DE LOPEZ', ci: '466951 L.P'}
+  Persona_3352758 LP: {nombre: 'NEYSA BEATRIZ CRESPO FLORES', ci: '3352758 LP'}
+  Persona_desconocido14: {nombre: 'FABIOLA PAOLA LEON ESPINOZA', ci: ''}
+  Persona_desconocido15: {nombre: 'DRA. MARIA EUGENIA VARGAS MIRANDA', ci: ''}
+  Persona_3580086 CBBA: {nombre: 'INGRID PRISCILIA ANTEZANA FUENTES', ci: '3580086 CBBA'}
+  Persona_1088152CH: {nombre: 'ANA RUTH GUTIERREZ POVEDA', ci: '1088152CH'}
+  Persona_desconocido16: {nombre: 'CLARA ROCHA ANDRADE', ci: ''}
+  Persona_243910 LP: {nombre: 'DR. VICTOR HUGO DUEÑAS RIVERA', ci: '243910 LP'}
+  Persona_591344 LP: {nombre: 'DR. HELMO ERASMO CHOQUE CHOQUE', ci: '591344 LP'}
+  Persona_1815500 TJ: {nombre: 'MARIA DEL CARMEN ROCHA  GUDIÑO', ci: '1815500 TJ'}
+  Persona_451245 SC: {nombre: 'MARGOT QUIROZ DURAN', ci: '451245 SC'}
+  Persona_4616684 SC: {nombre: 'KARLA LORENA EID DE NILLARROEL', ci: '4616684 SC'}
+  Persona_desconocido17: {nombre: 'DRA. MARIA TERESA IÑIGUEZ S.', ci: ''}
+  Persona_1731805 SC: {nombre: 'HERNAN VELARDE ROSAURO', ci: '1731805 SC'}
+  Persona_4513700 CBB: {nombre: 'BETZABETH M. NINA MAGNE', ci: '4513700 CBB'}
+  Persona_2946465 SC: {nombre: 'ALEIDA VISCARRA TARABILLO', ci: '2946465 SC'}
+  Persona_5048333 LP: {nombre: 'GLADYS KARINA VALENCIA ESPER', ci: '5048333 LP'}
+  Persona_1853513: {nombre: 'RENNY EVELIN HEREDIA', ci: '1853513'}
+  Persona_1765406 OR: {nombre: 'AQUINO COLLARANI HEIDY RITA', ci: '1765406 OR'}
+  Persona_desconocido18: {nombre: 'DR. PERCY ZEGARRA', ci: ''}
+  Persona_1083329 CH.: {nombre: 'VIVIANA AMELIO YAÑEZ MERCADO', ci: '1083329 CH.'}
+  Persona_3277274: {nombre: 'MARIA ROXANA CASTRO WENDE', ci: '3277274'}
+  Persona_1116165: {nombre: 'CELSA DEL ROSARIO CAMACHO MIRANDA', ci: '1116165'}
+  Persona_2604768: {nombre: 'JACQUELINE SUSAN RODRIGUEZ PRADO', ci: '2604768'}
+  Persona_3620851 CH: {nombre: 'DRA. MONICA JOBANA GUTIERREZ POVEDA', ci: '3620851 CH'}
+  Persona_3243621-SC: {nombre: 'VILLARROEL ZABALA MIRIAM', ci: '3243621-SC'}
+  Persona_5313662 CBBA.: {nombre: 'VANESA ANDREA SABAG ASFURA', ci: '5313662 CBBA.'}
+  Persona_465741 LP.: {nombre: 'MARIA LOURDES BUSTILLOS POMMIER', ci: '465741 LP.'}
+  Persona_3956422 S.C: {nombre: 'BERENICE CAMPOS GUTIÉRREZ', ci: '3956422 S.C'}
+  Persona_2286882 L.P.: {nombre: 'AMILCAR RADA RIVAS', ci: '2286882 L.P.'}
+  Persona_1567729 SC.: {nombre: 'DRA. INEÉ REBECA DÁVALOS JORDÁN', ci: '1567729 SC.'}
+  Persona_4696339 S. C.: {nombre: 'ELIANA HELLEN YQUIZE AGUILAR', ci: '4696339 S. C.'}
+  Persona_desconocido19: {nombre: 'DAYANA SANCHEZ RIVERO', ci: ''}
+  Persona_1144485 CH: {nombre: 'JANETH JOVANNA OSINA CONCHARI', ci: '1144485 CH'}
+  Persona_desconocido20: {nombre: 'DRA. JUANA DAISY ZELAYA MENDIVIL', ci: ''}
+  Persona_1853224: {nombre: 'BRUNY ROXANA HEREDIA ARACENA', ci: '1853224'}
+  Persona_4584539 SC: {nombre: 'MERCEDES ROSILDE MEDINA SUAREZ', ci: '4584539 SC'}
+  Persona_3268231: {nombre: 'SANDRA ROSA MOJICA MORON', ci: '3268231'}
+  Persona_3499096: {nombre: 'MIGUELINA ALEJANDRA ZEGARRA GALVEZ', ci: '3499096'}
+  Persona_3559102 OR: {nombre: 'IVONNE MONTAÑO LOPEZ', ci: '3559102 OR'}
+  Persona_1875299 TJ: {nombre: 'MAGDALENA ALICIA MERCADO AMEZAGA', ci: '1875299 TJ'}
+  Persona_392346 LP: {nombre: 'JOSE ANTONIO GUSMAN CHAVEZ', ci: '392346 LP'}
+  Persona_4887138 LP: {nombre: 'VANIA RENNE RODRIGUEZ MEJIA', ci: '4887138 LP'}
+  Persona_1564793 SC: {nombre: 'DRA.RUTH KATHYA VACA MARCO', ci: '1564793 SC'}
