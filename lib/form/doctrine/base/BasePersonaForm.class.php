@@ -37,10 +37,10 @@ abstract class BasePersonaForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'nombre'           => new sfValidatorString(array('max_length' => 50)),
-      'ap_paterno'       => new sfValidatorString(array('max_length' => 30)),
-      'ap_materno'       => new sfValidatorString(array('max_length' => 30)),
-      'ci'               => new sfValidatorString(array('max_length' => 12)),
-      'expedido'         => new sfValidatorString(array('max_length' => 2)),
+      'ap_paterno'       => new sfValidatorString(array('max_length' => 30, 'required' => false)),
+      'ap_materno'       => new sfValidatorString(array('max_length' => 30, 'required' => false)),
+      'ci'               => new sfValidatorString(array('max_length' => 20, 'required' => false)),
+      'expedido'         => new sfValidatorString(array('max_length' => 2, 'required' => false)),
       'direccion'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'telefono'         => new sfValidatorString(array('max_length' => 20, 'required' => false)),
       'celular'          => new sfValidatorString(array('max_length' => 20, 'required' => false)),
@@ -53,13 +53,6 @@ abstract class BasePersonaForm extends BaseFormDoctrine
       'created_at'       => new sfValidatorDateTime(),
       'updated_at'       => new sfValidatorDateTime(),
     ));
-
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorAnd(array(
-        new sfValidatorDoctrineUnique(array('model' => 'Persona', 'column' => array('ci'))),
-        new sfValidatorDoctrineUnique(array('model' => 'Persona', 'column' => array('email'))),
-      ))
-    );
 
     $this->widgetSchema->setNameFormat('persona[%s]');
 

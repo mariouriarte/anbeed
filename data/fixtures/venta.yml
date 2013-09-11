@@ -1,7 +1,7 @@
 ## YAML Template.
 ---
 TipoVenta:
-  RECETAMEDICA:
+  RECETA MEDICA:
     nombre: RECETA MÉDICA
   RECETAMEDICAARCHIVADA:
     nombre: RECETA MÉDICA ARCHIVADA

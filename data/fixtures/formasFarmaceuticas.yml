@@ -20,6 +20,7 @@ FormaFarmaceutica:
 #  Pasta:
 #    nombre: PASTA
 
+  COMP. RECUB.: {nombre: COMP. RECUB.}
   POLVOINYECTABLE: {nombre: POLVO / INYECTABLE}
   TABLETAS: {nombre: TABLETAS}
   SUSPENSION: {nombre: SUSPENSION}

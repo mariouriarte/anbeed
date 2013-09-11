@@ -14,10 +14,10 @@ abstract class BasePersonaFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'nombre'           => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'ap_paterno'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'ap_materno'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'ci'               => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'expedido'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'ap_paterno'       => new sfWidgetFormFilterInput(),
+      'ap_materno'       => new sfWidgetFormFilterInput(),
+      'ci'               => new sfWidgetFormFilterInput(),
+      'expedido'         => new sfWidgetFormFilterInput(),
       'direccion'        => new sfWidgetFormFilterInput(),
       'telefono'         => new sfWidgetFormFilterInput(),
       'celular'          => new sfWidgetFormFilterInput(),

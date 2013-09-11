@@ -120,7 +120,7 @@ abstract class BaseMedicamento extends sfDoctrineRecord
              ));
         $this->hasColumn('tipo_venta_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('formula_cc_id', 'integer', null, array(
              'type' => 'integer',

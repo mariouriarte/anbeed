@@ -75,23 +75,23 @@ abstract class BasePersona extends sfDoctrineRecord
              ));
         $this->hasColumn('ap_paterno', 'string', 30, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 30,
              ));
         $this->hasColumn('ap_materno', 'string', 30, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 30,
              ));
-        $this->hasColumn('ci', 'string', 12, array(
+        $this->hasColumn('ci', 'string', 20, array(
              'type' => 'string',
-             'notnull' => true,
-             'unique' => true,
-             'length' => 12,
+             'notnull' => false,
+             'unique' => false,
+             'length' => 20,
              ));
         $this->hasColumn('expedido', 'string', 2, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 2,
              ));
         $this->hasColumn('direccion', 'string', 255, array(
@@ -117,7 +117,7 @@ abstract class BasePersona extends sfDoctrineRecord
         $this->hasColumn('email', 'string', 255, array(
              'type' => 'string',
              'notnull' => false,
-             'unique' => true,
+             'unique' => false,
              'length' => 255,
              ));
         $this->hasColumn('fecha_nacimiento', 'date', null, array(

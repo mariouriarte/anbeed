@@ -4,16 +4,20 @@ Persona:
   actAs: {Timestampable: ~}
   columns:
     nombre:           {type: string(50), notnull: true}
-    ap_paterno:       {type: string(30), notnull: true}
-    ap_materno:       {type: string(30), notnull: true}
-    ci:               {type: string(12), notnull: true, unique: true}
-    expedido:         {type: string(2), notnull: true}
+    #true
+    ap_paterno:       {type: string(30), notnull: false} 
+    #true
+    ap_materno:       {type: string(30), notnull: false}
+    #true
+    ci:               {type: string(20), notnull: false, unique: false}
+    #true
+    expedido:         {type: string(2), notnull: false}
     direccion:        {type: string(255)}
     telefono:         {type: string(20)}
     celular:          {type: string(20)}
     fax:              {type: string(20)}
     casilla:          {type: string(10)}
-    email:            {type: string(255), notnull: false, unique: true}
+    email:            {type: string(255), notnull: false, unique: false}
     fecha_nacimiento: {type: date, notnull: false}
     is_active:        {type: boolean, default: true, notnull: true}
     foto:             {type: string(50), default: null, notnull: false}
@@ -157,7 +161,7 @@ Medicamento:
     laboratorio_fabricante_id: {type: integer, notnull: true}
     forma_farmaceutica_id:     {type: integer, notnull: true}
     via_administracion_id:     {type: integer, notnull: false}
-    tipo_venta_id:             {type: integer, notnull: true}    
+    tipo_venta_id:             {type: integer, notnull: false}    
     formula_cc_id:             {type: integer, notnull: false}
     nombre_comercial:          {type: string(255), notnull: true}
     nombre_generico:           {type: string(255), notnull: true}
