@@ -25,7 +25,8 @@ generator:
         display: [empresa, producto, laboratorio]
         actions:
           ir_portal: {label: Volver al Portal}
-      filter:  ~
+      filter:  
+        display: [codigo_producto_id]
       form:    ~
       edit:    ~
       new:     ~

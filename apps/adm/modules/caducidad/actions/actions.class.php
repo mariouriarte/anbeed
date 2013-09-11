@@ -28,8 +28,15 @@ class caducidadActions extends autoCaducidadActions
         }
         else
         {
-            $this->redirect('@homepage');
+            if(!$this->getUser()->getAttribute('time'))
+                $this->redirect('@homepage');
         }
         
     }
+    public function executeListIrPortal(sfWebRequest $request)
+    {
+        //$this->getUser()->setAttribute('empresa', NULL);
+        $this->redirect('/portal_dev.php/inicio/index');
+    }
+    
 }
