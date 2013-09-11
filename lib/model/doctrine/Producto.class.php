@@ -14,19 +14,19 @@ class Producto extends BaseProducto
 {
     public function __toString()
     {
-       if(isset($this->Medicamento))
+       if(isset($this->Medicamento) || $this->Medicamento)
        {
            return $this->CodigoProducto->getNombre()." - ".$this->Medicamento->getNombreComercial();
        }
-       else if(isset($this->DispositivoMedico))
+       else if(isset($this->DispositivoMedico) || $this->DispositivoMedico)
        {  
            return $this->CodigoProducto->getNombre()." - ".$this->DispositivoMedico->getNombreComercial();
        } 
-       else if(isset($this->Cosmetico))
+       else if(isset($this->Cosmetico) || $this->Cosmetico)
        {  
            return $this->CodigoProducto->getNombre()." - ".$this->Cosmetico->getNombre();
        } 
-       else if(isset($this->Higiene))
+       else if(isset($this->Higiene)|| $this->Higiene)
        {  
            return $this->CodigoProducto->getNombre()." - ".$this->Higiene->getNombre();
        }
@@ -36,19 +36,20 @@ class Producto extends BaseProducto
     
     public function getProducto()
     {
-       if(isset($this->Medicamento))
+       
+       if($this->Medicamento)
        {
            return $this->CodigoProducto->getNombre()." - ".$this->Medicamento->getNombreComercial();
        }
-       else if(isset($this->DispositivoMedico))
+       else if($this->DispositivoMedico)
        {  
            return $this->CodigoProducto->getNombre()." - ".$this->DispositivoMedico->getNombreComercial();
        } 
-       else if(isset($this->Cosmetico))
+       else if($this->Cosmetico)
        {  
            return $this->CodigoProducto->getNombre()." - ".$this->Cosmetico->getNombre();
        } 
-       else if(isset($this->Higiene))
+       else if($this->Higiene)
        {  
            return $this->CodigoProducto->getNombre()." - ".$this->Higiene->getNombre();
        }
@@ -80,7 +81,8 @@ class Producto extends BaseProducto
     
     public function getLaboratorio()
     {
-       if(isset($this->Medicamento))
+       //echo $this->Medicamento->LaboratorioFabricante->getNombre();
+       if($this->Medicamento)
        {
            $this->Medicamento->LaboratorioFabricante->getNombre();
        }
