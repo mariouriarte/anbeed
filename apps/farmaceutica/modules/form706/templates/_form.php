@@ -53,20 +53,12 @@
       </tr>
       <tr>
           <th>Ciudad / Distrito / Provincia / Departamento</th>
-<<<<<<< HEAD
-          <td><?php echo $higiene->Empresa->Ciudad->getNombre() ?></td>
-      </tr>
-      <tr>
-        <th>País</th>
-        <td><?php  echo $higiene->Empresa->Ciudad->Pais->getNombre() ?></td>
-=======
           <td><?php echo $higiene->Empresa->Ciudad->getNombre();
           ?></td>
       </tr>
       <tr>
         <th>País</th>
         <td><?php echo $higiene->Empresa->Ciudad->Pais->getNombre(); ?></td>
->>>>>>> pdf706b
       </tr>
       <tr>
         <th>Teléfono</th>
@@ -273,11 +265,7 @@
       </tr>
       <tr>
           <th>Grupo</th>
-<<<<<<< HEAD
-          <td><?php echo $higiene->getGrupoHigieneId() ?></td>
-=======
           <td><?php //echo $higiene->getGrupoHigiene() ?></td>
->>>>>>> pdf706
       </tr>
       <tr>
           <th>variedades</th>

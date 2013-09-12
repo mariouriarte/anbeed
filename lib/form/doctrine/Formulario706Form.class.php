@@ -58,20 +58,20 @@ class Formulario706Form extends BaseFormulario706Form
                   'choices'  => $this->tipo_maquila));
         $this->validatorSchema['maquila_tipo'] = new sfValidatorString(array('required' => false));
         
-        ///// Responsable comercial Pais
+        //// Responsable comercial Pais
         $this->widgetSchema['pais_id'] = new sfWidgetFormDoctrineChoice(
-            array('model'        => 'Pais',
-                  'add_empty'    => ' - Seleccione país'));
-        $this->validatorSchema['rescom_pais_id'] = new sfValidatorDoctrineChoice(
-            array('model' => 'Pais', 'required' => false));
-        
-        ////// Responsable comercial ciudad
-//        $this->widgetSchema['rescom_ciudad_id'] = new sfWidgetFormDoctrineDependentSelect(
-//            array('model'     => 'Ciudad',
-//                  'depends'   => 'Pais',
-//                  'add_empty' => ' - Seleccione ciudad'));
-//        $this->validatorSchema['rescom_ciudad_id'] = new sfValidatorDoctrineChoice(
-//            array('model' => 'Ciudad', 'required' => true));
+            array('model'     => 'Pais',
+                  'add_empty' => ' - Seleccione país'));
+        $this->validatorSchema['pais_id'] = new sfValidatorDoctrineChoice(
+            array('model' => 'Pais', 'required' => true));
+       
+        //// Responsable comercial ciudad
+        $this->widgetSchema['rescom_ciudad_id'] = new sfWidgetFormDoctrineDependentSelect(
+            array('model'     => 'Ciudad',
+                  'depends'   => 'Pais',
+                  'add_empty' => ' - Seleccione ciudad'));
+        $this->validatorSchema['rescom_ciudad_id'] = new sfValidatorDoctrineChoice(
+            array('model' => 'Ciudad', 'required' => true));
       
     }
 }
