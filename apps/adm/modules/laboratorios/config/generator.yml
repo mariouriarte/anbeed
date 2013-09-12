@@ -21,10 +21,11 @@ generator:
         direccion:      {label: 'Dirección'}
         telefono:       {label: 'Teléfono'}
         email:          {label: 'E-mail'}
+        list_pais:      {label: 'País'} 
       list: 
         title: Listado de Laboratorios Farmaceuticos Registrados
         max_per_page: 15
-        display: [nombre, pais, telefono]
+        display: [nombre, list_pais, telefono]
         actions:
           ir_portal: {label: Volver al Portal}
           _new: ~

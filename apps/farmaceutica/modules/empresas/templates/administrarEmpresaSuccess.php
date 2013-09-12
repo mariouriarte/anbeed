@@ -53,11 +53,11 @@
                     <h2 class="titulo"><img src="/images/icons/productos.svg" /> &nbsp; Productos</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/farmaceutica_dev.php/medicamentos"><span>Medicamentos</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/reactivos"><span>Reactivos para Diagnóstico</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/dispositivos"><span>Dispositivos medicos</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/cosmetico"><span>Cosméticos</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/higiene"><span>Higiene y limpieza</span></a></li>
+                            <li><?php echo link_to('Medicamentos', 'medicamentos/index')?></li>
+                            <li><?php echo link_to('Reactivos', 'reactivos/index')?></li>
+                            <li><?php echo link_to('Dispositivos médicos', 'dispositivos/index')?></li>
+                            <li><?php echo link_to('Cosméticos', 'cosmetico/index')?></li>
+                            <li><?php echo link_to('Higiene y limpieza', 'higiene/index')?></li>
                         </ul>
                     </div>
                 </div>
@@ -83,49 +83,12 @@
             </div>
         </div>
     </div>
-<!--    <div class="linea">
-        <div class="columna">
-            <div class="cubo">
-                <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/package-x-generic.svg" />Medicamentos</h2>
-                    <div class="contenido">
-                        <ul>
-                            <li><a href="/farmaceutica_dev.php/prodmed"><span>Productos Medicamentos</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-<!--        <div class="columna">
-            <div class="cubo">
-                <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/package-x-generic.svg" />Dispositivos Médicos</h2>
-                    <div class="contenido">
-                        <ul>
-                            <li><a href="/adm_dev.php/usuarios"><span>Productos Dispositivos Médicos</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columna">
-            <div class="cubo">
-                <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/package-x-generic.svg" />Cosméticos</h2></h2>
-                    <div class="contenido">
-                        <ul>
-                            <li><a href="/adm_dev.php/personas"><span>Productos Cosméticos</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>-->
+
         
-    </div>
+</div>
     <ul class="acciones_lista">
         <li class="acciones_lista_list">
             <?php echo link_to('Volver al listado', 'empresas/index') ?>
         </li>
     </ul>
-</div>
 

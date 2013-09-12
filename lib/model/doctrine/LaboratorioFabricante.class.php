@@ -15,5 +15,10 @@ class LaboratorioFabricante extends BaseLaboratorioFabricante
     public function __toString()
     {
        return $this->getNombre();
-}
+    }
+        
+    public function getListPais()
+    {
+        return $this->Pais->getNombre();
+    }
 }

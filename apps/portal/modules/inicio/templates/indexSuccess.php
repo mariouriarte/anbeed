@@ -22,8 +22,8 @@
                     <h2 class="titulo">Laboratorios</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm_dev.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
-                            <li><a href="/adm_dev.php/laboratorios/new"><span>Nuevo Laboratorios Fabricantes</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/laboratorios/new"><span>Nuevo Laboratorios Fabricantes</span></a></li>
                         </ul>
                     </div>
                 </div>
