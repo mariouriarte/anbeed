@@ -36,6 +36,7 @@ generator:
         object_actions:
           adm_empresa: {label: Ingresar, action: administrarEmpresa}
           imprimir:    {label: Imprimir, action: print}
+          _delete: ~
         actions:
           ir_portal: {label: Volver al Portal}
           _new: ~
