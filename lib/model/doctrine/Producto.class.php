@@ -114,4 +114,29 @@ class Producto extends BaseProducto
        }
     }
     
+    public function getFechaVencimiento()
+    {
+       //echo $this->Medicamento->LaboratorioFabricante->getNombre();
+       if($this->getCodigoProductoId() == 1)
+       {
+           return $this->Medicamento->LaboratorioFabricante->getNombre();
+       }
+       if($this->getCodigoProductoId() == 2)
+       {  
+           return $this->DispositivoMedico->LaboratorioFabricante->getNombre();
+       } 
+       if($this->getCodigoProductoId() == 3)
+       {  
+           return $this->Cosmetico->LaboratorioFabricante->getNombre();
+       } 
+       if($this->getCodigoProductoId() == 4)
+       {  
+           return $this->Higiene->LaboratorioFabricante->getNombre();
+       }
+       if($this->getCodigoProductoId() == 5)
+       {
+           return $this->Reactivo->LaboratorioFabricante->getNombre();
+       }
+    }
+    
 }
