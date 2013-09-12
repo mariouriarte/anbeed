@@ -45,7 +45,7 @@
                                 <div id="info-user">
                                     <h4>Usuario: <?php echo $sf_user->getUsername(); ?></h4>
                                     <h4>Nombre:  <?php echo $sf_user->getGuardUser()->getPersona(); ?></h4>
-                                    <h3><?php echo link_to('Cerrar session', '@sf_guard_signout',
+                                    <h3><?php echo link_to(image_tag('icons/salir.svg', 'alt=Salir' ).' Cerrar sesión', '@sf_guard_signout',
                                                   array('id' => 'boton-salir')) 
                                         ?>
                                     </h3>
