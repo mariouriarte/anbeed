@@ -25,4 +25,9 @@ class Persona extends BasePersona
     {
         return $this->getApPaterno().' '.$this->getApMaterno().' '.$this->getNombre();
     }
+    
+    public function getUsername()
+    {
+        return $this->sfGuardUser->getUsername();
+    }
 }

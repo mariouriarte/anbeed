@@ -105,7 +105,7 @@
                     <h2 class="titulo"><img src="/images/icons/cuenta.svg" />Cuenta</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/usuarios"><span>Usuarios</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/persona_usuario"><span>Usuarios</span></a></li>
                             <?php if ($sf_user->isAuthenticated()): ?>
                                 <li><a href="<?php echo url_for('@sf_guard_signout') ?>"><span>Salir</span></a></li>
                             <?php else: ?>

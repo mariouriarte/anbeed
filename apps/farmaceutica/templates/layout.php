@@ -44,6 +44,7 @@
                             <?php if ($sf_user->isAuthenticated()): ?>
                                 <div id="info-user">
                                     <h4>Usuario: <?php echo $sf_user->getUsername(); ?></h4>
+                                    <h4>Nombre:  <?php echo $sf_user->getGuardUser()->getPersona(); ?></h4>
                                     <h3><?php echo link_to('Cerrar session', '@sf_guard_signout',
                                                   array('id' => 'boton-salir')) 
                                         ?>

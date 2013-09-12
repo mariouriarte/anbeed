@@ -62,6 +62,32 @@ class PersonaForm extends BasePersonaForm
             $subForm2->embedForm(1, $form2);
             $this->embedForm('Nuevo Regente', $subForm2);
         }
+        
+        if(sfContext::getInstance()->getModuleName() == "persona_usuario")
+        {
+            
+            //Form enbebido, USUARIO\
+            $subForm2 = new sfForm();
+            if($this->isNew())
+            {
+                $usuario = new sfGuardUser();
+            } else {
+//                $regente = Doctrine::getTable('RegenteFarmaceutico')
+//                    ->find(1);
+                $usuarios = Doctrine_Query::create()
+                    ->from('sfGuardUser u')                    
+                    ->where('u.persona_id = ?', $this->getObject()->getId())
+                    ->execute();
+        
+                $usuario = $usuarios[0];
+            }
+            
+            $usuario->Persona = $this->getObject();
+            
+            $form2 = new sfGuardUserForm($usuario);
+            $subForm2->embedForm(1, $form2);
+            $this->embedForm('usuario', $subForm2);
+        }
        /*AJUSTANDO LOS TAMAños*/
         $this->widgetSchema['nombre']->setAttribute('size' , 50);
         $this->widgetSchema['ap_materno']->setAttribute('size' , 50);
