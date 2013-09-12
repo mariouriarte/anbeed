@@ -28,7 +28,14 @@ Decisión 706 señalado en los campos del Formato FNSOAH-001.</p>
             párrafo del Artículo 12 de la Decisión 706). En este último caso,
             deberá colocar adicionalmente una "X" en la Parte I del formato
             FNSOHA-001, como sigue:
-            I. DATOS DEL  TITULAR - IMPORTADOR <br />
+            
+            <?php 
+            if($form_706->getDatos() == 'TITULAR'):
+            ?>
+                I. DATOS DEL  TITULAR X IMPORTADOR<br />
+            <?php else: ?>
+                I. DATOS DEL  TITULAR IMPORTADOR X<br />
+            <?php endif ?>
             La ANC en respuesta a esta notificación, emitirá el Formato FNSOHA-002.
         </td>
     </tr>
@@ -69,23 +76,39 @@ Decisión 706 señalado en los campos del Formato FNSOAH-001.</p>
 
 <table border="1">
     <tr>
-        <td>Notificación Sanitaria Obligatoria (NSO)</td>
+        <td>
+            <?php echo ($form_706->getTipoTramiteFormularioId() == 1) ? 'X' : '' ?>
+            Notificación Sanitaria Obligatoria (NSO)
+        </td>
     </tr>    
     <tr>
-        <td>Solicitud de Renovación del código de identificación de la NSO</td>
+        <td>
+            <?php echo ($form_706->getTipoTramiteFormularioId() == 2) ? 'X' : '' ?>
+            Solicitud de Renovación del código de identificación de la NSO
+        </td>
     </tr>    
     <tr>
-        <td>Solicitud de Reconocimiento del código de identificación de la NSO</td>
+        <td>
+            <?php echo ($form_706->getTipoTramiteFormularioId() == 2) ? 'X' : '' ?>
+            Solicitud de Reconocimiento del código de identificación de la NSO
+        </td>
     </tr>    
     <tr>
-        <td>Información de Cambios</td>
+        <td>
+            <?php echo ($form_706->getTipoTramiteFormularioId() == 2) ? 'X' : '' ?>
+            Información de Cambios
+        </td>
     </tr>    
 </table>
 
 <table border="1">
     <tr>
         <td colspan="2">
-            I. DATOS DEL    TITULAR  	     IMPORTADOR  <br />
+            <?php if($form_706->getDatos() == 'TITULAR'): ?>
+                I. DATOS DEL TITULAR X IMPORTADOR  <br />
+            <?php else: ?>
+                I. DATOS DEL TITULAR IMPORTADOR X<br />
+            <?php endif; ?>
             Artículo 7, numeral 1, literales a) y c); y Artículo 12 de la Decisión 706
         </td>
     </tr>

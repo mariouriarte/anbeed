@@ -40,14 +40,24 @@ class formulario706Actions extends autoFormulario706Actions
     // pdf
     public function executeExportPdf(sfWebRequest $request)
     {
+        //$id = $request->getParameter('id');
+        $form_706 = $this->getRoute()->getObject();
         //$user = $this->getUser();
-//        $regional_id = $user->getAttribute('regional_id');
+        //$regional_id = $user->getAttribute('regional_id');
+        
+//        $q = Doctrine_Query::create()
+//                    ->from('Formulario12 f')
+//                    ->leftJoin('f.Reactivo r')
+//                    ->leftJoin('r.Empresa e') 
+//                    ->where('r.empresa_id = ?', $empresa->getId())
+//                    ->orderBy('f.id ASC');
         
         // estilos para este tipo de documento
-//        $css = file_get_contents(sfConfig::get('sf_root_dir') . '/web/css/listado_general_pdf.css');
-//        $css = '<style>'.$css.'</style>';
-//        
-        $html = $this->getPartial('formulario706/contenido_impresion');
+        //$css = file_get_contents(sfConfig::get('sf_root_dir') . '/web/css/listado_general_pdf.css');
+        //$css = '<style>'.$css.'</style>';
+
+        echo $html = $this->getPartial('formulario706/contenido_impresion',
+            array('form_706' => $form_706));
         
         // PDF
         // ------------------------------------
@@ -83,67 +93,10 @@ class formulario706Actions extends autoFormulario706Actions
         
         // ---------------------------------------------------------
         // Close and output PDF document
-        $pdf->Output('Formulario706.pdf', 'I');
+        //$pdf->Output('Formulario706.pdf', 'I');
 
         // Stop symfony process
         throw new sfStopException();
     }
     
-    public function executePrint(sfWebRequest $request)
-    {
-        $this->empresa = $this->getRoute()->getObject();
-        $config = sfTCPDFPluginConfigHandler::loadConfig();
-                  sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
-
-        $pdf = new sfTCPDF();
-        // set document information
-        $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('Capsule Systems');
-        $pdf->SetTitle('Formulario');
-        $pdf->SetSubject('ANBEED SRL');
-        $pdf->SetKeywords('TCPDF, PDF, ANBEED SRL, Formulario003, impresion');
-
-        // set default header data
-        //$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 001', PDF_HEADER_STRING);
-
-        // set header and footer fonts
-        //$pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
-        //$pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
-
-        // set default monospaced font
-        //
-        //set margins
-        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
-       // $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-        //$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
-
-        //set auto page breaks
-        //$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-
-        //set image scale factor
-        //$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-
-        // ---------------------------------------------------------
-
-        // set default font subsetting mode
-        //$pdf->setFontSubsetting(true);
-
-        // Set font
-        // dejavusans is a UTF-8 Unicode font, if you only need to
-        // print standard ASCII chars, you can use core fonts like
-        // helvetica or times to reduce file size.
-        $pdf->SetFont('dejavusans', '', 8, '', true);
-
-        // Add a page
-        // This method has several options, check the source code documentation for more information.
-        $pdf->AddPage();
-        
-        
-        
-        //$html = "Imprimiremos la empresa $this->empresa";
-        //$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
-        //$pdf->writeHTML($html, true, false, false, 0);
-        $pdf->Output('Formulario003.pdf', 'I');
-        throw new sfStopException();
-    }
 }

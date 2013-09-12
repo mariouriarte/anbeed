@@ -14,6 +14,9 @@ class Formulario706Form extends BaseFormulario706Form
                                     'Empacador'      => 'Empacador',
                                     'Acondicionador' => 'Acondicionador');
     
+    protected $datos = array('TITULAR'     => 'TITULAR',
+                             'IMPORTACIÓN' => 'IMPORTACIÓN');
+    
     public function configure()
     {
         unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
@@ -27,7 +30,8 @@ class Formulario706Form extends BaseFormulario706Form
         //// datos
         $this->widgetSchema['datos'] = new sfWidgetFormChoice(
             array('expanded' => true, 
-                  'choices'  =>  array('TITULAR', 'IMPORTACIÓN')));
+                  'choices'  => $this->datos));
+        $this->validatorSchema['datos'] = new sfValidatorString(array('required' => false));
         
         //// datos titular
         $this->widgetSchema['datos_titular'] = new sfWidgetFormChoice(
