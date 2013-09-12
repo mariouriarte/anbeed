@@ -4,7 +4,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <!--<h2 class="titulo"><img src="/images/icons/portafolio1.png" width="48" height="40"/> Empresas</h2>-->
+                    <h2 class="titulo"><img src="/images/icons/portafolio1.png" width="48" height="40"/> Empresas</h2>
                     <h2 class="titulo">Empresas</h2>
                     <div class="contenido">
                         <ul>
@@ -18,7 +18,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <!--<h2 class="titulo"><img src="/images/icons/applications-development.svg" /> Laboratorios</h2>-->
+                    <h2 class="titulo"><img src="/images/icons/applications-development.svg" /> Laboratorios</h2>
                     <h2 class="titulo">Laboratorios</h2>
                     <div class="contenido">
                         <ul>
@@ -32,7 +32,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <!--<h2 class="titulo"><img src="/images/icons/text.svg" /> Formularios</h2>-->
+                    <h2 class="titulo"><img src="/images/icons/text.svg" /> Formularios</h2>
                     <h2 class="titulo">Formularios</h2>
                     <div class="contenido">
                         
