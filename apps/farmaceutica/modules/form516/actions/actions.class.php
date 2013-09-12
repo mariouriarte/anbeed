@@ -20,6 +20,9 @@ class form516Actions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new Formulario516Form();
+        
+    $cosmetico = $this->getUser()->getAttribute('cosmetico');
+    $this->form->setDefault('cosmetico_id', $cosmetico->getId());
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -65,24 +68,23 @@ class form516Actions extends sfActions
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
-        $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';  
-        try
+        $notice = $form->getObject()->isNew() ? 'El elemento fue creado correctamente.' : 'El elemento fue actualizado correctamente.';
+        $is_new = $form->getObject()->isNew();
+        $formulario516 = $form->save();
+        if($is_new)
         {
-            $formulario516 = $form->save();
             $formulario = new Formulario();
             $formulario -> save();
             $formulario516 -> setFormulario($formulario);
             $formulario516 -> save();
         }
-        catch (Doctrine_Validator_Exception $e) 
-        {
-                $this->getUser()->setFlash('notice', $notice);
-                $this->redirect('form516/edit?id='.$formulario516->getId());
-        }
+        $this->getUser()->setFlash('notice', $notice);
+        $this->redirect('form516/edit?id='.$formulario516->getId());
+        
     }
     else
     {
-      $this->getUser()->setFlash('error', 'The item has not been saved due to some errors.', false);
+        $this->getUser()->setFlash('error', 'El elemento no ha sido guardado debido a que contiene algunos errores.');
     }
   }
 }

@@ -16,4 +16,17 @@ class Formulario11Table extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Formulario11');
     }
+    
+    public function selectForm11DeEmpresa()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        $q = Doctrine_Query::create()
+                    ->from('Formulario11 f')
+//                    ->leftJoin('f.Medicamento p')
+//                    ->leftJoin('p.Empresa e') 
+                    ->where('f.empresa_id = ?', $empresa->getId())
+                    ->orderBy('f.id ASC');
+        return $q;
+    }
 }

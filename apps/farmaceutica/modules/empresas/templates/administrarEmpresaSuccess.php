@@ -9,6 +9,9 @@
 <?php end_slot(); ?>
 
 <h1>Administrador de Empresa</h1>
+<?php if ($sf_user->hasFlash('notice')): ?>
+  <div class="notice"><?php echo $sf_user->getFlash('notice') ?></div>
+<?php endif; ?>
 <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
 <div class="portal">
     <div class="linea">
@@ -17,7 +20,10 @@
                 <div class="adentro">
                     <h2 class="titulo"><img src="/images/icons/applications-debugging.svg" />Administración</h2>
                     <div class="contenido">
-                        <ul>
+                        <ul> 
+
+                            <li><?php echo link_to(image_tag('/images/icons/print.svg').'&nbsp;Imprimir Form. 003', 'empresas/print?id=' . $empresa->getId()) ?></li>
+                            
                             <li><?php echo link_to('Editar empresa', 'empresas/edit?id=' . $empresa->getId()) ?></li>
                             
                             <li>
@@ -44,7 +50,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/package-x-generic.svg" />Productos</h2>
+                    <h2 class="titulo"><img src="/images/icons/productos.svg" /> &nbsp; Productos</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica_dev.php/medicamentos"><span>Medicamentos</span></a></li>
@@ -63,13 +69,14 @@
                     <h2 class="titulo"><img src="/images/icons/text.svg" /> Formularios</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/farmaceutica_dev.php/formulario5porempresa"><span>Formulario 005</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/formulario12porempresa"><span>Formulario 012</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/formulario27porempresa"><span>Formulario 027</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/form516porempresa"><span>Desición 516</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/form706porempresa"><span>Desición 706</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/formulario7"><span>Solicitud de Calificacion</span></a></li>
-                            <li><a href="/farmaceutica_dev.php/formulario11"><span>Despacho Aduanero</span></a></li>
+                            <li><?php echo link_to('Formulario 003', 'empresas/edit?id=' . $empresa->getId()) ?></li>
+                            <li><?php echo link_to('Formulario 005', 'formulario5porempresa/index') ?></li>
+                            <li><?php echo link_to('Formulario 007', 'formulario7porempresa/index') ?></li>
+                            <li><?php echo link_to('Formulario 011', 'formulario11/index') ?></li>
+                            <li><?php echo link_to('Formulario 012', 'formulario12porempresa/index') ?></li>
+                            <li><?php echo link_to('Formulario 027', 'formulario27porempresa/index') ?></li>
+                            <li><?php echo link_to('Desicion 516', 'form516porempresa/index') ?></li>
+                            <li><?php echo link_to('Desicion 706', 'form706porempresa/index') ?></li>
                         </ul>
                     </div>
                 </div>

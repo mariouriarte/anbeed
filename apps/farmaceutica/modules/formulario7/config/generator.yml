@@ -22,14 +22,18 @@ generator:
         efectos_secundarios:    {label: Efectos secundarios/Interacciones}
       list:    
         title: Listado de Solicitudes de Calificación
-        display: [producto_id, observaciones, calificacion]
+#        table_method: selectForms7DeEmpresa
+        display: [producto, observaciones, calificacion]
         actions:
-          ir_empresa: {label: Volver a Empresa}
-          new:      {label: Nuevo, action: nuevo}
+          ir_empresa:   {label: Volver a Empresa}
+          ir_productos:  {label: Volver a Producto}
+          new:          {label: Nuevo, action: nuevo}
         object_actions:
-          edit: {label: Editar, action: editar}
+          imprimir:    {label: Imprimir, action: print}
+          edit:        {label: Editar, action: editar}
+          _delete: ~
       filter: 
-        display: [producto_id, tipo_calificacion_id]
+        display: [tipo_calificacion_id]
       form:    ~
       edit:   
         title: Editar Solicitud de Calificacion

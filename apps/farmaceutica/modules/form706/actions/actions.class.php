@@ -20,9 +20,9 @@ class form706Actions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new Formulario706Form();
-    
-    //$this->form->setDefault('notes', $text);
-    
+
+    $higiene = $this->getUser()->getAttribute('higiene');
+    $this->form->setDefault('higiene_id', $higiene->getId());
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -68,13 +68,23 @@ class form706Actions extends sfActions
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
+      $notice = $form->getObject()->isNew() ? 'El elemento fue creado correctamente.' : 'El elemento fue actualizado correctamente.';
+      $is_new = $form->getObject()->isNew();
+      
       $formulario706 = $form->save();
-      $formulario = new Formulario();
-      $formulario -> save();
-      $formulario706 -> setFormulario($formulario);
-      $formulario706 -> save();
-
+      if($is_new)
+      {
+        $formulario = new Formulario();
+        $formulario -> save();
+        $formulario706 -> setFormulario($formulario);
+        $formulario706 -> save();
+      }
+      $this->getUser()->setFlash('notice', $notice);
       $this->redirect('form706/edit?id='.$formulario706->getId());
+    }
+    else
+    {
+        $this->getUser()->setFlash('error', 'El elemento no ha sido guardado debido a que contiene algunos errores.');
     }
   }
 }

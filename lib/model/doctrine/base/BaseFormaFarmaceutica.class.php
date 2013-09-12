@@ -7,11 +7,14 @@
  * 
  * @property string $nombre
  * @property Doctrine_Collection $Medicamento
+ * @property Doctrine_Collection $Formulario7
  * 
  * @method string              getNombre()      Returns the current record's "nombre" value
  * @method Doctrine_Collection getMedicamento() Returns the current record's "Medicamento" collection
+ * @method Doctrine_Collection getFormulario7() Returns the current record's "Formulario7" collection
  * @method FormaFarmaceutica   setNombre()      Sets the current record's "nombre" value
  * @method FormaFarmaceutica   setMedicamento() Sets the current record's "Medicamento" collection
+ * @method FormaFarmaceutica   setFormulario7() Sets the current record's "Formulario7" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -37,7 +40,15 @@ abstract class BaseFormaFarmaceutica extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'forma_farmaceutica_id'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable();
+        $this->hasMany('Formulario7', array(
+             'local' => 'id',
+             'foreign' => 'forma_farmaceutica_id'));
+
+        $timestampable0 = new Doctrine_Template_Timestampable(array(
+             ));
+        $signable0 = new Doctrine_Template_Signable(array(
+             ));
         $this->actAs($timestampable0);
+        $this->actAs($signable0);
     }
 }

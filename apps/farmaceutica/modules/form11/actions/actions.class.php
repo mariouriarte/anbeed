@@ -8,11 +8,12 @@
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
+
 class form11Actions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->formulario11s = Doctrine_Core::getTable('Formulario11')
+    $this->formulario11 = Doctrine_Core::getTable('Formulario11')
       ->createQuery('a')
       ->execute();
   }
@@ -20,6 +21,8 @@ class form11Actions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new Formulario11Form();
+    $empresa = $this->getUser()->getAttribute('empresa');
+    $this->form->setDefault('empresa_id', $empresa->getId());
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -65,14 +68,25 @@ class form11Actions extends sfActions
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
-      $formulario11 = $form->save();
-      $formulario = new Formulario();
-      $formulario-> save();
+      $notice = $form->getObject()->isNew() ? 'El elemento fue creado correctamente.' : 'El elemento fue actualizado correctamente.';
+      $is_new = $form->getObject()->isNew();
       
-      $formulario11-> setFormulario($formulario);
-      $formulario11-> save();
-
+      $formulario11 = $form->save();
+      if($is_new)
+      {
+        $formulario = new Formulario();
+        $formulario-> save();
+        $formulario11-> setFormulario($formulario);
+        $formulario11-> save();
+      }
+      
+      // Añadimos los mensajes de notificacion
+      $this->getUser()->setFlash('notice', $notice);
       $this->redirect('form11/edit?id='.$formulario11->getId());
+    }
+    else
+    {
+        $this->getUser()->setFlash('error', 'El elemento no ha sido guardado debido a que contiene algunos errores.');
     }
   }
 }

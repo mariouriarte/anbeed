@@ -12,7 +12,7 @@ class PersonaForm extends BasePersonaForm
 {
     public function configure()
     {
-        unset($this['created_at'], $this['updated_at']);
+        unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
         
         //Fecha de nacimiento
         $years = range(date('Y') - 80, date('Y'));   
@@ -62,6 +62,12 @@ class PersonaForm extends BasePersonaForm
             $subForm2->embedForm(1, $form2);
             $this->embedForm('Nuevo Regente', $subForm2);
         }
+       /*AJUSTANDO LOS TAMAños*/
+        $this->widgetSchema['nombre']->setAttribute('size' , 50);
+        $this->widgetSchema['ap_materno']->setAttribute('size' , 50);
+        $this->widgetSchema['ap_paterno']->setAttribute('size' , 50);
+        $this->widgetSchema['direccion']->setAttribute('size' , 50);
+        $this->widgetSchema['email']->setAttribute('size' , 50);
         
     }
 }

@@ -1,20 +1,29 @@
 CodigoProducto:
   CodigoProducto_1:
     nombre: II
-    created_at: '2013-08-05 20:53:19'
-    updated_at: '2013-08-05 20:53:19'
+    descripcion: 'MEDICAMENTO IMPORTADO'
+    created_at:  '2013-08-05 20:53:19'
+    updated_at:  '2013-08-05 20:53:19'
   CodigoProducto_2:
     nombre: DI
-    created_at: '2013-08-05 20:53:27'
-    updated_at: '2013-08-05 20:53:27'
+    descripcion: 'DISPOSITIVO MEDICO IMPORTADO'
+    created_at:  '2013-08-05 20:53:27'
+    updated_at:  '2013-08-05 20:53:27'
   CodigoProducto_3:
     nombre: NSOC
-    created_at: '2013-08-05 20:53:37'
-    updated_at: '2013-08-05 20:53:37'
+    descripcion: 'NOTIFICACION SANITARIA OBLIGATORIA COSMETICO'
+    created_at:  '2013-08-05 20:53:37'
+    updated_at:  '2013-08-05 20:53:37'
   CodigoProducto_4:
     nombre: NSOH
-    created_at: '2013-08-05 20:53:44'
-    updated_at: '2013-08-05 20:53:44'
+    descripcion: 'NOTIFICACION SANITARIA OBLIGATORIA HIGIENE'
+    created_at:  '2013-08-05 20:53:44'
+    updated_at:  '2013-08-05 20:53:44'
+  CodigoProducto_5:
+    nombre: RI
+    descripcion: 'REACTIVO IMPORTADO'
+    created_at:  '2013-08-05 20:53:44'
+    updated_at:  '2013-08-05 20:53:44'
 Emisor:
   Emisor_1:
     nombre: 'ANBEED SRL'

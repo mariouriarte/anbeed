@@ -12,7 +12,7 @@ class LaboratorioFabricanteForm extends BaseLaboratorioFabricanteForm
 {
   public function configure()
   {
-      unset($this['created_at'], $this['updated_at']);
+      unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
       $this->widgetSchema['pais_id']->setOption('add_empty', 'Seleccione un país');
       ////// ciudad
       $this->widgetSchema['ciudad_id'] = new sfWidgetFormDoctrineDependentSelect(
@@ -21,6 +21,8 @@ class LaboratorioFabricanteForm extends BaseLaboratorioFabricanteForm
                 'add_empty' => 'Seleccione ciudad'));
       $this->validatorSchema['ciudad_id'] = new sfValidatorDoctrineChoice(
           array('model' => 'Ciudad', 'required' => true));
-      
+   
+      /*AJUSTANDO LOS TAMAños*/
+      $this->widgetSchema['nombre']->setAttribute('size' , 50);
   }
 }

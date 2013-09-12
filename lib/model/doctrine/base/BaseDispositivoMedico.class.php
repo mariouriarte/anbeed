@@ -175,7 +175,11 @@ abstract class BaseDispositivoMedico extends sfDoctrineRecord
              'local' => 'laboratorio_fabricante_id',
              'foreign' => 'id'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable();
+        $timestampable0 = new Doctrine_Template_Timestampable(array(
+             ));
+        $signable0 = new Doctrine_Template_Signable(array(
+             ));
         $this->actAs($timestampable0);
+        $this->actAs($signable0);
     }
 }

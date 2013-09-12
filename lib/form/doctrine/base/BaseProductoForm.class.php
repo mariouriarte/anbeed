@@ -15,15 +15,23 @@ abstract class BaseProductoForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'         => new sfWidgetFormInputHidden(),
-      'created_at' => new sfWidgetFormDateTime(),
-      'updated_at' => new sfWidgetFormDateTime(),
+      'id'                 => new sfWidgetFormInputHidden(),
+      'codigo_producto_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CodigoProducto'), 'add_empty' => true)),
+      'observacion'        => new sfWidgetFormInputText(),
+      'created_at'         => new sfWidgetFormDateTime(),
+      'updated_at'         => new sfWidgetFormDateTime(),
+      'created_by'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'add_empty' => true)),
+      'updated_by'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Updator'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
-      'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'created_at' => new sfValidatorDateTime(),
-      'updated_at' => new sfValidatorDateTime(),
+      'id'                 => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'codigo_producto_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('CodigoProducto'), 'required' => false)),
+      'observacion'        => new sfValidatorPass(array('required' => false)),
+      'created_at'         => new sfValidatorDateTime(),
+      'updated_at'         => new sfValidatorDateTime(),
+      'created_by'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'required' => false)),
+      'updated_by'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Updator'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('producto[%s]');

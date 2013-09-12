@@ -9,6 +9,7 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica<?php echo $env ?>.php/empresas"><span>Empresas</span></a></li>
+                            <li><a href="/farmaceutica<?php echo $env ?>.php/empresas/new"><span>Nueva Empresa</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -22,6 +23,7 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm_dev.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
+                            <li><a href="/adm_dev.php/laboratorios/new"><span>Nuevo Laboratorios Fabricantes</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -45,18 +47,53 @@
                 </div>
             </div>
         </div>
+
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <!--<h2 class="titulo"><img src="/images/icons/preferences-desktop.png" />Administración del Sistema</h2>-->
-                    <h2 class="titulo">Administración del Sistema</h2>
+                    <h2 class="titulo"><img src="/images/icons/correspondencia.svg" />Correspondecia</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/emisionc"><span>Emsión de Correspondecia</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tipodoc"><span>Tipo Documento</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/emisor"><span>Emisor Correspondecia</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Código Producto</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <h2 class="titulo"><img src="/images/icons/notificacion.svg" />Caducidad</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/caducidad?time=1"><span>Alerta de Caducidad <br />1 Mes</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/caducidad?time=2"><span>Alerta de Caducidad<br />6 meses</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/caducidad?time=3"><span>Alerta de Caducidad<br />12 meses</span></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <h2 class="titulo"><img src="/images/icons/applications-debugging.svg" />Administración</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/ingredientes"><span>Ingredientes</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/paises"><span>Paises</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/ciudades"><span>Ciudades</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/personas"><span>Personas</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/tventas"><span>Tipo Venta</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/administraciones"><span>Vía de Administración</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/gcosmetico"><span>Grupo Cosmético</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/ghigiene"><span>Grupo de Higiene</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -65,7 +102,7 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/locked.png" />Cuenta</h2>
+                    <h2 class="titulo"><img src="/images/icons/cuenta.svg" />Cuenta</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/usuarios"><span>Usuarios</span></a></li>

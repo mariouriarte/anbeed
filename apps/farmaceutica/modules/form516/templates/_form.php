@@ -42,226 +42,263 @@ function habilita(campo)
 <div class="content-info-empresa">
     <?php include_partial('formulario516/list_header') ?>
 </div>
+
 <form name="form516" action="<?php echo url_for('form516/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
 <?php endif; ?>
-<table class="tablas_form">
+<div class="container-form-decision">
+<table class="tbl-form-decision">
     <tbody>
       <?php echo $form->renderGlobalErrors() ?>
       <tr>
-          <td colspan="2">
+          <td colspan="2" class="celda-entera celda-abajo">
           <?php echo $form['tipo_tramite_formulario_id']->renderError() ?>
           <?php echo $form['tipo_tramite_formulario_id'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th>I. DATOS DEL</th>
-        <td>
-          <?php echo $form['datos']->renderError() ?>
-          <?php echo $form['datos'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th>Nombre o razón social</th>
-        <td><?php echo $cosmeticos->Empresa ?></td>
-      </tr>
-      <tr>
-        <th>Domicilio o dirección</th>
-        <td><?php echo $cosmeticos->Empresa->getDireccion() ?></td>
-      </tr>
-      <tr>
-          <th>Ciudad / Distrito / Provincia / Departamento</th>
-          <td><?php echo $cosmeticos->Empresa->Ciudad ?></td>
-      </tr>
-      <tr>
-        <th>País</th>
-        <td><?php  echo $cosmeticos->Empresa->Ciudad->Pais ?></td>
-      </tr>
-      <tr>
-        <th>Teléfono</th>
-        <td><?php  echo $cosmeticos->Empresa->getTelefono1() ." - ". $cosmeticos->Empresa->getTelefono2() ?></td>
-      </tr>
-      <tr>
-        <th>Fax</th>
-        <td><?php  echo $cosmeticos->Empresa->getFax() ?></td>
-      </tr>
-      <tr>
-        <th>Email</th>
-        <td><?php  echo $cosmeticos->Empresa->getEmail() ?></td>
-      </tr>
-      <tr>
-          <th>Nombre del</th>  
-          <td>
-          <?php echo $form['datos_titular']->renderError() ?>
-          <?php echo $form['datos_titular'] ?>
-            </td>
-      </tr>
-      <tr>
-          <td colspan="2"><?php  echo $cosmeticos->Empresa->RepresentanteLegal ?></td>
-      </tr>
-      <tr>
-          <th>Teléfono</th>
-          <td colspan="2"><?php  echo $cosmeticos->Empresa->RepresentanteLegal->Persona->getTelefono() ?></td>
-      </tr>
-      <tr>
-          <th>Email</th>
-          <td colspan="2"><?php  echo $cosmeticos->Empresa->RepresentanteLegal->Persona->getEmail() ?></td>
-      </tr>
-      <tr>
-          <th>Nombre del</th>  
-          <td>Responsable Técnico (Químico Farmacéutico)</td>
-      </tr>
-      <tr>
-          <td colspan="2"><?php  echo $cosmeticos->Empresa->RegenteFarmaceutico ?></td>
-      </tr>
-      <tr>
-          <th>Teléfono</th>
-          <td colspan="2"><?php  echo $cosmeticos->Empresa->RegenteFarmaceutico->Persona->getTelefono() ?></td>
-      </tr>
-      <tr>
-          <th>Email</th>
-          <td colspan="2"><?php  echo $cosmeticos->Empresa->RegenteFarmaceutico->Persona->getEmail() ?></td>
-      </tr>
-      <tr>
-        <th><?php echo $form['fecha']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['fecha']->renderError() ?>
-          <?php echo $form['fecha'] ?>
-        </td>
-      </tr>
-      <tr>
-          <th colspan="2">II. DATOS DEL FABRICANTE O FABRICANTES</th>
-      </tr>
-      <tr>
-        <th>Nombre o razón social</th>
-        <td><?php echo $cosmeticos->LaboratorioFabricante ?></td>
-      </tr>
-      <tr>
-        <th>Domicilio o dirección</th>
-        <td><?php echo $cosmeticos->LaboratorioFabricante->getDireccion() ?></td>
-      </tr>
-      <tr>
-          <th>Ciudad / Distrito / Provincia / Departamento</th>
-          <td><?php echo $cosmeticos->LaboratorioFabricante->Ciudad ?></td>
-      </tr>
-      <tr>
-        <th>País</th>
-        <td><?php  echo $cosmeticos->LaboratorioFabricante->Ciudad->Pais ?></td>
-      </tr>
-      <tr>
-        <th>Teléfono</th>
-        <td><?php  echo $cosmeticos->LaboratorioFabricante->getTelefono()?></td>
-      </tr>
-      <tr>
-        <th>Fax</th>
-        <td><?php  echo $cosmeticos->LaboratorioFabricante->getFax() ?></td>
-      </tr>
-      <tr>
-        <th>Email</th>
-        <td><?php  echo $cosmeticos->LaboratorioFabricante->getEmail() ?></td>
-      </tr>
-      <tr>
-          <th>En caso de maquila:</th>
-      </tr>
-      <tr>
-        <th><?php echo $form['maquila_embasador']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['maquila_embasador']->renderError(); ?>
-            <?php //ACA VERIFICAMOS SI TIENE EMBASADOR
-//                $check1 = "";
-//                if(($form['maquila_embasador']->getValue()) != NULL )
-//                    $check1= "checked";?>
-<!--            <input type="checkbox" //<?php //echo $check1?> onclick="habilita(1)">-->
-                
-              <?php 
-                echo $form['maquila_embasador'];
-              ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo $form['maquila_empacador']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['maquila_empacador']->renderError() ?>
-          
-          <?php echo $form['maquila_empacador'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo $form['maquila_acondicionador']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['maquila_acondicionador']->renderError() ?>
-            <?php echo $form['maquila_acondicionador'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo "Fabricado para:" ?></th>
-        <td>
-          <?php echo $form['maquila_fabricado_para']->renderError() ?>
-          <?php echo $form['maquila_fabricado_para'] ?>
-        </td>
-      </tr>
-      <tr>
-          <th colspan="2">III. DATOS GENERALES DEL PRODUCTO</th>
-      </tr>
-      <tr>
-          <th>Nombre del producto</th>
-          <td><?php echo $cosmeticos ?></td>
-      </tr>
-      <tr>
-          <th>Forma Cosmética</th>
-          <td><?php echo $cosmeticos->FormaCosmetica ?></td>
-      </tr>
-      <tr>
-          <th>Grupo Cosmético</th>
-          <td><?php echo $cosmeticos->GrupoCosmetico ?></td>
-      </tr>
-      <tr>
-          <th>Marca</th>
-          <td><?php echo $cosmeticos->Marca ?></td>
-      </tr>
-      <tr>
-          <th>Código de identificación de la NSO:</th>
-          <td><?php echo $cosmeticos->getCodigoNso()?></td>
-      </tr>
-      <tr>
-          <th>Número de Expediente:</th>
-          <td><?php echo $cosmeticos->getExpediente()?></td>
-      </tr>
-      <tr>
-          <th>Vigencia del Código de identificación de la NSO:</th>
-          <td><?php echo $cosmeticos->getVigenciaNso()?></td>
-      </tr>
-      <tr>
-          <th>País que emitió el Código de identificación de la NSO:</th>
-          <td><?php if ($cosmeticos->getPaisId()!=NULL)
-                    echo $cosmeticos->Pais ?></td>
-      </tr>
-      <tr>
-        <th><?php echo $form['vigencia']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['vigencia']->renderError() ?>
-          <?php echo $form['vigencia'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo $form['fecha_inicio_vigencia']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['fecha_inicio_vigencia']->renderError() ?>
-          <?php echo $form['fecha_inicio_vigencia'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo $form['numero_ruta']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['numero_ruta']->renderError() ?>
-          <?php echo $form['numero_ruta'] ?>
-        </td>
-      </tr>
+          </td>
       </tr>
     </tbody>
-  </table>
+</table>
+</div>
+<div class="container-form-decision">
+    <table class="tbl-form-decision">
+        <tbody>
+            <tr>
+                <th>I. DATOS DEL</th>
+                <td class="lista-linea">
+                  <?php echo $form['datos']->renderError() ?>
+                  <?php echo $form['datos'] ?>
+                  <span class="help-descripcion-tabla">
+                    Artículo 7, numeral 1, literales a) y d) de la Decisión 516, Artículo 21 de la Resolución 797
+                  </span>
+                </td>
+            </tr>
+            <tr>
+                <th>Nombre o razón social</th>
+                <td><?php echo $cosmeticos->Empresa ?></td>
+            </tr>
+            <tr>
+                <th>Domicilio o dirección</th>
+                <td><?php echo $cosmeticos->Empresa->getDireccion() ?></td>
+            </tr>
+            <tr>
+                <th>Ciudad / Distrito / Provincia / Departamento</th>
+                <td><?php echo $cosmeticos->Empresa->Ciudad->getNombre() ?></td>
+            </tr>
+            <tr>
+              <th>País</th>
+              <td><?php  echo $cosmeticos->Empresa->Ciudad->Pais->getNombre() ?></td>
+            </tr>
+            <tr>
+              <th>Teléfono</th>
+              <td><?php  echo $cosmeticos->Empresa->getTelefono1() ." - ". $cosmeticos->Empresa->getTelefono2() ?></td>
+            </tr>
+            <tr>
+              <th>Fax</th>
+              <td><?php  echo $cosmeticos->Empresa->getFax() ?></td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td><?php  echo $cosmeticos->Empresa->getEmail() ?></td>
+            </tr>
+            <tr>
+                <th>Nombre del</th>  
+                <td>
+                <?php echo $form['datos_titular']->renderError() ?>
+                <?php echo $form['datos_titular'] ?>
+                  </td>
+            </tr>
+            <tr>
+                <td colspan="2"><?php  echo $cosmeticos->Empresa->RepresentanteLegal ?></td>
+            </tr>
+            <tr>
+                <th>Teléfono</th>
+                <td colspan="2"><?php  echo $cosmeticos->Empresa->RepresentanteLegal->Persona->getTelefono() ?></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td colspan="2"><?php  echo $cosmeticos->Empresa->RepresentanteLegal->Persona->getEmail() ?></td>
+            </tr>
+            <tr>
+                <th>Nombre del</th>  
+                <td>Responsable Técnico (Químico Farmacéutico)</td>
+            </tr>
+            <tr>
+                <td colspan="2"><?php  echo $cosmeticos->Empresa->RegenteFarmaceutico ?></td>
+            </tr>
+            <tr>
+                <th>Teléfono</th>
+                <td colspan="2"><?php  echo $cosmeticos->Empresa->RegenteFarmaceutico->Persona->getTelefono() ?></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td colspan="2"><?php  echo $cosmeticos->Empresa->RegenteFarmaceutico->Persona->getEmail() ?></td>
+            </tr>
+            <tr>
+              <th><?php echo $form['fecha']->renderLabel() ?></th>
+              <td>
+                <?php echo $form['fecha']->renderError() ?>
+                <?php echo $form['fecha'] ?>
+              </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container-form-decision">
+    <table class="tbl-form-decision">
+        <tbody>
+            <tr>
+                <th colspan="2">
+                    II. DATOS DEL FABRICANTE O FABRICANTES<br />
+                    <span class="help-descripcion-tabla">
+                    Artículo 7, numeral 1, literal d) de la Decisión 516 y Artículo 21 de la Resolución 797 
+                    (Para notificación, solicitud de renovación y reconocimiento)
+                    </span>
+                </th>
+            </tr>
+            <tr>
+              <th>Nombre o razón social</th>
+              <td><?php echo $cosmeticos->LaboratorioFabricante ?></td>
+            </tr>
+            <tr>
+              <th>Domicilio o dirección</th>
+              <td><?php echo $cosmeticos->LaboratorioFabricante->getDireccion() ?></td>
+            </tr>
+            <tr>
+                <th>Ciudad / Distrito / Provincia / Departamento</th>
+                <td><?php echo $cosmeticos->LaboratorioFabricante->Ciudad->getNombre() ?></td>
+            </tr>
+            <tr>
+              <th>País</th>
+              <td><?php  echo $cosmeticos->LaboratorioFabricante->Ciudad->Pais->getNombre() ?></td>
+            </tr>
+            <tr>
+              <th>Teléfono</th>
+              <td><?php  echo $cosmeticos->LaboratorioFabricante->getTelefono()?></td>
+            </tr>
+            <tr>
+              <th>Fax</th>
+              <td><?php  echo $cosmeticos->LaboratorioFabricante->getFax() ?></td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td><?php  echo $cosmeticos->LaboratorioFabricante->getEmail() ?></td>
+            </tr>
+            <tr>
+                <th>En caso de maquila:</th>
+            </tr>
+            <tr>
+              <th><?php echo $form['maquila_embasador']->renderLabel() ?></th>
+              <td>
+                <?php echo $form['maquila_embasador']->renderError(); ?>
+                  <?php //ACA VERIFICAMOS SI TIENE EMBASADOR
+      //                $check1 = "";
+      //                if(($form['maquila_embasador']->getValue()) != NULL )
+      //                    $check1= "checked";?>
+      <!--            <input type="checkbox" //<?php //echo $check1?> onclick="habilita(1)">-->
 
+                    <?php 
+                      echo $form['maquila_embasador'];
+                    ?>
+              </td>
+            </tr>
+            <tr>
+              <th><?php echo $form['maquila_empacador']->renderLabel() ?></th>
+              <td>
+                <?php echo $form['maquila_empacador']->renderError() ?>
+
+                <?php echo $form['maquila_empacador'] ?>
+              </td>
+            </tr>
+            <tr>
+              <th><?php echo $form['maquila_acondicionador']->renderLabel() ?></th>
+              <td>
+                <?php echo $form['maquila_acondicionador']->renderError() ?>
+                  <?php echo $form['maquila_acondicionador'] ?>
+              </td>
+            </tr>
+            <tr>
+              <th><?php echo "Fabricado para:" ?></th>
+              <td>
+                <?php echo $form['maquila_fabricado_para']->renderError() ?>
+                <?php echo $form['maquila_fabricado_para'] ?>
+              </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container-form-decision">
+    <table class="tbl-form-decision">
+        <tbody>
+            <tr>
+                <th colspan="2">III. DATOS GENERALES DEL PRODUCTO <br />
+                    <span class="help-descripcion-tabla">
+                        Artículo 7, numeral 1, literales b) y c), Artículos 10, 11 y 23 de la Decisión 516
+                    </span>
+                </th>
+            </tr>
+            <tr>
+                <th>Nombre del producto</th>
+                <td><?php echo $cosmeticos ?></td>
+            </tr>
+            <tr>
+                <th>Forma Cosmética</th>
+                <td><?php echo $cosmeticos->FormaCosmetica ?></td>
+            </tr>
+            <tr>
+                <th>Grupo Cosmético</th>
+                <td><?php echo $cosmeticos->GrupoCosmetico ?></td>
+            </tr>
+            <tr>
+                <th>Marca</th>
+                <td><?php echo $cosmeticos->getMarca() ?></td>
+            </tr>
+            <tr>
+                <th>Código de identificación de la NSO:</th>
+                <td><?php echo $cosmeticos->getCodigoNso()?></td>
+            </tr>
+            <tr>
+                <th>Número de Expediente:</th>
+                <td><?php echo $cosmeticos->getExpediente()?></td>
+            </tr>
+            <tr>
+                <th>Vigencia del Código de identificación de la NSO:</th>
+                <td><?php echo $cosmeticos->getVigenciaNso()?></td>
+            </tr>
+            <tr>
+                <th>País que emitió el Código de identificación de la NSO:</th>
+                <td><?php if ($cosmeticos->getPaisId()!=NULL)
+                          echo $cosmeticos->Pais ?></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container-form-decision">
+    <table class="tbl-form-decision"
+            <tr>
+              <th><?php echo $form['vigencia']->renderLabel() ?></th>
+              <td>
+                <?php echo $form['vigencia']->renderError() ?>
+                <?php echo $form['vigencia'] ?>
+              </td>
+            </tr>
+            <tr>
+              <th><?php echo $form['fecha_inicio_vigencia']->renderLabel() ?></th>
+              <td>
+                <?php echo $form['fecha_inicio_vigencia']->renderError() ?>
+                <?php echo $form['fecha_inicio_vigencia'] ?>
+              </td>
+            </tr>
+            <tr>
+              <th><?php echo $form['numero_ruta']->renderLabel() ?></th>
+              <td>
+                <?php echo $form['numero_ruta']->renderError() ?>
+                <?php echo $form['numero_ruta'] ?>
+              </td>
+           </tr>
+    </tbody>
+  </table>
+</div>
 <?php echo $form->renderHiddenFields(false) ?>          
 <ul class="sf_admin_actions">
     <?php if (!$form->getObject()->isNew()): ?>

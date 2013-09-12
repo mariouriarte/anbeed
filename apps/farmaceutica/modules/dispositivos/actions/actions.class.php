@@ -13,6 +13,13 @@ require_once dirname(__FILE__).'/../lib/dispositivosGeneratorHelper.class.php';
  */
 class dispositivosActions extends autoDispositivosActions
 {
+    public function executeNew(sfWebRequest $request)
+    {
+        $this->form = $this->configuration->getForm();
+        $this->dispositivo_medico = $this->form->getObject();
+        $empresa = $this->getUser()->getAttribute('empresa');
+        $this->form->setDefault('empresa_id', $empresa->getId());
+    }
     public function executeListAdmEmpresa(sfWebRequest $request)
     {
         $user = $this->getUser();
@@ -28,19 +35,34 @@ class dispositivosActions extends autoDispositivosActions
         $this->redirect('/farmaceutica_dev.php/formulario27');
     }
     
+    public function executeIrForm7(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        $dispositivo = $this->getRoute()->getObject();
+        $user->setAttribute('dispositivo_medico', $dispositivo);
+        $user->setAttribute('tabla', 'dispositivo_medico');
+        $this->redirect('formulario7/index');
+    }
+    
     protected function processForm(sfWebRequest $request, sfForm $form)
       {
         $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
         if ($form->isValid())
         {
           $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
-
+          $is_new = $form->getObject()->isNew();
           try {
               $dispositivo_medico = $form->save();
-              $producto = new Producto();
-              $producto -> save();
-              $dispositivo_medico -> setProducto($producto);
-              $dispositivo_medico -> save();            
+                                    
+              if($is_new)
+              {
+                $producto = new Producto();
+                // agregamos el codigo del producto codigo:DI
+                $producto->setCodigoProductoId(2); 
+                $producto -> save();
+                $dispositivo_medico -> setProducto($producto);
+                $dispositivo_medico -> save();            
+              }
           } catch (Doctrine_Validator_Exception $e) {
 
             $errorStack = $form->getObject()->getErrorStack();

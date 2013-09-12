@@ -15,11 +15,11 @@ generator:
       actions: ~
       fields:  
         empresa_id:             {label: 'Empresa'}
-        laboratorio_fabricante: {label: 'Laboratorio Fabricante'}
+        laboratorio:            {label: 'Laboratorio Fabricante'}
         empresa:                {label: 'Empresa'}
       list:
         title:   Desiciones 516 Registrados
-        display: [fecha, tipo_tramite_formulario, empresa, laboratorio_fabricante, cosmetico]
+        display: [fecha, tipo_tramite_formulario, empresa, laboratorio, cosmetico]
         actions:
           ir_portal: {label: Volver al Portal}
         object_actions:

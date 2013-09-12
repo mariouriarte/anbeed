@@ -49,7 +49,8 @@ class personalegalActions extends autoPersonalegalActions
         $persona = $this->getRoute()->getObject();
         $persona->RepresentanteLegal->setIsActive(false);
         $persona->save();
-                
+          
+        $this->getUser()->setFlash('notice', 'El representante legal fue suspendido de la empresa correctamente.');
         $this->redirect('empresas/administrarEmpresa?id=' . $empresa->getId());
     }
     
@@ -65,7 +66,7 @@ class personalegalActions extends autoPersonalegalActions
         $empresa->setRepresentanteLegal($persona->RepresentanteLegal);
         
         $empresa->save();
-        
+        $this->getUser()->setFlash('notice', 'El representante legal fue asignado correctamente.');
         $this->redirect('empresas/administrarEmpresa?id=' . $empresa->getId());
     }
     

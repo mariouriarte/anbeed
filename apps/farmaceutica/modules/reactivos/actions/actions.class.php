@@ -13,6 +13,13 @@ require_once dirname(__FILE__).'/../lib/reactivosGeneratorHelper.class.php';
  */
 class reactivosActions extends autoReactivosActions
 {
+    public function executeNew(sfWebRequest $request)
+    {
+        $this->form = $this->configuration->getForm();
+        $this->reactivo = $this->form->getObject();
+        $empresa = $this->getUser()->getAttribute('empresa');
+        $this->form->setDefault('empresa_id', $empresa->getId());
+    }
     public function executeListAdmEmpresa(sfWebRequest $request)
     {
         $user = $this->getUser();
@@ -27,19 +34,34 @@ class reactivosActions extends autoReactivosActions
         $user->setAttribute('reactivo', $this->reactivo);
         $this->redirect('/farmaceutica_dev.php/formulario12');
     }
+    
+    public function executeIrForm7(sfWebRequest $request)
+    {
+        $user = $this->getUser();
+        $reactivo = $this->getRoute()->getObject();
+        $user->setAttribute('reactivo', $reactivo);
+        $user->setAttribute('tabla', 'reactivo');
+        $this->redirect('formulario7/index');
+    }
     protected function processForm(sfWebRequest $request, sfForm $form)
     {
       $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
       if ($form->isValid())
       {
         $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
-
+        $is_new = $form->getObject()->isNew();  
         try {
           $reactivo = $form->save();
-          $producto = new Producto();
-          $producto -> save();
-          $reactivo -> setProducto($producto);
-          $reactivo -> save();
+          
+          if ($is_new)
+          {
+            $producto = new Producto();
+            // agregamos el codigo del producto codigo:RI
+            $producto->setCodigoProductoId(5); 
+            $producto -> save();
+            $reactivo -> setProducto($producto);
+            $reactivo -> save();
+          }
         } catch (Doctrine_Validator_Exception $e) {
 
           $errorStack = $form->getObject()->getErrorStack();

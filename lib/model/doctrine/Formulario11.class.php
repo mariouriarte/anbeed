@@ -12,4 +12,11 @@
  */
 class Formulario11 extends BaseFormulario11
 {
+    public function getTipo()
+    {
+        $otro = "";
+        if($this->getTipoDespachoId() == 5)
+            $otro = " - ".$this->getOtro();
+        return $this->TipoDespacho."".$otro ;
+    }
 }

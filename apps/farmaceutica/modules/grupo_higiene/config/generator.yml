@@ -15,7 +15,13 @@ generator:
       actions: ~
       fields:  ~
       list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      filter:  
+        display: [nombre]
+      form:    
+        actions:
+          _save: ~
+          cerrar: 
+      edit:    
+        title: Editar Grupo Higiene %%nombre%%
+      new:     
+        title: Registro de Grupo Higiene

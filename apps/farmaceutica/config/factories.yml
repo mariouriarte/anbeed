@@ -1,6 +1,8 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/05-Factories
 
+#session lifetime value in seconds(12horas)
+    
 prod:
   logger:
     class:   sfNoLogger
@@ -29,6 +31,11 @@ dev:
       delivery_strategy: none
 
 all:
+  user:
+    class: myUser
+    param:
+      timeout:    7200
+    
   routing:
     class: sfPatternRouting
     param:

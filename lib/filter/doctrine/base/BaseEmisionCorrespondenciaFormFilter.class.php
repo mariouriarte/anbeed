@@ -15,6 +15,7 @@ abstract class BaseEmisionCorrespondenciaFormFilter extends BaseFormFilterDoctri
     $this->setWidgets(array(
       'tipo_documento_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoDocumento'), 'add_empty' => true)),
       'empresa_id'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => true)),
+      'otro_destino'          => new sfWidgetFormFilterInput(),
       'emisor_id'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Emisor'), 'add_empty' => true)),
       'factura'               => new sfWidgetFormFilterInput(),
       'factura_fecha'         => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
@@ -29,11 +30,14 @@ abstract class BaseEmisionCorrespondenciaFormFilter extends BaseFormFilterDoctri
       'numero_guia'           => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'created_at'            => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'            => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
+      'created_by'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'add_empty' => true)),
+      'updated_by'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Updator'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'tipo_documento_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('TipoDocumento'), 'column' => 'id')),
       'empresa_id'            => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Empresa'), 'column' => 'id')),
+      'otro_destino'          => new sfValidatorPass(array('required' => false)),
       'emisor_id'             => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Emisor'), 'column' => 'id')),
       'factura'               => new sfValidatorPass(array('required' => false)),
       'factura_fecha'         => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
@@ -48,6 +52,8 @@ abstract class BaseEmisionCorrespondenciaFormFilter extends BaseFormFilterDoctri
       'numero_guia'           => new sfValidatorPass(array('required' => false)),
       'created_at'            => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'            => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'created_by'            => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Creator'), 'column' => 'id')),
+      'updated_by'            => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Updator'), 'column' => 'id')),
     ));
 
     $this->widgetSchema->setNameFormat('emision_correspondencia_filters[%s]');
@@ -70,6 +76,7 @@ abstract class BaseEmisionCorrespondenciaFormFilter extends BaseFormFilterDoctri
       'id'                    => 'Number',
       'tipo_documento_id'     => 'ForeignKey',
       'empresa_id'            => 'ForeignKey',
+      'otro_destino'          => 'Text',
       'emisor_id'             => 'ForeignKey',
       'factura'               => 'Text',
       'factura_fecha'         => 'Date',
@@ -84,6 +91,8 @@ abstract class BaseEmisionCorrespondenciaFormFilter extends BaseFormFilterDoctri
       'numero_guia'           => 'Text',
       'created_at'            => 'Date',
       'updated_at'            => 'Date',
+      'created_by'            => 'ForeignKey',
+      'updated_by'            => 'ForeignKey',
     );
   }
 }

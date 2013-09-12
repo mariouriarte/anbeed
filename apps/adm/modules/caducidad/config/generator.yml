@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Producto
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          producto_caducidad
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        empresa:           {label: 'Empresa'}
+        producto:          {label: 'Producto'}
+        laboratorio:       {label: 'Laboratorio Fabricante'}
+        fecha_vencimiento: {label: 'Fecha de vencimiento'}
+        vigencia:          {label: 'Vigencia'}
+      list:    
+        title:   Listado de productos con vencimiento del Registro Sanitario 
+        #display: [empresa, producto, laboratorio, fecha_vencimiento, vigencia]
+        display: [empresa, producto, laboratorio]
+        actions:
+          ir_portal: {label: Volver al Portal}
+      filter:  
+        display: [codigo_producto_id]
+      form:    ~
+      edit:    ~
+      new:     ~

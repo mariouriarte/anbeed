@@ -19,6 +19,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_3:
     razon_social: COSMEBELL
     fecha_registro: '2007-04-25'
@@ -38,6 +39,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_4:
     razon_social: 'SAN FERNANDO SRL.'
     fecha_registro: '2007-04-25'
@@ -57,6 +59,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_5:
     razon_social: 'QUIMFA BOLIVIA S.A'
     fecha_registro: '2007-04-26'
@@ -76,6 +79,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_6:
     razon_social: 'MHEDICAL PHARMA'
     fecha_registro: null
@@ -95,6 +99,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_7:
     razon_social: MAYA
     fecha_registro: null
@@ -114,6 +119,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_9:
     razon_social: 'DAYFAR S.R.L'
     fecha_registro: null
@@ -133,6 +139,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_10:
     razon_social: 'LABORATORIOS ROSSI LTDA'
     fecha_registro: null
@@ -152,6 +159,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_11:
     razon_social: 'IMPORTADORA M. Y S.'
     fecha_registro: '2011-07-08'
@@ -171,6 +179,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_12:
     razon_social: 'LEMAITRE S.R.L'
     fecha_registro: null
@@ -190,6 +199,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_13:
     razon_social: 'IMPORTADORA ARBOL DE LA VIDA'
     fecha_registro: '2008-02-14'
@@ -209,6 +219,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_14:
     razon_social: 'AS ON TV BOLIVIA'
     fecha_registro: '2007-12-06'
@@ -228,6 +239,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_16:
     razon_social: 'INQUIBOL (PLANTA DE SOLIDOS NO ESTERILES'
     fecha_registro: '2008-01-15'
@@ -247,6 +259,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_17:
     razon_social: 'IMPORTADORA DISMEDIN'
     fecha_registro: null
@@ -266,6 +279,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_18:
     razon_social: LOMBARDOZZI
     fecha_registro: '2008-02-13'
@@ -285,6 +299,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_19:
     razon_social: 'MALTA  & ASOCIADOS S.R.L'
     fecha_registro: '2008-04-23'
@@ -304,6 +319,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_20:
     razon_social: MIMEX
     fecha_registro: null
@@ -323,6 +339,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_21:
     razon_social: MEDINSUMOS
     fecha_registro: '2008-07-08'
@@ -342,6 +359,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_22:
     razon_social: TECNOMED
     fecha_registro: '2008-07-18'
@@ -361,6 +379,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_23:
     razon_social: 'BIO QUEST SYSTEMS S.R.L'
     fecha_registro: '2008-08-04'
@@ -380,6 +399,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_24:
     razon_social: 'ILABFARMA S.R.L'
     fecha_registro: '2008-08-07'
@@ -399,6 +419,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_25:
     razon_social: 'W.H.P.M EMPRESA MEDICA SRL'
     fecha_registro: '2008-08-12'
@@ -418,6 +439,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_26:
     razon_social: GREMINBELL
     fecha_registro: '2009-01-16'
@@ -437,6 +459,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_27:
     razon_social: 'SANAT PHARMA S.R.L'
     fecha_registro: '2009-02-19'
@@ -456,6 +479,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_28:
     razon_social: INSUMED
     fecha_registro: '2009-02-20'
@@ -475,6 +499,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_29:
     razon_social: 'MINOIL S.A'
     fecha_registro: '2009-02-25'
@@ -494,6 +519,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_30:
     razon_social: 'SURCO APAZA'
     fecha_registro: null
@@ -513,6 +539,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_31:
     razon_social: FARMAVID
     fecha_registro: '2011-07-13'
@@ -532,6 +559,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_32:
     razon_social: INDESSA
     fecha_registro: '2009-05-28'
@@ -551,6 +579,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_33:
     razon_social: 'I.T.K.A  S.R.L'
     fecha_registro: '2009-06-02'
@@ -570,6 +599,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_34:
     razon_social: 'ZAMBRANA TERRAZAS DAVID RODOLFO'
     fecha_registro: '2011-07-19'
@@ -589,6 +619,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_35:
     razon_social: 'BLANCO & NEGRO INSUMOS HOSPITALARIOS'
     fecha_registro: '2009-09-08'
@@ -608,6 +639,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_36:
     razon_social: 'DR. GOMEZ IMPORT - EXPORT'
     fecha_registro: '2009-09-28'
@@ -627,6 +659,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_37:
     razon_social: 'IMPORTADORA TAMIVA'
     fecha_registro: null
@@ -646,6 +679,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_38:
     razon_social: 'ARTEDENTAL S.R.L.'
     fecha_registro: '2010-01-27'
@@ -665,6 +699,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_39:
     razon_social: 'PAIKER IMPORT -EXPORT'
     fecha_registro: '2010-02-04'
@@ -684,6 +719,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_40:
     razon_social: 'IMPORTACIONES Y REPRESENTACIONES GUTIERREZ'
     fecha_registro: null
@@ -703,6 +739,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_41:
     razon_social: 'INDUSTRIA S.R SANTIAGO'
     fecha_registro: '2010-03-16'
@@ -722,6 +759,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_42:
     razon_social: 'CAROLE BEAUTY SUPPLY S.R.L C.B.S. S.R.L'
     fecha_registro: '2010-06-25'
@@ -741,6 +779,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_44:
     razon_social: 'UNIVERSAL PHARMA'
     fecha_registro: '2010-11-12'
@@ -760,6 +799,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_45:
     razon_social: 'BMT(BOLIVIAN MEDICAL TECHNOLOGIES)'
     fecha_registro: '2010-11-15'
@@ -779,6 +819,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_46:
     razon_social: 'ACRE CORP. EXPORT IMPORT.'
     fecha_registro: '2010-12-09'
@@ -798,6 +839,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_47:
     razon_social: CODENSA
     fecha_registro: '2010-11-30'
@@ -817,6 +859,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_48:
     razon_social: 'IMPORT EXPORT LITTLE DRAGON S.R.L'
     fecha_registro: null
@@ -836,6 +879,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_49:
     razon_social: 'JELLICO BOLIVIA'
     fecha_registro: '2011-02-22'
@@ -855,6 +899,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_50:
     razon_social: 'DICO COMERCIALIZADORES'
     fecha_registro: '2011-05-06'
@@ -874,6 +919,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_51:
     razon_social: 'SAINT HONORE BOLIVIA SRL'
     fecha_registro: null
@@ -893,6 +939,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_52:
     razon_social: 'COMERCIALIZADORA NEXOLIDER S. A.'
     fecha_registro: '2011-05-23'
@@ -912,6 +959,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_53:
     razon_social: 'BESTENS S.R.L'
     fecha_registro: '2011-05-31'
@@ -931,6 +979,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_54:
     razon_social: ' SILES S. R. L.'
     fecha_registro: '2011-06-16'
@@ -950,6 +999,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_55:
     razon_social: 'IMPORTADORA NADIA'
     fecha_registro: '2011-09-15'
@@ -969,6 +1019,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_56:
     razon_social: TEXSABOL
     fecha_registro: null
@@ -988,6 +1039,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_57:
     razon_social: 'IMPORTADORA LUPAMA'
     fecha_registro: '2011-10-05'
@@ -1007,6 +1059,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_58:
     razon_social: 'MAYOREO Y DISTRIBUCIÓN MADISA S. A.'
     fecha_registro: '2011-10-10'
@@ -1026,6 +1079,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_59:
     razon_social: 'BOTANICAL COSMETICS'
     fecha_registro: null
@@ -1045,6 +1099,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_60:
     razon_social: 'IMPORTADORA INES REBECA DAVALOS DE LA CRUZ'
     fecha_registro: '2011-10-27'
@@ -1064,6 +1119,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_61:
     razon_social: 'IMPORTADORA  RUBEN LIMA TAPIA'
     fecha_registro: '2011-11-07'
@@ -1083,6 +1139,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_62:
     razon_social: 'LABORATORIOS GAUTIER BOLIVIA S.A'
     fecha_registro: null
@@ -1102,6 +1159,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_63:
     razon_social: DISMEDISUR
     fecha_registro: null
@@ -1121,6 +1179,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_64:
     razon_social: PHARMABOZ
     fecha_registro: '2012-03-26'
@@ -1140,6 +1199,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_65:
     razon_social: 'BRIPHARMA S.R.L.'
     fecha_registro: null
@@ -1159,6 +1219,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_66:
     razon_social: 'PERFUMERIA COSMET'
     fecha_registro: '2013-01-15'
@@ -1178,6 +1239,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_67:
     razon_social: 'MAVID DEL ORIENTE'
     fecha_registro: '2013-01-17'
@@ -1197,6 +1259,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_68:
     razon_social: 'INSUMOS Y MEDICAMENTOS PERULAB BOLIVIA S.A'
     fecha_registro: '2013-02-04'
@@ -1216,6 +1279,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_69:
     razon_social: 'COMERCIAL XK DE GLORIA DIANA COLQUE CHOQUE'
     fecha_registro: '2013-02-15'
@@ -1235,6 +1299,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_70:
     razon_social: FARMASHOPPING
     fecha_registro: '2013-02-25'
@@ -1254,6 +1319,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_71:
     razon_social: 'MEDIFARM S.R.L'
     fecha_registro: null
@@ -1273,6 +1339,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_72:
     razon_social: 'RAMIL ISRAEL MARTINEZ CHAVEZ'
     fecha_registro: '2013-04-17'
@@ -1292,6 +1359,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_73:
     razon_social: 'LA RIVIERA PERFUMES Y COSMETICOS S.R.L'
     fecha_registro: null
@@ -1311,6 +1379,7 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1
   Empresa_74:
     razon_social: 'PROBELL INTERNACIONAL'
     fecha_registro: '2013-04-25'
@@ -1330,3 +1399,4 @@ Empresa:
     is_active: true
     created_at: '2013-07-12 00:00:00'
     updated_at: '2013-07-12 00:00:00'
+    Ciudad: Ciudad_1

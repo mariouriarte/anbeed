@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           GrupoCosmetico
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          grupo_cosmetico
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        title: Listado de Grupos Cosméticos
+        display: [nombre]
+        actions:
+          ir_portal:   {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [nombre]
+      form:    ~
+      edit:    
+        title: Editar Grupo Cosmético %%nombre%%
+      new:     
+        title: Registro de Grupo Cosmético

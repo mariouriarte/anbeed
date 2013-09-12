@@ -49,6 +49,7 @@ class personaregenteActions extends autoPersonaregenteActions
         $persona->RegenteFarmaceutico->setIsActive(false);
         $persona->save();
         
+        $this->getUser()->setFlash('notice', 'El regente farmaceútico fue suspendido de la empresa correctamente.');
         $this->redirect('empresas/administrarEmpresa?id=' . $empresa->getId());
     }
     
@@ -64,6 +65,7 @@ class personaregenteActions extends autoPersonaregenteActions
         $empresa->setRegenteFarmaceutico($persona->RegenteFarmaceutico);
         $empresa->save();
         
+        $this->getUser()->setFlash('notice', 'El regente farmaceútico fue asignado correctamente.');
         $this->redirect('empresas/administrarEmpresa?id=' . $empresa->getId());
     }
     

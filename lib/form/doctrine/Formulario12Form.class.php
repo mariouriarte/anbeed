@@ -12,13 +12,13 @@ class Formulario12Form extends BaseFormulario12Form
 {
   public function configure()
   {
-       unset($this['created_at'], $this['updated_at']);
+       unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
        $years = range(date('Y') - 0, date('Y'));
        
-     // Asigna el id del producto para el form12
-
-       $this->widgetSchema['reactivo_id'] = new sfWidgetFormInputHidden(
-                    array());
+       $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();
+        
+       // Asigna el id del producto para el form12
+       $this->widgetSchema['reactivo_id'] = new sfWidgetFormInputHidden();
 
        $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es',

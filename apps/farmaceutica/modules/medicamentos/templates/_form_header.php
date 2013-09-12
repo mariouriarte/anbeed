@@ -2,7 +2,9 @@
 
 <div class="content-info-empresa">
     <?php $empresa = $sf_user->getAttribute('empresa'); ?>
-    <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
+    <?php $medicamento = $sf_user->getAttribute('medicamento'); ?>
+    <?php include_partial('empresas/info_empresa', array('empresa'  => $empresa, 
+                                                         'producto' => $medicamento)) ?>
 </div>
 
 <script type='text/javascript'>
@@ -15,14 +17,14 @@ $(document).ready(function()
         
     //Formula Farmaceutica
     $('#autocomplete_medicamento_forma_farmaceutica_id')
-        .after("&nbsp;&nbsp;<a href='/farmaceutica_dev.php/ffarmaceuticas/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nuevo Laboratorio Fabricante\"/></a>");
+        .after("&nbsp;&nbsp;<a href='/farmaceutica_dev.php/ffarmaceuticas/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nueva Forma Farmaceutica\"/></a>");
         
     //Via de Administracion
     $('#autocomplete_medicamento_via_administracion_id')
-        .after("&nbsp;&nbsp;<a href='/farmaceutica_dev.php/administraciones/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nuevo Laboratorio Fabricante\"/></a>");
+        .after("&nbsp;&nbsp;<a href='/farmaceutica_dev.php/administraciones/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nueva Via de Administración\"/></a>");
     //Tipo de venta
     $('#autocomplete_medicamento_tipo_venta_id')
-        .after("&nbsp;&nbsp;<a href='/farmaceutica_dev.php/tventas/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nuevo Laboratorio Fabricante\"/></a>");
+        .after("&nbsp;&nbsp;<a href='/farmaceutica_dev.php/tventas/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nuevo Tipo de Venta\"/></a>");
         
 });
 

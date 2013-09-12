@@ -32,6 +32,7 @@ generator:
         display: [nombre, marca, laboratorio_fabricante, registro_sanitario]
         object_actions:
           ir_form516:   {label: Desicion 516, action: irForm516}
+          ir_form7:     {label: Form 007, action: irForm7}
           _edit: ~ 
         actions:
           adm_empresa: {label: Volver a Empresa}

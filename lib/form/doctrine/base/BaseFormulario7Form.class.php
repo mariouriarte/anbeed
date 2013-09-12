@@ -22,6 +22,8 @@ abstract class BaseFormulario7Form extends BaseFormDoctrine
       'fecha_inicio_vigencia' => new sfWidgetFormDate(),
       'referencia_aval'       => new sfWidgetFormInputText(),
       'producto_id'           => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => true)),
+      'forma_farmaceutica_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('FormaFarmaceutica'), 'add_empty' => true)),
+      'concentracion'         => new sfWidgetFormInputText(),
       'tipo_calificacion_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoCalificacion'), 'add_empty' => false)),
       'via_administracion_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('ViaAdministracion'), 'add_empty' => false)),
       'accion_terapeutica'    => new sfWidgetFormTextarea(),
@@ -35,6 +37,8 @@ abstract class BaseFormulario7Form extends BaseFormDoctrine
       'calificacion'          => new sfWidgetFormInputText(),
       'created_at'            => new sfWidgetFormDateTime(),
       'updated_at'            => new sfWidgetFormDateTime(),
+      'created_by'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'add_empty' => true)),
+      'updated_by'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Updator'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
@@ -45,6 +49,8 @@ abstract class BaseFormulario7Form extends BaseFormDoctrine
       'fecha_inicio_vigencia' => new sfValidatorDate(array('required' => false)),
       'referencia_aval'       => new sfValidatorString(array('max_length' => 50, 'required' => false)),
       'producto_id'           => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'required' => false)),
+      'forma_farmaceutica_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('FormaFarmaceutica'), 'required' => false)),
+      'concentracion'         => new sfValidatorString(array('max_length' => 150)),
       'tipo_calificacion_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TipoCalificacion'))),
       'via_administracion_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('ViaAdministracion'))),
       'accion_terapeutica'    => new sfValidatorString(array('max_length' => 1000)),
@@ -58,6 +64,8 @@ abstract class BaseFormulario7Form extends BaseFormDoctrine
       'calificacion'          => new sfValidatorString(array('max_length' => 150, 'required' => false)),
       'created_at'            => new sfValidatorDateTime(),
       'updated_at'            => new sfValidatorDateTime(),
+      'created_by'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'required' => false)),
+      'updated_by'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Updator'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('formulario7[%s]');

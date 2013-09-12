@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           GrupoHigiene
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          grupo_higiene
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        title:  Listado de Grupos de Higiene
+        display: [nombre]
+        actions:
+          ir_portal:   {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [nombre]
+      form:    
+      edit:    
+        title: Editar Grupo Higiene %%nombre%%
+      new:     
+        title: Registro de Grupo Higiene

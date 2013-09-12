@@ -10,20 +10,20 @@
  * @property Pais $Pais
  * @property Empresa $Empresa
  * @property LaboratorioFabricante $LaboratorioFabricante
- * @property Doctrine_Collection $Formularios706
+ * @property Formulario706 $Formulario706
  * 
  * @method integer               getPaisId()                Returns the current record's "pais_id" value
  * @method string                getNombre()                Returns the current record's "nombre" value
  * @method Pais                  getPais()                  Returns the current record's "Pais" value
  * @method Empresa               getEmpresa()               Returns the current record's "Empresa" value
  * @method LaboratorioFabricante getLaboratorioFabricante() Returns the current record's "LaboratorioFabricante" value
- * @method Doctrine_Collection   getFormularios706()        Returns the current record's "Formularios706" collection
+ * @method Formulario706         getFormulario706()         Returns the current record's "Formulario706" value
  * @method Ciudad                setPaisId()                Sets the current record's "pais_id" value
  * @method Ciudad                setNombre()                Sets the current record's "nombre" value
  * @method Ciudad                setPais()                  Sets the current record's "Pais" value
  * @method Ciudad                setEmpresa()               Sets the current record's "Empresa" value
  * @method Ciudad                setLaboratorioFabricante() Sets the current record's "LaboratorioFabricante" value
- * @method Ciudad                setFormularios706()        Sets the current record's "Formularios706" collection
+ * @method Ciudad                setFormulario706()         Sets the current record's "Formulario706" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -60,11 +60,15 @@ abstract class BaseCiudad extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'ciudad_id'));
 
-        $this->hasMany('Formulario706 as Formularios706', array(
+        $this->hasOne('Formulario706', array(
              'local' => 'id',
              'foreign' => 'rescom_ciudad_id'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable();
+        $timestampable0 = new Doctrine_Template_Timestampable(array(
+             ));
+        $signable0 = new Doctrine_Template_Signable(array(
+             ));
         $this->actAs($timestampable0);
+        $this->actAs($signable0);
     }
 }

@@ -1,0 +1,47 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Formulario7
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario7_formulario7porempresa
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        producto_id:            {label: Producto}
+        via_administracion_id:  {label: Via de Administración}
+        fecha_inicio_vigencia:  {label: Fecha de Inicio de Vigencia}
+        via_administracion:     {label: Via de Administración}
+        accion_terapeutica:     {label: Acción Terapéutica}
+        efectos_secundarios:    {label: Efectos secundarios/Interacciones}
+      list:    
+        title: Listado de Solicitudes de Calificación
+#        table_method: selectForms7DeEmpresa
+        display: [producto, observaciones, calificacion]
+        actions:
+          ir_empresa:   {label: Volver a Empresa}
+        object_actions:
+          imprimir:    {label: Imprimir, action: print}
+          edit:        {label: Editar, action: editar}
+          _delete: ~
+      filter: 
+        display: [tipo_calificacion_id]
+      form:    ~
+      edit:   
+        title: Editar Solicitud de Calificacion
+        display: [fecha, producto_id, tipo_calificacion_id, via_administracion_id, accion_terapeutica, dosis, indicaciones, contraindicaciones, precauciones, efectos_secundarios, observaciones, calificacion]
+        actions:
+          _list: ~  
+          _save: ~  
+      new:     
+        title: Registrar Solicitud de Calificacion
+        display: [fecha, producto_id, tipo_calificacion_id, via_administracion_id, accion_terapeutica, dosis, indicaciones, contraindicaciones, precauciones, efectos_secundarios, observaciones, calificacion]
+        actions:
+          _list: ~  
+          _save: ~  

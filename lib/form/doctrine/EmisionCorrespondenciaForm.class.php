@@ -12,7 +12,7 @@ class EmisionCorrespondenciaForm extends BaseEmisionCorrespondenciaForm
 {
   public function configure()
   {
-      unset($this['created_at'], $this['updated_at']);
+      unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
       
       $this->widgetSchema['tipo_documento_id']->setOption('add_empty', 'Seleccione Tipo Documento');
       
@@ -57,5 +57,10 @@ class EmisionCorrespondenciaForm extends BaseEmisionCorrespondenciaForm
 //                  'add_empty'    => 'Seleccione un producto'));
 ////       $this->validatorSchema['producto_id'] = new sfValidatorCallback(
 ////           array('callback' => array($this, 'ListarProductos')));
+       
+       
+      /*AJUSTANDO LOS TAMAños*/
+      $this->widgetSchema['otro_destino']->setAttribute('size' , 50);
+      $this->widgetSchema['nombre']->setAttribute('cols' , 80);
   }
 }

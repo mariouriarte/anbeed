@@ -121,7 +121,11 @@ abstract class BaseFormulario5 extends sfDoctrineRecord
              'local' => 'origen_formulario_id',
              'foreign' => 'id'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable();
+        $timestampable0 = new Doctrine_Template_Timestampable(array(
+             ));
+        $signable0 = new Doctrine_Template_Signable(array(
+             ));
         $this->actAs($timestampable0);
+        $this->actAs($signable0);
     }
 }

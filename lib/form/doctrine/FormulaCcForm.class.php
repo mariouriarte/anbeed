@@ -13,7 +13,7 @@ class FormulaCcForm extends BaseFormulaCcForm
   protected $detallesAEliminar = array();
   public function configure()
   {
-      unset($this['created_at'], $this['updated_at']);
+      unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
       $detalle = new DetalleFormulaCc();
       $detalle->setFormulaCc($this->object);
       $detalleForm = new DetalleFormulaCcForm($detalle);
@@ -21,6 +21,9 @@ class FormulaCcForm extends BaseFormulaCcForm
 
       $this->embedRelation('DetalleFormulaCc');
       
+      /*AJUSTANDO LOS TAMAños*/
+      $this->widgetSchema['observaciones']->setAttribute('cols' , 80);
+      $this->widgetSchema['observaciones']->setAttribute('rows' , 1);
       
   }
   protected function doBind(array $values) {

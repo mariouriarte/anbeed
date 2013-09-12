@@ -1,13 +1,10 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
-<?php use_stylesheet('formulario_decision.css') ?>
-<?php // use_javascript('/sfDependentSelectPlugin/js/SelectDependiente.min.js') ?>
-<?php  use_javascript('/js/jquery-migrate.js') ?>
 
 <?php $higiene = $sf_user->getAttribute('higiene'); ?>
 <div class="content-info-empresa">
     <?php $empresa = $sf_user->getAttribute('empresa'); ?>
-    <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
+    <?php include_partial('formulario706/list_header', array('empresa' => $empresa)) ?>
 </div>
 
 <form action="<?php echo url_for('form706/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
@@ -53,12 +50,12 @@
       </tr>
       <tr>
           <th>Ciudad / Distrito / Provincia / Departamento</th>
-          <td><?php echo $higiene->Empresa->Ciudad->getNombre();
-          ?></td>
+          <td><?php echo $higiene->Empresa->Ciudad->getNombre() ?></td>
       </tr>
       <tr>
         <th>País</th>
-        <td><?php echo $higiene->Empresa->Ciudad->Pais->getNombre(); ?></td>
+        <td><?php  echo $higiene->Empresa->Ciudad->Pais->getNombre() ?></td>
+
       </tr>
       <tr>
         <th>Teléfono</th>
@@ -116,8 +113,8 @@
       <tr>
           <th>País</th>
           <td>
-            <?php echo $form['rescom_pais_id']->renderError() ?>
-            <?php echo $form['rescom_pais_id'] ?>
+            <?php echo $form['pais_id']->renderError() ?>
+            <?php echo $form['pais_id'] ?>
           </td>
       </tr>
       <tr>
@@ -265,11 +262,7 @@
       </tr>
       <tr>
           <th>Grupo</th>
-<<<<<<< HEAD
-          <td><?php echo $higiene->getGrupoHigieneId() ?></td>
-=======
           <td><?php //echo $higiene->getGrupoHigiene() ?></td>
->>>>>>> pdf706
       </tr>
       <tr>
           <th>variedades</th>

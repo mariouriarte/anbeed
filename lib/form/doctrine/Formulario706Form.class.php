@@ -16,14 +16,13 @@ class Formulario706Form extends BaseFormulario706Form
     
     public function configure()
     {
-        unset($this['created_at'], $this['updated_at']);
+        unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
         $years = range(date('Y') - 0, date('Y'));   
         
-        $higiene = sfContext::getInstance()->getUser()->getAttribute('higiene');
+        $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();
         
         //// higiene
-        $this->widgetSchema['higiene_id'] = new sfWidgetFormInputHidden(
-            array(), array('value' => $higiene->getId()));
+        $this->widgetSchema['higiene_id'] = new sfWidgetFormInputHidden();
       
         //// datos
         $this->widgetSchema['datos'] = new sfWidgetFormChoice(
@@ -57,22 +56,22 @@ class Formulario706Form extends BaseFormulario706Form
         $this->widgetSchema['maquila_tipo'] = new sfWidgetFormChoice(
             array('expanded' => true, 
                   'choices'  => $this->tipo_maquila));
-        $this->validatorSchema['maquila_tipo'] = new sfValidatorString(array('required' => true));
+        $this->validatorSchema['maquila_tipo'] = new sfValidatorString(array('required' => false));
         
         ///// Responsable comercial Pais
-        $this->widgetSchema['rescom_pais_id'] = new sfWidgetFormDoctrineChoice(
+        $this->widgetSchema['pais_id'] = new sfWidgetFormDoctrineChoice(
             array('model'        => 'Pais',
-                  'add_empty'    => ' - Seleccione país'));
-        $this->validatorSchema['rescom_pais_id'] = new sfValidatorDoctrineChoice(
+                  'add_empty'    => 'Seleccione país'));
+        $this->validatorSchema['pais_id'] = new sfValidatorDoctrineChoice(
             array('model' => 'Pais', 'required' => false));
         
         ////// Responsable comercial ciudad
-//        $this->widgetSchema['rescom_ciudad_id'] = new sfWidgetFormDoctrineDependentSelect(
-//            array('model'     => 'Ciudad',
-//                  'depends'   => 'Pais',
-//                  'add_empty' => ' - Seleccione ciudad'));
-//        $this->validatorSchema['rescom_ciudad_id'] = new sfValidatorDoctrineChoice(
-//            array('model' => 'Ciudad', 'required' => true));
-        
+        $this->widgetSchema['rescom_ciudad_id'] = new sfWidgetFormDoctrineDependentSelect(
+            array('model'     => 'Ciudad',
+                  'depends'   => 'Pais',
+                  'add_empty' => 'Seleccione ciudad'));
+        $this->validatorSchema['rescom_ciudad_id'] = new sfValidatorDoctrineChoice(
+            array('model' => 'Ciudad', 'required' => true));
+                
     }
 }

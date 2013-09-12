@@ -12,24 +12,14 @@ class Formulario5Form extends BaseFormulario5Form
 {
   public function configure()
   {
-       unset($this['created_at'], $this['updated_at']);
+       unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
        $years = range(date('Y') - 0, date('Y'));
        
      // Asigna el id del producto para el form5
-     // 
-       $this->widgetSchema['medicamento_id'] = new sfWidgetFormInputHidden(
-                    array());
-//       if(!isset($this['medicamento_id']))
-//       {
-//           $medicamento = sfContext::getInstance()->getUser()->getAttribute('medicamento');
-//           $this->widgetSchema['medicamento_id'] = new sfWidgetFormInputHidden(
-//                    array(), array('value' => $medicamento->getId()));
-//       }
-//       else
-//       {    
-//           $this->widgetSchema['medicamento_id'] = new sfWidgetFormInputHidden(
-//                    array());
-//       }
+       $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();
+       
+       $this->widgetSchema['medicamento_id'] = new sfWidgetFormInputHidden();
+
 //             
        $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es',
