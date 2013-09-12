@@ -15,7 +15,12 @@ class formulario27Actions extends autoFormulario27Actions
 {
     public function executeListIrPortal(sfWebRequest $request)
     {
-        $this->redirect('/portal_dev.php/inicio/index');
+        $env = '';
+        if(sfConfig::get('sf_environment') == 'dev')
+        {
+            $env = '_dev';
+        } 
+        $this->redirect('/portal'.$env.'.php/inicio/index');
     }
     public function executeEdit(sfWebRequest $request)
     { 

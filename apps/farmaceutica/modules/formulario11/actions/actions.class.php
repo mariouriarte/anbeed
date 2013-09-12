@@ -192,7 +192,12 @@ class formulario11Actions extends autoFormulario11Actions
         $this->formulario11 = $this->getRoute()->getObject();
         
         $user->setAttribute('form11', $this->formulario11);
-        $this->redirect('/farmaceutica_dev.php/items');
+        
+        if(sfConfig::get('sf_environment') == 'dev')
+        {
+            $env = '_dev';
+        } 
+        $this->redirect('/farmaceutica'.$env.'.php/items');
     }
     public function executeListIrEmpresa(sfWebRequest $request)
     {

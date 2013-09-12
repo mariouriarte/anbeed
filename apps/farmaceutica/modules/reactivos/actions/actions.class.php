@@ -32,7 +32,12 @@ class reactivosActions extends autoReactivosActions
         $user = $this->getUser();
         $this->reactivo = $this->getRoute()->getObject();
         $user->setAttribute('reactivo', $this->reactivo);
-        $this->redirect('/farmaceutica_dev.php/formulario12');
+        
+        if(sfConfig::get('sf_environment') == 'dev')
+        {
+            $env = '_dev';
+        } 
+        $this->redirect('/farmaceutica'.$env.'.php/formulario12');
     }
     
     public function executeIrForm7(sfWebRequest $request)

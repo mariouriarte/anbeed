@@ -32,7 +32,12 @@ class cosmeticoActions extends autoCosmeticoActions
         $user = $this->getUser();
         $this->cosmetico = $this->getRoute()->getObject();
         $user->setAttribute('cosmetico', $this->cosmetico);
-        $this->redirect('/farmaceutica_dev.php/formulario516');
+        
+        if(sfConfig::get('sf_environment') == 'dev')
+        {
+            $env = '_dev';
+        } 
+        $this->redirect('/farmaceutica'.$env.'.php/formulario516');
     }
     
     public function executeIrForm7(sfWebRequest $request)
