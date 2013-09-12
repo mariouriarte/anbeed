@@ -1,5 +1,8 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
+<?php use_stylesheet('formulario_decision.css') ?>
+<?php // use_javascript('/sfDependentSelectPlugin/js/SelectDependiente.min.js') ?>
+<?php  use_javascript('/js/jquery-migrate.js') ?>
 
 <?php $higiene = $sf_user->getAttribute('higiene'); ?>
 <div class="content-info-empresa">
@@ -50,11 +53,20 @@
       </tr>
       <tr>
           <th>Ciudad / Distrito / Provincia / Departamento</th>
+<<<<<<< HEAD
           <td><?php echo $higiene->Empresa->Ciudad->getNombre() ?></td>
       </tr>
       <tr>
         <th>País</th>
         <td><?php  echo $higiene->Empresa->Ciudad->Pais->getNombre() ?></td>
+=======
+          <td><?php echo $higiene->Empresa->Ciudad->getNombre();
+          ?></td>
+      </tr>
+      <tr>
+        <th>País</th>
+        <td><?php echo $higiene->Empresa->Ciudad->Pais->getNombre(); ?></td>
+>>>>>>> pdf706b
       </tr>
       <tr>
         <th>Teléfono</th>
@@ -76,7 +88,16 @@
           </td>
       </tr>
       <tr>
-          <td colspan="2" class="celda-entera"><?php  echo $higiene->Empresa->RepresentanteLegal ?></td>
+          <td colspan="2" class="celda-entera">
+              <?php 
+              if($higiene->Empresa->RepresentanteLegal->getId() == null)
+              {
+                  echo 'Establesca al representante legal de la empresa.';
+              }else{
+                  echo $higiene->Empresa->RepresentanteLegal;
+              }
+              ?>
+          </td>
       </tr>
       <tr>
           <th>Teléfono</th>
@@ -185,7 +206,16 @@
           <th colspan="2">Nombre del responsable médico</th>
       </tr>
       <tr>
-          <td colspan="2" class="celda-entera"><?php echo $higiene->Empresa->RegenteFarmaceutico ?></td>
+          <td colspan="2" class="celda-entera">
+              <?php 
+              if($higiene->Empresa->RegenteFarmaceutico->getId() == null)
+              {
+                  echo 'Establesca al regente farmacéutico del laboratorio.';
+              }else{
+                  echo $higiene->Empresa->RegenteFarmaceutico;
+              }
+              ?>
+          </td>
       </tr>
       <tr>
           <th>Teléfono</th>
@@ -243,7 +273,11 @@
       </tr>
       <tr>
           <th>Grupo</th>
+<<<<<<< HEAD
           <td><?php echo $higiene->getGrupoHigieneId() ?></td>
+=======
+          <td><?php //echo $higiene->getGrupoHigiene() ?></td>
+>>>>>>> pdf706
       </tr>
       <tr>
           <th>variedades</th>
