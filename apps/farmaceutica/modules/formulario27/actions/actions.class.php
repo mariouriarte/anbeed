@@ -18,9 +18,11 @@ class formulario27Actions extends autoFormulario27Actions
         $this->formulario27 = $this->getRoute()->getObject();
         
         $config = sfTCPDFPluginConfigHandler::loadConfig();
-                  sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
-
-        $pdf = new sfTCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+                  sfTCPDFPluginConfigHandler::includeLangFile(
+                          $this->getUser()->getCulture());
+        
+        $page_size = array(210,320);
+        $pdf = new sfTCPDF('P', PDF_UNIT, $page_size, true, 'UTF-8', false);
         
         // Informacion el documento
         $pdf->SetCreator(PDF_CREATOR);
@@ -40,96 +42,115 @@ class formulario27Actions extends autoFormulario27Actions
         $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
         
         // Set font
-        $pdf->SetFont('dejavusans', 'B', 13, '', true);
+        $pdf->SetFont('dejavusans', 'B', 11, '', true);
 
         // Add a page
         $pdf->AddPage();
         
         //Datos Generales
-        $y_datos_generales = 88;
+        $y_datos_generales = 70;
+        $x_datos_generales = 99;
         if($this->formulario27->getDatosFormulario27Id() == 2)
-            $y_datos_generales += 5;
+            $x_datos_generales += 85;
         if($this->formulario27->getDatosFormulario27Id() == 3)
-            $y_datos_generales += 10;
+            $y_datos_generales += 5;
         if($this->formulario27->getDatosFormulario27Id() == 4)
-            $y_datos_generales += 15;
+            {
+                $x_datos_generales += 85;
+                $y_datos_generales += 5;
+            }
+            
             //Imprimimos X en el dato general
-        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, '72', $y_datos_generales, true);
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_datos_generales, $y_datos_generales, true);
         
         //Revisamos el tipo de tramite
             // inicializamos en el primero
-        $y_tipo_tramite = 88;
+        $x_tipo_tramite = 99;
         if($this->formulario27->getTipoTramiteFormulario27Id() == 2)
-            $y_tipo_tramite += 5;
+            $x_tipo_tramite += 85;
             //Imprimimos X del tipo de tramite
-        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, '72', $y_tipo_tramite, true);
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_tipo_tramite, '80' , true);
         
         //Revisamos el origen
-        $y_origen = 109; // inicializamos en el primero
+        $x_origen = 99; // inicializamos en el primero
         if($this->formulario27->getOrigenFormularioId() == 2)
-            $y_origen += 5;
+            $x_origen += 85;
         //Imprimimos X del origen
-        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, '72', $y_origen, true);
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_origen, '85', true);
         
         //Reduciendo tamaño de letra
         $pdf->SetFont('dejavusans', '', 9, '', true);
         
         //Datos de la empresa
-        $pdf->MultiCell(150, 0, $this->formulario27->DispositivoMedico->Empresa->RepresentanteLegal, 
-                0, 'L', 0, 0, '50', '140', true);
+        $pdf->MultiCell(150, 0, $this->formulario27->DispositivoMedico->Empresa
+            ->RepresentanteLegal, 
+            0, 'L', 0, 0, '45', '108', true);
         $pdf->MultiCell(160, 0, $this->formulario27->DispositivoMedico->Empresa, 
-                0, 'L', 0, 0, '40', '128', true);
-        $pdf->MultiCell(170, 0, $this->formulario27->DispositivoMedico->Empresa->getNumResolucion(),
-                0, 'L', 0, 0, '30', '133', true);
-        $pdf->MultiCell(50, 0, funciones::FormatearFecha(
-                $this->formulario27->DispositivoMedico->Empresa->getFechaResolucion()), 
-                0, 'L', 0, 0, '130', '133', true);
-        $pdf->MultiCell(110, 0, $this->formulario27->DispositivoMedico->Empresa->RegenteFarmaceutico,
-                0, 'L', 0, 0, '30', '151', true);
-        $pdf->MultiCell(30, 0, $this->formulario27->DispositivoMedico->Empresa->RegenteFarmaceutico->
-                getMatriculaProfesional(), 0, 'L', 0, 0, '130', '151', true);
-        $pdf->MultiCell(160, 0, $this->formulario27->DispositivoMedico->Empresa->getDireccion(),
-                0, 'L', 0, 0, '40', '146', true);
-        $pdf->Multicell(100, 0, $this->formulario27->DispositivoMedico->Empresa->getTelefono1(),
-                0, 'L', 0, 0, '170', '146', true);
+            0, 'L', 0, 0, '40', '113', true);
+        $pdf->MultiCell(90, 0, $this->formulario27->DispositivoMedico->Empresa
+            ->getNumResolucion(),
+            0, 'L', 0, 0, '30', '118', true);
+        $pdf->MultiCell(55, 0, funciones::FormatearFecha(
+            $this->formulario27->DispositivoMedico->Empresa->getFechaResolucion()), 
+            0, 'L', 0, 0, '140', '118', true);
+        $pdf->MultiCell(110, 0, $this->formulario27->DispositivoMedico->Empresa
+            ->RegenteFarmaceutico,
+            0, 'L', 0, 0, '55', '123', true);
+        $pdf->MultiCell(70, 0, $this->formulario27->DispositivoMedico->Empresa
+            ->RegenteFarmaceutico->getMatriculaProfesional(),
+            0, 'L', 0, 0, '130', '123', true);
+        $pdf->MultiCell(90, 0, $this->formulario27->DispositivoMedico->Empresa
+            ->getDireccion(),
+            0, 'L', 0, 0, '40', '129', true);
+        $pdf->Multicell(50, 0, $this->formulario27->DispositivoMedico->Empresa
+            ->getTelefono1(),
+            0, 'L', 0, 0, '145', '129', true);
 
         //Datos del laboratorio
         $pdf->MultiCell(145, 0, $this->formulario27->DispositivoMedico->LaboratorioFabricante,
-                0, 'L', 0, 0, '55', '163', true);
-        $pdf->MultiCell(155, 0, $this->formulario27->DispositivoMedico->LaboratorioFabricante->
-                getBajoLicencia(), 0, 'L', 0, 0, '45', '168', true);
-        $pdf->MultiCell(155, 0, $this->formulario27->DispositivoMedico->LaboratorioFabricante->
-                Pais, 0, 'L', 0, 0, '45', '180', true);
-        $pdf->MultiCell(125, 0, $this->formulario27->DispositivoMedico->LaboratorioFabricante->
-                getDireccion(), 0, 'L', 0, 0, '35', '186', true);
+            0, 'L', 0, 0, '55', '149', true);
+        $pdf->MultiCell(155, 0, $this->formulario27->DispositivoMedico->LaboratorioFabricante
+            ->getBajoLicencia(),
+            0, 'L', 0, 0, '35', '159', true);
+        $pdf->MultiCell(155, 0, $this->formulario27->DispositivoMedico->LaboratorioFabricante
+            ->Pais, 
+            0, 'L', 0, 0, '40', '164', true);
+        $pdf->MultiCell(125, 0, $this->formulario27->DispositivoMedico->LaboratorioFabricante
+            ->getDireccion(), 
+            0, 'L', 0, 0, '35', '170', true);
         
         //Datos del producto
         $pdf->MultiCell(150, 0, $this->formulario27->DispositivoMedico->getNombreComercial(),
-                0, 'L', 0, 0, '50', '190', true);
+            0, 'L', 0, 0, '50', '190', true);
         $pdf->MultiCell(150, 0, $this->formulario27->DispositivoMedico->getNombreGenerico(),
-                0, 'L', 0, 0, '50', '195', true);
-        $pdf->MultiCell(150, 0, $this->formulario27->DispositivoMedico->getClasificacionRiesgo(),
-                0, 'L', 0, 0, '50', '203', true);
-        $pdf->MultiCell(145, 0, $this->formulario27->DispositivoMedico->getCodigoInternacional(),
-                0, 'L', 0, 0, '55', '208', true);
-        $pdf->MultiCell(145, 0, $this->formulario27->DispositivoMedico->getManual(),
-                0, 'L', 0, 0, '55', '214', true);
+            0, 'L', 0, 0, '50', '195', true);
+        $pdf->MultiCell(120, 0, $this->formulario27->DispositivoMedico->getClasificacionRiesgo(),
+            0, 'L', 0, 0, '75', '200', true);
+        $pdf->MultiCell(140, 0, $this->formulario27->DispositivoMedico->getCodigoInternacional(),
+            0, 'L', 0, 0, '55', '205', true);
+        
+        // Manual
+        $x_manual = 157;
+        if($this->formulario27->DispositivoMedico->getManual()==NULL)
+            $x_manual += 15;
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_manual, '211', true);
+        
         $pdf->MultiCell(145, 0, $this->formulario27->DispositivoMedico->getIndicaciones(),
-                0, 'L', 0, 0, '55', '220', true);
-        $pdf->MultiCell(80, 0, $this->formulario27->DispositivoMedico->getPresentacion(),
-                0, 'L', 0, 0, '50', '226', true);
-        $pdf->MultiCell(40, 0, $this->formulario27->DispositivoMedico->getCondicionEmpaque(),
-                0, 'L', 0, 0, '100', '231', true);
-        $pdf->MultiCell(40, 0, $this->formulario27->DispositivoMedico->getVidaUtil(),
-                0, 'L', 0, 0, '180', '231', true);
-        $pdf->MultiCell(40, 0, $this->formulario27->DispositivoMedico->getMetodoDesecho(),
-                0, 'L', 0, 0, '100', '236', true);
-        $pdf->MultiCell(40, 0, $this->formulario27->DispositivoMedico->getRegistroSanitario(),
-                0, 'L', 0, 0, '60', '241', true);
+            0, 'L', 0, 0, '50', '215', true);
+        $pdf->MultiCell(145, 0, $this->formulario27->DispositivoMedico->getPresentacion(),
+            0, 'L', 0, 0, '40', '220', true);
+        $pdf->MultiCell(35, 0, $this->formulario27->DispositivoMedico->getCondicionEmpaque(),
+            0, 'L', 0, 0, '90', '225', true);
+        $pdf->MultiCell(50, 0, $this->formulario27->DispositivoMedico->getVidaUtil(),
+            0, 'L', 0, 0, '145', '225', true);
+        $pdf->MultiCell(90, 0, $this->formulario27->DispositivoMedico->getMetodoDesecho(),
+            0, 'L', 0, 0, '105', '231', true);
+        $pdf->MultiCell(120, 0, $this->formulario27->DispositivoMedico->getRegistroSanitario(),
+            0, 'L', 0, 0, '60', '236', true);
         
         //Datos del Formulario
         $pdf->MultiCell(35, 0, $this->formulario27->getFecha(),
-                0, 'L', 0, 0, '165', '250', true);
+                0, 'L', 0, 0, '130', '282', true);
         
         $pdf->Output('Formulario027.pdf', 'I');
         throw new sfStopException();

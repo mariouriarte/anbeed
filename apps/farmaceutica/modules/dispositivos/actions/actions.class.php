@@ -41,6 +41,7 @@ class dispositivosActions extends autoDispositivosActions
         $dispositivo = $this->getRoute()->getObject();
         $user->setAttribute('dispositivo_medico', $dispositivo);
         $user->setAttribute('tabla', 'dispositivo_medico');
+        $user->setAttribute('producto', 'DispositivoMedico');
         $this->redirect('formulario7/index');
     }
     

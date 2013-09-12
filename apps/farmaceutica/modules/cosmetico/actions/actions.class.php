@@ -41,6 +41,7 @@ class cosmeticoActions extends autoCosmeticoActions
         $cosmetico = $this->getRoute()->getObject();
         $user->setAttribute('cosmetico', $cosmetico);
         $user->setAttribute('tabla', 'cosmetico');
+        $user->setAttribute('producto', 'Cosmetico');
         $this->redirect('formulario7/index');
     }
     
