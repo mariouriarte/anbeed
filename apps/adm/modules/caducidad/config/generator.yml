@@ -17,12 +17,13 @@ generator:
         empresa:           {label: 'Empresa'}
         producto:          {label: 'Producto'}
         laboratorio:       {label: 'Laboratorio Fabricante'}
+        fecha_inicio:      {label: 'Fecha de inicio'}
         fecha_vencimiento: {label: 'Fecha de vencimiento'}
         vigencia:          {label: 'Vigencia'}
       list:    
         title:   Listado de productos con vencimiento del Registro Sanitario 
         #display: [empresa, producto, laboratorio, fecha_vencimiento, vigencia]
-        display: [empresa, producto, laboratorio]
+        display: [empresa, laboratorio, producto, fecha_inicio, vigencia, fecha_vencimiento]
         actions:
           ir_portal: {label: Volver al Portal}
       filter:  

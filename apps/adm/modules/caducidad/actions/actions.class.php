@@ -35,7 +35,6 @@ class caducidadActions extends autoCaducidadActions
     }
     public function executeListIrPortal(sfWebRequest $request)
     {
-        //$this->getUser()->setAttribute('empresa', NULL);
         $env = '';
         if(sfConfig::get('sf_environment') == 'dev')
         {
