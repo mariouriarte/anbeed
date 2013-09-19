@@ -44,6 +44,9 @@ class Formulario5Form extends BaseFormulario5Form
        $this->widgetSchema['origen_formulario_id'] = new sfWidgetFormDoctrineChoice(
            array('expanded' => true,
                  'model' => 'OrigenFormulario'));
-       
+       $this->widgetSchema['fecha_inicio_vigencia'] = new sfWidgetFormJQueryDate(
+            array('culture' => 'es',
+                  'date_widget' => new sfWidgetFormDate(array(
+                  'years' => array_combine($years, $years)))));
   }
 }
