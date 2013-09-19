@@ -45,9 +45,12 @@ class formulario12Actions extends autoFormulario12Actions
         // Add a page
         $pdf->AddPage();
         
+        //definimos la variable para el eje y
+        $y = 76;
+        
         //Revisamos el tipo de tramite
             // inicializamos en el primero
-        $y_tipo_tramite = 76;
+        $y_tipo_tramite = $y;
         if($this->formulario12->getTipoTramiteFormulario12Id() == 2)
             $y_tipo_tramite += 6;
         if($this->formulario12->getTipoTramiteFormulario12Id() == 3)
@@ -56,7 +59,7 @@ class formulario12Actions extends autoFormulario12Actions
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, '76', $y_tipo_tramite, true);
         
         //Revisamos el origen
-        $y_origen = 76; // inicializamos en el primero
+        $y_origen = $y; // inicializamos en el primero
         if($this->formulario12->getOrigenFormularioId() == 2)
             $y_origen += 6;
         //Imprimimos X del origen
@@ -67,64 +70,64 @@ class formulario12Actions extends autoFormulario12Actions
         
         //Datos de la empresa
         $pdf->MultiCell(160, 0, $this->formulario12->Reactivo->Empresa, 
-                0, 'L', 0, 0, '45', '103', true);
+                0, 'L', 0, 0, '45', $y+=27, true);
         $pdf->MultiCell(170, 0, $this->formulario12->Reactivo->Empresa->getNumResolucion(),
-                0, 'L', 0, 0, '60', '109', true);
+                0, 'L', 0, 0, '60', $y+=6, true);
         $pdf->MultiCell(50, 0, funciones::FormatearFecha(
                 $this->formulario12->Reactivo->Empresa->getFechaResolucion()), 
-                0, 'L', 0, 0, '125', '109', true);
+                0, 'L', 0, 0, '125', $y, true);
         $pdf->MultiCell(150, 0, $this->formulario12->Reactivo->Empresa->RepresentanteLegal, 
-                0, 'L', 0, 0, '55', '114', true);
+                0, 'L', 0, 0, '55', $y+=5, true);
         $pdf->MultiCell(160, 0, $this->formulario12->Reactivo->Empresa->getDireccion(),
-                0, 'L', 0, 0, '40', '120', true);
+                0, 'L', 0, 0, '40', $y+=6, true);
         $pdf->Multicell(100, 0, $this->formulario12->Reactivo->Empresa->getEmail(),
-                0, 'L', 0, 0, '35', '126', true);
+                0, 'L', 0, 0, '35', $y+=6, true);
         $pdf->Multicell(25, 0, $this->formulario12->Reactivo->Empresa->getTelefono1(),
-                0, 'L', 0, 0, '122', '126', true);
+                0, 'L', 0, 0, '122', $y, true);
         $pdf->Multicell(25, 0, $this->formulario12->Reactivo->Empresa->getFax(),
-                0, 'L', 0, 0, '157', '126', true);
+                0, 'L', 0, 0, '157', $y, true);
         $pdf->MultiCell(70, 0, $this->formulario12->Reactivo->Empresa->RegenteFarmaceutico,
-                0, 'L', 0, 0, '35', '131', true);
+                0, 'L', 0, 0, '35', $y+=5, true);
         $pdf->MultiCell(30, 0, $this->formulario12->Reactivo->Empresa->RegenteFarmaceutico->
-                getMatriculaProfesional(), 0, 'L', 0, 0, '122', '131', true);
+                getMatriculaProfesional(), 0, 'L', 0, 0, '122', $y, true);
         $pdf->MultiCell(30, 0, $this->formulario12->Reactivo->Empresa->RegenteFarmaceutico->
-                Persona->getCI(), 0, 'L', 0, 0, '160', '131', true);
+                Persona->getCI(), 0, 'L', 0, 0, '160', $y, true);
         
         //Datos del laboratorio
         $pdf->MultiCell(145, 0, $this->formulario12->Reactivo->LaboratorioFabricante,
-                0, 'L', 0, 0, '45', '146', true);
+                0, 'L', 0, 0, '45', $y+=15, true);
         $pdf->MultiCell(155, 0, $this->formulario12->Reactivo->LaboratorioFabricante->
-                getBajoLicencia(), 0, 'L', 0, 0, '45', '152', true);
+                getBajoLicencia(), 0, 'L', 0, 0, '45', $y+=6, true);
         $pdf->MultiCell(170, 0, $this->formulario12->Reactivo->LaboratorioFabricante->
-                getPara(), 0, 'L', 0, 0, '30', '158', true);
+                getPara(), 0, 'L', 0, 0, '30', $y+=6, true);
         $pdf->MultiCell(155, 0, $this->formulario12->Reactivo->LaboratorioFabricante->
-                Pais, 0, 'L', 0, 0, '50', '164', true);
+                Pais, 0, 'L', 0, 0, '50', $y+=6, true);
         $pdf->MultiCell(125, 0, $this->formulario12->Reactivo->LaboratorioFabricante->
-                getDireccion(), 0, 'L', 0, 0, '40', '170', true);
+                getDireccion(), 0, 'L', 0, 0, '40', $y+=6, true);
         $pdf->MultiCell(125, 0, $this->formulario12->Reactivo->LaboratorioFabricante->
-                getTelefono(), 0, 'L', 0, 0, '140', '170', true);
+                getTelefono(), 0, 'L', 0, 0, '140', $y, true);
         
         //Datos del producto
         $pdf->MultiCell(150, 0, $this->formulario12->Reactivo->getNombreComercial(),
-                0, 'L', 0, 0, '60', '184', true);
+                0, 'L', 0, 0, '60', $y+=14, true);
         $pdf->MultiCell(150, 0, $this->formulario12->Reactivo->getCatalogo(),
-                0, 'L', 0, 0, '60', '190', true);
+                0, 'L', 0, 0, '60', $y+=6, true);
         $pdf->MultiCell(145, 10, $this->formulario12->Reactivo->getUso(),
-                0, 'L', 0, 0, '60', '196', true);
+                0, 'L', 0, 0, '60', $y+=6, true);
         $pdf->MultiCell(145, 0, $this->formulario12->Reactivo->getPresentacion(),
-                0, 'L', 0, 0, '50', '208', true);
+                0, 'L', 0, 0, '50', $y+=12, true);
         $pdf->MultiCell(145, 0, $this->formulario12->Reactivo->getConservacion(),
-                0, 'L', 0, 0, '50', '214', true);
+                0, 'L', 0, 0, '50', $y+=6, true);
         $pdf->MultiCell(80, 0, $this->formulario12->Reactivo->getPeriodoValidez(),
-                0, 'L', 0, 0, '145', '214', true);
+                0, 'L', 0, 0, '145', $y, true);
         $pdf->MultiCell(40, 0, $this->formulario12->Reactivo->getComponente(),
-                0, 'L', 0, 0, '55', '223', true);
+                0, 'L', 0, 0, '55', $y+=9, true);
         
         //Datos del Formulario
         $pdf->MultiCell(120, 0, $this->formulario12->getModificacion(),
-                0, 'L', 0, 0, '60', '255', true);
+                0, 'L', 0, 0, '60', $y+=32, true);
         $pdf->MultiCell(35, 0, $this->formulario12->getFecha(),
-                0, 'L', 0, 0, '110', '265', true);
+                0, 'L', 0, 0, '110', $y+=10, true);
         
         $pdf->Output('Formulario012.pdf', 'I');
         throw new sfStopException();

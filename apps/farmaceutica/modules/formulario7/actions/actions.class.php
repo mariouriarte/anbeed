@@ -47,21 +47,24 @@ class formulario7Actions extends autoFormulario7Actions
         // Add a page
         $pdf->AddPage();
 
+        //definimos la variable para el eje y
+        $y = 55;
+        
         //Tamaño de letra para datos
         $pdf->SetFont('dejavusans', '', 9, '', true);
         
         //Datos de la Empresa
         $pdf->MultiCell(77, 0, $this->formulario7->Producto->$producto->Empresa
             ->RegenteFarmaceutico, 
-            1, 'L', 0, 0, '35', '56', true);
+            0, 'L', 0, 0, '35', $y, true);
         $pdf->MultiCell(18, 0, $this->formulario7->Producto->$producto->Empresa
             ->RegenteFarmaceutico->getMatriculaProfesional(),
-            0, 'L', 0, 0, '143', '56', true);
+            0, 'L', 0, 0, '143', $y, true);
         $pdf->MultiCell(60, 0, $this->formulario7->Producto->$producto->Empresa,
-            0, 'L', 0, 0, '26', '60', true);        
+            0, 'L', 0, 0, '26', $y+=5, true);        
         
         //Tamaño letra para X's
-        $pdf->SetFont('dejavusans', 'B', 11, '', true);
+        $pdf->SetFont('dejavusans', 'B', 9, '', true);
         
         //Revisamos el tipo de tramite
             // inicializamos en el primero
@@ -73,7 +76,7 @@ class formulario7Actions extends autoFormulario7Actions
         if($this->formulario7->getTipoCalificacionId() == 4)
             $x_tipo_calificacion += 34;
             //Imprimimos X del tipo de tramite
-        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_tipo_calificacion, '69', true);
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_tipo_calificacion, $y+=9, true);
         
         //Tamaño de letra para datos
         $pdf->SetFont('dejavusans', '', 9, '', true);
@@ -83,71 +86,71 @@ class formulario7Actions extends autoFormulario7Actions
         if($producto=='Reactivo')
             $pdf->MultiCell(145, 0, $this->formulario7->Producto
                 ->$producto->getNombreComercial(),
-                0, 'L', 0, 0, '57', '73', true);
+                0, 'L', 0, 0, '57', $y+=4, true);
         
         if($producto=='Medicamento' || $producto ='DispositivoMedico')
         {
             $pdf->MultiCell(145, 0, $this->formulario7->Producto
                 ->$producto->getNombreComercial(),
-                0, 'L', 0, 0, '57', '73', true);
+                0, 'L', 0, 0, '57', $y+=4, true);
             $pdf->MultiCell(135, 0, $this->formulario7->Producto
                 ->$producto->getNombreGenerico(),
-                0, 'L', 0, 0, '68', '79', true);
+                0, 'L', 0, 0, '68', $y+=6, true);
         }
         
         if ($producto=='Cosmetico' || $producto =='Higiene')
         {
             $pdf->MultiCell(145, 0, $this->formulario7->Producto->$producto->getMarca(),
-                0, 'L', 0, 0, '57', '73', true);
+                0, 'L', 0, 0, '57', $y+=4, true);
             $pdf->MultiCell(135, 0, $this->formulario7->Producto->$producto->getNombre(),
-                0, 'L', 0, 0, '68', '79', true);
+                0, 'L', 0, 0, '68', $y+=6, true);
         }
         
         //Datos del laboratorio
         $pdf->MultiCell(140, 0, $this->formulario7->Producto->$producto
             ->LaboratorioFabricante->getNombre(),
-            0, 'L', 0, 0, '63', '83', true);
+            0, 'L', 0, 0, '63', $y+=4, true);
         
         if($producto=='Medicamento')
         {
             $pdf->MultiCell(65, 0, $this->formulario7->Producto->$producto
                 ->FormaFarmaceutica->getNombre(),
-                0, 'L', 0, 0, '59', '88', true);
+                0, 'L', 0, 0, '59', $y+=4, true);
         }
         else 
         {
             $pdf->MultiCell(65, 0, $this->formulario7->FormaFarmaceutica->getNombre(),
-                0, 'L', 0, 0, '59', '88', true);
+                0, 'L', 0, 0, '59', $y+=4, true);
         }
         $pdf->MultiCell(50, 0, $this->formulario7->getConcentracion(),
-            0, 'L', 0, 0, '149', '88', true);
+            0, 'L', 0, 0, '149', $y+=4, true);
         
         //Formula Cuali-Cauntitaviva
         if($producto == 'Medicamento')
             $pdf->MultiCell(175, 25, $this->formulario7->Producto->$producto->FormulaCc,
-                0, 'L', 0, 0, '25', '95', true);    
+                0, 'L', 0, 0, '25', $y+=7, true);    
         
         //Datos del Formulario
         $pdf->MultiCell(145, 0, $this->formulario7->ViaAdministracion->getNombre(),
-            0, 'L', 0, 0, '60', '126', true);
+            0, 'L', 0, 0, '60', $y+=31, true);
         $pdf->MultiCell(145, 10, $this->formulario7->getAccionTerapeutica(),
-            0, 'L', 0, 0, '56', '130', true);
+            0, 'L', 0, 0, '56', $y+=4, true);
         $pdf->MultiCell(165, 15, $this->formulario7->getDosis(),
-            0, 'L', 0, 0, '36', '139', true);
+            0, 'L', 0, 0, '36', $y+=9, true);
         $pdf->MultiCell(155, 30, $this->formulario7->getIndicaciones(),
-            0, 'L', 0, 0, '47', '151', true);
+            0, 'L', 0, 0, '47', $y+=12, true);
         $pdf->MultiCell(145, 25, $this->formulario7->getContraindicaciones(),
-            0, 'L', 0, 0, '57', '174', true);     
+            0, 'L', 0, 0, '57', $y+=23, true);     
         $pdf->MultiCell(155, 25, $this->formulario7->getPrecauciones(),
-            0, 'L', 0, 0, '48', '193', true);  
+            0, 'L', 0, 0, '48', $y+=19, true);  
         $pdf->MultiCell(120, 30, $this->formulario7->getEfectosSecundarios(),
-            0, 'L', 0, 0, '80', '212', true);  
+            0, 'L', 0, 0, '80', $y+=19, true);  
         $pdf->MultiCell(150, 15, $this->formulario7->getObservaciones(),
-            0, 'L', 0, 0, '51', '255', true);
+            0, 'L', 0, 0, '51', $y+=43, true);
         $pdf->MultiCell(10, 0, $this->formulario7->getComision(),
-            0, 'L', 0, 0, '82', '273', true);        
+            0, 'L', 0, 0, '82', $y+=18, true);        
         $pdf->MultiCell(35, 0, $this->formulario7->getCalificacion(),
-            0, 'L', 0, 0, '87', '278', true);   
+            0, 'L', 0, 0, '87', $y+=5, true);   
         
         $pdf->Output('Formulario007.pdf', 'I');
         throw new sfStopException();
