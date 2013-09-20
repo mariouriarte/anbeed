@@ -1,9 +1,15 @@
 <?php
+
+if(sfConfig::get('sf_environment') == 'dev')
+{
+    $env = '_dev';
+} 
+
 if(!$sf_user->hasAttribute('empresa'))
 {
     $context = sfContext::getInstance(); 
     $controller = $context->getController();
-    $controller->redirect('/portal_dev.php/inicio/index');
+    $controller->redirect('/portal'.$env.'.php/inicio/index');
 }
 $empresa = $sf_user->getAttribute('empresa');
    

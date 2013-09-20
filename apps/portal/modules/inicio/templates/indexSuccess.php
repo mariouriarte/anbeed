@@ -35,7 +35,6 @@
                     <div class="titulo_img"><img src="/images/icons/text.svg" /></div>
                     <h2 class="titulo"> Formularios</h2>
                     <div class="contenido">
-                        
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/formulario5"><span>Reportes Formulario 005</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/formulario12"><span>Reportes Formulario 012</span></a></li>
