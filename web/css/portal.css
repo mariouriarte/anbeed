@@ -23,12 +23,16 @@ a {
 
 div.portal {
     /*margin-left: 20px;*/
-    width: 1018px;
-    margin: 50px auto;
+    width: 900px;
+    margin: 10px auto;
     min-height: 440px;  
 
     overflow: hidden;
     position: relative;
+    border: 1px solid #EEE;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.09);
+    
 }
 
 .linea {
@@ -38,11 +42,11 @@ div.portal {
 .portal .linea .columna {
     display: inline;
     margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     border: 1px solid #8CACBB;
-    width: 185px;
+    width: 200px;
     height: 230px;
-    margin: 8px;
+    margin: 11px;
     float: left;
     position: relative;
     background-color: #f9f9f9;
@@ -56,14 +60,14 @@ div.portal {
 }
 
 .columna .cubo {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     width: 100%;
     
     
 }
 
 .linea .cubo .contenido {    
-    min-height: 230px;
+    min-height: 158px;
     padding: 0px;
     /*border-top: 1px solid #8CACBB;*/
 }
@@ -74,10 +78,27 @@ div.portal {
 	box-shadow: inset 0px 1px 5px -2px #777;
 }
 .titulo{
+    border-top: 10px;
+    padding-top: 20px;
     padding-left: 5px;
     padding-right: 5px;
+    padding-bottom: 5px;
+    background: #EEE;
+    margin: 0em 0;
+    height: 33px;
+    text-align: left;
 }
+
 .contenido
 {
     max-height: 200px;
+}
+.titulo_img
+{
+    background: #EEE;
+    width: 48px;
+    height: 48px;
+    padding: 5px;
+    position: relative;
+    float: left;
 }

@@ -18,7 +18,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/applications-debugging.svg" />Administración</h2>
+                    <div class="titulo_img"><img src="/images/icons/applications-debugging.svg" /></div>
+                    <h2 class="titulo">Administración</h2>
                     <div class="contenido">
                         <ul> 
 
@@ -50,7 +51,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/productos.svg" /> &nbsp; Productos</h2>
+                    <div class="titulo_img"><img src="/images/icons/productos.svg" /></div>
+                    <h2 class="titulo">Productos</h2>
                     <div class="contenido">
                         <ul>
                             <li><?php echo link_to('Medicamentos', 'medicamentos/index')?></li>
@@ -66,7 +68,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/text.svg" /> Formularios</h2>
+                    <div class="titulo_img"><img src="/images/icons/text.svg" /></div>
+                    <h2 class="titulo">Formularios</h2>
                     <div class="contenido">
                         <ul>
                             <li><?php echo link_to('Formulario 003', 'empresas/edit?id=' . $empresa->getId()) ?></li>

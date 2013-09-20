@@ -4,8 +4,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/portafolio1.png" width="48" height="40"/> Empresas</h2>
-                    <h2 class="titulo">Empresas</h2>
+                    <div class="titulo_img"><img src="/images/icons/portafolio1.png" width="48" height="45"/></div>
+                    <h2 class="titulo"> Empresas</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica<?php echo $env ?>.php/empresas"><span>Empresas</span></a></li>
@@ -18,8 +18,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/applications-development.svg" /> Laboratorios</h2>
-                    <h2 class="titulo">Laboratorios</h2>
+                    <div class="titulo_img"><img src="/images/icons/applications-development.svg" /></div>
+                    <h2 class="titulo"> Laboratorios</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
@@ -32,8 +32,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/text.svg" /> Formularios</h2>
-                    <h2 class="titulo">Formularios</h2>
+                    <div class="titulo_img"><img src="/images/icons/text.svg" /></div>
+                    <h2 class="titulo"> Formularios</h2>
                     <div class="contenido">
                         
                         <ul>
@@ -51,7 +51,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/correspondencia.svg" />Correspondecia</h2>
+                    <div class="titulo_img"><img src="/images/icons/correspondencia.svg" /></div>
+                    <h2 class="titulo">Correspondecia</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/emisionc"><span>Emsión de Correspondecia</span></a></li>
@@ -67,7 +68,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/notificacion.svg" />Caducidad</h2>
+                    <div class="titulo_img"><img src="/images/icons/notificacion.svg" /></div>
+                    <h2 class="titulo">Caducidad</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=1"><span>Alerta de Caducidad <br />1 Mes</span></a></li>
@@ -83,7 +85,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/applications-debugging.svg" />Administración</h2>
+                    <div class="titulo_img"><img src="/images/icons/applications-debugging.svg" /></div>
+                    <h2 class="titulo">Administración</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/ingredientes"><span>Ingredientes</span></a></li>
@@ -102,7 +105,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <h2 class="titulo"><img src="/images/icons/cuenta.svg" />Cuenta</h2>
+                    <div class="titulo_img"><img src="/images/icons/cuenta.svg" /></div>
+                    <h2 class="titulo">Cuenta</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/persona_usuario"><span>Usuarios</span></a></li>

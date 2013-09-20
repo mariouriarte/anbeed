@@ -33,11 +33,15 @@ class Menu
         $menu_admin =
             '<li class="first-list"><a href="/"><span>Administración</span></a>
                 <div><ul>
-                    <li><a href="/adm' . $env . '.php/usuarios"><span>Usuarios</span></a></li>
+                    <li><a href="/adm' . $env . '.php/persona_usuario   "><span>Usuarios</span></a></li>
                     <li><a href="/portal_dev.php"><span>Cambiar a modo "DEV"</span></a>
                     <li><a href="/portal.php"><span>Cambiar a modo "PROD"</span></a>
                 </ul></div>
             </li>';
+        /*listado de empresas*/
+        $menu_list_empresa = '<li class="first-list"><a href="/farmaceutica' . $env .'.php/empresas"><span>Listado de Empresas</span></a></li>';
+        
+        
         $empresa = sfContext::getInstance()->getUser()->getAttribute('empresa');
         $menu_empresa = "";
         if(sfContext::getInstance()->getUser()->hasAttribute('empresa'))
@@ -50,6 +54,7 @@ class Menu
             <ul class="menu header-menu">
                 <li class="first-list"><a href="/portal' . $env . '.php"><span>Portal</span></a></li>
                 '. ($user->hasCredential('admin') ? $menu_admin : '') .'
+                '.$menu_list_empresa.'    
                 '.$menu_empresa.'    
             </ul>';
 
