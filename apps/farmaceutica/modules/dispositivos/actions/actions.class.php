@@ -32,7 +32,12 @@ class dispositivosActions extends autoDispositivosActions
         $user = $this->getUser();
         $this->dispositivo_medico = $this->getRoute()->getObject();
         $user->setAttribute('dispositivo_medico', $this->dispositivo_medico);
-        $this->redirect('/farmaceutica_dev.php/formulario27');
+        
+        if(sfConfig::get('sf_environment') == 'dev')
+        {
+            $env = '_dev';
+        }
+        $this->redirect('/farmaceutica'.$env.'.php/formulario27');
     }
     
     public function executeIrForm7(sfWebRequest $request)

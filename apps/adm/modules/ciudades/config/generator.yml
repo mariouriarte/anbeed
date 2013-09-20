@@ -18,6 +18,9 @@ generator:
       list:    
         title: Listado de Ciudades
         display: [pais, nombre]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
       filter:  
         display: [pais_id, nombre]
       form:    ~

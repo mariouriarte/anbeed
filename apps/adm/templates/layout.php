@@ -1,4 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php 
+        if(sfConfig::get('sf_environment') == 'dev')
+        {
+            $env = '_dev';
+        } 
+?> 
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <title>
@@ -38,7 +45,7 @@
                             </div>
                             <div id="header-logo">
                                 <div id="logo">
-                                    <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '/portal_dev.php')?>
+                                    <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '/portal'.$env.'.php/inicio/index')?>
                                 </div>
                             </div>
                             <?php if ($sf_user->isAuthenticated()): ?>

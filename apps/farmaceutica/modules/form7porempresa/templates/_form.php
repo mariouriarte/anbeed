@@ -3,6 +3,12 @@
 <?php use_stylesheet('formulario_decision.css') ?>
 <?php use_javascript('jquery-migrate.js') ?>
 
+<?php
+if(sfConfig::get('sf_environment') == 'dev')
+{
+    $env = '_dev';
+}
+?>
 
 <script type='text/javascript'>
 
@@ -10,9 +16,9 @@ $(document).ready(function()
 {
     //Formula Farmaceutica
     $('#autocomplete_formulario7_forma_farmaceutica_id')
-        .after("&nbsp;&nbsp;<a href='/farmaceutica_dev.php/ffarmaceuticas/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nueva Forma Farmaceutica\"/></a>");
+        .after("&nbsp;&nbsp;<a href='/farmaceutica<?php echo $env?>.php/ffarmaceuticas/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nueva Forma Farmaceutica\"/></a>");
     $('#autocomplete_formulario7_via_administracion_id')
-        .after("&nbsp;&nbsp;<a href='/farmaceutica_dev.php/administraciones/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nueva Via de Administración\"/></a>");
+        .after("&nbsp;&nbsp;<a href='/farmaceutica<?php echo $env ?>.php/administraciones/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nueva Via de Administración\"/></a>");
 });
 </script>
 

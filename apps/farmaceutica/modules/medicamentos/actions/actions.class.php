@@ -25,7 +25,7 @@ class medicamentosActions extends autoMedicamentosActions
     {
         $user = $this->getUser();
         $empresa = $user->getAttribute('empresa');
-        $this->redirect('/farmaceutica_dev.php/empresas/'.$empresa->getId().'/administrarEmpresa');
+        $this->redirect('empresas/administrarEmpresa?id=' . $empresa->getId());
     }
     public function executeIrFormula(sfWebRequest $request)
     {
@@ -37,17 +37,28 @@ class medicamentosActions extends autoMedicamentosActions
         //var_dump($formula_cc_id);
         //die();
         $user->setAttribute('medicamento', $this->medicamento);
+        
+        if(sfConfig::get('sf_environment') == 'dev')
+        {
+            $env = '_dev';
+        }
+        
         if(($formula_cc_id == NULL))
-           $this->redirect('/farmaceutica_dev.php/formulas/new');
+           $this->redirect('/farmaceutica'.$env.'.php/formulas/new');
         else
-           $this->redirect('/farmaceutica_dev.php/formulas/'.$formula_cc_id.'/edit');
+           $this->redirect('/farmaceutica'.$env.'.php/formulas/'.$formula_cc_id.'/edit');
     }
     public function executeIrForm5(sfWebRequest $request)
     {
         $user = $this->getUser();
         $this->medicamento = $this->getRoute()->getObject();
         $user->setAttribute('medicamento', $this->medicamento);
-        $this->redirect('/farmaceutica_dev.php/formulario5');
+        
+        if(sfConfig::get('sf_environment') == 'dev')
+        {
+            $env = '_dev';
+        }
+        $this->redirect('/farmaceutica'.$env.'.php/formulario5');
     }
     
     public function executeIrForm7(sfWebRequest $request)

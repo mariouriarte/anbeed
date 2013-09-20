@@ -13,4 +13,12 @@ require_once dirname(__FILE__).'/../lib/ciudadesGeneratorHelper.class.php';
  */
 class ciudadesActions extends autoCiudadesActions
 {
+    public function executeListIrPortal(sfWebRequest $request)
+    {
+        if(sfConfig::get('sf_environment') == 'dev')
+        {
+            $env = '_dev';
+        } 
+        $this->redirect('/portal'.$env.'.php/inicio/index');
+    }
 }
