@@ -22,6 +22,7 @@ generator:
         vigencia:          {label: 'Vigencia'}
       list:    
         title:   Listado de productos con vencimiento del Registro Sanitario 
+        table_method: selectProductosCaducidad
         #display: [empresa, producto, laboratorio, fecha_vencimiento, vigencia]
         display: [empresa, laboratorio, producto, fecha_inicio, vigencia, fecha_vencimiento]
         actions:

@@ -15,22 +15,34 @@ class caducidadActions extends autoCaducidadActions
 {
     public function executeIndex(sfWebRequest $request)
     {
-        parent::executeIndex($request);
         
         if($request->getParameter('time'))
         {
+            
             if($request->getParameter('time')==1)
+            {
+                $this->getUser()->setAttribute('meses', 1);
                 $this->getUser()->setAttribute('time', "1 mes");
-            if($request->getParameter('time')==2)
-                $this->getUser()->setAttribute('time', "6 meses");
+                //echo "entra"; die;
+            }
             if($request->getParameter('time')==3)
-                $this->getUser()->setAttribute('time', "12 meses");
+            {
+                $this->getUser()->setAttribute('meses', 3);
+                $this->getUser()->setAttribute('time', "3 meses");
+            }
+            if($request->getParameter('time')==6)
+            {
+                $this->getUser()->setAttribute('meses', 6);
+                $this->getUser()->setAttribute('time', "6 meses");
+            }
+            parent::executeIndex($request);
         }
         else
         {
             if(!$this->getUser()->getAttribute('time'))
                 $this->redirect('@homepage');
         }
+        
         
     }
     public function executeListIrPortal(sfWebRequest $request)
@@ -40,6 +52,8 @@ class caducidadActions extends autoCaducidadActions
         {
             $env = '_dev';
         } 
+//        $this->getUser()->getAttributeHolder()->remove('meses');
+//        $this->getUser()->getAttributeHolder()->remove('time');
         $this->redirect('/portal'.$env.'.php/inicio/index');
     }
     

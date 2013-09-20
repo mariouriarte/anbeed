@@ -113,4 +113,32 @@ class ProductoTable extends Doctrine_Table
         return $q;
         
     }
+    public function selectProductosCaducidad()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $meses = $user->getAttribute('meses');
+//        echo $meses;
+//        die;
+        $meses *= 30;
+        
+        $q = Doctrine_Query::create()
+                        ->from('Producto p')
+                        ->leftJoin('p.Medicamento m')
+                        ->leftJoin('p.DispositivoMedico dm')
+                        ->leftJoin('p.Cosmetico c')
+                        ->leftJoin('p.Higiene h')
+                        ->leftJoin('p.Reactivo r')
+                        ->leftJoin('m.Formulario5 f5')
+                        ->leftJoin('dm.Formulario27 f27')
+                        ->leftJoin('r.Formulario12 f12')
+                        ->leftJoin('c.Formulario516 f516')
+                        ->leftJoin('h.Formulario706 f706')
+                        ->where("    f5.fecha_inicio_vigencia+(f5.vigencia*30) <= current_date + interval '".$meses." day'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                  OR f27.fecha_inicio_vigencia+(f27.vigencia*30) <= current_date + interval '".$meses." day'
+                                  OR f12.fecha_inicio_vigencia+(f12.vigencia*30) <= current_date + interval '".$meses." day'
+                                  OR f516.fecha_inicio_vigencia+(f516.vigencia*30) <= current_date + interval '".$meses." day'
+                                  OR f706.fecha_inicio_vigencia+(f706.vigencia*30) <= current_date + interval '".$meses." day'")
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ->orderBy('p.id ASC');
+        return $q;
+    }
 }
