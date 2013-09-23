@@ -14,18 +14,20 @@ generator:
     config:
       actions: ~
       fields:  
-        observaciones:         {label: 'Observaciones'} 
-        NuevoDetalleFormulaCc: {label: 'Nuevo Detalle '}
-        DetalleFormulaCc:      {label: 'Detalle(s) Resgistrado(s)'}
+        contenido:             {label: 'Contenido'} 
+        ingrediente_id:        {label: 'Principio Activo'} 
+        NuevoDetalleFormulaCc: {label: 'Excipientes'}
+        DetalleFormulaCc:      {label: 'Excipientes Resgistrados:'}
       list:    
         title:   Fórmulas Cualicuantitativas Registradas
         display: [observaciones]
       filter:  ~
       form:  
         display:  
-          Fórmula Cualicuantitativa:                                [observaciones]
-          Nuevo Detalle de la Fórmula Cualicuantitativa:            [NuevoDetalleFormulaCc]
-          Detalle(s) de la Fórmula Cualicuantitativa Registrada(s): [DetalleFormulaCc]
+          Fórmula Cualicuantitativa:                                 [contenido]
+          Principio Activo:                                          [ingrediente_id, cantidad, unidad]
+          Nuevo Excipiente de la Fórmula Cualicuantitativa:          [NuevoDetalleFormulaCc]
+          Excipientes de la Fórmula Cualicuantitativa Registrado(s): [DetalleFormulaCc]
         actions:
           ir_productos: {label: Regresar a Medicamentos}
           _delete: ~

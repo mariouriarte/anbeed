@@ -16,4 +16,12 @@ class DetalleFormulaCcTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('DetalleFormulaCc');
     }
+    public static function getIngredientes($formulaCc)
+    {
+        $q = Doctrine_Query::create()
+                    ->from('DetalleFormulaCc dfcc')
+                    ->where('dfcc.formula_cc_id = ?', $formulaCc)
+                    ->orderBy('dfcc.id ASC');
+        return $q;
+    }
 }

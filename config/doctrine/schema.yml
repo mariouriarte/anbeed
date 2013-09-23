@@ -223,10 +223,15 @@ TipoVenta:
 FormulaCc:
   actAs: [Timestampable, Signable]
   columns:
-    observaciones: {type: string(2000), notnull: false}
+    contenido:      {type: string(250), notnull: false}
+    ingrediente_id: {type: integer, notnull: false}
+    cantidad:       {type: decimal(5), scale: 2, notnull: false}
+    unidad:         {type: string(30), notnull: false}
+    
   relations:
     DetalleFormulaCc: {local: id, foreign: formula_cc_id, type: many, foreignAlias: FormulaCc}
     Medicamento:      {local: id, foreign: formula_cc_id, type: many, foreignAlias: FormulaCc}
+    Ingrediente:      {local: ingrediente_id, foreign: id, type: one, foreignAlias: FormulaCc}
     
 DetalleFormulaCc:
   actAs: [Timestampable, Signable]
@@ -245,6 +250,7 @@ Ingrediente:
     nombre: {type: string(100), notnull: true}
   relations:
     DetalleFormulaCc: {local: id, foreign: ingrediente_id, type: one, foreignAlias: Ingrediente}
+    FormulaCc:        {local: id, foreign: ingrediente_id, type: one, foreignAlias: Ingrediente}
 
 Formulario5:
   actAs: [Timestampable, Signable]

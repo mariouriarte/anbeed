@@ -28,6 +28,6 @@ class DetalleFormulaCcForm extends BaseDetalleFormulaCcForm
         $this->validatorSchema['Eliminar'] = new sfValidatorPass();
       }
       /*AJUSTANDO LOS TAMAños*/
-      $this->widgetSchema['ingrediente_id']->setAttribute('size' , 50);
+      $this->widgetSchema['ingrediente_id']->setAttribute('size' , 30);
   }
 }

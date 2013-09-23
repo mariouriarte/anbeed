@@ -21,9 +21,14 @@ class FormulaCcForm extends BaseFormulaCcForm
 
       $this->embedRelation('DetalleFormulaCc');
       
+      $this->widgetSchema['ingrediente_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+                array( 'model'=>'Ingrediente',
+                        'url'=>sfContext::getInstance()->getRouting()->generate('buscar_ingrediente')));
+      
+      
       /*AJUSTANDO LOS TAMAños*/
-      $this->widgetSchema['observaciones']->setAttribute('cols' , 80);
-      $this->widgetSchema['observaciones']->setAttribute('rows' , 1);
+      $this->widgetSchema['contenido']->setAttribute('size' , 30);
+      $this->widgetSchema['ingrediente_id']->setAttribute('size' , 30);
       
   }
   protected function doBind(array $values) {

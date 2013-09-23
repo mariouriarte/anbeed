@@ -28,6 +28,7 @@ generator:
         display: [fecha, tipo_tramite_formulario5, empresa, laboratorio_fabricante, medicamento]
         object_actions:
           imprimir:    {label: Imprimir, action: print}
+          imprimirfcc:    {label: Imprimir Fórmula, action: printfcc}
           _edit: ~
           _delete: ~
           

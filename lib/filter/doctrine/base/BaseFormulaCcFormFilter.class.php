@@ -13,19 +13,25 @@ abstract class BaseFormulaCcFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'observaciones' => new sfWidgetFormFilterInput(),
-      'created_at'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
-      'updated_at'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
-      'created_by'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'add_empty' => true)),
-      'updated_by'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Updator'), 'add_empty' => true)),
+      'contenido'      => new sfWidgetFormFilterInput(),
+      'ingrediente_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Ingrediente'), 'add_empty' => true)),
+      'cantidad'       => new sfWidgetFormFilterInput(),
+      'unidad'         => new sfWidgetFormFilterInput(),
+      'created_at'     => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
+      'updated_at'     => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
+      'created_by'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'add_empty' => true)),
+      'updated_by'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Updator'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
-      'observaciones' => new sfValidatorPass(array('required' => false)),
-      'created_at'    => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
-      'updated_at'    => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
-      'created_by'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Creator'), 'column' => 'id')),
-      'updated_by'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Updator'), 'column' => 'id')),
+      'contenido'      => new sfValidatorPass(array('required' => false)),
+      'ingrediente_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Ingrediente'), 'column' => 'id')),
+      'cantidad'       => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
+      'unidad'         => new sfValidatorPass(array('required' => false)),
+      'created_at'     => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'updated_at'     => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'created_by'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Creator'), 'column' => 'id')),
+      'updated_by'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Updator'), 'column' => 'id')),
     ));
 
     $this->widgetSchema->setNameFormat('formula_cc_filters[%s]');
@@ -45,12 +51,15 @@ abstract class BaseFormulaCcFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'            => 'Number',
-      'observaciones' => 'Text',
-      'created_at'    => 'Date',
-      'updated_at'    => 'Date',
-      'created_by'    => 'ForeignKey',
-      'updated_by'    => 'ForeignKey',
+      'id'             => 'Number',
+      'contenido'      => 'Text',
+      'ingrediente_id' => 'ForeignKey',
+      'cantidad'       => 'Number',
+      'unidad'         => 'Text',
+      'created_at'     => 'Date',
+      'updated_at'     => 'Date',
+      'created_by'     => 'ForeignKey',
+      'updated_by'     => 'ForeignKey',
     );
   }
 }

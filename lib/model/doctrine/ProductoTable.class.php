@@ -141,4 +141,122 @@ class ProductoTable extends Doctrine_Table
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ->orderBy('p.id ASC');
         return $q;
     }
+    public static function getFechaVencimientoItems($producto, $codigo)
+    {
+
+       if($codigo == 1)
+       {
+           $q = Doctrine_Query::create()
+                ->select('MAX(f5.id) as max')
+                ->from('Formulario5 f5')
+                ->where('f5.medicamento_id = ?', $producto);
+
+           $f5 =  $q->fetchOne();
+           if($f5['max'] != null)
+           {
+                $f5 = Doctrine::getTable('Formulario5')->find($f5['max']);
+                $fecha_inicio = $f5->getFechaInicioVigencia();
+                $vigencia = $f5->getVigencia();
+                //return funciones::FechaEspanol(date("Y-m-d", strtotime("$fecha_inicio +$vigencia month")));
+                if($fecha_inicio != null)
+                    return funciones::FormatearFecha(date("Y-m-d", strtotime("$fecha_inicio +$vigencia month")));
+                else
+                    return "";
+           }
+           else 
+               return "";
+       }
+       if($codigo == 2)
+       {
+           $q = Doctrine_Query::create()
+                ->select('MAX(f27.id) as max')
+                ->from('Formulario27 f27')
+                ->where('f27.dispositivo_medico_id = ?', $producto);
+           
+           $f27 =  $q->fetchOne();
+           
+           if($f27['max'] != null)
+           {
+                $f27 = Doctrine::getTable('Formulario27')->find($f27['max']);
+                $fecha_inicio = $f27->getFechaInicioVigencia();
+                $vigencia = $f27->getVigencia();
+                //return funciones::FechaEspanol(date("Y-m-d", strtotime("$fecha_inicio +$vigencia month")));
+                if($fecha_inicio != null)
+                    return funciones::FormatearFecha(date("Y-m-d", strtotime("$fecha_inicio +$vigencia month")));
+                else
+                    return "";
+           }
+           else
+               return "";
+       } 
+       if($codigo == 3)
+       {  
+           $q = Doctrine_Query::create()
+                ->select('MAX(f516.id) as max')
+                ->from('Formulario516 f516')
+                ->where('f516.cosmetico_id = ?', $producto);
+           
+           $f516 =  $q->fetchOne();
+           
+           if($f516['max'] != null)
+           {
+                $f516 = Doctrine::getTable('Formulario516')->find($f516['max']);
+                $fecha_inicio = $f516->getFechaInicioVigencia();
+                $vigencia = $f516->getVigencia();
+                //return funciones::FechaEspanol(date("Y-m-d", strtotime("$fecha_inicio +$vigencia month")));
+                if($fecha_inicio != null)
+                    return funciones::FormatearFecha(date("Y-m-d", strtotime("$fecha_inicio +$vigencia month")));
+                else
+                    return "";
+           }
+           else
+               return "";
+       } 
+       if($codigo == 4)
+       {  
+           $q = Doctrine_Query::create()
+                ->select('MAX(f706.id) as max')
+                ->from('Formulario706 f706')
+                ->where('f706.higiene_id = ?', $producto);
+           
+           $f706 =  $q->fetchOne();
+           
+           if($f706['max'] != null)
+           {
+                $f706 = Doctrine::getTable('Formulario706')->find($f706['max']);
+                $fecha_inicio = $f706->getFechaInicioVigencia();
+                $vigencia = $f706->getVigencia();
+                //return funciones::FechaEspanol(date("Y-m-d", strtotime("$fecha_inicio +$vigencia month")));
+                if($fecha_inicio != null)
+                    return funciones::FormatearFecha(date("Y-m-d", strtotime("$fecha_inicio +$vigencia month")));
+                else
+                    return "";
+           }
+           else
+               return "";
+       }
+       if($codigo == 5)
+       {
+           $q = Doctrine_Query::create()
+                ->select('MAX(f12.id) as max')
+                ->from('Formulario12 f12')
+                ->where('f12.reactivo_id = ?', $producto);
+           
+           $f12 =  $q->fetchOne();
+           
+           if($f12['max'] != null)
+           {
+                $f12 = Doctrine::getTable('Formulario12')->find($f12['max']);
+                $fecha_inicio = $f12->getFechaInicioVigencia();
+                $vigencia = $f12->getVigencia();
+                //return funciones::FechaEspanol(date("Y-m-d", strtotime("$fecha_inicio +$vigencia month")));
+                if($fecha_inicio != null)
+                    return funciones::FormatearFecha(date("Y-m-d", strtotime("$fecha_inicio +$vigencia month")));
+                else
+                    return "";
+           }
+           else
+               return "";
+       }
+    }
 }

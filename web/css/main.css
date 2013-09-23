@@ -334,7 +334,7 @@ input[type="text"], input[type="password"], textarea {
 
 .tabla-info-empresa td {
     background-color: #F6F4F0;
-    min-width: 170px;
+    min-width: 100px;
 }
 
 .tabla-info-empresa th, .tabla-info-empresa td {
@@ -462,6 +462,10 @@ ul li.sf_admin_action_edit a
 }
 
 #sf_admin_container ul li.sf_admin_action_imprimir a
+{
+  background: url(../images/icons/print.svg) no-repeat 0 0;
+}
+#sf_admin_container ul li.sf_admin_action_imprimirfcc a
 {
   background: url(../images/icons/print.svg) no-repeat 0 0;
 }
