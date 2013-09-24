@@ -1,0 +1,26 @@
+h3 {
+    font-size: 12px;
+    font-weight: normal;
+    width: 100%;
+    background-color: red;
+    text-align: center;
+}
+
+.tbl-tipo-form {
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.tbl-tipo-form td{
+    padding: 15px;
+}
+
+.caja-x {
+    width: 15px;
+    height: 10px;
+    border: 1px solid #000;
+    display: inline;
+    float: left;
+    position: relative;
+}

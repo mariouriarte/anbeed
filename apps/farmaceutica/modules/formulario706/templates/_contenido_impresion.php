@@ -1,87 +1,23 @@
-<h3>Anexo I</h3>
-
-<h3>INSTRUCTIVO PARA EL LLENADO DEL FORMATO FNSOHA-001</h3>
-
-<p>El objeto del formato FNSOHA-001 será definido por el interesado en calidad 
-de Declaración Jurada y lo hará de conocimiento de la Autoridad Nacional 
-Competente (ANC) colocando una “X”, según sea el caso.</p>
-
-<p>Los demás campos del Formato FNSOHA-001 serán llenados obligatoriamente, 
-independientemente del objeto del formato, salvo indicación en contrario 
-registrada en el propio campo.</p>
-
-<p>En todo momento, el interesado deberá regirse por lo establecido en la 
-Decisión 706 señalado en los campos del Formato FNSOAH-001.</p>
-
-<table border="1">
-    <tr>
-        <th>OBJETO</th>
-        <th>DESCRIPCIÓN</th>
-    </tr>
-    <tr>
-        <td>Notificación Sanitaria Obligatoria (NSO)</td>
-        <td>Esta notificación será presentada por el interesado en comercializar 
-            y/o importar productos de higiene doméstica o absorbentes de higiene 
-            personal,  por primera vez en la Subregión (Artículo 5 de la Decisión
-            706) o cuando éste declara su intención de ser un nuevo importador 
-            de un producto con código de identificación de la NSO vigente (tercer
-            párrafo del Artículo 12 de la Decisión 706). En este último caso,
-            deberá colocar adicionalmente una "X" en la Parte I del formato
-            FNSOHA-001, como sigue:
-            I. DATOS DEL  TITULAR - IMPORTADOR <br />
-            La ANC en respuesta a esta notificación, emitirá el Formato FNSOHA-002.
-        </td>
-    </tr>
-    <tr>
-        <td>Solicitud de Renovación del código de identificación de la NSO</td>
-        <td>Esta solicitud deberá ser presentada por el titular de un código de 
-            identificación de la NSO vigente, antes de la expiración del período 
-            de vigencia correspondiente (Artículo 18 de la Decisión 706)<br />
-            La ANC en respuesta a esta solicitud, emitirá el Formato FNSOHA-002.</td>
-    </tr>
-    <tr>
-        <td>Solicitud de Reconocimiento del código de identificación de la NSO </td>
-        <td>Esta solicitud deberá ser presentada por el titular,  importador de
-            un producto PHD y PAHP con código de identificación de la NSO vigente,
-            que esté interesado en comercializar dicho producto en otro País
-            Miembro (Artículos 9 y 11 de la Decisión 706)<br />
-            La ANC en respuesta a esta solicitud, emitirá el Formato FNSOHA-003.</td>
-    </tr>
-    <tr>
-        <td>Información de Cambios</td>
-        <td>El interesado comunicará el (los) cambio(s) a la ANC del País Miembro
-            que otorgó el código de identificación de la NSO, en forma resumida 
-            en la parte V del Formato FNSOHA-001, adjuntando los requisitos que
-            dicho Formato establece según el cambio correspondiente.<br />
-            La ANC revisará que el formato, al momento de su presentación por 
-            parte del interesado, esté acompañado de los requisitos establecidos 
-            en la Decisión 706. <br />
-            El interesado deberá presentar dicho documento recepcionado por la 
-            ANC del país de residencia del titular, a las demás ANC donde pretenda
-            comercializar sus productos, con la copia de los documentos presentados
-            que sustentan los cambios efectuados.</td>
-    </tr>
-</table>
-
 <h3>FORMATO ÚNICO (FNSOHA-001)</h3>
 <h3>DECISION 706</h3>
 <h3>PRODUCTOS DE HIGIENE DOMESTICA (PHD) Y PRODUCTOS ABSORBENTES DE HIGIENE PERSONAL (PAHP)</h3>
 
-<table border="1">
+<table class="tbl-tipo-form">
     <tr>
-        <td>Notificación Sanitaria Obligatoria (NSO)</td>
+        <td><div class="caja-x"> x </div> <span>Notificación Sanitaria Obligatoria (NSO)</span></td>
     </tr>    
     <tr>
-        <td>Solicitud de Renovación del código de identificación de la NSO</td>
+        <td><span class="caja-x">x</span> <span>Solicitud de Renovación del código de identificación de la NSO</span></td>
     </tr>    
     <tr>
-        <td>Solicitud de Reconocimiento del código de identificación de la NSO</td>
+        <td><span class="caja-x">x</span> <span>Solicitud de Reconocimiento del código de identificación de la NSO</span></td>
     </tr>    
     <tr>
-        <td>Información de Cambios</td>
+        <td><span class="caja-x">x</span> <span>Información de Cambios</span></td>
     </tr>    
 </table>
 
+<br />
 <table border="1">
     <tr>
         <td colspan="2">
