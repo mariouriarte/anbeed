@@ -16,7 +16,8 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'               => new sfWidgetFormInputHidden(),
-      'persona_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Persona'), 'add_empty' => false)),
+      'persona_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Persona'), 'add_empty' => true)),
+      'empresa_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => true)),
       'username'         => new sfWidgetFormInputText(),
       'algorithm'        => new sfWidgetFormInputText(),
       'salt'             => new sfWidgetFormInputText(),
@@ -32,7 +33,8 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'persona_id'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Persona'))),
+      'persona_id'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Persona'), 'required' => false)),
+      'empresa_id'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'required' => false)),
       'username'         => new sfValidatorString(array('max_length' => 128)),
       'algorithm'        => new sfValidatorString(array('max_length' => 128, 'required' => false)),
       'salt'             => new sfValidatorString(array('max_length' => 128, 'required' => false)),

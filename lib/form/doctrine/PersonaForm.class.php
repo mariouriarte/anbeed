@@ -20,8 +20,8 @@ class PersonaForm extends BasePersonaForm
             array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
                   'years' => array_combine($years, $years))), ));
         
-        $this->validatorSchema['fecha_nacimiento'] = new sfValidatorDate(
-            array('required' => true));
+//        $this->validatorSchema['fecha_nacimiento'] = new sfValidatorDate(
+//            array('required' => true));
        
         if(sfContext::getInstance()->getModuleName() == "personalegal")
         {
@@ -84,7 +84,7 @@ class PersonaForm extends BasePersonaForm
             
             $usuario->Persona = $this->getObject();
             
-            $form2 = new sfGuardUserForm($usuario);
+            $form2 = new sfGuardMyUserAdminForm($usuario);
             $subForm2->embedForm(1, $form2);
             $this->embedForm('usuario', $subForm2);
         }

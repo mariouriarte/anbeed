@@ -144,9 +144,12 @@
             </trans-unit>
             <trans-unit id="36">
                 <source>An object with the same "email" already exist.</source>
-                <target>Una persona en el mismo "email" ya esta registrada</target>
+                <target>Una persona con en el mismo "email" ya esta registrada</target>
             </trans-unit>
-            
+            <trans-unit id="36">
+                <source>An object with the same "username" already exist.</source>
+                <target>Una usuario con en el mismo "nombre de usuario" ya está registrada</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

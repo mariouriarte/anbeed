@@ -15,9 +15,15 @@ class sfGuardUserForm extends PluginsfGuardUserForm
       unset(  $this['persona_id'], $this['algorithm'], 
               $this['salt'], $this['last_login'], 
               $this['created_at'], $this['updated_at'],
-              $this['groups_list'], $this['permissions_list'], 
-              $this['is_super_admin']);
+              $this['groups_list'],$this['is_super_admin']);
+      
       $this->widgetSchema['password'] = new sfWidgetFormInputPassword();
+      $this->widgetSchema['password_again'] = new sfWidgetFormInputPassword();
+      
+//      $cliente = new Cliente();
+//      $cliente->setUserId($this->object);
+//      $clienteForm = new ClienteForm($cliente);
+//      $this->embedForm('NewCliente', $clienteForm);
         
   }
 }

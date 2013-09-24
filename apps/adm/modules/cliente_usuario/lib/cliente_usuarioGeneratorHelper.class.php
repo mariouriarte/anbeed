@@ -1,13 +1,13 @@
 <?php
 
 /**
- * usuarios module helper.
+ * cliente_usuario module helper.
  *
  * @package    anbeed
- * @subpackage usuarios
+ * @subpackage cliente_usuario
  * @author     Your name here
  * @version    SVN: $Id: helper.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class usuariosGeneratorHelper extends BaseUsuariosGeneratorHelper
+class cliente_usuarioGeneratorHelper extends BaseCliente_usuarioGeneratorHelper
 {
 }

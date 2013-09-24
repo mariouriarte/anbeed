@@ -9,14 +9,47 @@ sfGuardUser:
     
 # Grupos
 sfGuardGroup:
+  Group_cliente:
+    name:           CLIENTE
+    description:    GRUPO DE CLIENTES - EMPRESAS
+    Permissions:    [Permission_cliente]
   Group_admin:
-    name:           Administradores
-    description:    Grupo de administradores
+    name:           ADMINISTRADOR
+    description:    GRUPO DE ADMINISTRADORES
     Permissions:    [Permission_admin]
+  Group_registro:
+    name:           REGISTRO SANITARIO
+    description:    GRUPO DE REGISTRO SANITARIO EN TODOS LOS PRODUCTOS
+    Permissions:    [Permission_registro]
+  Group_despacho:
+    name:           DESPACHO ADUANERO
+    description:    GRUPO DE DESPACHO ADUANERO
+    Permissions:    [Permission_despacho]
+  Group_correspondencia:
+    name:           CORRESPONDENCIA
+    description:    GRUPO DE CORRESPONDENCIA
+    Permissions:    [Permission_correspondencia]
     
 ## permisos para los grupos
 sfGuardPermission:
+  Permission_cliente:
+    name:           CLIENTE
+    description:    PERMISOS DE CLIENTE
+  
   Permission_admin:
-    name:           Administración
-    description:    permisos de administración
+    name:           ADMINISTRACION
+    description:    PERMISOS DE ADMINISTRACION
+  
+  Permission_registro:
+    name:           REGISTRO SANITARIO
+    description:    PERMISOS DE REGISTRO SANITARIO
+  
+  Permission_despacho:
+    name:           DESPACHO ADUANERO
+    description:    PERMISOS DE DESPACHO ADUANERO
+  
+  Permission_correspondencia:
+    name:           CORRESPONDENCIA
+    description:    PERMISOS DE CORRESPONDENCIA
+  
     

@@ -28,7 +28,7 @@ Persona:
     celular:          {type: string(20)}
     fax:              {type: string(20)}
     casilla:          {type: string(10)}
-    email:            {type: string(255), notnull: false, unique: true}
+    email:            {type: string(255), notnull: false, unique: false}
     fecha_nacimiento: {type: date, notnull: false}
     is_active:        {type: boolean, default: true, notnull: true}
     foto:             {type: string(50), default: null, notnull: false}

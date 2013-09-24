@@ -10,6 +10,7 @@
                         <ul>
                             <li><a href="/farmaceutica<?php echo $env ?>.php/empresas"><span>Empresas</span></a></li>
                             <li><a href="/farmaceutica<?php echo $env ?>.php/empresas/new"><span>Nueva Empresa</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/cliente_usuario"><span>Usuarios Clientes</span></a></li>
                         </ul>
                     </div>
                 </div>

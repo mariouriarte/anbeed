@@ -59,10 +59,7 @@ abstract class BasePersonaForm extends BaseFormDoctrine
     ));
 
     $this->validatorSchema->setPostValidator(
-      new sfValidatorAnd(array(
-        new sfValidatorDoctrineUnique(array('model' => 'Persona', 'column' => array('ci'))),
-        new sfValidatorDoctrineUnique(array('model' => 'Persona', 'column' => array('email'))),
-      ))
+      new sfValidatorDoctrineUnique(array('model' => 'Persona', 'column' => array('ci')))
     );
 
     $this->widgetSchema->setNameFormat('persona[%s]');

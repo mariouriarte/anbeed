@@ -16,4 +16,24 @@ class sfGuardUserTable extends PluginsfGuardUserTable
     {
         return Doctrine_Core::getTable('sfGuardUser');
     }
+    public static function getUsuariosClientes()
+    {
+        
+        $q = Doctrine_Query::create()
+            ->from('sfGuardUser u')
+            ->innerJoin('u.Empresa e') 
+            ->orderBy('u.id ASC');
+        
+        return $q;
+    }
+    public static function getUsuariosPersonas()
+    {
+        
+        $q = Doctrine_Query::create()
+            ->from('sfGuardUser u')
+            ->innerJoin('u.Persona p') 
+            ->orderBy('u.id ASC');
+        
+        return $q;
+    }
 }

@@ -1,0 +1,30 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           sfGuardUser
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sf_guard_user_cliente_usuario
+    with_doctrine_route:   true
+    
+
+    config:
+      actions: ~
+      fields:
+        #password_again: { label: "Password (again)" }
+      list:    
+        title:        Listado de Usuarios Clientes
+        display:      [empresa,username, is_active, last_login]
+        table_method: getUsuariosClientes
+      filter:  
+        display: [empresa_id,username, is_active, last_login]
+      form:    
+        class: sfGuardMyUserAdminForm
+      edit:
+        title: Editando Usuario "%%username%%"
+        display: [empresa_id,username, password, password_again, is_active]
+      new:
+        title: Nuevo Usuario Cliente

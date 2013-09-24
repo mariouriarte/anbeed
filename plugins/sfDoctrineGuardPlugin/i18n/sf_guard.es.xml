@@ -28,6 +28,15 @@
         <source>You don't have the required permission to access this page.</source>
         <target>No tiene los permisos requeridos para acceder a esta página.</target>
       </trans-unit>
+      <trans-unit>
+        <source>You don't have the required permission to access this page.</source>
+        <target>No tiene los permisos requeridos para acceder a esta página.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>An object with the same "username" already exist.</source>
+        <target>Una usuario con en el mismo "nombre de usuario" ya está registrada</target>
+      </trans-unit>
+      
     </body>
   </file>
 </xliff>
