@@ -12,4 +12,8 @@
  */
 class Item extends BaseItem
 {
+    public function __toString()
+    {
+        return $this->getNombre();
+    }
 }

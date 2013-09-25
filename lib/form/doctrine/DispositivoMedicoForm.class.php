@@ -27,7 +27,7 @@ class DispositivoMedicoForm extends BaseDispositivoMedicoForm
          ));
       
       /*AJUSTANDO LOS TAMAños*/
-      $this->widgetSchema['laboratorio_fabricante_id']->setAttribute('size' , 80);
+      $this->widgetSchema['laboratorio_fabricante_id']->setAttribute('size' , 50);
       $this->widgetSchema['nombre_comercial']->setAttribute('size' , 50);
       $this->widgetSchema['nombre_generico']->setAttribute('size' , 50);
       $this->widgetSchema['clasificacion_riesgo']->setAttribute('cols' , 80);

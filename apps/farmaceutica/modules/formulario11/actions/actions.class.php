@@ -51,7 +51,7 @@ class formulario11Actions extends autoFormulario11Actions
         $y = 75;
         
         //Tamaño de letra para datos
-        $pdf->SetFont('dejavusans', '', 9, '', true);
+        $pdf->SetFont('courier', '', 13, '', true);
         
         //Datos de la Empresa
         $pdf->MultiCell(70, 0, $this->formulario11->Empresa->RepresentanteLegal, 
@@ -72,9 +72,7 @@ class formulario11Actions extends autoFormulario11Actions
             ->Empresa->getFechaResolucion()),
             0, 'L', 0, 0, '25', $y+=4, true);
         
-        //Tamaño letra para X's
-        $pdf->SetFont('dejavusans', 'B', 9, '', true);
-        
+               
         //Despacho aduanero de
         $y+=4;
         $y_datos_generales = $y;
@@ -93,9 +91,7 @@ class formulario11Actions extends autoFormulario11Actions
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, 
             $x_datos_generales, $y_datos_generales, true);
 
-        //Tamaño de letra para datos
-        $pdf->SetFont('dejavusans', '', 9, '', true);
-        
+       
         //datos del formulario
         $pdf->MultiCell(105, 0, $this->formulario11->Empresa,
             0, 'L', 0, 0, '43', $y+=53, true);
@@ -148,43 +144,64 @@ class formulario11Actions extends autoFormulario11Actions
             0, 'L', 0, 0, '110', $y+=9, true);
         
         
+        $pdf->SetFont('courier', '', 10, '', true);
         // Obtieniendo items del formulario11
-        
-        $q=  Doctrine_Core::getTable('Item')->selectItemDeForm11();
+                $q=  Doctrine_Core::getTable('Item')->selectItemDeForm11();
         $items=$q->execute();
         $y+=28;
         $y_fila_items = $y;
-        $contador_item=1;
+        
+        $num_items = $this->formulario11->getNumeroItem();
+        
+        $fojas = $this->formulario11->getFoja();
+        $contador_fojas=1;
+        $contador_item=$num_items;
+        $num_items-=6;
+        $num=1;
         foreach ($items as $item)
         {
-            if($contador_item==7 || $contador_item==42 || $contador_item==77 ||$contador_item==112)
+            if($contador_item == ($num_items))
             {
+                /*add page*/
                 $pdf->AddPage();
                 $y_fila_items = 25;
-            }
-            $pdf->MultiCell(75, 0, $item->getCantidad(),
-                0, 'L', 0, 0, '45', $y_fila_items, true);
-            $pdf->MultiCell(75, 0, $item->Producto,
-                0, 'L', 0, 0, '65', $y_fila_items, true);
-            $pdf->MultiCell(75, 0, $item->getNumLote(),
-                0, 'L', 0, 0, '100', $y_fila_items, true);
-            $y_fila_items+=5;
-            $contador_item++;
+                $num_items-=42;
+                $contador_fojas++;
+                /*Numero de foja*/
+                $pdf->MultiCell(10, 0, $contador_fojas,
+                1, 'L', 0, 0, 20, $y_fila_items, true);
+                $y_fila_items+=10;
+                
+                /*Continuacion de foja:*/
+                $pdf->MultiCell(10, 0, $contador_fojas-1,
+                1, 'L', 0, 0, 30, $y_fila_items, true);
+                $y_fila_items+=10;
+                
+            }     
+            /*ITEM*/
+            $pdf->MultiCell(10, 0, $num,
+                1, 'L', 0, 0, 20, $y_fila_items, true);
+            /*CANT*/
+            $pdf->MultiCell(20, 0, $item->getCantidad(),
+                1, 'L', 0, 0, 30, $y_fila_items, true);
+            /*PROD*/
+            $pdf->MultiCell(80, 0, $item->getNombre(),
+                1, 'L', 0, 0, 50, $y_fila_items, true);
+            /*N.RS*/
+            $pdf->MultiCell(30, 0, ItemTable::getNumRegSanitario($item),
+                1, 'L', 0, 0, 130, $y_fila_items, true);
+            /*F,Vto.*/
+            $pdf->MultiCell(25, 0, $item->getFechaVencimiento(),
+                1, 'L', 0, 0, 160, $y_fila_items, true);
+            /*N,Lote.*/
+            $pdf->MultiCell(20, 0, $item->getNumLote(),
+                1, 'L', 0, 0, 185, $y_fila_items, true);
+            
+            $y_fila_items+=6;
+            $contador_item--;
+            $num++;
         }
-        
-//        $pdf->AddPage();
-//        
-//        $y_fila_items = 269;
-//        foreach ($items as $item)
-//        {
-//            $pdf->MultiCell(75, 0, $item->getCantidad(),
-//                0, 'L', 0, 0, '45', $y_fila_items, true);
-//            $pdf->MultiCell(75, 0, $item->Producto,
-//                0, 'L', 0, 0, '65', $y_fila_items, true);
-//            $pdf->MultiCell(75, 0, $item->getNumLote(),
-//                0, 'L', 0, 0, '100', $y_fila_items, true);
-//            $y_fila_items+=5;
-//        }
+
         $pdf->Output('Formulario011.pdf', 'I');
         throw new sfStopException();
     }

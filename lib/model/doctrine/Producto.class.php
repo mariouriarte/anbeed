@@ -16,25 +16,25 @@ class Producto extends BaseProducto
     {
        if($this->getCodigoProductoId() == 1)
        {
-           return $this->CodigoProducto->getNombre()." - ".$this->Medicamento->getNombreComercial();
+           return $this->CodigoProducto->getNombre()." -- ".$this->Medicamento->getNombreGenerico()." ".$this->Medicamento->getConcentracion();
        }
        
        if($this->getCodigoProductoId() == 2)
        {  
-           return $this->CodigoProducto->getNombre()." - ".$this->DispositivoMedico->getNombreComercial();
+           return $this->CodigoProducto->getNombre()." -- ".$this->DispositivoMedico->getNombreGenerico();
        }
        
        if($this->getCodigoProductoId() == 3)
        {  
-           return $this->CodigoProducto->getNombre()." - ".$this->Cosmetico->getNombre();
+           return $this->CodigoProducto->getNombre()." -- ".$this->Cosmetico->getNombre();
        } 
        if($this->getCodigoProductoId() == 4)
        {  
-           return $this->CodigoProducto->getNombre()." - ".$this->Higiene->getNombre();
+           return $this->CodigoProducto->getNombre()." -- ".$this->Higiene->getNombre();
        }
        
        if($this->getCodigoProductoId() == 5)
-           return $this->CodigoProducto->getNombre()." - ".$this->Reactivo->getNombreComercial();
+           return $this->CodigoProducto->getNombre()." -- ".$this->Reactivo->getNombreComercial();
     }
     
     public function getProducto()

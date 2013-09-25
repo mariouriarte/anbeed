@@ -174,7 +174,7 @@ Medicamento:
     via_administracion_id:     {type: integer, notnull: true}
     tipo_venta_id:             {type: integer, notnull: true}    
     formula_cc_id:             {type: integer, notnull: false}
-    nombre_comercial:          {type: string(255), notnull: true}
+    nombre_comercial:          {type: string(255), notnull: false}
     nombre_generico:           {type: string(255), notnull: true}
     concentracion:             {type: string(150), notnull: true}
     accion_terapeutica:        {type: string(2000)}
@@ -302,7 +302,7 @@ DispositivoMedico:
     producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
     laboratorio_fabricante_id: {type: integer, notnull: true}
-    nombre_comercial:          {type: string(255), notnull: true}
+    nombre_comercial:          {type: string(255), notnull: false}
     nombre_generico:           {type: string(255), notnull: true}
     clasificacion_riesgo:      {type: string(1000), notnull: false}
     codigo_internacional:      {type: string(255), notnull: false}
@@ -627,10 +627,12 @@ TipoDespacho:
 Item:
   actAs: [Timestampable, Signable]
   columns:
-    formulario11_id:  {type: integer, notnull: true}
-    cantidad:         {type: string(150), notnull: true}
-    producto_id:      {type: integer, notnull: true}
-    num_lote:         {type: integer, notnull: true}
+    formulario11_id:   {type: integer, notnull: true}
+    cantidad:          {type: string(150), notnull: true}
+    producto_id:       {type: integer, notnull: true}
+    nombre:            {type: string(28), notnull: true}
+    num_lote:          {type: string(150), notnull: true}
+    fecha_vencimiento: {type: date, notnull: true}
   relations:
     Formulario11:     {local: formulario11_id, foreign: id, type: one, foreignAlias: Items}
     Producto:         {local: producto_id, foreign: id, type: one, foreignAlias: Item}

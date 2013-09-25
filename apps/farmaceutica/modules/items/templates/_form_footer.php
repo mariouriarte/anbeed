@@ -35,14 +35,14 @@ $items = $q->execute();
                     {
                         $producto = $item->Producto->Medicamento->getId();
                         $codigo =1;
-                        $fecha_vencimiento = ProductoTable::getFechaVencimientoItems($producto, $codigo);
+                        $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
                         //echo format_date($fecha_vencimiento,'yyyy');
                         //die;
                         if($item->Producto->Medicamento->getRegistroSanitario()!= "")
                         {
                             $reg_sanitario = $item->Producto->CodigoProducto.'-'.
                                              $item->Producto->Medicamento->getRegistroSanitario().'/'.format_date(
-                                             $fecha_vencimiento,'yy');
+                                             $fecha_inicio_vigencia,'yy');
                         }
                         
                     }
@@ -50,13 +50,13 @@ $items = $q->execute();
                     {
                         $producto = $item->Producto->DispositivoMedico->getId();
                         $codigo =2; 
-                        $fecha_vencimiento = ProductoTable::getFechaVencimientoItems($producto, $codigo);
+                        $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
                         
                         if($item->Producto->DispositivoMedico->getRegistroSanitario()!= "")
                         {
                             $reg_sanitario = $item->Producto->CodigoProducto.'-'.
                                              $item->Producto->DispositivoMedico->getRegistroSanitario().'/'.format_date(
-                                             $fecha_vencimiento,'yy');
+                                             $fecha_inicio_vigencia,'yy');
                         }
                         
                     }
@@ -64,13 +64,13 @@ $items = $q->execute();
                     {
                         $producto = $item->Producto->Cosmetico->getId();
                         $codigo =3;
-                        $fecha_vencimiento = ProductoTable::getFechaVencimientoItems($producto, $codigo);
+                        $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
 
                         if($item->Producto->Cosmetico->getRegistroSanitario()!= "")
                         {
                             $reg_sanitario = $item->Producto->CodigoProducto.'-'.
                                              $item->Producto->Cosmetico->getRegistroSanitario().'/'.format_date(
-                                             $fecha_vencimiento,'yy');
+                                             $fecha_inicio_vigencia,'yy');
                         }
                         
                     }
@@ -78,13 +78,13 @@ $items = $q->execute();
                     {
                         $producto = $item->Producto->Higiene->getId();
                         $codigo =4;
-                        $fecha_vencimiento = ProductoTable::getFechaVencimientoItems($producto, $codigo);
+                        $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
 
                         if($item->Producto->Higiene->getRegistroSanitario()!= "")
                         {
                             $reg_sanitario = $item->Producto->CodigoProducto.'-'.
                                              $item->Producto->Higiene->getRegistroSanitario().'/'.format_date(
-                                             $fecha_vencimiento,'yy');
+                                             $fecha_inicio_vigencia,'yy');
                         }
                         
                     }
@@ -92,13 +92,13 @@ $items = $q->execute();
                     {
                         $producto = $item->Producto->Reactivo->getId();
                         $codigo =5;
-                        $fecha_vencimiento = ProductoTable::getFechaVencimientoItems($producto, $codigo);
+                        $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
 
                         if($item->Producto->Reactivo->getRegistroSanitario()!= "")
                         {
                             $reg_sanitario = $item->Producto->CodigoProducto.'-'.
                                              $item->Producto->Reactivo->getRegistroSanitario().'/'.format_date(
-                                             $fecha_vencimiento,'yy');
+                                             $fecha_inicio_vigencia,'yy');
                         }
                         
                     }
@@ -108,9 +108,9 @@ $items = $q->execute();
             <tr>
                 <td><?php echo $num_items ?></td>
                 <td><?php echo $item->getCantidad()?></td>
-                <td><?php echo $item->Producto?></td>
+                <td><?php echo $item->getNombre()?></td>
                 <td><?php echo $reg_sanitario?></td>
-                <td><?php echo $fecha_vencimiento?></td>
+                <td><?php echo funciones::FormatearFecha($item->getFechaVencimiento())?></td>
                 <td><?php echo $item->getNumLote()?></td>
                 <td>
                     <ul class="sf_admin_td_actions">

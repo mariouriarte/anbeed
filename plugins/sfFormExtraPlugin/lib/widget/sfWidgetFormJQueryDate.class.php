@@ -116,7 +116,7 @@ class sfWidgetFormJQueryDate extends sfWidgetForm
     jQuery("#%s").datepicker(jQuery.extend({}, {
       minDate:    new Date(%s, 1 - 1, 1),
       maxDate:    new Date(%s, 12 - 1, 31),
-      yearRange: '1933:yy',
+      yearRange: '1933:2050',
       beforeShow: wfd_%s_read_linked,
       onSelect:   wfd_%s_update_linked,
       showOn:     "button",

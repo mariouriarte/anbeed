@@ -45,7 +45,7 @@ class MedicamentoForm extends BaseMedicamentoForm
         ));
         
         /*AJUSTANDO LOS TAMAños*/
-        $this->widgetSchema['laboratorio_fabricante_id']->setAttribute('size' , 80);
+        $this->widgetSchema['laboratorio_fabricante_id']->setAttribute('size' , 50);
         $this->widgetSchema['nombre_comercial']->setAttribute('size' , 50);
         $this->widgetSchema['nombre_generico']->setAttribute('size' , 50);
         $this->widgetSchema['forma_farmaceutica_id']->setAttribute('size' , 50);

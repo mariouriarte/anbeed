@@ -19,10 +19,22 @@ class ItemForm extends BaseItemForm
       //prodcutos
       $this->widgetSchema['producto_id']
             ->setOption('add_empty', 'Seleccione producto')
-            ->setOption('table_method', 'ProductosItemsEmpresa');
+            ->setOption('table_method', 'ProductosEmpresa')
+            ->setAttribute('onChange    ','Producto();');
+           # ->setOption('table_method', 'ProductosItemsEmpresa');
+     
+      $this->widgetSchema['nombre']->setAttribute('maxlength', 28);
       
+      $this->widgetSchema['nombre']->setAttribute('size' , 35);
+      $this->widgetSchema['cantidad']->setAttribute('maxlength' ,10);
+      $this->widgetSchema['num_lote']->setAttribute('maxlength' ,10);
       //formulario11    
       $this->widgetSchema['formulario11_id'] = new sfWidgetFormInputHidden(
             array());
+      
+      $years = range(date('Y') , date('Y') + 10);   
+        $this->widgetSchema['fecha_vencimiento'] = new sfWidgetFormJQueryDate(
+            array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
+                  'years' => array_combine($years, $years))), ));
   }
 }

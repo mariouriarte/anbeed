@@ -36,5 +36,117 @@ class ItemTable extends Doctrine_Table
         return $q;
     }
     
+    public static function ContarItems()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $formulario11 = $user->getAttribute('form11');
+        $count = Doctrine_Query::create()
+                    ->from('Item i ')
+                    ->where('i.formulario11_id=?', $formulario11->getId())
+                    ->count();
+            return $count;
+    }
+    
+    public static function getFojas($items)
+    {
+        /*Entran 42 items por cada foja*/
+        /*En la primera foja solo entran 6 items*/
+        $fojas=1;
+        $items-=6;
+        while($items>0)
+        {
+            $fojas++;
+            $items-=42;
+        }
+        return $fojas;
+    }
+    public static function getNumRegSanitario($item)
+    {
+        sfProjectConfiguration::getActive()->loadHelpers(array('Date'));
+        $reg_sanitario = "";
+        //se necesitam controLAR EN QUE TABLA SE BUSCARA LOS DETALLES DEL PRODUCTO, LO HAREMOS PREGUNTANDO
+        //EL CODIGO DE PRODUCTO
+        $producto;
+        $codigo =0;
+        if($item->Producto->CodigoProducto->getId()==1)
+        {
+            $producto = $item->Producto->Medicamento->getId();
+            //echo $producto;
+            $codigo =1;
+            $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
+            //echo $fecha_inicio_vigencia;
+            //die;
+            //echo format_date($fecha_vencimiento,'yyyy');
+            //die;
+            if($item->Producto->Medicamento->getRegistroSanitario()!= "")
+            {
+                $reg_sanitario = $item->Producto->CodigoProducto.'-'.
+                                 $item->Producto->Medicamento->getRegistroSanitario().'/'.format_date(
+                                 $fecha_inicio_vigencia,'yy');
+            }
+
+        }
+        if($item->Producto->CodigoProducto->getId()==2)
+        {
+            $producto = $item->Producto->DispositivoMedico->getId();
+            $codigo =2; 
+            $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
+
+            if($item->Producto->DispositivoMedico->getRegistroSanitario()!= "")
+            {
+                $reg_sanitario = $item->Producto->CodigoProducto.'-'.
+                                 $item->Producto->DispositivoMedico->getRegistroSanitario().'/'.format_date(
+                                 $fecha_inicio_vigencia,'yy');
+            }
+
+        }
+        if($item->Producto->CodigoProducto->getId()==3)
+        {
+            $producto = $item->Producto->Cosmetico->getId();
+            $codigo =3;
+            $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
+
+            if($item->Producto->Cosmetico->getRegistroSanitario()!= "")
+            {
+                $reg_sanitario = $item->Producto->CodigoProducto.'-'.
+                                 $item->Producto->Cosmetico->getRegistroSanitario().'/'.format_date(
+                                 $fecha_inicio_vigencia,'yy');
+            }
+
+        }
+        if($item->Producto->CodigoProducto->getId()==4)
+        {
+            $producto = $item->Producto->Higiene->getId();
+            $codigo =4;
+            $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
+
+            if($item->Producto->Higiene->getRegistroSanitario()!= "")
+            {
+                $reg_sanitario = $item->Producto->CodigoProducto.'-'.
+                                 $item->Producto->Higiene->getRegistroSanitario().'/'.format_date(
+                                 $fecha_inicio_vigencia,'yy');
+            }
+
+        }
+        if($item->Producto->CodigoProducto->getId()==5)
+        {
+            $producto = $item->Producto->Reactivo->getId();
+            $codigo =5;
+            $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
+
+            if($item->Producto->Reactivo->getRegistroSanitario()!= "")
+            {
+                $reg_sanitario = $item->Producto->CodigoProducto.'-'.
+                                 $item->Producto->Reactivo->getRegistroSanitario().'/'.format_date(
+                                 $fecha_inicio_vigencia,'yy');
+            }
+
+        }
+        //echo   $reg_sanitario;
+        //die;
+        return $reg_sanitario;
+    }
+    
+    
     
 }

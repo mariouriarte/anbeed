@@ -8,22 +8,28 @@
  * @property integer $formulario11_id
  * @property string $cantidad
  * @property integer $producto_id
- * @property integer $num_lote
+ * @property string $nombre
+ * @property string $num_lote
+ * @property date $fecha_vencimiento
  * @property Formulario11 $Formulario11
  * @property Producto $Producto
  * 
- * @method integer      getFormulario11Id()  Returns the current record's "formulario11_id" value
- * @method string       getCantidad()        Returns the current record's "cantidad" value
- * @method integer      getProductoId()      Returns the current record's "producto_id" value
- * @method integer      getNumLote()         Returns the current record's "num_lote" value
- * @method Formulario11 getFormulario11()    Returns the current record's "Formulario11" value
- * @method Producto     getProducto()        Returns the current record's "Producto" value
- * @method Item         setFormulario11Id()  Sets the current record's "formulario11_id" value
- * @method Item         setCantidad()        Sets the current record's "cantidad" value
- * @method Item         setProductoId()      Sets the current record's "producto_id" value
- * @method Item         setNumLote()         Sets the current record's "num_lote" value
- * @method Item         setFormulario11()    Sets the current record's "Formulario11" value
- * @method Item         setProducto()        Sets the current record's "Producto" value
+ * @method integer      getFormulario11Id()    Returns the current record's "formulario11_id" value
+ * @method string       getCantidad()          Returns the current record's "cantidad" value
+ * @method integer      getProductoId()        Returns the current record's "producto_id" value
+ * @method string       getNombre()            Returns the current record's "nombre" value
+ * @method string       getNumLote()           Returns the current record's "num_lote" value
+ * @method date         getFechaVencimiento()  Returns the current record's "fecha_vencimiento" value
+ * @method Formulario11 getFormulario11()      Returns the current record's "Formulario11" value
+ * @method Producto     getProducto()          Returns the current record's "Producto" value
+ * @method Item         setFormulario11Id()    Sets the current record's "formulario11_id" value
+ * @method Item         setCantidad()          Sets the current record's "cantidad" value
+ * @method Item         setProductoId()        Sets the current record's "producto_id" value
+ * @method Item         setNombre()            Sets the current record's "nombre" value
+ * @method Item         setNumLote()           Sets the current record's "num_lote" value
+ * @method Item         setFechaVencimiento()  Sets the current record's "fecha_vencimiento" value
+ * @method Item         setFormulario11()      Sets the current record's "Formulario11" value
+ * @method Item         setProducto()          Sets the current record's "Producto" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -48,8 +54,18 @@ abstract class BaseItem extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('num_lote', 'integer', null, array(
-             'type' => 'integer',
+        $this->hasColumn('nombre', 'string', 28, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => 28,
+             ));
+        $this->hasColumn('num_lote', 'string', 150, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => 150,
+             ));
+        $this->hasColumn('fecha_vencimiento', 'date', null, array(
+             'type' => 'date',
              'notnull' => true,
              ));
     }

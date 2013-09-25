@@ -1,3 +1,4 @@
+<?php use_helper('Date') ?>
 <?php
 
 if(sfConfig::get('sf_environment') == 'dev')

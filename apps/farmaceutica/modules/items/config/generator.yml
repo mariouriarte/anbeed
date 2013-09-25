@@ -14,15 +14,17 @@ generator:
     config:
       actions: ~
       fields:  
-        cantidad:             {label: 'cantidad'}
-        producto:             {label: 'producto'}
-        num_lote:             {label: 'número de lote'}
+        cantidad:          {label: 'cantidad'}
+        producto:          {label: 'producto'}
+        num_lote:          {label: 'número de lote'}
+        fecha_vencimiento: {label: 'Fecha de vencimiento'}
+        nombre:            {label: 'Descripcion Producto'}
 #        registro_sanitario:   {label: 'número de registro sanitario'}
 #        fecha_vencimiento:    {label: 'fecha de vencimiento'}
       list:    
         title: Productos Registrados del Despacho Aduanero
         table_method: selectItemDeForm11
-        display: [producto, cantidad, num_lote]
+        display: [nombre, cantidad, num_lote]
         actions:
           ir_empresa:   {label: Volver a Empresa}
           ir_form11:    {label: Volver a Formulario 11}
@@ -30,7 +32,7 @@ generator:
       filter:  
         display: [producto_id , cantidad, num_lote]
       form:    
-        display: [producto_id , cantidad, num_lote]
+        display: [producto_id, nombre, cantidad, fecha_vencimiento, num_lote]
       edit:    
         title: Editar Productos del Despacho Aduanero
       new:     

@@ -13,4 +13,10 @@ require_once dirname(__FILE__).'/../lib/cliente_usuarioGeneratorHelper.class.php
  */
 class cliente_usuarioActions extends autoCliente_usuarioActions
 {
+    public function executeNew(sfWebRequest $request)
+    {
+        $this->form = $this->configuration->getForm();
+        $this->sf_guard_user = $this->form->getObject();
+        
+    }
 }
