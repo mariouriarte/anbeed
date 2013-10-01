@@ -14,17 +14,19 @@ generator:
     config:
       actions: ~
       fields:
-        ap_paterno:      {label: 'Ap. Paterno'}
-        ap_materno:      {label: 'Ap. Materno'}
-        ci:              {label: 'Cédula de Identidad'}
-        expedido:        {label: 'Expedido'}
-        direccion:       {label: 'Dirección'}
-        telefono:        {label: 'Teléfono'}
-        celular:         {label: 'Celular'}
-        fax:             {label: 'Fax'}
-        casilla:         {label: 'Casilla'}
-        email:           {label: 'Email'}
-        nombre_ordenado: {label: 'Persona'}
+        ap_paterno:       {label: 'Apellido paterno'}
+        ap_materno:       {label: 'Apellido materno'}
+        ap_casada:        {label: 'Apellido casada'}
+        ci:               {label: 'Cédula de identidad'}
+        expedido:         {label: 'Expedido'}
+        direccion:        {label: 'Dirección'}
+        telefono:         {label: 'Teléfono'}
+        celular:          {label: 'Celular'}
+        fax:              {label: 'Fax'}
+        casilla:          {label: 'Casilla'}
+        email:            {label: 'Email'}
+        nombre_ordenado:  {label: 'Persona'}
+        fecha_nacimiento: {label: 'Fecha de nacimiento'}
         
       list:
         title: Listado de Personas Registradas
@@ -40,7 +42,7 @@ generator:
         display: [ap_paterno, ci]
       form:
         display: 
-          Datos de la Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
+          Datos de la Persona:  [nombre, ap_paterno, ap_materno, ap_casada, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
           Datos de Representante: [Nuevo Representante]
       edit:
         title: Editar Representante Legal %%nombre%%

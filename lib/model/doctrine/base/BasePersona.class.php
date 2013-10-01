@@ -8,6 +8,7 @@
  * @property string $nombre
  * @property string $ap_paterno
  * @property string $ap_materno
+ * @property string $ap_casada
  * @property string $ci
  * @property string $expedido
  * @property string $direccion
@@ -26,6 +27,7 @@
  * @method string              getNombre()              Returns the current record's "nombre" value
  * @method string              getApPaterno()           Returns the current record's "ap_paterno" value
  * @method string              getApMaterno()           Returns the current record's "ap_materno" value
+ * @method string              getApCasada()            Returns the current record's "ap_casada" value
  * @method string              getCi()                  Returns the current record's "ci" value
  * @method string              getExpedido()            Returns the current record's "expedido" value
  * @method string              getDireccion()           Returns the current record's "direccion" value
@@ -43,6 +45,7 @@
  * @method Persona             setNombre()              Sets the current record's "nombre" value
  * @method Persona             setApPaterno()           Sets the current record's "ap_paterno" value
  * @method Persona             setApMaterno()           Sets the current record's "ap_materno" value
+ * @method Persona             setApCasada()            Sets the current record's "ap_casada" value
  * @method Persona             setCi()                  Sets the current record's "ci" value
  * @method Persona             setExpedido()            Sets the current record's "expedido" value
  * @method Persona             setDireccion()           Sets the current record's "direccion" value
@@ -80,7 +83,12 @@ abstract class BasePersona extends sfDoctrineRecord
              ));
         $this->hasColumn('ap_materno', 'string', 30, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
+             'length' => 30,
+             ));
+        $this->hasColumn('ap_casada', 'string', 30, array(
+             'type' => 'string',
+             'notnull' => false,
              'length' => 30,
              ));
         $this->hasColumn('ci', 'string', 12, array(

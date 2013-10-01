@@ -14,20 +14,23 @@ generator:
     config:
       actions: ~
       fields:  
-        usuario:         {label: 'Datos de usuario'}
-        ap_paterno:      {label: 'Ap. Paterno'}
-        ap_materno:      {label: 'Ap. Materno'}
-        cedula_expedido: {label: 'Cédula de identidad'}
-        ci:              {label: 'Cédula de Identidad'}
-        expedido:        {label: 'Expedido'}
-        direccion:       {label: 'Dirección'}
-        telefono:        {label: 'Teléfono'}
-        celular:         {label: 'Celular'}
-        fax:             {label: 'Fax'}
-        casilla:         {label: 'Casilla'}
-        email:           {label: 'Email'}
-        nombre_ordenado: {label: 'Persona'}
-        username:        {label: 'Usuario'}
+        usuario:          {label: 'Datos de usuario'}
+        ap_paterno:       {label: 'Apellido Paterno'}
+        ap_materno:       {label: 'Apellido Materno'}
+        ap_casada:        {label: 'Apellido Casada'}
+        cedula_expedido:  {label: 'Cédula de identidad'}
+        ci:               {label: 'Cédula de Identidad'}
+        expedido:         {label: 'Expedido'}
+        direccion:        {label: 'Dirección'}
+        telefono:         {label: 'Teléfono'}
+        celular:          {label: 'Celular'}
+        fax:              {label: 'Fax'}
+        casilla:          {label: 'Casilla'}
+        email:            {label: 'Email'}
+        nombre_ordenado:  {label: 'Persona'}
+        username:         {label: 'Usuario'}
+        is_active:        {label: 'Activo?'}
+        fecha_nacimiento: {label: 'Fecha de nacimiento'}
       list:  
         table_method: selectUsuariosDisponibles
         title: Listado de Usuarios del sistema
@@ -37,11 +40,12 @@ generator:
           _new: ~
       filter:  
         display: [ap_paterno, ap_materno, nombre, ci]
-      form:    ~
+      form:
+        display:
+          Datos de persona: [nombre, ap_paterno, ap_materno, ap_casada, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento, is_active]
+          Datos de usuario: [usuario]
       edit:    
         title: Editar Usuario %%username%%
       new:     
         title: Registro de nuevo Usuario
-        display:
-          Datos de persona: [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento, is_active, foto]
-          Datos de usuario: [usuario]
+        
