@@ -265,7 +265,7 @@
       </tr>
       <tr>
           <th>Grupo</th>
-          <td><?php //echo $higiene->getGrupoHigiene() ?></td>
+          <td><?php echo $higiene->getGrupoHigiene() ?></td>
       </tr>
       <tr>
           <th>variedades</th>

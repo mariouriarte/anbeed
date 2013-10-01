@@ -16,7 +16,6 @@ generator:
       fields:
         fields:  
         laboratorio: {label: 'Laboratorio Fabricante'}
-        
       list:
         title: Desiciones 706 registrados
         table_method: selectForms706DeHigiene
@@ -26,9 +25,8 @@ generator:
           ir_productos: {label: Volver a higiéne}
           new:          {label: Nuevo, action: nuevo}
         object_actions:
-          edit:         {label: Editar, action: editar}
-          imprimir:     {label: Imprimir, action: exportPdf}
-      
+          edit:     {label: Editar, action: editar}
+          imprimir: {label: Imprimir, action: exportPdf}
       filter:
         display: [higiene_id, tipo_tramite_formulario_id]
       form:    ~

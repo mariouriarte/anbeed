@@ -435,7 +435,7 @@ Higiene:
     producto_id:               {type: integer, notnull: false}
     empresa_id:                {type: integer, notnull: true}
     laboratorio_fabricante_id: {type: integer, notnull: true}
-    grupo_higiene_id:          {type: integer, notnull: false}
+    grupo_higiene:             {type: string(255), notnull: false}
     marca:                     {type: string(255), notnull: true}
     pais_id:                   {type: integer, notnull: false}
     nombre:                    {type: string(255), notnull: true}
