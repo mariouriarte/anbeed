@@ -41,13 +41,15 @@ class formulario706Actions extends autoFormulario706Actions
     public function executeExportPdf(sfWebRequest $request)
     {
         //$user = $this->getUser();
-//        $regional_id = $user->getAttribute('regional_id');
+        //echo $id = $user->getAttribute('id');
+        $form = $this->getRoute()->getObject();
         
         // estilos para este tipo de documento
         $css = file_get_contents(sfConfig::get('sf_root_dir') . '/web/css/form_decision_pdf.css');
         $css = '<style>'.$css.'</style>';
         
-        $html = $this->getPartial('formulario706/contenido_impresion');
+        $html = $this->getPartial('formulario706/contenido_impresion', 
+            array('form' => $form));
         
         // PDF
         // ------------------------------------

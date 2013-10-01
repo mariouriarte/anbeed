@@ -7,64 +7,73 @@
 <h3><b>DECISIÓN 516</b></h3>
 <h3><b>COMERCIALIZACIÓN DE LOS PRODUCTOS COSMÉTICOS</b></h3>
 
+<?php $tipo_form = $form->getTipoTramiteFormularioId()?>
 <table class="tbl-tipo-form" cellpadding="4">
     <tr>
-        <td>Notificación Sanitaria Obligatoria (NSO)</td>
+        <td><?php echo $tipo_form == 1 ? ' x ' : ' '?><span>Notificación Sanitaria Obligatoria (NSO)</span></td>
     </tr>    
     <tr>
-        <td>Solicitud de Renovación del código de identificación de la NSO</td>
+        <td><?php echo $tipo_form == 2 ? ' x ' : ' '?><span>Solicitud de Renovación del código de identificación de la NSO</span></td>
     </tr>    
     <tr>
-        <td>Solicitud de Reconocimiento del código de identificación de la NSO</td>
+        <td><?php echo $tipo_form == 3 ? ' x ' : ' '?><span>Solicitud de Reconocimiento del código de identificación de la NSO</span></td>
     </tr>    
     <tr>
-        <td>Información de Cambios</td>
-    </tr>    
+        <td><?php echo $tipo_form == 4 ? ' x ' : ' '?><span>Información de Cambios</span></td>
+    </tr>
 </table>
 
 <p></p>
 <table class="tbl-generica" cellpadding="4">
     <tr>
-        <td colspan="2"><b>I. DATOS DEL TITULAR RESPONSABLE DE LA COMERCIALIZACIÓN</b><br />
+        <td colspan="2">
+            <?php if($form->getDatos() === 'TITULAR'): ?>
+                <b>I. DATOS DEL x TITULAR _ RESPONSABLE DE LA COMERCIALIZACIÓN</b><br />
+            <?php else: ?>
+                <b>I. DATOS DEL _ TITULAR x RESPONSABLE DE LA COMERCIALIZACIÓN</b><br />
+            <?php endif; ?> 
             <span class="metadato">Artículo 7, numeral 1, literales a) y c); y Artículo 12 de la Decisión 706</span>
         </td>
     </tr>
     <tr>
-        <td colspan="2">Nombre o razón social:
+        <td colspan="2">Nombre o razón social:<br />
+            <?php echo $form->Cosmetico->Empresa ?>
         </td>
     </tr>
     <tr>
-        <td>Domicilio o dirección: 
+        <td>Domicilio o dirección:<br />
+            <?php echo $form->Cosmetico->Empresa->getDireccion() ?>
         </td>
-        <td>Ciudad / Distrito / Provincia / Departamento:
-        </td>
-    </tr>
-    <tr>
-        <td>País:
-        </td>
-        <td>Teléfono:
+        <td>Ciudad / Distrito / Provincia / Departamento:<br />
+            <?php echo $form->Cosmetico->Empresa->Ciudad->getNombre() ?>
         </td>
     </tr>
     <tr>
-        <td>Fax:
-        </td>
-        <td>e-mail:
-        </td>
+        <td>País: <?php echo $form->Cosmetico->Empresa->Ciudad->Pais->getNombre() ?></td>
+        <td>Teléfono: <?php echo $form->Cosmetico->Empresa->getTelefono1() ?></td>
+    </tr>
+    <tr>
+        <td>Fax: <?php echo $form->Cosmetico->Empresa->getFax() ?></td>
+        <td>e-mail: <?php echo $form->Cosmetico->Empresa->getFax() ?></td>
     </tr>
     <!--<>-->
     <tr>
-        <td colspan="2"><b>Nombre del:</b> Representante Legal X Apoderado X
+        <td colspan="2">
+            <?php if($form->getDatosTitular() === 'Representante Legal'): ?>
+                <b>Nombre del:</b> Representante Legal x Apoderado _
+            <?php else: ?>
+                <b>Nombre del:</b> Representante Legal _ Apoderado x
+            <?php endif; ?>
         </td>
     </tr>
     <tr>
         <td colspan="2">
+            <?php echo $form->Cosmetico->Empresa->RepresentanteLegal ?>
         </td>
     </tr>
     <tr>
-        <td>Teléfono:
-        </td>
-        <td>e-mail:
-        </td>
+        <td>Teléfono: <?php echo $form->Cosmetico->Empresa->RepresentanteLegal->Persona->getTelefono() ?></td>
+        <td>e-mail: <?php echo $form->Cosmetico->Empresa->RepresentanteLegal->Persona->getEmail() ?></td>
     </tr>
     <!--<>-->
     <tr>
@@ -73,22 +82,17 @@
     </tr>
     <tr>
         <td colspan="2">
+            <?php echo $form->Cosmetico->Empresa->RegenteFarmaceutico ?>
         </td>
     </tr>
     <tr>
-        <td>Domicilio o dirección:
+        <td>Teléfono: <?php echo $form->Cosmetico->Empresa->RegenteFarmaceutico->Persona->getTelefono() ?>
         </td>
-        <td>Ciudad / Distrito / Provincia / Departamento:
-        </td>
-    </tr>
-    <tr>
-        <td>Teléfono:
-        </td>
-        <td>Fax:
+        <td>Fax: <?php echo $form->Cosmetico->Empresa->RegenteFarmaceutico->Persona->getFax() ?>
         </td>
     </tr>
     <tr>
-        <td colspan="2">e-mail:
+        <td colspan="2">e-mail: <?php echo $form->Cosmetico->Empresa->RegenteFarmaceutico->Persona->getEmail() ?>
         </td>
     </tr>
     <!--<>-->
@@ -100,33 +104,48 @@
         </td>
     </tr>
     <tr>
-        <td colspan="2">Nombre o razón social:</td>
-    </tr>
-    <tr>
-        <td>Domicilio o dirección:</td>
-        <td>Ciudad / Distrito / Provincia / Departamento:</td>
-    </tr>
-    <tr>
-        <td>País:
-        </td>
-        <td>Teléfono:
+        <td colspan="2">Nombre o razón social: <br />
+            <?php echo $form->Cosmetico->LaboratorioFabricante ?>
         </td>
     </tr>
     <tr>
-        <td>Fax:
+        <td>Domicilio o dirección: <br />
+            <?php echo $form->Cosmetico->LaboratorioFabricante->getDireccion() ?>
         </td>
-        <td>e-mail:
+        <td>Ciudad / Distrito / Provincia / Departamento: <br />
+            <?php echo $form->Cosmetico->LaboratorioFabricante->Ciudad->getNombre() ?>
         </td>
+    </tr>
+    <tr>
+        <td>País: <?php echo $form->Cosmetico->LaboratorioFabricante->Ciudad->Pais->getNombre() ?></td>
+        <td>Teléfono: <?php echo $form->Cosmetico->LaboratorioFabricante->getTelefono() ?></td>
+    </tr>
+    <tr>
+        <td>Fax: <?php echo $form->Cosmetico->LaboratorioFabricante->getFax() ?></td>
+        <td>e-mail: <?php echo $form->Cosmetico->LaboratorioFabricante->getEmail() ?></td>
     </tr>
     <!--<>-->
     <tr>
-        <td colspan="2">
-            En el caso de maquila:<br />
-            <b>Nombre del:</b><br />
-            Envasador<br />
-            Empacador<br />
-            Acondicionador<br />
-            Fabricado para:
+        <td colspan="2">En el caso de maquila:<br />
+            Nombre del:<br />
+            <table class="maquila">
+                <tr>
+                    <td class="maquila-tipo">Envasador</td>
+                    <td class="maquila-x">x</td>
+                    <td class="maquila-nombre"></td>
+                </tr>
+                <tr>
+                    <td class="maquila-tipo">Empacador</td>
+                    <td class="maquila-x"></td>
+                    <td class="maquila-nombre">__________________________________</td>
+                </tr>
+                <tr>
+                    <td class="maquila-tipo">Acondicionador</td>
+                    <td class="maquila-x"></td>
+                    <td class="maquila-nombre">__________________________________</td>
+                </tr>
+            </table>
+            Fabricado para: 
         </td>
     </tr>
 </table>
@@ -135,44 +154,52 @@
 <table class="tbl-generica" cellpadding="4">
     <tr>
         <td colspan="2"><b>III. DATOS GENERALES DEL PRODUCTO</b><br />
-            <span class="metadato">Artículo 7, numeral 1, literales b) y c), Artículos 10, 11 y 23 de 
-            la Decisión 516</span>
+            <span class="metadato">Artículo 7, numeral 1, literales b) y c), 
+                Artículos 10, 11 y 23 de la Decisión 516
+            </span>
         </td>
     </tr>
     <tr>
-        <td colspan="2">Nombre del producto:
+        <td colspan="2">Nombre del producto: <?php echo $form->Cosmetico ?></td>
+    </tr>
+    <tr>
+        <td>Forma Cosmética:<br />
+            <?php echo $form->Cosmetico->FormaCosmetica->getNombre() ?>
+        </td>
+        <td>Grupo cosmético: (Tonos o variedades)<br />
+            <?php echo $form->Cosmetico->GrupoCosmetico->getNombre() ?>
         </td>
     </tr>
     <tr>
-        <td>Forma Cosm etica:
-        </td>
-        <td>Grupo cosmético: (Tonos o variedades)
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">Marca(s):
+        <td colspan="2">Marca(s):<br />
+            <?php echo $form->Cosmetico->getMarca() ?>
         </td>
     </tr>
     <tr>
-        <td rowspan="2">(Incluir en caso de solicitud de renovación, reconocimiento e 
-            información de cambios)
+        <td rowspan="2"><span class="metadato">(Incluir en caso de solicitud de 
+            renovación, reconocimiento e información de cambios)</span>
         </td>
-        <td>Código de identificación de la NSO
+        <td>Código de identificación de la NSO<br />
+            <?php echo $form->Cosmetico->getCodigoNso() ?>
         </td>
     </tr>
     <tr>
-        <td>Número de Expediente
+        <td>Número de Expediente<br />
+            <?php echo $form->Cosmetico->getExpediente() ?>
         </td>
     </tr>
     <!--<>-->
     <tr>
-        <td rowspan="2">(Incluir en el caso de solicitud de reconocimiento)
+        <td rowspan="2"><span class="metadato">(Incluir en el caso de solicitud 
+            de reconocimiento)</span>
         </td>
-        <td>Vigencia del Código de identificación de la NSO
+        <td>Vigencia del Código de identificación de la NSO<br />
+            <?php echo $form->Cosmetico->getVigenciaNso() ?>
         </td>
     </tr>
     <tr>
-        <td>País que emitió el Código de identificación de la NSO
+        <td>País que emitió el Código de identificación de la NSO<br />
+            <?php echo $form->Cosmetico->Pais->getNombre() ?>
         </td>
     </tr>
     <!--<>-->
@@ -754,10 +781,12 @@
         </td>
     </tr>
 </table>
-<p>Yo, ____________________________________________, identificado con
-    ______________, actuando en mi condición de químico farmacéutico 
-    titulado y con registro profesional No. ________ de (País Miembro 
-    correspondiente) certifico técnicamente que el producto cosmético 
+<?php $regente =  $form->Cosmetico->Empresa->RegenteFarmaceutico ?>
+<p>Yo, <b><?php echo $regente ?></b>, 
+    identificado con <b><?php echo $regente->Persona->getCi().' '. $regente->Persona->getExpedido() ?></b>,
+    actuando en mi condición de químico farmacéutico 
+    titulado y con registro profesional No. <b><?php echo $regente->getMatriculaProfesional() ?></b>
+    de (País Miembro correspondiente) certifico técnicamente que el producto cosmético 
     descrito no perjudica la salud humana, siempre que se apliquen las 
     condiciones normales o razonablemente previsibles de uso.
 </p>
@@ -769,10 +798,10 @@
         <td colspan="2"><b>FIRMA DEL RESPONSABLE TÉCNICO</b></td>
     </tr>
     <tr>
-        <td colspan="2">Nombre completo:</td>
+        <td colspan="2">Nombre completo: <b><?php echo $regente ?></b></td>
     </tr>
     <tr>
-        <td colspan="2">Número de Registro o Colegiatura Profesional:</td>
+        <td colspan="2">Número de Registro o Colegiatura Profesional: <b><?php echo $regente->getMatriculaProfesional() ?></b></td>
     </tr>
 </table>
 
@@ -782,9 +811,12 @@
         </td>
     </tr>
 </table>
+
+<?php $representante =  $form->Cosmetico->Empresa->RepresentanteLegal ?>
 <p>
-    Yo, __________________________________________, identificado con 
-    ________________, actuando en condición de Representante legal o Apoderado, 
+    Yo, <b><?php echo $representante ?></b>, identificado con 
+    <b><?php echo $representante->Persona->getCi().' '.$representante->Persona->getExpedido() ?></b>, 
+    actuando en condición de Representante legal o Apoderado, 
     declaro bajo la gravedad de juramento, que el presente documento y la 
     información suministrada adjunta son auténticos y veraces, y cumplen con 
     todos los requisitos establecidos por la Decisión 516 de Comisión de la 
@@ -802,17 +834,12 @@
         <td colspan="2"><b>FIRMA DEL REPRESENTANTE LEGAL O APODERADO</b></td>
     </tr>
     <tr>
-        <td colspan="2">Nombre completo:</td>
+        <td colspan="2">Nombre completo: <b><?php echo $representante ?></b></td>
     </tr>
     <tr>
-        <td colspan="2">Número de identificación:</td>
+        <td colspan="2">Número de identificación: <b><?php echo $representante->Persona->getCi().' '.$representante->Persona->getExpedido() ?></b></td>
     </tr>
-</table>
-
-<p></p>
-<table class="tbl-title-noborder" cellpadding="4">
     <tr>
-        <td><b>Lugar y fecha,</b><br />
-        </td>
+        <td><b>Lugar y fecha,</b></td>
     </tr>
 </table>

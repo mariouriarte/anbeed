@@ -38,14 +38,13 @@ class formulario516Actions extends autoFormulario516Actions
     
     public function executeExportPdf(sfWebRequest $request)
     {
-        //$user = $this->getUser();
-//        $regional_id = $user->getAttribute('regional_id');
-        
+        $form = $this->getRoute()->getObject();
         // estilos para este tipo de documento
         $css = file_get_contents(sfConfig::get('sf_root_dir') . '/web/css/form_decision_pdf.css');
         $css = '<style>'.$css.'</style>';
 //        
-        $html = $this->getPartial('formulario516/contenido_impresion');
+        $html = $this->getPartial('formulario516/contenido_impresion', 
+            array('form' => $form));
         
         // PDF
         // ------------------------------------
