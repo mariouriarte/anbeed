@@ -16,6 +16,10 @@ class Formulario516Form extends BaseFormulario516Form
     protected $datos_titular = array('Representante Legal' => 'Representante Legal',
                                      'Apoderado'           => 'Apoderado');
     
+    protected $tipo_maquila = array('Envasador'      => 'Envasador',
+                                    'Empacador'      => 'Empacador',
+                                    'Acondicionador' => 'Acondicionador');
+    
     public function configure()
     {
         //$cosmetico = sfContext::getInstance()->getUser()->getAttribute('cosmetico');
@@ -57,6 +61,11 @@ class Formulario516Form extends BaseFormulario516Form
         $this->widgetSchema['tipo_tramite_formulario_id'] = new sfWidgetFormDoctrineChoice(
              array('expanded' => true,
                    'model'    => 'TipoTramiteFormulario'));
+        
+        $this->widgetSchema['maquila_tipo'] = new sfWidgetFormChoice(
+            array('expanded' => true, 
+                  'choices'  => $this->tipo_maquila));
+        $this->validatorSchema['maquila_tipo'] = new sfValidatorString(array('required' => false));
         
         //$this->widgetSchema['tipo_tramite_formulario_id']->addOption('order_by',array('id','asc'));
     }

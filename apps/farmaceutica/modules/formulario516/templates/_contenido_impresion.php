@@ -128,11 +128,12 @@
     <tr>
         <td colspan="2">En el caso de maquila:<br />
             Nombre del:<br />
+            <?php if($form->getMaquilaTipo() === 'Envasador'): ?>
             <table class="maquila">
                 <tr>
                     <td class="maquila-tipo">Envasador</td>
                     <td class="maquila-x">x</td>
-                    <td class="maquila-nombre"></td>
+                    <td class="maquila-nombre"><?php echo $form->getMaquila() ?></td>
                 </tr>
                 <tr>
                     <td class="maquila-tipo">Empacador</td>
@@ -145,7 +146,44 @@
                     <td class="maquila-nombre">__________________________________</td>
                 </tr>
             </table>
-            Fabricado para: 
+            <?php elseif($form->getMaquilaTipo() === 'Empacador'): ?>
+            <table class="maquila">
+                <tr>
+                    <td class="maquila-tipo">Envasador</td>
+                    <td class="maquila-x"></td>
+                    <td class="maquila-nombre">__________________________________</td>
+                </tr>
+                <tr>
+                    <td class="maquila-tipo">Empacador</td>
+                    <td class="maquila-x">x</td>
+                    <td class="maquila-nombre"><?php echo $form->getMaquila() ?></td>
+                </tr>
+                <tr>
+                    <td class="maquila-tipo">Acondicionador</td>
+                    <td class="maquila-x"></td>
+                    <td class="maquila-nombre">__________________________________</td>
+                </tr>
+            </table>
+            <?php elseif($form->getMaquilaTipo() === 'Acondicionador'): ?>
+            <table class="maquila">
+                <tr>
+                    <td class="maquila-tipo">Envasador</td>
+                    <td class="maquila-x"></td>
+                    <td class="maquila-nombre">__________________________________</td>
+                </tr>
+                <tr>
+                    <td class="maquila-tipo">Empacador</td>
+                    <td class="maquila-x"></td>
+                    <td class="maquila-nombre">__________________________________</td>
+                </tr>
+                <tr>
+                    <td class="maquila-tipo">Acondicionador</td>
+                    <td class="maquila-x">x</td>
+                    <td class="maquila-nombre"><?php echo $form->getMaquila() ?></td>
+                </tr>
+            </table>
+            <?php endif; ?>
+            Fabricado para: <?php echo $form->getMaquilaFabricado() ?>
         </td>
     </tr>
 </table>

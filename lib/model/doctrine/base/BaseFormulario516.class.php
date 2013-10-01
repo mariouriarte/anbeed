@@ -14,10 +14,9 @@
  * @property integer $tipo_tramite_formulario_id
  * @property string $datos
  * @property string $datos_titular
- * @property string $maquila_embasador
- * @property string $maquila_empacador
- * @property string $maquila_acondicionador
- * @property string $maquila_fabricado_para
+ * @property string $maquila_tipo
+ * @property string $maquila
+ * @property string $maquila_fabricado
  * @property Formulario $Formulario
  * @property Cosmetico $Cosmetico
  * @property TipoTramiteFormulario $TipoTramiteFormulario
@@ -31,10 +30,9 @@
  * @method integer               getTipoTramiteFormularioId()    Returns the current record's "tipo_tramite_formulario_id" value
  * @method string                getDatos()                      Returns the current record's "datos" value
  * @method string                getDatosTitular()               Returns the current record's "datos_titular" value
- * @method string                getMaquilaEmbasador()           Returns the current record's "maquila_embasador" value
- * @method string                getMaquilaEmpacador()           Returns the current record's "maquila_empacador" value
- * @method string                getMaquilaAcondicionador()      Returns the current record's "maquila_acondicionador" value
- * @method string                getMaquilaFabricadoPara()       Returns the current record's "maquila_fabricado_para" value
+ * @method string                getMaquilaTipo()                Returns the current record's "maquila_tipo" value
+ * @method string                getMaquila()                    Returns the current record's "maquila" value
+ * @method string                getMaquilaFabricado()           Returns the current record's "maquila_fabricado" value
  * @method Formulario            getFormulario()                 Returns the current record's "Formulario" value
  * @method Cosmetico             getCosmetico()                  Returns the current record's "Cosmetico" value
  * @method TipoTramiteFormulario getTipoTramiteFormulario()      Returns the current record's "TipoTramiteFormulario" value
@@ -47,10 +45,9 @@
  * @method Formulario516         setTipoTramiteFormularioId()    Sets the current record's "tipo_tramite_formulario_id" value
  * @method Formulario516         setDatos()                      Sets the current record's "datos" value
  * @method Formulario516         setDatosTitular()               Sets the current record's "datos_titular" value
- * @method Formulario516         setMaquilaEmbasador()           Sets the current record's "maquila_embasador" value
- * @method Formulario516         setMaquilaEmpacador()           Sets the current record's "maquila_empacador" value
- * @method Formulario516         setMaquilaAcondicionador()      Sets the current record's "maquila_acondicionador" value
- * @method Formulario516         setMaquilaFabricadoPara()       Sets the current record's "maquila_fabricado_para" value
+ * @method Formulario516         setMaquilaTipo()                Sets the current record's "maquila_tipo" value
+ * @method Formulario516         setMaquila()                    Sets the current record's "maquila" value
+ * @method Formulario516         setMaquilaFabricado()           Sets the current record's "maquila_fabricado" value
  * @method Formulario516         setFormulario()                 Sets the current record's "Formulario" value
  * @method Formulario516         setCosmetico()                  Sets the current record's "Cosmetico" value
  * @method Formulario516         setTipoTramiteFormulario()      Sets the current record's "TipoTramiteFormulario" value
@@ -103,22 +100,17 @@ abstract class BaseFormulario516 extends sfDoctrineRecord
              'notnull' => true,
              'length' => 150,
              ));
-        $this->hasColumn('maquila_embasador', 'string', 255, array(
+        $this->hasColumn('maquila_tipo', 'string', 255, array(
              'type' => 'string',
              'notnull' => false,
              'length' => 255,
              ));
-        $this->hasColumn('maquila_empacador', 'string', 255, array(
+        $this->hasColumn('maquila', 'string', 255, array(
              'type' => 'string',
              'notnull' => false,
              'length' => 255,
              ));
-        $this->hasColumn('maquila_acondicionador', 'string', 255, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 255,
-             ));
-        $this->hasColumn('maquila_fabricado_para', 'string', 255, array(
+        $this->hasColumn('maquila_fabricado', 'string', 255, array(
              'type' => 'string',
              'notnull' => false,
              'length' => 255,
