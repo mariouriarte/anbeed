@@ -603,8 +603,8 @@ Formulario11:
     licencia_previa:       {type: boolean, notnull: true}
     licencia_resolucion:   {type: string(150), notnull: false}
     licencia_fecha:        {type: date, notnull: false}
-    numero_item:           {type: integer, notnull: true}
-    foja:                  {type: integer, notnull: true}
+    numero_item:           {type: integer, notnull: false}
+    foja:                  {type: integer, notnull: false}
     pais_id:               {type: integer, notnull: true}
     factura:               {type: string(150), notnull: true}
     factura_fecha:         {type: date, notnull: true}
