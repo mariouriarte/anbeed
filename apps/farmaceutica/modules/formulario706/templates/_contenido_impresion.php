@@ -1,116 +1,77 @@
-<h3>FORMATO ÚNICO (FNSOHA-001)</h3>
-<h3>DECISION 706</h3>
-<h3>PRODUCTOS DE HIGIENE DOMESTICA (PHD) Y PRODUCTOS ABSORBENTES DE HIGIENE PERSONAL (PAHP)</h3>
+<div class="head-formulario">
+<img src="images/forms/comunidad.jpg" border="0" height="90" width="120">
+<span class="titulo-form"><b>FORMATO ÚNICO (FNSOHA-001)</b></span>
+<img src="images/forms/unimed.png" border="0" height="70" width="120">
+</div>
 
-<table class="tbl-tipo-form">
+<h3><b>DECISION 706</b></h3>
+<h3><b>PRODUCTOS DE HIGIENE DOMESTICA (PHD) Y PRODUCTOS ABSORBENTES DE HIGIENE PERSONAL (PAHP)</b></h3>
+
+<table class="tbl-tipo-form" cellpadding="4">
     <tr>
-        <td><div class="caja-x"> x </div> <span>Notificación Sanitaria Obligatoria (NSO)</span></td>
+        <td> x <span>Notificación Sanitaria Obligatoria (NSO)</span></td>
     </tr>    
     <tr>
-        <td><span class="caja-x">x</span> <span>Solicitud de Renovación del código de identificación de la NSO</span></td>
+        <td> x <span>Solicitud de Renovación del código de identificación de la NSO</span></td>
     </tr>    
     <tr>
-        <td><span class="caja-x">x</span> <span>Solicitud de Reconocimiento del código de identificación de la NSO</span></td>
+        <td> x <span>Solicitud de Reconocimiento del código de identificación de la NSO</span></td>
     </tr>    
     <tr>
-        <td><span class="caja-x">x</span> <span>Información de Cambios</span></td>
+        <td> x <span>Información de Cambios</span></td>
     </tr>    
 </table>
 
-<br />
-<table border="1">
+<p></p>
+<table class="tbl-generica" cellpadding="4">
     <tr>
-        <td colspan="2">
-            I. DATOS DEL    TITULAR  	     IMPORTADOR  <br />
-            Artículo 7, numeral 1, literales a) y c); y Artículo 12 de la Decisión 706
+        <td colspan="2"><b>I. DATOS DEL    TITULAR  	     IMPORTADOR  </b><br /><span class="metadato">Artículo 7, numeral 1, literales a) y c); y Artículo 12 de la Decisión 706</span>
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            Nombre o razón social:
-        </td>
+        <td colspan="2"><b>Nombre o razón social:</b></td>
     </tr>
     <tr>
-        <td colspan="2">
-            Nombre o razón social:
-        </td>
+        <td>Domicilio o dirección:</td>
+        <td>Ciudad / Distrito / Provincia / Departamento:</td>
     </tr>
     <tr>
-        <td>
-            Domicilio o dirección: 
-        </td>
-        <td>
-            Ciudad / Distrito / Provincia / Departamento:
-        </td>
+        <td>País:</td>
+        <td>Teléfono:</td>
     </tr>
     <tr>
-        <td>
-            País:
-        </td>
-        <td>
-            Teléfono:
-        </td>
+        <td>Fax:</td>
+        <td>e-mail:</td>
     </tr>
     <tr>
-        <td>
-            Fax:
-        </td>
-        <td>
-            e-mail:
-        </td>
+        <td colspan="2"><b>Nombre del Representante Legal X Apoderado X</b></td>
     </tr>
     <tr>
-        <td colspan="2">
-            Nombre del Representante Legal X Apoderado X
-        </td>
+        <td>Teléfono:</td>
+        <td>e-mail:</td>
     </tr>
     <tr>
-        <td>
-            Teléfono:
-        </td>
-        <td>
-            e-mail:
-        </td>
+        <td colspan="2"><b>Responsable de la Comercialización</b></td>
     </tr>
     <tr>
-        <td colspan="2">
-            Responsable de la Comercialización
-        </td>
+        <td colspan="2">Nombre o razón social:</td>
     </tr>
     <tr>
-        <td colspan="2">
-            Nombre o razón social:
-        </td>
+        <td>Domicilio o dirección:</td>
+        <td>Ciudad / Distrito / Provincia / Departamento:</td>
     </tr>
     <tr>
-        <td>
-            Domicilio o dirección:
-        </td>
-        <td>
-            Ciudad / Distrito / Provincia / Departamento:
-        </td>
+        <td>País:</td>
+        <td>Teléfono:</td>
     </tr>
     <tr>
-        <td>
-            País:
-        </td>
-        <td>
-            Teléfono:
-        </td>
+        <td>Fax:</td>
+        <td>e-mail:</td>
     </tr>
     <tr>
-        <td>
-            Fax:
-        </td>
-        <td>
-            e-mail:
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            II. DATOS DEL FABRICANTE O FABRICANTES<br />
-            Artículo 7, numeral 1, literal c), y Artículo 12, segundo párrafo de la Decisión 706<br />
-            (Envasador/empacador/acondicionador)
+        <td colspan="2"><b>II. DATOS DEL FABRICANTE O FABRICANTES</b><br />
+            <span class="metadato">Artículo 7, numeral 1, literal c), y Artículo 12, segundo párrafo de la Decisión 706<br />
+            (Envasador/empacador/acondicionador)</span>
         </td>
     </tr>
     <tr>
@@ -138,7 +99,7 @@
     </tr>
     <tr>
         <td colspan="2">
-            Nombre del Responsable Técnico
+            <b>Nombre del Responsable Técnico</b>
         </td>
     </tr>
     <tr>
@@ -174,150 +135,141 @@
     </tr>
 </table>
 
-<table border="1">
+<p></p>
+<table class="tbl-generica" cellpadding="4">
     <tr>
-        <td colspan="2">
-            III. DATOS GENERALES DEL PRODUCTO<br />
-            Artículo 7, numeral 1, literal b), y Artículo 12 de la Decisión 706
+        <td colspan="2"><b>III. DATOS GENERALES DEL PRODUCTO</b><br />
+            <span class="metadato">Artículo 7, numeral 1, literal b), y Artículo 12 de la Decisión 706</span>
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            Nombre del producto:<br />
+        <td colspan="2">Nombre del producto:<br />
             PHD<br />
             PAHP<br />
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            Grupo (especificar según el Anexo 1 Decisión 706):
-        </td>
+        <td colspan="2">Grupo (especificar según el Anexo 1 Decisión 706):</td>
     </tr>
     <tr>
-        <td colspan="2">Variedades:
-        </td>
+        <td colspan="2">Variedades:</td>
     </tr>
     <tr>
-        <td colspan="2">Marca(s):
-        </td>
+        <td colspan="2">Marca(s):</td>
     </tr>
     <!--<>-->
     <tr>
-        <td rowspan="2">
-            (Incluir en el caso de solicitud de renovación, 
+        <td rowspan="2">(Incluir en el caso de solicitud de renovación, 
             reconocimiento e información de cambios, y notificación de un nuevo importador)
         </td>
-        <td>Código de identificación de la NSO
-        </td>
+        <td>Código de identificación de la NSO</td>
     </tr>
     <tr>
-        <td>Número de Expediente
-        </td>
+        <td>Número de Expediente</td>
     </tr>
     <!--<>-->
     <tr>
-        <td rowspan="2">
-            (Incluir en el caso de solicitud de reconocimiento)
-        </td>
-        <td>Vigencia del Código de identificación de la NSO
-        </td>
+        <td rowspan="2">(Incluir en el caso de solicitud de reconocimiento)</td>
+        <td>Vigencia del Código de identificación de la NSO</td>
     </tr>
     <tr>
-        <td>País que emitió el Código de identificación de la NSO
-        </td>
+        <td>País que emitió el Código de identificación de la NSO</td>
     </tr>
     <!--<>-->
     <tr>
-        <td colspan="2">
-            IV. INFORMACIÓN TÉCNICA DEL PRODUCTO<br />
-            Artículo 7, numeral 2, literales a), b), c), d), e), f), g), h), i) y  j) de la Decisión 706
+        <td colspan="2"><b>IV. INFORMACIÓN TÉCNICA DEL PRODUCTO</b><br />
+            <span class="metadato">Artículo 7, numeral 2, literales a), b), c), d), e), f), g), h), i) y  j) de la Decisión 706</span>
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            Adjuntar para NSO, renovación y reconocimiento
-        </td>
+        <td colspan="2"><span class="metadato">Adjuntar para NSO, renovación y reconocimiento</span></td>
     </tr>
     <tr>
-        <td colspan="2">
-            1. La descripción y la composición del producto con indicación de su 
+        <td colspan="2">1. La descripción y la composición del producto con indicación de su 
             fórmula cuali-cuantitativa básica y secundaria con nombre genérico y 
             nomenclatura IUPAC, cuando corresponda
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            2. Especificaciones organolépticas y fisicoquímicas del producto terminado.
+        <td colspan="2">2. Especificaciones organolépticas y fisicoquímicas del producto terminado.
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            3. Justificación de las bondades y proclamas cuando represente un 
+        <td colspan="2">3. Justificación de las bondades y proclamas cuando represente un 
             problema para la salud
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            4. Proyecto de arte de la etiqueta o rotulado
+        <td colspan="2">4. Proyecto de arte de la etiqueta o rotulado
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            5. Instrucciones de uso del producto, cuando corresponda
+        <td colspan="2">5. Instrucciones de uso del producto, cuando corresponda
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            6. Material del envase primario y secundario, cuando corresponda
+        <td colspan="2">6. Material del envase primario y secundario, cuando corresponda
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            7. Advertencias, precauciones y restricciones, cuando corresponda
+        <td colspan="2">7. Advertencias, precauciones y restricciones, cuando corresponda
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            8. Forma de presentación
+        <td colspan="2">8. Forma de presentación
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            9. Número de lote o sistema de codificación de producción
+        <td colspan="2">9. Número de lote o sistema de codificación de producción
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            10. Información de las propiedades desinfectantes y/o bactericida 
+        <td colspan="2">10. Información de las propiedades desinfectantes y/o bactericida 
             del producto, de acuerdo con las propiedades especiales conferidas al mismo
         </td>
     </tr>
 </table>
 
-<h3>V. INFORMACIÓN DE CAMBIOS</h3>
-<p>Artículos 13, 14, 15 y 16 de la Decisión 706</p>
+<p></p>
+<table class="tbl-title-noborder" cellpadding="4">
+    <tr>
+        <td><b>V. INFORMACIÓN DE CAMBIOS</b><br />
+            <span class="metadato">Artículos 13, 14, 15 y 16 de la Decisión 706</span>
+        </td>
+    </tr>
+</table>
+<table class="tbl-generica" cellpadding="4">
+    <tr>
+        <td id="textarea"></td>
+    </tr>
+</table>
 
-<h3>VI. DOCUMENTACIÓN QUE SE ANEXA</h3>
-<table border="1">
+<p></p>
+<table class="tbl-title-noborder" cellpadding="4">
     <tr>
-        <td colspan="3">A ser presentada por el interesado</td>
-        <td colspan="2">A ser llenado por la Autoridad Sanitaria</td>
+        <td><b>VI. DOCUMENTACIÓN QUE SE ANEXA</b><br />
+        </td>
+    </tr>
+</table>
+<table class="tbl-anexos" cellpadding="4">
+    <tr>
+        <td class="interesado" colspan="3">A ser presentada por el interesado</td>
+        <td class="sanitaria" colspan="2">A ser llenado por la Autoridad Sanitaria</td>
     </tr>
     <tr>
-        <th colspan="2">Documentación</th>
-        <th>Folios</th>
-        <th>Cumple</th>
-        <th>No cumple</th>
+        <td class="anexo-doc" colspan="2"><b>Documentación</b></td>
+        <td class="folios"><b>Folios</b></td>
+        <td class="cumple"><b>Cumple</b></td>
+        <td class="no-cumple"><b>No cumple</b></td>
     </tr>
     <tr>
-        <td colspan="5">
-            Anexar para la NSO, solicitud de renovación y reconocimiento e 
-            información de cambios
+        <td colspan="5"><span class="metadato">Anexar para la NSO, solicitud de renovación y reconocimiento e 
+            información de cambios</span>
         </td>
     </tr>
     <tr>
-        <td>1.</td>
-        <td>Documento que respalde la Representación Legal o la condición de
+        <td class="num">1.</td>
+        <td class="anexo-detalle">Documento que respalde la Representación Legal o la condición de
             apoderado del responsable de la comercialización y/o importador,
             cuando corresponda de acuerdo a la legislación interna de cada
             País Miembro.
@@ -327,8 +279,7 @@
         <td></td>
     </tr>
     <tr>
-        <td colspan="5">
-            Anexar para NSO, solicitud de renovación y reconocimiento
+        <td colspan="5"><span class="metadato">Anexar para NSO, solicitud de renovación y reconocimiento</span>
         </td>
     </tr>
     <tr>
@@ -385,7 +336,7 @@
         <td></td>
     </tr>
     <tr>
-        <td colspan="5">Anexar para NSO y solicitud de renovación</td>
+        <td colspan="5"><span class="metadato">Anexar para NSO y solicitud de renovación</span></td>
     </tr>
     <tr>
         <td>8.</td>
@@ -422,7 +373,7 @@
         <td></td>
     </tr>
     <tr>
-        <td colspan="5">Anexar para NSO y Reconocimiento</td>
+        <td colspan="5"><span class="metadato">Anexar para NSO y Reconocimiento</span></td>
     </tr>
     <tr>
         <td>12.</td>
@@ -460,13 +411,39 @@
         <td></td>
     </tr>
     <tr>
-        <td>Anexar sólo para información de cambios, según corresponda</td>
+        <td colspan="5"><span class="metadato">Anexar sólo para información de cambios, según corresponda</span></td>
     </tr>
     <!--<>-->
     <tr>
         <td>16.</td>
-        <td>Justificación de las bondades y proclamas atribuible al producto, 
-            cuya no veracidad pueda representar un problema para la salud.
+        <td colspan="4">Modificación / cambio / incorporación de fabricante<br />
+        <span class="metadato">Artículos 7 y 13 de la Decisión 706</span>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>a. Certificado de libre venta o una autorización similar expedida 
+            por la Autoridad Competente del país de origen o declaración 
+            consularizada o apostille del responsable del producto en el país 
+            de origen. Estos documentos no deben tener una fecha de expedición 
+            con una antigüedad mayor a 2 años.
+        </td>
+        <td>DEL...........AL.................FOLIO</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>b. Proyecto de arte de la etiqueta o rotulado con el nombre o la 
+            razón social modificada.
+        </td>
+        <td>DEL...........AL.................FOLIO</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>c. Comprobante de pago por derecho de trámite.
         </td>
         <td>DEL...........AL.................FOLIO</td>
         <td></td>
@@ -474,28 +451,42 @@
     </tr>
 </table>
 
-<h3>VII. CERTIFICACION DE LA INFORMACION TECNICA DEL PRODUCTO</h3>
-
+<p></p>
+<table class="tbl-title-noborder" cellpadding="4">
+    <tr>
+        <td><b>VII. CERTIFICACION DE LA INFORMACION TECNICA DEL PRODUCTO</b><br />
+        </td>
+    </tr>
+</table>
 <p>Yo, ____________________________________________, identificado con 
     (DNI)______________, actuando en mi condición de químico farmacéutico 
     titulado y con registro profesional No. ________ de (País Miembro 
     correspondiente) certifico técnicamente que el (PHD / PAHP) descrito no 
     perjudica la salud humana, siempre que se apliquen las condiciones normales 
-    o razonablemente previsibles de uso.</p>
+    o razonablemente previsibles de uso.
+</p>
 
-<table border="1">
+<table class="tbl-firma" cellpadding="4">
     <tr>
-        <td>FIRMA DEL RESPONSABLE TÉCNICO</td>
+        <td class="firma-persona"></td><td></td>
     </tr>
     <tr>
-        <td>Nombre completo:</td>
+        <td colspan="2"><b>FIRMA DEL RESPONSABLE TÉCNICO</b></td>
     </tr>
     <tr>
-        <td>Número de Registro o Colegiatura Profesional:</td>
+        <td colspan="2">Nombre completo:</td>
+    </tr>
+    <tr>
+        <td colspan="2">Número de Registro o Colegiatura Profesional:</td>
     </tr>
 </table>
 
-<h3>VIII. DECLARACION JURADA.</h3>
+<table class="tbl-title-noborder" cellpadding="4">
+    <tr>
+        <td><b>VIII. DECLARACION JURADA.</b><br />
+        </td>
+    </tr>
+</table>
 <p>Yo, __________________________________________, identificado con 
     (DNI)________________, actuando en condición de Representante legal o 
     Apoderado, declaro bajo la gravedad de juramento, que el presente 
@@ -506,16 +497,25 @@
     documento cumpliendo estrictamente con las especificaciones de calidad 
     definidas para el producto.</p>
 
-<table>
+<table class="tbl-firma" cellpadding="4">
     <tr>
-        <td>FIRMA DEL REPRESENTANTE LEGAL O APODERADO</td>
+        <td class="firma-persona"></td><td></td>
     </tr>
     <tr>
-        <td>Nombre completo:</td>
+        <td colspan="2"><b>FIRMA DEL REPRESENTANTE LEGAL O APODERADO</b></td>
     </tr>
     <tr>
-        <td>Número de identificación:</td>
+        <td colspan="2">Nombre completo:</td>
+    </tr>
+    <tr>
+        <td colspan="2">Número de identificación:</td>
     </tr>
 </table>
 
-<p>Lugar y fecha,</p>
+<p></p>
+<table class="tbl-title-noborder" cellpadding="4">
+    <tr>
+        <td><b>Lugar y fecha,</b><br />
+        </td>
+    </tr>
+</table>

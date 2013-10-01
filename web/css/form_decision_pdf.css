@@ -1,26 +1,118 @@
+table {
+    margin-top: 15px;
+}
+
 h3 {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: normal;
     width: 100%;
-    background-color: red;
     text-align: center;
 }
 
-.tbl-tipo-form {
-    border: 1px solid #000;
-    margin-bottom: 10px;
-    font-size: 12px;
+p {
+    font-size: 10px;
 }
 
 .tbl-tipo-form td{
-    padding: 15px;
+    border: 1px solid #000;
+    /*margin-bottom: 10px;*/
+    font-size: 10px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.tbl-tipo-form td{
+    /*padding: 15px;*/
 }
 
 .caja-x {
+    font-size: 12px;
     width: 15px;
     height: 10px;
     border: 1px solid #000;
     display: inline;
-    float: left;
-    position: relative;
+}
+
+td#textarea{
+    height: 150px !important;
+}
+
+.metadato {
+    font-size: 8px;
+    font-style: italic;
+}
+
+.tbl-generica td {
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    font-size: 9px;
+    height: 33px;
+}
+
+.tbl-firma td {
+    /*border: 1px solid #000;*/
+    margin-bottom: 10px;
+    font-size: 9px;
+    height: 33px;
+}
+
+.tbl-title-noborder td {
+    font-size: 9px;
+}
+
+.tbl-anexos td {
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    font-size: 8px;
+    height: 15px;
+}
+
+.cumple , .no-cumple{
+    width: 50px;
+}
+
+.folios {
+    width: 132px;
+}
+
+.num {
+    width: 30px;
+}
+
+.anexo-detalle {
+    width: 205px;
+}
+
+.anexo-doc {
+    width: 235px;
+}
+
+.interesado {
+    width: 367px;
+}
+.interesado-516 {
+    width: 235;
+}
+
+.sanitaria {
+    width: 100px;
+}
+
+.sanitaria-516 {
+    width: 232px;
+}
+
+td.firma-persona {
+    border-bottom: 1px solid #000;
+    height: 60px;
+}
+
+.titulo-form {
+    margin-left: 50px;
+}
+
+.head-formulario {
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
 }

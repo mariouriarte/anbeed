@@ -42,8 +42,8 @@ class formulario516Actions extends autoFormulario516Actions
 //        $regional_id = $user->getAttribute('regional_id');
         
         // estilos para este tipo de documento
-//        $css = file_get_contents(sfConfig::get('sf_root_dir') . '/web/css/listado_general_pdf.css');
-//        $css = '<style>'.$css.'</style>';
+        $css = file_get_contents(sfConfig::get('sf_root_dir') . '/web/css/form_decision_pdf.css');
+        $css = '<style>'.$css.'</style>';
 //        
         $html = $this->getPartial('formulario516/contenido_impresion');
         
@@ -62,22 +62,24 @@ class formulario516Actions extends autoFormulario516Actions
         $pdf->SetSubject('ANBEED SRL');
         $pdf->SetKeywords('TCPDF, PDF, ANBEED SRL, Formulario516, impresion');
         
-        //$pdf->setHtmlHeader($css . $tbl_header);
-        
-        // set default header data
-//        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
-
         // set header and footer fonts
-//        $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
-//        $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+        $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+        $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
 
+       
+        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+        // quitar la linea del header
+        $pdf->setHeaderData('',0,'','',array(0,0,0), array(255,255,255) );
+        
+        
         // set default monospaced font
-//         $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+         $pdf->SetMargins(25, 25, 20);
         $pdf->SetFont('dejavusans', '', 8, '', true);
         $pdf->AddPage();
         //echo '<table ' .$table;
         //$pdf->writeHTML($html, true, false, false, false, '');
-        $pdf->writeHTML($html, true, false, true, false, '');
+        $pdf->writeHTML($css.$html, true, false, true, false, '');
         
         // ---------------------------------------------------------
         // Close and output PDF document
