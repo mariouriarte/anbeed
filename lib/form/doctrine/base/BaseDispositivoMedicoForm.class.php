@@ -43,7 +43,7 @@ abstract class BaseDispositivoMedicoForm extends BaseFormDoctrine
       'producto_id'               => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'required' => false)),
       'empresa_id'                => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'))),
       'laboratorio_fabricante_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('LaboratorioFabricante'))),
-      'nombre_comercial'          => new sfValidatorString(array('max_length' => 255)),
+      'nombre_comercial'          => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'nombre_generico'           => new sfValidatorString(array('max_length' => 255)),
       'clasificacion_riesgo'      => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
       'codigo_internacional'      => new sfValidatorString(array('max_length' => 255, 'required' => false)),

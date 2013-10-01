@@ -91,7 +91,7 @@ abstract class BaseDispositivoMedico extends sfDoctrineRecord
              ));
         $this->hasColumn('nombre_comercial', 'string', 255, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 255,
              ));
         $this->hasColumn('nombre_generico', 'string', 255, array(

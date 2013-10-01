@@ -16,7 +16,7 @@ abstract class BaseDispositivoMedicoFormFilter extends BaseFormFilterDoctrine
       'producto_id'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Producto'), 'add_empty' => true)),
       'empresa_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => true)),
       'laboratorio_fabricante_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('LaboratorioFabricante'), 'add_empty' => true)),
-      'nombre_comercial'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'nombre_comercial'          => new sfWidgetFormFilterInput(),
       'nombre_generico'           => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'clasificacion_riesgo'      => new sfWidgetFormFilterInput(),
       'codigo_internacional'      => new sfWidgetFormFilterInput(),

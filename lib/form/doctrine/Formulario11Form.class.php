@@ -56,7 +56,6 @@ class Formulario11Form extends BaseFormulario11Form
         $this->widgetSchema['otro']->setAttribute('onKeyUp','copiarOtro();');
         $this->widgetSchema['otro']->setAttribute('onBlur','copiarOtro();');
         $this->widgetSchema['otro']->setAttribute('disabled', 'disabled');
-        //  $this->widgetSchema['por_tratarse']->setAttribute('disabled', 'disabled');
         
         /*AJUSTANDO LOS TAMAños*/
   }
