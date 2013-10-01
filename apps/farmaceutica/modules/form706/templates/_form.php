@@ -26,8 +26,7 @@
       </tr>
     </tbody>
   </table>
-</div>
-      
+</div>      
 <div class="container-form-decision">
   <table class="tbl-form-decision">
     <thead>
@@ -151,7 +150,6 @@
     </tbody>
   </table>
 </div>
-
 <div class="container-form-decision">
   <table class="tbl-form-decision">
     <thead>
@@ -248,7 +246,6 @@
     </tbody>
   </table>
 </div>
-
 <div class="container-form-decision">
   <table class="tbl-form-decision">
     </tbody>
@@ -298,8 +295,7 @@
       </tr>
     </tbody>
   </table>
-</div>
-    
+</div>    
 <div class="container-form-decision">
   <table class="tbl-form-decision">
     <tbody>
@@ -328,8 +324,6 @@
     </tbody>
   </table>
 </div>
-
-
 <?php echo $form->renderHiddenFields(false) ?>          
 <ul class="sf_admin_actions">
     <?php if (!$form->getObject()->isNew()): ?>

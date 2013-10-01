@@ -185,45 +185,29 @@ function habilita(campo)
               <td><?php  echo $cosmeticos->LaboratorioFabricante->getEmail() ?></td>
             </tr>
             <tr>
-                <th>En caso de maquila:</th>
-            </tr>
-            <tr>
-              <th><?php echo $form['maquila_embasador']->renderLabel() ?></th>
-              <td>
-                <?php echo $form['maquila_embasador']->renderError(); ?>
-                  <?php //ACA VERIFICAMOS SI TIENE EMBASADOR
-      //                $check1 = "";
-      //                if(($form['maquila_embasador']->getValue()) != NULL )
-      //                    $check1= "checked";?>
-      <!--            <input type="checkbox" //<?php //echo $check1?> onclick="habilita(1)">-->
-
-                    <?php 
-                      echo $form['maquila_embasador'];
-                    ?>
-              </td>
-            </tr>
-            <tr>
-              <th><?php echo $form['maquila_empacador']->renderLabel() ?></th>
-              <td>
-                <?php echo $form['maquila_empacador']->renderError() ?>
-
-                <?php echo $form['maquila_empacador'] ?>
-              </td>
-            </tr>
-            <tr>
-              <th><?php echo $form['maquila_acondicionador']->renderLabel() ?></th>
-              <td>
-                <?php echo $form['maquila_acondicionador']->renderError() ?>
-                  <?php echo $form['maquila_acondicionador'] ?>
-              </td>
-            </tr>
-            <tr>
-              <th><?php echo "Fabricado para:" ?></th>
-              <td>
-                <?php echo $form['maquila_fabricado_para']->renderError() ?>
-                <?php echo $form['maquila_fabricado_para'] ?>
-              </td>
-            </tr>
+          <th colspan="2">En caso de maquila:</th>
+      </tr>
+      <tr>
+        <th><?php echo $form['maquila_tipo']->renderLabel() ?></th>
+        <td class="lista-linea">
+          <?php echo $form['maquila_tipo']->renderError() ?>
+          <?php echo $form['maquila_tipo'] ?>
+        </td>
+      </tr>
+      <tr>
+        <th><?php echo $form['maquila']->renderLabel() ?></th>
+        <td>
+          <?php echo $form['maquila']->renderError() ?>
+          <?php echo $form['maquila'] ?>
+        </td>
+      </tr>
+      <tr>
+        <th class="celda-abajo"><?php echo "Fabricado para:" ?></th>
+        <td class="celda-abajo">
+          <?php echo $form['maquila_fabricado']->renderError() ?>
+          <?php echo $form['maquila_fabricado'] ?>
+        </td>
+      </tr>
         </tbody>
     </table>
 </div>
