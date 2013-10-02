@@ -35,6 +35,7 @@ class ItemForm extends BaseItemForm
       $years = range(date('Y') , date('Y') + 10);   
         $this->widgetSchema['fecha_vencimiento'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
-                  'years' => array_combine($years, $years))), ));
+                    'format' => '%day%%month%%year%',
+                    'years' => array_combine($years, $years))), ));
   }
 }

@@ -14,18 +14,20 @@ generator:
     config:
       actions: ~
       fields:
-        ap_paterno:      {label: 'Ap. Paterno'}
-        ap_materno:      {label: 'Ap. Materno'}
-        cedula_expedido: {label: 'Cédula de identidad'}
-        ci:              {label: 'Cedula de Identidad'}
-        expedido:        {label: 'Expedido'}
-        direccion:       {label: 'Dirección'}
-        telefono:        {label: 'Teléfono'}
-        celular:         {label: 'Celular'}
-        fax:             {label: 'Fax'}
-        casilla:         {label: 'Casilla'}
-        email:           {label: 'Email'}
-        nombre_ordenado: {label: 'Persona'}
+        ap_paterno:       {label: 'Apellido Paterno'}
+        ap_materno:       {label: 'Apellido Materno'}
+        ap_casada:        {label: 'Apellido Casada'}
+        cedula_expedido:  {label: 'Cédula de identidad'}
+        ci:               {label: 'Cedula de Identidad'}
+        expedido:         {label: 'Expedido'}
+        direccion:        {label: 'Dirección'}
+        telefono:         {label: 'Teléfono'}
+        celular:          {label: 'Celular'}
+        fax:              {label: 'Fax'}
+        casilla:          {label: 'Casilla'}
+        email:            {label: 'Email'}
+        nombre_ordenado:  {label: 'Persona'}
+        fecha_nacimiento: {label: 'Fecha de nacimiento'}
         
       list:
         title: Listado de Regentes Farmaceuticos disponibles
@@ -40,7 +42,7 @@ generator:
         display: [ap_paterno, ci]
       form:
         display: 
-          Datos de la Persona:  [nombre, ap_paterno, ap_materno, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
+          Datos de la Persona:  [nombre, ap_paterno, ap_materno, ap_casada, ci, expedido, direccion, telefono, celular, fax, casilla, email, fecha_nacimiento]
           Personal Responsable: [Nuevo Regente]
       edit:
         title: Editar Regente Farmaceutico %%nombre%%

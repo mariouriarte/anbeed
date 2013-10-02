@@ -28,8 +28,10 @@ class EmpresaForm extends BaseEmpresaForm
         $years = range(date('Y') - 80, date('Y'));   
         $this->widgetSchema['fecha_resolucion'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
+                  'format' => '%day%%month%%year%',  
                   'years' => array_combine($years, $years))), ));
         
+               
         
         $this->validatorSchema['fecha_resolucion'] = new sfValidatorDate(
             array('required' => true));

@@ -81,7 +81,7 @@ Higiene:
     Producto: Producto_4
     Empresa: Empresa_1
     LaboratorioFabricante: LaboratorioFabricante_1
-    grupo_higiene_id: null
+#    grupo_higiene_id: null
     marca: PAPERS
     nombre: PAÑAL
     nombre_detalle: PHD

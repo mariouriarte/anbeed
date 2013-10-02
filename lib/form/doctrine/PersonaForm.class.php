@@ -10,18 +10,35 @@
  */
 class PersonaForm extends BasePersonaForm
 {
+    protected $expedido = array(''   => ' - Expedido en',
+                                'LP' => 'LP',
+                                'SC' => 'SC',
+                                'SR' => 'SR',
+                                'OR' => 'OR',
+                                'BN' => 'BN',
+                                'CB' => 'CB',
+                                'TJ' => 'TJ',
+                                'PT' => 'PT',
+                                'PD' => 'PD');
+    
     public function configure()
     {
-        unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
+        unset($this['created_at'], $this['updated_at'],
+              $this['created_by'], $this['updated_by']);
         
-        //Fecha de nacimiento
+        // Fecha de nacimiento
         $years = range(date('Y') - 80, date('Y'));   
         $this->widgetSchema['fecha_nacimiento'] = new sfWidgetFormJQueryDate(
-            array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
-                  'years' => array_combine($years, $years))), ));
+            array('culture'     => 'es',
+                  'date_widget' => new sfWidgetFormDate(
+                          array('format' => '%day%%month%%year%',
+                                'years'  => array_combine($years, $years)))));
         
-//        $this->validatorSchema['fecha_nacimiento'] = new sfValidatorDate(
-//            array('required' => true));
+        // Expedido
+        $this->widgetSchema['expedido'] = new sfWidgetFormChoice(
+            array('expanded' => false,
+                  'choices'  => $this->expedido));
+        $this->validatorSchema['expedido'] = new sfValidatorString(array('required' => false));
        
         if(sfContext::getInstance()->getModuleName() == "personalegal")
         {
@@ -89,11 +106,12 @@ class PersonaForm extends BasePersonaForm
             $this->embedForm('usuario', $subForm2);
         }
        /*AJUSTANDO LOS TAMAños*/
-        $this->widgetSchema['nombre']->setAttribute('size' , 50);
-        $this->widgetSchema['ap_materno']->setAttribute('size' , 50);
-        $this->widgetSchema['ap_paterno']->setAttribute('size' , 50);
-        $this->widgetSchema['direccion']->setAttribute('size' , 50);
-        $this->widgetSchema['email']->setAttribute('size' , 50);
+        $this->widgetSchema['nombre']->setAttribute('size', 50);
+        $this->widgetSchema['ap_materno']->setAttribute('size', 50);
+        $this->widgetSchema['ap_paterno']->setAttribute('size', 50);
+        $this->widgetSchema['ap_casada']->setAttribute('size', 50);
+        $this->widgetSchema['direccion']->setAttribute('size', 50);
+        $this->widgetSchema['email']->setAttribute('size', 50);
         
     }
 }

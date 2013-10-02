@@ -15,10 +15,12 @@ class HigieneForm extends BaseHigieneForm
     public function configure()
     {
         parent::setup();
-        unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
+        unset($this['created_at'], $this['updated_at'], 
+              $this['created_by'], $this['updated_by']);
         
         $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden();
-        //// Empresa
+        
+//// Empresa
         $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden();
         
         //// Empresa
@@ -32,10 +34,10 @@ class HigieneForm extends BaseHigieneForm
         ));
         
         //// Marca
-        $this->widgetSchema['grupo_higiene_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
-            array('model'=>'GrupoHigiene',
-                  'url'=>sfContext::getInstance()->getRouting()->generate('buscar_grupo_higiene')
-        ));
+//        $this->widgetSchema['grupo_higiene']= new sfWidgetFormDoctrineJQueryAutocompleter(
+//            array('model'=>'GrupoHigiene',
+//                  'url'=>sfContext::getInstance()->getRouting()->generate('buscar_grupo_higiene')
+//        ));
         
         //// Pais de codigo NSO 
         $this->widgetSchema['pais_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
@@ -52,7 +54,7 @@ class HigieneForm extends BaseHigieneForm
         /*AJUSTANDO LOS TAMAños*/
         $this->widgetSchema['laboratorio_fabricante_id']->setAttribute('size' , 50);
         $this->widgetSchema['nombre']->setAttribute('size' , 50);
-        $this->widgetSchema['grupo_higiene_id']->setAttribute('size' , 50);
+        $this->widgetSchema['grupo_higiene']->setAttribute('size' , 50);
         $this->widgetSchema['variedades']->setAttribute('cols' , 80);
         $this->widgetSchema['marca']->setAttribute('size' , 50);
         $this->widgetSchema['pais_id']->setAttribute('size' , 50);

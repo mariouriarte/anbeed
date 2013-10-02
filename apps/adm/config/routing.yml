@@ -218,33 +218,6 @@ persona:
     column:               id
     with_wildcard_routes: true
 
-sf_guard_user_usuarios:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                sfGuardUser
-    module:               usuarios
-    prefix_path:          /usuarios
-    column:               id
-    with_wildcard_routes: true
-
-sf_guard_group:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                sfGuardGroup
-    module:               grupos
-    prefix_path:          /grupos
-    column:               id
-    with_wildcard_routes: true
-
-sf_guard_user:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                sfGuardUser
-    module:               usuario
-    prefix_path:          /usuario
-    column:               id
-    with_wildcard_routes: true
-
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 

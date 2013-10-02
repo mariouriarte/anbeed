@@ -141,11 +141,11 @@ abstract class BaseFormulario11 extends sfDoctrineRecord
              ));
         $this->hasColumn('numero_item', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('foja', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('pais_id', 'integer', null, array(
              'type' => 'integer',

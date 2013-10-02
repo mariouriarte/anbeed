@@ -24,7 +24,8 @@ class Formulario12Form extends BaseFormulario12Form
             array('culture' => 'es',
                   'default' => date('Y-m-d'),
                   'date_widget' => new sfWidgetFormDate(array(
-                  'years' => array_combine($years, $years)))));
+                      'format' => '%day%%month%%year%',
+                      'years' => array_combine($years, $years)))));
        
        $this->widgetSchema['tipo_tramite_formulario12_id'] = new sfWidgetFormDoctrineChoice(
            array('expanded' => true,
@@ -43,6 +44,7 @@ class Formulario12Form extends BaseFormulario12Form
        $this->widgetSchema['fecha_inicio_vigencia'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es',
                   'date_widget' => new sfWidgetFormDate(array(
-                  'years' => array_combine($years, $years)))));
+                      'format' => '%day%%month%%year%',
+                      'years' => array_combine($years, $years)))));
   }
 }

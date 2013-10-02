@@ -1,387 +1,383 @@
-<h3>Anexo I</h3>
+<div class="head-formulario">
+<img src="images/forms/comunidad.jpg" border="0" height="90" width="120">
+<span class="titulo-form"><b>FORMATO ÚNICO (FNSOHA-001)</b></span>
+<img src="images/forms/unimed.png" border="0" height="70" width="120">
+</div>
 
-<h3>INSTRUCTIVO PARA EL LLENADO DEL FORMATO FNSOHA-001</h3>
+<h3><b>DECISION 706</b></h3>
+<h3><b>PRODUCTOS DE HIGIENE DOMESTICA (PHD) Y PRODUCTOS ABSORBENTES DE HIGIENE PERSONAL (PAHP)</b></h3>
 
-<p>El objeto del formato FNSOHA-001 será definido por el interesado en calidad 
-de Declaración Jurada y lo hará de conocimiento de la Autoridad Nacional 
-Competente (ANC) colocando una “X”, según sea el caso.</p>
-
-<p>Los demás campos del Formato FNSOHA-001 serán llenados obligatoriamente, 
-independientemente del objeto del formato, salvo indicación en contrario 
-registrada en el propio campo.</p>
-
-<p>En todo momento, el interesado deberá regirse por lo establecido en la 
-Decisión 706 señalado en los campos del Formato FNSOAH-001.</p>
-
-<table border="1">
+<?php $tipo_form = $form->getTipoTramiteFormularioId()?>
+<table class="tbl-tipo-form" cellpadding="4">
     <tr>
-        <th>OBJETO</th>
-        <th>DESCRIPCIÓN</th>
-    </tr>
+        <td><?php echo $tipo_form == 1 ? ' x ' : ' '?><span>Notificación Sanitaria Obligatoria (NSO)</span></td>
+    </tr>    
     <tr>
-        <td>Notificación Sanitaria Obligatoria (NSO)</td>
-        <td>Esta notificación será presentada por el interesado en comercializar 
-            y/o importar productos de higiene doméstica o absorbentes de higiene 
-            personal,  por primera vez en la Subregión (Artículo 5 de la Decisión
-            706) o cuando éste declara su intención de ser un nuevo importador 
-            de un producto con código de identificación de la NSO vigente (tercer
-            párrafo del Artículo 12 de la Decisión 706). En este último caso,
-            deberá colocar adicionalmente una "X" en la Parte I del formato
-            FNSOHA-001, como sigue:
-            I. DATOS DEL  TITULAR - IMPORTADOR <br />
-            La ANC en respuesta a esta notificación, emitirá el Formato FNSOHA-002.
-        </td>
-    </tr>
+        <td><?php echo $tipo_form == 2 ? ' x ' : ' '?><span>Solicitud de Renovación del código de identificación de la NSO</span></td>
+    </tr>    
     <tr>
-        <td>Solicitud de Renovación del código de identificación de la NSO</td>
-        <td>Esta solicitud deberá ser presentada por el titular de un código de 
-            identificación de la NSO vigente, antes de la expiración del período 
-            de vigencia correspondiente (Artículo 18 de la Decisión 706)<br />
-            La ANC en respuesta a esta solicitud, emitirá el Formato FNSOHA-002.</td>
-    </tr>
+        <td><?php echo $tipo_form == 3 ? ' x ' : ' '?><span>Solicitud de Reconocimiento del código de identificación de la NSO</span></td>
+    </tr>    
     <tr>
-        <td>Solicitud de Reconocimiento del código de identificación de la NSO </td>
-        <td>Esta solicitud deberá ser presentada por el titular,  importador de
-            un producto PHD y PAHP con código de identificación de la NSO vigente,
-            que esté interesado en comercializar dicho producto en otro País
-            Miembro (Artículos 9 y 11 de la Decisión 706)<br />
-            La ANC en respuesta a esta solicitud, emitirá el Formato FNSOHA-003.</td>
-    </tr>
-    <tr>
-        <td>Información de Cambios</td>
-        <td>El interesado comunicará el (los) cambio(s) a la ANC del País Miembro
-            que otorgó el código de identificación de la NSO, en forma resumida 
-            en la parte V del Formato FNSOHA-001, adjuntando los requisitos que
-            dicho Formato establece según el cambio correspondiente.<br />
-            La ANC revisará que el formato, al momento de su presentación por 
-            parte del interesado, esté acompañado de los requisitos establecidos 
-            en la Decisión 706. <br />
-            El interesado deberá presentar dicho documento recepcionado por la 
-            ANC del país de residencia del titular, a las demás ANC donde pretenda
-            comercializar sus productos, con la copia de los documentos presentados
-            que sustentan los cambios efectuados.</td>
+        <td><?php echo $tipo_form == 4 ? ' x ' : ' '?><span>Información de Cambios</span></td>
     </tr>
 </table>
 
-<h3>FORMATO ÚNICO (FNSOHA-001)</h3>
-<h3>DECISION 706</h3>
-<h3>PRODUCTOS DE HIGIENE DOMESTICA (PHD) Y PRODUCTOS ABSORBENTES DE HIGIENE PERSONAL (PAHP)</h3>
-
-<table border="1">
-    <tr>
-        <td>Notificación Sanitaria Obligatoria (NSO)</td>
-    </tr>    
-    <tr>
-        <td>Solicitud de Renovación del código de identificación de la NSO</td>
-    </tr>    
-    <tr>
-        <td>Solicitud de Reconocimiento del código de identificación de la NSO</td>
-    </tr>    
-    <tr>
-        <td>Información de Cambios</td>
-    </tr>    
-</table>
-
-<table border="1">
+<p></p>
+<table class="tbl-generica" cellpadding="4">
     <tr>
         <td colspan="2">
-            I. DATOS DEL    TITULAR  	     IMPORTADOR  <br />
-            Artículo 7, numeral 1, literales a) y c); y Artículo 12 de la Decisión 706
+            <?php if($form->getDatos() === 'IMPORTADOR'): ?>
+                <b>I. DATOS DEL TITULAR _ IMPORTADOR x  </b><br />
+            <?php else: ?>
+                <b>I. DATOS DEL TITULAR x IMPORTADOR _ </b><br />
+            <?php endif; ?> 
+            <span class="metadato">Artículo 7, numeral 1, literales a) y c); y Artículo 12 de la Decisión 706</span>
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            Nombre o razón social:
+        <td colspan="2"><b>Nombre o razón social:</b><br />
+            <?php echo $form->Higiene->Empresa ?>
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            Nombre o razón social:
+        <td>Domicilio o dirección:<br />
+            <?php echo $form->Higiene->Empresa->getDireccion() ?>
+        </td>
+        <td>Ciudad / Distrito / Provincia / Departamento:<br />
+            <?php echo $form->Higiene->Empresa->Ciudad->getNombre() ?>
         </td>
     </tr>
     <tr>
-        <td>
-            Domicilio o dirección: 
+        <td>País: <?php echo $form->Higiene->Empresa->Ciudad->Pais ?>
         </td>
-        <td>
-            Ciudad / Distrito / Provincia / Departamento:
+        <td>Teléfono: <?php echo $form->Higiene->Empresa->getTelefono1() ?>
         </td>
     </tr>
     <tr>
-        <td>
-            País:
+        <td>Fax: <?php echo $form->Higiene->Empresa->getFax() ?>
         </td>
-        <td>
-            Teléfono:
+        <td>e-mail: <?php echo $form->Higiene->Empresa->getEmail() ?>
         </td>
     </tr>
     <tr>
-        <td>
-            Fax:
-        </td>
-        <td>
-            e-mail:
+        <?php if($form->getDatosTitular() === 'Apoderado'): ?>
+            <td colspan="2"><b>Nombre del Representante Legal _ Apoderado x</b></td>
+        <?php else: ?>
+            <td colspan="2"><b>Nombre del Representante Legal x Apoderado _</b></td>
+        <?php endif; ?>
+    </tr>
+    <tr>
+        <td colspan="2"><?php echo $form->Higiene->Empresa->RepresentanteLegal ?></td>
+    </tr>
+    <tr>
+        <td>Teléfono: <?php echo $form->Higiene->Empresa->RepresentanteLegal->Persona->getTelefono() ?></td>
+        <td>e-mail: <?php echo $form->Higiene->Empresa->RepresentanteLegal->Persona->getEmail() ?></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Responsable de la Comercialización</b></td>
+    </tr>
+    <tr>
+        <td colspan="2">Nombre o razón social:<br />
+            <?php echo $form->getRescomNombre() ?>
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            Nombre del Representante Legal X Apoderado X
+        <td>Domicilio o dirección:<br />
+            <?php echo $form->getRescomDireccion() ?>
+        </td>
+        <td>Ciudad / Distrito / Provincia / Departamento:<br />
+            <?php echo $form->Ciudad->getNombre() ?>
         </td>
     </tr>
     <tr>
-        <td>
-            Teléfono:
-        </td>
-        <td>
-            e-mail:
+        <td>País: <?php echo $form->Ciudad->Pais->getNombre() ?></td>
+        <td>Teléfono: <?php echo $form->getRescomTelefono() ?></td>
+    </tr>
+    <tr>
+        <td>Fax: <?php echo $form->getRescomFax() ?></td>
+        <td>e-mail: <?php echo $form->getRescomEmail() ?></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>II. DATOS DEL FABRICANTE O FABRICANTES</b><br />
+            <span class="metadato">Artículo 7, numeral 1, literal c), y Artículo 12, segundo párrafo de la Decisión 706<br />
+            (Envasador/empacador/acondicionador)</span>
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            Responsable de la Comercialización
+        <td colspan="2">Nombre o razón social:<br />
+            <?php echo $form->Higiene->LaboratorioFabricante ?>
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            Nombre o razón social:
+        <td>Domicilio o dirección:<br />
+            <?php echo $form->Higiene->LaboratorioFabricante->getDireccion() ?>
+        </td>
+        <td>Ciudad / Distrito / Provincia / Departamento:<br />
+            <?php echo $form->Higiene->LaboratorioFabricante->Ciudad->getNombre() ?>
         </td>
     </tr>
     <tr>
-        <td>
-            Domicilio o dirección:
-        </td>
-        <td>
-            Ciudad / Distrito / Provincia / Departamento:
+        <td>País: <?php echo $form->Higiene->LaboratorioFabricante->Pais->getNombre() ?></td>
+        <td>Teléfono: <?php echo $form->Higiene->LaboratorioFabricante->getTelefono() ?></td>
+    </tr>
+    <tr>
+        <td>Fax: <?php echo $form->Higiene->LaboratorioFabricante->getFax() ?></td>
+        <td>e-mail: <?php echo $form->Higiene->LaboratorioFabricante->getEmail() ?></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Nombre del Responsable Técnico</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><?php echo $form->Higiene->Empresa->RegenteFarmaceutico->Persona ?></td>
+    </tr>
+    <tr>
+        <td>Teléfono: <?php echo $form->Higiene->Empresa->RegenteFarmaceutico->Persona->getTelefono() ?></td>
+        <td>E-mail: <?php echo $form->Higiene->Empresa->RegenteFarmaceutico->Persona->getEmail() ?></td>
+    </tr>
+    <tr>
+        <td>Fax: <?php echo $form->Higiene->Empresa->RegenteFarmaceutico->Persona->getFax() ?></td>
+        <td>Número de Registro o Colegiatura Profesional<br />
+            <?php echo $form->Higiene->Empresa->RegenteFarmaceutico->getMatriculaProfesional() ?>
         </td>
     </tr>
     <tr>
-        <td>
-            País:
-        </td>
-        <td>
-            Teléfono:
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Fax:
-        </td>
-        <td>
-            e-mail:
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            II. DATOS DEL FABRICANTE O FABRICANTES<br />
-            Artículo 7, numeral 1, literal c), y Artículo 12, segundo párrafo de la Decisión 706<br />
-            (Envasador/empacador/acondicionador)
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">Nombre o razón social:</td>
-    </tr>
-    <tr>
-        <td>Domicilio o dirección:</td>
-        <td>Ciudad / Distrito / Provincia / Departamento:</td>
-    </tr>
-    <tr>
-        <td>
-            País:
-        </td>
-        <td>
-            Teléfono:
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Fax:
-        </td>
-        <td>
-            e-mail:
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            Nombre del Responsable Técnico
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Teléfono:
-        </td>
-        <td>
-            E-mail:
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Fax:
-        </td>
-        <td>
-            Número de Registro o Colegiatura Profesional
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            En el caso de maquila:<br />
+        <td colspan="2">En el caso de maquila:<br />
             Nombre del:<br />
-            Envasador<br />
-            Empacador<br />
-            Acondicionador<br />
-            Fabricado para:
+            <?php if($form->getMaquilaTipo() === 'Envasador'): ?>
+            <table class="maquila">
+                <tr>
+                    <td class="maquila-tipo">Envasador</td>
+                    <td class="maquila-x">x</td>
+                    <td class="maquila-nombre"><?php echo $form->getMaquila() ?></td>
+                </tr>
+                <tr>
+                    <td class="maquila-tipo">Empacador</td>
+                    <td class="maquila-x"></td>
+                    <td class="maquila-nombre">__________________________________</td>
+                </tr>
+                <tr>
+                    <td class="maquila-tipo">Acondicionador</td>
+                    <td class="maquila-x"></td>
+                    <td class="maquila-nombre">__________________________________</td>
+                </tr>
+            </table>
+            <?php elseif($form->getMaquilaTipo() === 'Empacador'): ?>
+            <table class="maquila">
+                <tr>
+                    <td class="maquila-tipo">Envasador</td>
+                    <td class="maquila-x"></td>
+                    <td class="maquila-nombre">__________________________________</td>
+                </tr>
+                <tr>
+                    <td class="maquila-tipo">Empacador</td>
+                    <td class="maquila-x">x</td>
+                    <td class="maquila-nombre"><?php echo $form->getMaquila() ?></td>
+                </tr>
+                <tr>
+                    <td class="maquila-tipo">Acondicionador</td>
+                    <td class="maquila-x"></td>
+                    <td class="maquila-nombre">__________________________________</td>
+                </tr>
+            </table>
+            <?php elseif($form->getMaquilaTipo() === 'Acondicionador'): ?>
+            <table class="maquila">
+                <tr>
+                    <td class="maquila-tipo">Envasador</td>
+                    <td class="maquila-x"></td>
+                    <td class="maquila-nombre">__________________________________</td>
+                </tr>
+                <tr>
+                    <td class="maquila-tipo">Empacador</td>
+                    <td class="maquila-x"></td>
+                    <td class="maquila-nombre">__________________________________</td>
+                </tr>
+                <tr>
+                    <td class="maquila-tipo">Acondicionador</td>
+                    <td class="maquila-x">x</td>
+                    <td class="maquila-nombre"><?php echo $form->getMaquila() ?></td>
+                </tr>
+            </table>
+            <?php endif; ?>
+            Fabricado para: <?php echo $form->getMaquilaFabricado() ?>
         </td>
     </tr>
 </table>
 
-<table border="1">
+<p></p>
+<table class="tbl-generica" cellpadding="4">
     <tr>
-        <td colspan="2">
-            III. DATOS GENERALES DEL PRODUCTO<br />
-            Artículo 7, numeral 1, literal b), y Artículo 12 de la Decisión 706
+        <td colspan="2"><b>III. DATOS GENERALES DEL PRODUCTO</b><br />
+            <span class="metadato">Artículo 7, numeral 1, literal b), y Artículo 12 de la Decisión 706</span>
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            Nombre del producto:<br />
-            PHD<br />
-            PAHP<br />
+        <td colspan="2">Nombre del producto:<br />
+            <?php if($form->Higiene->getNombreDetalle() === 'PHD'): ?>
+                <table class="maquila">
+                    <tr>
+                        <td class="maquila-tipo">PHD</td>
+                        <td class="maquila-x">x</td>
+                        <td class="maquila-nombre"><?php echo $form->Higiene->getNombre() ?></td>
+                    </tr>
+                    <tr>
+                        <td>PAHP</td>
+                        <td class="maquila-x"></td>
+                        <td>_______________________________________________________</td>
+                    </tr>
+                </table>
+            <?php else: ?>
+                <table class="maquila">
+                    <tr>
+                        <td class="maquila-tipo">PHD</td>
+                        <td class="maquila-x"></td>
+                        <td class="maquila-nombre">_______________________________________________________</td>
+                    </tr>
+                    <tr>
+                        <td>PAHP</td>
+                        <td class="maquila-x">x</td>
+                        <td><?php echo $form->Higiene->getNombre() ?></td>
+                    </tr>
+                </table>
+            <?php endif; ?>
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            Grupo (especificar según el Anexo 1 Decisión 706):
+        <td colspan="2">Grupo <span class="metadato">(especificar según el Anexo 1 Decisión 706):</span><br />
+            <?php echo $form->Higiene->getGrupoHigiene() ?>
         </td>
     </tr>
     <tr>
-        <td colspan="2">Variedades:
+        <td colspan="2">Variedades:<br />
+            <?php echo $form->Higiene->getVariedades() ?>
         </td>
     </tr>
     <tr>
-        <td colspan="2">Marca(s):
+        <td colspan="2">Marca(s):<br />
+            <?php echo $form->Higiene->getMarca() ?>
         </td>
     </tr>
     <!--<>-->
     <tr>
-        <td rowspan="2">
-            (Incluir en el caso de solicitud de renovación, 
-            reconocimiento e información de cambios, y notificación de un nuevo importador)
+        <td rowspan="2"><span class="metadato">(Incluir en el caso de solicitud de renovación, 
+            reconocimiento e información de cambios, y notificación de un nuevo importador)</span>
         </td>
-        <td>Código de identificación de la NSO
-        </td>
-    </tr>
-    <tr>
-        <td>Número de Expediente
-        </td>
-    </tr>
-    <!--<>-->
-    <tr>
-        <td rowspan="2">
-            (Incluir en el caso de solicitud de reconocimiento)
-        </td>
-        <td>Vigencia del Código de identificación de la NSO
+        <td>Código de identificación de la NSO<br />
+            <?php echo $form->Higiene->getCodigoNso() ?>
         </td>
     </tr>
     <tr>
-        <td>País que emitió el Código de identificación de la NSO
+        <td>Número de Expediente<br />
+            <?php echo $form->Higiene->getExpediente() ?>
         </td>
     </tr>
     <!--<>-->
     <tr>
-        <td colspan="2">
-            IV. INFORMACIÓN TÉCNICA DEL PRODUCTO<br />
-            Artículo 7, numeral 2, literales a), b), c), d), e), f), g), h), i) y  j) de la Decisión 706
+        <td rowspan="2"><span class="metadato">(Incluir en el caso de solicitud de reconocimiento)</span></td>
+        <td>Vigencia del Código de identificación de la NSO<br />
+            <?php echo $form->Higiene->getVigenciaNso() ?>
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            Adjuntar para NSO, renovación y reconocimiento
+        <td>País que emitió el Código de identificación de la NSO 
+            <?php echo $form->Higiene->Pais->getNombre() ?>
+        </td>
+    </tr>
+    <!--<>-->
+    <tr>
+        <td colspan="2"><b>IV. INFORMACIÓN TÉCNICA DEL PRODUCTO</b><br />
+            <span class="metadato">Artículo 7, numeral 2, literales a), b), c), d), e), f), g), h), i) y  j) de la Decisión 706</span>
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            1. La descripción y la composición del producto con indicación de su 
+        <td colspan="2"><span class="metadato">Adjuntar para NSO, renovación y reconocimiento</span></td>
+    </tr>
+    <tr>
+        <td colspan="2">1. La descripción y la composición del producto con indicación de su 
             fórmula cuali-cuantitativa básica y secundaria con nombre genérico y 
             nomenclatura IUPAC, cuando corresponda
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            2. Especificaciones organolépticas y fisicoquímicas del producto terminado.
+        <td colspan="2">2. Especificaciones organolépticas y fisicoquímicas del producto terminado.
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            3. Justificación de las bondades y proclamas cuando represente un 
+        <td colspan="2">3. Justificación de las bondades y proclamas cuando represente un 
             problema para la salud
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            4. Proyecto de arte de la etiqueta o rotulado
+        <td colspan="2">4. Proyecto de arte de la etiqueta o rotulado
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            5. Instrucciones de uso del producto, cuando corresponda
+        <td colspan="2">5. Instrucciones de uso del producto, cuando corresponda
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            6. Material del envase primario y secundario, cuando corresponda
+        <td colspan="2">6. Material del envase primario y secundario, cuando corresponda
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            7. Advertencias, precauciones y restricciones, cuando corresponda
+        <td colspan="2">7. Advertencias, precauciones y restricciones, cuando corresponda
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            8. Forma de presentación
+        <td colspan="2">8. Forma de presentación
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            9. Número de lote o sistema de codificación de producción
+        <td colspan="2">9. Número de lote o sistema de codificación de producción
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            10. Información de las propiedades desinfectantes y/o bactericida 
+        <td colspan="2">10. Información de las propiedades desinfectantes y/o bactericida 
             del producto, de acuerdo con las propiedades especiales conferidas al mismo
         </td>
     </tr>
 </table>
 
-<h3>V. INFORMACIÓN DE CAMBIOS</h3>
-<p>Artículos 13, 14, 15 y 16 de la Decisión 706</p>
+<p></p>
+<table class="tbl-title-noborder" cellpadding="4">
+    <tr>
+        <td><b>V. INFORMACIÓN DE CAMBIOS</b><br />
+            <span class="metadato">Artículos 13, 14, 15 y 16 de la Decisión 706</span>
+        </td>
+    </tr>
+</table>
+<table class="tbl-generica" cellpadding="4">
+    <tr>
+        <td id="textarea"></td>
+    </tr>
+</table>
 
-<h3>VI. DOCUMENTACIÓN QUE SE ANEXA</h3>
-<table border="1">
+<p></p>
+<table class="tbl-title-noborder" cellpadding="4">
     <tr>
-        <td colspan="3">A ser presentada por el interesado</td>
-        <td colspan="2">A ser llenado por la Autoridad Sanitaria</td>
+        <td><b>VI. DOCUMENTACIÓN QUE SE ANEXA</b><br />
+        </td>
+    </tr>
+</table>
+<table class="tbl-anexos" cellpadding="4">
+    <tr>
+        <td class="interesado" colspan="3">A ser presentada por el interesado</td>
+        <td class="sanitaria" colspan="2">A ser llenado por la Autoridad Sanitaria</td>
     </tr>
     <tr>
-        <th colspan="2">Documentación</th>
-        <th>Folios</th>
-        <th>Cumple</th>
-        <th>No cumple</th>
+        <td class="anexo-doc" colspan="2"><b>Documentación</b></td>
+        <td class="folios"><b>Folios</b></td>
+        <td class="cumple"><b>Cumple</b></td>
+        <td class="no-cumple"><b>No cumple</b></td>
     </tr>
     <tr>
-        <td colspan="5">
-            Anexar para la NSO, solicitud de renovación y reconocimiento e 
-            información de cambios
+        <td colspan="5"><span class="metadato">Anexar para la NSO, solicitud de renovación y reconocimiento e 
+            información de cambios</span>
         </td>
     </tr>
     <tr>
-        <td>1.</td>
-        <td>Documento que respalde la Representación Legal o la condición de
+        <td class="num">1.</td>
+        <td class="anexo-detalle">Documento que respalde la Representación Legal o la condición de
             apoderado del responsable de la comercialización y/o importador,
             cuando corresponda de acuerdo a la legislación interna de cada
             País Miembro.
@@ -391,8 +387,7 @@ Decisión 706 señalado en los campos del Formato FNSOAH-001.</p>
         <td></td>
     </tr>
     <tr>
-        <td colspan="5">
-            Anexar para NSO, solicitud de renovación y reconocimiento
+        <td colspan="5"><span class="metadato">Anexar para NSO, solicitud de renovación y reconocimiento</span>
         </td>
     </tr>
     <tr>
@@ -449,7 +444,7 @@ Decisión 706 señalado en los campos del Formato FNSOAH-001.</p>
         <td></td>
     </tr>
     <tr>
-        <td colspan="5">Anexar para NSO y solicitud de renovación</td>
+        <td colspan="5"><span class="metadato">Anexar para NSO y solicitud de renovación</span></td>
     </tr>
     <tr>
         <td>8.</td>
@@ -486,7 +481,7 @@ Decisión 706 señalado en los campos del Formato FNSOAH-001.</p>
         <td></td>
     </tr>
     <tr>
-        <td colspan="5">Anexar para NSO y Reconocimiento</td>
+        <td colspan="5"><span class="metadato">Anexar para NSO y Reconocimiento</span></td>
     </tr>
     <tr>
         <td>12.</td>
@@ -524,13 +519,39 @@ Decisión 706 señalado en los campos del Formato FNSOAH-001.</p>
         <td></td>
     </tr>
     <tr>
-        <td>Anexar sólo para información de cambios, según corresponda</td>
+        <td colspan="5"><span class="metadato">Anexar sólo para información de cambios, según corresponda</span></td>
     </tr>
     <!--<>-->
     <tr>
         <td>16.</td>
-        <td>Justificación de las bondades y proclamas atribuible al producto, 
-            cuya no veracidad pueda representar un problema para la salud.
+        <td colspan="4">Modificación / cambio / incorporación de fabricante<br />
+        <span class="metadato">Artículos 7 y 13 de la Decisión 706</span>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>a. Certificado de libre venta o una autorización similar expedida 
+            por la Autoridad Competente del país de origen o declaración 
+            consularizada o apostille del responsable del producto en el país 
+            de origen. Estos documentos no deben tener una fecha de expedición 
+            con una antigüedad mayor a 2 años.
+        </td>
+        <td>DEL...........AL.................FOLIO</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>b. Proyecto de arte de la etiqueta o rotulado con el nombre o la 
+            razón social modificada.
+        </td>
+        <td>DEL...........AL.................FOLIO</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>c. Comprobante de pago por derecho de trámite.
         </td>
         <td>DEL...........AL.................FOLIO</td>
         <td></td>
@@ -538,30 +559,50 @@ Decisión 706 señalado en los campos del Formato FNSOAH-001.</p>
     </tr>
 </table>
 
-<h3>VII. CERTIFICACION DE LA INFORMACION TECNICA DEL PRODUCTO</h3>
-
-<p>Yo, ____________________________________________, identificado con 
-    (DNI)______________, actuando en mi condición de químico farmacéutico 
-    titulado y con registro profesional No. ________ de (País Miembro 
-    correspondiente) certifico técnicamente que el (PHD / PAHP) descrito no 
+<p></p>
+<table class="tbl-title-noborder" cellpadding="4">
+    <tr>
+        <td><b>VII. CERTIFICACION DE LA INFORMACION TECNICA DEL PRODUCTO</b><br />
+        </td>
+    </tr>
+</table>
+    
+<p>Yo, <b><?php echo $form->Higiene->Empresa->RegenteFarmaceutico->Persona ?></b>, 
+    identificado con (DNI) <b><?php echo $form->Higiene->Empresa->RegenteFarmaceutico->Persona->getCi().' '.$form->Higiene->Empresa->RegenteFarmaceutico->Persona->getExpedido() ?></b>,
+    actuando en mi condición de químico farmacéutico 
+    titulado y con registro profesional No. 
+    <b><?php echo $form->Higiene->Empresa->RegenteFarmaceutico->getMatriculaProfesional() ?></b>
+    de (País Miembro correspondiente) certifico técnicamente que el (PHD / PAHP) descrito no 
     perjudica la salud humana, siempre que se apliquen las condiciones normales 
-    o razonablemente previsibles de uso.</p>
+    o razonablemente previsibles de uso.
+</p>
 
-<table border="1">
+<table class="tbl-firma" cellpadding="4">
     <tr>
-        <td>FIRMA DEL RESPONSABLE TÉCNICO</td>
+        <td class="firma-persona"></td><td></td>
     </tr>
     <tr>
-        <td>Nombre completo:</td>
+        <td colspan="2"><b>FIRMA DEL RESPONSABLE TÉCNICO</b></td>
     </tr>
     <tr>
-        <td>Número de Registro o Colegiatura Profesional:</td>
+        <td colspan="2">Nombre completo: <b><?php echo $form->Higiene->Empresa->RegenteFarmaceutico->Persona ?></b></td>
+    </tr>
+    <tr>
+        <td colspan="2">Número de Registro o Colegiatura Profesional: <b><?php echo $form->Higiene->Empresa->RegenteFarmaceutico->getMatriculaProfesional() ?></b></td>
     </tr>
 </table>
 
-<h3>VIII. DECLARACION JURADA.</h3>
-<p>Yo, __________________________________________, identificado con 
-    (DNI)________________, actuando en condición de Representante legal o 
+<table class="tbl-title-noborder" cellpadding="4">
+    <tr>
+        <td><b>VIII. DECLARACION JURADA.</b><br />
+        </td>
+    </tr>
+</table>
+
+<p>Yo, <b><?php echo $form->Higiene->Empresa->RepresentanteLegal->Persona ?></b>, 
+    identificado con 
+    (DNI) <b><?php echo $form->Higiene->Empresa->RepresentanteLegal->Persona->getCi() .' '. $form->Higiene->Empresa->RepresentanteLegal->Persona->getExpedido() ?></b>,
+    actuando en condición de Representante legal o 
     Apoderado, declaro bajo la gravedad de juramento, que el presente 
     documento y la información suministrada adjunta son auténticos y 
     veraces, y cumplen con todos los requisitos establecidos por la 
@@ -570,16 +611,20 @@ Decisión 706 señalado en los campos del Formato FNSOAH-001.</p>
     documento cumpliendo estrictamente con las especificaciones de calidad 
     definidas para el producto.</p>
 
-<table>
+<table class="tbl-firma" cellpadding="4">
     <tr>
-        <td>FIRMA DEL REPRESENTANTE LEGAL O APODERADO</td>
+        <td class="firma-persona"></td><td></td>
     </tr>
     <tr>
-        <td>Nombre completo:</td>
+        <td colspan="2"><b>FIRMA DEL REPRESENTANTE LEGAL O APODERADO</b></td>
     </tr>
     <tr>
-        <td>Número de identificación:</td>
+        <td colspan="2">Nombre completo: <b><?php echo $form->Higiene->Empresa->RepresentanteLegal->Persona ?></b></td>
+    </tr>
+    <tr>
+        <td colspan="2">Número de identificación: <b><?php echo $form->Higiene->Empresa->RepresentanteLegal->Persona->getCi() .' '. $form->Higiene->Empresa->RepresentanteLegal->Persona->getExpedido() ?></b></td>
+    </tr>
+    <tr>
+        <td><b>Lugar y fecha,</b></td>
     </tr>
 </table>
-
-<p>Lugar y fecha,</p>

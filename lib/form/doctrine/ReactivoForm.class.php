@@ -23,5 +23,8 @@ class ReactivoForm extends BaseReactivoForm
                 array( 'model'=>'LaboratorioFabricante',
                         'url'=>sfContext::getInstance()->getRouting()->generate('buscar_labs')
          ));
+      
+      
+      $this->widgetSchema['laboratorio_fabricante_id']->setAttribute('size' , 50);
   }
 }

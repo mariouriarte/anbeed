@@ -14,6 +14,12 @@ class Formulario706Form extends BaseFormulario706Form
                                     'Empacador'      => 'Empacador',
                                     'Acondicionador' => 'Acondicionador');
     
+    protected $datos_titular = array('Representante Legal' => 'Representante Legal',
+                                     'Apoderado'           => 'Apoderado');
+    
+    protected $datos = array('TITULAR'     => 'TITULAR',
+                             'IMPORTADOR' => 'IMPORTADOR');
+    
     public function configure()
     {
         unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
@@ -27,12 +33,12 @@ class Formulario706Form extends BaseFormulario706Form
         //// datos
         $this->widgetSchema['datos'] = new sfWidgetFormChoice(
             array('expanded' => true, 
-                  'choices'  =>  array('TITULAR', 'IMPORTACIÓN')));
+                  'choices'  => $this->datos));
         
         //// datos titular
         $this->widgetSchema['datos_titular'] = new sfWidgetFormChoice(
             array('expanded' => true, 
-                  'choices'  =>  array('REPRESENTANTE LEGAL', 'APODERADO')));
+                  'choices'  =>  $this->datos_titular));
         
         //// tipo de tramite
         $this->widgetSchema['tipo_tramite_formulario_id'] = new sfWidgetFormDoctrineChoice(
@@ -44,13 +50,15 @@ class Formulario706Form extends BaseFormulario706Form
             array('culture'     => 'es',
                   'default'     => date('Y-m-d'),
                   'date_widget' => new sfWidgetFormDate(array(
-                  'years'       => array_combine($years, $years)))));
+                      'format' => '%day%%month%%year%',
+                      'years'       => array_combine($years, $years)))));
         
         //// fecha
         $this->widgetSchema['fecha_inicio_vigencia'] = new sfWidgetFormJQueryDate(
             array('culture'     => 'es',
                   'date_widget' => new sfWidgetFormDate(array(
-                  'years'       => array_combine($years, $years)))));
+                      'format' => '%day%%month%%year%',
+                      'years'       => array_combine($years, $years)))));
         
         //// Tipo de maquila
         $this->widgetSchema['maquila_tipo'] = new sfWidgetFormChoice(
