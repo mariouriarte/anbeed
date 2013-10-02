@@ -133,8 +133,8 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->AddPage();
 
         //definimos la variable para el eje y
-        $y = 79;
-        $x = 0;
+        $y = 64;
+        $x = -5;
         
         /*Revisamos el tipo de tramite*/
         $y_tipo_tramite = $y; // inicializamos en el primero
@@ -160,7 +160,7 @@ class formulario5Actions extends autoFormulario5Actions
         if($this->formulario5->getTipoProductoFormulario5Id() == 6)
             $y_tipo_producto += 26;
         /*Imprimimos X del tipo de tramite*/
-        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x+166, $y_tipo_producto, true);
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x+164, $y_tipo_producto, true);
         
         /*Revisamos el origen*/
         $y+=22;
