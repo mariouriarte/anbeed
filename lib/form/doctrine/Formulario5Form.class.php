@@ -20,7 +20,12 @@ class Formulario5Form extends BaseFormulario5Form
        
        $this->widgetSchema['medicamento_id'] = new sfWidgetFormInputHidden();
 
-//             
+       /*Numero de registro sanitario para actualizarlo en el producto*/
+       $this->widgetSchema['registro_sanitario'] = new sfWidgetFormInputText(); 
+       $this->validatorSchema['registro_sanitario'] = new sfValidatorString(array('required' => false, 'min_length' => 4, 'max_length' => 10));
+       
+       
+       
        $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es',
                   'default' => date('Y-m-d'),

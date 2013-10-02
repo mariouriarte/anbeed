@@ -25,6 +25,11 @@ class Formulario706Form extends BaseFormulario706Form
         unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
         $years = range(date('Y') - 0, date('Y'));   
         
+        /*Numero de registro sanitario para actualizarlo en el producto*/
+        $this->widgetSchema['registro_sanitario'] = new sfWidgetFormInputText(); 
+        $this->validatorSchema['registro_sanitario'] = new sfValidatorString(array('required' => false, 'min_length' => 4, 'max_length' => 10));
+        
+        
         $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();
         
         //// higiene
@@ -71,7 +76,7 @@ class Formulario706Form extends BaseFormulario706Form
             array('model'     => 'Pais',
                   'add_empty' => ' - Seleccione país'));
         $this->validatorSchema['pais_id'] = new sfValidatorDoctrineChoice(
-            array('model' => 'Pais', 'required' => true));
+            array('model' => 'Pais', 'required' => false));
        
         //// Responsable comercial ciudad
         $this->widgetSchema['rescom_ciudad_id'] = new sfWidgetFormDoctrineDependentSelect(
@@ -79,7 +84,7 @@ class Formulario706Form extends BaseFormulario706Form
                   'depends'   => 'Pais',
                   'add_empty' => ' - Seleccione ciudad'));
         $this->validatorSchema['rescom_ciudad_id'] = new sfValidatorDoctrineChoice(
-            array('model' => 'Ciudad', 'required' => true));
+            array('model' => 'Ciudad', 'required' => false));
       
     }
 }

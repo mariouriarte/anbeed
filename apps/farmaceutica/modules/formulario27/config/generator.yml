@@ -38,16 +38,16 @@ generator:
         display: [datos_formulario27_id, tipo_tramite_formulario27_id, origen_formulario_id]
       
       form:    
-        display: [fecha, datos_formulario27_id, tipo_tramite_formulario27_id, origen_formulario_id, vigencia, fecha_inicio_vigencia, numero_ruta]
+        display: 
+          Datos Formulario:                 [fecha, datos_formulario27_id, tipo_tramite_formulario27_id, origen_formulario_id]
+          DATOS ADICIONALES DEL FORMULARIO: [registro_sanitario, vigencia, fecha_inicio_vigencia, numero_ruta]
       edit:    
         title: Editar Listado de Solicitudes para Registro y Control de Calidad de Dispositivos Medicos
-        display: [fecha, datos_formulario27_id, tipo_tramite_formulario27_id, origen_formulario_id, dispositivo_medico_id, vigencia, fecha_inicio_vigencia, numero_ruta]
         actions:
           _list: ~  
           _save: ~  
       new:     
         title: Solicitud para Registro y Control de Calidad de Dispositivos Medicos
-        display: [fecha, datos_formulario27_id, tipo_tramite_formulario27_id, origen_formulario_id, dispositivo_medico_id, vigencia, fecha_inicio_vigencia, numero_ruta]
         actions:
           _list: ~  
           _save: ~

@@ -36,16 +36,16 @@ generator:
         display: [numero_ruta, tipo_tramite_formulario12_id, origen_formulario_id]
       
       form:    
-
+        display: 
+          Datos Formulario:                 [fecha, tipo_tramite_formulario12_id, origen_formulario_id, reactivo_id]
+          DATOS ADICIONALES DEL FORMULARIO: [registro_sanitario, vigencia, fecha_inicio_vigencia, numero_ruta]
       edit:    
         title: Editar Listado de Solicitudes para Registro Reactivos para Diagnostico
-        display: [fecha, tipo_tramite_formulario12_id, origen_formulario_id, vigencia, fecha_inicio_vigencia, numero_ruta, reactivo_id]
         actions:
           _list: ~  
           _save: ~  
       new:     
         title: Solicitud para Registro y Control de Calidad de Dispositivos Medicos
-        display: [fecha, tipo_tramite_formulario12_id, origen_formulario_id, vigencia, fecha_inicio_vigencia, numero_ruta, modificacion, reactivo_id]
         actions:
           _list: ~  
           _save: ~

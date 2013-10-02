@@ -147,10 +147,23 @@ class formulario12Actions extends autoFormulario12Actions
     
     public function executeNew(sfWebRequest $request)
     {
-    $this->form = $this->configuration->getForm();
-    $this->formulario12 = $this->form->getObject();
-    $reactivo = $this->getUser()->getAttribute('reactivo');
-    $this->form->setDefault('reactivo_id', $reactivo->getId());
+        $this->form = $this->configuration->getForm();
+        $this->formulario12 = $this->form->getObject();
+        $reactivo = $this->getUser()->getAttribute('reactivo');
+        $this->form->setDefault('reactivo_id', $reactivo->getId());
+        
+        /*Recuperamos el registro sanitario is tiene el producto*/
+        $this->form->setDefault('registro_sanitario', $reactivo->getRegistroSanitario());
+    }
+    
+    
+    public function executeEdit(sfWebRequest $request)
+    {
+        $this->formulario12 = $this->getRoute()->getObject();
+        $this->form = $this->configuration->getForm($this->formulario12);
+
+        /*Recuperamos el registro sanitario is tiene el producto*/
+        $this->form->setDefault('registro_sanitario', $this->formulario12->Reactivo->getRegistroSanitario());
     }
     
     protected function processForm(sfWebRequest $request, sfForm $form)
@@ -161,7 +174,13 @@ class formulario12Actions extends autoFormulario12Actions
         $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
         $is_new = $form->getObject()->isNew();
         try {
+            
+          $registro =  $form['registro_sanitario']->getValue();    
           $formulario12 = $form->save();
+          /*guardamos en medicamento el registro sanitario*/
+          $formulario12->Reactivo->setRegistroSanitario($registro);
+          $formulario12->Reactivo->save();
+          
           if($is_new)
           {
             $formulario = new Formulario();

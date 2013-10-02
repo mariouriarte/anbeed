@@ -35,7 +35,7 @@ generator:
         table_method: selectMedicamentosDeEmpresa
         display: [nombre_comercial, nombre_generico, laboratorio_fabricante, registro_sanitario]
         object_actions:
-          ir_formula: {label: Fórmula Cualicuantitativa, action: irFormula}
+          ir_formula: {label: Fórmula Cuali-cuantitativa, action: irFormula}
           ir_form5:   {label: Form 005, action: irForm5}
           ir_form7:   {label: Form 007, action: irForm7}
           _edit: ~ 

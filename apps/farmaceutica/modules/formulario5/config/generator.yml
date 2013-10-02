@@ -40,7 +40,9 @@ generator:
         display: [numero_ruta, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id]
       
       form:    
-        display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id, medicamento_id, vigencia, fecha_inicio_vigencia, numero_ruta]  
+        display:
+          Datos Formulario:                [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id, medicamento_id]
+          DATOS ADICIONALES DEL FORMULARIO: [registro_sanitario, vigencia, fecha_inicio_vigencia, numero_ruta]
       edit:    
         title: Editar Listado de Solicitudes para Registro y Control de Calidad de Medicamentos
         #display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id, medicamento_id]

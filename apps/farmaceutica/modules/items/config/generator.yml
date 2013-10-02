@@ -19,12 +19,12 @@ generator:
         num_lote:          {label: 'número de lote'}
         fecha_vencimiento: {label: 'Fecha de vencimiento'}
         nombre:            {label: 'Descripcion Producto'}
-#        registro_sanitario:   {label: 'número de registro sanitario'}
+        num_reg_sanitario: {label: 'Registro Sanitario'}
 #        fecha_vencimiento:    {label: 'fecha de vencimiento'}
       list:    
         title: Productos Registrados del Despacho Aduanero
         table_method: selectItemDeForm11
-        display: [nombre, cantidad, num_lote]
+        display: [nombre, num_reg_sanitario, cantidad, num_lote]
         actions:
           ir_empresa:   {label: Volver a Empresa}
           ir_form11:    {label: Volver a Formulario 11}

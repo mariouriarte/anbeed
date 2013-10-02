@@ -27,6 +27,10 @@ class Formulario516Form extends BaseFormulario516Form
         unset($this['created_at'], $this['updated_at'], 
               $this['created_by'], $this['updated_by']);
         
+        /*Numero de registro sanitario para actualizarlo en el producto*/
+       $this->widgetSchema['registro_sanitario'] = new sfWidgetFormInputText(); 
+       $this->validatorSchema['registro_sanitario'] = new sfValidatorString(array('required' => false, 'min_length' => 4, 'max_length' => 10));
+        
         $years = range(date('Y') - 0, date('Y'));   
         
         $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();   

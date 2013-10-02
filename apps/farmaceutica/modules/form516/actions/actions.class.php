@@ -23,6 +23,9 @@ class form516Actions extends sfActions
         
     $cosmetico = $this->getUser()->getAttribute('cosmetico');
     $this->form->setDefault('cosmetico_id', $cosmetico->getId());
+    
+    /*Recuperamos el registro sanitario is tiene el producto*/
+    $this->form->setDefault('registro_sanitario', $cosmetico->getRegistroSanitario());
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -40,6 +43,9 @@ class form516Actions extends sfActions
   {
     $this->forward404Unless($formulario516 = Doctrine_Core::getTable('Formulario516')->find(array($request->getParameter('id'))), sprintf('Object formulario516 does not exist (%s).', $request->getParameter('id')));
     $this->form = new Formulario516Form($formulario516);
+    
+    /*Recuperamos el registro sanitario is tiene el producto*/
+    $this->form->setDefault('registro_sanitario', $formulario516->Cosmetico->getRegistroSanitario());
   }
 
   public function executeUpdate(sfWebRequest $request)
@@ -70,7 +76,13 @@ class form516Actions extends sfActions
     {
         $notice = $form->getObject()->isNew() ? 'El elemento fue creado correctamente.' : 'El elemento fue actualizado correctamente.';
         $is_new = $form->getObject()->isNew();
+
+        $registro =  $form['registro_sanitario']->getValue();  
         $formulario516 = $form->save();
+        
+        /*guardamos en medicamento el registro sanitario*/
+        $formulario516->Cosmetico->setRegistroSanitario($registro);
+        $formulario516->Cosmetico->save();
         if($is_new)
         {
             $formulario = new Formulario();

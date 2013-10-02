@@ -13,8 +13,8 @@ require_once dirname(__FILE__).'/../lib/formulario5GeneratorHelper.class.php';
  */
 class formulario5Actions extends autoFormulario5Actions
 {
-    public function executePrintfcc(sfWebRequest $request)
-    {
+   public function executePrintfcc(sfWebRequest $request)
+   {
         $this->formulario5 = $this->getRoute()->getObject();
         
         $config = sfTCPDFPluginConfigHandler::loadConfig();
@@ -97,8 +97,8 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->Output('FormulaCc.pdf', 'I');
         throw new sfStopException();
    }
-    public function executePrint(sfWebRequest $request)
-    {
+   public function executePrint(sfWebRequest $request)
+   {
         $this->formulario5 = $this->getRoute()->getObject();
         
         $config = sfTCPDFPluginConfigHandler::loadConfig();
@@ -263,13 +263,26 @@ class formulario5Actions extends autoFormulario5Actions
 //    $this->formulario5 = $this->getRoute()->getObject();
 //    $this->form = $this->configuration->getForm($this->formulario5);
 //  }
-   public function executeNew(sfWebRequest $request)
+  public function executeNew(sfWebRequest $request)
   {
     $this->form = $this->configuration->getForm();
     $this->formulario5 = $this->form->getObject();
     $medicamento = $this->getUser()->getAttribute('medicamento');
     $this->form->setDefault('medicamento_id', $medicamento->getId());
+    /*Recuperamos el registro sanitario is tiene el medicamento*/
+    $this->form->setDefault('registro_sanitario', $medicamento->getRegistroSanitario());
   }
+  
+  public function executeEdit(sfWebRequest $request)
+  {
+    $this->formulario5 = $this->getRoute()->getObject();
+    $this->form = $this->configuration->getForm($this->formulario5);
+    
+    /*Recuperamos el registro sanitario is tiene el medicamento*/
+    $this->form->setDefault('registro_sanitario', $this->formulario5->Medicamento->getRegistroSanitario());
+  }
+  
+  
   
     protected function processForm(sfWebRequest $request, sfForm $form)
     {
@@ -279,7 +292,13 @@ class formulario5Actions extends autoFormulario5Actions
         $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
         $is_new = $form->getObject()->isNew();
         try {
-          $formulario5 = $form->save();
+            $registro =  $form['registro_sanitario']->getValue();
+            $formulario5 = $form->save();
+            
+            /*guardamos en medicamento el registro sanitario*/
+            $formulario5->Medicamento->setRegistroSanitario($registro);
+            $formulario5->Medicamento->save();
+            
           if($is_new)
           {
                 $formulario = new Formulario();

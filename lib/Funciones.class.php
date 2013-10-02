@@ -30,4 +30,14 @@ class funciones
         $fecha[1] = $meses[$fecha[1]-1];
         return  $fecha ;
     }
+    static public function AparicionesCaracter($cadena, $caracter)
+    {
+        /*Esta funcion devuelve 1 si encuentra alguna aparicion del caracter*/
+        $res = 0;
+        $res = substr_count($cadena, $caracter);
+        if($res>0)
+            return true;
+        else
+            return false;
+    }
 }

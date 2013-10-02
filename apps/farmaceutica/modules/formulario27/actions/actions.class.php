@@ -177,6 +177,18 @@ class formulario27Actions extends autoFormulario27Actions
         $this->formulario27 = $this->form->getObject();
         $dispositivo = $this->getUser()->getAttribute('dispositivo_medico');
         $this->form->setDefault('dispositivo_medico_id', $dispositivo->getId());
+        /*Recuperamos el registro sanitario is tiene el producto*/
+        $this->form->setDefault('registro_sanitario', $dispositivo->getRegistroSanitario());
+    }
+    
+    
+    public function executeEdit(sfWebRequest $request)
+    {
+        $this->formulario27 = $this->getRoute()->getObject();
+        $this->form = $this->configuration->getForm($this->formulario27);
+
+        /*Recuperamos el registro sanitario is tiene el producto*/
+        $this->form->setDefault('registro_sanitario', $this->formulario27->DispositivoMedico->getRegistroSanitario());
     }
     
     protected function processForm(sfWebRequest $request, sfForm $form)
@@ -187,7 +199,13 @@ class formulario27Actions extends autoFormulario27Actions
         $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
         $is_new = $form->getObject()->isNew();
         try {
+            
+          $registro =  $form['registro_sanitario']->getValue();  
           $formulario27 = $form->save();
+          
+          /*guardamos en medicamento el registro sanitario*/
+          $formulario27->DispositivoMedico->setRegistroSanitario($registro);
+          $formulario27->DispositivoMedico->save();
           if($is_new)
           {
               $formulario = new Formulario();

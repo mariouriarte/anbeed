@@ -22,6 +22,9 @@ class form706Actions extends sfActions
     $this->form = new Formulario706Form();
     $higiene = $this->getUser()->getAttribute('higiene');
     $this->form->setDefault('higiene_id', $higiene->getId());
+    
+    /*Recuperamos el registro sanitario is tiene el producto*/
+    $this->form->setDefault('registro_sanitario', $higiene->getRegistroSanitario());
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -39,6 +42,9 @@ class form706Actions extends sfActions
   {
     $this->forward404Unless($formulario706 = Doctrine_Core::getTable('Formulario706')->find(array($request->getParameter('id'))), sprintf('Object formulario706 does not exist (%s).', $request->getParameter('id')));
     $this->form = new Formulario706Form($formulario706);
+    
+     /*Recuperamos el registro sanitario is tiene el producto*/
+     $this->form->setDefault('registro_sanitario', $formulario706->Higiene->getRegistroSanitario());
   }
 
   public function executeUpdate(sfWebRequest $request)
@@ -70,7 +76,12 @@ class form706Actions extends sfActions
       $notice = $form->getObject()->isNew() ? 'El elemento fue creado correctamente.' : 'El elemento fue actualizado correctamente.';
       $is_new = $form->getObject()->isNew();
       
+      $registro =  $form['registro_sanitario']->getValue();  
       $formulario706 = $form->save();
+      
+      /*guardamos en medicamento el registro sanitario*/
+      $formulario706->Higiene->setRegistroSanitario($registro);
+      $formulario706->Higiene->save();
       if($is_new)
       {
         $formulario = new Formulario();

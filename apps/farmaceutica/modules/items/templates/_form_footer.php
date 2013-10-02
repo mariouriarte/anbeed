@@ -23,87 +23,8 @@ $items = $q->execute();
                 $num_items=1;
                 foreach ($items as $item) 
                 {
-//                    echo format_date($item->Producto->Medicamento->Formulario5[0]->getFechaInicioVigencia(),'yy');
                     
-                  
-                    $reg_sanitario = "";
-                    //se necesitam controLAR EN QUE TABLA SE BUSCARA LOS DETALLES DEL PRODUCTO, LO HAREMOS PREGUNTANDO
-                    //EL CODIGO DE PRODUCTO
-                    $producto;
-                    $codigo =0;
-                    if($item->Producto->CodigoProducto->getId()==1)
-                    {
-                        $producto = $item->Producto->Medicamento->getId();
-                        $codigo =1;
-                        $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
-                        //echo format_date($fecha_vencimiento,'yyyy');
-                        //die;
-                        if($item->Producto->Medicamento->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != '')
-                        {
-                            $reg_sanitario = $item->Producto->CodigoProducto.'-'.
-                                             $item->Producto->Medicamento->getRegistroSanitario().'/'.format_date(
-                                             $fecha_inicio_vigencia,'yy');
-                        }
-                        
-                    }
-                    if($item->Producto->CodigoProducto->getId()==2)
-                    {
-                        $producto = $item->Producto->DispositivoMedico->getId();
-                        $codigo =2; 
-                        $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
-                        
-                        if($item->Producto->DispositivoMedico->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != '')
-                        {
-                            $reg_sanitario = $item->Producto->CodigoProducto.'-'.
-                                             $item->Producto->DispositivoMedico->getRegistroSanitario().'/'.format_date(
-                                             $fecha_inicio_vigencia,'yy');
-                        }
-                        
-                    }
-                    if($item->Producto->CodigoProducto->getId()==3)
-                    {
-                        $producto = $item->Producto->Cosmetico->getId();
-                        $codigo =3;
-                        $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
-
-                        if($item->Producto->Cosmetico->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != '')
-                        {
-                            $reg_sanitario = $item->Producto->CodigoProducto.'-'.
-                                             $item->Producto->Cosmetico->getRegistroSanitario().'/'.format_date(
-                                             $fecha_inicio_vigencia,'yy');
-                        }
-                        
-                    }
-                    if($item->Producto->CodigoProducto->getId()==4)
-                    {
-                        $producto = $item->Producto->Higiene->getId();
-                        $codigo =4;
-                        $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
-
-                        if($item->Producto->Higiene->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != '')
-                        {
-                            $reg_sanitario = $item->Producto->CodigoProducto.'-'.
-                                             $item->Producto->Higiene->getRegistroSanitario().'/'.format_date(
-                                             $fecha_inicio_vigencia,'yy');
-                        }
-                        
-                    }
-                    if($item->Producto->CodigoProducto->getId()==5)
-                    {
-                        $producto = $item->Producto->Reactivo->getId();
-                        $codigo =5;
-                        $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
-
-                        if($item->Producto->Reactivo->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != '')
-                        {
-                            $reg_sanitario = $item->Producto->CodigoProducto.'-'.
-                                             $item->Producto->Reactivo->getRegistroSanitario().'/'.format_date(
-                                             $fecha_inicio_vigencia,'yy');
-                        }
-                        
-                    }
-                
-                
+                    $reg_sanitario = ItemTable::getNumRegSanitario($item);
                 ?>
             <tr>
                 <td><?php echo $num_items ?></td>

@@ -275,20 +275,14 @@
 </div>
 
 <div class="container-form-decision">
+    <h2>DATOS ADICIONALES DEL FORMULARIO</h2>
   <table class="tbl-form-decision">
     <tbody>
       <tr>
-        <th>Tiempo de Vigencia</th>
+        <th>NÚMERO DE RUTA</th>
         <td>
-          <?php echo $form['vigencia']->renderError() ?>
-          <?php echo $form['vigencia'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th>Fecha de inicio de vigencia</th>
-        <td>
-          <?php echo $form['fecha_inicio_vigencia']->renderError() ?>
-          <?php echo $form['fecha_inicio_vigencia'] ?>
+          <?php echo $form['numero_ruta']->renderError() ?>
+          <?php echo $form['numero_ruta'] ?>
         </td>
       </tr>
     </tbody>

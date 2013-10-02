@@ -85,6 +85,10 @@
                 <th>COMPONENTES</th>
                 <td colspan="3"><?php echo $reactivo->getComponente(); ?></td>
             </tr>
+            <tr>
+                <th>REGISTRO SANITARIO</th>
+                <td colspan="3"><?php echo $reactivo->getRegistroSanitario(); ?></td>
+            </tr>
         </tbody>
     </table>
 </div>

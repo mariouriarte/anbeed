@@ -287,18 +287,27 @@
       <tr>
           <th class="celda-abajo">País que emitió el Código de identificación de la NSO:</th>
           <td class="celda-abajo">
-              <?php 
-              if ($higiene->getPaisId() != NULL)
-                  echo $higiene->Pais 
-              ?>
+              <?php echo $higiene->Pais->getNombre() ?>
           </td>
+      </tr>
+      <tr>
+            <th>Número de Registro Sanitario:</th>
+            <td><?php echo $higiene->getRegistroSanitario() ?></td>
       </tr>
     </tbody>
   </table>
 </div>    
 <div class="container-form-decision">
+  <h2>DATOS ADICIONALES DEL FORMULARIO</h2>
   <table class="tbl-form-decision">
     <tbody>
+      <tr>
+        <th><?php echo $form['registro_sanitario']->renderLabel() ?></th>
+        <td>
+            <?php echo $form['registro_sanitario']->renderError() ?>
+            <?php echo $form['registro_sanitario'] ?>
+        </td>
+      </tr>  
       <tr>
         <th><?php echo $form['vigencia']->renderLabel() ?></th>
         <td>

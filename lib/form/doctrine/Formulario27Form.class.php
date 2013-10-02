@@ -18,6 +18,11 @@ class Formulario27Form extends BaseFormulario27Form
        
        $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();
        
+       /*Numero de registro sanitario para actualizarlo en el producto*/
+       $this->widgetSchema['registro_sanitario'] = new sfWidgetFormInputText(); 
+       $this->validatorSchema['registro_sanitario'] = new sfValidatorString(array('required' => false, 'min_length' => 4, 'max_length' => 10));
+       
+       
        // Asigna el id del dispositivo para el form27
        $this->widgetSchema['dispositivo_medico_id'] = new sfWidgetFormInputHidden();
        

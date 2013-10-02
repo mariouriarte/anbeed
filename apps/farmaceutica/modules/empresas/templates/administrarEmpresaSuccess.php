@@ -68,6 +68,20 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
+                    <div class="titulo_img"><img src="/images/icons/despacho.svg" /></div>
+                    <h2 class="titulo">Despacho Aduanero</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><?php echo link_to('Listado de Despachos Aduaneros - Formulario 011', 'formulario11/index') ?></li>
+                            <li><?php echo link_to('Nuevo Despacho Aduanero - Formulario 011', 'form11/new') ?></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
                     <div class="titulo_img"><img src="/images/icons/text.svg" /></div>
                     <h2 class="titulo">Formularios</h2>
                     <div class="contenido">

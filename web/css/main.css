@@ -495,4 +495,10 @@ ul li.sf_admin_action_edit a
   color: #f33;
 }
 
-
+.container-form-decision h2 {
+    background-color: #D3DFD1;
+    color: #333333;
+    font-size: 11px;
+    margin: 0;
+    padding: 3px;
+}

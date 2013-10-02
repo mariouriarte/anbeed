@@ -16,7 +16,12 @@ class Formulario12Form extends BaseFormulario12Form
        $years = range(date('Y') - 0, date('Y'));
        
        $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();
+       
+       /*Numero de registro sanitario para actualizarlo en el producto*/
+       $this->widgetSchema['registro_sanitario'] = new sfWidgetFormInputText(); 
+       $this->validatorSchema['registro_sanitario'] = new sfValidatorString(array('required' => false, 'min_length' => 4, 'max_length' => 10));
         
+       
        // Asigna el id del producto para el form12
        $this->widgetSchema['reactivo_id'] = new sfWidgetFormInputHidden();
 
