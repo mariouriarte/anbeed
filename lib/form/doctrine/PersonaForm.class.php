@@ -40,6 +40,10 @@ class PersonaForm extends BasePersonaForm
                   'choices'  => $this->expedido));
         $this->validatorSchema['expedido'] = new sfValidatorString(array('required' => false));
        
+        
+        $this->widgetSchema['is_active'] = new sfWidgetFormInputHidden(
+            array('default'=> true));
+                
         if(sfContext::getInstance()->getModuleName() == "personalegal")
         {
              // Form enbebido, Representante Legal
