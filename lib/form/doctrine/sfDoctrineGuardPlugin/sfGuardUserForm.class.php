@@ -12,13 +12,5 @@ class sfGuardUserForm extends PluginsfGuardUserForm
 {
   public function configure()
   {
-     
-
-      
-//      $cliente = new Cliente();
-//      $cliente->setUserId($this->object);
-//      $clienteForm = new ClienteForm($cliente);
-//      $this->embedForm('NewCliente', $clienteForm);
-        
   }
 }
