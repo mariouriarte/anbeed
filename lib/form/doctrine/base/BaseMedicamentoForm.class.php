@@ -50,7 +50,7 @@ abstract class BaseMedicamentoForm extends BaseFormDoctrine
       'via_administracion_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('ViaAdministracion'))),
       'tipo_venta_id'             => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TipoVenta'))),
       'formula_cc_id'             => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('FormulaCc'), 'required' => false)),
-      'nombre_comercial'          => new sfValidatorString(array('max_length' => 255)),
+      'nombre_comercial'          => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'nombre_generico'           => new sfValidatorString(array('max_length' => 255)),
       'concentracion'             => new sfValidatorString(array('max_length' => 150)),
       'accion_terapeutica'        => new sfValidatorString(array('max_length' => 2000, 'required' => false)),

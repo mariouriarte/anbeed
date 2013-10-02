@@ -41,7 +41,7 @@ class formulario5Actions extends autoFormulario5Actions
         // dejavusans is a UTF-8 Unicode font, if you only need to
         // print standard ASCII chars, you can use core fonts like
         // helvetica or times to reduce file size.
-        $pdf->SetFont('dejavusans', 'B', 12, '', true);
+        $pdf->SetFont('courier', '', 13, '', true);
 
         // Add a page
         // This method has several options, check the source code documentation for more information.
@@ -50,15 +50,15 @@ class formulario5Actions extends autoFormulario5Actions
         /*Imprimimos titulo*/
         $pdf->MultiCell(78, 0, 'FÓRMULA CUALI-CUANTITATIVA', 'B', 'L', 0, 0, 65, 30, true);
         
-        $pdf->SetFont('dejavusans', 'B', 10, '', true);
+        $pdf->SetFont('courier', '', 13, '', true);
         /*Imprimimos el producto*/
         $pdf->MultiCell(78, 0, 'Producto:', 0, 'L', 0, 0, 15, 45, true);
-        $pdf->MultiCell(78, 0, $this->formulario5->Medicamento, 0, 'L', 0, 0, 35, 45, true);
+        $pdf->MultiCell(78, 0, $this->formulario5->Medicamento, 0, 'L', 0, 0, 45, 45, true);
         
         /*Imprimimos la formula del medicamento*/                                                           
         $q = Doctrine_Core::getTable('DetalleFormulaCc')->getIngredientes($this->formulario5->Medicamento->getFormulaCcId());
         $ingredientes = $q->execute();
-        $pdf->SetFont('dejavusans', '', 10, '', true);
+        $pdf->SetFont('courier', '', 13, '', true);
         $html = '<br><br><br><table border="1" width="100%" cellpadding="2" cellspacing="0">
                     <tr bgcolor="#EEE">
                         <th width="70%"><b>INGREDIENTE</b></th>
@@ -103,8 +103,9 @@ class formulario5Actions extends autoFormulario5Actions
         
         $config = sfTCPDFPluginConfigHandler::loadConfig();
                   sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
-
-        $pdf = new sfTCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+        
+        $page_size = array(210,320);
+        $pdf = new sfTCPDF('P', PDF_UNIT, $page_size, true, 'UTF-8', false);
         // Informacion el documento
         $pdf->SetCreator(PDF_CREATOR);
         $pdf->SetAuthor('Capsule Systems');
@@ -125,119 +126,123 @@ class formulario5Actions extends autoFormulario5Actions
         // dejavusans is a UTF-8 Unicode font, if you only need to
         // print standard ASCII chars, you can use core fonts like
         // helvetica or times to reduce file size.
-        $pdf->SetFont('dejavusans', 'B', 9, '', true);
+        $pdf->SetFont('courier', '', 13, '', true);
 
         // Add a page
         // This method has several options, check the source code documentation for more information.
         $pdf->AddPage();
 
         //definimos la variable para el eje y
-        $y = 80;
+        $y = 79;
+        $x = 0;
         
         /*Revisamos el tipo de tramite*/
         $y_tipo_tramite = $y; // inicializamos en el primero
         if($this->formulario5->getTipoTramiteFormulario5Id() == 2)
             $y_tipo_tramite += 5;
         if($this->formulario5->getTipoTramiteFormulario5Id() == 3)
-            $y_tipo_tramite += 10;
+            $y_tipo_tramite += 11;
         if($this->formulario5->getTipoTramiteFormulario5Id() == 4)
-            $y_tipo_tramite += 15;
+            $y_tipo_tramite += 16;
         /*Imprimimos X del tipo de tramite*/
-        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, '72', $y_tipo_tramite, true);
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x+73, $y_tipo_tramite, true);
         
         /*Revisamos el tipo de producto*/
-        $y+=8;
         $y_tipo_producto = $y; // inicializamos en el primero
         if($this->formulario5->getTipoProductoFormulario5Id() == 2)
             $y_tipo_producto += 5;
         if($this->formulario5->getTipoProductoFormulario5Id() == 3)
-            $y_tipo_producto += 10;
+            $y_tipo_producto += 11;
         if($this->formulario5->getTipoProductoFormulario5Id() == 4)
-            $y_tipo_producto += 15;
+            $y_tipo_producto += 16;
         if($this->formulario5->getTipoProductoFormulario5Id() == 5)
-            $y_tipo_producto += 20;
+            $y_tipo_producto += 21;
         if($this->formulario5->getTipoProductoFormulario5Id() == 6)
-            $y_tipo_producto += 25;
+            $y_tipo_producto += 26;
         /*Imprimimos X del tipo de tramite*/
-        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, '161', $y_tipo_producto, true);
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x+166, $y_tipo_producto, true);
         
         /*Revisamos el origen*/
-        $y+=21;
+        $y+=22;
         $y_origen = $y; // inicializamos en el primero
         if($this->formulario5->getOrigenFormularioId() == 2)
             $y_origen += 5;
         
         
         /*Imprimimos X del Origen*/
-        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, '72', $y_origen, true);
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x+73, $y_origen, true);
         
         /*tamaño y tipo de letra*/
-        $pdf->SetFont('dejavusans', '', 9, '', true);
+        $pdf->SetFont('courier', '', 13, '', true);
         
         /*Datos de la empresa*/
         $pdf->MultiCell(160, 0, $this->formulario5->Medicamento->Empresa,
-            0, 'L', 0, 0, '40', $y+=19, true);
+            0, 'L', 0, 0, $x+45, $y+=17, true);
         $pdf->MultiCell(170, 0, $this->formulario5->Medicamento->Empresa->getNumResolucion(),
-            0, 'L', 0, 0, '30', $y+=5, true);
+            0, 'L', 0, 0, $x+35, $y+=7, true);
         $pdf->MultiCell(50, 0, funciones::FormatearFecha($this->formulario5
             ->Medicamento->Empresa->getFechaResolucion()), 
-            0, 'L', 0, 0, '130', $y, true);
+            0, 'L', 0, 0, $x+150, $y, true);
         $pdf->MultiCell(150, 0, $this->formulario5->Medicamento->Empresa
             ->RepresentanteLegal, 
-            0, 'L', 0, 0, '50', $y+=7, true);
-        $pdf->MultiCell(160, 0, $this->formulario5->Medicamento->Empresa->getDireccion(),
-            0, 'L', 0, 0, '40', $y+=6, true);
+            0, 'L', 0, 0, $x+50, $y+=6, true);
+        $pdf->SetFont('courier', '', 10, '', true);
+        $pdf->MultiCell(120, 0, $this->formulario5->Medicamento->Empresa->getDireccion(),
+            0, 'L', 0, 0, $x+35, $y+=6, true);
+        $pdf->SetFont('courier', '', 13, '', true);
+        $pdf->MultiCell(35, 0, $this->formulario5->Medicamento->Empresa->getTelefono1(),
+            0, 'L', 0, 0, $x+150, $y, true);
         $pdf->MultiCell(110, 0, $this->formulario5->Medicamento->Empresa->RegenteFarmaceutico,
-            0, 'L', 0, 0, '60', $y+=5, true);
+            0, 'L', 0, 0, $x+55, $y+=6, true);
         $pdf->MultiCell(30, 0, $this->formulario5->Medicamento->Empresa
             ->RegenteFarmaceutico->getMatriculaProfesional(),
-            0, 'L', 0, 0, '170', $y, true);
+            0, 'L', 0, 0, $x+150, $y, true);
        
         /*Datos del laboratorio*/
         $pdf->MultiCell(145, 0, $this->formulario5->Medicamento->LaboratorioFabricante, 
-            0, 'L', 0, 0, '55', $y+=12, true);
+            0, 'L', 0, 0, $x+55, $y+=11, true);
         $pdf->MultiCell(155, 0, $this->formulario5->Medicamento->LaboratorioFabricante
             ->getBajoLicencia(), 
-            0, 'L', 0, 0, '45', $y+=5, true);
+            0, 'L', 0, 0, $x+45, $y+=6, true);
         $pdf->MultiCell(170, 0, $this->formulario5->Medicamento->LaboratorioFabricante
             ->getPara(),
-            0, 'L', 0, 0, '30', $y+=6, true);
+            0, 'L', 0, 0, $x+30, $y+=6, true);
         $pdf->MultiCell(155, 0, $this->formulario5->Medicamento->LaboratorioFabricante
             ->Pais, 
-            0, 'L', 0, 0, '45', $y+=6, true);
+            0, 'L', 0, 0, $x+45, $y+=6, true);
         $pdf->MultiCell(125, 0, $this->formulario5->Medicamento->LaboratorioFabricante
             ->getDireccion(), 
-            0, 'L', 0, 0, '35', $y+=6, true);
+            0, 'L', 0, 0, $x+35, $y+=6, true);
         
         /*Datos del producto*/
         $pdf->MultiCell(150, 0, $this->formulario5->Medicamento->getNombreComercial(),
-            0, 'L', 0, 0, '50', $y+=10, true);
+            0, 'L', 0, 0, $x+50, $y+=10, true);
         $pdf->MultiCell(150, 0, $this->formulario5->Medicamento->getNombreGenerico(), 
-            0, 'L', 0, 0, '50', $y+=7, true);
+            0, 'L', 0, 0, $x+50, $y+=6, true);
         $pdf->MultiCell(145, 0, $this->formulario5->Medicamento->FormaFarmaceutica, 
-            0, 'L', 0, 0, '55', $y+=5, true);
+            0, 'L', 0, 0, $x+55, $y+=6, true);
         $pdf->MultiCell(145, 0, $this->formulario5->Medicamento->getConcentracion(), 
-            0, 'L', 0, 0, '55', $y+=6, true);
+            0, 'L', 0, 0, $x+55, $y+=6, true);
         $pdf->MultiCell(145, 0, $this->formulario5->Medicamento->ViaAdministracion, 
-            0, 'L', 0, 0, '55', $y+=6, true);
+            0, 'L', 0, 0, $x+55, $y+=6, true);
         $pdf->MultiCell(80, 0, $this->formulario5->Medicamento->getAccionTerapeutica(),
-            0, 'L', 0, 0, '50', $y+=6, true);
+            0, 'L', 0, 0, $x+50, $y+=6, true);
         $pdf->MultiCell(40, 0, $this->formulario5->Medicamento->TipoVenta, 
-            0, 'L', 0, 0, '160', $y, true);
+            0, 'L', 0, 0, $x+160, $y, true);
         $pdf->MultiCell(85, 0, $this->formulario5->Medicamento->getConservacion(), 
-            0, 'L', 0, 0, '45', $y+=6, true);
+            0, 'L', 0, 0, $x+45, $y+=6, true);
         $pdf->MultiCell(35, 0, $this->formulario5->Medicamento->getPeriodoValidez(), 
-            0, 'L', 0, 0, '165', $y, true);
+            0, 'L', 0, 0, $x+165, $y, true);
         $pdf->MultiCell(140, 0, $this->formulario5->Medicamento->getEspecificacionEnvase(),
-            0, 'L', 0, 0, '60', $y+=6, true);
+            0, 'L', 0, 0, $x+60, $y+=6, true);
         $pdf->MultiCell(155, 0, $this->formulario5->Medicamento->getEnvaseClinico(), 
-            0, 'L', 0, 0, '45', $y+=6, true);
+            0, 'L', 0, 0, $x+45, $y+=6, true);
         $pdf->MultiCell(155, 0, $this->formulario5->Medicamento->getAval(),
-            0, 'L', 0, 0, '45', $y+=6, true);
+            0, 'L', 0, 0, $x+45, $y+=6, true);
         $pdf->MultiCell(140, 0, $this->formulario5->Medicamento->getRegistroSanitario(),
-            0, 'L', 0, 0, '60', $y+=6, true);
+            0, 'L', 0, 0, $x+60, $y+=6, true);
         $pdf->MultiCell(80, 0, $this->formulario5->Medicamento->getCertificadoControl(), 
-            0, 'L', 0, 0, '120', $y+=6, true);
+            0, 'L', 0, 0, $x+120, $y+=6, true);
 
         $pdf->Output('Formulario005.pdf', 'I');
         throw new sfStopException();

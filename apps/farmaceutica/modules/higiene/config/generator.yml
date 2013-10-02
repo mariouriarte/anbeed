@@ -29,7 +29,7 @@ generator:
         
       list:
         title:   Productos de higiene registrados
-        display: [nombre, marca, laboratorio_fabricante]
+        display: [nombre, marca, laboratorio_fabricante, registro_sanitario]
         object_actions:
           _edit: ~
           ir_form706:   {label: Desicion 706}
@@ -40,11 +40,11 @@ generator:
           _new: ~ 
           
       filter:
-        display: [nombre, marca, laboratorio_fabricante_id]
+        display: [nombre, marca, laboratorio_fabricante_id, registro_sanitario]
         
       form:
         display:
-         Datos: [empresa_id, laboratorio_fabricante_id, nombre, nombre_detalle, grupo_higiene_id, variedades, marca, codigo_nso, expediente, vigencia_nso, pais_id]
+         Datos: [empresa_id, laboratorio_fabricante_id, nombre, nombre_detalle, grupo_higiene_id, variedades, marca, codigo_nso, expediente, vigencia_nso, pais_id, registro_sanitario]
         actions:    
           _delete: ~
           _list: ~

@@ -20,7 +20,7 @@ abstract class BaseMedicamentoFormFilter extends BaseFormFilterDoctrine
       'via_administracion_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('ViaAdministracion'), 'add_empty' => true)),
       'tipo_venta_id'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoVenta'), 'add_empty' => true)),
       'formula_cc_id'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('FormulaCc'), 'add_empty' => true)),
-      'nombre_comercial'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'nombre_comercial'          => new sfWidgetFormFilterInput(),
       'nombre_generico'           => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'concentracion'             => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'accion_terapeutica'        => new sfWidgetFormFilterInput(),

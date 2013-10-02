@@ -48,35 +48,36 @@ class formulario11Actions extends autoFormulario11Actions
         $pdf->AddPage();
 
         //definimos la variable para el eje y
-        $y = 75;
-        
+        $y = 67;
+        $x = 5;
         //Tamaño de letra para datos
         $pdf->SetFont('courier', '', 13, '', true);
         
         //Datos de la Empresa
         $pdf->MultiCell(70, 0, $this->formulario11->Empresa->RepresentanteLegal, 
-            0, 'L', 0, 0, '93', $y, true);
+            0, 'L', 0, 0, $x+93, $y, true);
         $pdf->MultiCell(30, 0, $this->formulario11->Empresa->RepresentanteLegal
             ->Persona->getCI(), 
-            0, 'L', 0, 0, '26', $y+=5, true);
+            0, 'L', 0, 0, $x+26, $y+=5, true);
         $pdf->MultiCell(95, 0, $this->formulario11->Empresa->RegenteFarmaceutico, 
-            0, 'L', 0, 0, '76', $y, true);
+            0, 'L', 0, 0, $x+76, $y, true);
         $pdf->MultiCell(40, 0, $this->formulario11->Empresa
             ->RegenteFarmaceutico->getMatriculaProfesional(),
-            0, 'L', 0, 0, '34', $y+=5, true);
+            0, 'L', 0, 0, $x+34, $y+=5, true);
         $pdf->MultiCell(130, 0, $this->formulario11->Empresa,
-            0, 'L', 0, 0, '25', $y+=5, true);
+            0, 'L', 0, 0, $x+25, $y+=5, true);
         $pdf->MultiCell(40, 0, $this->formulario11->Empresa->getNumResolucion(),
-            0, 'L', 0, 0, '102', $y+=5, true);
-        $pdf->MultiCell(60, 0, funciones::FormatearFecha($this->formulario11
-            ->Empresa->getFechaResolucion()),
-            0, 'L', 0, 0, '25', $y+=4, true);
+            0, 'L', 0, 0, $x+102, $y+=5, true);
+
+        $fecha_resolucion = funciones::FechaEspanol2($this->formulario11->Empresa->getFechaResolucion());
         
-               
+        $pdf->MultiCell(60, 0, $fecha_resolucion[0],0, 'L', 0, 0, $x+170, $y, true);
+        $pdf->MultiCell(60, 0, $fecha_resolucion[1],0, 'L', 0, 0, $x+25, $y+=5, true);
+        $pdf->MultiCell(60, 0, $fecha_resolucion[2],0, 'L', 0, 0, $x+69, $y, true);
+
         //Despacho aduanero de
-        $y+=4;
-        $y_datos_generales = $y;
-        $x_datos_generales = 30;
+        $y_datos_generales = $y+7;
+        $x_datos_generales = $x+30;
         if($this->formulario11->getTipoDespachoId() == 2)
             $y_datos_generales += 5;
         if($this->formulario11->getTipoDespachoId() == 3)
@@ -86,65 +87,85 @@ class formulario11Actions extends autoFormulario11Actions
                 $x_datos_generales += 58;
                 $y_datos_generales += 5;
             }
-            
+
+        if($this->formulario11->getOtro()== '')
+        {
             //Imprimimos X en el dato general
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, 
             $x_datos_generales, $y_datos_generales, true);
-
-       
+        }
+        else
+        {        
+        //En caso de otro
+        $pdf->MultiCell(100, 0, $this->formulario11->getOtro(), 0, 'L', 0, 0, 
+            $x+25, $y_datos_generales+11, true);
+        }
         //datos del formulario
         $pdf->MultiCell(105, 0, $this->formulario11->Empresa,
-            0, 'L', 0, 0, '43', $y+=53, true);
+            0, 'L', 0, 0, $x+43, $y+=57, true);
         
         if($this->formulario11->getSustanciasQuimicas()==1)
         {
             $pdf->MultiCell(10, 0, 'SI',
-                0, 'L', 0, 0, '52', $y+=24, true);
+                0, 'L', 0, 0, $x+51, $y+=24, true);
         }
         else
         {
             $pdf->MultiCell(10, 0, 'NO',
-                0, 'L', 0, 0, '52', $y+=24, true);
+                0, 'L', 0, 0, $x+51, $y+=24, true);
         }
         
         if($this->formulario11->getLicenciaPrevia()==1)
         {
             $pdf->MultiCell(15, 0, 'SI',
-                0, 'L', 0, 0, '79', $y+=5, true);
-            $pdf->MultiCell(10, 0, $this->formulario11->getLicenciaResolucion(),
-                0, 'L', 0, 0, '80', $y+=5, true);
-            $pdf->MultiCell(75, 0, $this->formulario11->getLicenciaFecha(),
-                0, 'L', 0, 0, '113', $y, true);
+                0, 'L', 0, 0, $x+79, $y+=5, true);
+            
+            $pdf->SetFont('courier', '', 10, '', true);
+            $pdf->MultiCell(25, 0, $this->formulario11->getLicenciaResolucion(),
+                0, 'L', 0, 0, $x+80, $y+=5, true);
+            
+            $pdf->SetFont('courier', '', 13, '', true);
+            $fecha_licencia = funciones::FechaEspanol2($this->formulario11->getLicenciaFecha());
+            
+            $pdf->MultiCell(8, 0, $fecha_licencia[0],0, 'L', 0, 0, $x+115, $y, true);
+            $pdf->MultiCell(31, 0, $fecha_licencia[1],0, 'L', 0, 0, $x+132, $y, true);
+            $pdf->MultiCell(25, 0, $fecha_licencia[2],0, 'L', 0, 0, $x+170, $y, true);
         }
         else 
         {
             $pdf->MultiCell(15, 0, 'NO',
-                0, 'L', 0, 0, '79', $y+=5, true);
+                0, 'L', 0, 0, $x+84, $y+=5, true);
             $pdf->MultiCell(10, 0, ' - ',
-                0, 'L', 0, 0, '80', $y+=5, true);
+                0, 'L', 0, 0, $x+85, $y+=5, true);
             $pdf->MultiCell(75, 0, ' - ',
-                0, 'L', 0, 0, '113', $y, true);
+                0, 'L', 0, 0, $x+116, $y, true);
+            $pdf->MultiCell(75, 0, ' - ',
+                0, 'L', 0, 0, $x+140, $y, true);
+            $pdf->MultiCell(75, 0, ' - ',
+                0, 'L', 0, 0, $x+175, $y, true);
         }
         
         $pdf->MultiCell(10, 0, $this->formulario11->getNumeroItem(),
-            0, 'L', 0, 0, '35', $y+=10, true);
+            0, 'L', 0, 0, $x+40, $y+=11, true);
         $pdf->MultiCell(10, 0, $this->formulario11->getFoja(),
-            0, 'L', 0, 0, '93', $y, true);
+            0, 'L', 0, 0, $x+98, $y, true);
         $pdf->MultiCell(55, 0, $this->formulario11->Pais,
-            0, 'L', 0, 0, '135', $y, true);
+            0, 'L', 0, 0, $x+140, $y, true);
         $pdf->MultiCell(25, 0, $this->formulario11->getFactura(),
-            0, 'L', 0, 0, '68', $y+=5, true);
-        $pdf->MultiCell(75, 0, $this->formulario11->getFacturaFecha(),
-            0, 'L', 0, 0, '102', $y, true);
+            0, 'L', 0, 0, $x+72, $y+=5, true);
+        $fecha_factura = funciones::FechaEspanol2($this->formulario11->getFacturaFecha());
+        $pdf->MultiCell(8, 0, $fecha_factura[0],0, 'L', 0, 0, $x+115, $y, true);
+        $pdf->MultiCell(31, 0, $fecha_factura[1],0, 'L', 0, 0, $x+138, $y, true);
+        $pdf->MultiCell(25, 0, $fecha_factura[3],0, 'L', 0, 0, $x+177, $y, true);
         
         
         $pdf->MultiCell(70, 0, $this->formulario11->getPorTratarse(),
-            0, 'L', 0, 0, '117', $y+=27, true);
+            0, 'L', 0, 0, $x+125, $y+=32, true);
         $pdf->MultiCell(75, 0, $this->formulario11->getPara(),
-            0, 'L', 0, 0, '110', $y+=9, true);
+            0, 'L', 0, 0, $x+115, $y+=5, true);
         
         
-        $pdf->SetFont('courier', '', 10, '', true);
+        $pdf->SetFont('courier', '', 8, '', true);
         // Obtieniendo items del formulario11
                 $q=  Doctrine_Core::getTable('Item')->selectItemDeForm11();
         $items=$q->execute();
@@ -164,40 +185,44 @@ class formulario11Actions extends autoFormulario11Actions
             {
                 /*add page*/
                 $pdf->AddPage();
-                $y_fila_items = 25;
+                $y_fila_items = 42;
                 $num_items-=42;
                 $contador_fojas++;
+                $pdf->SetFont('courier', '', 12, '', true);
                 /*Numero de foja*/
                 $pdf->MultiCell(10, 0, $contador_fojas,
-                1, 'L', 0, 0, 20, $y_fila_items, true);
-                $y_fila_items+=10;
+                0, 'L', 0, 0, $x+40, $y_fila_items, true);
+                $y_fila_items+=15;
                 
+                $pdf->SetFont('courier', '', 10, '', true);
                 /*Continuacion de foja:*/
                 $pdf->MultiCell(10, 0, $contador_fojas-1,
-                1, 'L', 0, 0, 30, $y_fila_items, true);
-                $y_fila_items+=10;
+                0, 'L', 0, 0, $x+55, $y_fila_items, true);
+                $y_fila_items+=16;
                 
             }     
+            
+            $pdf->SetFont('courier', '', 8, '', true);
             /*ITEM*/
             $pdf->MultiCell(10, 0, $num,
-                1, 'L', 0, 0, 20, $y_fila_items, true);
+                0, 'L', 0, 0, $x+20, $y_fila_items, true);
             /*CANT*/
             $pdf->MultiCell(20, 0, $item->getCantidad(),
-                1, 'L', 0, 0, 30, $y_fila_items, true);
+                0, 'L', 0, 0, $x+35, $y_fila_items, true);
             /*PROD*/
-            $pdf->MultiCell(80, 0, $item->getNombre(),
-                1, 'L', 0, 0, 50, $y_fila_items, true);
+            $pdf->MultiCell(64, 0, $item->getNombre(),
+                0, 'L', 0, 0, $x+54, $y_fila_items, true);
             /*N.RS*/
-            $pdf->MultiCell(30, 0, ItemTable::getNumRegSanitario($item),
-                1, 'L', 0, 0, 130, $y_fila_items, true);
+            $pdf->MultiCell(25, 0, ItemTable::getNumRegSanitario($item),
+                0, 'L', 0, 0, $x+120, $y_fila_items, true);
             /*F,Vto.*/
             $pdf->MultiCell(25, 0, $item->getFechaVencimiento(),
-                1, 'L', 0, 0, 160, $y_fila_items, true);
+                0, 'L', 0, 0, $x+145, $y_fila_items, true);
             /*N,Lote.*/
-            $pdf->MultiCell(20, 0, $item->getNumLote(),
-                1, 'L', 0, 0, 185, $y_fila_items, true);
+            $pdf->MultiCell(25, 0, $item->getNumLote(),
+                0, 'L', 0, 0, $x+178, $y_fila_items, true);
             
-            $y_fila_items+=6;
+            $y_fila_items+=5;
             $contador_item--;
             $num++;
         }
