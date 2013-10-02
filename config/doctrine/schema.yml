@@ -20,7 +20,8 @@ Persona:
   columns:
     nombre:           {type: string(50), notnull: true}
     ap_paterno:       {type: string(30), notnull: true}
-    ap_materno:       {type: string(30), notnull: true}
+    ap_materno:       {type: string(30), notnull: false}
+    ap_casada:        {type: string(30), notnull: false}
     ci:               {type: string(12), notnull: true, unique: true}
     expedido:         {type: string(2), notnull: true}
     direccion:        {type: string(255)}
