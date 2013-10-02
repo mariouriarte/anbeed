@@ -24,13 +24,15 @@ class Formulario11Form extends BaseFormulario11Form
             array('culture'     => 'es',
                   'default'     => date('Y-m-d'),
                   'date_widget' => new sfWidgetFormDate(array(
-                  'years'       => array_combine($years, $years)))));
+                      'format' => '%day%%month%%year%',
+                      'years'       => array_combine($years, $years)))));
         
         // fecha inicio vigencia
         $this->widgetSchema['fecha_inicio_vigencia'] = new sfWidgetFormJQueryDate(
             array('culture'     => 'es',
                   'date_widget' => new sfWidgetFormDate(array(
-                  'years'       => array_combine($years, $years)))));
+                      'format' => '%day%%month%%year%',
+                      'years'       => array_combine($years, $years)))));
         
         // tipo de despacho
         $this->widgetSchema['tipo_despacho_id'] = new sfWidgetFormDoctrineChoice(
@@ -42,13 +44,15 @@ class Formulario11Form extends BaseFormulario11Form
         $this->widgetSchema['licencia_fecha'] = new sfWidgetFormJQueryDate(
             array('culture'     => 'es',
                   'date_widget' => new sfWidgetFormDate(array(
-                  'years'       => array_combine($years, $years)))));
+                      'format' => '%day%%month%%year%',
+                      'years'       => array_combine($years, $years)))));
         
         // fecha factura
         $this->widgetSchema['factura_fecha'] = new sfWidgetFormJQueryDate(
             array('culture'     => 'es',
                   'date_widget' => new sfWidgetFormDate(array(
-                  'years'       => array_combine($years, $years)))));
+                      'format' => '%day%%month%%year%',
+                      'years'       => array_combine($years, $years)))));
         
         $this->widgetSchema['sustancias_quimicas']->setAttribute('onClick','siSustanciaLicencia();');
         $this->widgetSchema['licencia_previa']->setAttribute('onClick','siLicenciaSustancia();');
