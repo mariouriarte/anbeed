@@ -48,7 +48,7 @@ class formulario11Actions extends autoFormulario11Actions
         $pdf->AddPage();
 
         //definimos la variable para el eje y
-        $y = 84;
+        $y = 83;
         $x = 5;
         //Tamaño de letra para datos
         $pdf->SetFont('courier', '', 13, '', true);
@@ -186,7 +186,7 @@ class formulario11Actions extends autoFormulario11Actions
             {
                 /*add page*/
                 $pdf->AddPage();
-                $y_fila_items = 42;
+                $y_fila_items = 55;
                 $num_items-=42;
                 $contador_fojas++;
                 $pdf->SetFont('courier', '', 12, '', true);
