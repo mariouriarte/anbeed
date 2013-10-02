@@ -158,9 +158,10 @@ class formulario11Actions extends autoFormulario11Actions
         $pdf->MultiCell(31, 0, $fecha_factura[1],0, 'L', 0, 0, $x+138, $y, true);
         $pdf->MultiCell(25, 0, $fecha_factura[3],0, 'L', 0, 0, $x+177, $y, true);
         
-        
+        $pdf->SetFont('courier', '', 10, '', true);
         $pdf->MultiCell(70, 0, $this->formulario11->getPorTratarse(),
             0, 'L', 0, 0, $x+125, $y+=32, true);
+        $pdf->SetFont('courier', '', 13, '', true);
         $pdf->MultiCell(75, 0, $this->formulario11->getPara(),
             0, 'L', 0, 0, $x+115, $y+=5, true);
         
