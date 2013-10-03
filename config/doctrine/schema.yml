@@ -116,21 +116,30 @@ LaboratorioFabricante:
 Pais:
   actAs: [Timestampable, Signable]
   columns:
-    nombre:  {type: string(150)}
-    bandera: {type: string(50)}
+    codigo:      {type: string(3)}
+    nombre:      {type: string(150)}  
+    continente:  {type: string(150)}  
+    region:      {type: string(50)}
+    poblacion:     {type: integer}
+    jefe_estado: {type: string(100)}
+    capital:     {type: integer}
   relations:
     LaboratorioFabricante: {local: id, foreign: pais_id, type: one, foreignAlias: Pais}
     Ciudad:                {local: id, foreign: pais_id, type: many, foreignAlias: Pais}
+    #Ciudad:                {local: capital, foreign: id, type: one, foreignAlias: Capital}
     Cosmetico:             {local: id, foreign: pais_id, type: one, foreignAlias: Pais}
     Formularios706:        {local: id, foreign: rescom_ciudad_id, type: many, class: Formulario706}
 
 Ciudad:
   actAs: [Timestampable, Signable]
   columns:
-    pais_id: {type: integer, notnull: false}
-    nombre:  {type: string(150)}
+    pais_id:   {type: integer, notnull: true}
+    nombre:    {type: string(150)}
+    distrito:  {type: string(50)}
+    poblacion: {type: integer}
   relations:
     Pais:                  {local: pais_id, foreign: id, type: one, foreignAlias: Ciudades}
+    #Pais:                  {local: id, foreign: capital, type: one, foreignAlias: Capital}
     Empresa:               {local: id, foreign: ciudad_id, type: one, foreignAlias: Ciudad}
     LaboratorioFabricante: {local: id, foreign: ciudad_id, type: one, foreignAlias: Ciudad}
     Formulario706:         {local: id, foreign: rescom_ciudad_id, type: one, foreignAlias: Ciudad}

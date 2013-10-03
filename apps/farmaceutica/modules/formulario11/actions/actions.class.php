@@ -149,7 +149,7 @@ class formulario11Actions extends autoFormulario11Actions
             0, 'L', 0, 0, $x+40, $y+=11, true);
         $pdf->MultiCell(10, 0, $this->formulario11->getFoja(),
             0, 'L', 0, 0, $x+98, $y, true);
-        $pdf->MultiCell(55, 0, $this->formulario11->Pais,
+        $pdf->MultiCell(55, 0, $this->formulario11->Pais->getNombre(),
             0, 'L', 0, 0, $x+140, $y, true);
         $pdf->MultiCell(25, 0, $this->formulario11->getFactura(),
             0, 'L', 0, 0, $x+72, $y+=5, true);

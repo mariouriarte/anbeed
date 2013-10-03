@@ -49,7 +49,7 @@
         </td>
     </tr>
     <tr>
-        <td>País: <?php echo $form->Higiene->Empresa->Ciudad->Pais ?>
+        <td>País: <?php echo $form->Higiene->Empresa->Ciudad->Pais->getNombre() ?>
         </td>
         <td>Teléfono: <?php echo $form->Higiene->Empresa->getTelefono1() ?>
         </td>

@@ -208,7 +208,7 @@ class formulario5Actions extends autoFormulario5Actions
             ->getPara(),
             0, 'L', 0, 0, $x+30, $y+=6, true);
         $pdf->MultiCell(155, 0, $this->formulario5->Medicamento->LaboratorioFabricante
-            ->Pais, 
+            ->Pais->getNombre(), 
             0, 'L', 0, 0, $x+45, $y+=6, true);
         $pdf->MultiCell(125, 0, $this->formulario5->Medicamento->LaboratorioFabricante
             ->getDireccion(), 

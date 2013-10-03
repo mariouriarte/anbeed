@@ -46,7 +46,7 @@
             </tr>
             <tr>
                 <th>Pais de Origen</th>
-                <td><?php echo $reactivo->LaboratorioFabricante->Pais;  ?></td>
+                <td><?php echo $reactivo->LaboratorioFabricante->Pais->getNombre();  ?></td>
             </tr>
             <tr>
                 <th>Dirección</th>
