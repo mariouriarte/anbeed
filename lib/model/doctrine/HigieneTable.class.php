@@ -16,4 +16,17 @@ class HigieneTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Higiene');
     }
+    
+    public function selectHigieneDeEmpresa()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        
+        $q = Doctrine_Query::create()
+            ->from('Higiene h')
+            ->where('h.empresa_id = ?', $empresa->getId())
+            ->orderBy('h.created_at DESC');
+            
+        return $q;
+    }
 }
