@@ -173,7 +173,7 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x+73, $y_origen, true);
         
         /*tamaño y tipo de letra*/
-        $pdf->SetFont('courier', '', 13, '', true);
+        $pdf->SetFont('courier', '', 11, '', true);
         
         /*Datos de la empresa*/
         $pdf->MultiCell(160, 0, $this->formulario5->Medicamento->Empresa,
@@ -187,7 +187,7 @@ class formulario5Actions extends autoFormulario5Actions
             ->RepresentanteLegal, 
             0, 'L', 0, 0, $x+50, $y+=6, true);
         $pdf->SetFont('courier', '', 10, '', true);
-        $pdf->MultiCell(150, 0, $this->formulario5->Medicamento->Empresa->getDireccion(),
+        $pdf->MultiCell(120, 0, $this->formulario5->Medicamento->Empresa->getDireccion(),
             0, 'L', 0, 0, $x+35, $y+=6, true);
         $pdf->SetFont('courier', '', 13, '', true);
         $pdf->MultiCell(35, 0, $this->formulario5->Medicamento->Empresa->getTelefono1(),
@@ -210,7 +210,7 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->MultiCell(155, 0, $this->formulario5->Medicamento->LaboratorioFabricante
             ->Pais->getNombre(), 
             0, 'L', 0, 0, $x+45, $y+=6, true);
-        $pdf->MultiCell(125, 0, $this->formulario5->Medicamento->LaboratorioFabricante
+        $pdf->MultiCell(150, 0, $this->formulario5->Medicamento->LaboratorioFabricante
             ->getDireccion(), 
             0, 'L', 0, 0, $x+35, $y+=6, true);
         
