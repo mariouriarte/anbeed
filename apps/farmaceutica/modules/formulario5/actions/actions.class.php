@@ -133,7 +133,7 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->AddPage();
 
         //definimos la variable para el eje y
-        $y = 64;
+        $y = 95;
         $x = -5;
         
         /*Revisamos el tipo de tramite*/
