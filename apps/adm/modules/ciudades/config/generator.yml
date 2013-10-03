@@ -17,7 +17,7 @@ generator:
         nombre: {label: 'Ciudad' }
       list:    
         title: Listado de Ciudades
-        display: [pais, nombre]
+        display: [pais, nombre, distrito]
         actions:
           ir_portal: {label: Volver al Portal}
           _new: ~
