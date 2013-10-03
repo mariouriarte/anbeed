@@ -133,8 +133,8 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->AddPage();
 
         //definimos la variable para el eje y
-        $y = 95;
-        $x = -5;
+        $y = 94;
+        $x = 0;
         
         /*Revisamos el tipo de tramite*/
         $y_tipo_tramite = $y; // inicializamos en el primero
@@ -187,7 +187,7 @@ class formulario5Actions extends autoFormulario5Actions
             ->RepresentanteLegal, 
             0, 'L', 0, 0, $x+50, $y+=6, true);
         $pdf->SetFont('courier', '', 10, '', true);
-        $pdf->MultiCell(120, 0, $this->formulario5->Medicamento->Empresa->getDireccion(),
+        $pdf->MultiCell(150, 0, $this->formulario5->Medicamento->Empresa->getDireccion(),
             0, 'L', 0, 0, $x+35, $y+=6, true);
         $pdf->SetFont('courier', '', 13, '', true);
         $pdf->MultiCell(35, 0, $this->formulario5->Medicamento->Empresa->getTelefono1(),
@@ -227,7 +227,7 @@ class formulario5Actions extends autoFormulario5Actions
             0, 'L', 0, 0, $x+55, $y+=6, true);
         $pdf->MultiCell(80, 0, $this->formulario5->Medicamento->getAccionTerapeutica(),
             0, 'L', 0, 0, $x+50, $y+=6, true);
-        $pdf->MultiCell(40, 0, $this->formulario5->Medicamento->TipoVenta, 
+        $pdf->MultiCell(60, 0, $this->formulario5->Medicamento->TipoVenta, 
             0, 'L', 0, 0, $x+160, $y, true);
         $pdf->MultiCell(85, 0, $this->formulario5->Medicamento->getConservacion(), 
             0, 'L', 0, 0, $x+45, $y+=6, true);
