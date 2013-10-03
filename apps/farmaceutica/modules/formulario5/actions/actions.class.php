@@ -173,7 +173,7 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x+73, $y_origen, true);
         
         /*tamaño y tipo de letra*/
-        $pdf->SetFont('courier', '', 11, '', true);
+        $pdf->SetFont('courier', '', 13, '', true);
         
         /*Datos de la empresa*/
         $pdf->MultiCell(160, 0, $this->formulario5->Medicamento->Empresa,
