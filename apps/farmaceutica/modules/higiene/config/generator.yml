@@ -29,6 +29,7 @@ generator:
         
       list:
         title:   Productos de higiene registrados
+        table_method: selectHigieneDeEmpresa
         display: [nombre, marca, laboratorio_fabricante, registro_sanitario]
         object_actions:
           _edit: ~
