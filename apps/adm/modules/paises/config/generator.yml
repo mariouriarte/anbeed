@@ -17,14 +17,14 @@ generator:
       list: 
         title: Listado de Paises Registrados
         max_per_page: 15
-        display: [nombre]
+        display: [codigo, nombre, continente]
         actions:
           ir_portal: {label: Volver al Portal}
           _new: ~
       filter:  
         display: [nombre]
       form:    
-        display: [nombre, bandera]
+        display: ~
       edit:
         title: Editar Pais %%nombre%%
       new:     

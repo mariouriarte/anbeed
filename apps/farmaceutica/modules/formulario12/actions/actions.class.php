@@ -101,7 +101,7 @@ class formulario12Actions extends autoFormulario12Actions
         $pdf->MultiCell(170, 0, $this->formulario12->Reactivo->LaboratorioFabricante->
                 getPara(), 0, 'L', 0, 0, '30', $y+=6, true);
         $pdf->MultiCell(155, 0, $this->formulario12->Reactivo->LaboratorioFabricante->
-                Pais, 0, 'L', 0, 0, '50', $y+=6, true);
+                Pais->getNombre(), 0, 'L', 0, 0, '50', $y+=6, true);
         $pdf->MultiCell(125, 0, $this->formulario12->Reactivo->LaboratorioFabricante->
                 getDireccion(), 0, 'L', 0, 0, '40', $y+=6, true);
         $pdf->MultiCell(125, 0, $this->formulario12->Reactivo->LaboratorioFabricante->

@@ -16,8 +16,10 @@ abstract class BaseCiudadForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
-      'pais_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'add_empty' => true)),
+      'pais_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'add_empty' => false)),
       'nombre'     => new sfWidgetFormInputText(),
+      'distrito'   => new sfWidgetFormInputText(),
+      'poblacion'  => new sfWidgetFormInputText(),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
       'created_by' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'add_empty' => true)),
@@ -26,8 +28,10 @@ abstract class BaseCiudadForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'pais_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'), 'required' => false)),
+      'pais_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Pais'))),
       'nombre'     => new sfValidatorString(array('max_length' => 150, 'required' => false)),
+      'distrito'   => new sfValidatorString(array('max_length' => 50, 'required' => false)),
+      'poblacion'  => new sfValidatorInteger(array('required' => false)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
       'created_by' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'required' => false)),

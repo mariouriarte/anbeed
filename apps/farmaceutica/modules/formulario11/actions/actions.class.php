@@ -148,9 +148,15 @@ class formulario11Actions extends autoFormulario11Actions
         $pdf->MultiCell(10, 0, $this->formulario11->getNumeroItem(),
             0, 'L', 0, 0, $x+28, $y+=11, true);
         $pdf->MultiCell(10, 0, $this->formulario11->getFoja(),
-            0, 'L', 0, 0, $x+86, $y, true);
-        $pdf->MultiCell(55, 0, $this->formulario11->Pais,
-            0, 'L', 0, 0, $x+135, $y, true);
+//<<<<<<< HEAD
+            0, 'L', 0, 0, $x+98, $y, true);
+        $pdf->MultiCell(55, 0, $this->formulario11->Pais->getNombre(),
+            0, 'L', 0, 0, $x+140, $y, true);
+//=======
+//            0, 'L', 0, 0, $x+86, $y, true);
+//        $pdf->MultiCell(55, 0, $this->formulario11->Pais,
+//            0, 'L', 0, 0, $x+135, $y, true);
+//>>>>>>> 1894728955c60c015c4c2518f6fa66800867f4aa
         $pdf->MultiCell(25, 0, $this->formulario11->getFactura(),
             0, 'L', 0, 0, $x+58, $y+=5, true);
         $fecha_factura = funciones::FechaEspanol2($this->formulario11->getFacturaFecha());
