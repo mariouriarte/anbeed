@@ -79,11 +79,11 @@ class empresasActions extends autoEmpresasActions
         $pdf->MultiCell(75, 0, $this->empresa->getRegistroCamara(), 
             0, 'L', 0, 0, $x+125, $y+=8, true);
         $pdf->MultiCell(145, 0, $this->empresa->getFundempresa(), 
-            0, 'L', 0, 0, $x+55, $y+=8, true);
+            0, 'L', 0, 0, $x+55, $y+=7, true);
         $pdf->MultiCell(105, 0, $this->empresa->getNit(), 
             0, 'L', 0, 0, $x+95, $y+=7, true);
         $pdf->MultiCell(60, 0, $this->empresa->getLicenciaFuncionamiento(), 
-            0, 'L', 0, 0, $x+140, $y+=8, true);
+            0, 'L', 0, 0, $x+140, $y+=7, true);
         $pdf->MultiCell(125, 0, $this->empresa->RepresentanteLegal, 
             0, 'L', 0, 0, $x+75, $y+=15, true);
         $pdf->MultiCell(145, 0, $this->empresa->RepresentanteLegal->Persona->getCi(),

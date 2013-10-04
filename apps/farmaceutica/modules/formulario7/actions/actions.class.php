@@ -110,7 +110,7 @@ class formulario7Actions extends autoFormulario7Actions
         //Datos del laboratorio
         $pdf->MultiCell(140, 0, $this->formulario7->Producto->$producto
             ->LaboratorioFabricante->getNombre(),
-            0, 'L', 0, 0, $x+63, $y+=5, true);
+            0, 'L', 0, 0, $x+63, $y+=4, true);
         
         if($producto=='Medicamento')
         {
@@ -128,7 +128,7 @@ class formulario7Actions extends autoFormulario7Actions
 
         //Datos del Formulario
         $pdf->MultiCell(145, 0, $this->formulario7->ViaAdministracion->getNombre(),
-            0, 'L', 0, 0, $x+60, $y+=32, true);
+            0, 'L', 0, 0, $x+60, $y+=39, true);
         $pdf->MultiCell(145, 10, $this->formulario7->getAccionTerapeutica(),
             0, 'L', 0, 0, $x+56, $y+=4, true);
         $pdf->MultiCell(165, 15, $this->formulario7->getDosis(),

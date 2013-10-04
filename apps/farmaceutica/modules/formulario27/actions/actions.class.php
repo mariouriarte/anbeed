@@ -48,7 +48,7 @@ class formulario27Actions extends autoFormulario27Actions
         $pdf->AddPage();
         
         //definimos la variable para el eje y
-        $y = 73;
+        $y = 78;
         $x = 0;
         
         //Datos Generales
@@ -90,7 +90,7 @@ class formulario27Actions extends autoFormulario27Actions
         //Datos de la empresa
         $pdf->MultiCell(150, 0, $this->formulario27->DispositivoMedico->Empresa
             ->RepresentanteLegal, 
-            0, 'L', 0, 0, $x+45, $y+=36, true);
+            0, 'L', 0, 0, $x+45, $y+=35, true);
         $pdf->MultiCell(160, 0, $this->formulario27->DispositivoMedico->Empresa, 
             0, 'L', 0, 0, $x+40, $y+=5, true);
         $pdf->MultiCell(90, 0, $this->formulario27->DispositivoMedico->Empresa
@@ -140,7 +140,7 @@ class formulario27Actions extends autoFormulario27Actions
             0, 'L', 0, 0, $x+55, $y+=5, true);
         
         // Manual
-        $x_manual = $x+157;
+        $x_manual = $x+152;
         if($this->formulario27->DispositivoMedico->getManual()==NULL)
             $x_manual += 15;
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_manual, $y+=5, true);
