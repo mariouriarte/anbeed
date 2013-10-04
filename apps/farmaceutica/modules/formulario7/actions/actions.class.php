@@ -49,7 +49,7 @@ class formulario7Actions extends autoFormulario7Actions
 
         //definimos la variable para el eje y
         $y = 65;
-        $x = 0;
+        $x = -5;
         
         //Tamaño de letra para datos
         $pdf->SetFont('courier', '', 10, '', true);
@@ -124,16 +124,11 @@ class formulario7Actions extends autoFormulario7Actions
                 0, 'L', 0, 0, $x+59, $y+=5, true);
         }
         $pdf->MultiCell(50, 0, $this->formulario7->getConcentracion(),
-            0, 'L', 0, 0, $x+149, $y+=5, true);
-        
-        //Formula Cuali-Cauntitaviva
-        if($producto == 'Medicamento')
-            $pdf->MultiCell(175, 25, $this->formulario7->Producto->$producto->FormulaCc,
-                0, 'L', 0, 0, $x+25, $y+=10, true);    
-        
+            0, 'L', 0, 0, $x+149, $y, true);
+
         //Datos del Formulario
         $pdf->MultiCell(145, 0, $this->formulario7->ViaAdministracion->getNombre(),
-            0, 'L', 0, 0, $x+60, $y+=27, true);
+            0, 'L', 0, 0, $x+60, $y+=32, true);
         $pdf->MultiCell(145, 10, $this->formulario7->getAccionTerapeutica(),
             0, 'L', 0, 0, $x+56, $y+=4, true);
         $pdf->MultiCell(165, 15, $this->formulario7->getDosis(),

@@ -46,8 +46,8 @@ class formulario12Actions extends autoFormulario12Actions
         $pdf->AddPage();
         
         //definimos la variable para el eje y
-        $y = 84;
-        $x = 0;
+        $y = 83;
+        $x = -3;
         
         //Revisamos el tipo de tramite
             // inicializamos en el primero
@@ -104,7 +104,7 @@ class formulario12Actions extends autoFormulario12Actions
         $pdf->MultiCell(155, 0, $this->formulario12->Reactivo->LaboratorioFabricante->
                 Pais->getNombre(), 0, 'L', 0, 0, $x+50, $y+=5, true);
         $pdf->SetFont('courier', '', 9, '', true);
-        $pdf->MultiCell(125, 0, $this->formulario12->Reactivo->LaboratorioFabricante->
+        $pdf->MultiCell(80, 10, $this->formulario12->Reactivo->LaboratorioFabricante->
                 getDireccion(), 0, 'L', 0, 0, $x+40, $y+=6, true);
         $pdf->SetFont('courier', '', 11, '', true);
         $pdf->MultiCell(125, 0, $this->formulario12->Reactivo->LaboratorioFabricante->

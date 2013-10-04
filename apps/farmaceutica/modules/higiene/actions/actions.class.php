@@ -36,16 +36,16 @@ class higieneActions extends autoHigieneActions
         $this->redirect('formulario706/index');
     }
 
-    public function executeListIrForm7(sfWebRequest $request) 
-    {
-        $user = $this->getUser();
-
-        $higiene = $this->getRoute()->getObject();
-        $user->setAttribute('higiene', $higiene);
-        $user->setAttribute('tabla', 'higiene');
-        $user->setAttribute('producto', 'Higiene');
-        $this->redirect('formulario7/index');
-    }
+//    public function executeListIrForm7(sfWebRequest $request) 
+//    {
+//        $user = $this->getUser();
+//
+//        $higiene = $this->getRoute()->getObject();
+//        $user->setAttribute('higiene', $higiene);
+//        $user->setAttribute('tabla', 'higiene');
+//        $user->setAttribute('producto', 'Higiene');
+//        $this->redirect('formulario7/index');
+//    }
     protected function processForm(sfWebRequest $request, sfForm $form) 
     {
         $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));

@@ -48,7 +48,7 @@ class formulario27Actions extends autoFormulario27Actions
         $pdf->AddPage();
         
         //definimos la variable para el eje y
-        $y = 77;
+        $y = 73;
         $x = 0;
         
         //Datos Generales
@@ -69,7 +69,7 @@ class formulario27Actions extends autoFormulario27Actions
         
         //Revisamos el tipo de tramite
             // inicializamos en el primero
-        $y_tipo_tramite = $y_datos_generales + 10;
+        $y_tipo_tramite = $y + 10;
         $x_tipo_tramite = $x+98;
         if($this->formulario27->getTipoTramiteFormulario27Id() == 2)
             $x_tipo_tramite += 85;
@@ -77,7 +77,7 @@ class formulario27Actions extends autoFormulario27Actions
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_tipo_tramite, $y_tipo_tramite , true);
         
         //Revisamos el origen
-        $y_origen = $y_tipo_tramite + 5;
+        $y_origen = $y + 15;
         $x_origen = $x+98; // inicializamos en el primero
         if($this->formulario27->getOrigenFormularioId() == 2)
             $x_origen += 85;
@@ -90,7 +90,7 @@ class formulario27Actions extends autoFormulario27Actions
         //Datos de la empresa
         $pdf->MultiCell(150, 0, $this->formulario27->DispositivoMedico->Empresa
             ->RepresentanteLegal, 
-            0, 'L', 0, 0, $x+45, $y+=31, true);
+            0, 'L', 0, 0, $x+45, $y+=36, true);
         $pdf->MultiCell(160, 0, $this->formulario27->DispositivoMedico->Empresa, 
             0, 'L', 0, 0, $x+40, $y+=5, true);
         $pdf->MultiCell(90, 0, $this->formulario27->DispositivoMedico->Empresa

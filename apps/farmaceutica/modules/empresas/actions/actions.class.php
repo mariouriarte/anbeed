@@ -53,7 +53,7 @@ class empresasActions extends autoEmpresasActions
         $pdf->AddPage();
         
         //definimos la variable para el eje y
-        $y = 68;
+        $y = 79;
         $x = 0;
         
         $pdf->MultiCell(55, 0, funciones::FormatearFecha($this->empresa->getFechaRegistro()),

@@ -89,7 +89,6 @@
                             <li><?php echo link_to('Formulario 003', 'empresas/edit?id=' . $empresa->getId()) ?></li>
                             <li><?php echo link_to('Formulario 005', 'formulario5porempresa/index') ?></li>
                             <li><?php echo link_to('Formulario 007', 'formulario7porempresa/index') ?></li>
-                            <li><?php echo link_to('Formulario 011', 'formulario11/index') ?></li>
                             <li><?php echo link_to('Formulario 012', 'formulario12porempresa/index') ?></li>
                             <li><?php echo link_to('Formulario 027', 'formulario27porempresa/index') ?></li>
                             <li><?php echo link_to('Desicion 516', 'form516porempresa/index') ?></li>

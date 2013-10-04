@@ -33,7 +33,7 @@ generator:
         table_method: selectDispositivosDeEmpresa
         object_actions:
           ir_form27:   {label: Form 027, action: irForm27}
-          ir_form7:   {label: Form 007, action: irForm7}
+#          ir_form7:   {label: Form 007, action: irForm7}
           _edit:  ~
         actions:
           adm_empresa: {label: Volver a Empresa}
