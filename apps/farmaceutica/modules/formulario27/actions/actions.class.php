@@ -48,7 +48,7 @@ class formulario27Actions extends autoFormulario27Actions
         $pdf->AddPage();
         
         //definimos la variable para el eje y
-        $y = 72;
+        $y = 77;
         $x = 0;
         
         //Datos Generales
@@ -69,18 +69,20 @@ class formulario27Actions extends autoFormulario27Actions
         
         //Revisamos el tipo de tramite
             // inicializamos en el primero
+        $y_tipo_tramite = $y_datos_generales + 10;
         $x_tipo_tramite = $x+98;
         if($this->formulario27->getTipoTramiteFormulario27Id() == 2)
             $x_tipo_tramite += 85;
             //Imprimimos X del tipo de tramite
-        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_tipo_tramite, $y+=10 , true);
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_tipo_tramite, $y_tipo_tramite , true);
         
         //Revisamos el origen
+        $y_origen = $y_tipo_tramite + 5;
         $x_origen = $x+98; // inicializamos en el primero
         if($this->formulario27->getOrigenFormularioId() == 2)
             $x_origen += 85;
         //Imprimimos X del origen
-        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_origen, $y+=5, true);
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_origen, $y_origen, true);
         
         //Reduciendo tamaño de letra
         $pdf->SetFont('courier', '', 11, '', true);
@@ -147,8 +149,10 @@ class formulario27Actions extends autoFormulario27Actions
             0, 'L', 0, 0, $x+50, $y+=5, true);
         $pdf->MultiCell(145, 0, $this->formulario27->DispositivoMedico->getPresentacion(),
             0, 'L', 0, 0, $x+40, $y+=5, true);
+        $pdf->SetFont('courier', '', 10, '', true);
         $pdf->MultiCell(35, 0, $this->formulario27->DispositivoMedico->getCondicionEmpaque(),
             0, 'L', 0, 0, $x+90, $y+=5, true);
+        $pdf->SetFont('courier', '', 11, '', true);
         $pdf->MultiCell(50, 0, $this->formulario27->DispositivoMedico->getVidaUtil(),
             0, 'L', 0, 0, $x+145, $y, true);
         $pdf->MultiCell(90, 0, $this->formulario27->DispositivoMedico->getMetodoDesecho(),

@@ -21,7 +21,8 @@ class empresasActions extends autoEmpresasActions
         $config = sfTCPDFPluginConfigHandler::loadConfig();
                   sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
 
-        $pdf = new sfTCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+        $page_size = array(210,320);
+        $pdf = new sfTCPDF('P', PDF_UNIT, $page_size, true, 'UTF-8', false);
         // Informacion el documento
         $pdf->SetCreator(PDF_CREATOR);
         $pdf->SetAuthor('Capsule Systems');
@@ -52,7 +53,7 @@ class empresasActions extends autoEmpresasActions
         $pdf->AddPage();
         
         //definimos la variable para el eje y
-        $y = 76;
+        $y = 68;
         $x = 0;
         
         $pdf->MultiCell(55, 0, funciones::FormatearFecha($this->empresa->getFechaRegistro()),
@@ -69,7 +70,7 @@ class empresasActions extends autoEmpresasActions
         $pdf->MultiCell(165, 0, $this->empresa->getCasilla(), 
             0, 'L', 0, 0, $x+35, $y+=7, true);
         $pdf->MultiCell(160, 0, $this->empresa->getTelefono1().
-            ' || '.$this->empresa->getTelefono2(), 
+            '  -  '.$this->empresa->getTelefono2(), 
             0, 'L', 0, 0, $x+40, $y+=7, true);
         $pdf->MultiCell(165, 0, $this->empresa->getEmail(), 
             0, 'L', 0, 0, $x+35, $y+=8, true);
@@ -98,12 +99,7 @@ class empresasActions extends autoEmpresasActions
             0, 'L', 0, 0, $x+60, $y+=7, true);
         $pdf->MultiCell(150, 40, $this->empresa->getObservacion(), 
             0, 'L', 0, 0, $x+50, $y+=8, true);
-//                
         
-        
-        //$html = "Imprimiremos la empresa $this->empresa";
-        //$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
-        //$pdf->writeHTML($html, true, false, false, 0);
         $pdf->Output('Formulario003.pdf', 'I');
         throw new sfStopException();
     }

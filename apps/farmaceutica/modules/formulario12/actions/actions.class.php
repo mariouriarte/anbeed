@@ -46,7 +46,7 @@ class formulario12Actions extends autoFormulario12Actions
         $pdf->AddPage();
         
         //definimos la variable para el eje y
-        $y = 80;
+        $y = 84;
         $x = 0;
         
         //Revisamos el tipo de tramite
@@ -71,7 +71,7 @@ class formulario12Actions extends autoFormulario12Actions
         
         //Datos de la empresa
         $pdf->MultiCell(160, 0, $this->formulario12->Reactivo->Empresa, 
-                0, 'L', 0, 0, $x+45, $y+=24, true);
+                0, 'L', 0, 0, $x+45, $y+=25, true);
         $pdf->MultiCell(170, 0, $this->formulario12->Reactivo->Empresa->getNumResolucion(),
                 0, 'L', 0, 0, $x+60, $y+=6, true);
         $pdf->MultiCell(50, 0, funciones::FormatearFecha(

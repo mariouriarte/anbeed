@@ -48,7 +48,7 @@ class formulario7Actions extends autoFormulario7Actions
         $pdf->AddPage();
 
         //definimos la variable para el eje y
-        $y = 58;
+        $y = 65;
         $x = 0;
         
         //Tamaño de letra para datos
@@ -73,9 +73,9 @@ class formulario7Actions extends autoFormulario7Actions
         if($this->formulario7->getTipoCalificacionId() == 2)
             $x_tipo_calificacion += 46;
         if($this->formulario7->getTipoCalificacionId() == 3)
-            $x_tipo_calificacion += 53;
+            $x_tipo_calificacion += 99;
         if($this->formulario7->getTipoCalificacionId() == 4)
-            $x_tipo_calificacion += 34;
+            $x_tipo_calificacion += 139;
             //Imprimimos X del tipo de tramite
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_tipo_calificacion, $y+=5, true);
         
