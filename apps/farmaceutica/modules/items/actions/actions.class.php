@@ -47,7 +47,31 @@ class itemsActions extends autoItemsActions
         
     }
     
-    protected function processForm(sfWebRequest $request, sfForm $form)
+    public function executeDelete(sfWebRequest $request)
+    {
+      $request->checkCSRFProtection();
+
+      $this->dispatcher->notify(new sfEvent($this, 'admin.delete_object', array('object' => $this->getRoute()->getObject())));
+
+      if ($this->getRoute()->getObject()->delete())
+      {
+        /*Actualizamos los items y las fojas al formulario11*/
+        $items = ItemTable::ContarItems();
+        $fojas = ItemTable::getFojas($items);
+        
+        $form11 = $this->getUser()->getAttribute('form11');
+        $form11->setNumeroItem($items);
+        $form11->setFoja($fojas);
+        $form11->save();
+        $this->getUser()->setFlash('notice', 'The item was deleted successfully.');
+      }
+
+      $this->redirect('@item');
+    }
+    
+
+  
+  protected function processForm(sfWebRequest $request, sfForm $form)
   {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
@@ -61,7 +85,7 @@ class itemsActions extends autoItemsActions
         $fojas = ItemTable::getFojas($items);
         
         $form11 = $this->getUser()->getAttribute('form11');
-        $form11->setNumeroItem($item);
+        $form11->setNumeroItem($items);
         $form11->setFoja($fojas);
         $form11->save();
         } catch (Doctrine_Validator_Exception $e) {
