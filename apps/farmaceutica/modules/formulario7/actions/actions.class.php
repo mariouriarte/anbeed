@@ -69,7 +69,7 @@ class formulario7Actions extends autoFormulario7Actions
         
         //Revisamos el tipo de tramite
             // inicializamos en el primero
-        $x_tipo_calificacion = $x+57; 
+        $x_tipo_calificacion = $x+51; 
         if($this->formulario7->getTipoCalificacionId() == 2)
             $x_tipo_calificacion += 46;
         if($this->formulario7->getTipoCalificacionId() == 3)
@@ -128,7 +128,7 @@ class formulario7Actions extends autoFormulario7Actions
 
         //Datos del Formulario
         $pdf->MultiCell(145, 0, $this->formulario7->ViaAdministracion->getNombre(),
-            0, 'L', 0, 0, $x+60, $y+=39, true);
+            0, 'L', 0, 0, $x+60, $y+=38, true);
         $pdf->MultiCell(145, 10, $this->formulario7->getAccionTerapeutica(),
             0, 'L', 0, 0, $x+56, $y+=4, true);
         $pdf->MultiCell(165, 15, $this->formulario7->getDosis(),

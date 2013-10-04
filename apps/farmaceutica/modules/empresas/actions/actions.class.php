@@ -71,7 +71,7 @@ class empresasActions extends autoEmpresasActions
             0, 'L', 0, 0, $x+35, $y+=7, true);
         $pdf->MultiCell(160, 0, $this->empresa->getTelefono1().
             '  -  '.$this->empresa->getTelefono2(), 
-            0, 'L', 0, 0, $x+40, $y+=7, true);
+            0, 'L', 0, 0, $x+40, $y+=6, true);
         $pdf->MultiCell(165, 0, $this->empresa->getEmail(), 
             0, 'L', 0, 0, $x+35, $y+=8, true);
         $pdf->MultiCell(135, 0, $this->empresa->getActividad(),
