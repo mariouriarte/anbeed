@@ -1,1057 +1,2391 @@
 Pais:
   Pais_1:
-    nombre: AFGANISTAN
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ABW
+    nombre: Aruba
+    continente: ---
+    region: Caribbean
+    poblacion: 103000
+    jefe_estado: Beatrix
+    capital: 129
+    
+    
   Pais_2:
-    nombre: ALBANIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: AFG
+    nombre: Afghanistan
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 22720000
+    jefe_estado: Mohammad Omar
+    capital: 1
+    
+    
   Pais_3:
-    nombre: ALEMANIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: AGO
+    nombre: Angola
+    continente: África
+    region: Central Africa
+    poblacion: 12878000
+    jefe_estado: José Eduardo dos Santos
+    capital: 56
+    
+    
   Pais_4:
-    nombre: 'ALTO VOLTA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: AIA
+    nombre: Anguilla
+    continente: ---
+    region: Caribbean
+    poblacion: 8000
+    jefe_estado: Elisabeth II
+    capital: 62
+    
+    
   Pais_5:
-    nombre: ANDORRA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ALB
+    nombre: Albania
+    continente: Europa
+    region: Southern Europe
+    poblacion: 3401200
+    jefe_estado: Rexhep Mejdani
+    capital: 34
+    
+    
   Pais_6:
-    nombre: ANGOLA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: AND
+    nombre: Andorra
+    continente: Europa
+    region: Southern Europe
+    poblacion: 78000
+    jefe_estado: ---
+    capital: 55
+    
+    
   Pais_7:
-    nombre: ANTARTIDA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ANT
+    nombre: Netherlands Antilles
+    continente: ---
+    region: Caribbean
+    poblacion: 217000
+    jefe_estado: Beatrix
+    capital: 33
+    
+    
   Pais_8:
-    nombre: ANTIGUA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ARE
+    nombre: United Arab Emirates
+    continente: Asia
+    region: Middle East
+    poblacion: 2441000
+    jefe_estado: Zayid bin Sultan al-Nahayan
+    capital: 65
+    
+    
   Pais_9:
-    nombre: 'ANTILLAS NEERLANDESAS'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ARG
+    nombre: Argentina
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 37032000
+    jefe_estado: Fernando de la Rúa
+    capital: 69
+    
+    
   Pais_10:
-    nombre: 'ARABIA SAUDITA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ARM
+    nombre: Armenia
+    continente: Asia
+    region: Middle East
+    poblacion: 3520000
+    jefe_estado: Robert Kotšarjan
+    capital: 126
+    
+    
   Pais_11:
-    nombre: ARGELIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ASM
+    nombre: American Samoa
+    continente: Oceania
+    region: Polynesia
+    poblacion: 68000
+    jefe_estado: George W. Bush
+    capital: 54
+    
+    
   Pais_12:
-    nombre: ARGENTINA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ATA
+    nombre: Antartida
+    continente: Antártida
+    region: Antartida
+    poblacion: 0
+    jefe_estado: ---
+    capital: null
+    
+    
   Pais_13:
-    nombre: AUSTRALIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ATF
+    nombre: French Southern territories
+    continente: Antártida
+    region: Antartida
+    poblacion: 0
+    jefe_estado: Jacques Chirac
+    capital: null
+    
+    
   Pais_14:
-    nombre: AUSTRIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ATG
+    nombre: Antigua and Barbuda
+    continente: ---
+    region: Caribbean
+    poblacion: 68000
+    jefe_estado: Elisabeth II
+    capital: 63
+    
+    
   Pais_15:
-    nombre: BAHAMAS
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: AUS
+    nombre: Australia
+    continente: Oceania
+    region: Australia and New Zealand
+    poblacion: 18886000
+    jefe_estado: Elisabeth II
+    capital: 135
+    
+    
   Pais_16:
-    nombre: BAHREIN
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: AUT
+    nombre: Austria
+    continente: Europa
+    region: Western Europe
+    poblacion: 8091800
+    jefe_estado: Thomas Klestil
+    capital: 1523
+    
+    
   Pais_17:
-    nombre: BANGLADESH
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: AZE
+    nombre: Azerbaijan
+    continente: Asia
+    region: Middle East
+    poblacion: 7734000
+    jefe_estado: Heydär Äliyev
+    capital: 144
+    
+    
   Pais_18:
-    nombre: BARBADOS
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BDI
+    nombre: Burundi
+    continente: África
+    region: Eastern Africa
+    poblacion: 6695000
+    jefe_estado: Pierre Buyoya
+    capital: 552
+    
+    
   Pais_19:
-    nombre: BELGICA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BEL
+    nombre: Belgium
+    continente: Europa
+    region: Western Europe
+    poblacion: 10239000
+    jefe_estado: Albert II
+    capital: 179
+    
+    
   Pais_20:
-    nombre: BELICE
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BEN
+    nombre: Benin
+    continente: África
+    region: Western Africa
+    poblacion: 6097000
+    jefe_estado: Mathieu Kérékou
+    capital: 187
+    
+    
   Pais_21:
-    nombre: BERMUDAS
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BFA
+    nombre: Burkina Faso
+    continente: África
+    region: Western Africa
+    poblacion: 11937000
+    jefe_estado: Blaise Compaoré
+    capital: 549
+    
+    
   Pais_22:
-    nombre: BIRMANIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BGD
+    nombre: Bangladesh
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 129155000
+    jefe_estado: Shahabuddin Ahmad
+    capital: 150
+    
+    
   Pais_23:
-    nombre: BOLIVIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BGR
+    nombre: Bulgaria
+    continente: Europa
+    region: Eastern Europe
+    poblacion: 8190900
+    jefe_estado: Petar Stojanov
+    capital: 539
+    
+    
   Pais_24:
-    nombre: BOTSWANA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BHR
+    nombre: Bahrain
+    continente: Asia
+    region: Middle East
+    poblacion: 617000
+    jefe_estado: Hamad ibn Isa al-Khalifa
+    capital: 149
+    
+    
   Pais_25:
-    nombre: BRASIL
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BHS
+    nombre: Bahamas
+    continente: ---
+    region: Caribbean
+    poblacion: 307000
+    jefe_estado: Elisabeth II
+    capital: 148
+    
+    
   Pais_26:
-    nombre: BRUNEI
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BIH
+    nombre: Bosnia and Herzegovina
+    continente: Europa
+    region: Southern Europe
+    poblacion: 3972000
+    jefe_estado: Ante Jelavic
+    capital: 201
+    
+    
   Pais_27:
-    nombre: BULGARIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BLR
+    nombre: Belarus
+    continente: Europa
+    region: Eastern Europe
+    poblacion: 10236000
+    jefe_estado: Aljaksandr Lukašenka
+    capital: 3520
+    
+    
   Pais_28:
-    nombre: BURUNDI
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BLZ
+    nombre: Belize
+    continente: ---
+    region: Central America
+    poblacion: 241000
+    jefe_estado: Elisabeth II
+    capital: 185
+    
+    
   Pais_29:
-    nombre: BUTAN
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BMU
+    nombre: Bermuda
+    continente: ---
+    region: Norte America
+    poblacion: 65000
+    jefe_estado: Elisabeth II
+    capital: 191
+    
+    
   Pais_30:
-    nombre: CAMERUN
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BOL
+    nombre: Bolivia
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 8329000
+    jefe_estado: Hugo Bánzer Suárez
+    capital: 194
+    
+    
   Pais_31:
-    nombre: CANADA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BRA
+    nombre: Brazil
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 170115000
+    jefe_estado: Fernando Henrique Cardoso
+    capital: 211
+    
+    
   Pais_32:
-    nombre: CHAD
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BRB
+    nombre: Barbados
+    continente: ---
+    region: Caribbean
+    poblacion: 270000
+    jefe_estado: Elisabeth II
+    capital: 174
+    
+    
   Pais_33:
-    nombre: CHECOSLOVAQUIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BRN
+    nombre: Brunei
+    continente: Asia
+    region: Southeast Asia
+    poblacion: 328000
+    jefe_estado: Haji Hassan al-Bolkiah
+    capital: 538
+    
+    
   Pais_34:
-    nombre: CHILE
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BTN
+    nombre: Bhutan
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 2124000
+    jefe_estado: Jigme Singye Wangchuk
+    capital: 192
+    
+    
   Pais_35:
-    nombre: CHINA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BVT
+    nombre: Bouvet Island
+    continente: Antártida
+    region: Antartida
+    poblacion: 0
+    jefe_estado: Harald V
+    capital: null
+    
+    
   Pais_36:
-    nombre: CHIPRE
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: BWA
+    nombre: Botswana
+    continente: África
+    region: Southern Africa
+    poblacion: 1622000
+    jefe_estado: Festus G. Mogae
+    capital: 204
+    
+    
   Pais_37:
-    nombre: 'CIUDAD DEL VATICANO'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CAF
+    nombre: Central African Republic
+    continente: África
+    region: Central Africa
+    poblacion: 3615000
+    jefe_estado: Ange-Félix Patassé
+    capital: 1889
+    
+    
   Pais_38:
-    nombre: COLOMBIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CAN
+    nombre: Canada
+    continente: ---
+    region: Norte America
+    poblacion: 31147000
+    jefe_estado: Elisabeth II
+    capital: 1822
+    
+    
   Pais_39:
-    nombre: CONGO
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CCK
+    nombre: Cocos (Keeling) Islands
+    continente: Oceania
+    region: Australia and New Zealand
+    poblacion: 600
+    jefe_estado: Elisabeth II
+    capital: 2317
+    
+    
   Pais_40:
-    nombre: 'COREA, REP.DEMOCRATICA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CHE
+    nombre: Switzerland
+    continente: Europa
+    region: Western Europe
+    poblacion: 7160400
+    jefe_estado: Adolf Ogi
+    capital: 3248
+    
+    
   Pais_41:
-    nombre: 'COREA, REPUBLICA DE'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CHL
+    nombre: Chile
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 15211000
+    jefe_estado: Ricardo Lagos Escobar
+    capital: 554
+    
+    
   Pais_42:
-    nombre: 'COSTA DE MARFIL'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CHN
+    nombre: China
+    continente: Asia
+    region: Eastern Asia
+    poblacion: 1277558000
+    jefe_estado: Jiang Zemin
+    capital: 1891
+    
+    
   Pais_43:
-    nombre: 'COSTA RICA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CIV
+    nombre: Côte d’Ivoire
+    continente: África
+    region: Western Africa
+    poblacion: 14786000
+    jefe_estado: Laurent Gbagbo
+    capital: 2814
+    
+    
   Pais_44:
-    nombre: CUBA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CMR
+    nombre: Cameroon
+    continente: África
+    region: Central Africa
+    poblacion: 15085000
+    jefe_estado: Paul Biya
+    capital: 1804
+    
+    
   Pais_45:
-    nombre: DINAMARCA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: COD
+    nombre: Congo, The Democratic Republic of the
+    continente: África
+    region: Central Africa
+    poblacion: 51654000
+    jefe_estado: Joseph Kabila
+    capital: 2298
+    
+    
   Pais_46:
-    nombre: 'DOC. TEORICOS O METODOLOGICOS'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: COG
+    nombre: Congo
+    continente: África
+    region: Central Africa
+    poblacion: 2943000
+    jefe_estado: Denis Sassou-Nguesso
+    capital: 2296
+    
+    
   Pais_47:
-    nombre: DOMINICA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: COK
+    nombre: Cook Islands
+    continente: Oceania
+    region: Polynesia
+    poblacion: 20000
+    jefe_estado: Elisabeth II
+    capital: 583
+    
+    
   Pais_48:
-    nombre: ECUADOR
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: COL
+    nombre: Colombia
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 42321000
+    jefe_estado: Andrés Pastrana Arango
+    capital: 2257
+    
+    
   Pais_49:
-    nombre: EGIPTO
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: COM
+    nombre: Comoros
+    continente: África
+    region: Eastern Africa
+    poblacion: 578000
+    jefe_estado: Azali Assoumani
+    capital: 2295
+    
+    
   Pais_50:
-    nombre: 'EL SALVADOR'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CPV
+    nombre: Cape Verde
+    continente: África
+    region: Western Africa
+    poblacion: 428000
+    jefe_estado: António Mascarenhas Monteiro
+    capital: 1859
+    
+    
   Pais_51:
-    nombre: 'EMIRATOS ARABES UNIDOS'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CRI
+    nombre: Costa Rica
+    continente: ---
+    region: Central America
+    poblacion: 4023000
+    jefe_estado: Miguel Ángel Rodríguez Echeverría
+    capital: 584
+    
+    
   Pais_52:
-    nombre: ESPAÑA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CUB
+    nombre: Cuba
+    continente: ---
+    region: Caribbean
+    poblacion: 11201000
+    jefe_estado: Fidel Castro Ruz
+    capital: 2413
+    
+    
   Pais_53:
-    nombre: 'ESTADOS UNIDOS'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CXR
+    nombre: Christmas Island
+    continente: Oceania
+    region: Australia and New Zealand
+    poblacion: 2500
+    jefe_estado: Elisabeth II
+    capital: 1791
+    
+    
   Pais_54:
-    nombre: ETIOPIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CYM
+    nombre: Cayman Islands
+    continente: ---
+    region: Caribbean
+    poblacion: 38000
+    jefe_estado: Elisabeth II
+    capital: 553
+    
+    
   Pais_55:
-    nombre: FIJI
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CYP
+    nombre: Cyprus
+    continente: Asia
+    region: Middle East
+    poblacion: 754700
+    jefe_estado: Glafkos Klerides
+    capital: 2430
+    
+    
   Pais_56:
-    nombre: FILIPINAS
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: CZE
+    nombre: Czech Republic
+    continente: Europa
+    region: Eastern Europe
+    poblacion: 10278100
+    jefe_estado: Václav Havel
+    capital: 3339
+    
+    
   Pais_57:
-    nombre: FINLANDIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: DEU
+    nombre: Germany
+    continente: Europa
+    region: Western Europe
+    poblacion: 82164700
+    jefe_estado: Johannes Rau
+    capital: 3068
+    
+    
   Pais_58:
-    nombre: FRANCIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: DJI
+    nombre: Djibouti
+    continente: África
+    region: Eastern Africa
+    poblacion: 638000
+    jefe_estado: Ismail Omar Guelleh
+    capital: 585
+    
+    
   Pais_59:
-    nombre: GABON
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: DMA
+    nombre: Dominica
+    continente: ---
+    region: Caribbean
+    poblacion: 71000
+    jefe_estado: Vernon Shaw
+    capital: 586
+    
+    
   Pais_60:
-    nombre: GHANA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: DNK
+    nombre: Denmark
+    continente: Europa
+    region: Nordic Countries
+    poblacion: 5330000
+    jefe_estado: Margrethe II
+    capital: 3315
+    
+    
   Pais_61:
-    nombre: 'GHINEA ECUATORIAL'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: DOM
+    nombre: Dominican Republic
+    continente: ---
+    region: Caribbean
+    poblacion: 8495000
+    jefe_estado: Hipólito Mejía Domínguez
+    capital: 587
+    
+    
   Pais_62:
-    nombre: GIBRALTAR
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: DZA
+    nombre: Algeria
+    continente: África
+    region: Northern Africa
+    poblacion: 31471000
+    jefe_estado: Abdelaziz Bouteflika
+    capital: 35
+    
+    
   Pais_63:
-    nombre: GRANADA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ECU
+    nombre: Ecuador
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 12646000
+    jefe_estado: Gustavo Noboa Bejarano
+    capital: 594
+    
+    
   Pais_64:
-    nombre: GRECIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: EGY
+    nombre: Egypt
+    continente: África
+    region: Northern Africa
+    poblacion: 68470000
+    jefe_estado: Hosni Mubarak
+    capital: 608
+    
+    
   Pais_65:
-    nombre: GROELANDIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ERI
+    nombre: Eritrea
+    continente: África
+    region: Eastern Africa
+    poblacion: 3850000
+    jefe_estado: Isayas Afewerki Isaias Afwerki
+    capital: 652
+    
+    
   Pais_66:
-    nombre: GUADALUPE
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ESH
+    nombre: Western Sahara
+    continente: África
+    region: Northern Africa
+    poblacion: 293000
+    jefe_estado: Mohammed Abdel Aziz
+    capital: 2453
+    
+    
   Pais_67:
-    nombre: GUAM
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ESP
+    nombre: Spain
+    continente: Europa
+    region: Southern Europe
+    poblacion: 39441700
+    jefe_estado: Juan Carlos I
+    capital: 653
+    
+    
   Pais_68:
-    nombre: GUATEMALA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: EST
+    nombre: Estonia
+    continente: Europa
+    region: Baltic Countries
+    poblacion: 1439200
+    jefe_estado: Lennart Meri
+    capital: 3791
+    
+    
   Pais_69:
-    nombre: HOLANDA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ETH
+    nombre: Ethiopia
+    continente: África
+    region: Eastern Africa
+    poblacion: 62565000
+    jefe_estado: Negasso Gidada
+    capital: 756
+    
+    
   Pais_70:
-    nombre: GUINEA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: FIN
+    nombre: Finland
+    continente: Europa
+    region: Nordic Countries
+    poblacion: 5171300
+    jefe_estado: Tarja Halonen
+    capital: 3236
+    
+    
   Pais_71:
-    nombre: 'GUINEA BISSAU'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: FJI
+    nombre: Fiji Islands
+    continente: Oceania
+    region: Melanesia
+    poblacion: 817000
+    jefe_estado: Josefa Iloilo
+    capital: 764
+    
+    
   Pais_72:
-    nombre: GUYANA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: FLK
+    nombre: Falkland Islands
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 2000
+    jefe_estado: Elisabeth II
+    capital: 763
+    
+    
   Pais_73:
-    nombre: HAITI
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: FRA
+    nombre: France
+    continente: Europa
+    region: Western Europe
+    poblacion: 59225700
+    jefe_estado: Jacques Chirac
+    capital: 2974
+    
+    
   Pais_74:
-    nombre: HONDURAS
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: FRO
+    nombre: Faroe Islands
+    continente: Europa
+    region: Nordic Countries
+    poblacion: 43000
+    jefe_estado: Margrethe II
+    capital: 901
+    
+    
   Pais_75:
-    nombre: 'HONG KONG'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: FSM
+    nombre: Micronesia, Federated States of
+    continente: Oceania
+    region: Micronesia
+    poblacion: 119000
+    jefe_estado: Leo A. Falcam
+    capital: 2689
+    
+    
   Pais_76:
-    nombre: HUNGRIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GAB
+    nombre: Gabon
+    continente: África
+    region: Central Africa
+    poblacion: 1226000
+    jefe_estado: Omar Bongo
+    capital: 902
+    
+    
   Pais_77:
-    nombre: INDIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GBR
+    nombre: United Kingdom
+    continente: Europa
+    region: British Islands
+    poblacion: 59623400
+    jefe_estado: Elisabeth II
+    capital: 456
+    
+    
   Pais_78:
-    nombre: INDONESIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GEO
+    nombre: Georgia
+    continente: Asia
+    region: Middle East
+    poblacion: 4968000
+    jefe_estado: Eduard Ševardnadze
+    capital: 905
+    
+    
   Pais_79:
-    nombre: 'INGLATERRA - REINO UNIDO'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GHA
+    nombre: Ghana
+    continente: África
+    region: Western Africa
+    poblacion: 20212000
+    jefe_estado: John Kufuor
+    capital: 910
+    
+    
   Pais_80:
-    nombre: IRAK
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GIB
+    nombre: Gibraltar
+    continente: Europa
+    region: Southern Europe
+    poblacion: 25000
+    jefe_estado: Elisabeth II
+    capital: 915
+    
+    
   Pais_81:
-    nombre: IRAN
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GIN
+    nombre: Guinea
+    continente: África
+    region: Western Africa
+    poblacion: 7430000
+    jefe_estado: Lansana Conté
+    capital: 926
+    
+    
   Pais_82:
-    nombre: IRLANDA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GLP
+    nombre: Guadeloupe
+    continente: ---
+    region: Caribbean
+    poblacion: 456000
+    jefe_estado: Jacques Chirac
+    capital: 919
+    
+    
   Pais_83:
-    nombre: 'ISLA BOUVET'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GMB
+    nombre: Gambia
+    continente: África
+    region: Western Africa
+    poblacion: 1305000
+    jefe_estado: Yahya Jammeh
+    capital: 904
+    
+    
   Pais_84:
-    nombre: 'ISLA DE NAVIDAD'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GNB
+    nombre: Guinea-Bissau
+    continente: África
+    region: Western Africa
+    poblacion: 1213000
+    jefe_estado: Kumba Ialá
+    capital: 927
+    
+    
   Pais_85:
-    nombre: 'ISLA JOHNSTON'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GNQ
+    nombre: Equatorial Guinea
+    continente: África
+    region: Central Africa
+    poblacion: 453000
+    jefe_estado: Teodoro Obiang Nguema Mbasogo
+    capital: 2972
+    
+    
   Pais_86:
-    nombre: 'ISLA NIUE'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GRC
+    nombre: Greece
+    continente: Europa
+    region: Southern Europe
+    poblacion: 10545700
+    jefe_estado: Kostis Stefanopoulos
+    capital: 2401
+    
+    
   Pais_87:
-    nombre: 'ISLA NORFOLK'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GRD
+    nombre: Grenada
+    continente: ---
+    region: Caribbean
+    poblacion: 94000
+    jefe_estado: Elisabeth II
+    capital: 916
+    
+    
   Pais_88:
-    nombre: 'ISLA WAKE'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GRL
+    nombre: Greenland
+    continente: ---
+    region: Norte America
+    poblacion: 56000
+    jefe_estado: Margrethe II
+    capital: 917
+    
+    
   Pais_89:
-    nombre: ISLANDIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GTM
+    nombre: Guatemala
+    continente: ---
+    region: Central America
+    poblacion: 11385000
+    jefe_estado: Alfonso Portillo Cabrera
+    capital: 922
+    
+    
   Pais_90:
-    nombre: 'ISLAS CAIMAN'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GUF
+    nombre: French Guiana
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 181000
+    jefe_estado: Jacques Chirac
+    capital: 3014
+    
+    
   Pais_91:
-    nombre: 'ISLAS CANTON Y ENDERBURY'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GUM
+    nombre: Guam
+    continente: Oceania
+    region: Micronesia
+    poblacion: 168000
+    jefe_estado: George W. Bush
+    capital: 921
+    
+    
   Pais_92:
-    nombre: 'ISLAS COCOS (KEELING)'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: GUY
+    nombre: Guyana
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 861000
+    jefe_estado: Bharrat Jagdeo
+    capital: 928
+    
+    
   Pais_93:
-    nombre: 'ISLAS COMORAS'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: HKG
+    nombre: Hong Kong
+    continente: Asia
+    region: Eastern Asia
+    poblacion: 6782000
+    jefe_estado: Jiang Zemin
+    capital: 937
+    
+    
   Pais_94:
-    nombre: 'ISLAS COOK'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: HMD
+    nombre: Heard Island and McDonald Islands
+    continente: Antártida
+    region: Antartida
+    poblacion: 0
+    jefe_estado: Elisabeth II
+    capital: null
+    
+    
   Pais_95:
-    nombre: 'ISLAS DE CABO VERDE'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: HND
+    nombre: Honduras
+    continente: ---
+    region: Central America
+    poblacion: 6485000
+    jefe_estado: Carlos Roberto Flores Facussé
+    capital: 933
+    
+    
   Pais_96:
-    nombre: 'ISLAS DEL PACIFICO'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: HRV
+    nombre: Croatia
+    continente: Europa
+    region: Southern Europe
+    poblacion: 4473000
+    jefe_estado: Štipe Mesic
+    capital: 2409
+    
+    
   Pais_97:
-    nombre: 'ISLAS DIVERSAS PACIFICO'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: HTI
+    nombre: Haiti
+    continente: ---
+    region: Caribbean
+    poblacion: 8222000
+    jefe_estado: Jean-Bertrand Aristide
+    capital: 929
+    
+    
   Pais_98:
-    nombre: 'ISLAS FOROE'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: HUN
+    nombre: Hungary
+    continente: Europa
+    region: Eastern Europe
+    poblacion: 10043200
+    jefe_estado: Ferenc Mádl
+    capital: 3483
+    
+    
   Pais_99:
-    nombre: 'ISLAS HEARD Y MC DONALD'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: IDN
+    nombre: Indonesia
+    continente: Asia
+    region: Southeast Asia
+    poblacion: 212107000
+    jefe_estado: Abdurrahman Wahid
+    capital: 939
+    
+    
   Pais_100:
-    nombre: 'ISLAS MALVINAS (FALKLAND)'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: IND
+    nombre: India
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 1013662000
+    jefe_estado: Kocheril Raman Narayanan
+    capital: 1109
+    
+    
   Pais_101:
-    nombre: 'ISLAS MIDWAY'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: IOT
+    nombre: British Indian Ocean Territory
+    continente: África
+    region: Eastern Africa
+    poblacion: 0
+    jefe_estado: Elisabeth II
+    capital: null
+    
+    
   Pais_102:
-    nombre: 'ISLAS PITCAIRN'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: IRL
+    nombre: Ireland
+    continente: Europa
+    region: British Islands
+    poblacion: 3775100
+    jefe_estado: Mary McAleese
+    capital: 1447
+    
+    
   Pais_103:
-    nombre: 'ISLAS SALOMON BRITANICO'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: IRN
+    nombre: Iran
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 67702000
+    jefe_estado: Ali Mohammad Khatami-Ardakani
+    capital: 1380
+    
+    
   Pais_104:
-    nombre: 'ISLAS SVALBARD Y J. MAYEN'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: IRQ
+    nombre: Iraq
+    continente: Asia
+    region: Middle East
+    poblacion: 23115000
+    jefe_estado: Saddam Hussein al-Takriti
+    capital: 1365
+    
+    
   Pais_105:
-    nombre: 'ISLAS TOKELAU'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ISL
+    nombre: Iceland
+    continente: Europa
+    region: Nordic Countries
+    poblacion: 279000
+    jefe_estado: Ólafur Ragnar Grímsson
+    capital: 1449
+    
+    
   Pais_106:
-    nombre: 'ISLAS TURCAS Y CAICOS'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ISR
+    nombre: Israel
+    continente: Asia
+    region: Middle East
+    poblacion: 6217000
+    jefe_estado: Moshe Katzav
+    capital: 1450
+    
+    
   Pais_107:
-    nombre: 'ISLAS VIRGENES BRITANICAS'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ITA
+    nombre: Italy
+    continente: Europa
+    region: Southern Europe
+    poblacion: 57680000
+    jefe_estado: Carlo Azeglio Ciampi
+    capital: 1464
+    
+    
   Pais_108:
-    nombre: 'ISLAS WALLIS Y FUTUNA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: JAM
+    nombre: Jamaica
+    continente: ---
+    region: Caribbean
+    poblacion: 2583000
+    jefe_estado: Elisabeth II
+    capital: 1530
+    
+    
   Pais_109:
-    nombre: ISRAEL
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: JOR
+    nombre: Jordan
+    continente: Asia
+    region: Middle East
+    poblacion: 5083000
+    jefe_estado: Abdullah II
+    capital: 1786
+    
+    
   Pais_110:
-    nombre: ITALIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: JPN
+    nombre: Japan
+    continente: Asia
+    region: Eastern Asia
+    poblacion: 126714000
+    jefe_estado: Akihito
+    capital: 1532
+    
+    
   Pais_111:
-    nombre: JAMAICA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: KAZ
+    nombre: Kazakstan
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 16223000
+    jefe_estado: Nursultan Nazarbajev
+    capital: 1864
+    
+    
   Pais_112:
-    nombre: JAPON
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: KEN
+    nombre: Kenya
+    continente: África
+    region: Eastern Africa
+    poblacion: 30080000
+    jefe_estado: Daniel arap Moi
+    capital: 1881
+    
+    
   Pais_113:
-    nombre: JORDANIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: KGZ
+    nombre: Kyrgyzstan
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 4699000
+    jefe_estado: Askar Akajev
+    capital: 2253
+    
+    
   Pais_114:
-    nombre: 'KAMPUCHEA DEMOCRATICA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: KHM
+    nombre: Cambodia
+    continente: Asia
+    region: Southeast Asia
+    poblacion: 11168000
+    jefe_estado: Norodom Sihanouk
+    capital: 1800
+    
+    
   Pais_115:
-    nombre: KENIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: KIR
+    nombre: Kiribati
+    continente: Oceania
+    region: Micronesia
+    poblacion: 83000
+    jefe_estado: Teburoro Tito
+    capital: 2256
+    
+    
   Pais_116:
-    nombre: KUWAIT
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: KNA
+    nombre: Saint Kitts and Nevis
+    continente: ---
+    region: Caribbean
+    poblacion: 38000
+    jefe_estado: Elisabeth II
+    capital: 3064
+    
+    
   Pais_117:
-    nombre: LAOS
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: KOR
+    nombre: South Korea
+    continente: Asia
+    region: Eastern Asia
+    poblacion: 46844000
+    jefe_estado: Kim Dae-jung
+    capital: 2331
+    
+    
   Pais_118:
-    nombre: LESOTHO
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: KWT
+    nombre: Kuwait
+    continente: Asia
+    region: Middle East
+    poblacion: 1972000
+    jefe_estado: Jabir al-Ahmad al-Jabir al-Sabah
+    capital: 2429
+    
+    
   Pais_119:
-    nombre: LIBANO
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: LAO
+    nombre: Laos
+    continente: Asia
+    region: Southeast Asia
+    poblacion: 5433000
+    jefe_estado: Khamtay Siphandone
+    capital: 2432
+    
+    
   Pais_120:
-    nombre: LIBERIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: LBN
+    nombre: Lebanon
+    continente: Asia
+    region: Middle East
+    poblacion: 3282000
+    jefe_estado: Émile Lahoud
+    capital: 2438
+    
+    
   Pais_121:
-    nombre: LIBIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: LBR
+    nombre: Liberia
+    continente: África
+    region: Western Africa
+    poblacion: 3154000
+    jefe_estado: Charles Taylor
+    capital: 2440
+    
+    
   Pais_122:
-    nombre: LIECHTENSTEIN
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: LBY
+    nombre: Libyan Arab Jamahiriya
+    continente: África
+    region: Northern Africa
+    poblacion: 5605000
+    jefe_estado: Muammar al-Qadhafi
+    capital: 2441
+    
+    
   Pais_123:
-    nombre: LUXEMBURGO
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: LCA
+    nombre: Saint Lucia
+    continente: ---
+    region: Caribbean
+    poblacion: 154000
+    jefe_estado: Elisabeth II
+    capital: 3065
+    
+    
   Pais_124:
-    nombre: MACAO
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: LIE
+    nombre: Liechtenstein
+    continente: Europa
+    region: Western Europe
+    poblacion: 32300
+    jefe_estado: Hans-Adam II
+    capital: 2446
+    
+    
   Pais_125:
-    nombre: MADAGASCAR
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: LKA
+    nombre: Sri Lanka
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 18827000
+    jefe_estado: Chandrika Kumaratunga
+    capital: 3217
+    
+    
   Pais_126:
-    nombre: MALASIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: LSO
+    nombre: Lesotho
+    continente: África
+    region: Southern Africa
+    poblacion: 2153000
+    jefe_estado: Letsie III
+    capital: 2437
+    
+    
   Pais_127:
-    nombre: MALAWI
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: LTU
+    nombre: Lithuania
+    continente: Europa
+    region: Baltic Countries
+    poblacion: 3698500
+    jefe_estado: Valdas Adamkus
+    capital: 2447
+    
+    
   Pais_128:
-    nombre: MALDIVAS
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: LUX
+    nombre: Luxembourg
+    continente: Europa
+    region: Western Europe
+    poblacion: 435700
+    jefe_estado: Henri
+    capital: 2452
+    
+    
   Pais_129:
-    nombre: MALI
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: LVA
+    nombre: Latvia
+    continente: Europa
+    region: Baltic Countries
+    poblacion: 2424200
+    jefe_estado: Vaira Vike-Freiberga
+    capital: 2434
+    
+    
   Pais_130:
-    nombre: MALTA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MAC
+    nombre: Macao
+    continente: Asia
+    region: Eastern Asia
+    poblacion: 473000
+    jefe_estado: Jiang Zemin
+    capital: 2454
+    
+    
   Pais_131:
-    nombre: MARRUECOS
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MAR
+    nombre: Morocco
+    continente: África
+    region: Northern Africa
+    poblacion: 28351000
+    jefe_estado: Mohammed VI
+    capital: 2486
+    
+    
   Pais_132:
-    nombre: MARTINICA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MCO
+    nombre: Monaco
+    continente: Europa
+    region: Western Europe
+    poblacion: 34000
+    jefe_estado: Rainier III
+    capital: 2695
+    
+    
   Pais_133:
-    nombre: MAURICIO
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MDA
+    nombre: Moldova
+    continente: Europa
+    region: Eastern Europe
+    poblacion: 4380000
+    jefe_estado: Vladimir Voronin
+    capital: 2690
+    
+    
   Pais_134:
-    nombre: MAURITANIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MDG
+    nombre: Madagascar
+    continente: África
+    region: Eastern Africa
+    poblacion: 15942000
+    jefe_estado: Didier Ratsiraka
+    capital: 2455
+    
+    
   Pais_135:
-    nombre: MEXICO
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MDV
+    nombre: Maldives
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 286000
+    jefe_estado: Maumoon Abdul Gayoom
+    capital: 2463
+    
+    
   Pais_136:
-    nombre: MONACO
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MEX
+    nombre: Mexico
+    continente: ---
+    region: Central America
+    poblacion: 98881000
+    jefe_estado: Vicente Fox Quesada
+    capital: 2515
+    
+    
   Pais_137:
-    nombre: MONGOLIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MHL
+    nombre: Marshall Islands
+    continente: Oceania
+    region: Micronesia
+    poblacion: 64000
+    jefe_estado: Kessai Note
+    capital: 2507
+    
+    
   Pais_138:
-    nombre: MONTSERRAT
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MKD
+    nombre: Macedonia
+    continente: Europa
+    region: Southern Europe
+    poblacion: 2024000
+    jefe_estado: Boris Trajkovski
+    capital: 2460
+    
+    
   Pais_139:
-    nombre: MOZAMBIQUE
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MLI
+    nombre: Mali
+    continente: África
+    region: Western Africa
+    poblacion: 11234000
+    jefe_estado: Alpha Oumar Konaré
+    capital: 2482
+    
+    
   Pais_140:
-    nombre: NAMIBIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MLT
+    nombre: Malta
+    continente: Europa
+    region: Southern Europe
+    poblacion: 380200
+    jefe_estado: Guido de Marco
+    capital: 2484
+    
+    
   Pais_141:
-    nombre: NAURU
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MMR
+    nombre: Myanmar
+    continente: Asia
+    region: Southeast Asia
+    poblacion: 45611000
+    jefe_estado: kenraali Than Shwe
+    capital: 2710
+    
+    
   Pais_142:
-    nombre: NEPAL
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MNG
+    nombre: Mongolia
+    continente: Asia
+    region: Eastern Asia
+    poblacion: 2662000
+    jefe_estado: Natsagiin Bagabandi
+    capital: 2696
+    
+    
   Pais_143:
-    nombre: NICARAGUA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MNP
+    nombre: Northern Mariana Islands
+    continente: Oceania
+    region: Micronesia
+    poblacion: 78000
+    jefe_estado: George W. Bush
+    capital: 2913
+    
+    
   Pais_144:
-    nombre: NIGER
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MOZ
+    nombre: Mozambique
+    continente: África
+    region: Eastern Africa
+    poblacion: 19680000
+    jefe_estado: Joaquím A. Chissano
+    capital: 2698
+    
+    
   Pais_145:
-    nombre: NIGERIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MRT
+    nombre: Mauritania
+    continente: África
+    region: Western Africa
+    poblacion: 2670000
+    jefe_estado: Maaouiya Ould Sid´Ahmad Taya
+    capital: 2509
+    
+    
   Pais_146:
-    nombre: NORUEGA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MSR
+    nombre: Montserrat
+    continente: ---
+    region: Caribbean
+    poblacion: 11000
+    jefe_estado: Elisabeth II
+    capital: 2697
+    
+    
   Pais_147:
-    nombre: 'NUEVA CALEDONIA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MTQ
+    nombre: Martinique
+    continente: ---
+    region: Caribbean
+    poblacion: 395000
+    jefe_estado: Jacques Chirac
+    capital: 2508
+    
+    
   Pais_148:
-    nombre: 'NUEVA ZELANDIA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MUS
+    nombre: Mauritius
+    continente: África
+    region: Eastern Africa
+    poblacion: 1158000
+    jefe_estado: Cassam Uteem
+    capital: 2511
+    
+    
   Pais_149:
-    nombre: 'NUEVAS HEBRIDAS'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MWI
+    nombre: Malawi
+    continente: África
+    region: Eastern Africa
+    poblacion: 10925000
+    jefe_estado: Bakili Muluzi
+    capital: 2462
+    
+    
   Pais_150:
-    nombre: OMAN
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MYS
+    nombre: Malaysia
+    continente: Asia
+    region: Southeast Asia
+    poblacion: 22244000
+    jefe_estado: Salahuddin Abdul Aziz Shah Alhaj
+    capital: 2464
+    
+    
   Pais_151:
-    nombre: 'PAISES BAJOS'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: MYT
+    nombre: Mayotte
+    continente: África
+    region: Eastern Africa
+    poblacion: 149000
+    jefe_estado: Jacques Chirac
+    capital: 2514
+    
+    
   Pais_152:
-    nombre: PAKISTAN
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: NAM
+    nombre: Namibia
+    continente: África
+    region: Southern Africa
+    poblacion: 1726000
+    jefe_estado: Sam Nujoma
+    capital: 2726
+    
+    
   Pais_153:
-    nombre: PANAMA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: NCL
+    nombre: New Caledonia
+    continente: Oceania
+    region: Melanesia
+    poblacion: 214000
+    jefe_estado: Jacques Chirac
+    capital: 3493
+    
+    
   Pais_154:
-    nombre: 'PAPUA NUEVA GUINEA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: NER
+    nombre: Niger
+    continente: África
+    region: Western Africa
+    poblacion: 10730000
+    jefe_estado: Mamadou Tandja
+    capital: 2738
+    
+    
   Pais_155:
-    nombre: PARAGUAY
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: NFK
+    nombre: Norfolk Island
+    continente: Oceania
+    region: Australia and New Zealand
+    poblacion: 2000
+    jefe_estado: Elisabeth II
+    capital: 2806
+    
+    
   Pais_156:
-    nombre: PERU
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: NGA
+    nombre: Nigeria
+    continente: África
+    region: Western Africa
+    poblacion: 111506000
+    jefe_estado: Olusegun Obasanjo
+    capital: 2754
+    
+    
   Pais_157:
-    nombre: 'POLINESIA FRANCESA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: NIC
+    nombre: Nicaragua
+    continente: ---
+    region: Central America
+    poblacion: 5074000
+    jefe_estado: Arnoldo Alemán Lacayo
+    capital: 2734
+    
+    
   Pais_158:
-    nombre: POLONIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: NIU
+    nombre: Niue
+    continente: Oceania
+    region: Polynesia
+    poblacion: 2000
+    jefe_estado: Elisabeth II
+    capital: 2805
+    
+    
   Pais_159:
-    nombre: PORTUGAL
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: NLD
+    nombre: Netherlands
+    continente: Europa
+    region: Western Europe
+    poblacion: 15864000
+    jefe_estado: Beatrix
+    capital: 5
+    
+    
   Pais_160:
-    nombre: 'PUERTO RICO'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: NOR
+    nombre: Norway
+    continente: Europa
+    region: Nordic Countries
+    poblacion: 4478500
+    jefe_estado: Harald V
+    capital: 2807
+    
+    
   Pais_161:
-    nombre: QATAR
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: NPL
+    nombre: Nepal
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 23930000
+    jefe_estado: Gyanendra Bir Bikram
+    capital: 2729
+    
+    
   Pais_162:
-    nombre: 'REP. CENTROAFRICANA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: NRU
+    nombre: Nauru
+    continente: Oceania
+    region: Micronesia
+    poblacion: 12000
+    jefe_estado: Bernard Dowiyogo
+    capital: 2728
+    
+    
   Pais_163:
-    nombre: 'REPUBLICA DOMINICANA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: NZL
+    nombre: New Zealand
+    continente: Oceania
+    region: Australia and New Zealand
+    poblacion: 3862000
+    jefe_estado: Elisabeth II
+    capital: 3499
+    
+    
   Pais_164:
-    nombre: REUNION
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: OMN
+    nombre: Oman
+    continente: Asia
+    region: Middle East
+    poblacion: 2542000
+    jefe_estado: Qabus ibn Sa´id
+    capital: 2821
+    
+    
   Pais_165:
-    nombre: 'RSS DE BIELORRUSIA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PAK
+    nombre: Pakistan
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 156483000
+    jefe_estado: Mohammad Rafiq Tarar
+    capital: 2831
+    
+    
   Pais_166:
-    nombre: 'RSS DE UCRANIA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PAN
+    nombre: Panama
+    continente: ---
+    region: Central America
+    poblacion: 2856000
+    jefe_estado: Mireya Elisa Moscoso Rodríguez
+    capital: 2882
+    
+    
   Pais_167:
-    nombre: RUMANIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PCN
+    nombre: Pitcairn
+    continente: Oceania
+    region: Polynesia
+    poblacion: 50
+    jefe_estado: Elisabeth II
+    capital: 2912
+    
+    
   Pais_168:
-    nombre: RWANDA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PER
+    nombre: Peru
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 25662000
+    jefe_estado: Valentin Paniagua Corazao
+    capital: 2890
+    
+    
   Pais_169:
-    nombre: 'SAHARA OCCIDENTAL'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PHL
+    nombre: Philippines
+    continente: Asia
+    region: Southeast Asia
+    poblacion: 75967000
+    jefe_estado: Gloria Macapagal-Arroyo
+    capital: 766
+    
+    
   Pais_170:
-    nombre: 'SAMOA AMERICANA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PLW
+    nombre: Palau
+    continente: Oceania
+    region: Micronesia
+    poblacion: 19000
+    jefe_estado: Kuniwo Nakamura
+    capital: 2881
+    
+    
   Pais_171:
-    nombre: 'SAMOA OCCIDENTAL'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PNG
+    nombre: Papua New Guinea
+    continente: Oceania
+    region: Melanesia
+    poblacion: 4807000
+    jefe_estado: Elisabeth II
+    capital: 2884
+    
+    
   Pais_172:
-    nombre: 'SAN CRISTOBAL-NIEVES-ANG.'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: POL
+    nombre: Poland
+    continente: Europa
+    region: Eastern Europe
+    poblacion: 38653600
+    jefe_estado: Aleksander Kwasniewski
+    capital: 2928
+    
+    
   Pais_173:
-    nombre: 'SAN MARINO'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PRI
+    nombre: Puerto Rico
+    continente: ---
+    region: Caribbean
+    poblacion: 3869000
+    jefe_estado: George W. Bush
+    capital: 2919
+    
+    
   Pais_174:
-    nombre: 'SAN PEDRO Y MIGUELON'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PRK
+    nombre: North Korea
+    continente: Asia
+    region: Eastern Asia
+    poblacion: 24039000
+    jefe_estado: Kim Jong-il
+    capital: 2318
+    
+    
   Pais_175:
-    nombre: 'SAN VICENTE'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PRT
+    nombre: Portugal
+    continente: Europa
+    region: Southern Europe
+    poblacion: 9997600
+    jefe_estado: Jorge Sampãio
+    capital: 2914
+    
+    
   Pais_176:
-    nombre: 'SANTA ELENA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PRY
+    nombre: Paraguay
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 5496000
+    jefe_estado: Luis Ángel González Macchi
+    capital: 2885
+    
+    
   Pais_177:
-    nombre: 'SANTA LUCIA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PSE
+    nombre: Palestine
+    continente: Asia
+    region: Middle East
+    poblacion: 3101000
+    jefe_estado: Yasser (Yasir) Arafat
+    capital: 4074
+    
+    
   Pais_178:
-    nombre: 'SANTO TOME Y PRINCIPE'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: PYF
+    nombre: French Polynesia
+    continente: Oceania
+    region: Polynesia
+    poblacion: 235000
+    jefe_estado: Jacques Chirac
+    capital: 3016
+    
+    
   Pais_179:
-    nombre: SENEGAL
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: QAT
+    nombre: Qatar
+    continente: Asia
+    region: Middle East
+    poblacion: 599000
+    jefe_estado: Hamad ibn Khalifa al-Thani
+    capital: 2973
+    
+    
   Pais_180:
-    nombre: SEYCHELLES
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: REU
+    nombre: Réunion
+    continente: África
+    region: Eastern Africa
+    poblacion: 699000
+    jefe_estado: Jacques Chirac
+    capital: 3017
+    
+    
   Pais_181:
-    nombre: 'SIERRA LEONA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: ROM
+    nombre: Romania
+    continente: Europa
+    region: Eastern Europe
+    poblacion: 22455500
+    jefe_estado: Ion Iliescu
+    capital: 3018
+    
+    
   Pais_182:
-    nombre: SIKKIM
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: RUS
+    nombre: Russian Federation
+    continente: Europa
+    region: Eastern Europe
+    poblacion: 146934000
+    jefe_estado: Vladimir Putin
+    capital: 3580
+    
+    
   Pais_183:
-    nombre: SINGAPUR
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: RWA
+    nombre: Rwanda
+    continente: África
+    region: Eastern Africa
+    poblacion: 7733000
+    jefe_estado: Paul Kagame
+    capital: 3047
+    
+    
   Pais_184:
-    nombre: SIRIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SAU
+    nombre: Saudi Arabia
+    continente: Asia
+    region: Middle East
+    poblacion: 21607000
+    jefe_estado: Fahd ibn Abdul-Aziz al-Sa´ud
+    capital: 3173
+    
+    
   Pais_185:
-    nombre: SOMALIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SDN
+    nombre: Sudan
+    continente: África
+    region: Northern Africa
+    poblacion: 29490000
+    jefe_estado: Omar Hassan Ahmad al-Bashir
+    capital: 3225
+    
+    
   Pais_186:
-    nombre: 'SRI LANKA'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SEN
+    nombre: Senegal
+    continente: África
+    region: Western Africa
+    poblacion: 9481000
+    jefe_estado: Abdoulaye Wade
+    capital: 3198
+    
+    
   Pais_187:
-    nombre: SUDAFRICA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SGP
+    nombre: Singapore
+    continente: Asia
+    region: Southeast Asia
+    poblacion: 3567000
+    jefe_estado: Sellapan Rama Nathan
+    capital: 3208
+    
+    
   Pais_188:
-    nombre: SUDAN
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SGS
+    nombre: South Georgia and the South Sandwich Islands
+    continente: Antártida
+    region: Antartida
+    poblacion: 0
+    jefe_estado: Elisabeth II
+    capital: null
+    
+    
   Pais_189:
-    nombre: SUECIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SHN
+    nombre: Saint Helena
+    continente: África
+    region: Western Africa
+    poblacion: 6000
+    jefe_estado: Elisabeth II
+    capital: 3063
+    
+    
   Pais_190:
-    nombre: SUIZA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SJM
+    nombre: Svalbard and Jan Mayen
+    continente: Europa
+    region: Nordic Countries
+    poblacion: 3200
+    jefe_estado: Harald V
+    capital: 938
+    
+    
   Pais_191:
-    nombre: SURINAME
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SLB
+    nombre: Solomon Islands
+    continente: Oceania
+    region: Melanesia
+    poblacion: 444000
+    jefe_estado: Elisabeth II
+    capital: 3161
+    
+    
   Pais_192:
-    nombre: SWAZILANDIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SLE
+    nombre: Sierra Leone
+    continente: África
+    region: Western Africa
+    poblacion: 4854000
+    jefe_estado: Ahmed Tejan Kabbah
+    capital: 3207
+    
+    
   Pais_193:
-    nombre: TAILANDIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SLV
+    nombre: El Salvador
+    continente: ---
+    region: Central America
+    poblacion: 6276000
+    jefe_estado: Francisco Guillermo Flores Pérez
+    capital: 645
+    
+    
   Pais_194:
-    nombre: TAIWAN
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SMR
+    nombre: San Marino
+    continente: Europa
+    region: Southern Europe
+    poblacion: 27000
+    jefe_estado: null
+    capital: 3171
+    
+    
   Pais_195:
-    nombre: 'TANZANIA, REP. UNIDA DE'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SOM
+    nombre: Somalia
+    continente: África
+    region: Eastern Africa
+    poblacion: 10097000
+    jefe_estado: Abdiqassim Salad Hassan
+    capital: 3214
+    
+    
   Pais_196:
-    nombre: 'TIERRA DE MAUD DRONNING'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SPM
+    nombre: Saint Pierre and Miquelon
+    continente: ---
+    region: Norte America
+    poblacion: 7000
+    jefe_estado: Jacques Chirac
+    capital: 3067
+    
+    
   Pais_197:
-    nombre: TOGO
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: STP
+    nombre: Sao Tome and Principe
+    continente: África
+    region: Central Africa
+    poblacion: 147000
+    jefe_estado: Miguel Trovoada
+    capital: 3172
+    
+    
   Pais_198:
-    nombre: TONGA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SUR
+    nombre: Suriname
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 417000
+    jefe_estado: Ronald Venetiaan
+    capital: 3243
+    
+    
   Pais_199:
-    nombre: 'TRINIDAD Y TOBAGO'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SVK
+    nombre: Slovakia
+    continente: Europa
+    region: Eastern Europe
+    poblacion: 5398700
+    jefe_estado: Rudolf Schuster
+    capital: 3209
+    
+    
   Pais_200:
-    nombre: TUNEZ
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SVN
+    nombre: Slovenia
+    continente: Europa
+    region: Southern Europe
+    poblacion: 1987800
+    jefe_estado: Milan Kucan
+    capital: 3212
+    
+    
   Pais_201:
-    nombre: TURQUIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SWE
+    nombre: Sweden
+    continente: Europa
+    region: Nordic Countries
+    poblacion: 8861400
+    jefe_estado: Carl XVI Gustaf
+    capital: 3048
+    
+    
   Pais_202:
-    nombre: UGANDA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SWZ
+    nombre: Swaziland
+    continente: África
+    region: Southern Africa
+    poblacion: 1008000
+    jefe_estado: Mswati III
+    capital: 3244
+    
+    
   Pais_203:
-    nombre: URSS
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SYC
+    nombre: Seychelles
+    continente: África
+    region: Eastern Africa
+    poblacion: 77000
+    jefe_estado: France-Albert René
+    capital: 3206
+    
+    
   Pais_204:
-    nombre: URUGUAY
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: SYR
+    nombre: Syria
+    continente: Asia
+    region: Middle East
+    poblacion: 16125000
+    jefe_estado: Bashar al-Assad
+    capital: 3250
+    
+    
   Pais_205:
-    nombre: VENEZUELA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: TCA
+    nombre: Turks and Caicos Islands
+    continente: ---
+    region: Caribbean
+    poblacion: 17000
+    jefe_estado: Elisabeth II
+    capital: 3423
+    
+    
   Pais_206:
-    nombre: VIETNAM
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: TCD
+    nombre: Chad
+    continente: África
+    region: Central Africa
+    poblacion: 7651000
+    jefe_estado: Idriss Déby
+    capital: 3337
+    
+    
   Pais_207:
-    nombre: YEMEN
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: TGO
+    nombre: Togo
+    continente: África
+    region: Western Africa
+    poblacion: 4629000
+    jefe_estado: Gnassingbé Eyadéma
+    capital: 3332
+    
+    
   Pais_208:
-    nombre: 'YEMEN DEMOCRATICO'
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: THA
+    nombre: Thailand
+    continente: Asia
+    region: Southeast Asia
+    poblacion: 61399000
+    jefe_estado: Bhumibol Adulyadej
+    capital: 3320
+    
+    
   Pais_209:
-    nombre: YUGOSLAVIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: TJK
+    nombre: Tajikistan
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 6188000
+    jefe_estado: Emomali Rahmonov
+    capital: 3261
+    
+    
   Pais_210:
-    nombre: ZAIRE
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
+    codigo: TKL
+    nombre: Tokelau
+    continente: Oceania
+    region: Polynesia
+    poblacion: 2000
+    jefe_estado: Elisabeth II
+    capital: 3333
+    
+    
   Pais_211:
-    nombre: ZAMBIA
-    bandera: 'null'
-    created_at: '2013-06-15 00:00:00'
-    updated_at: '2013-06-15 00:00:00'
-
+    codigo: TKM
+    nombre: Turkmenistan
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 4459000
+    jefe_estado: Saparmurad Nijazov
+    capital: 3419
+    
+    
+  Pais_212:
+    codigo: TMP
+    nombre: East Timor
+    continente: Asia
+    region: Southeast Asia
+    poblacion: 885000
+    jefe_estado: José Alexandre Gusmão
+    capital: 1522
+    
+    
+  Pais_213:
+    codigo: TON
+    nombre: Tonga
+    continente: Oceania
+    region: Polynesia
+    poblacion: 99000
+    jefe_estado: Taufa---ahau Tupou IV
+    capital: 3334
+    
+    
+  Pais_214:
+    codigo: TTO
+    nombre: Trinidad and Tobago
+    continente: ---
+    region: Caribbean
+    poblacion: 1295000
+    jefe_estado: Arthur N. R. Robinson
+    capital: 3336
+    
+    
+  Pais_215:
+    codigo: TUN
+    nombre: Tunisia
+    continente: África
+    region: Northern Africa
+    poblacion: 9586000
+    jefe_estado: Zine al-Abidine Ben Ali
+    capital: 3349
+    
+    
+  Pais_216:
+    codigo: TUR
+    nombre: Turkey
+    continente: Asia
+    region: Middle East
+    poblacion: 66591000
+    jefe_estado: Ahmet Necdet Sezer
+    capital: 3358
+    
+    
+  Pais_217:
+    codigo: TUV
+    nombre: Tuvalu
+    continente: Oceania
+    region: Polynesia
+    poblacion: 12000
+    jefe_estado: Elisabeth II
+    capital: 3424
+    
+    
+  Pais_218:
+    codigo: TWN
+    nombre: Taiwan
+    continente: Asia
+    region: Eastern Asia
+    poblacion: 22256000
+    jefe_estado: Chen Shui-bian
+    capital: 3263
+    
+    
+  Pais_219:
+    codigo: TZA
+    nombre: Tanzania
+    continente: África
+    region: Eastern Africa
+    poblacion: 33517000
+    jefe_estado: Benjamin William Mkapa
+    capital: 3306
+    
+    
+  Pais_220:
+    codigo: UGA
+    nombre: Uganda
+    continente: África
+    region: Eastern Africa
+    poblacion: 21778000
+    jefe_estado: Yoweri Museveni
+    capital: 3425
+    
+    
+  Pais_221:
+    codigo: UKR
+    nombre: Ukraine
+    continente: Europa
+    region: Eastern Europe
+    poblacion: 50456000
+    jefe_estado: Leonid Kutšma
+    capital: 3426
+    
+    
+  Pais_222:
+    codigo: UMI
+    nombre: United States Minor Outlying Islands
+    continente: Oceania
+    region: Micronesia/Caribbean
+    poblacion: 0
+    jefe_estado: George W. Bush
+    capital: null
+    
+    
+  Pais_223:
+    codigo: URY
+    nombre: Uruguay
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 3337000
+    jefe_estado: Jorge Batlle Ibáñez
+    capital: 3492
+    
+    
+  Pais_224:
+    codigo: USA
+    nombre: United States
+    continente: ---
+    region: Norte America
+    poblacion: 278357000
+    jefe_estado: George W. Bush
+    capital: 3813
+    
+    
+  Pais_225:
+    codigo: UZB
+    nombre: Uzbekistan
+    continente: Asia
+    region: Southern and Central Asia
+    poblacion: 24318000
+    jefe_estado: Islam Karimov
+    capital: 3503
+    
+    
+  Pais_226:
+    codigo: VAT
+    nombre: Holy See (Vatican City State)
+    continente: Europa
+    region: Southern Europe
+    poblacion: 1000
+    jefe_estado: Johannes Paavali II
+    capital: 3538
+    
+    
+  Pais_227:
+    codigo: VCT
+    nombre: Saint Vincent and the Grenadines
+    continente: ---
+    region: Caribbean
+    poblacion: 114000
+    jefe_estado: Elisabeth II
+    capital: 3066
+    
+    
+  Pais_228:
+    codigo: VEN
+    nombre: Venezuela
+    continente: Sudamérica
+    region: Sudamerica
+    poblacion: 24170000
+    jefe_estado: Hugo Chávez Frías
+    capital: 3539
+    
+    
+  Pais_229:
+    codigo: VGB
+    nombre: Virgin Islands, British
+    continente: ---
+    region: Caribbean
+    poblacion: 21000
+    jefe_estado: Elisabeth II
+    capital: 537
+    
+    
+  Pais_230:
+    codigo: VIR
+    nombre: Virgin Islands, U.S.
+    continente: ---
+    region: Caribbean
+    poblacion: 93000
+    jefe_estado: George W. Bush
+    capital: 4067
+    
+    
+  Pais_231:
+    codigo: VNM
+    nombre: Vietnam
+    continente: Asia
+    region: Southeast Asia
+    poblacion: 79832000
+    jefe_estado: Trân Duc Luong
+    capital: 3770
+    
+    
+  Pais_232:
+    codigo: VUT
+    nombre: Vanuatu
+    continente: Oceania
+    region: Melanesia
+    poblacion: 190000
+    jefe_estado: John Bani
+    capital: 3537
+    
+    
+  Pais_233:
+    codigo: WLF
+    nombre: Wallis and Futuna
+    continente: Oceania
+    region: Polynesia
+    poblacion: 15000
+    jefe_estado: Jacques Chirac
+    capital: 3536
+    
+    
+  Pais_234:
+    codigo: WSM
+    nombre: Samoa
+    continente: Oceania
+    region: Polynesia
+    poblacion: 180000
+    jefe_estado: Malietoa Tanumafili II
+    capital: 3169
+    
+    
+  Pais_235:
+    codigo: YEM
+    nombre: Yemen
+    continente: Asia
+    region: Middle East
+    poblacion: 18112000
+    jefe_estado: Ali Abdallah Salih
+    capital: 1780
+    
+    
+  Pais_236:
+    codigo: YUG
+    nombre: Yugoslavia
+    continente: Europa
+    region: Southern Europe
+    poblacion: 10640000
+    jefe_estado: Vojislav Koštunica
+    capital: 1792
+    
+    
+  Pais_237:
+    codigo: ZAF
+    nombre: South Africa
+    continente: África
+    region: Southern Africa
+    poblacion: 40377000
+    jefe_estado: Thabo Mbeki
+    capital: 716
+    
+    
+  Pais_238:
+    codigo: ZMB
+    nombre: Zambia
+    continente: África
+    region: Eastern Africa
+    poblacion: 9169000
+    jefe_estado: Frederick Chiluba
+    capital: 3162
+    
+    
+  Pais_239:
+    codigo: ZWE
+    nombre: Zimbabwe
+    continente: África
+    region: Eastern Africa
+    poblacion: 11669000
+    jefe_estado: Robert G. Mugabe
+    capital: 4068
+  
+  
