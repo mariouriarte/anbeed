@@ -45,58 +45,59 @@ class empresasActions extends autoEmpresasActions
         // dejavusans is a UTF-8 Unicode font, if you only need to
         // print standard ASCII chars, you can use core fonts like
         // helvetica or times to reduce file size.
-        $pdf->SetFont('dejavusans', '', 10, '', true);
+        $pdf->SetFont('courier', '', 11, '', true);
 
         // Add a page
         // This method has several options, check the source code documentation for more information.
         $pdf->AddPage();
         
         //definimos la variable para el eje y
-        $y = 72;
+        $y = 76;
+        $x = 0;
         
         $pdf->MultiCell(55, 0, funciones::FormatearFecha($this->empresa->getFechaRegistro()),
-            0, 'L', 0, 0, '135', $y, true);
+            0, 'L', 0, 0, $x+135, $y, true);
         $pdf->MultiCell(135, 0, $this->empresa, 
-            0, 'L', 0, 0, '70', $y+=12, true);
+            0, 'L', 0, 0, $x+70, $y+=12, true);
         $pdf->MultiCell(100, 0, $this->empresa->getNumResolucion(), 
-            0, 'L', 0, 0, '75', $y+=7, true);
+            0, 'L', 0, 0, $x+75, $y+=8, true);
         $pdf->MultiCell(100, 0, funciones::FormatearFecha(
             $this->empresa->getFechaResolucion()), 
-            0, 'L', 0, 0, '75', $y+=7, true);
+            0, 'L', 0, 0, $x+75, $y+=7, true);
         $pdf->MultiCell(160, 0, $this->empresa->getDireccion(), 
-            0, 'L', 0, 0, '40', $y+=8, true);
+            0, 'L', 0, 0, $x+40, $y+=8, true);
         $pdf->MultiCell(165, 0, $this->empresa->getCasilla(), 
-            0, 'L', 0, 0, '35', $y+=7, true);
+            0, 'L', 0, 0, $x+35, $y+=7, true);
         $pdf->MultiCell(160, 0, $this->empresa->getTelefono1().
             ' || '.$this->empresa->getTelefono2(), 
-            0, 'L', 0, 0, '40', $y+=7, true);
+            0, 'L', 0, 0, $x+40, $y+=7, true);
         $pdf->MultiCell(165, 0, $this->empresa->getEmail(), 
-            0, 'L', 0, 0, '35', $y+=8, true);
+            0, 'L', 0, 0, $x+35, $y+=8, true);
         $pdf->MultiCell(135, 0, $this->empresa->getActividad(),
-            0, 'L', 0, 0, '65', $y+=7, true);
+            0, 'L', 0, 0, $x+65, $y+=7, true);
         $pdf->MultiCell(75, 0, $this->empresa->getRegistroCamara(), 
-            0, 'L', 0, 0, '125', $y+=7, true);
+            0, 'L', 0, 0, $x+125, $y+=8, true);
         $pdf->MultiCell(145, 0, $this->empresa->getFundempresa(), 
-            0, 'L', 0, 0, '55', $y+=8, true);
+            0, 'L', 0, 0, $x+55, $y+=8, true);
         $pdf->MultiCell(105, 0, $this->empresa->getNit(), 
-            0, 'L', 0, 0, '95', $y+=7, true);
+            0, 'L', 0, 0, $x+95, $y+=7, true);
         $pdf->MultiCell(60, 0, $this->empresa->getLicenciaFuncionamiento(), 
-            0, 'L', 0, 0, '140', $y+=7, true);
+            0, 'L', 0, 0, $x+140, $y+=8, true);
         $pdf->MultiCell(125, 0, $this->empresa->RepresentanteLegal, 
-            0, 'L', 0, 0, '75', $y+=15, true);
+            0, 'L', 0, 0, $x+75, $y+=15, true);
         $pdf->MultiCell(145, 0, $this->empresa->RepresentanteLegal->Persona->getCi(),
-            0, 'L', 0, 0, '55', $y+=7, true);
+            0, 'L', 0, 0, $x+55, $y+=7, true);
         $pdf->MultiCell(125, 0, $this->empresa->RegenteFarmaceutico,
-            0, 'L', 0, 0, '75', $y+=4, true);
+            0, 'L', 0, 0, $x+75, $y+=15, true);
         $pdf->MultiCell(145, 0, $this->empresa->RegenteFarmaceutico->Persona->getCi(), 
-            0, 'L', 0, 0, '55', $y+=8, true);
+            0, 'L', 0, 0, $x+55, $y+=7, true);
         $pdf->MultiCell(140, 0, $this->empresa->RegenteFarmaceutico
             ->getMatriculaProfesional(), 
-            0, 'L', 0, 0, '60', $y+=7, true);
+            0, 'L', 0, 0, $x+60, $y+=7, true);
         $pdf->MultiCell(140, 0, $this->empresa->RegenteFarmaceutico->getCarnetColegiado(),
-            0, 'L', 0, 0, '60', $y+=7, true);
+            0, 'L', 0, 0, $x+60, $y+=7, true);
         $pdf->MultiCell(150, 40, $this->empresa->getObservacion(), 
-            0, 'L', 0, 0, '50', $y+=8, true);
+            0, 'L', 0, 0, $x+50, $y+=8, true);
 //                
         
         
