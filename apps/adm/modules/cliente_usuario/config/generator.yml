@@ -14,7 +14,10 @@ generator:
     config:
       actions: ~
       fields:
-        #password_again: { label: "Password (again)" }
+        username:       {label: 'Usuario'}
+        is_active:      {label: 'Activo?'}
+        password:       {label: 'Contraseña'}
+        password_again: {label: 'Repetir Contraseña'}
       list:    
         title:        Listado de Usuarios Clientes
         display:      [empresa,username, is_active, last_login]
@@ -22,9 +25,12 @@ generator:
       filter:  
         display: [empresa_id,username, is_active, last_login]
       form:    
-        class: sfGuardMyUserAdminForm
+        class: ClienteUsuarioForm
+        display: 
+          Empresa: [empresa_id]
+          Datos Usuario: [username, password, password_again]
+          Permisos: [is_active]
       edit:
         title: Editando Usuario "%%username%%"
-        display: [empresa_id,username, password, password_again, is_active]
       new:
         title: Nuevo Usuario Cliente

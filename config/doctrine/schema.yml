@@ -18,6 +18,7 @@ actAs:
 Persona:
   actAs: [Timestampable, Signable]
   columns:
+    user_id:          {type: integer, notnull: false}
     nombre:           {type: string(50), notnull: true}
     ap_paterno:       {type: string(30), notnull: true}
     ap_materno:       {type: string(30), notnull: false}
@@ -34,7 +35,7 @@ Persona:
     is_active:        {type: boolean, default: true, notnull: true}
     foto:             {type: string(50), default: null, notnull: false}
   relations:
-    sfGuardUser:         {local: id, foreign: persona_id,  type: one, foreignAlias: Persona}
+    sfGuardUser:         {local: user_id, foreign: id,  type: one, foreignAlias: Persona}
     RepresentanteLegal:  {local: id, foreign: persona_id, type: one, foreignAlias: Persona}
     RegenteFarmaceutico: {local: id, foreign: persona_id, type: one, foreignAlias: Persona}
 

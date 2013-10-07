@@ -53,7 +53,7 @@ sfGuardGroupPermission:
 sfGuardUser:
   actAs: [Timestampable]
   columns:
-    persona_id: {type: integer, notnull: false}
+    #persona_id: {type: integer, notnull: false}
     empresa_id: {type: integer, notnull: false}
     username:
       type: string(128)
@@ -77,8 +77,8 @@ sfGuardUser:
     is_active_idx:
       fields: [is_active]
   relations:
-    Persona: {local: persona_id, foreign: id, type: one, foreignAlias: User}
-    Empresa: {local: empresa_id, foreign: id, type: one, foreignAlias: User}
+    Persona: {local: id, foreign: user_id, type: one, foreignAlias: sfGuardUser}
+    Empresa: {local: empresa_id, foreign: id, type: one, foreignAlias: sfGuardUser}
     Groups:
       class: sfGuardGroup
       local: user_id

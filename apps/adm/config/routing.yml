@@ -1,27 +1,18 @@
+sf_guard_user_usuarios:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                sfGuardUser
+    module:               usuarios
+    prefix_path:          /usuarios
+    column:               id
+    with_wildcard_routes: true
+
 sf_guard_user_cliente_usuario:
   class: sfDoctrineRouteCollection
   options:
     model:                sfGuardUser
     module:               cliente_usuario
     prefix_path:          /cliente_usuario
-    column:               id
-    with_wildcard_routes: true
-
-cliente:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                Cliente
-    module:               clientes
-    prefix_path:          /clientes
-    column:               id
-    with_wildcard_routes: true
-
-persona_persona_usuario:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                Persona
-    module:               persona_usuario
-    prefix_path:          /persona_usuario
     column:               id
     with_wildcard_routes: true
 
