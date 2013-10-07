@@ -3,12 +3,12 @@
 
 all:
   is_secure: on
-  credentials: ADMINISTRADOR
+  credentials: [[ADMINISTRADOR, REGISTRO SANITARIO]]
   
 index:
   is_secure: on
-  credentials: ADMINISTRADOR
+  credentials: [[ADMINISTRADOR, REGISTRO SANITARIO]]
  
 new:
   is_secure: on
-  credentials: ADMINISTRADOR
+  credentials: [[ADMINISTRADOR, REGISTRO SANITARIO]]

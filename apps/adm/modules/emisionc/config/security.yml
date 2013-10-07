@@ -3,12 +3,12 @@
 
 all:
   is_secure: on
-  credentials: ADMINISTRADOR
+  credentials: [[ADMINISTRADOR, CORRESPONDENCIA]]
   
 index:
   is_secure: on
-  credentials: ADMINISTRADOR
+  credentials: [[ADMINISTRADOR, CORRESPONDENCIA]]
  
 new:
   is_secure: on
-  credentials: ADMINISTRADOR
+  credentials: [[ADMINISTRADOR, CORRESPONDENCIA]]
