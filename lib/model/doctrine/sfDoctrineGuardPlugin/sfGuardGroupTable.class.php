@@ -19,10 +19,11 @@ class sfGuardGroupTable extends PluginsfGuardGroupTable
     
     public static function GrupoUsuarios()
     {
+        
         $q = Doctrine_Query::create()
                     ->from('sfGuardGroup g')
-                    ->where('i.id != ? AND i.id != ?', 1,2)
-                    ->orderBy('i.id ASC');
+                    ->where('g.id != 1 AND g.id != 2')
+                    ->orderBy('g.name ASC');
         return $q;
     }
     

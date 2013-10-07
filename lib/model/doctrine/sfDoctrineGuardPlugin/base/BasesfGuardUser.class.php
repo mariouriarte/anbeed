@@ -21,6 +21,8 @@
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardForgotPassword $ForgotPassword
+ * @property Tarea $Tareas
+ * @property ComentarioTarea $Comentarios
  * 
  * @method integer               getEmpresaId()             Returns the current record's "empresa_id" value
  * @method string                getUsername()              Returns the current record's "username" value
@@ -38,6 +40,8 @@
  * @method Doctrine_Collection   getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
  * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
+ * @method Tarea                 getTareas()                Returns the current record's "Tareas" value
+ * @method ComentarioTarea       getComentarios()           Returns the current record's "Comentarios" value
  * @method sfGuardUser           setEmpresaId()             Sets the current record's "empresa_id" value
  * @method sfGuardUser           setUsername()              Sets the current record's "username" value
  * @method sfGuardUser           setAlgorithm()             Sets the current record's "algorithm" value
@@ -54,6 +58,8 @@
  * @method sfGuardUser           setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
  * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
+ * @method sfGuardUser           setTareas()                Sets the current record's "Tareas" value
+ * @method sfGuardUser           setComentarios()           Sets the current record's "Comentarios" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -144,6 +150,14 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'foreign' => 'user_id'));
 
         $this->hasOne('sfGuardForgotPassword as ForgotPassword', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasOne('Tarea as Tareas', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasOne('ComentarioTarea as Comentarios', array(
              'local' => 'id',
              'foreign' => 'user_id'));
 
