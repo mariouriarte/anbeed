@@ -41,7 +41,7 @@ generator:
         display: [nombre, marca, laboratorio_fabricante_id, registro_sanitario]
       form:
         display:
-          Datos Generales del Producto: [laboratorio_fabricante_id, nombre, forma_cosmetica_id, grupo_cosmetico_id, marca, codigo_nso, expediente, vigencia_nso, pais_id, registro_sanitario, descripcion]
+          Datos Generales del Producto: [laboratorio_fabricante_id, nombre, variedades, presentacion, forma_cosmetica_id, grupo_cosmetico_id, marca, codigo_nso, expediente, vigencia_nso, pais_id, registro_sanitario, descripcion]
         actions:    
           _delete: ~
           _list: ~

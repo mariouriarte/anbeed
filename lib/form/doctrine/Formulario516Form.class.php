@@ -74,5 +74,7 @@ class Formulario516Form extends BaseFormulario516Form
         $this->validatorSchema['maquila_tipo'] = new sfValidatorString(array('required' => false));
         
         //$this->widgetSchema['tipo_tramite_formulario_id']->addOption('order_by',array('id','asc'));
+                /*ajuste de tamaños*/
+        $this->widgetSchema['informacion_cambios']->setAttribute('cols' , 121);
     }
 }

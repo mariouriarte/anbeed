@@ -14,8 +14,9 @@
  * @property string $nombre
  * @property string $nombre_detalle
  * @property string $variedades
+ * @property string $presentacion
  * @property string $codigo_nso
- * @property string $vigencia_nso
+ * @property date $vigencia_nso
  * @property string $expediente
  * @property string $registro_sanitario
  * @property Producto $Producto
@@ -33,8 +34,9 @@
  * @method string                getNombre()                    Returns the current record's "nombre" value
  * @method string                getNombreDetalle()             Returns the current record's "nombre_detalle" value
  * @method string                getVariedades()                Returns the current record's "variedades" value
+ * @method string                getPresentacion()              Returns the current record's "presentacion" value
  * @method string                getCodigoNso()                 Returns the current record's "codigo_nso" value
- * @method string                getVigenciaNso()               Returns the current record's "vigencia_nso" value
+ * @method date                  getVigenciaNso()               Returns the current record's "vigencia_nso" value
  * @method string                getExpediente()                Returns the current record's "expediente" value
  * @method string                getRegistroSanitario()         Returns the current record's "registro_sanitario" value
  * @method Producto              getProducto()                  Returns the current record's "Producto" value
@@ -51,6 +53,7 @@
  * @method Higiene               setNombre()                    Sets the current record's "nombre" value
  * @method Higiene               setNombreDetalle()             Sets the current record's "nombre_detalle" value
  * @method Higiene               setVariedades()                Sets the current record's "variedades" value
+ * @method Higiene               setPresentacion()              Sets the current record's "presentacion" value
  * @method Higiene               setCodigoNso()                 Sets the current record's "codigo_nso" value
  * @method Higiene               setVigenciaNso()               Sets the current record's "vigencia_nso" value
  * @method Higiene               setExpediente()                Sets the current record's "expediente" value
@@ -112,15 +115,19 @@ abstract class BaseHigiene extends sfDoctrineRecord
              'notnull' => false,
              'length' => 2000,
              ));
+        $this->hasColumn('presentacion', 'string', 250, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => 250,
+             ));
         $this->hasColumn('codigo_nso', 'string', 250, array(
              'type' => 'string',
              'notnull' => false,
              'length' => 250,
              ));
-        $this->hasColumn('vigencia_nso', 'string', 250, array(
-             'type' => 'string',
+        $this->hasColumn('vigencia_nso', 'date', null, array(
+             'type' => 'date',
              'notnull' => false,
-             'length' => 250,
              ));
         $this->hasColumn('expediente', 'string', 250, array(
              'type' => 'string',

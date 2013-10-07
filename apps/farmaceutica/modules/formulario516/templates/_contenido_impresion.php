@@ -232,7 +232,7 @@
             de reconocimiento)</span>
         </td>
         <td>Vigencia del Código de identificación de la NSO<br />
-            <?php echo $form->Cosmetico->getVigenciaNso() ?>
+            <?php echo funciones::FormatearFecha($form->Cosmetico->getVigenciaNso()) ?>
         </td>
     </tr>
     <tr>

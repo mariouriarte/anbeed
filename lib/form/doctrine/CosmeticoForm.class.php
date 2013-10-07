@@ -45,14 +45,24 @@ class CosmeticoForm extends BaseCosmeticoForm
                   array( 'model'=>'Pais',
                           'url'=>sfContext::getInstance()->getRouting()->generate('buscar_paises')
         ));
+        
+        // Fecha de vigencia NSO
+        $years = range(date('Y') - 10, date('Y'));   
+        $this->widgetSchema['vigencia_nso'] = new sfWidgetFormJQueryDate(
+            array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
+                  'format' => '%day%%month%%year%',  
+                  'years' => array_combine($years, $years))), ));
+        
 
         /*AJUSTANDO LOS TAMAños*/
         $this->widgetSchema['laboratorio_fabricante_id']->setAttribute('size' , 50);
         $this->widgetSchema['nombre']->setAttribute('size' , 50);
+        $this->widgetSchema['presentacion']->setAttribute('size' , 50);
         $this->widgetSchema['forma_cosmetica_id']->setAttribute('size' , 50);
         $this->widgetSchema['grupo_cosmetico_id']->setAttribute('size' , 50);
         $this->widgetSchema['marca']->setAttribute('size' , 50);
         $this->widgetSchema['descripcion']->setAttribute('cols' , 80);
+        $this->widgetSchema['variedades']->setAttribute('cols' , 50);
         $this->widgetSchema['pais_id']->setAttribute('size' , 50);
     }
 }

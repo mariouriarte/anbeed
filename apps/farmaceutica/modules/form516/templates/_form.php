@@ -226,6 +226,14 @@ function habilita(campo)
                 <td><?php echo $cosmeticos ?></td>
             </tr>
             <tr>
+                <th>Variedades</th>
+                <td><?php echo $cosmeticos->getVariedades() ?></td>
+            </tr>
+            <tr>
+                <th>Presentación</th>
+                <td><?php echo $cosmeticos->getPresentacion() ?></td>
+            </tr>
+            <tr>
                 <th>Forma Cosmética</th>
                 <td><?php echo $cosmeticos->FormaCosmetica ?></td>
             </tr>
@@ -260,7 +268,25 @@ function habilita(campo)
         </tbody>
     </table>
 </div>
-
+<div class="container-form-decision">
+  <table class="tbl-form-decision">
+    </tbody>
+      <tr>
+          <th colspan="2">INFORMACION DE CAMBIOS<br />
+            <span class="help-descripcion-tabla">
+              Artículos 13, 14, 15 y 16 de la Decisión 706
+            </span>
+          </th>
+      </tr>
+      <tr>
+          <td colspan="2">
+              <?php echo $form['informacion_cambios']->renderError() ?>
+              <?php echo $form['informacion_cambios'] ?>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>    
 <div class="container-form-decision">
     <h2>DATOS ADICIONALES DEL FORMULARIO</h2>
     <table class="tbl-form-decision"

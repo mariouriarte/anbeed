@@ -45,7 +45,7 @@ generator:
         
       form:
         display:
-         Datos: [empresa_id, laboratorio_fabricante_id, nombre, nombre_detalle, grupo_higiene, variedades, marca, codigo_nso, expediente, vigencia_nso, pais_id, registro_sanitario]
+         Datos: [empresa_id, laboratorio_fabricante_id, nombre, variedades, presentacion, nombre_detalle, grupo_higiene, marca, codigo_nso, expediente, vigencia_nso, pais_id, registro_sanitario]
         actions:    
           _delete: ~
           _list: ~

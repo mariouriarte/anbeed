@@ -168,7 +168,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
         $this->hasColumn('email', 'string', 255, array(
              'type' => 'string',
              'notnull' => false,
-             'unique' => true,
+             'unique' => false,
              'length' => 255,
              ));
         $this->hasColumn('actividad', 'string', 255, array(

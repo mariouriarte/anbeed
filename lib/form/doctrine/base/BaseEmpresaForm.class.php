@@ -74,7 +74,6 @@ abstract class BaseEmpresaForm extends BaseFormDoctrine
       new sfValidatorAnd(array(
         new sfValidatorDoctrineUnique(array('model' => 'Empresa', 'column' => array('razon_social'))),
         new sfValidatorDoctrineUnique(array('model' => 'Empresa', 'column' => array('num_resolucion'))),
-        new sfValidatorDoctrineUnique(array('model' => 'Empresa', 'column' => array('email'))),
         new sfValidatorDoctrineUnique(array('model' => 'Empresa', 'column' => array('nit'))),
         new sfValidatorDoctrineUnique(array('model' => 'Empresa', 'column' => array('licencia_funcionamiento'))),
       ))

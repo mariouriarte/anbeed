@@ -257,6 +257,14 @@
           <td><?php echo $higiene ?></td>
       </tr>
       <tr>
+          <th>variedades</th>
+          <td><?php echo $higiene->getVariedades() ?></td>
+      </tr>
+      <tr>
+          <th>Presentación</th>
+          <td><?php echo $higiene->getPresentacion() ?></td>
+      </tr>
+      <tr>
           <th>Tipo</th>
           <td><?php echo $higiene->getNombreDetalle() ?></td>
       </tr>
@@ -264,10 +272,7 @@
           <th>Grupo</th>
           <td><?php echo $higiene->getGrupoHigiene() ?></td>
       </tr>
-      <tr>
-          <th>variedades</th>
-          <td><?php echo $higiene->getVariedades() ?></td>
-      </tr>
+      
       <tr>
           <th>Marca</th>
           <td><?php echo $higiene->getMarca() ?></td>
@@ -293,6 +298,25 @@
       <tr>
             <th>Número de Registro Sanitario:</th>
             <td><?php echo $higiene->getRegistroSanitario() ?></td>
+      </tr>
+    </tbody>
+  </table>
+</div>    
+<div class="container-form-decision">
+  <table class="tbl-form-decision">
+    </tbody>
+      <tr>
+          <th colspan="2">INFORMACION DE CAMBIOS<br />
+            <span class="help-descripcion-tabla">
+              Artículos 13, 14, 15 y 16 de la Decisión 706
+            </span>
+          </th>
+      </tr>
+      <tr>
+          <td colspan="2">
+              <?php echo $form['informacion_cambios']->renderError() ?>
+              <?php echo $form['informacion_cambios'] ?>
+          </td>
       </tr>
     </tbody>
   </table>
