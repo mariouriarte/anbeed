@@ -13,6 +13,7 @@
  * @property boolean $is_active
  * @property boolean $is_super_admin
  * @property timestamp $last_login
+ * @property Tarea $Tarea
  * @property Persona $Persona
  * @property Empresa $Empresa
  * @property Doctrine_Collection $Groups
@@ -21,7 +22,6 @@
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardForgotPassword $ForgotPassword
- * @property Tarea $Tareas
  * @property ComentarioTarea $Comentarios
  * 
  * @method integer               getEmpresaId()             Returns the current record's "empresa_id" value
@@ -32,6 +32,7 @@
  * @method boolean               getIsActive()              Returns the current record's "is_active" value
  * @method boolean               getIsSuperAdmin()          Returns the current record's "is_super_admin" value
  * @method timestamp             getLastLogin()             Returns the current record's "last_login" value
+ * @method Tarea                 getTarea()                 Returns the current record's "Tarea" value
  * @method Persona               getPersona()               Returns the current record's "Persona" value
  * @method Empresa               getEmpresa()               Returns the current record's "Empresa" value
  * @method Doctrine_Collection   getGroups()                Returns the current record's "Groups" collection
@@ -40,7 +41,6 @@
  * @method Doctrine_Collection   getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
  * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
- * @method Tarea                 getTareas()                Returns the current record's "Tareas" value
  * @method ComentarioTarea       getComentarios()           Returns the current record's "Comentarios" value
  * @method sfGuardUser           setEmpresaId()             Sets the current record's "empresa_id" value
  * @method sfGuardUser           setUsername()              Sets the current record's "username" value
@@ -50,6 +50,7 @@
  * @method sfGuardUser           setIsActive()              Sets the current record's "is_active" value
  * @method sfGuardUser           setIsSuperAdmin()          Sets the current record's "is_super_admin" value
  * @method sfGuardUser           setLastLogin()             Sets the current record's "last_login" value
+ * @method sfGuardUser           setTarea()                 Sets the current record's "Tarea" value
  * @method sfGuardUser           setPersona()               Sets the current record's "Persona" value
  * @method sfGuardUser           setEmpresa()               Sets the current record's "Empresa" value
  * @method sfGuardUser           setGroups()                Sets the current record's "Groups" collection
@@ -58,7 +59,6 @@
  * @method sfGuardUser           setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
  * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
- * @method sfGuardUser           setTareas()                Sets the current record's "Tareas" value
  * @method sfGuardUser           setComentarios()           Sets the current record's "Comentarios" value
  * 
  * @package    anbeed
@@ -119,6 +119,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
+        $this->hasOne('Tarea', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
         $this->hasOne('Persona', array(
              'local' => 'id',
              'foreign' => 'user_id'));
@@ -150,10 +154,6 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'foreign' => 'user_id'));
 
         $this->hasOne('sfGuardForgotPassword as ForgotPassword', array(
-             'local' => 'id',
-             'foreign' => 'user_id'));
-
-        $this->hasOne('Tarea as Tareas', array(
              'local' => 'id',
              'foreign' => 'user_id'));
 

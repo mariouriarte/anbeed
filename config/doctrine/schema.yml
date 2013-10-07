@@ -704,19 +704,19 @@ Tarea:
     user_id:        {type: integer, notnull: true}
     estado_id:      {type: integer, notnull: true}
     nombre:         {type: string(150), notnull: true}
-    descripcion:    {type: string(30), notnull: true}
-    fecha_estimada: {type: timestamp, notnull: true}
+    descripcion:    {type: string(2000), notnull: true}
+    fecha_estimada: {type: date, notnull: false}
   relations:
-    sfGuardUser: {local: user_id, foreign: id, type: many, foreignAlias: Tareas}   
-    EstadoTarea: {local: estado_id, foreign: id, type: one, foreignAlias: Tarea}   
+    sfGuardUser:     {local: user_id, foreign: id, type: many, foreignAlias: Tareas}   
+    EstadoTarea:     {local: estado_id, foreign: id, type: one, foreignAlias: Tarea}   
+    ComentarioTarea: {local: id, foreign: tarea_id, type: one, foreignAlias: Tarea}   
 
 ComentarioTarea:
   actAs: [Timestampable, Signable]
   columns:
-    user_id:        {type: integer, notnull: true}
-    tarea_id:       {type: integer, notnull: true}
-    nombre:         {type: string(30), notnull: true}
-    descripcion:    {type: string(30), notnull: true}
+    tarea_id:   {type: integer, notnull: true}
+    comentario: {type: string(2000), notnull: true}
+    leido:      {type: boolean, default: false, notnull: true}
   relations:
     Tarea:       {local: tare_id, foreign: id, type: many, foreignAlias: Comentarios}   
     sfGuardUser: {local: user_id, foreign: id, type: many, foreignAlias: Comentarios}   
@@ -726,7 +726,7 @@ EstadoTarea:
   actAs: [Timestampable, Signable]
   columns:
     nombre:         {type: string(30), notnull: true}
-    descripcion:    {type: string(30), notnull: true}
+    descripcion:    {type: string(150), notnull: true}
   relations:
     Tarea: {local: id, foreign: estado_id, type: one, foreignAlias: EstadoTarea}   
     

@@ -21,5 +21,8 @@ class sfGuardUser extends PluginsfGuardUser
     {
         return $this->Persona->getApPaterno().' '.$this->Persona->getApMaterno().' '.$this->Persona->getNombre();
     }
-    
+    public function __toString()
+    {
+       return $this->getUsername().' - '.$this->Persona->getNombre().' '.$this->Persona->getApPaterno();
+    }
 }

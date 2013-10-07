@@ -77,8 +77,9 @@ sfGuardUser:
     is_active_idx:
       fields: [is_active]
   relations:
-    Persona: {local: id, foreign: user_id, type: one, foreignAlias: sfGuardUser}
-    Empresa: {local: empresa_id, foreign: id, type: one, foreignAlias: sfGuardUser}
+    Tarea:           {local: id, foreign: user_id, type: one, foreignAlias: sfGuardUser}
+    Persona:         {local: id, foreign: user_id, type: one, foreignAlias: sfGuardUser}
+    Empresa:         {local: empresa_id, foreign: id, type: one, foreignAlias: sfGuardUser}
     Groups:
       class: sfGuardGroup
       local: user_id

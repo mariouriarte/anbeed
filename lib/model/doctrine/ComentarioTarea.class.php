@@ -12,4 +12,8 @@
  */
 class ComentarioTarea extends BaseComentarioTarea
 {
+    public function __toString()
+    {
+       return $this->getComentario();
+    }
 }

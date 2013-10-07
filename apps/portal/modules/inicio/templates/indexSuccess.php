@@ -80,6 +80,23 @@
                 </div>
             </div>
         </div>
+
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <div class="titulo_img"><img src="/images/icons/tareas.svg" /></div>
+                    <h2 class="titulo">Tareas</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/new"><span>Asignar nueva tarea</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index"><span>Listado de tareas Asignadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index"><span>Listado de tareas Concluidas</span></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div class="columna">
             <div class="cubo">

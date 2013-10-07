@@ -9,27 +9,30 @@
  * @property integer $estado_id
  * @property string $nombre
  * @property string $descripcion
- * @property timestamp $fecha_estimada
+ * @property date $fecha_estimada
  * @property Doctrine_Collection $sfGuardUser
  * @property EstadoTarea $EstadoTarea
+ * @property ComentarioTarea $ComentarioTarea
  * @property ComentarioTarea $Comentarios
  * 
- * @method integer             getUserId()         Returns the current record's "user_id" value
- * @method integer             getEstadoId()       Returns the current record's "estado_id" value
- * @method string              getNombre()         Returns the current record's "nombre" value
- * @method string              getDescripcion()    Returns the current record's "descripcion" value
- * @method timestamp           getFechaEstimada()  Returns the current record's "fecha_estimada" value
- * @method Doctrine_Collection getSfGuardUser()    Returns the current record's "sfGuardUser" collection
- * @method EstadoTarea         getEstadoTarea()    Returns the current record's "EstadoTarea" value
- * @method ComentarioTarea     getComentarios()    Returns the current record's "Comentarios" value
- * @method Tarea               setUserId()         Sets the current record's "user_id" value
- * @method Tarea               setEstadoId()       Sets the current record's "estado_id" value
- * @method Tarea               setNombre()         Sets the current record's "nombre" value
- * @method Tarea               setDescripcion()    Sets the current record's "descripcion" value
- * @method Tarea               setFechaEstimada()  Sets the current record's "fecha_estimada" value
- * @method Tarea               setSfGuardUser()    Sets the current record's "sfGuardUser" collection
- * @method Tarea               setEstadoTarea()    Sets the current record's "EstadoTarea" value
- * @method Tarea               setComentarios()    Sets the current record's "Comentarios" value
+ * @method integer             getUserId()          Returns the current record's "user_id" value
+ * @method integer             getEstadoId()        Returns the current record's "estado_id" value
+ * @method string              getNombre()          Returns the current record's "nombre" value
+ * @method string              getDescripcion()     Returns the current record's "descripcion" value
+ * @method date                getFechaEstimada()   Returns the current record's "fecha_estimada" value
+ * @method Doctrine_Collection getSfGuardUser()     Returns the current record's "sfGuardUser" collection
+ * @method EstadoTarea         getEstadoTarea()     Returns the current record's "EstadoTarea" value
+ * @method ComentarioTarea     getComentarioTarea() Returns the current record's "ComentarioTarea" value
+ * @method ComentarioTarea     getComentarios()     Returns the current record's "Comentarios" value
+ * @method Tarea               setUserId()          Sets the current record's "user_id" value
+ * @method Tarea               setEstadoId()        Sets the current record's "estado_id" value
+ * @method Tarea               setNombre()          Sets the current record's "nombre" value
+ * @method Tarea               setDescripcion()     Sets the current record's "descripcion" value
+ * @method Tarea               setFechaEstimada()   Sets the current record's "fecha_estimada" value
+ * @method Tarea               setSfGuardUser()     Sets the current record's "sfGuardUser" collection
+ * @method Tarea               setEstadoTarea()     Sets the current record's "EstadoTarea" value
+ * @method Tarea               setComentarioTarea() Sets the current record's "ComentarioTarea" value
+ * @method Tarea               setComentarios()     Sets the current record's "Comentarios" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -54,14 +57,14 @@ abstract class BaseTarea extends sfDoctrineRecord
              'notnull' => true,
              'length' => 150,
              ));
-        $this->hasColumn('descripcion', 'string', 30, array(
+        $this->hasColumn('descripcion', 'string', 2000, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 30,
+             'length' => 2000,
              ));
-        $this->hasColumn('fecha_estimada', 'timestamp', null, array(
-             'type' => 'timestamp',
-             'notnull' => true,
+        $this->hasColumn('fecha_estimada', 'date', null, array(
+             'type' => 'date',
+             'notnull' => false,
              ));
     }
 
@@ -75,6 +78,10 @@ abstract class BaseTarea extends sfDoctrineRecord
         $this->hasOne('EstadoTarea', array(
              'local' => 'estado_id',
              'foreign' => 'id'));
+
+        $this->hasOne('ComentarioTarea', array(
+             'local' => 'id',
+             'foreign' => 'tarea_id'));
 
         $this->hasOne('ComentarioTarea as Comentarios', array(
              'local' => 'id',

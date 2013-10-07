@@ -12,4 +12,8 @@
  */
 class EstadoTarea extends BaseEstadoTarea
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+    }
 }

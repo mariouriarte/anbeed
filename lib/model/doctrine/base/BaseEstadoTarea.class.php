@@ -31,10 +31,10 @@ abstract class BaseEstadoTarea extends sfDoctrineRecord
              'notnull' => true,
              'length' => 30,
              ));
-        $this->hasColumn('descripcion', 'string', 30, array(
+        $this->hasColumn('descripcion', 'string', 150, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 30,
+             'length' => 150,
              ));
     }
 
