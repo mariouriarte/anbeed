@@ -7,8 +7,14 @@
 <input type="hidden" name="sf_method" value="put" />
 <?php endif; ?>
   <table>
+      <?php echo $form->renderHiddenFields(false) ?>
     <tbody>
-      <?php echo $form->renderGlobalErrors();
+      <?php 
+      
+//      echo $form['tarea_id']->getValue();
+//      die;
+      
+      echo $form->renderGlobalErrors();
       $tarea = $sf_user->getAttribute('tarea');
       $lugar_tarea = $sf_user->getAttribute('lugar_tarea');
       $estado = $sf_user->getAttribute('estado');
@@ -43,8 +49,8 @@
                                 <?php echo link_to('Editar','coments/edit?id='.$comentario->getId()) ?>
                             </li>
                             <li class="sf_admin_action_delete">
-                                <?php echo link_to('Eliminar', 'coments/delete?id='.$comentario->getId(), 'confirm=¿Está seguro?') ?>
-                            </li>       
+                                <?php echo link_to('Borrar', 'coments/delete?id='.$comentario->getId(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
+                            </li>    
                         </ul>
                     </td>
                     <?php else: ?>

@@ -29,7 +29,6 @@ generator:
           _edit: ~
         actions:
           ir_portal: {label: Volver al Portal}
-          _new: ~ 
       filter:  
         display: [nombre, estado_id]
       form:    ~

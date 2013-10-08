@@ -30,6 +30,7 @@ class tareasActions extends autoTareasActions
         $user->setAttribute('tarea', $this->tarea);
         /*de donde*/
         $user->setAttribute('lugar_tarea', 'tareas');
+        
         if(sfConfig::get('sf_environment') == 'dev')
         {
             $env = '_dev';

@@ -12,11 +12,11 @@ class ComentarioTareaForm extends BaseComentarioTareaForm
 {
   public function configure()
   {
-       unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
+      unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
        
-       $this->widgetSchema['tarea_id'] = new sfWidgetFormInputHidden();
+      $this->widgetSchema['tarea_id'] = new sfWidgetFormInputHidden();
        
-       $this->widgetSchema['leido'] = new sfWidgetFormInputHidden();
+      $this->widgetSchema['leido'] = new sfWidgetFormInputHidden();
        
       /*AJUSTANDO LOS TAMAños*/
       $this->widgetSchema['comentario']->setAttribute('rows' , 5);

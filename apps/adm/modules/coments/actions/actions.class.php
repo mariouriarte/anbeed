@@ -64,7 +64,7 @@ class comentsActions extends sfActions
     $this->forward404Unless($comentario_tarea = Doctrine_Core::getTable('ComentarioTarea')->find(array($request->getParameter('id'))), sprintf('Object comentario_tarea does not exist (%s).', $request->getParameter('id')));
     $comentario_tarea->delete();
 
-    $this->redirect('coments/index');
+    $this->redirect('coments/new');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
@@ -75,7 +75,7 @@ class comentsActions extends sfActions
         $notice = $form->getObject()->isNew() ? 'El elemento fue creado correctamente.' : 'El elemento fue actualizado correctamente.';
         $comentario_tarea = $form->save();
 
-        $this->redirect('coments/edit?id='.$comentario_tarea->getId());
+        $this->redirect('coments/new');
     }
     else
     {
