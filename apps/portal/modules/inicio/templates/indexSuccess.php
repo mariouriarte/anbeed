@@ -142,9 +142,6 @@
                             <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Código Producto</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/ingredientes"><span>Ingredientes</span></a></li>
                             <?php endif; ?>
-                            <?php if ($sf_user->hasCredential('ADMINISTRADOR')): ?>
-                            <li><a href="/adm<?php echo $env ?>.php/personas"><span>Personas</span></a></li>
-                            <?php endif; ?>
                             <li><a href="/adm<?php echo $env ?>.php/tventas"><span>Tipo Venta</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/administraciones"><span>Vía de Administración</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/gcosmetico"><span>Grupo Cosmético</span></a></li>
