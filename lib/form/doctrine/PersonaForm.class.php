@@ -13,7 +13,7 @@ class PersonaForm extends BasePersonaForm
     protected $expedido = array(''   => ' - Expedido en - ',
                                 'LP' => 'LP',
                                 'SC' => 'SC',
-                                'SR' => 'SR',
+                                'CH' => 'CH',
                                 'OR' => 'OR',
                                 'BN' => 'BN',
                                 'CB' => 'CB',
