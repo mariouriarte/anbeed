@@ -156,23 +156,24 @@
             </div>
         </div>
         <?php endif; ?>
-<!--        <div class="columna">
+        <?php if ($sf_user->hasCredential('ADMINISTRADOR')): ?>
+        <div class="columna">
             <div class="cubo">
                 <div class="adentro">
                     <div class="titulo_img"><img src="/images/icons/cuenta.svg" /></div>
                     <h2 class="titulo">Cuenta</h2>
                     <div class="contenido">
                         <ul>
-                            <?php // if ($sf_user->hasCredential('ADMINISTRADOR')): ?>
+                            
                             <li><a href="/adm<?php echo $env ?>.php/usuarios"><span>Lista de Usuarios</span></a></li>
-                            <?php // endif; ?>
-                            <?php // if ($sf_user->isAuthenticated()): ?>
-                            <li><a href="/adm<?php // echo $env ?>.php/usuarios/<?php echo $sf_user->getGuardUser()->getId()?>/edit"><span>Editar Datos Personales</span></a></li>
-                            <?php // endif; ?>
+                            <?php if ($sf_user->isAuthenticated()): ?>
+                            <!--<li><a href="/adm<?php // echo $env ?>.php/usuarios/<?php // echo $sf_user->getGuardUser()->getId()?>/edit"><span>Editar Datos Personales</span></a></li>-->
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>-->
+        </div>
+        <?php endif; ?>
     </div>
 </div>
