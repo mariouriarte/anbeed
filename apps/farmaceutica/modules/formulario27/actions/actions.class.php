@@ -122,8 +122,8 @@ class formulario27Actions extends autoFormulario27Actions
         $pdf->MultiCell(155, 0, $this->formulario27->DispositivoMedico->LaboratorioFabricante
             ->getBajoLicencia(),
             0, 'L', 0, 0, $x+35, $y+=11, true);
-        $pdf->MultiCell(155, 0, $this->formulario27->DispositivoMedico->LaboratorioFabricante
-            ->Pais->getNombre(), 
+        $pdf->MultiCell(155, 0, strtoupper($this->formulario27->DispositivoMedico->LaboratorioFabricante
+            ->Pais->getNombre()), 
             0, 'L', 0, 0, $x+40, $y+=5, true);
         $pdf->MultiCell(125, 0, $this->formulario27->DispositivoMedico->LaboratorioFabricante
             ->getDireccion(), 

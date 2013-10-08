@@ -47,11 +47,11 @@
             <?php echo $form->Higiene->Empresa->getDireccion() ?>
         </td>
         <td>Ciudad / Distrito / Provincia / Departamento:<br />
-            <?php echo $form->Higiene->Empresa->Ciudad->getNombre() ?>
+            <?php echo strtoupper($form->Higiene->Empresa->Ciudad->getNombre()) ?>
         </td>
     </tr>
     <tr>
-        <td>País: <?php echo $form->Higiene->Empresa->Ciudad->Pais->getNombre() ?>
+        <td>País: <?php echo strtoupper($form->Higiene->Empresa->Ciudad->Pais->getNombre()) ?>
         </td>
         <td>Teléfono: <?php echo $form->Higiene->Empresa->getTelefono1() ?>
         </td>
@@ -89,11 +89,11 @@
             <?php echo $form->getRescomDireccion() ?>
         </td>
         <td>Ciudad / Distrito / Provincia / Departamento:<br />
-            <?php echo $form->Ciudad->getNombre() ?>
+            <?php echo strtoupper($form->Ciudad->getNombre()) ?>
         </td>
     </tr>
     <tr>
-        <td>País: <?php echo $form->Ciudad->Pais->getNombre() ?></td>
+        <td>País: <?php echo strtoupper($form->Ciudad->Pais->getNombre()) ?></td>
         <td>Teléfono: <?php echo $form->getRescomTelefono() ?></td>
     </tr>
     <tr>
@@ -116,7 +116,7 @@
             <?php echo $form->Higiene->LaboratorioFabricante->getDireccion() ?>
         </td>
         <td>Ciudad / Distrito / Provincia / Departamento:<br />
-            <?php echo $form->Higiene->LaboratorioFabricante->Ciudad->getNombre() ?>
+            <?php echo strtoupper($form->Higiene->LaboratorioFabricante->Ciudad->getNombre()) ?>
         </td>
     </tr>
     <tr>
