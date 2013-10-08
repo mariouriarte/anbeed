@@ -21,7 +21,10 @@ class TareaForm extends BaseTareaForm
                   'years' => array_combine($years, $years))), ));
       
       
-      $this->widgetSchema['estado_id'] = new sfWidgetFormInputHidden();
+      if(sfContext::getInstance()->getModuleName() == "tareas")
+      {
+        $this->widgetSchema['estado_id'] = new sfWidgetFormInputHidden();
+      }
       
       $this->widgetSchema['user_id']->setOption('add_empty', ' - Seleccione usuario -');
       
