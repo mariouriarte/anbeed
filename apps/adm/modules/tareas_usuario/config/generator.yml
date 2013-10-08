@@ -7,7 +7,7 @@ generator:
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          tarea
+    route_prefix:          tarea_tareas_usuario
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
@@ -21,28 +21,17 @@ generator:
         descripcion:    {label: Descripción de la Tarea}
         fecha_estimada: {label: Fecha estimada de conclusión}
       list:    
-        table_method: selectTareasAsignadas
+        table_method: selectTareasAsignadasUsuarios
         title: Listado de Tareas
         display: [sf_guard_user, nombre, estado_tarea, fecha_estimada]
         object_actions:
           comentario:    {label: Comentarios, action: comentarios}
           _edit: ~
-          _delete: ~
         actions:
           ir_portal: {label: Volver al Portal}
           _new: ~ 
       filter:  
-        display: [user_id, nombre, estado_id]
+        display: [nombre, estado_id]
       form:    ~
       edit:    
         title: Editar Tarea %%nombre%%
-        actions:
-          ir_portal: {label: Volver al Portal}
-          _save: ~ 
-      new:     
-        title: Asignar nueva Tarea
-        actions:
-          ir_portal: {label: Volver al Portal}
-          _save: ~ 
-          _save_and_add: ~
-        

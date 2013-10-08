@@ -712,9 +712,9 @@ Tarea:
     descripcion:    {type: string(2000), notnull: true}
     fecha_estimada: {type: date, notnull: false}
   relations:
-    sfGuardUser:     {local: user_id, foreign: id, type: many, foreignAlias: Tareas}   
+    sfGuardUser:     {local: user_id, foreign: id, type: one, foreignAlias: Tarea}   
     EstadoTarea:     {local: estado_id, foreign: id, type: one, foreignAlias: Tarea}   
-    ComentarioTarea: {local: id, foreign: tarea_id, type: one, foreignAlias: Tarea}   
+    ComentarioTarea: {local: id, foreign: tarea_id, type: many, foreignAlias: Tareas}   
 
 ComentarioTarea:
   actAs: [Timestampable, Signable]
@@ -723,9 +723,7 @@ ComentarioTarea:
     comentario: {type: string(2000), notnull: true}
     leido:      {type: boolean, default: false, notnull: true}
   relations:
-    Tarea:       {local: tare_id, foreign: id, type: many, foreignAlias: Comentarios}   
-    sfGuardUser: {local: user_id, foreign: id, type: many, foreignAlias: Comentarios}   
-    
+    Tarea:      {local: tarea_id, foreign: id, type: one, foreignAlias: Comentarios}   
     
 EstadoTarea:
   actAs: [Timestampable, Signable]

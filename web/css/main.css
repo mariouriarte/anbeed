@@ -502,3 +502,53 @@ ul li.sf_admin_action_edit a
     margin: 0;
     padding: 3px;
 }
+
+/*Comentarios*/
+
+.tabla-comentarios
+{
+    border-color: #DDDDDD #DDDDDD -moz-use-text-color;
+    font-size: 11px;
+    width: 100%;
+}
+
+.tabla-comentarios th {
+    background-color: #D3DFD1;
+    color: #000 !important;
+    font-size: 12px !important;
+    padding: 3px !important;
+    text-align: left !important;
+}
+.tabla-comentarios #tarea {
+    width: 50%;
+}
+.tabla-comentarios #creator {
+    width: 20%;
+}
+.tabla-comentarios #creatorat {
+    width: 15%;
+}
+.tabla-comentarios #acciones {
+    width: 15%;
+}
+
+.tabla-comentarios td {
+    background-color: #F6F4F0;
+    min-width: 100px;
+}
+
+.tabla-comentarios li {
+    display: inline;
+    font-size: 100%;
+    list-style-type: none;
+    
+}
+
+.tabla-comentarios th, .tabla-comentarios td {
+    text-align: left;
+    padding: 0.2em;
+    border: 1px solid #DDDDDD;
+}
+
+
+/*fin Comentarios*/

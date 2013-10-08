@@ -80,18 +80,38 @@
                 </div>
             </div>
         </div>
-
+        
+        <?php if ($sf_user->hasCredential('ADMINISTRADOR')): ?>
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
                     <div class="titulo_img"><img src="/images/icons/tareas.svg" /></div>
-                    <h2 class="titulo">Tareas</h2>
+                    <h2 class="titulo">Administración de Tareas</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/tareas/new"><span>Asignar nueva tarea</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas/index"><span>Listado de tareas Asignadas</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas/index"><span>Listado de tareas Concluidas</span></a></li>
-                            
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=1"><span>Listado de tareas Asignadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=2"><span>Listado de tareas en Proceso</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=3"><span>Listado de tareas Observadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=4"><span>Listado de tareas Concluidas</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
+        
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <div class="titulo_img"><img src="/images/icons/tareas.svg" /></div>
+                    <h2 class="titulo">Tareas Asignadas</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=1"><span>Tareas Asignadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=2"><span>Tareas en Proceso</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=3"><span>Tareas Observadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=4"><span>Tareas Concluidas</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -113,12 +133,13 @@
                             <li><a href="/adm<?php echo $env ?>.php/tventas"><span>Tipo Venta</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/administraciones"><span>Vía de Administración</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/gcosmetico"><span>Grupo Cosmético</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/ghigiene"><span>Grupo de Higiene</span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <?php if ($sf_user->hasCredential('ADMINISTRADOR')): ?>
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
@@ -137,5 +158,6 @@
                 </div>
             </div>
         </div>
+        <?php endif; ?>
     </div>
 </div>

@@ -13,7 +13,13 @@ class ComentarioTareaForm extends BaseComentarioTareaForm
   public function configure()
   {
        unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
+       
+       $this->widgetSchema['tarea_id'] = new sfWidgetFormInputHidden();
+       
+       $this->widgetSchema['leido'] = new sfWidgetFormInputHidden();
+       
       /*AJUSTANDO LOS TAMAños*/
-//      $this->widgetSchema['nombre']->setAttribute('size' , 50);
+      $this->widgetSchema['comentario']->setAttribute('rows' , 5);
+      $this->widgetSchema['comentario']->setAttribute('cols' , 143);
   }
 }

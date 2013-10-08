@@ -239,20 +239,20 @@ class formulario11Actions extends autoFormulario11Actions
     }
     
     
-    public function executeItem(sfWebRequest $request)
-    {
-        $user = $this->getUser();
-        
-        $this->formulario11 = $this->getRoute()->getObject();
-        
-        $user->setAttribute('form11', $this->formulario11);
-        
-        if(sfConfig::get('sf_environment') == 'dev')
+        public function executeItem(sfWebRequest $request)
         {
-            $env = '_dev';
-        } 
-        $this->redirect('/farmaceutica'.$env.'.php/items');
-    }
+            $user = $this->getUser();
+
+            $this->formulario11 = $this->getRoute()->getObject();
+
+            $user->setAttribute('form11', $this->formulario11);
+
+            if(sfConfig::get('sf_environment') == 'dev')
+            {
+                $env = '_dev';
+            } 
+            $this->redirect('/farmaceutica'.$env.'.php/items');
+        }
     public function executeListIrEmpresa(sfWebRequest $request)
     {
         $user = sfContext::getInstance()->getUser();

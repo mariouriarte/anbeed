@@ -7,6 +7,15 @@ comentario_tarea:
     column:               id
     with_wildcard_routes: true
 
+tarea_tareas_usuario:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Tarea
+    module:               tareas_usuario
+    prefix_path:          /tareas_usuario
+    column:               id
+    with_wildcard_routes: true
+
 estado_tarea:
   class: sfDoctrineRouteCollection
   options:

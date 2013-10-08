@@ -9,8 +9,8 @@ EstadoTarea:
     nombre: 'OBSERVADA'
     descripcion: 'LA TAREA FUE OBSERVADA'
   Estado4:
-    nombre: 'TERMINADA'
-    descripcion: 'LA TAREA FUE TERMINADA'
+    nombre: 'CONCLUIDA'
+    descripcion: 'LA TAREA FUE CONCLUIDA'
     
 CodigoProducto:
   CodigoProducto_1:

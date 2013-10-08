@@ -62,6 +62,7 @@ ALTER TABLE ciudad ADD CONSTRAINT ciudad_created_by_sf_guard_user_id FOREIGN KEY
 ALTER TABLE codigo_producto ADD CONSTRAINT codigo_producto_updated_by_sf_guard_user_id FOREIGN KEY (updated_by) REFERENCES sf_guard_user(id) ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE codigo_producto ADD CONSTRAINT codigo_producto_created_by_sf_guard_user_id FOREIGN KEY (created_by) REFERENCES sf_guard_user(id) ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE comentario_tarea ADD CONSTRAINT comentario_tarea_updated_by_sf_guard_user_id FOREIGN KEY (updated_by) REFERENCES sf_guard_user(id) ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;
+ALTER TABLE comentario_tarea ADD CONSTRAINT comentario_tarea_tarea_id_tarea_id FOREIGN KEY (tarea_id) REFERENCES tarea(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE comentario_tarea ADD CONSTRAINT comentario_tarea_created_by_sf_guard_user_id FOREIGN KEY (created_by) REFERENCES sf_guard_user(id) ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE cosmetico ADD CONSTRAINT cosmetico_updated_by_sf_guard_user_id FOREIGN KEY (updated_by) REFERENCES sf_guard_user(id) ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE cosmetico ADD CONSTRAINT cosmetico_producto_id_producto_id FOREIGN KEY (producto_id) REFERENCES producto(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
@@ -203,6 +204,7 @@ ALTER TABLE regente_farmaceutico ADD CONSTRAINT regente_farmaceutico_created_by_
 ALTER TABLE representante_legal ADD CONSTRAINT representante_legal_updated_by_sf_guard_user_id FOREIGN KEY (updated_by) REFERENCES sf_guard_user(id) ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE representante_legal ADD CONSTRAINT representante_legal_persona_id_persona_id FOREIGN KEY (persona_id) REFERENCES persona(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE representante_legal ADD CONSTRAINT representante_legal_created_by_sf_guard_user_id FOREIGN KEY (created_by) REFERENCES sf_guard_user(id) ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;
+ALTER TABLE tarea ADD CONSTRAINT tarea_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE tarea ADD CONSTRAINT tarea_updated_by_sf_guard_user_id FOREIGN KEY (updated_by) REFERENCES sf_guard_user(id) ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE tarea ADD CONSTRAINT tarea_estado_id_estado_tarea_id FOREIGN KEY (estado_id) REFERENCES estado_tarea(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE tarea ADD CONSTRAINT tarea_created_by_sf_guard_user_id FOREIGN KEY (created_by) REFERENCES sf_guard_user(id) ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;

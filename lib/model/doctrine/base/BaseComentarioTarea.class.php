@@ -8,19 +8,16 @@
  * @property integer $tarea_id
  * @property string $comentario
  * @property boolean $leido
- * @property Doctrine_Collection $Tarea
- * @property Doctrine_Collection $sfGuardUser
+ * @property Tarea $Tarea
  * 
- * @method integer             getTareaId()     Returns the current record's "tarea_id" value
- * @method string              getComentario()  Returns the current record's "comentario" value
- * @method boolean             getLeido()       Returns the current record's "leido" value
- * @method Doctrine_Collection getTarea()       Returns the current record's "Tarea" collection
- * @method Doctrine_Collection getSfGuardUser() Returns the current record's "sfGuardUser" collection
- * @method ComentarioTarea     setTareaId()     Sets the current record's "tarea_id" value
- * @method ComentarioTarea     setComentario()  Sets the current record's "comentario" value
- * @method ComentarioTarea     setLeido()       Sets the current record's "leido" value
- * @method ComentarioTarea     setTarea()       Sets the current record's "Tarea" collection
- * @method ComentarioTarea     setSfGuardUser() Sets the current record's "sfGuardUser" collection
+ * @method integer         getTareaId()    Returns the current record's "tarea_id" value
+ * @method string          getComentario() Returns the current record's "comentario" value
+ * @method boolean         getLeido()      Returns the current record's "leido" value
+ * @method Tarea           getTarea()      Returns the current record's "Tarea" value
+ * @method ComentarioTarea setTareaId()    Sets the current record's "tarea_id" value
+ * @method ComentarioTarea setComentario() Sets the current record's "comentario" value
+ * @method ComentarioTarea setLeido()      Sets the current record's "leido" value
+ * @method ComentarioTarea setTarea()      Sets the current record's "Tarea" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -51,12 +48,8 @@ abstract class BaseComentarioTarea extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasMany('Tarea', array(
-             'local' => 'tare_id',
-             'foreign' => 'id'));
-
-        $this->hasMany('sfGuardUser', array(
-             'local' => 'user_id',
+        $this->hasOne('Tarea', array(
+             'local' => 'tarea_id',
              'foreign' => 'id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
