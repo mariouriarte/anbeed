@@ -23,6 +23,7 @@
  * @property string $maquila_tipo
  * @property string $maquila
  * @property string $maquila_fabricado
+ * @property string $informacion_cambios
  * @property Formulario $Formulario
  * @property Higiene $Higiene
  * @property TipoTramiteFormulario $TipoTramiteFormulario
@@ -47,6 +48,7 @@
  * @method string                getMaquilaTipo()                Returns the current record's "maquila_tipo" value
  * @method string                getMaquila()                    Returns the current record's "maquila" value
  * @method string                getMaquilaFabricado()           Returns the current record's "maquila_fabricado" value
+ * @method string                getInformacionCambios()         Returns the current record's "informacion_cambios" value
  * @method Formulario            getFormulario()                 Returns the current record's "Formulario" value
  * @method Higiene               getHigiene()                    Returns the current record's "Higiene" value
  * @method TipoTramiteFormulario getTipoTramiteFormulario()      Returns the current record's "TipoTramiteFormulario" value
@@ -70,6 +72,7 @@
  * @method Formulario706         setMaquilaTipo()                Sets the current record's "maquila_tipo" value
  * @method Formulario706         setMaquila()                    Sets the current record's "maquila" value
  * @method Formulario706         setMaquilaFabricado()           Sets the current record's "maquila_fabricado" value
+ * @method Formulario706         setInformacionCambios()         Sets the current record's "informacion_cambios" value
  * @method Formulario706         setFormulario()                 Sets the current record's "Formulario" value
  * @method Formulario706         setHigiene()                    Sets the current record's "Higiene" value
  * @method Formulario706         setTipoTramiteFormulario()      Sets the current record's "TipoTramiteFormulario" value
@@ -167,6 +170,11 @@ abstract class BaseFormulario706 extends sfDoctrineRecord
              'type' => 'string',
              'notnull' => false,
              'length' => 255,
+             ));
+        $this->hasColumn('informacion_cambios', 'string', 3000, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => 3000,
              ));
     }
 

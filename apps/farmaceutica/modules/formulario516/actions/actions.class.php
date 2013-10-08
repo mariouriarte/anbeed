@@ -53,7 +53,7 @@ class formulario516Actions extends autoFormulario516Actions
                   sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
 
         // pdf object, reescrito
-        $pdf = new sfTCPDF();
+        $pdf = new sfTCPDF("P", PDF_UNIT, 'Letter', true, 'UTF-8');
         // set document information
         $pdf->SetCreator(PDF_CREATOR);
         $pdf->SetAuthor('Capsule Systems');

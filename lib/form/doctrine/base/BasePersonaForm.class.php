@@ -16,6 +16,7 @@ abstract class BasePersonaForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'               => new sfWidgetFormInputHidden(),
+      'user_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
       'nombre'           => new sfWidgetFormInputText(),
       'ap_paterno'       => new sfWidgetFormInputText(),
       'ap_materno'       => new sfWidgetFormInputText(),
@@ -39,6 +40,7 @@ abstract class BasePersonaForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'user_id'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'required' => false)),
       'nombre'           => new sfValidatorString(array('max_length' => 50)),
       'ap_paterno'       => new sfValidatorString(array('max_length' => 30)),
       'ap_materno'       => new sfValidatorString(array('max_length' => 30, 'required' => false)),

@@ -32,7 +32,7 @@ generator:
         display: [nombre, marca, laboratorio_fabricante, registro_sanitario]
         object_actions:
           ir_form516:   {label: Desicion 516, action: irForm516}
-          ir_form7:     {label: Form 007, action: irForm7}
+#          ir_form7:     {label: Form 007, action: irForm7}
           _edit: ~ 
         actions:
           adm_empresa: {label: Volver a Empresa}
@@ -41,7 +41,7 @@ generator:
         display: [nombre, marca, laboratorio_fabricante_id, registro_sanitario]
       form:
         display:
-          Datos Generales del Producto: [laboratorio_fabricante_id, nombre, forma_cosmetica_id, grupo_cosmetico_id, marca, codigo_nso, expediente, vigencia_nso, pais_id, registro_sanitario, descripcion]
+          Datos Generales del Producto: [laboratorio_fabricante_id, nombre, variedades, presentacion, forma_cosmetica_id, grupo_cosmetico_id, marca, codigo_nso, expediente, vigencia_nso, pais_id, registro_sanitario, descripcion]
         actions:    
           _delete: ~
           _list: ~

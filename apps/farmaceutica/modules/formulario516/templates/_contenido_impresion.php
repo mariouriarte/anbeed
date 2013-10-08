@@ -1,3 +1,5 @@
+<?php use_helper('Date') ?>
+
 <div class="head-formulario">
 <img src="images/forms/comunidad.jpg" border="0" height="90" width="120">
 <span class="titulo-form"><b>FORMATO ÚNICO (FNSOC-001)</b></span>
@@ -204,12 +206,14 @@
         <td>Forma Cosmética:<br />
             <?php echo $form->Cosmetico->FormaCosmetica->getNombre() ?>
         </td>
-        <td>Grupo cosmético: (Tonos o variedades)<br />
+        <td rowspan="2">Grupo cosmético: (Tonos o variedades)<br />
             <?php echo $form->Cosmetico->GrupoCosmetico->getNombre() ?>
+            Variedades:<br />
+            <?php echo $form->Cosmetico->getVariedades().' - '.$form->Cosmetico->getPresentacion() ?>
         </td>
     </tr>
     <tr>
-        <td colspan="2">Marca(s):<br />
+        <td>Marca(s):<br />
             <?php echo $form->Cosmetico->getMarca() ?>
         </td>
     </tr>
@@ -232,7 +236,7 @@
             de reconocimiento)</span>
         </td>
         <td>Vigencia del Código de identificación de la NSO<br />
-            <?php echo $form->Cosmetico->getVigenciaNso() ?>
+            <?php echo format_date($form->Cosmetico->getVigenciaNso(), "dd/MM/yyyy") ?>
         </td>
     </tr>
     <tr>
@@ -304,7 +308,7 @@
 </table>
 <table class="tbl-generica" cellpadding="4">
     <tr>
-        <td id="textarea"></td>
+        <td id="textarea"><?php echo $form->getInformacionCambios() ?></td>
     </tr>
 </table>
 
@@ -878,6 +882,6 @@
         <td colspan="2">Número de identificación: <b><?php echo $representante->Persona->getCi().' '.$representante->Persona->getExpedido() ?></b></td>
     </tr>
     <tr>
-        <td><b>Lugar y fecha,</b></td>
+        <td><b>La Paz - Bolivia, <?php echo format_date($form->getCreatedAt(), "dd MMMM yyyy") ?></b></td>
     </tr>
 </table>

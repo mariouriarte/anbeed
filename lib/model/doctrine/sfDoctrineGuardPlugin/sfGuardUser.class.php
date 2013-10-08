@@ -12,4 +12,17 @@
  */
 class sfGuardUser extends PluginsfGuardUser
 {
+    public function getCedulaExpedido()
+    {
+        return $this->Persona->getCi() .' '. $this->Persona->getExpedido();
+    }
+        
+    public function getNombreOrdenado()
+    {
+        return $this->Persona->getApPaterno().' '.$this->Persona->getApMaterno().' '.$this->Persona->getNombre();
+    }
+    public function __toString()
+    {
+       return $this->getUsername().' - '.$this->Persona->getNombre().' '.$this->Persona->getApPaterno();
+    }
 }

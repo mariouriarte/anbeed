@@ -1,3 +1,5 @@
+<?php use_helper('Date') ?>
+
 <div class="head-formulario">
 <img src="images/forms/comunidad.jpg" border="0" height="90" width="120">
 <span class="titulo-form"><b>FORMATO ÚNICO (FNSOHA-001)</b></span>
@@ -249,7 +251,7 @@
     </tr>
     <tr>
         <td colspan="2">Variedades:<br />
-            <?php echo $form->Higiene->getVariedades() ?>
+            <?php echo $form->Higiene->getVariedades().' - '.$form->Higiene->getPresentacion() ?>
         </td>
     </tr>
     <tr>
@@ -275,7 +277,7 @@
     <tr>
         <td rowspan="2"><span class="metadato">(Incluir en el caso de solicitud de reconocimiento)</span></td>
         <td>Vigencia del Código de identificación de la NSO<br />
-            <?php echo $form->Higiene->getVigenciaNso() ?>
+            <?php echo format_date($form->Higiene->getVigenciaNso(), "dd/MM/yyyy") ?>
         </td>
     </tr>
     <tr>
@@ -348,7 +350,7 @@
 </table>
 <table class="tbl-generica" cellpadding="4">
     <tr>
-        <td id="textarea"></td>
+        <td id="textarea"><?php echo $form->getInformacionCambios() ?></td>
     </tr>
 </table>
 
@@ -625,6 +627,6 @@
         <td colspan="2">Número de identificación: <b><?php echo $form->Higiene->Empresa->RepresentanteLegal->Persona->getCi() .' '. $form->Higiene->Empresa->RepresentanteLegal->Persona->getExpedido() ?></b></td>
     </tr>
     <tr>
-        <td><b>Lugar y fecha,</b></td>
+        <td><b>La Paz - Bolivia, <?php echo format_date($form->getCreatedAt(), "dd MMMM yyyy") ?></b></td>
     </tr>
 </table>

@@ -1,27 +1,45 @@
+comentario_tarea:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ComentarioTarea
+    module:               comentarios
+    prefix_path:          /comentarios
+    column:               id
+    with_wildcard_routes: true
+
+estado_tarea:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                EstadoTarea
+    module:               estado_tareas
+    prefix_path:          /estado_tareas
+    column:               id
+    with_wildcard_routes: true
+
+tarea:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Tarea
+    module:               tareas
+    prefix_path:          /tareas
+    column:               id
+    with_wildcard_routes: true
+
+sf_guard_user_usuarios:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                sfGuardUser
+    module:               usuarios
+    prefix_path:          /usuarios
+    column:               id
+    with_wildcard_routes: true
+
 sf_guard_user_cliente_usuario:
   class: sfDoctrineRouteCollection
   options:
     model:                sfGuardUser
     module:               cliente_usuario
     prefix_path:          /cliente_usuario
-    column:               id
-    with_wildcard_routes: true
-
-cliente:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                Cliente
-    module:               clientes
-    prefix_path:          /clientes
-    column:               id
-    with_wildcard_routes: true
-
-persona_persona_usuario:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                Persona
-    module:               persona_usuario
-    prefix_path:          /persona_usuario
     column:               id
     with_wildcard_routes: true
 

@@ -70,7 +70,7 @@ Cosmetico:
     marca: PANTENE
     nombre: SHAMPU
     codigo_nso: NO
-    vigencia_nso: NO
+#    vigencia_nso: NO
     expediente: NO
     registro_sanitario: ''
     descripcion: ''
@@ -87,7 +87,7 @@ Higiene:
     nombre_detalle: PHD
     variedades: ''
     codigo_nso: no
-    vigencia_nso: ''
+#    vigencia_nso: ''
     expediente: NO
     registro_sanitario: ''
     created_at: '2013-08-03 21:54:29'

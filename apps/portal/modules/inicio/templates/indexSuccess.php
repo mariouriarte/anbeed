@@ -55,10 +55,9 @@
                     <h2 class="titulo">Correspondecia</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/emisionc"><span>Emsión de Correspondecia</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/emisionc"><span>Emisión de Correspondecia</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/tipodoc"><span>Tipo Documento</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/emisor"><span>Emisor Correspondecia</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Código Producto</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -81,6 +80,23 @@
                 </div>
             </div>
         </div>
+
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <div class="titulo_img"><img src="/images/icons/tareas.svg" /></div>
+                    <h2 class="titulo">Tareas</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/new"><span>Asignar nueva tarea</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index"><span>Listado de tareas Asignadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index"><span>Listado de tareas Concluidas</span></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div class="columna">
             <div class="cubo">
@@ -89,6 +105,7 @@
                     <h2 class="titulo">Administración</h2>
                     <div class="contenido">
                         <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Código Producto</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/ingredientes"><span>Ingredientes</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/paises"><span>Paises</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/ciudades"><span>Ciudades</span></a></li>
@@ -109,7 +126,7 @@
                     <h2 class="titulo">Cuenta</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/persona_usuario"><span>Usuarios</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/usuarios"><span>Usuarios</span></a></li>
                             <?php if ($sf_user->isAuthenticated()): ?>
                                 <li><a href="<?php echo url_for('@sf_guard_signout') ?>"><span>Salir</span></a></li>
                             <?php else: ?>

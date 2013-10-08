@@ -174,3 +174,107 @@
 {
     text-shadow:rgba(0,0,0,0.3) 0 -1px 0px; 
 }
+
+.credenciales_contenedor
+{
+    margin-top: 10%;
+    margin-left:23%;
+    overflow:hidden;
+    width: 500px;
+    height: 300px;
+    background: none repeat scroll 0 0 #F5F5F2;
+    border-radius: 7px;
+        
+}
+.credenciales_header
+{
+    
+    border-radius: 7px;
+}
+.credenciales_logo
+{
+    width: 100px;
+    height: 65px;
+    float: left;
+    text-align: center;
+    padding-top: 15px;
+    background: none repeat scroll 0 0 #D3DFD1;
+    padding-bottom: 10px;
+   
+}
+.credenciales_titulo
+{
+    width: 400px;
+    height: 80px;
+    float: left;
+    background: none repeat scroll 0 0 #D3DFD1;
+    padding-bottom: 10px;
+   
+}
+
+.credenciales_body
+{
+    width: 450px;
+    height: 200px;
+    display: block;
+    clear: both;
+    margin: 15px 0 0;
+    padding-left: 20px;
+    padding-top: 10px;
+    border-radius: 7px;
+    
+}
+
+.credenciales_body dt {
+    font-size: 115%;
+    font-weight: bolder;
+    margin: 5px 0;
+}
+.credenciales_body dd {
+     margin: 0;
+     padding: 0;
+}
+
+
+.credenciales_header h1 {
+    background: none;
+    border-bottom: 0;
+    border-radius: 0;
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 18px;
+}
+.credenciales_header h5 {
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.sfTIconList
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.credenciales_body li
+{
+  background: url(../images/icons/linkOut16.png) no-repeat top left;
+    clear: left;
+    line-height: 170%;
+    padding-left: 20px;
+}
+
+
+
+
+
+
+

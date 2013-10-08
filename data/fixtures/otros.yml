@@ -1,3 +1,17 @@
+EstadoTarea:
+  Estado1:
+    nombre: 'ASIGNADA'
+    descripcion: 'LA TAREA FUE CREADA Y ASIGNADA A UN USUARIO'
+  Estado2:
+    nombre: 'EN PROGRESO'
+    descripcion: 'LA TAREA ESTA EN PROGRESO'
+  Estado3:
+    nombre: 'OBSERVADA'
+    descripcion: 'LA TAREA FUE OBSERVADA'
+  Estado4:
+    nombre: 'TERMINADA'
+    descripcion: 'LA TAREA FUE TERMINADA'
+    
 CodigoProducto:
   CodigoProducto_1:
     nombre: II

@@ -33,7 +33,7 @@
  * @property Doctrine_Collection $Higiene
  * @property Ciudad $Ciudad
  * @property Doctrine_Collection $EmisionCorrespondencia
- * @property Doctrine_Collection $User
+ * @property Doctrine_Collection $sfGuardUser
  * @property Doctrine_Collection $Reactivos
  * @property Doctrine_Collection $Formulario11
  * 
@@ -65,7 +65,7 @@
  * @method Doctrine_Collection getHigiene()                 Returns the current record's "Higiene" collection
  * @method Ciudad              getCiudad()                  Returns the current record's "Ciudad" value
  * @method Doctrine_Collection getEmisionCorrespondencia()  Returns the current record's "EmisionCorrespondencia" collection
- * @method Doctrine_Collection getUser()                    Returns the current record's "User" collection
+ * @method Doctrine_Collection getSfGuardUser()             Returns the current record's "sfGuardUser" collection
  * @method Doctrine_Collection getReactivos()               Returns the current record's "Reactivos" collection
  * @method Doctrine_Collection getFormulario11()            Returns the current record's "Formulario11" collection
  * @method Empresa             setRepresentanteLegalId()    Sets the current record's "representante_legal_id" value
@@ -96,7 +96,7 @@
  * @method Empresa             setHigiene()                 Sets the current record's "Higiene" collection
  * @method Empresa             setCiudad()                  Sets the current record's "Ciudad" value
  * @method Empresa             setEmisionCorrespondencia()  Sets the current record's "EmisionCorrespondencia" collection
- * @method Empresa             setUser()                    Sets the current record's "User" collection
+ * @method Empresa             setSfGuardUser()             Sets the current record's "sfGuardUser" collection
  * @method Empresa             setReactivos()               Sets the current record's "Reactivos" collection
  * @method Empresa             setFormulario11()            Sets the current record's "Formulario11" collection
  * 
@@ -168,7 +168,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
         $this->hasColumn('email', 'string', 255, array(
              'type' => 'string',
              'notnull' => false,
-             'unique' => true,
+             'unique' => false,
              'length' => 255,
              ));
         $this->hasColumn('actividad', 'string', 255, array(
@@ -244,7 +244,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'empresa_id'));
 
-        $this->hasMany('sfGuardUser as User', array(
+        $this->hasMany('sfGuardUser', array(
              'local' => 'id',
              'foreign' => 'empresa_id'));
 

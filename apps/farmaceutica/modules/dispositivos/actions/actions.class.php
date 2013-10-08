@@ -40,15 +40,15 @@ class dispositivosActions extends autoDispositivosActions
         $this->redirect('/farmaceutica'.$env.'.php/formulario27');
     }
     
-    public function executeIrForm7(sfWebRequest $request)
-    {
-        $user = $this->getUser();
-        $dispositivo = $this->getRoute()->getObject();
-        $user->setAttribute('dispositivo_medico', $dispositivo);
-        $user->setAttribute('tabla', 'dispositivo_medico');
-        $user->setAttribute('producto', 'DispositivoMedico');
-        $this->redirect('formulario7/index');
-    }
+//    public function executeIrForm7(sfWebRequest $request)
+//    {
+//        $user = $this->getUser();
+//        $dispositivo = $this->getRoute()->getObject();
+//        $user->setAttribute('dispositivo_medico', $dispositivo);
+//        $user->setAttribute('tabla', 'dispositivo_medico');
+//        $user->setAttribute('producto', 'DispositivoMedico');
+//        $this->redirect('formulario7/index');
+//    }
     
     protected function processForm(sfWebRequest $request, sfForm $form)
       {

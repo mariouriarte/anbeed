@@ -13,6 +13,7 @@ abstract class BasePersonaFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
+      'user_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
       'nombre'           => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'ap_paterno'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'ap_materno'       => new sfWidgetFormFilterInput(),
@@ -35,6 +36,7 @@ abstract class BasePersonaFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
+      'user_id'          => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('sfGuardUser'), 'column' => 'id')),
       'nombre'           => new sfValidatorPass(array('required' => false)),
       'ap_paterno'       => new sfValidatorPass(array('required' => false)),
       'ap_materno'       => new sfValidatorPass(array('required' => false)),
@@ -74,6 +76,7 @@ abstract class BasePersonaFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'               => 'Number',
+      'user_id'          => 'ForeignKey',
       'nombre'           => 'Text',
       'ap_paterno'       => 'Text',
       'ap_materno'       => 'Text',

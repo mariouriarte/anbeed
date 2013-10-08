@@ -35,7 +35,9 @@ all:
 
     # Enable the database manager
     use_database:           true
-    enabled_modules:        [default, sfGuardAuth, sfGuardGroup]
+    enabled_modules:        [default, sfGuardAuth]
   .actions:
     login_module:    sfGuardAuth
     login_action:    signin
+    secure_module: inicio   # To be called when a user doesn't have
+    secure_action: secure   # The credentials required for an action

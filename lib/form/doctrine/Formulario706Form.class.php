@@ -85,6 +85,9 @@ class Formulario706Form extends BaseFormulario706Form
                   'add_empty' => ' - Seleccione ciudad'));
         $this->validatorSchema['rescom_ciudad_id'] = new sfValidatorDoctrineChoice(
             array('model' => 'Ciudad', 'required' => false));
+        
+        /*ajuste de tamaños*/
+        $this->widgetSchema['informacion_cambios']->setAttribute('cols' , 121);
       
     }
 }
