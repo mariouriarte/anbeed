@@ -73,6 +73,26 @@
             </div>
         </div>
         <?php endif; ?>
+
+        <?php if (!$sf_user->hasCredential('ADMINISTRADOR')): ?>
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <div class="titulo_img"><img src="/images/icons/tareas.svg" /></div>
+                    <h2 class="titulo">Tareas Asignadas</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=1"><span>Tareas Asignadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=2"><span>Tareas en Proceso</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=3"><span>Tareas Observadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=4"><span>Tareas Concluidas</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
+
         <?php if ($sf_user->hasCredential('ADMINISTRADOR')||
                 $sf_user->hasCredential('REGISTRO SANITARIO')||
                 $sf_user->hasCredential('DESPACHO ADUANERO')): ?>        
@@ -113,24 +133,6 @@
         </div>
         <?php endif; ?>
         
-        <?php if (!$sf_user->hasCredential('ADMINISTRADOR')): ?>
-        <div class="columna">
-            <div class="cubo">
-                <div class="adentro">
-                    <div class="titulo_img"><img src="/images/icons/tareas.svg" /></div>
-                    <h2 class="titulo">Tareas Asignadas</h2>
-                    <div class="contenido">
-                        <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=1"><span>Tareas Asignadas</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=2"><span>Tareas en Proceso</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=3"><span>Tareas Observadas</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=4"><span>Tareas Concluidas</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php endif; ?>
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
