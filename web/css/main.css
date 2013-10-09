@@ -552,3 +552,9 @@ ul li.sf_admin_action_edit a
 
 
 /*fin Comentarios*/
+
+
+/*COlor focus*/
+input:focus,textarea:focus{
+    background-color:#EFF8FB;
+}

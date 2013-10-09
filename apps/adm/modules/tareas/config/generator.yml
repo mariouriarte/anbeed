@@ -30,7 +30,7 @@ generator:
           _delete: ~
         actions:
           ir_portal: {label: Volver al Portal}
-          _new: ~ 
+          #_new: ~ 
       filter:  
         display: [user_id, nombre, estado_id]
       form:    ~
@@ -38,6 +38,7 @@ generator:
         title: Editar Tarea %%nombre%%
         actions:
           ir_portal: {label: Volver al Portal}
+          _list: ~ 
           _save: ~ 
       new:     
         title: Asignar nueva Tarea

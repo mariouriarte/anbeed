@@ -77,7 +77,7 @@ class tareasActions extends autoTareasActions
         }
         else
         {
-            if(!$this->getUser()->getAttribute('estado_tarea'))
+            if(!$this->getUser()->getAttribute('estado'))
                 $this->redirect('@homepage');
         }
         parent::executeIndex($request);

@@ -34,3 +34,7 @@ generator:
       form:    ~
       edit:    
         title: Editar Tarea %%nombre%%
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _list: ~ 
+          _save: ~ 

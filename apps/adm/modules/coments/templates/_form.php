@@ -76,7 +76,7 @@
           <ul class="sf_admin_actions">
             <?php if (!$form->getObject()->isNew()): ?>
             <li class="sf_admin_action_delete">
-                <?php echo link_to('Borrar', 'coments/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
+                <?php echo link_to('Borrar', 'coments/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Está seguro?')) ?>
             </li>
             <?php endif; ?>
             <li class="sf_admin_action_list">
