@@ -26,10 +26,21 @@ class sfGuardUserAdminForm extends BasesfGuardUserAdminForm
         
         $this->validatorSchema['groups_list']->setOption('required', True);
             
-        /*embebido merge a la persona*/    
-        $persona = new PersonaForm($this->object->Persona);
-        unset($persona['user_id']);
-        $this->embedMergeForm('Persona', $persona);
-
+        
+        if(sfContext::getInstance()->getModuleName() == "usuarios")
+        {
+            
+            /*embebido merge a la persona*/    
+            $persona = new PersonaForm($this->object->Persona);
+            unset($persona['user_id']);
+            $this->embedMergeForm('Persona', $persona);
+        }
+        if(sfContext::getInstance()->getModuleName() == "cuentas")
+        {
+            $this->widgetSchema['is_active'] = new sfWidgetFormInputHidden(
+            array('default'=> true));
+            unset($this['username'],$this['groups_list']);
+        }
+        
     }
 }

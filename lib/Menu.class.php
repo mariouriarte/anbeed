@@ -19,6 +19,14 @@ class Menu
         
         $user = $instancia->getUser();
         
+        
+        /*gardamos la foto si tuviera el usuario*/
+        $foto = $user->getGuardUser()->Persona->getFoto();
+        if($foto == null || $foto == '')
+            $foto = 'default_user.gif';
+        $user->setAttribute('foto', $foto);
+        
+        
         // preguntamos por el nivel en el que estamos
         $environment = sfConfig::get('sf_environment');
         if($environment == 'dev')

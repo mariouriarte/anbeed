@@ -1,17 +1,17 @@
 <?php
 
-require_once dirname(__FILE__).'/../lib/usuariosGeneratorConfiguration.class.php';
-require_once dirname(__FILE__).'/../lib/usuariosGeneratorHelper.class.php';
+require_once dirname(__FILE__).'/../lib/perfilGeneratorConfiguration.class.php';
+require_once dirname(__FILE__).'/../lib/perfilGeneratorHelper.class.php';
 
 /**
- * usuarios actions.
+ * perfil actions.
  *
  * @package    anbeed
- * @subpackage usuarios
+ * @subpackage perfil
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class usuariosActions extends autoUsuariosActions
+class perfilActions extends autoPerfilActions
 {
     public function executeListIrPortal(sfWebRequest $request)
     {

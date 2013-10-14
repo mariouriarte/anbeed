@@ -108,13 +108,16 @@ text-transform: uppercase;
     float: right;
     height: 90px;
     padding: 0px 10px 0;
-    width: 200px;
+    width: 250px;
 }
 
 #info-user {
-    height: 90px;
+    height: 83px;
+    
     padding: 7px 10px 0;
-    width: 200px;
+    width: 250px;
+    box-shadow: -1px 0 8px 0 rgba(0, 0, 0, 1);
+    margin: 3px;
 }
 
 #container {
@@ -554,7 +557,35 @@ ul li.sf_admin_action_edit a
 /*fin Comentarios*/
 
 
-/*COlor focus*/
+/*Color focus*/
 input:focus,textarea:focus{
     background-color:#EFF8FB;
+}
+
+/*foto*/
+.foto_edit
+{
+    margin-top: 5px;
+    height: 335px;
+    width:  336px;
+    width:  336px;
+    margin-left: 32%;
+    box-shadow: -1px 0 8px 0 rgba(0, 0, 0, 1);
+}
+.foto_mimiatura
+{
+    width: 60px;
+    height: 75px;
+    float: left;
+}
+.info_user_text
+{
+    width: 185px;
+    float: right;
+    padding-left: 5px;
+}
+
+#cerrar_sesion
+{
+    margin-top: 0.2px;
 }

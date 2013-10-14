@@ -155,7 +155,6 @@
             </div>
         </div>
         <?php endif; ?>
-        <?php if ($sf_user->hasCredential('ADMINISTRADOR')): ?>
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
@@ -163,16 +162,17 @@
                     <h2 class="titulo">Cuenta</h2>
                     <div class="contenido">
                         <ul>
-                            
+                            <?php if ($sf_user->hasCredential('ADMINISTRADOR')): ?>
                             <li><a href="/adm<?php echo $env ?>.php/usuarios"><span>Lista de Usuarios</span></a></li>
-                            <?php if ($sf_user->isAuthenticated()): ?>
-                            <!--<li><a href="/adm<?php // echo $env ?>.php/usuarios/<?php // echo $sf_user->getGuardUser()->getId()?>/edit"><span>Editar Datos Personales</span></a></li>-->
                             <?php endif; ?>
+                            
+                            <li><a href="/portal<?php echo $env ?>.php/perfil/<?php echo $sf_user->getGuardUser()->Persona->getId()?>/edit"><span>Editar Perfil</span></a></li>
+                            <li><a href="/portal<?php echo $env ?>.php/cuentas/<?php echo $sf_user->getGuardUser()->getId()?>/edit"><span>Cambiar contraseña</span></a></li>
+                            
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        <?php endif; ?>
+        </div>  
     </div>
 </div>

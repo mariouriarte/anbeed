@@ -43,7 +43,48 @@ class PersonaForm extends BasePersonaForm
         
         $this->widgetSchema['is_active'] = new sfWidgetFormInputHidden(
             array('default'=> true));
-                
+       
+        $this->validatorSchema['email'] = new sfValidatorEmail(array('required'=> false));
+
+        
+        
+        if(sfContext::getInstance()->getModuleName() == "perfil")
+        {
+            /*FOTOGRAFIA*/
+  /*           $this->setWidget('foto', new sfWidgetFormInputFileEditable(array(
+                  'file_src'    => '/images/users/'.$this->getObject()->getFoto(),
+                  'edit_mode'   => !$this->isNew(),
+                  'is_image'    => true,
+                  'with_delete' => true,
+                  'delete_label' => 'Eliminar',
+
+                )));
+
+                $this->setValidator('foto', new sfValidatorFile(array(
+                  'mime_types' => 'web_images',
+                  'path' => 'images/users',
+                  'required' => false,
+                  #'validated_file_class' => 'sfValidatedFileCustom'
+                )));*/
+            $this->widgetSchema['user_id'] = new sfWidgetFormInputHidden();
+            
+            $this->widgetSchema['foto'] = new sfWidgetFormInputFileEditable(array(
+                                                'file_src'  => '', 
+                                                'is_image' => true,
+                                                'edit_mode' => !$this->isNew(),
+                                                'delete_label' => 'Eliminar foto'));
+
+            $this->validatorSchema['foto'] = new sfValidatorFile(array(
+                                  'max_size' => 5000000,  
+                                  'mime_types' => 'web_images',
+                                  'path' => 'images/users',
+                                  'required' => false,
+                                  'validated_file_class' => 'sfValidatedFileCustom'));
+            
+            $this->validatorSchema['foto_delete'] = new sfValidatorBoolean();
+           
+                    
+        }
         if(sfContext::getInstance()->getModuleName() == "personalegal")
         {
              // Form enbebido, Representante Legal

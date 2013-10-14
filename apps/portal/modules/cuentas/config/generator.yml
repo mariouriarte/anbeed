@@ -1,0 +1,38 @@
+generator:
+    class: sfDoctrineGenerator
+    param:
+      model_class:           sfGuardUser
+      theme:                 admin
+      non_verbose_templates: true
+      with_show:             false
+      singular:              ~
+      plural:                ~
+      route_prefix:          sf_guard_user
+      with_doctrine_route:   true
+      #actions_base_class:    sfActions
+
+      config:
+        actions: ~
+        fields:  
+ 
+          password:        {label: 'Contraseña'}
+          password_again:  {label: 'Repetir Contraseña'}
+
+
+        list:   
+          
+        filter:  
+          class: false
+
+        form:    
+          class: sfGuardUserAdminForm
+          display:
+            Cambiar contraseña:  [password, password_again]        
+      
+        edit:
+          title: Editar contraseña del  Usuario "%%username%%"
+          actions:
+            ir_portal: {label: Volver al Portal}
+            _save: ~  
+        new:
+        
