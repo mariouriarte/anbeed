@@ -31,11 +31,9 @@ class inicioActions extends sfActions
 //        $user->getAttributeHolder()->remove('empresa');
 //        $user->getAttributeHolder()->remove('producto');
     }
+    
     public function executeSecure()
     {
         
     }
-
-    
-    
 }

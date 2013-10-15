@@ -9,8 +9,8 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/farmaceutica<?php echo $env ?>.php/empresas"><span>Empresas</span></a></li>
-                            <li><a href="/farmaceutica<?php echo $env ?>.php/empresas/new"><span>Nueva Empresa</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/cliente_usuario"><span>Usuarios Clientes</span></a></li>
+                            <li><a href="/farmaceutica<?php echo $env ?>.php/empresas/new"><span>Nueva empresa</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/cliente_usuario"><span>Usuarios clientes</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -23,8 +23,8 @@
                     <h2 class="titulo"> Laboratorios</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/laboratorios/new"><span>Nuevo Laboratorios Fabricantes</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/laboratorios"><span>Laboratorios fabricantes</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/laboratorios/new"><span>Nuevo laboratorios fabricantes</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,11 +37,11 @@
                     <h2 class="titulo"> Formularios</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/formulario5"><span>Reportes Formulario 005</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/formulario12"><span>Reportes Formulario 012</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/formulario27"><span>Reportes Formulario 027</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/formulario516"><span>Reportes Desición 516</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/formulario706"><span>Reportes Desición 706</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/formulario5"><span>Reportes formulario 005</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/formulario12"><span>Reportes formulario 012</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/formulario27"><span>Reportes formulario 027</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/formulario516"><span>Reportes desición 516</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/formulario706"><span>Reportes desición 706</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -55,9 +55,9 @@
                     <h2 class="titulo">Correspondecia</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/emisionc"><span>Emisión de Correspondecia</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tipodoc"><span>Tipo Documento</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/emisor"><span>Emisor Correspondecia</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/emisionc"><span>Emisión de correspondecia</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tipodoc"><span>Tipo documento</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/emisor"><span>Emisor correspondecia</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -71,9 +71,9 @@
                     <h2 class="titulo">Caducidad</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=1"><span>Alerta de Caducidad <br />1 Mes</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=3"><span>Alerta de Caducidad<br />3 meses</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=6"><span>Alerta de Caducidad<br />6 meses</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=1"><span>Caducidad 1 Mes</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=3"><span>Caducidad 3 meses</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=6"><span>Caducidad 6 meses</span></a></li>
                             
                         </ul>
                     </div>
@@ -84,13 +84,13 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <div class="titulo_img"><img src="/images/icons/tareas.svg" /></div>
+                    <div class="titulo_img"><img src="/images/icons/tareas.svg"/></div>
                     <h2 class="titulo">Tareas</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/tareas/new"><span>Asignar nueva tarea</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas/index"><span>Listado de tareas Asignadas</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas/index"><span>Listado de tareas Concluidas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index"><span>Tareas asignadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index"><span>Tareas concluidas</span></a></li>
                             
                         </ul>
                     </div>
@@ -105,15 +105,29 @@
                     <h2 class="titulo">Administración</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Código Producto</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Código producto</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/ingredientes"><span>Ingredientes</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/paises"><span>Paises</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/ciudades"><span>Ciudades</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/personas"><span>Personas</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tventas"><span>Tipo Venta</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/administraciones"><span>Vía de Administración</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/gcosmetico"><span>Grupo Cosmético</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/ghigiene"><span>Grupo de Higiene</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tventas"><span>Tipo venta</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/administraciones"><span>Vía de administración</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/gcosmetico"><span>Grupo cosmético</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/ghigiene"><span>Grupo de higiene</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <div class="titulo_img"><img src="/images/icons/tareas.svg"/></div>
+                    <h2 class="titulo">Cuenta</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Etapa de tramite</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/ingredientes"><span></span></a></li>
                         </ul>
                     </div>
                 </div>

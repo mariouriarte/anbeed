@@ -39,7 +39,7 @@ class Menu
                 </ul></div>
             </li>';
         /*listado de empresas*/
-        $menu_list_empresa = '<li class="first-list"><a href="/farmaceutica' . $env .'.php/empresas"><span>Listado de Empresas</span></a></li>';
+        $menu_list_empresa = '<li class="first-list"><a href="/farmaceutica' . $env .'.php/empresas"><span>Empresas</span></a></li>';
         
         
         $empresa = sfContext::getInstance()->getUser()->getAttribute('empresa');
