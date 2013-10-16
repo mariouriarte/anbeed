@@ -13,9 +13,37 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
+      fields:  
+        user_id:        {label: Usuario}
+        sf_guard_user:  {label: Usuario}
+        estado_tarea:   {label: Estado}
+        nombre:         {label: Nombre de la Tarea}
+        descripcion:    {label: Descripción de la Tarea}
+        fecha_estimada: {label: Fecha estimada de conclusión}
+      list:    
+        table_method: selectTareasAsignadas
+        title: Listado de Tareas
+        display: [sf_guard_user, nombre, estado_tarea, fecha_estimada]
+        object_actions:
+          comentario:    {label: Comentarios, action: comentarios}
+          _edit: ~
+          _delete: ~
+        actions:
+          ir_portal: {label: Volver al Portal}
+          #_new: ~ 
+      filter:  
+        display: [user_id, nombre, estado_id]
       form:    ~
-      edit:    ~
-      new:     ~
+      edit:    
+        title: Editar Tarea %%nombre%%
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _list: ~ 
+          _save: ~ 
+      new:     
+        title: Asignar nueva Tarea
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _save: ~ 
+          _save_and_add: ~
+        

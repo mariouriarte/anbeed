@@ -1,3 +1,22 @@
+sf_guard_user:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                sfGuardUser
+    module:               cuentas
+    prefix_path:          /cuentas
+    column:               id
+    with_wildcard_routes: true
+
+
+persona:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Persona
+    module:               perfil
+    prefix_path:          /perfil
+    column:               id
+    with_wildcard_routes: true
+
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 

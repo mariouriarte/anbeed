@@ -13,4 +13,14 @@ require_once dirname(__FILE__).'/../lib/usuariosGeneratorHelper.class.php';
  */
 class usuariosActions extends autoUsuariosActions
 {
+    public function executeListIrPortal(sfWebRequest $request)
+    {
+        //$this->getUser()->setAttribute('empresa', NULL);
+        $env = '';
+        if(sfConfig::get('sf_environment') == 'dev')
+        {
+            $env = '_dev';
+        } 
+        $this->redirect('/portal'.$env.'.php/inicio/index');
+    }
 }

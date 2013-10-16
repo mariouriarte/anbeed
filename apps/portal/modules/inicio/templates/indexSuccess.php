@@ -1,16 +1,24 @@
 <h1>Portal del Sistema, Bienvenido</h1>
 <div class="portal">
     <div class="linea">
+        <?php if ($sf_user->hasCredential('ADMINISTRADOR')||
+                $sf_user->hasCredential('REGISTRO SANITARIO')||
+                $sf_user->hasCredential('DESPACHO ADUANERO')): ?>
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
+
                     <div class="titulo_img"><img src="/images/icons/portafolio1.png" width="48" height="45"/></div>
                     <h2 class="titulo"> Empresas</h2>
                     <div class="contenido">
                         <ul>
+
                             <li><a href="/farmaceutica<?php echo $env ?>.php/empresas"><span>Empresas</span></a></li>
-                            <li><a href="/farmaceutica<?php echo $env ?>.php/empresas/new"><span>Nueva empresa</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/cliente_usuario"><span>Usuarios clientes</span></a></li>
+
+                            <li><a href="/farmaceutica<?php echo $env ?>.php/empresas/new"><span>Nueva Empresa</span></a></li>
+                            <?php if ($sf_user->hasCredential('ADMINISTRADOR')):?>
+                            <li><a href="/adm<?php echo $env ?>.php/cliente_usuario"><span>Usuarios Clientes</span></a></li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
@@ -30,24 +38,26 @@
                 </div>
             </div>
         </div>
-        <div class="columna">
+<!--        <div class="columna">
             <div class="cubo">
                 <div class="adentro">
                     <div class="titulo_img"><img src="/images/icons/text.svg" /></div>
                     <h2 class="titulo"> Formularios</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/formulario5"><span>Reportes formulario 005</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/formulario12"><span>Reportes formulario 012</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/formulario27"><span>Reportes formulario 027</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/formulario516"><span>Reportes desición 516</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/formulario706"><span>Reportes desición 706</span></a></li>
+                            <li><a href="/adm<?php // echo $env ?>.php/formulario5"><span>Reportes Formulario 005</span></a></li>
+                            <li><a href="/adm<?php // echo $env ?>.php/formulario12"><span>Reportes Formulario 012</span></a></li>
+                            <li><a href="/adm<?php // echo $env ?>.php/formulario27"><span>Reportes Formulario 027</span></a></li>
+                            <li><a href="/adm<?php // echo $env ?>.php/formulario516"><span>Reportes Desición 516</span></a></li>
+                            <li><a href="/adm<?php // echo $env ?>.php/formulario706"><span>Reportes Desición 706</span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-
+        </div>-->
+        <?php endif; ?>
+        <?php if ($sf_user->hasCredential('ADMINISTRADOR')||
+                $sf_user->hasCredential('CORRESPONDENCIA')): ?>
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
@@ -63,7 +73,30 @@
                 </div>
             </div>
         </div>
-        
+        <?php endif; ?>
+
+        <?php if (!$sf_user->hasCredential('ADMINISTRADOR')): ?>
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <div class="titulo_img"><img src="/images/icons/tareas.svg" /></div>
+                    <h2 class="titulo">Tareas Asignadas</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=1"><span>Tareas Asignadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=2"><span>Tareas en Proceso</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=3"><span>Tareas Observadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas_usuario/index?estado=4"><span>Tareas Concluidas</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
+
+        <?php if ($sf_user->hasCredential('ADMINISTRADOR')||
+                $sf_user->hasCredential('REGISTRO SANITARIO')||
+                $sf_user->hasCredential('DESPACHO ADUANERO')): ?>        
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
@@ -80,23 +113,26 @@
                 </div>
             </div>
         </div>
-
+        
+        <?php if ($sf_user->hasCredential('ADMINISTRADOR')): ?>
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <div class="titulo_img"><img src="/images/icons/tareas.svg"/></div>
-                    <h2 class="titulo">Tareas</h2>
+                    <div class="titulo_img"><img src="/images/icons/tareas.svg" /></div>
+                    <h2 class="titulo">Administración de Tareas</h2>
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/tareas/new"><span>Asignar nueva tarea</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas/index"><span>Tareas asignadas</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas/index"><span>Tareas concluidas</span></a></li>
-                            
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=1"><span>Listado de tareas Asignadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=2"><span>Listado de tareas en Proceso</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=3"><span>Listado de tareas Observadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=4"><span>Listado de tareas Concluidas</span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <?php endif; ?>
         
         <div class="columna">
             <div class="cubo">
@@ -105,20 +141,21 @@
                     <h2 class="titulo">Administración</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Código producto</span></a></li>
+                            <?php if ($sf_user->hasCredential('ADMINISTRADOR')): ?>
+                            <li><a href="/adm<?php echo $env ?>.php/codprod"><span>Código Producto</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/ingredientes"><span>Ingredientes</span></a></li>
+                            <?php endif; ?>
+                            <li><a href="/adm<?php echo $env ?>.php/tventas"><span>Tipo Venta</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/administraciones"><span>Vía de Administración</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/gcosmetico"><span>Grupo Cosmético</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/paises"><span>Paises</span></a></li>
                             <li><a href="/adm<?php echo $env ?>.php/ciudades"><span>Ciudades</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/personas"><span>Personas</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tventas"><span>Tipo venta</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/administraciones"><span>Vía de administración</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/gcosmetico"><span>Grupo cosmético</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/ghigiene"><span>Grupo de higiene</span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <?php endif; ?>
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
@@ -126,16 +163,17 @@
                     <h2 class="titulo">Cuenta</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/usuarios"><span>Usuarios</span></a></li>
-                            <?php if ($sf_user->isAuthenticated()): ?>
-                                <li><a href="<?php echo url_for('@sf_guard_signout') ?>"><span>Salir</span></a></li>
-                            <?php else: ?>
-                                <li><a href="<?php echo url_for('@sf_guard_signin') ?>"><span>Ingresar</span></a></li>
-                            <?php endif ?>
+                            <?php if ($sf_user->hasCredential('ADMINISTRADOR')): ?>
+                            <li><a href="/adm<?php echo $env ?>.php/usuarios"><span>Lista de Usuarios</span></a></li>
+                            <?php endif; ?>
+                            
+                            <li><a href="/portal<?php echo $env ?>.php/perfil/<?php echo $sf_user->getGuardUser()->Persona->getId()?>/edit"><span>Editar Perfil</span></a></li>
+                            <li><a href="/portal<?php echo $env ?>.php/cuentas/<?php echo $sf_user->getGuardUser()->getId()?>/edit"><span>Cambiar contraseña</span></a></li>
+                            
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     </div>
 </div>

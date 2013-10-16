@@ -10,29 +10,26 @@
  * @property string $nombre
  * @property string $descripcion
  * @property date $fecha_estimada
- * @property Doctrine_Collection $sfGuardUser
+ * @property sfGuardUser $sfGuardUser
  * @property EstadoTarea $EstadoTarea
- * @property ComentarioTarea $ComentarioTarea
- * @property ComentarioTarea $Comentarios
+ * @property Doctrine_Collection $ComentarioTarea
  * 
  * @method integer             getUserId()          Returns the current record's "user_id" value
  * @method integer             getEstadoId()        Returns the current record's "estado_id" value
  * @method string              getNombre()          Returns the current record's "nombre" value
  * @method string              getDescripcion()     Returns the current record's "descripcion" value
  * @method date                getFechaEstimada()   Returns the current record's "fecha_estimada" value
- * @method Doctrine_Collection getSfGuardUser()     Returns the current record's "sfGuardUser" collection
+ * @method sfGuardUser         getSfGuardUser()     Returns the current record's "sfGuardUser" value
  * @method EstadoTarea         getEstadoTarea()     Returns the current record's "EstadoTarea" value
- * @method ComentarioTarea     getComentarioTarea() Returns the current record's "ComentarioTarea" value
- * @method ComentarioTarea     getComentarios()     Returns the current record's "Comentarios" value
+ * @method Doctrine_Collection getComentarioTarea() Returns the current record's "ComentarioTarea" collection
  * @method Tarea               setUserId()          Sets the current record's "user_id" value
  * @method Tarea               setEstadoId()        Sets the current record's "estado_id" value
  * @method Tarea               setNombre()          Sets the current record's "nombre" value
  * @method Tarea               setDescripcion()     Sets the current record's "descripcion" value
  * @method Tarea               setFechaEstimada()   Sets the current record's "fecha_estimada" value
- * @method Tarea               setSfGuardUser()     Sets the current record's "sfGuardUser" collection
+ * @method Tarea               setSfGuardUser()     Sets the current record's "sfGuardUser" value
  * @method Tarea               setEstadoTarea()     Sets the current record's "EstadoTarea" value
- * @method Tarea               setComentarioTarea() Sets the current record's "ComentarioTarea" value
- * @method Tarea               setComentarios()     Sets the current record's "Comentarios" value
+ * @method Tarea               setComentarioTarea() Sets the current record's "ComentarioTarea" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -71,7 +68,7 @@ abstract class BaseTarea extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasMany('sfGuardUser', array(
+        $this->hasOne('sfGuardUser', array(
              'local' => 'user_id',
              'foreign' => 'id'));
 
@@ -79,13 +76,9 @@ abstract class BaseTarea extends sfDoctrineRecord
              'local' => 'estado_id',
              'foreign' => 'id'));
 
-        $this->hasOne('ComentarioTarea', array(
+        $this->hasMany('ComentarioTarea', array(
              'local' => 'id',
              'foreign' => 'tarea_id'));
-
-        $this->hasOne('ComentarioTarea as Comentarios', array(
-             'local' => 'id',
-             'foreign' => 'tare_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));

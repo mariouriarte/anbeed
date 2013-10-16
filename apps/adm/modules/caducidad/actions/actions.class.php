@@ -35,7 +35,7 @@ class caducidadActions extends autoCaducidadActions
                 $this->getUser()->setAttribute('meses', 6);
                 $this->getUser()->setAttribute('time', "6 meses");
             }
-            parent::executeIndex($request);
+            
         }
         else
         {
@@ -43,7 +43,7 @@ class caducidadActions extends autoCaducidadActions
                 $this->redirect('@homepage');
         }
         
-        
+        parent::executeIndex($request); 
     }
     public function executeListIrPortal(sfWebRequest $request)
     {

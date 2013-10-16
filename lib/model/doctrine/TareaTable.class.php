@@ -16,4 +16,34 @@ class TareaTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Tarea');
     }
+    
+    public function SelectTareasAsignadas()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $estado = $user->getAttribute('estado');
+//        echo $estado;
+//        die;
+        $q = Doctrine_Query::create()
+                    ->from('Tarea t')
+                    ->where('t.estado_id = ?', $estado)
+                    ->orderBy('t.id ASC');
+            
+        return $q;
+    }
+    
+    public function SelectTareasAsignadasUsuarios()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $estado = $user->getAttribute('estado');
+        
+        $user_id=sfContext::getInstance()->getUser()->getGuardUser()->getId();
+        
+        $q = Doctrine_Query::create()
+                    ->from('Tarea t')
+                    ->where('t.estado_id = ?', $estado)
+                    ->andWhere('t.user_id = ?', $user_id)
+                    ->orderBy('t.id ASC');
+            
+        return $q;
+    }
 }

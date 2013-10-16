@@ -47,7 +47,7 @@ class CosmeticoForm extends BaseCosmeticoForm
         ));
         
         // Fecha de vigencia NSO
-        $years = range(date('Y') - 10, date('Y'));   
+        $years = range(date('Y') - 10, date('Y')+ 10);   
         $this->widgetSchema['vigencia_nso'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
                   'format' => '%day%%month%%year%',  

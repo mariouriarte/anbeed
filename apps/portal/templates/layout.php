@@ -41,12 +41,17 @@
                             </div>
                             <?php if ($sf_user->isAuthenticated()): ?>
                                 <div id="info-user">
-                                    <h4>Usuario: <?php echo $sf_user->getUsername(); ?></h4>
-                                    <h4>Nombre:  <?php echo $sf_user->getGuardUser()->getPersona(); ?></h4>
-                                    <h3><?php echo link_to(image_tag('icons/salir.svg', 'alt=Salir' ).' Cerrar sesión', '@sf_guard_signout',
-                                                  array('id' => 'boton-salir')) 
-                                        ?>
-                                    </h3>
+                                    <div class="foto_mimiatura">
+                                        <?php echo image_tag(public_path("images/users/".$sf_user->getAttribute('foto').""), 'alt=FOTO size=60x75'); ?>
+                                    </div>
+                                    <div class="info_user_text">
+                                        <h4>Usuario: <?php echo $sf_user->getUsername(); ?></h4>
+                                        <h4>Nombre:  <?php echo $sf_user->getGuardUser()->getPersona(); ?></h4>
+                                        <h3 id="cerrar_sesion"><?php echo link_to(image_tag('icons/salir.svg', 'alt=Salir' ).' Cerrar sesión', '@sf_guard_signout',
+                                                      array('id' => 'boton-salir')) 
+                                            ?>
+                                        </h3>
+                                    </div>
                                 </div>
                             <?php endif; ?>
                         </div>

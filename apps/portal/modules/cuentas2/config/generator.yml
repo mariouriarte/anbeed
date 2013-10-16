@@ -1,0 +1,61 @@
+generator:
+    class: sfDoctrineGenerator
+    param:
+      model_class:           sfGuardUser
+      theme:                 admin
+      non_verbose_templates: true
+      with_show:             false
+      singular:              ~
+      plural:                ~
+      route_prefix:          sf_guard_user
+      with_doctrine_route:   true
+      #actions_base_class:    sfActions
+
+      config:
+        actions: ~
+        fields:  
+          usuario:          {label: 'Datos de usuario'}
+          Persona-ap_paterno:       {label: 'Apellido Paterno'}
+          Persona-ap_materno:       {label: 'Apellido Materno'}
+          Persona-ap_casada:        {label: 'Apellido Casada'}
+          Persona-cedula_expedido:  {label: 'Cédula de identidad'}
+          Persona-ci:               {label: 'Cédula de Identidad'}
+          Persona-expedido:         {label: 'Expedido'}
+          Persona-direccion:        {label: 'Dirección'}
+          Persona-telefono:         {label: 'Teléfono'}
+          Persona-celular:          {label: 'Celular'}
+          Persona-fax:              {label: 'Fax'}
+          Persona-casilla:          {label: 'Casilla'}
+          Persona-email:            {label: 'Email'}
+          Persona-nombre_ordenado:  {label: 'Persona'}
+          Persona-username:         {label: 'Usuario'}
+          Persona-is_active:        {label: 'Activo?'}
+          Persona-fecha_nacimiento: {label: 'Fecha de nacimiento'}
+          Persona-foto:             {label: 'Fotografia del usuario'}  
+
+          username:        {label: 'Usuario'}
+          is_active:       {label: 'Activo?'}
+          password:        {label: 'Contraseña'}
+          password_again:  {label: 'Repetir Contraseña'}
+          groups_list:     {label: 'Rol de usuario (función)'}
+          cedula_expedido: {label: 'Cédula de identidad'}
+          nombre_ordenado: {label: 'Nombre completo'}
+          last_login:      {label: 'Último ingreso'}
+
+
+        list:   
+
+        filter:  
+          class: false
+
+        form:    
+          class: sfGuardUserAdminForm
+          display:
+            Datos de la Persona:          [Persona-nombre, Persona-ap_paterno, Persona-ap_materno, Persona-ci, Persona-expedido, Persona-direccion, Persona-telefono, Persona-celular, Persona-email, Persona-fecha_nacimiento]
+            Datos del Usuario:            [_foto, Persona-foto, username, password, password_again]
+            #Roles de Usuarios y Permisos: [is_active, is_super_admin, groups_list]
+
+        edit:
+          title: Editar cuenta de  Usuario "%%username%%"
+        new:
+        

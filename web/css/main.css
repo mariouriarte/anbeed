@@ -108,13 +108,16 @@ text-transform: uppercase;
     float: right;
     height: 90px;
     padding: 0px 10px 0;
-    width: 200px;
+    width: 250px;
 }
 
 #info-user {
-    height: 90px;
+    height: 83px;
+    
     padding: 7px 10px 0;
-    width: 200px;
+    width: 250px;
+    box-shadow: -1px 0 8px 0 rgba(0, 0, 0, 1);
+    margin: 3px;
 }
 
 #container {
@@ -501,4 +504,88 @@ ul li.sf_admin_action_edit a
     font-size: 11px;
     margin: 0;
     padding: 3px;
+}
+
+/*Comentarios*/
+
+.tabla-comentarios
+{
+    border-color: #DDDDDD #DDDDDD -moz-use-text-color;
+    font-size: 11px;
+    width: 100%;
+}
+
+.tabla-comentarios th {
+    background-color: #D3DFD1;
+    color: #000 !important;
+    font-size: 12px !important;
+    padding: 3px !important;
+    text-align: left !important;
+}
+.tabla-comentarios #tarea {
+    width: 50%;
+}
+.tabla-comentarios #creator {
+    width: 20%;
+}
+.tabla-comentarios #creatorat {
+    width: 15%;
+}
+.tabla-comentarios #acciones {
+    width: 15%;
+}
+
+.tabla-comentarios td {
+    background-color: #F6F4F0;
+    min-width: 100px;
+}
+
+.tabla-comentarios li {
+    display: inline;
+    font-size: 100%;
+    list-style-type: none;
+    
+}
+
+.tabla-comentarios th, .tabla-comentarios td {
+    text-align: left;
+    padding: 0.2em;
+    border: 1px solid #DDDDDD;
+}
+
+
+/*fin Comentarios*/
+
+
+/*Color focus*/
+input:focus,textarea:focus{
+    background-color:#EFF8FB;
+}
+
+/*foto*/
+.foto_edit
+{
+    margin-top: 5px;
+    height: 335px;
+    width:  336px;
+    width:  336px;
+    margin-left: 32%;
+    box-shadow: -1px 0 8px 0 rgba(0, 0, 0, 1);
+}
+.foto_mimiatura
+{
+    width: 60px;
+    height: 75px;
+    float: left;
+}
+.info_user_text
+{
+    width: 185px;
+    float: right;
+    padding-left: 5px;
+}
+
+#cerrar_sesion
+{
+    margin-top: 0.2px;
 }

@@ -16,7 +16,7 @@ abstract class BaseComentarioTareaForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
-      'tarea_id'   => new sfWidgetFormInputText(),
+      'tarea_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'), 'add_empty' => false)),
       'comentario' => new sfWidgetFormTextarea(),
       'leido'      => new sfWidgetFormInputCheckbox(),
       'created_at' => new sfWidgetFormDateTime(),
@@ -27,7 +27,7 @@ abstract class BaseComentarioTareaForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'tarea_id'   => new sfValidatorInteger(),
+      'tarea_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'))),
       'comentario' => new sfValidatorString(array('max_length' => 2000)),
       'leido'      => new sfValidatorBoolean(array('required' => false)),
       'created_at' => new sfValidatorDateTime(),

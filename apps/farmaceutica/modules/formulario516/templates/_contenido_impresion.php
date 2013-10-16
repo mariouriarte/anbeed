@@ -47,11 +47,11 @@
             <?php echo $form->Cosmetico->Empresa->getDireccion() ?>
         </td>
         <td>Ciudad / Distrito / Provincia / Departamento:<br />
-            <?php echo $form->Cosmetico->Empresa->Ciudad->getNombre() ?>
+            <?php echo strtoupper($form->Cosmetico->Empresa->Ciudad->getNombre()) ?>
         </td>
     </tr>
     <tr>
-        <td>País: <?php echo $form->Cosmetico->Empresa->Ciudad->Pais->getNombre() ?></td>
+        <td>País: <?php echo strtoupper($form->Cosmetico->Empresa->Ciudad->Pais->getNombre()) ?></td>
         <td>Teléfono: <?php echo $form->Cosmetico->Empresa->getTelefono1() ?></td>
     </tr>
     <tr>
@@ -115,11 +115,11 @@
             <?php echo $form->Cosmetico->LaboratorioFabricante->getDireccion() ?>
         </td>
         <td>Ciudad / Distrito / Provincia / Departamento: <br />
-            <?php echo $form->Cosmetico->LaboratorioFabricante->Ciudad->getNombre() ?>
+            <?php echo strtoupper($form->Cosmetico->LaboratorioFabricante->Ciudad->getNombre()) ?>
         </td>
     </tr>
     <tr>
-        <td>País: <?php echo $form->Cosmetico->LaboratorioFabricante->Ciudad->Pais->getNombre() ?></td>
+        <td>País: <?php echo strtoupper($form->Cosmetico->LaboratorioFabricante->Ciudad->Pais->getNombre()) ?></td>
         <td>Teléfono: <?php echo $form->Cosmetico->LaboratorioFabricante->getTelefono() ?></td>
     </tr>
     <tr>

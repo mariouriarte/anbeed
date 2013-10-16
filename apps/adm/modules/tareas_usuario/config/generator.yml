@@ -1,0 +1,40 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Tarea
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          tarea_tareas_usuario
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        user_id:        {label: Usuario}
+        sf_guard_user:  {label: Usuario}
+        estado_tarea:   {label: Estado}
+        nombre:         {label: Nombre de la Tarea}
+        descripcion:    {label: Descripción de la Tarea}
+        fecha_estimada: {label: Fecha estimada de conclusión}
+      list:    
+        table_method: selectTareasAsignadasUsuarios
+        title: Listado de Tareas
+        display: [sf_guard_user, nombre, estado_tarea, fecha_estimada]
+        object_actions:
+          comentario:    {label: Comentarios, action: comentarios}
+          _edit: ~
+        actions:
+          ir_portal: {label: Volver al Portal}
+      filter:  
+        display: [nombre, estado_id]
+      form:    ~
+      edit:    
+        title: Editar Tarea %%nombre%%
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _list: ~ 
+          _save: ~ 
