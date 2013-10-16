@@ -1,3 +1,21 @@
+etapa:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Etapa
+    module:               etapa
+    prefix_path:          /etapa
+    column:               id
+    with_wildcard_routes: true
+
+iniciacion_formulario:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                IniciacionFormulario
+    module:               pri_etapa
+    prefix_path:          /pri_etapa
+    column:               id
+    with_wildcard_routes: true
+
 formulario7_formulario7porempresa:
   class: sfDoctrineRouteCollection
   options:

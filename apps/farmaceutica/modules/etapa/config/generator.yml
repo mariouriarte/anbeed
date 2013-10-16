@@ -1,0 +1,26 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Etapa
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          etapa
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Listado de etapas de formularios
+        actions:
+          adm_empresa: {label: Volver a Empresa}
+          _new: ~ 
+      filter:
+        display: [formulario_id, tipo_etapa_id, fecha]
+      form:    ~
+      edit:    ~
+      new:     ~

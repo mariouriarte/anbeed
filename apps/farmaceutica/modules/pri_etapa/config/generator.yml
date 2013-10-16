@@ -1,0 +1,31 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           IniciacionFormulario
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          iniciacion_formulario
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        descripcion: {label: 'Descripción'}
+        observacion: {label: 'Observación'}
+      list:
+        title: Tramites iniciados
+        display: [tramite, descripcion, observacion]
+        actions:
+          adm_empresa: {label: Volver a Empresa}
+          _new: ~ 
+      filter:
+        display: [tramite]
+      form:    ~
+      edit:
+        title: Editar tramite %%tramite%%
+      new:
+        title: Nuevo tramite %%tramite%%

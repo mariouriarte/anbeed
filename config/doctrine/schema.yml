@@ -505,7 +505,7 @@ Etapa:
     observacion:   {type: string(2000), notnull: false}
   relations:
     TipoEtapa:  {local: tipo_etapa_id, foreign: id, type: one, foreignAlias: Etapa}
-    Formulario: {local: formulario_id, foreign: id, type: one, foreignAlias: Etapas}
+    Formulario: {local: formulario_id, foreign: id, type: one, foreignAlias: Etapa}
     
 TipoEtapa:
   actAs: [Timestampable, Signable]
@@ -523,18 +523,21 @@ ValidacionEtapa:
     verificacion: {type: string(250), notnull: true}
     observacion:  {type: string(2000), notnull: false}
   relations:
-    Etapa: {local: id, foreign: tipo_etapa_id, type: one, foreignAlias: Tipo}
+    Etapa: {local: id, foreign: tipo_etapa_id, type: one, foreignAlias: Validacion}
 
 IniciacionFormulario:
   actAs: [Timestampable, Signable]
   columns:
+    cliente_id:   {type: integer, notnull: true}
+    etapa_id:     {type: integer, notnull: false}
     tramite:      {type: string(250), notnull: true}
     descripcion:  {type: string(2000), notnull: true}
     observacion:  {type: string(2000), notnull: false}
-    fecha_fin:    {type: date, notnull: true}
+    fecha_fin:    {type: date, notnull: false}
   relations:
-    Etapa: {local: id, foreign: tipo_etapa_id, type: one, foreignAlias: Tipo}
-
+    Cliente: {local: cliente_id, foreign: id, type: one, foreignAlias: Inicio}
+    Etapa:   {local: etapa_id, foreign: id, type: one, foreignAlias:  Inicio}
+    
 ######## REACTIVO###############
 Reactivo:
   actAs: [Timestampable, Signable]

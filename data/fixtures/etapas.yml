@@ -1,0 +1,11 @@
+## YAML Template.
+---
+TipoEtapa:
+  Etapa_2:
+    nombre: Verificación
+  Etapa_3:
+    nombre: En tramite
+  Etapa_4:
+    nombre: Observado
+  Etapa_5:
+    nombre: Finalizado
