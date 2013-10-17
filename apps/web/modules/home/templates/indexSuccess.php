@@ -15,6 +15,7 @@
             <ul>
                 <li><a href="#">Registro Sanitario</a></li>
                 <li><a href="#">Despacho Aduanero</a></li>
+                <li><a href="#">Despacho Aduanero</a></li>
             </ul>
         </div>
     </div>
@@ -23,7 +24,7 @@
         <div class="sbi_content">
             <ul>
                 <li><a href="#">Informacion de Servicios</a></li>
-                <li><a href="#">Califique el Servicio de Anbeed</a></li>
+                <li><a href="#">Califique Nuestros Servicios</a></li>
                 <li><a href="#">Sugerencias</a></li>
             </ul>
         </div>
