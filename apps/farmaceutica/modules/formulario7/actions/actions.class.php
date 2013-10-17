@@ -13,6 +13,12 @@
  */
 class formulario7Actions extends autoFormulario7Actions
 {
+    public function executeListEtapa(sfWebRequest $request)
+    {
+        $form = $this->getRoute()->getObject();
+        
+        $this->redirect('etapa/new?idform='.$form->Formulario->getId());
+    }
     
     public function executePrint(sfWebRequest $request)
     {

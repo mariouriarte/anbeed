@@ -15,6 +15,16 @@ class IniciacionFormularioForm extends BaseIniciacionFormularioForm
         unset($this['created_at'], $this['updated_at'], 
               $this['created_by'], $this['updated_by']);
         
+        // Empresa
+        $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden();
+        
+        // etapa
+        $this->widgetSchema['etapa_id'] = new sfWidgetFormDoctrineChoice(
+            array('model'     => $this->getRelatedModelName('Etapa'), 
+                  'add_empty' => true,
+                  'table_method' => 'selectEtapaVerificacion',));
+        
+        // Fecha fin
         $years = range(date('Y') - 10, date('Y'));   
         $this->widgetSchema['fecha_fin'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(

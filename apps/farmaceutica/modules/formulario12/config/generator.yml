@@ -26,6 +26,7 @@ generator:
         table_method: selectForms12DeReactivo
         object_actions:
           imprimir:    {label: Imprimir, action: print}
+          etapa:    {label: Etapa}
           _edit: ~
           _delete: ~
         actions:

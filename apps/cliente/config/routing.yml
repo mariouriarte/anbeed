@@ -1,3 +1,48 @@
+formulario706:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                formulario706
+    module:               form706
+    prefix_path:          /form706
+    column:               id
+    with_wildcard_routes: true
+
+formulario516:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                formulario516
+    module:               form516
+    prefix_path:          /form516
+    column:               id
+    with_wildcard_routes: true
+
+formulario27:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                formulario27
+    module:               form27
+    prefix_path:          /form27
+    column:               id
+    with_wildcard_routes: true
+
+formulario12:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                formulario12
+    module:               form12
+    prefix_path:          /form12
+    column:               id
+    with_wildcard_routes: true
+
+formulario5:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                formulario5
+    module:               form5
+    prefix_path:          /form5
+    column:               id
+    with_wildcard_routes: true
+
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 

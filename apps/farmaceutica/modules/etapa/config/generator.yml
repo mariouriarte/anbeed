@@ -16,11 +16,17 @@ generator:
       fields:  ~
       list:
         title: Listado de etapas de formularios
+        table_method: selectEtapasDeEmpresa
+        display: [formulario, tipo_etapa, observacion]
         actions:
           adm_empresa: {label: Volver a Empresa}
           _new: ~ 
       filter:
         display: [formulario_id, tipo_etapa_id, fecha]
       form:    ~
-      edit:    ~
-      new:     ~
+      edit:
+        title: Editar etapa de producto
+        display: [descripcion, observacion, fecha]
+      new:
+        title: Nueva etapa de producto
+        display: [tipo_etapa_id, descripcion, observacion, fecha]

@@ -16,4 +16,17 @@ class IniciacionFormularioTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('IniciacionFormulario');
     }
+    
+    public function selectEtapasDeEmpresa()
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        
+        $q = Doctrine_Query::create()
+            ->from('IniciacionFormulario i')
+            ->where('i.empresa_id = ?', $empresa->getId())
+            ->orderBy('i.created_at DESC');
+            
+        return $q;
+    }
 }

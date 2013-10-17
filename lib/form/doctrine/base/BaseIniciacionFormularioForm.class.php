@@ -16,7 +16,7 @@ abstract class BaseIniciacionFormularioForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'          => new sfWidgetFormInputHidden(),
-      'cliente_id'  => new sfWidgetFormInputText(),
+      'empresa_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => false)),
       'etapa_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Etapa'), 'add_empty' => true)),
       'tramite'     => new sfWidgetFormInputText(),
       'descripcion' => new sfWidgetFormTextarea(),
@@ -30,7 +30,7 @@ abstract class BaseIniciacionFormularioForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'cliente_id'  => new sfValidatorInteger(),
+      'empresa_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'))),
       'etapa_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Etapa'), 'required' => false)),
       'tramite'     => new sfValidatorString(array('max_length' => 250)),
       'descripcion' => new sfValidatorString(array('max_length' => 2000)),

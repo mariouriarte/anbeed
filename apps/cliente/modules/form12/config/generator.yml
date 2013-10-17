@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           formulario12
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario12
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        fecha:                         {label: 'Fecha de Registro'}
+        tipo_tramite_formulario12_id:  {label: 'Tipo de Trámite'}
+        origen_formulario_id:          {label: 'Origen'}
+        empresa:                       {label: 'Empresa'}
+        laboratorio_fabricante:        {label: 'Laboratorio Fabricante'}
+      list:
+        title: Listado de formulario 012
+        display: [fecha, tipo_tramite_formulario12, empresa, laboratorio_fabricante, reactivo]
+        batch_actions:  {}
+        actions:
+          ir_portal:    {label: Volver al portal}
+        object_actions:
+          show:    {label: Etapas}
+      filter:
+        display: [numero_ruta, tipo_tramite_formulario12_id, origen_formulario_id]
+      form:    ~
+      edit:    ~
+      new:     ~

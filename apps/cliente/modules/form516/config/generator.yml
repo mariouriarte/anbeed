@@ -1,0 +1,30 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           formulario516
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario516
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Listado de Formularios 516
+        display: [tipo_tramite_formulario, empresa,  laboratorio, cosmetico]
+        batch_actions:  {}
+        actions:
+          ir_portal:    {label: Volver al portal}
+        object_actions:
+          show:    {label: Etapas}
+      filter:
+        display: [cosmetico_id, tipo_tramite_formulario_id]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

@@ -14,6 +14,8 @@ class Etapa extends BaseEtapa
 {
     public function __toString()
     {
-       return $this->getNombre();
+       //return $this->getDescripcion();
+        return $this->Formulario;
     }
+    
 }

@@ -13,6 +13,13 @@ require_once dirname(__FILE__).'/../lib/formulario27GeneratorHelper.class.php';
  */
 class formulario27Actions extends autoFormulario27Actions
 {
+    public function executeListEtapa(sfWebRequest $request)
+    {
+        $form = $this->getRoute()->getObject();
+        
+        $this->redirect('etapa/new?idform='.$form->Formulario->getId());
+    }
+    
     public function executePrint(sfWebRequest $request)
     {
         $this->formulario27 = $this->getRoute()->getObject();

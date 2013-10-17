@@ -12,4 +12,42 @@
  */
 class Formulario extends BaseFormulario
 {
+    public function __toString()
+    {
+       //return $this->getDescripcion();
+        //return $this->Formulario->Formulario706;
+        //if($this->Formulario5->getId())
+        //echo $this->Formulario5->getId();
+            
+        //return $this->Formulario706->Higiene->getNombre();
+        
+        if($this->Formulario5->getId())
+        {
+            return $this->Formulario5->Medicamento->getNombreComercial();
+        }
+        if($this->Formulario27->getId())
+        {
+            return $this->Formulario27->DispositivoMedico->getNombreComercial();
+        }
+        if($this->Formulario516->getId())
+        {
+            return $this->Formulario516->Cosmetico->getNombre();
+        }
+        if($this->Formulario706->getId())
+        {
+            return $this->Formulario706->Higiene->getNombre();
+        }
+//        if($this->Formulario7->getId())
+//        {
+//            return $this->Formulario7;
+//        }
+        if($this->Formulario11->getId())
+        {
+            return $this->Formulario11->getNumeroRuta();
+        }
+        if($this->Formulario12->getId())
+        {
+            return $this->Formulario12->Reactivo->getNombreComercial();
+        }
+    }
 }

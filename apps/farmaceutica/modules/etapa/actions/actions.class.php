@@ -19,4 +19,14 @@ class etapaActions extends autoEtapaActions
         $empresa = $user->getAttribute('empresa');
         $this->redirect('empresas/administrarEmpresa?id=' . $empresa->getId());
     }
+    
+    public function executeNew(sfWebRequest $request)
+    {
+        $this->form = $this->configuration->getForm();
+        $this->etapa = $this->form->getObject();
+       
+        $id_form = $request->getParameter('idform');
+        
+        $this->form->setDefault('formulario_id', $id_form);
+    }
 }

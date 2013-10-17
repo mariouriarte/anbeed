@@ -14,18 +14,22 @@ generator:
     config:
       actions: ~
       fields:
+        etapa_id:    {label: 'Producto'}
         descripcion: {label: 'Descripción'}
         observacion: {label: 'Observación'}
       list:
         title: Tramites iniciados
+        table_method: selectEtapasDeEmpresa
         display: [tramite, descripcion, observacion]
         actions:
           adm_empresa: {label: Volver a Empresa}
           _new: ~ 
       filter:
         display: [tramite]
-      form:    ~
+      form: ~        
       edit:
+        display: [empresa_id, etapa_id, tramite, descripcion, observacion, fecha_fin]
         title: Editar tramite %%tramite%%
       new:
+        display: [empresa_id, tramite, descripcion, observacion, fecha_fin]
         title: Nuevo tramite %%tramite%%

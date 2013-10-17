@@ -13,7 +13,7 @@ abstract class BaseIniciacionFormularioFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'cliente_id'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'empresa_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Empresa'), 'add_empty' => true)),
       'etapa_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Etapa'), 'add_empty' => true)),
       'tramite'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'descripcion' => new sfWidgetFormFilterInput(array('with_empty' => false)),
@@ -26,7 +26,7 @@ abstract class BaseIniciacionFormularioFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
-      'cliente_id'  => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'empresa_id'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Empresa'), 'column' => 'id')),
       'etapa_id'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Etapa'), 'column' => 'id')),
       'tramite'     => new sfValidatorPass(array('required' => false)),
       'descripcion' => new sfValidatorPass(array('required' => false)),
@@ -56,7 +56,7 @@ abstract class BaseIniciacionFormularioFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'          => 'Number',
-      'cliente_id'  => 'Number',
+      'empresa_id'  => 'ForeignKey',
       'etapa_id'    => 'ForeignKey',
       'tramite'     => 'Text',
       'descripcion' => 'Text',

@@ -20,32 +20,22 @@ class HigieneForm extends BaseHigieneForm
         
         $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden();
         
-//// Empresa
+        // Empresa
         $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden();
         
-        //// Empresa
-//        $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden();
-//        $this->validatorSchema['producto_id'] = new sfValidatorString(array('required' => false));
-        
-        //// Laboratorio
+        // Laboratorio
         $this->widgetSchema['laboratorio_fabricante_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
             array('model' => 'LaboratorioFabricante',
                   'url'   =>sfContext::getInstance()->getRouting()->generate('buscar_labs')
         ));
         
-        //// Marca
-//        $this->widgetSchema['grupo_higiene']= new sfWidgetFormDoctrineJQueryAutocompleter(
-//            array('model'=>'GrupoHigiene',
-//                  'url'=>sfContext::getInstance()->getRouting()->generate('buscar_grupo_higiene')
-//        ));
-        
-        //// Pais de codigo NSO 
+        // Pais de codigo NSO 
         $this->widgetSchema['pais_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
             array('model'=>'Pais',
                   'url'=>sfContext::getInstance()->getRouting()->generate('buscar_paises')
         ));
         
-        //// Nombre detalle PHD PAHP
+        // Nombre detalle PHD PAHP
         $this->widgetSchema['nombre_detalle'] = new sfWidgetFormChoice(
             array('expanded' => true, 
                   'choices'  => $this->nombre_detalle));

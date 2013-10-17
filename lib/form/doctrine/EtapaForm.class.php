@@ -16,6 +16,8 @@ class EtapaForm extends BaseEtapaForm
         unset($this['created_at'], $this['updated_at'], 
               $this['created_by'], $this['updated_by']);
         
+        $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();
+        
         $years = range(date('Y') - 10, date('Y'));   
         $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
