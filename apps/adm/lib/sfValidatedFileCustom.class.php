@@ -31,11 +31,9 @@ class sfValidatedFileCustom extends sfValidatedFile
 	{
 		if (is_null($file))
 		{
-//                    var_dump($this->getExtension());
-//                    echo $file->getOriginalName();
-//                    die;
-                    $file = sfContext::getInstance()->getUser()->getUserName().$this->getExtension();
-                        //$this->getUser()->getUsername();
+
+                    $file = $this->generateFilename();
+                        
 		}
 
 		//echo $file; die;
@@ -46,10 +44,10 @@ class sfValidatedFileCustom extends sfValidatedFile
 				throw new RuntimeException('You must give a "path" when you give a relative file name.');
 			}
 
-			$smallFile = 'images/users/small/'.$file;
+			$smallFile = 'images/catalogo/small/'.$file;
                         
                          
-			$file = 'images/users/normal/'.$file;
+			$file = 'images/catalogo/normal/'.$file;
 		}
                 //echo $file; die;
 		// get our directory path from the destination filename
@@ -77,7 +75,7 @@ class sfValidatedFileCustom extends sfValidatedFile
 		}
 
 		// copy the temp file to the destination file
-		$thumbnail = new sfThumbnail(60, 75, false, false, 100, 'sfImageMagickAdapter');
+		$thumbnail = new sfThumbnail(150, 150, false, false, 85, 'sfImageMagickAdapter');
 		$thumbnail->loadFile($this->getTempName());
 		$thumbnail->save($smallFile, 'web_images');
 
@@ -92,5 +90,7 @@ class sfValidatedFileCustom extends sfValidatedFile
 		$this->savedName = $file;
 		return is_null($this->path) ? $file : str_replace($this->path.DIRECTORY_SEPARATOR, '', $file);
 	}
+
+        
 
 }

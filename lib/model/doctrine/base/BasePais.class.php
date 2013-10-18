@@ -14,6 +14,7 @@
  * @property integer $capital
  * @property LaboratorioFabricante $LaboratorioFabricante
  * @property Doctrine_Collection $Ciudad
+ * @property Doctrine_Collection $ProductoWeb
  * @property Cosmetico $Cosmetico
  * @property Doctrine_Collection $Formularios706
  * @property Doctrine_Collection $Higiene
@@ -28,6 +29,7 @@
  * @method integer               getCapital()               Returns the current record's "capital" value
  * @method LaboratorioFabricante getLaboratorioFabricante() Returns the current record's "LaboratorioFabricante" value
  * @method Doctrine_Collection   getCiudad()                Returns the current record's "Ciudad" collection
+ * @method Doctrine_Collection   getProductoWeb()           Returns the current record's "ProductoWeb" collection
  * @method Cosmetico             getCosmetico()             Returns the current record's "Cosmetico" value
  * @method Doctrine_Collection   getFormularios706()        Returns the current record's "Formularios706" collection
  * @method Doctrine_Collection   getHigiene()               Returns the current record's "Higiene" collection
@@ -41,6 +43,7 @@
  * @method Pais                  setCapital()               Sets the current record's "capital" value
  * @method Pais                  setLaboratorioFabricante() Sets the current record's "LaboratorioFabricante" value
  * @method Pais                  setCiudad()                Sets the current record's "Ciudad" collection
+ * @method Pais                  setProductoWeb()           Sets the current record's "ProductoWeb" collection
  * @method Pais                  setCosmetico()             Sets the current record's "Cosmetico" value
  * @method Pais                  setFormularios706()        Sets the current record's "Formularios706" collection
  * @method Pais                  setHigiene()               Sets the current record's "Higiene" collection
@@ -92,6 +95,10 @@ abstract class BasePais extends sfDoctrineRecord
              'foreign' => 'pais_id'));
 
         $this->hasMany('Ciudad', array(
+             'local' => 'id',
+             'foreign' => 'pais_id'));
+
+        $this->hasMany('ProductoWeb', array(
              'local' => 'id',
              'foreign' => 'pais_id'));
 

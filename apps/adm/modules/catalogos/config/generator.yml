@@ -1,0 +1,41 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ProductoWeb
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          producto_web
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        pais_id: {label: 'Procedencia'}
+        foto:    {label: 'Fotograía'}
+      list:    
+        display: [foto, categoria_id, linea_id, pais_id, nombre]
+        title: Catálogo de Productos
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [categoria_id, linea_id, pais_id, nombre]
+      form:    
+        display: [_verfoto, categoria_id, linea_id, pais_id, nombre, caracteristicas, precio, foto]
+      edit:    
+        title: Editar Producto %%nombre%%
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _list: ~ 
+          _save: ~ 
+      new:     
+        title: Nuevo Producto
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _list: ~ 
+          _save: ~ 
+          _save_and_add: ~ 

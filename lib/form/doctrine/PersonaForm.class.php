@@ -50,22 +50,7 @@ class PersonaForm extends BasePersonaForm
         
         if(sfContext::getInstance()->getModuleName() == "perfil")
         {
-            /*FOTOGRAFIA*/
-  /*           $this->setWidget('foto', new sfWidgetFormInputFileEditable(array(
-                  'file_src'    => '/images/users/'.$this->getObject()->getFoto(),
-                  'edit_mode'   => !$this->isNew(),
-                  'is_image'    => true,
-                  'with_delete' => true,
-                  'delete_label' => 'Eliminar',
-
-                )));
-
-                $this->setValidator('foto', new sfValidatorFile(array(
-                  'mime_types' => 'web_images',
-                  'path' => 'images/users',
-                  'required' => false,
-                  #'validated_file_class' => 'sfValidatedFileCustom'
-                )));*/
+  
             $this->widgetSchema['user_id'] = new sfWidgetFormInputHidden();
             
             $this->widgetSchema['foto'] = new sfWidgetFormInputFileEditable(array(
@@ -75,12 +60,13 @@ class PersonaForm extends BasePersonaForm
                                                 'delete_label' => 'Eliminar foto'));
 
        
-            
+            $this->widgetSchema->setHelp('foto', 'El Tamaño maximo de la imagen debe ser de 5MB ');
+                    
             
             $this->validatorSchema['foto'] = new sfValidatorFile(array(
                                   'max_size' => 5000000,  
                                   'mime_types' => 'web_images',
-                                  'path' => 'images/users',
+                                  'path' => 'images/users/normal',
                                   'required' => false,
                                   'validated_file_class' => 'sfValidatedFileCustom'));
             

@@ -205,14 +205,14 @@ formulario516:
     column:               id
     with_wildcard_routes: true
 
-marca:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                Marca
-    module:               marca
-    prefix_path:          /marca
-    column:               id
-    with_wildcard_routes: true
+#marca:
+#  class: sfDoctrineRouteCollection
+#  options:
+#    model:                Marca
+#    module:               marca
+#    prefix_path:          /marca
+#    column:               id
+#    with_wildcard_routes: true
 
 grupo_cosmetico:
   class: sfDoctrineRouteCollection

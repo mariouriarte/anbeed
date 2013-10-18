@@ -127,7 +127,7 @@ Pais:
   relations:
     LaboratorioFabricante: {local: id, foreign: pais_id, type: one, foreignAlias: Pais}
     Ciudad:                {local: id, foreign: pais_id, type: many, foreignAlias: Pais}
-    #Ciudad:                {local: capital, foreign: id, type: one, foreignAlias: Capital}
+    ProductoWeb:           {local: id, foreign: pais_id, type: many, foreignAlias: Pais}
     Cosmetico:             {local: id, foreign: pais_id, type: one, foreignAlias: Pais}
     Formularios706:        {local: id, foreign: rescom_ciudad_id, type: many, class: Formulario706}
 
@@ -732,5 +732,35 @@ EstadoTarea:
     descripcion:    {type: string(150), notnull: true}
   relations:
     Tarea: {local: id, foreign: estado_id, type: one, foreignAlias: EstadoTarea}   
+
+Categoria:
+  actAs: [Timestampable, Signable]
+  columns:
+    nombre:         {type: string(50), notnull: true}
+    descripcion:    {type: string(250)}
+  relations:
+    ProductoWeb:    {local: id, foreign: categoria_id, type: many, foreignAlias: Categorias}   
     
-    
+Linea:
+  actAs: [Timestampable, Signable]
+  columns:
+    nombre:         {type: string(30), notnull: true}
+    descripcion:    {type: string(150)}
+  relations:
+    ProductoWeb:    {local: id, foreign: linea_id, type: many, foreignAlias: Lineas}   
+
+ProductoWeb:
+  actAs: [Timestampable, Signable]
+  columns:
+    categoria_id:    {type: integer, notnull: true}
+    linea_id:        {type: integer, notnull: true}
+    pais_id:         {type: integer, notnull: true}
+    nombre:          {type: string(50), notnull: true}
+    caracteristicas: {type: string(2000), notnull: true}
+    precio:          {type: float, scale: (2)  , notnull: true}
+    foto:            {type: string(50), notnull: true}
+    visto:           {type: integer, default: 0 }
+  relations:
+    Categoria: {local: categoria_id, foreign: id, type: one, foreignAlias: ProductoWeb}       
+    Linea:     {local: linea_id, foreign: id, type: one, foreignAlias: ProductoWeb}       
+    Pais:      {local: pais_id, foreign: id, type: one, foreignAlias: ProductoWeb}        

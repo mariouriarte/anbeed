@@ -1,3 +1,30 @@
+producto_web:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ProductoWeb
+    module:               catalogos
+    prefix_path:          /catalogos
+    column:               id
+    with_wildcard_routes: true
+
+categoria:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Categoria
+    module:               categorias
+    prefix_path:          /categorias
+    column:               id
+    with_wildcard_routes: true
+
+linea:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Linea
+    module:               lineas
+    prefix_path:          /lineas
+    column:               id
+    with_wildcard_routes: true
+
 comentario_tarea:
   class: sfDoctrineRouteCollection
   options:

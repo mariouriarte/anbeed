@@ -155,6 +155,25 @@
             </div>
         </div>
         <?php endif; ?>
+
+        <?php if ($sf_user->hasCredential('ADMINISTRADOR')): ?>
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <div class="titulo_img"><img src="/images/icons/productos.svg" /></div>
+                    <h2 class="titulo">Catálogo de Productos</h2>
+                    <div class="contenido">
+                        <ul>
+                           
+                            <li><a href="/adm<?php echo $env ?>.php/catalogos"><span>Catálogo de productos</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/categorias"><span>Categorías</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/lineas"><span>Líneas (marcas)</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">

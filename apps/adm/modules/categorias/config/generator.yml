@@ -1,0 +1,40 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Categoria
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          categoria
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        creator:    {label: 'Creado por'}
+        created_at: {label: 'Creado en'}
+      list:   
+        display: [nombre, descripcion, creator, created_at]
+        title: Listado de Categorías
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [nombre]
+      form:    
+      edit:    
+        title: Editar Categoría %%nombre%%
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _list: ~
+          _save: ~
+      new:     
+        title: Nueva Categoría
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _list: ~
+          _save: ~
+          _save_and_add: ~

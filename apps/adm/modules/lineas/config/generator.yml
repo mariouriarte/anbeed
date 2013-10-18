@@ -1,0 +1,40 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Linea
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          linea
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        creator:    {label: 'Creado por'}
+        created_at: {label: 'Creado en'}
+      list:   
+        display: [nombre, descripcion, creator, created_at]
+        title: Listado de Líneas o Marcas
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [nombre]
+      form:    
+      edit:    
+        title: Editar Línea %%nombre%%
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _list: ~
+          _save: ~
+      new:     
+        title: Nueva Línea o Marca
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _list: ~
+          _save: ~
+          _save_and_add: ~
