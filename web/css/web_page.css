@@ -1,6 +1,6 @@
 @import url('reset.css');
 body{
-	background:#555 url(../images/random_grey_variations.png) repeat top left;
+	background:#555 url(../images/fondo.jpg) repeat top left;
 	color:#000;
 	font-family: 'PT Sans Narrow', Arial, sans-serif;
 	font-size:12px;
@@ -107,3 +107,18 @@ h2{
 	right:4px;
 }
 
+.footer {
+    height: auto;
+    width: 100%;
+    color: #000;
+    background-color: #0D8B15;
+    text-align: center;
+    
+    border-bottom: 1px solid #DEDBD4;
+    box-shadow: -1px 0 8px 0 rgba(0, 0, 0, 0.8);
+    float: left;
+}
+
+.footer p {
+    margin: 0px !important;
+}
