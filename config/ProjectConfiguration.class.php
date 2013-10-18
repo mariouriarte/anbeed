@@ -14,5 +14,6 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfDependentSelectPlugin');
     $this->enablePlugins('sfTCPDFPlugin');
     $this->enablePlugins('sfDoctrineActAsSignablePlugin');
+    $this->enablePlugins('sfThumbnailPlugin');
   }
 }

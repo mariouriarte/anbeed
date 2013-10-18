@@ -46,6 +46,9 @@ generator:
         table_method: getUsuariosPersonas
         title: Listado de Usuarios del sistema
         display: [username, nombre_ordenado, cedula_expedido, last_login]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
       filter:  
         display: [username]
       form:    
