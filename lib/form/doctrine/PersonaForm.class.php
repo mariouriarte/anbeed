@@ -74,6 +74,9 @@ class PersonaForm extends BasePersonaForm
                                                 'edit_mode' => !$this->isNew(),
                                                 'delete_label' => 'Eliminar foto'));
 
+       
+            
+            
             $this->validatorSchema['foto'] = new sfValidatorFile(array(
                                   'max_size' => 5000000,  
                                   'mime_types' => 'web_images',
@@ -133,5 +136,25 @@ class PersonaForm extends BasePersonaForm
         $this->widgetSchema['direccion']->setAttribute('size', 50);
         $this->widgetSchema['email']->setAttribute('size', 50);
         
+    }
+    
+    public function doSave($con = null)
+    {
+        //si elimino la imagen con check
+        if($this->getValue('foto_delete'))
+        {
+        $filename = $this->getObject()->getFoto();
+
+        //directorio de la imagen original
+        $filepath = 'images/users/normal/'.$filename;
+        @unlink($filepath);
+
+        //directorio de la imagen con tamaño distinto
+        $thumbnailpath = 'images/users/small/'.$filename;
+        @unlink($thumbnailpath);
+
+        $this->getObject()->setFoto(null);
+        }
+        return parent::doSave($con);
     }
 }

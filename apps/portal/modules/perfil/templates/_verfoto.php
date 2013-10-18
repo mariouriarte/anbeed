@@ -8,9 +8,9 @@ if($foto == null || $foto == '')
 <div class="foto_edit">
     <?php
     
-    $thumbnail = new sfThumbnail(60, 75, false, true, 75, 'sfImageMagickAdapter', array('method' => 'shave_all'));
-    $thumbnail->loadFile("images/users/$foto");
-    $thumbnail->save('images/users/new.png', 'image/png');
+//    $thumbnail = new sfThumbnail(60, 75, false, true, 75, 'sfImageMagickAdapter', array('method' => 'shave_all'));
+//    $thumbnail->loadFile("images/users/$foto");
+//    $thumbnail->save('images/users/new.png', 'image/png');
     ?>
     
     

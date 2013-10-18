@@ -42,7 +42,7 @@
                             <?php if ($sf_user->isAuthenticated()): ?>
                                 <div id="info-user">
                                     <div class="foto_mimiatura">
-                                        <?php echo image_tag(public_path("images/users/new.png".$sf_user->getAttribute('foto').""), 'alt=FOTO size=60x75'); ?>
+                                        <?php echo image_tag(public_path("images/users/".$sf_user->getAttribute('foto').""), 'alt=FOTO size=60x75'); ?>
                                     </div>
                                     <div class="info_user_text">
                                         <h4>Usuario: <?php echo $sf_user->getUsername(); ?></h4>
