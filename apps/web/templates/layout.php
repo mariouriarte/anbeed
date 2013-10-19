@@ -15,10 +15,39 @@
         <?php include_javascripts() ?>
     </head>
     <body>
-        <div class="container">
-            <div class ="content">
-                <?php echo $sf_content ?>
+<div id="wrap">
+    <div class="top_corner"></div>
+    <div id="main_container">
+        <div id="header">
+            <div id="logo"><?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '@homepage')?></div>
+            
+            <div id="menu">
+                <ul>                                                                                            
+                    <li><?php echo link_to('Inicio', 'home/index') ?></li>
+                    <li><?php echo link_to('Quienes Somos', 'home/quienesSomos') ?></li>
+                    <li><?php echo link_to('Servicios', 'home/servicios') ?></li>
+                    <li><?php echo link_to('Productos', 'home/productos') ?></li>
+                    <li><?php echo link_to('Información', 'home/informacion') ?></li>
+                    <li><?php echo link_to('Contactenos', 'home/contactenos') ?></li>
+                </ul>
             </div>
         </div>
+        
+        <?php echo $sf_content?>
+        
+        <div class="footer">
+        	<div class="copyright"><a href="http://www.anbeed.com/" target="_blank">ANBEED S.R.L.</a> | <a href="http://capsulesystem.com/" target="_blank">by CapsuleSystems</a></div>
+        
+        	<div class="footer_links">
+                <a class="current" href="index.html" title="">Home</a>
+                <a href="#" title="">About Company</a>
+                <a href="#" title="">Projects</a>
+                <a href="#" title="">Clients</a>
+                <a href="#" title="">Testimonials</a>
+                <a href="contact.html" title="">Contact</a>            
+            </div>
+        </div>
+    </div>
+</div>
     </body>
 </html>

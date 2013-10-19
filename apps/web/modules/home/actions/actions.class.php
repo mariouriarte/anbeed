@@ -26,4 +26,22 @@ class homeActions extends sfActions
             $this->env = '';
         }
   }
+  public function executeQuienesSomos(sfWebRequest $request)
+  {
+  }
+  
+  public function executeServicios(sfWebRequest $request)
+  {
+  }
+  
+  public function executeProductos(sfWebRequest $request)
+  {
+  }
+  
+  public function executeInformacion(sfWebRequest $request)
+  {
+  }
+  public function executeContactenos(sfWebRequest $request)
+  {
+  }  
 }
