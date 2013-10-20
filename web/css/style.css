@@ -201,6 +201,16 @@ width:930px;
 clear:both;
 padding:10px 15px 0 15px;
 }
+.wide_left{
+width:440px;
+float: left;
+padding:10px 10px 0 15px;
+}
+.wide_right{
+width:440px;
+float: right;
+padding:10px 10px 0 15px;
+}
 .right_block{
 width:280px;
 float:right;
