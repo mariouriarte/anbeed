@@ -21,7 +21,7 @@ class IniciacionFormularioForm extends BaseIniciacionFormularioForm
         // etapa
         $this->widgetSchema['etapa_id'] = new sfWidgetFormDoctrineChoice(
             array('model'     => $this->getRelatedModelName('Etapa'), 
-                  'add_empty' => true,
+                  'add_empty' => 'Seleccione un producto',
                   'table_method' => 'selectEtapaVerificacion',));
         
         // Fecha fin

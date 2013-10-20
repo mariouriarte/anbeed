@@ -9,6 +9,7 @@
                     <h2 class="titulo"> Etapas de tramites</h2>
                     <div class="contenido">
                         <ul>
+                            <li><?php echo link_to('Primera etapa', 'pri_etapa/index')?></li>
                             <li><?php echo link_to('Formulario 5', 'form5/index')?></li>
                             <li><?php echo link_to('Formulario 12', 'form12/index')?></li>
                             <li><?php echo link_to('Formulario 27', 'form27/index')?></li>

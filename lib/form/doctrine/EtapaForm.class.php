@@ -23,5 +23,10 @@ class EtapaForm extends BaseEtapaForm
             array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
                   'format' => '%day%%month%%year%',  
                   'years' => array_combine($years, $years))), ));
+        
+        $this->widgetSchema['tipo_etapa_id'] = new sfWidgetFormDoctrineChoice(
+            array('model'     => $this->getRelatedModelName('TipoEtapa'), 
+                  'add_empty' => 'Seleccione un tipo',
+                  'table_method' => 'selectTipoEtapaValida',));
     }
 }

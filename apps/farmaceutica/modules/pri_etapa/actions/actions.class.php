@@ -13,6 +13,13 @@ require_once dirname(__FILE__).'/../lib/pri_etapaGeneratorHelper.class.php';
  */
 class pri_etapaActions extends autoPri_etapaActions
 {
+    public function executeListProducto(sfWebRequest $request)
+    {
+        $pri_etapa = $this->getRoute()->getObject();
+        
+        $this->redirect('pri_etapa_producto/edit?id='.$pri_etapa->getId());
+    }
+    
     public function executeNew(sfWebRequest $request)
     {
         $this->form = $this->configuration->getForm();

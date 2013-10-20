@@ -1,3 +1,12 @@
+iniciacion_formulario:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                IniciacionFormulario
+    module:               pri_etapa
+    prefix_path:          /pri_etapa
+    column:               id
+    with_wildcard_routes: true
+
 formulario706:
   class: sfDoctrineRouteCollection
   options:
