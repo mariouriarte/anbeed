@@ -1,150 +1,191 @@
-        <div class="middle_banner">               
-           
-<div class="featured_slider">
-      	<!-- begin: sliding featured banner -->
-         <div id="featured_border" class="jcarousel-container">
-            <div id="featured_wrapper" class="jcarousel-clip">
-               <ul id="featured_images" class="jcarousel-list">
-                  <li><img src="/images/web/slider_photo.jpg" width="965" height="280" alt="" /></li>
-                  <li><img src="/images/web/slider_photo2.jpg" width="965" height="280" alt="" /></li>
-                  <li><img src="/images/web/slider_photo3.jpg" width="965" height="280" alt="" /></li>
-                  <li><img src="/images/web/slider_photo2.jpg" width="965" height="280" alt="" /></li>
-               </ul>
-            </div>
-            <div id="featured_positioner_desc" class="jcarousel-container">
-               <div id="featured_wrapper_desc" class="jcarousel-clip">
-                  <ul id="featured_desc" class="jcarousel-list">                 
-                     <li>
-                        <div>
-                           <p>Texto o comentario 1.
-                           </p>
-                        </div>
-                     </li> 
-                     <li>
-                        <div>
-                           <p>Texto o comentario 2.
-                           </p>
-                        </div>
-                     </li> 
-                     <li>
-                        <div>
-                           <p>Texto o comentario 3.
-                           </p>
-                        </div>
-                     </li>  
-                     <li>
-                        <div>
-                           <p>Texto o comentario 4.
-                           </p>
-                        </div>
-                     </li> 
-                  </ul>
-               </div>
+<div class="center_content">
 
-            </div>
-            <ul id="featured_buttons" class="clear_fix">
-               <li>1</li>
-               <li>2</li>
-               <li>3</li>
-               <li>4</li>
+    <div class="home_section_left">
+        <img src="/images/web/icon3.gif" alt="" title="" class="home_section_icon" border="0">
+
+            <h2 class="home_title">Apertura de Empresas</h2>
+            <p><span>Requiere apoyo para la apertura de su empresa?</span><br><br>
+            ANBEED le brinda servicios de consultoria para la apertura de empresas de insumos médicos, medicamentos. 
+    <div class="clear"></div>
+    </div>
+
+
+    <div class="home_section_left">
+        <img src="/images/web/icon3.gif" alt="" title="" class="home_section_icon" border="0">
+
+            <h2 class="home_title">Registro Sanitario</h2>
+            <p><span>Necesita registrar su producto?</span><br><br>
+            Contamos con personal capacitado para el registro sanitario de medicamentos, dispositivos médicos, reactivos medicos, cosméticos y productos de higiene y liempieza.
+            </p>
+    <div class="clear"></div>
+    </div>
+
+    <div class="home_section_left">
+        <img src="/images/web/icon3.gif" alt="" title="" class="home_section_icon" border="0">
+
+            <h2 class="home_title">Despacho Aduanero</h2>
+            <p><span>Precisa desaduanizar sus productos médicos?</span><br><br>
+            Desconosolidamos y despachamos sus productos que se encuentren en Aduana a la brevedad posible.
+            </p>
+    </div>
+    <div class="wide_content">
+        <h2>Requisitos para Importadoras de Insumos Medicos</h2>
+            Documentación que debe ser presentada para el trámite de apertura de empresa:<br>
+            <ul>
+                <li> Matricula de FUNDEMPRESA emitida por la Cámara de Industria y Comercio</li>
+                <li> Padrón Municipal emítido por la alcaldía </li>
+                <li> Nit </li>
+                <li> Carnet de Identidad del representante legal</li>
+                <li> Poder de constitución de la empresa si es en sociedad</li>
+                <li> Poder del representante legal si es en sociedad (para el caso de empresas unipersonales el punto 5 y 6 no corresponde)</li>
+                <li> Pago de 4.000 Bs al Banco Central de Bolivia a la cuenta 3G-300 del Ministerio de Salud y deportes por concepto de apertura de empresa importadora</li>
             </ul>
-         </div>
-         <!-- end: sliding featured banner -->
+            <b>Nota.- </b>Para el trámite debe enviarse los datos de ubicación de la empresa, email, Nº telefónico y Nº de fax.
+    </div><br>
+    
+    <div class="wide_content">
+        <h2>Requisitos para Importadoras de Medicamentos</h2>
+            Documentación que debe ser presentada para el tramite de apertura de empresa:<br>
+            <ul>
+                <li> Matricula de FUNDEMPRESA emitida por la Cámara de Industria y Comercio <b>Original</b></li>
+                <li> Padrón municipal emítido por la alcaldía <b>Fotocopia legalizada</b> </li>
+                <li> Nit <b>Fotocopia legalizada</b></li>
+                <li> Carnet de Identidad del representante legal <b>Fotocopia simple</b></li>
+                <li> Pago de 4.000 Bs al Banco Central de Bolivia a la cuenta 3G-300 del Ministerio de Salud y deportes por concepto de apertura de empresa importadora</li>
+            </ul><br>
+            En caso de NO ser empresa unipersonal, adicionar los siguientes documentos:<br>
+            <ul>
+                <li> Documento de constitucion de la empresa <b>Fotocopia legalizada</b></li>
+                <li> Documento de poder del representante legal <b>Fotocopia legalizada</b></li>
+            </ul><br>
+            Documentación del Regente Farmacéutica:
+            <ul>
+                <li>Fotocopia legalizada del titulo en provisión Nacional</li>
+                <li>Fotocopia del Carnet de Colegiada</li>
+                <li>Fotocopia matricula Profesional</li>
+                <li>Contrato por tiempo completo visado en el Ministerio de Trabajo</li>
+                <li>Fotocopia Carnet de Identidad</li>
+                <li>Certificado de compatibilidad horaria emitida por el SEDES Santa Cruz</li>
+            </ul>
+            
+            <b>Nota.-</b> 
+            <ul>
+                <li>Para el trámite debe enviarse los datos de ubicación de la empresa, email, Nº telefónico y Nº de fax.</li>
+                <li>Para FUNDEMPRESA se deberá tomar en cuenta la actividad es importadora de  INSUMOS MEDICOS</li>
+                <li>El NIT debe  de tener el nombre de la Razón Social de la empresa y la actividad la misma de FUNDAEMPRESA</li>
+                <li>La Licencia de Funcionamiento de la misma forma tomar en cuenta la Razón Social y la actividad</li>
+                <br> <b>ARANCELES:</b> 10.000 BS AL MINISTERIO DE SALUD Y DEPORTES  APERTURA IMPORTADORA DE MEDICAMENTOS.
+            </ul>
+    </div>
+    
+    <div class="wide_content">
+        <h2>Requisitos para Registro de Medicamentos</h2>
+        <br><b>Documentación Legal del Producto</b>
+        <ul>
+            <li>Información general de Licenciantes y fabricantes</li>
+            <li>Aclaración de particularidades del producto</li>
+            <li>Certificado del director técnico</li>
+            <li>Certificado de Buenas Prácticas de Manufactura (fotocopia)</li>
+            <li>Contrato de fabricación o control de calidad (si corresponde)</li>
+            <li>Certificado de Libre Venta Consularizado (original)</li>
+            <li>Carta de Representación Legal Consularizada (original)</li>
+        </ul>
+        <br><b>Documentación Técnica del Principio Activo</b>
+        <ul>
+            <li>Fotocopia de certificado de análisis de materia prima</li>
+            <li>Clasificación anatomo terapéutica</li>
+            <li>Nombre químico, Formula Estructural Molecular y Peso Molecular</li>
+            <li>Características Fisicoquímicas del principio Activo</li>
+            <li>Características Organolépticas del principio activo</li>
+            <li>Impurezas y productos de degradación</li>
+            <li>Estabilidad del principio activo</li>
+            <li>Metodología analítica del principio activo</li>
+            <li>Validación de la metodología analítica</li>
+        </ul>
+        <br><b>Documentación Técnica del Producto Terminado</b>
+        <ul>
+            <li>Desarrollo galénico</li>
+            <li>Formula Cuali-Cuantitativa ( cada componente con la acción)</li>
+            <li>Certificado de análisis de producto terminado</li>
+            <li>Certificado CONCAMIT si es reinscripción</li>
+            <li>Características Fisicoquímicas de los excipientes</li>
+            <li>Método de manufactura(un resumen o flujograma)</li>
+            <li>Metodología analítica del producto terminado</li>
+            <li>Validación de la metodología analítica</li>
+            <li>Estudio de estabilidad del producto terminado</li>
+            <li>Condiciones de almacenamiento del producto</li>
+            <li>Características del material de envase</li>
+            <li>Codificación de Lote</li>
+            <li>Etiquetas, Rótulos y estuches, Insertos y Prospectos</li>
+            <li>Monografía farmacológica</li>
+            <li>Muestras del producto (original) 2 muestras</li>        
+        </ul>
+    </div>
+
+
+    <div class="wide_content">
+        <h2>Requisitos para Registro de Dispositivos Médicos</h2>
+        <br><b>1. Formulario 027</b>
+        <br><b>2. Documentacion Legal</b>
+        <ul>
+            <li>Resolucion Ministerial</li>
+            <li>Certificado empresa vigente</li>
+            <li>Informacion general  de licenciantes y fabricantes</li>
+        </ul>
+        <br><b>3. Documentacion General</b>
+        <ul>
+            <li> Certificado de sistema de calidad utilizado</li>
+            <li> Certificado de libre venta</li>
+            <li> Representacion Legal</li>
+        </ul>
+        <br><b>4. Informacion técnica del Dispositivo Médico</b>
+        <ul>
+            <li> Descripción de partes y componentes</li>
+            <li> Fotocopia certificado de análisis</li>
+            <li> Vida útil del Dispositivo Médico</li>
+            <li> Condiciones de almacenamiento</li>
+            <li> Codificación de acuerdo al riesgo</li>
+            <li> Eficacia y seguridad</li>
+            <li> Información de uso</li>
+            <li> Esterilización</li>
+            <li> Disposicion final</li>
+        </ul>
+        <br><b>5. Etiquetas rotulos y manuales</b>
+        <br><b>6. Muestra</b>
+    </div>
+    
+    <div class="wide_content">
+        <h2>Requisitos para Registro de Cosméticos</h2>
+        <ul>
+            <li>Contrato de fabricación por terceros</li>
+            <li>Certificado de Buenas Prácticas de Manufactura o ISO</li>
+            <li>Formula Cuali cuantitativa </li>
+            <li>Especificaciones organolépticas y fisicoquímicas del producto terminado</li>
+            <li>Especificaciones microbiológicas cuando corresponda, de acuerdo a la naturaleza del producto terminado.</li>
+            <li>Justificación de las bondades y proclamas de carácter cosmético atribuibles al producto en estas bondades no se atribuirán efectos terapéuticos.</li>
+            <li>Proyecto de arte de la etiqueta o rotulado</li>
+            <li>Instrucciones de uso del producto</li>
+            <li>Material de envase primario especificaciones</li>
+            <li>Certificado de Análisis microbiológico</li> 
+        </ul>
+        <b>NOTA.-</b> Los aranceles para inscripción al Ministerio de Salud es de 1200 Bs por producto deposito que se hará en la cuenta 3G-300 del Banco central de Bolivia.
+    </div>
+    
+    <div class="wide_content">
+        <h2>Requisitos para Registro de Productos de Aseo y Limpieza Absorvente</h2>
+        <ul>
+            <li>Contrato de fabricación por terceros</li>
+            <li>Certificado de Buenas Prácticas de Manufactura o ISO</li>
+            <li>Formula Cuali cuantitativa </li>
+            <li>Especificaciones organolépticas y fisicoquímicas del producto terminado</li>
+            <li>Especificaciones microbiológicas cuando corresponda, de acuerdo a la naturaleza del producto terminado.</li>
+            <li>Justificación de las bondades y proclamas de carácter cosmético atribuibles al producto en estas bondades no se atribuirán efectos terapéuticos.</li>
+            <li>Proyecto de arte de la etiqueta o rotulado</li>
+            <li>Instrucciones de uso del producto</li>
+            <li>Material de envase primario especificaciones</li>
+            <li>Certificado de Análisis microbiológico</li> 
+        </ul>
+        <b>NOTA.-</b> Los aranceles para inscripción al Ministerio de Salud es de 1200 Bs por producto deposito que se hará en la cuenta 3G-300 del Banco central de Bolivia.
+    </div>
+    <div class="clear"></div>
 </div>
-          
-        
-        
-        </div>
-<!---------------------------------end of middle banner-------------------------------->
-        
-        
-        <div class="center_content">
-        
-        <div class="home_section_left">
-            <img src="images/icon1.gif" alt="" title="" class="home_section_icon" border="0">
-                            
-                <h2 class="home_title">What we do</h2>
-                <div class="home_subtitle">Consectetur adipisicing elit</div>
-    
-                <div class="home_section_thumb">
-                <img src="images/home_section_thumb1.jpg" alt="" title="" border="0">
-                </div>
-                <p><span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
-                <br> <br>
-                <span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
-                </p>
-                <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a>
-        <div class="clear"></div>
-        </div>
-        
-        
-        <div class="home_section_left">
-            <img src="images/icon2.gif" alt="" title="" class="home_section_icon" border="0">
-                            
-                <h2 class="home_title">Who we are</h2>
-                <div class="home_subtitle">Tempor incididunt ut labore</div>
-    
-                <div class="home_section_thumb">
-                <img src="images/home_section_thumb2.jpg" alt="" title="" border="0">
-                </div>
-                <p><span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
-                <br> <br>
-                <span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
-                </p>
-                <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a>
-        <div class="clear"></div>
-        </div>
-        
-        <div class="home_section_left">
-            <img src="images/icon3.gif" alt="" title="" class="home_section_icon" border="0">
-                            
-                <h2 class="home_title">Special services</h2>
-                <div class="home_subtitle">Sed do eiusmod tempor</div>
-    
-                <div class="home_section_thumb">
-                <img src="images/home_section_thumb3.jpg" alt="" title="" border="0">
-                </div>
-                <p><span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
-                <br> <br>
-                <span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
-                </p>
-                <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a>
-        <div class="clear"></div>
-        </div>
-        
-            
-            <div class="left_block_wide">
-                <h2>Latest Projects</h2>
-                
-                <a href="#"><img src="images/p1.jpg" alt="" title="" border="0" class="projects" /></a>
-                <a href="#"><img src="images/p2.jpg" alt="" title="" border="0" class="projects" /></a>
-                <a href="#"><img src="images/p3.jpg" alt="" title="" border="0" class="projects" /></a>
-            
-            
-            </div>
-            
-            <div class="right_block">
-            	<h2>Newsletter Sign up</h2>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit consequat.
-                </p>
-                <form id="newsletter">
-                <input type="text" name="" class="newsletter_input" />
-                <input type="submit" name="" class="newsletter_submit" value="Sign up" />
-                </form>
-            
-            </div>
-        
-        
-        
-   
-        
-        <div class="clear"></div>
-        </div>
-    

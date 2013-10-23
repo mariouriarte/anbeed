@@ -202,10 +202,27 @@ width:930px;
 clear:both;
 padding:10px 15px 0 15px;
 }
+.wide_left{
+width:440px;
+float: left;
+padding:10px 10px 0 15px;
+}
+.wide_right{
+width:440px;
+float: right;
+padding:10px 10px 0 15px;
+}
 .right_block{
 width:280px;
 float:right;
 padding:20px 20px 10px 0;
+}
+.wide_content ul{
+padding: 10px 100px;
+}
+.wide_content li{
+list-style: square outside none !important;
+padding: 5px 0px 1px 1px;
 }
 img.pic{
 border:3px #57ad55 solid;
