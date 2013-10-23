@@ -14,7 +14,7 @@ abstract class BaseLineaFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'nombre'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'descripcion' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'descripcion' => new sfWidgetFormFilterInput(),
       'created_at'  => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'  => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'created_by'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'add_empty' => true)),

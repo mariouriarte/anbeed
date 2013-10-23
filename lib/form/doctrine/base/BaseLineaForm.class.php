@@ -27,7 +27,7 @@ abstract class BaseLineaForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'nombre'      => new sfValidatorString(array('max_length' => 30)),
-      'descripcion' => new sfValidatorString(array('max_length' => 150)),
+      'descripcion' => new sfValidatorString(array('max_length' => 150, 'required' => false)),
       'created_at'  => new sfValidatorDateTime(),
       'updated_at'  => new sfValidatorDateTime(),
       'created_by'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'required' => false)),

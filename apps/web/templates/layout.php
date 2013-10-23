@@ -26,14 +26,14 @@
                     <li><?php echo link_to('Inicio', 'home/index') ?></li>
                     <li><?php echo link_to('Quienes Somos', 'home/quienesSomos') ?></li>
                     <li><?php echo link_to('Servicios', 'home/servicios') ?></li>
-                    <li><?php echo link_to('Productos', 'home/productos') ?></li>
+                    <li><?php echo link_to('Productos', 'catalogo/index') ?></li>
                     <li><?php echo link_to('Información', 'home/informacion') ?></li>
                     <li><?php echo link_to('Contactenos', 'home/contactenos') ?></li>
                 </ul>
             </div>
         </div>
         
-        <?php echo $sf_content?>
+            <?php echo $sf_content ?>
         
         <div class="footer">
         	<div class="copyright"><a href="http://www.anbeed.com/" target="_blank">ANBEED S.R.L.</a> | <a href="http://capsulesystem.com/" target="_blank">by CapsuleSystems</a></div>
