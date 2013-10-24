@@ -6,7 +6,7 @@
         
         <div class="center_content">
         
-        <div class="home_section_left">
+<!--        <div class="home_section_left">
             <img src="images/icon1.gif" alt="" title="" class="home_section_icon" border="0">
                             
                 <h2 class="home_title">What we do</h2>
@@ -85,7 +85,7 @@
                 <input type="submit" name="" class="newsletter_submit" value="Sign up" />
                 </form>
             
-            </div>
+            </div>-->
         <div class="clear"></div>
         </div>
     

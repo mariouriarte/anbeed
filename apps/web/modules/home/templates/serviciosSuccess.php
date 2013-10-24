@@ -9,6 +9,10 @@
             <h2 class="home_title">Apertura de Empresas</h2>
             <p><span>Requiere apoyo para la apertura de su empresa?</span><br><br>
             ANBEED le brinda servicios de consultoria para la apertura de empresas de insumos médicos, medicamentos. 
+            <ul>
+                <li><a href="#importadora_insumos">Importadora de Insumos Médicos</a></li>
+                <li><a href="#importadora_medicamentos">Importadora de Medicamentos</a></li>
+            </ul>
     <div class="clear"></div>
     </div>
 
@@ -18,8 +22,14 @@
 
             <h2 class="home_title">Registro Sanitario</h2>
             <p><span>Necesita registrar su producto?</span><br><br>
-            Contamos con personal capacitado para el registro sanitario de medicamentos, dispositivos médicos, reactivos medicos, cosméticos y productos de higiene y liempieza.
+            Contamos con personal capacitado para el registro sanitario de medicamentos, dispositivos médicos, reactivos medicos, cosméticos y productos de higiene y limpieza.
             </p>
+            <ul>
+                <li><a href="#medicamentos">Medicamentos</a></li>
+                <li><a href="#dispositivos">Dispositivos Médicos</a></li>
+                <li><a href="#cosmeticos">Cosméticos</a></li>
+                <li><a href="#higiene">Higiene y limpieza</a></li>
+            </ul>
     <div class="clear"></div>
     </div>
 
@@ -30,9 +40,12 @@
             <p><span>Precisa desaduanizar sus productos médicos?</span><br><br>
             Desconosolidamos y despachamos sus productos que se encuentren en Aduana a la brevedad posible.
             </p>
+            <ul>
+                <li><a href="#">Despacho Aduanero</a></li>
+            </ul>
     </div>
     <div class="wide_content">
-        <h2>Requisitos para Importadoras de Insumos Medicos</h2>
+        <a name="importadora_insumos"></a><h2>Requisitos para Importadoras de Insumos Medicos</h2>
             Documentación que debe ser presentada para el trámite de apertura de empresa:<br>
             <ul>
                 <li> Matricula de FUNDEMPRESA emitida por la Cámara de Industria y Comercio</li>
@@ -47,7 +60,8 @@
     </div><br>
     
     <div class="wide_content">
-        <h2>Requisitos para Importadoras de Medicamentos</h2>
+        <a name="importadora_medicamentos"></a><h2>Requisitos para Importadoras de Medicamentos</h2>
+
             Documentación que debe ser presentada para el tramite de apertura de empresa:<br>
             <ul>
                 <li> Matricula de FUNDEMPRESA emitida por la Cámara de Industria y Comercio <b>Original</b></li>
@@ -82,7 +96,7 @@
     </div>
     
     <div class="wide_content">
-        <h2>Requisitos para Registro de Medicamentos</h2>
+        <a name="medicamentos"></a><h2>Requisitos para Registro de Medicamentos</h2>
         <br><b>Documentación Legal del Producto</b>
         <ul>
             <li>Información general de Licenciantes y fabricantes</li>
@@ -127,7 +141,7 @@
 
 
     <div class="wide_content">
-        <h2>Requisitos para Registro de Dispositivos Médicos</h2>
+        <a name="dispositivos"></a><h2>Requisitos para Registro de Dispositivos Médicos</h2>
         <br><b>1. Formulario 027</b>
         <br><b>2. Documentacion Legal</b>
         <ul>
@@ -158,7 +172,7 @@
     </div>
     
     <div class="wide_content">
-        <h2>Requisitos para Registro de Cosméticos</h2>
+        <a name="cosmeticos"></a><h2>Requisitos para Registro de Cosméticos</h2>
         <ul>
             <li>Contrato de fabricación por terceros</li>
             <li>Certificado de Buenas Prácticas de Manufactura o ISO</li>
@@ -175,7 +189,7 @@
     </div>
     
     <div class="wide_content">
-        <h2>Requisitos para Registro de Productos de Aseo y Limpieza Absorvente</h2>
+        <a name="higiene"></a><h2>Requisitos para Registro de Productos de Aseo y Limpieza Absorvente</h2>
         <ul>
             <li>Contrato de fabricación por terceros</li>
             <li>Certificado de Buenas Prácticas de Manufactura o ISO</li>

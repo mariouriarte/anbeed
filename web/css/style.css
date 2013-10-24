@@ -122,7 +122,7 @@ background:url(/images/web/center_bg_pages.gif) no-repeat center top;
 }
 .home_section_left{
 width:270px;
-height:auto;
+height:260px;
 float:left;
 margin:0 14px 0 14px;
 padding:0 10px 20px 10px;
@@ -133,6 +133,13 @@ clear:both;
 }
 .home_section_left p span{
 font-weight:bold;
+}
+.home_section_left ul{
+padding: 10px 30px;
+}
+.home_section_left li{
+list-style: square outside none !important;
+padding: 5px 0px 1px 1px;
 }
 img.home_section_icon{
 width:63px;
