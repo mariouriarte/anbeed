@@ -1,3 +1,57 @@
+notificacion_cliente:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                NotificacionCliente
+    module:               noti_cliente
+    prefix_path:          /noti_cliente
+    column:               id
+    with_wildcard_routes: true
+
+etapa_etapaform706:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Etapa
+    module:               etapaform706
+    prefix_path:          /etapaform706
+    column:               id
+    with_wildcard_routes: true
+
+etapa_etapaform516:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Etapa
+    module:               etapaform516
+    prefix_path:          /etapaform516
+    column:               id
+    with_wildcard_routes: true
+
+etapa_etapaform27:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Etapa
+    module:               etapaform27
+    prefix_path:          /etapaform27
+    column:               id
+    with_wildcard_routes: true
+
+etapa_etapaform12:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Etapa
+    module:               etapaform12
+    prefix_path:          /etapaform12
+    column:               id
+    with_wildcard_routes: true
+
+etapa_etapaform5:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Etapa
+    module:               etapaform5
+    prefix_path:          /etapaform5
+    column:               id
+    with_wildcard_routes: true
+
 iniciacion_formulario_pri_etapa_producto:
   class: sfDoctrineRouteCollection
   options:
@@ -508,7 +562,7 @@ empresa:
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: empresas, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules

@@ -26,4 +26,9 @@ class Formulario27 extends BaseFormulario27
     {
         return $this-> DispositivoMedico -> LaboratorioFabricante;
     }
+    
+    public function getEtapa()
+    {
+        return $this->Formulario->Etapa[0]->TipoEtapa->getNombre();
+    }
 }

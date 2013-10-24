@@ -17,7 +17,7 @@ class formulario27Actions extends autoFormulario27Actions
     {
         $form = $this->getRoute()->getObject();
         
-        $this->redirect('etapa/new?idform='.$form->Formulario->getId());
+        $this->redirect('etapaform27/new?idform='.$form->Formulario->getId());
     }
     
     public function executePrint(sfWebRequest $request)

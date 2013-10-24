@@ -12,7 +12,8 @@ class TareaForm extends BaseTareaForm
 {
   public function configure()
   {
-      unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
+      unset($this['created_at'], $this['updated_at'], 
+            $this['created_by'], $this['updated_by']);
       
       $years = range(date('Y') - 10, date('Y'));   
         $this->widgetSchema['fecha_estimada'] = new sfWidgetFormJQueryDate(

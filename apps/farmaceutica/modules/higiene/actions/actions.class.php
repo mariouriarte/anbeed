@@ -20,6 +20,7 @@ class higieneActions extends autoHigieneActions
         $empresa = $this->getUser()->getAttribute('empresa');
         $this->form->setDefault('empresa_id', $empresa->getId());
     }
+    
     public function executeListAdmEmpresa(sfWebRequest $request) 
     {
         $user = $this->getUser();

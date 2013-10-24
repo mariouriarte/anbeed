@@ -102,11 +102,10 @@
             <div class="cubo">
                 <div class="adentro">
                     <div class="titulo_img"><img src="/images/icons/tareas.svg"/></div>
-                    <h2 class="titulo">Etapa</h2>
+                    <h2 class="titulo">Notificaciones al cliente</h2>
                     <div class="contenido">
                         <ul>
-                            <li><?php echo link_to('Inicio de tramite', 'pri_etapa/index') ?></li>
-                            <li><?php echo link_to('Etapa de tramite', 'etapa') ?></li>
+                            <li><?php echo link_to('Notificaciones', 'noti_cliente/index') ?></li>
                         </ul>
                     </div>
                 </div>

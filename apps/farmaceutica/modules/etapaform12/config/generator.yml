@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Etapa
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          etapa_etapaform12
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    ~
+      filter:  ~
+      form:
+        display: [tipo_etapa_id, descripcion, observacion, fecha_fin]
+        actions:
+          formulario: {label: Listar}
+          _save: ~
+          _delete: ~
+          nuevo: {label: Nuevo}
+      edit:
+        title: Editar etapa de producto
+      new:
+        title: Nueva etapa de producto

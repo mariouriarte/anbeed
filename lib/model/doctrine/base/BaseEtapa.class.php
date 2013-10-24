@@ -9,30 +9,27 @@
  * @property integer $tipo_etapa_id
  * @property string $descripcion
  * @property string $observacion
- * @property date $fecha
+ * @property date $fecha_fin
  * @property TipoEtapa $TipoEtapa
  * @property Formulario $Formulario
  * @property Doctrine_Collection $Validacion
- * @property Doctrine_Collection $Inicio
  * 
  * @method integer             getFormularioId()  Returns the current record's "formulario_id" value
  * @method integer             getTipoEtapaId()   Returns the current record's "tipo_etapa_id" value
  * @method string              getDescripcion()   Returns the current record's "descripcion" value
  * @method string              getObservacion()   Returns the current record's "observacion" value
- * @method date                getFecha()         Returns the current record's "fecha" value
+ * @method date                getFechaFin()      Returns the current record's "fecha_fin" value
  * @method TipoEtapa           getTipoEtapa()     Returns the current record's "TipoEtapa" value
  * @method Formulario          getFormulario()    Returns the current record's "Formulario" value
  * @method Doctrine_Collection getValidacion()    Returns the current record's "Validacion" collection
- * @method Doctrine_Collection getInicio()        Returns the current record's "Inicio" collection
  * @method Etapa               setFormularioId()  Sets the current record's "formulario_id" value
  * @method Etapa               setTipoEtapaId()   Sets the current record's "tipo_etapa_id" value
  * @method Etapa               setDescripcion()   Sets the current record's "descripcion" value
  * @method Etapa               setObservacion()   Sets the current record's "observacion" value
- * @method Etapa               setFecha()         Sets the current record's "fecha" value
+ * @method Etapa               setFechaFin()      Sets the current record's "fecha_fin" value
  * @method Etapa               setTipoEtapa()     Sets the current record's "TipoEtapa" value
  * @method Etapa               setFormulario()    Sets the current record's "Formulario" value
  * @method Etapa               setValidacion()    Sets the current record's "Validacion" collection
- * @method Etapa               setInicio()        Sets the current record's "Inicio" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -46,7 +43,7 @@ abstract class BaseEtapa extends sfDoctrineRecord
         $this->setTableName('etapa');
         $this->hasColumn('formulario_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => false,
+             'notnull' => true,
              ));
         $this->hasColumn('tipo_etapa_id', 'integer', null, array(
              'type' => 'integer',
@@ -62,7 +59,7 @@ abstract class BaseEtapa extends sfDoctrineRecord
              'notnull' => false,
              'length' => 2000,
              ));
-        $this->hasColumn('fecha', 'date', null, array(
+        $this->hasColumn('fecha_fin', 'date', null, array(
              'type' => 'date',
              'notnull' => true,
              ));
@@ -82,10 +79,6 @@ abstract class BaseEtapa extends sfDoctrineRecord
         $this->hasMany('ValidacionEtapa as Validacion', array(
              'local' => 'tipo_etapa_id',
              'foreign' => 'id'));
-
-        $this->hasMany('IniciacionFormulario as Inicio', array(
-             'local' => 'id',
-             'foreign' => 'etapa_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));

@@ -23,8 +23,11 @@ class Formulario516Table extends Doctrine_Table
         $q = Doctrine_Query::create()
                     ->from('Formulario516 f')
                     ->leftJoin('f.TipoTramiteFormulario tf')
+                    ->leftJoin('f.Formulario u')
+                    ->leftJoin('u.Etapa e')
                     ->where('f.cosmetico_id = ?', $cosmetico->getId())
-                    ->orderBy('f.id ASC');
+                    ->orderBy('f.created_at DESC')
+                    ->addOrderBy('e.created_at DESC');
             
         return $q;
     }

@@ -21,10 +21,13 @@ class Formulario706Table extends Doctrine_Table
         $user = sfContext::getInstance()->getUser();
         $higiene = $user->getAttribute('higiene');
         $q = Doctrine_Query::create()
-                    ->from('Formulario706 f')
-                    ->leftJoin('f.TipoTramiteFormulario tf')
-                    ->where('f.higiene_id = ?', $higiene->getId())
-                    ->orderBy('f.id ASC');
+            ->from('Formulario706 f')
+            ->leftJoin('f.TipoTramiteFormulario tf')
+            ->leftJoin('f.Formulario u')
+            ->leftJoin('u.Etapa e')
+            ->where('f.higiene_id = ?', $higiene->getId())
+            ->orderBy('f.created_at DESC')
+            ->addOrderBy('e.created_at DESC');
             
         return $q;
     }

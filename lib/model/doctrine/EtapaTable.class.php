@@ -26,6 +26,17 @@ class EtapaTable extends Doctrine_Table
         return $q;
     }
     
+    public function selectEtapaSeguimiento($id = null)
+    {
+        $q = Doctrine_Query::create()
+            ->from('Etapa e')
+            ->leftJoin('e.TipoEtapa t')
+            ->where('e.formulario_id = ?', $id)
+            ->orderBy('e.created_at DESC');
+        
+        return $q;
+    }
+    
     public function selectEtapasDeEmpresa()
     {
         $user = sfContext::getInstance()->getUser();

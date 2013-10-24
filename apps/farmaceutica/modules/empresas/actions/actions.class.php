@@ -114,11 +114,14 @@ class empresasActions extends autoEmpresasActions
         $user->getAttributeHolder()->remove('cosmetico');
         $user->getAttributeHolder()->remove('dispositivo_medico');
         $user->getAttributeHolder()->remove('higiene');
+        $user->getAttributeHolder()->remove('id_form_etapa');
+        
     }
     
     public function executeAdministrarEmpresa(sfWebRequest $request)
     {
         $user = $this->getUser();
+        $user->getAttributeHolder()->remove('id_form_etapa');
         
         $this->empresa = $this->getRoute()->getObject();
         

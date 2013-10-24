@@ -16,17 +16,21 @@ class Formulario27Table extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Formulario27');
     }
+    
     public function selectForms27DeDispositivo()
     {
         $user = sfContext::getInstance()->getUser();
         $dispositivo = $user->getAttribute('dispositivo_medico');
         $q = Doctrine_Query::create()
-                    ->from('Formulario27 f')
-                    ->leftJoin('f.TipoTramiteFormulario27 tf')
-                    ->leftJoin('f.DatosFormulario27 df')
-                    ->leftJoin('f.OrigenFormulario of')
-                    ->where('f.dispositivo_medico_id = ?', $dispositivo->getId())
-                    ->orderBy('f.id ASC');
+            ->from('Formulario27 f')
+            ->leftJoin('f.TipoTramiteFormulario27 tf')
+            ->leftJoin('f.DatosFormulario27 df')
+            ->leftJoin('f.OrigenFormulario of')
+            ->leftJoin('f.Formulario u')
+            ->leftJoin('u.Etapa e')
+            ->where('f.dispositivo_medico_id = ?', $dispositivo->getId())
+            ->orderBy('f.created_at DESC')
+            ->addOrderBy('e.created_at DESC');
             
         return $q;
     }
@@ -39,9 +43,11 @@ class Formulario27Table extends Doctrine_Table
         $q = Doctrine_Query::create()
             ->from('Formulario27 f')
             ->leftJoin('f.DispositivoMedico d')
-            #->leftJoin('d.Empresa e') 
+            ->leftJoin('f.Formulario u')
+            ->leftJoin('u.Etapa e')
             ->where('d.empresa_id = ?', $empresa->getId())
-            ->orderBy('f.id ASC');
+            ->orderBy('f.id ASC')
+            ->addOrderBy('e.created_at DESC');
         
         return $q;
     }

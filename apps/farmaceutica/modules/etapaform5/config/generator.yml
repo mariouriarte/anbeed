@@ -1,0 +1,38 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Etapa
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          etapa_etapaform5
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        fecha_fin: {label: 'Fecha tentativa', date_format: dd/MM/yyyy}
+      list:
+        title: Listado de etapas de formularios
+        table_method: selectEtapasDeEmpresa
+        display: [formulario, tipo_etapa, fecha_fin]
+        batch_actions: {}
+        actions:
+          adm_empresa: {label: Volver a Empresa}
+      filter:
+        display: [formulario_id, tipo_etapa_id]
+      form:
+        display: [tipo_etapa_id, descripcion, observacion, fecha_fin]
+        actions:
+          formulario: {label: Listar}
+          _save: ~
+          _delete: ~
+          nuevo: {label: Nuevo}
+      edit:
+        title: Editar etapa de producto
+      new:
+        title: Nueva etapa de producto
+    

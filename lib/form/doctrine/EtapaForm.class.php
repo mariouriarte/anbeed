@@ -19,14 +19,14 @@ class EtapaForm extends BaseEtapaForm
         $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();
         
         $years = range(date('Y') - 10, date('Y'));   
-        $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
+        $this->widgetSchema['fecha_fin'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
                   'format' => '%day%%month%%year%',  
                   'years' => array_combine($years, $years))), ));
         
         $this->widgetSchema['tipo_etapa_id'] = new sfWidgetFormDoctrineChoice(
             array('model'     => $this->getRelatedModelName('TipoEtapa'), 
-                  'add_empty' => 'Seleccione un tipo',
-                  'table_method' => 'selectTipoEtapaValida',));
+                  'add_empty' => '- Seleccione un tipo',
+                  'table_method' => 'selectTipoEtapaBackend',));
     }
 }

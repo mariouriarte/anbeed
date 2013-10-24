@@ -13,7 +13,7 @@
                     <div class="contenido">
                         <ul>
 
-                            <li><a href="/farmaceutica<?php echo $env ?>.php/empresas"><span>Empresas</span></a></li>
+                            <li><a href="/farmaceutica<?php echo $env ?>.php"><span>Empresas</span></a></li>
 
                             <li><a href="/farmaceutica<?php echo $env ?>.php/empresas/new"><span>Nueva Empresa</span></a></li>
                             <?php if ($sf_user->hasCredential('ADMINISTRADOR')):?>

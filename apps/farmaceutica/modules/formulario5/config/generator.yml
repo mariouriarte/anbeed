@@ -14,45 +14,40 @@ generator:
     config:
       actions: ~
       fields:  
-        fecha:                        {label: 'Fecha de Registro'}
+        fecha:                        {label: 'Fecha de Registro', date_format: dd/MM/yyyy}
         tipo_tramite_formulario5_id:  {label: 'Tipo de Trámite'}
         tipo_producto_formulario5_id: {label: 'Tipo de Producto'}
         origen_formulario_id:         {label: 'Origen'}
         empresa:                      {label: 'Empresa'}
-        laboratorio_fabricante:       {label: 'Laboratorio Fabricante'}
+        laboratorio_fabricante:       {label: 'Lab. Fabricante'}
         tipo_tramite_formulario5:     {label: 'Tipo de Trámite'}
-      
       list:    
         title: Listado de Solicitudes para Registro y Control de Calidad de Medicamentos
         table_method: selectForms5DeMedicamento
-        display: [fecha, tipo_tramite_formulario5, empresa, laboratorio_fabricante, medicamento]
+        display: [fecha, tipo_tramite_formulario5, medicamento, etapa]
         object_actions:
           imprimir:    {label: Imprimir, action: print}
-          imprimirfcc:    {label: Imprimir Fórmula, action: printfcc}
-          etapa:    {label: Etapa}
+          imprimirfcc: {label: Imprimir Fórmula, action: printfcc}
+          etapa:       {label: Etapa}
           _edit: ~
           _delete: ~
-          
         actions:
           ir_productos: {label: Regresar a Medicamentos}
-          ir_empresa: {label: Volver a Empresa}
+          ir_empresa:   {label: Volver a Empresa}
           _new: ~      
       filter:  
         display: [numero_ruta, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id]
-      
       form:    
         display:
           Datos Formulario:                [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id, medicamento_id]
           DATOS ADICIONALES DEL FORMULARIO: [registro_sanitario, vigencia, fecha_inicio_vigencia, numero_ruta]
-      edit:    
-        title: Editar Listado de Solicitudes para Registro y Control de Calidad de Medicamentos
-        #display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id, medicamento_id]
-        actions:
-          _list: ~  
-          _save: ~  
-      new:     
-        title: Solicitud para Registro y Control de Calidad de Medicamentos
-        #display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id, medicamento_id]
         actions:
           _list: ~  
           _save: ~
+      edit:    
+        title: Editar Listado de Solicitudes para Registro y Control de Calidad de Medicamentos
+        #display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id, medicamento_id]
+      new:     
+        title: Solicitud para Registro y Control de Calidad de Medicamentos
+        #display: [fecha, tipo_tramite_formulario5_id, tipo_producto_formulario5_id, origen_formulario_id, medicamento_id]
+        
