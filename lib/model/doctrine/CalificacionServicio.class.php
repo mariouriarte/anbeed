@@ -12,4 +12,8 @@
  */
 class CalificacionServicio extends BaseCalificacionServicio
 {
+    public function __toString()
+    {
+       return $this->getNombre();
+    }
 }

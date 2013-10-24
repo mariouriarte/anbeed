@@ -13,4 +13,21 @@ require_once dirname(__FILE__).'/../lib/satisfaccionGeneratorHelper.class.php';
  */
 class satisfaccionActions extends autoSatisfaccionActions
 {
+    public function executeListIrPortal(sfWebRequest $request)
+    {
+        //$this->getUser()->setAttribute('empresa', NULL);
+        $env = '';
+        if(sfConfig::get('sf_environment') == 'dev')
+        {
+            $env = '_dev';
+        } 
+        $this->redirect('/cliente'.$env.'.php/portal/index');
+    }
+    
+  public function executeNew(sfWebRequest $request)
+  {
+    $this->form = $this->configuration->getForm();
+    $this->satisfaccion = $this->form->getObject();
+    $this->form->setDefault('empresa_id', $this->getUser()->getGuardUser()->getEmpresaId());
+  }
 }

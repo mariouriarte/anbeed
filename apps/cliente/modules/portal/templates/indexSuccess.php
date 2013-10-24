@@ -20,5 +20,18 @@
                 </div>
             </div>
         </div>
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <div class="titulo_img"><img src="/images/icons/tareas.svg" /></div>
+                    <h2 class="titulo"> Satisfacción del Cliente</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><?php echo link_to('Califique nuestros servicios', 'satisfaccion/new')?></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -13,9 +13,22 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:  
+        servicio_id:     {label: Elija el servicio}
+        calificacion_id: {label: Califique el servicio}
+        comentario:      {label: Introduzca su comentario}
       list:    ~
       filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      form:    
+        display: [servicio_id, calificacion_id, comentario, empresa_id]
+        actions: 
+          ir_portal: {label: Volver al portal}
+          _save: ~
+      edit:    
+        actions: 
+          ir_portal: {label: Volver al portal}
+          _save: ~
+      new:     
+        actions: 
+          ir_portal: {label: Volver al portal}
+          _save: ~

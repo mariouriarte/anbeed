@@ -50,6 +50,9 @@
                             </div>
                             <?php if ($sf_user->isAuthenticated()): ?>
                                 <div id="info-user">
+                                    <div class="foto_mimiatura">
+                                        <?php echo image_tag(public_path("images/users/small/".$sf_user->getAttribute('foto').""), 'alt=FOTO size=60x75'); ?>
+                                    </div>
                                     <h4>Usuario: <?php echo $sf_user->getUsername(); ?></h4>
                                     <h4>Nombre:  <?php echo $sf_user->getGuardUser()->getPersona(); ?></h4>
                                     <h3><?php echo link_to('Cerrar sesión', '@sf_guard_signout',

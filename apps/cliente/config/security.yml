@@ -3,13 +3,13 @@
 
 all:
   is_secure: on
-  credentials: ADMINISTRADOR
+  credentials: [[ADMINISTRADOR, CLIENTE]]
   
 index:
   is_secure: on
-  credentials: ADMINISTRADOR
+  credentials: [[ADMINISTRADOR, CLIENTE]]
  
 new:
   is_secure: on
-  credentials: ADMINISTRADOR
+  credentials: [[ADMINISTRADOR, CLIENTE]]
 

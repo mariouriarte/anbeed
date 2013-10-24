@@ -28,7 +28,7 @@
                     <li><?php echo link_to('Servicios', 'home/servicios') ?></li>
                     <li><?php echo link_to('Productos', 'home/productos') ?></li>
                     <li><?php echo link_to('Contáctenos', 'contacto/new') ?></li>
-                    <li><a href="/cliente.php/inicio/index">Iniciar Sesión</a></li>
+                    <li><a href="/cliente.php/portal/index">Iniciar Sesión</a></li>
                 </ul>
             </div>
         </div>
