@@ -4,9 +4,11 @@
   <?php include_component('catalogo', $name, array('type' => 'filter', 'form' => $form, 'attributes' => $attributes instanceof sfOutputEscaper ? $attributes->getRawValue() : $attributes)) ?>
 <?php else: ?>
   <tr class="<?php echo $class ?>">
-    <td>
+    <th>
       <?php echo $form[$name]->renderLabel($label) ?>
-    </td>
+    </th>
+  </tr>
+  <tr class="<?php echo $class ?>">
     <td>
       <?php echo $form[$name]->renderError() ?>
 

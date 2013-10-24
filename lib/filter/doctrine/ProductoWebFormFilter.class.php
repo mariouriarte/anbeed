@@ -12,5 +12,12 @@ class ProductoWebFormFilter extends BaseProductoWebFormFilter
 {
   public function configure()
   {
+
+      $this->widgetSchema['categoria_id']->setOption('add_empty', ' - Seleccione Categoría - ');
+      $this->widgetSchema['linea_id']->setOption('add_empty', ' - Seleccione Línea o marca - ');
+      $this->widgetSchema['pais_id']->setOption('add_empty', ' - Seleccione País de Procedencia - ');
+      $this->widgetSchema['nombre']->setAttribute('size' , 16);
+    //otra opcion  
+    //$this->getWidget('categoria_id')->setOption('add_empty', 'Seleccione Empresa');
   }
 }

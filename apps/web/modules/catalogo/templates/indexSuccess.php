@@ -1,30 +1,16 @@
 <?php use_helper('I18N', 'Date') ?>
 <?php //include_partial('catalogo/assets') ?>
 
-<div id="sf_admin_container">
-  <h1><?php echo __('Catalogo List', array(), 'messages') ?></h1>
-
-  <?php include_partial('catalogo/flashes') ?>
-
-  <div id="sf_admin_header">
-    <?php include_partial('catalogo/list_header', array('pager' => $pager)) ?>
-  </div>
-
-  <div id="sf_admin_bar">
+<div class="center_content">
+  <div id="filtros_web">
     <?php include_partial('catalogo/filters', array('form' => $filters, 'configuration' => $configuration)) ?>
   </div>
-
-  <div id="sf_admin_content">
+  <div id="productos_web">
+      <h1>Catálogo de Productos</h1>
     <form action="<?php echo url_for('producto_web_collection', array('action' => 'batch')) ?>" method="post">
     <?php include_partial('catalogo/list', array('pager' => $pager, 'sort' => $sort, 'helper' => $helper)) ?>
-    <ul class="sf_admin_actions">
-      <?php include_partial('catalogo/list_batch_actions', array('helper' => $helper)) ?>
-      <?php include_partial('catalogo/list_actions', array('helper' => $helper)) ?>
-    </ul>
     </form>
   </div>
-
-  <div id="sf_admin_footer">
-    <?php include_partial('catalogo/list_footer', array('pager' => $pager)) ?>
-  </div>
 </div>
+
+    
