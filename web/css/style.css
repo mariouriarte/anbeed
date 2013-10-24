@@ -42,7 +42,7 @@ float:left;
 }
 /*----------------------menu-------------------------*/
 #menu{
-width:530px;
+width:550px;
 float:right;
 padding:40px 0 0 0;
 }
@@ -350,4 +350,22 @@ padding-left:10px;
 .footer_links a:hover{
 text-decoration:underline;
 color: #2A1C11;
+}
+#contacto_form input[type=text]
+{
+background-color:#EFF8FB;
+border:1px #57ad55 solid;
+width:300px;
+height:18px;
+padding:4px;
+float:left;
+}
+#contacto_form textarea
+{
+background-color:#EFF8FB;
+border:1px #57ad55 solid;
+width:300px;
+height:120px;
+padding:4px;
+float:left;
 }

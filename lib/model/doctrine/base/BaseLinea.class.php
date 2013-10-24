@@ -33,7 +33,6 @@ abstract class BaseLinea extends sfDoctrineRecord
              ));
         $this->hasColumn('descripcion', 'string', 150, array(
              'type' => 'string',
-             'notnull' => true,
              'length' => 150,
              ));
     }

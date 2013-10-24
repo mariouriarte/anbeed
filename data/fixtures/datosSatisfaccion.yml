@@ -1,0 +1,19 @@
+## YAML Template.
+---
+Servicios:
+  Apertura:
+    nombre: 'Apertura de Empresas'
+  Registro:
+    nombre: 'Registro Sanitario'
+  Despacho:
+    nombre: 'Despacho Aduanero'
+    
+CalificacionServicio:
+  Mala:
+    nombre: Mala
+  Regular:
+    nombre: Regular
+  Buena:
+    nombre: Buena
+  Excelente:
+    nombre: Excelente

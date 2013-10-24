@@ -27,7 +27,7 @@ abstract class BaseCategoriaForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'nombre'      => new sfValidatorString(array('max_length' => 50)),
-      'descripcion' => new sfValidatorString(array('max_length' => 250)),
+      'descripcion' => new sfValidatorString(array('max_length' => 250, 'required' => false)),
       'created_at'  => new sfValidatorDateTime(),
       'updated_at'  => new sfValidatorDateTime(),
       'created_by'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'required' => false)),

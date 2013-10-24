@@ -33,7 +33,6 @@ abstract class BaseCategoria extends sfDoctrineRecord
              ));
         $this->hasColumn('descripcion', 'string', 250, array(
              'type' => 'string',
-             'notnull' => true,
              'length' => 250,
              ));
     }

@@ -91,6 +91,7 @@ Empresa:
     Higiene:                {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
     Ciudad:                 {local: ciudad_id, foreign: id, type: one, foreignAlias: Empresa}
     EmisionCorrespondencia: {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
+    Satisfaccion:           {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
     
 LaboratorioFabricante:
   actAs: [Timestampable, Signable]
@@ -763,4 +764,40 @@ ProductoWeb:
   relations:
     Categoria: {local: categoria_id, foreign: id, type: one, foreignAlias: ProductoWeb}       
     Linea:     {local: linea_id, foreign: id, type: one, foreignAlias: ProductoWeb}       
-    Pais:      {local: pais_id, foreign: id, type: one, foreignAlias: ProductoWeb}        
+    Pais:      {local: pais_id, foreign: id, type: one, foreignAlias: ProductoWeb}    
+    
+Contacto:
+  actAs: [Timestampable]
+  columns:
+    nombre:     {type: string(50), notnull: true}
+    email:      {type: string(255), notnull: false}
+    telefono:   {type: string(20)}
+    asunto:     {type: string(100)}
+    mensaje:    {type: string(2000)}
+    
+Servicios:
+  actAs: [Timestampable, Signable]
+  columns:
+    nombre:      {type: string(50), notnull: true}
+    descripcion: {type: string(2000)}
+  relations:
+    Satisfaccion: {local: id, foreign: servicio_id, type: many, foreignAlias: Servicios}
+    
+CalificacionServicio:
+  actAs: [Timestampable, Signable]
+  columns:
+    nombre: {type: string(50), notnull: true}
+  relations:
+    Satisfaccion: {local: id, foreign: calificacion_id, type: many, foreignAlias: CalificacionServicios}
+
+Satisfaccion:
+  actAs: [Timestampable, Signable]
+  columns:
+    comentario: {type: string(2000)}
+    servicio_id:     {type: integer, notnull: true}
+    calificacion_id: {type: integer, notnull: true}
+    empresa_id:      {type: integer, notnull: true}
+  relations:
+    Empresa:              {local: empresa_id, foreign: id, type: one, foreignAlias: Satisfaccion}
+    Servicios:            {local: servicio_id, foreign: id, type: one, foreignAlias: Satisfaccion}
+    CalificacionServicio: {local: calificacion_id, foreign: id, type: one, foreignAlias: Satisfaccion}

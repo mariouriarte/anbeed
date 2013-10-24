@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Linea filter form base class.
+ * Servicios filter form base class.
  *
  * @package    anbeed
  * @subpackage filter
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormFilterGeneratedTemplate.php 29570 2010-05-21 14:49:47Z Kris.Wallsmith $
  */
-abstract class BaseLineaFormFilter extends BaseFormFilterDoctrine
+abstract class BaseServiciosFormFilter extends BaseFormFilterDoctrine
 {
   public function setup()
   {
@@ -30,7 +30,7 @@ abstract class BaseLineaFormFilter extends BaseFormFilterDoctrine
       'updated_by'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Updator'), 'column' => 'id')),
     ));
 
-    $this->widgetSchema->setNameFormat('linea_filters[%s]');
+    $this->widgetSchema->setNameFormat('servicios_filters[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
 
@@ -41,7 +41,7 @@ abstract class BaseLineaFormFilter extends BaseFormFilterDoctrine
 
   public function getModelName()
   {
-    return 'Linea';
+    return 'Servicios';
   }
 
   public function getFields()
