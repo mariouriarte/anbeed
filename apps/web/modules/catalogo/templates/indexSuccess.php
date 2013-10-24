@@ -1,13 +1,20 @@
 <?php use_helper('I18N', 'Date') ?>
-<?php include_partial('catalogo/assets') ?>
+<?php //include_partial('catalogo/assets') ?>
 
-<div class="center_content">
-  <h1><?php echo __('Catálogo de Productos', array(), 'messages') ?></h1>
-  <div class="filter">
-      <?php include_partial('catalogo/filters', array('form' => $filters, 'configuration' => $configuration)) ?>
+<div id="sf_admin_container">
+  <h1><?php echo __('Catalogo List', array(), 'messages') ?></h1>
+
+  <?php include_partial('catalogo/flashes') ?>
+
+  <div id="sf_admin_header">
+    <?php include_partial('catalogo/list_header', array('pager' => $pager)) ?>
   </div>
-  
-  <div id="productos">
+
+  <div id="sf_admin_bar">
+    <?php include_partial('catalogo/filters', array('form' => $filters, 'configuration' => $configuration)) ?>
+  </div>
+
+  <div id="sf_admin_content">
     <form action="<?php echo url_for('producto_web_collection', array('action' => 'batch')) ?>" method="post">
     <?php include_partial('catalogo/list', array('pager' => $pager, 'sort' => $sort, 'helper' => $helper)) ?>
     <ul class="sf_admin_actions">
@@ -17,7 +24,7 @@
     </form>
   </div>
 
-  <div id="pager">
+  <div id="sf_admin_footer">
     <?php include_partial('catalogo/list_footer', array('pager' => $pager)) ?>
   </div>
 </div>

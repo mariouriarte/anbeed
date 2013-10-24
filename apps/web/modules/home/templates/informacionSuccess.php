@@ -1,4 +1,4 @@
-        <div class="middle_banner">               
+<div class="middle_banner">               
            
 <div class="featured_slider">
       	<!-- begin: sliding featured banner -->

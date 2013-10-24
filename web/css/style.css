@@ -65,7 +65,7 @@ float:left;text-decoration:none;padding:0px 10px 0 10px; margin:0px 4px 0 4px;co
 /*-----------------middle_banner----------------------------*/
 .middle_banner{
 width:977px;
-height:304px;
+height:310px;
 background:url(/images/web/middle_banner_bg.jpg) no-repeat center;
 }
 /*----------------------slider---------------------------*/
@@ -111,7 +111,7 @@ width:960px;
 clear:both;
 margin:auto;
 padding:10px 0 20px 0;
-height: 650px;
+min-height: 650px;
 }
 .center_content_pages{
 width:960px;
