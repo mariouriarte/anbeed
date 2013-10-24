@@ -13,6 +13,13 @@ require_once dirname(__FILE__).'/../lib/formulario516GeneratorHelper.class.php';
  */
 class formulario516Actions extends autoFormulario516Actions
 {
+    public function executeListEtapa(sfWebRequest $request)
+    {
+        $form = $this->getRoute()->getObject();
+        
+        $this->redirect('etapa/new?idform='.$form->Formulario->getId());
+    }
+    
     public function executeListIrProductos(sfWebRequest $request)
     {
         $this->redirect('cosmetico');

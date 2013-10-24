@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           IniciacionFormulario
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          iniciacion_formulario
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        etapa_id:    {label: 'Producto'}
+        descripcion: {label: 'Descripción'}
+        observacion: {label: 'Observación'}
+        fecha_fin:   {label: 'Fecha estimanda', date_format: dd/MM/yyyy}
+      list:
+        title: Tramites en etapa inicial
+        display: [tramite, descripcion, fecha_fin]
+        batch_actions:  {}
+        actions:
+          ir_portal:    {label: Volver al portal}
+        object_actions:
+          show:    {label: Informacion}
+      filter:
+        display: [tramite]
+      form:    ~
+      edit:    ~
+      new:     ~

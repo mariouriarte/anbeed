@@ -10,7 +10,10 @@
  */
 class TipoEtapaForm extends BaseTipoEtapaForm
 {
-  public function configure()
-  {
-  }
+    public function configure()
+    {
+        parent::setup();
+        unset($this['created_at'], $this['updated_at'], 
+              $this['created_by'], $this['updated_by']);
+    }
 }

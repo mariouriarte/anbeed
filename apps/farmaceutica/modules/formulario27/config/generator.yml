@@ -27,7 +27,8 @@ generator:
         display: [fecha, tipo_tramite_formulario27, empresa, laboratorio_fabricante, dispositivo_medico]
         table_method: selectForms27DeDispositivo
         object_actions:
-          imprimir:    {label: Imprimir, action: print}
+          imprimir: {label: Imprimir, action: print}
+          etapa:    {label: Etapa}
           _edit: ~
           _delete: ~
         actions:

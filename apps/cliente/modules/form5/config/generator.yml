@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           formulario5
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario5
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Listado de formularios 05
+        display: [fecha, tipo_tramite_formulario5, empresa, laboratorio_fabricante, medicamento]
+        batch_actions:  {}
+        actions:
+          ir_portal:    {label: Volver al portal}
+        object_actions:
+          show:    {label: Etapas}
+      filter:
+        display: [numero_ruta, tipo_tramite_formulario5_id, tipo_producto_formulario5_id]
+      form:    ~
+      edit:    ~
+      new:     ~

@@ -15,8 +15,16 @@ class portalActions extends sfActions
   *
   * @param sfRequest $request A request object
   */
-  public function executeIndex(sfWebRequest $request)
-  {
-    $this->forward('default', 'module');
-  }
+    public function executeIndex(sfWebRequest $request)
+    {
+        $environment = sfConfig::get('sf_environment');
+        if($environment == 'dev')
+        {
+            $this->env = '_dev';
+        } else if($environment == 'prod')
+        {
+            $this->env = '';
+        }
+        
+    }
 }

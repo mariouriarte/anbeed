@@ -10,7 +10,23 @@
  */
 class EtapaForm extends BaseEtapaForm
 {
-  public function configure()
-  {
-  }
+    public function configure()
+    {
+        parent::setup();
+        unset($this['created_at'], $this['updated_at'], 
+              $this['created_by'], $this['updated_by']);
+        
+        $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();
+        
+        $years = range(date('Y') - 10, date('Y'));   
+        $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
+            array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(
+                  'format' => '%day%%month%%year%',  
+                  'years' => array_combine($years, $years))), ));
+        
+        $this->widgetSchema['tipo_etapa_id'] = new sfWidgetFormDoctrineChoice(
+            array('model'     => $this->getRelatedModelName('TipoEtapa'), 
+                  'add_empty' => 'Seleccione un tipo',
+                  'table_method' => 'selectTipoEtapaValida',));
+    }
 }

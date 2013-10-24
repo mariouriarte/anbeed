@@ -1,0 +1,30 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           formulario27
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario27
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Listado de formularios 027
+        display: [fecha, tipo_tramite_formulario27, empresa, laboratorio_fabricante, dispositivo_medico]
+        batch_actions:  {}
+        actions:
+          ir_portal:    {label: Volver al portal}
+        object_actions:
+          show:    {label: Etapas}
+      filter:  
+        display: [datos_formulario27_id, tipo_tramite_formulario27_id, origen_formulario_id]
+      
+      form:    ~
+      edit:    ~
+      new:     ~

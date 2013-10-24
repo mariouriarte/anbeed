@@ -49,7 +49,7 @@ class cosmeticoActions extends autoCosmeticoActions
 //        $user->setAttribute('producto', 'Cosmetico');
 //        $this->redirect('formulario7/index');
 //    }
-    
+
     protected function processForm(sfWebRequest $request, sfForm $form)
     {
       $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));

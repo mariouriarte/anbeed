@@ -1,0 +1,41 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           IniciacionFormulario
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          iniciacion_formulario_pri_etapa_producto
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        etapa_id:    {label: 'Producto'}
+        descripcion: {label: 'Descripción'}
+        observacion: {label: 'Observación'}
+      list:
+        title: Tramites iniciados
+        table_method: selectEtapasDeEmpresa
+        display: [tramite, descripcion, observacion]
+        batch_actions: {}
+        actions:
+          adm_empresa: {label: Volver a Empresa}
+          _new: ~ 
+      filter:
+        display: [tramite]
+      form: ~        
+      edit:
+        display: [etapa_id]
+        title: Editar tramite %%tramite%%
+        actions:
+          listado_main: {label: Listar}
+          _save: ~
+        
+      new:
+        display: [empresa_id, tramite, descripcion, observacion, fecha_fin]
+        title: Nuevo tramite %%tramite%%
+

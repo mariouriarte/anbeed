@@ -98,9 +98,22 @@
                 </div>
             </div>
         </div>
+        <div class="columna">
+            <div class="cubo">
+                <div class="adentro">
+                    <div class="titulo_img"><img src="/images/icons/tareas.svg"/></div>
+                    <h2 class="titulo">Etapa</h2>
+                    <div class="contenido">
+                        <ul>
+                            <li><?php echo link_to('Inicio de tramite', 'pri_etapa/index') ?></li>
+                            <li><?php echo link_to('Etapa de tramite', 'etapa') ?></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-        
+    
 </div>
     <ul class="acciones_lista">
         <li class="acciones_lista_list">

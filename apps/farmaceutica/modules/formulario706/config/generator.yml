@@ -25,8 +25,9 @@ generator:
           ir_productos: {label: Volver a higiéne}
           new:          {label: Nuevo, action: nuevo}
         object_actions:
-          edit:     {label: Editar, action: editar}
           imprimir: {label: Imprimir, action: exportPdf}
+          etapa:    {label: Etapa}
+          edit:     {label: Editar, action: editar}
       filter:
         display: [higiene_id, tipo_tramite_formulario_id]
       form:    ~

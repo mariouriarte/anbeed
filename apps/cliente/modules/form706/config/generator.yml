@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           formulario706
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario706
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Listado de Formularios 706
+        display: [fecha, tipo_tramite_formulario, empresa, higiene]
+        batch_actions:  {}
+        actions:
+          ir_portal:    {label: Volver al portal}
+        object_actions:
+          show:    {label: Etapas}
+      filter:
+        display: [higiene_id, tipo_tramite_formulario_id]
+      form:    ~
+      edit:    ~
+      new:     ~

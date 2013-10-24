@@ -35,6 +35,7 @@
  * @property Doctrine_Collection $EmisionCorrespondencia
  * @property Doctrine_Collection $Satisfaccion
  * @property Doctrine_Collection $sfGuardUser
+ * @property Doctrine_Collection $Inicio
  * @property Doctrine_Collection $Reactivos
  * @property Doctrine_Collection $Formulario11
  * 
@@ -68,6 +69,7 @@
  * @method Doctrine_Collection getEmisionCorrespondencia()  Returns the current record's "EmisionCorrespondencia" collection
  * @method Doctrine_Collection getSatisfaccion()            Returns the current record's "Satisfaccion" collection
  * @method Doctrine_Collection getSfGuardUser()             Returns the current record's "sfGuardUser" collection
+ * @method Doctrine_Collection getInicio()                  Returns the current record's "Inicio" collection
  * @method Doctrine_Collection getReactivos()               Returns the current record's "Reactivos" collection
  * @method Doctrine_Collection getFormulario11()            Returns the current record's "Formulario11" collection
  * @method Empresa             setRepresentanteLegalId()    Sets the current record's "representante_legal_id" value
@@ -100,6 +102,7 @@
  * @method Empresa             setEmisionCorrespondencia()  Sets the current record's "EmisionCorrespondencia" collection
  * @method Empresa             setSatisfaccion()            Sets the current record's "Satisfaccion" collection
  * @method Empresa             setSfGuardUser()             Sets the current record's "sfGuardUser" collection
+ * @method Empresa             setInicio()                  Sets the current record's "Inicio" collection
  * @method Empresa             setReactivos()               Sets the current record's "Reactivos" collection
  * @method Empresa             setFormulario11()            Sets the current record's "Formulario11" collection
  * 
@@ -252,6 +255,10 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'foreign' => 'empresa_id'));
 
         $this->hasMany('sfGuardUser', array(
+             'local' => 'id',
+             'foreign' => 'empresa_id'));
+
+        $this->hasMany('IniciacionFormulario as Inicio', array(
              'local' => 'id',
              'foreign' => 'empresa_id'));
 

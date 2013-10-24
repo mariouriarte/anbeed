@@ -12,4 +12,10 @@
  */
 class Etapa extends BaseEtapa
 {
+    public function __toString()
+    {
+       //return $this->getDescripcion();
+        return $this->Formulario;
+    }
+    
 }

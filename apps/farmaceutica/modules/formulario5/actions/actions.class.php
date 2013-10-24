@@ -13,6 +13,13 @@ require_once dirname(__FILE__).'/../lib/formulario5GeneratorHelper.class.php';
  */
 class formulario5Actions extends autoFormulario5Actions
 {
+    public function executeListEtapa(sfWebRequest $request)
+    {
+        $form = $this->getRoute()->getObject();
+        
+        $this->redirect('etapa/new?idform='.$form->Formulario->getId());
+    }
+    
    public function executePrintfcc(sfWebRequest $request)
    {
         $this->formulario5 = $this->getRoute()->getObject();

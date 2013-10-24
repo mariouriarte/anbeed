@@ -14,6 +14,7 @@
                         <ul>
 
                             <li><a href="/farmaceutica<?php echo $env ?>.php/empresas"><span>Empresas</span></a></li>
+
                             <li><a href="/farmaceutica<?php echo $env ?>.php/empresas/new"><span>Nueva Empresa</span></a></li>
                             <?php if ($sf_user->hasCredential('ADMINISTRADOR')):?>
                             <li><a href="/adm<?php echo $env ?>.php/cliente_usuario"><span>Usuarios Clientes</span></a></li>
@@ -30,8 +31,8 @@
                     <h2 class="titulo"> Laboratorios</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/laboratorios"><span>Laboratorios Fabricantes</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/laboratorios/new"><span>Nuevo Laboratorios Fabricantes</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/laboratorios"><span>Laboratorios fabricantes</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/laboratorios/new"><span>Nuevo laboratorios fabricantes</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,9 +65,9 @@
                     <h2 class="titulo">Correspondecia</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/emisionc"><span>Emisión de Correspondecia</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tipodoc"><span>Tipo Documento</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/emisor"><span>Emisor Correspondecia</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/emisionc"><span>Emisión de correspondecia</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tipodoc"><span>Tipo documento</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/emisor"><span>Emisor correspondecia</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -103,9 +104,9 @@
                     <h2 class="titulo">Caducidad</h2>
                     <div class="contenido">
                         <ul>
-                            <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=1"><span>Alerta de Caducidad <br />1 Mes</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=3"><span>Alerta de Caducidad<br />3 meses</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=6"><span>Alerta de Caducidad<br />6 meses</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=1"><span>Caducidad 1 Mes</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=3"><span>Caducidad 3 meses</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/caducidad/index?time=6"><span>Caducidad 6 meses</span></a></li>
                             
                         </ul>
                     </div>

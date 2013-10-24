@@ -39,8 +39,9 @@ generator:
           new:          {label: Nuevo, action: nuevo}
         object_actions:
           imprimir:    {label: Imprimir, action: print}
-          items: {label: Producto(s),  action: item}
-          edit:  {label: Editar, action: editar}
+          etapa:       {label: Etapa}
+          items:       {label: Producto(s),  action: item}
+          edit:        {label: Editar, action: editar}
       filter:  
         display: [numero_ruta, empresa_id, tipo_despacho_id]
       form:    ~
