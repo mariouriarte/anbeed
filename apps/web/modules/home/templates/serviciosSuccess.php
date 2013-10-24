@@ -1,3 +1,6 @@
+<script type="text/javascript">
+    $( "#servicios" ).addClass( "current" );
+</script>
 <div class="center_content">
 
     <div class="home_section_left">

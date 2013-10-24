@@ -38,6 +38,7 @@ generator:
           ir_formula: {label: Fórmula Cuali-cuantitativa, action: irFormula}
           ir_form5:   {label: Form 005, action: irForm5}
           ir_form7:   {label: Form 007, action: irForm7}
+          imprimirfcc:    {label: Imprimir Fórmula, action: printfcc}
           _edit: ~ 
         actions:
           adm_empresa: {label: Volver a Empresa}

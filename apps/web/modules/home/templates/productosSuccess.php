@@ -1,4 +1,7 @@
-        <div class="middle_banner">               
+<script type="text/javascript">
+    $( "#inicio" ).addClass( "current" );
+</script>
+<div class="middle_banner">               
            
 <div class="featured_slider">
       	<!-- begin: sliding featured banner -->

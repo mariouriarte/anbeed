@@ -1,6 +1,10 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 
+<script type="text/javascript">
+    $( "#contact" ).addClass( "current" );
+</script>
+
 <div class="center_content_pages">
     <div class="financial-application-form">
          <h2>Buzón de Información y Sugerencias</h2>

@@ -125,4 +125,96 @@ class medicamentosActions extends autoMedicamentosActions
         $this->getUser()->setFlash('error', 'The item has not been saved due to some errors.', false);
       }
     }
+    
+   public function executePrintfcc(sfWebRequest $request)
+   {
+        $this->Medicamento = $this->getRoute()->getObject();
+//        var_dump($this->Medicamento->getFormulaCcId());
+//        die;
+        if($this->Medicamento->getFormulaCcId() == NULL)
+        {   
+            $this->getUser()->setFlash('notice', 'No cuenta con Fórmula Cuali-Cuantitativa');
+            $this->redirect('@medicamento');
+            
+        }
+        $config = sfTCPDFPluginConfigHandler::loadConfig();
+                  sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
+
+        $pdf = new sfTCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+        // Informacion el documento
+        $pdf->SetCreator(PDF_CREATOR);
+        $pdf->SetAuthor('Capsule Systems');
+        $pdf->SetTitle('Formulario');
+        $pdf->SetSubject('ANBEED SRL');
+        $pdf->SetKeywords('TCPDF, PDF, ANBEED SRL, Formulario005, impresion');
+
+        //set margins
+        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+        $pdf->SetPrintHeader(false);
+        $pdf->SetPrintFooter(false);
+        //set auto page breaks
+        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+        // Set font
+        // dejavusans is a UTF-8 Unicode font, if you only need to
+        // print standard ASCII chars, you can use core fonts like
+        // helvetica or times to reduce file size.
+        $pdf->SetFont('courier', '', 13, '', true);
+
+        // Add a page
+        // This method has several options, check the source code documentation for more information.
+        $pdf->AddPage();
+
+        /*Imprimimos titulo*/
+        $pdf->MultiCell(78, 0, 'FÓRMULA CUALI-CUANTITATIVA', 'B', 'L', 0, 0, 65, 30, true);
+        
+        $pdf->SetFont('courier', '', 13, '', true);
+        /*Imprimimos el producto*/
+        $pdf->MultiCell(78, 0, 'Producto:', 0, 'L', 0, 0, 15, 45, true);
+        $pdf->MultiCell(78, 0, $this->Medicamento, 0, 'L', 0, 0, 45, 45, true);
+        
+        /*Imprimimos la formula del medicamento*/            
+        $q = Doctrine_Core::getTable('DetalleFormulaCc')->getIngredientes($this->Medicamento->getFormulaCcId());
+        $ingredientes = $q->execute();
+        $pdf->SetFont('courier', '', 13, '', true);
+        $html = '<br><br><br><table border="1" width="100%" cellpadding="2" cellspacing="0">
+                    <tr bgcolor="#EEE">
+                        <th width="70%"><b>INGREDIENTE</b></th>
+                        <th width="15%"><b>CANTIDAD</b></th>
+                        <th width="15%"><b>UNIDAD</b></th>
+                    </tr>
+                    <tr>
+                        <td colspan="3">'.$this->Medicamento->FormulaCc->getContenido().':</td>
+                    </tr>
+                    <tr bgcolor="#EEE">
+                        <td colspan="3"><b>PRINCIPIO ACTIVO:</b></td>
+                    </tr>
+                    <tr>
+                        <td>'.$this->Medicamento->FormulaCc->Ingrediente.'</td>
+                        <td align="center">'.$this->Medicamento->FormulaCc->getCantidad().'</td>
+                        <td align="center">'.$this->Medicamento->FormulaCc->getUnidad().'</td>
+                    </tr>
+                    <tr bgcolor="#EEE">
+                        <td colspan="3"><b>EXCIPIENTES:</b></td>
+                    </tr>
+                    ';
+        
+        foreach ($ingredientes as $ingrediente)
+        {
+            $html.='
+                <tr>
+                    <td>'.$ingrediente->Ingrediente[0].'</td>
+                    <td align="center">'.$ingrediente->getCantidad().'</td>
+                    <td align="center">'.$ingrediente->getUnidad().'</td>
+                </tr>
+                ';
+        }
+        $html.="</table>";
+        //echo $html;
+        $pdf->writeHTML($html, true, FALSE, true, FALSE, 'L');
+        $pdf->Output('FormulaCc.pdf', 'I');
+        throw new sfStopException();
+   }
 }
