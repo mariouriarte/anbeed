@@ -12,8 +12,8 @@
         <tr>
           <td colspan="2">
             <?php echo $form->renderHiddenFields() ?>
-            <?php echo link_to(__('Reset', array(), 'sf_admin'), 'producto_web_collection', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post')) ?>
-            <input type="submit" value="<?php echo __('Filter', array(), 'sf_admin') ?>" />
+            <?php echo link_to(__('Limpiar', array(), 'sf_admin'), 'producto_web_collection', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post')) ?>
+            <input type="submit" value="<?php echo __('Buscar', array(), 'sf_admin') ?>" />
           </td>
         </tr>
       </tfoot>
