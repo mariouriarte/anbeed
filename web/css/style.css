@@ -231,6 +231,11 @@ padding: 10px 100px;
 list-style: square outside none !important;
 padding: 5px 0px 1px 1px;
 }
+.wide_content img
+{
+border:3px #57ad55 solid;
+margin:10px 10px 10px 15px;
+}
 img.pic{
 border:3px #57ad55 solid;
 margin:0 0 10px 0;

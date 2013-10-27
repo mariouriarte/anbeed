@@ -50,8 +50,11 @@
                 
                 
             </div>-->
-            
-            
+    <div class="wide_content">
+        <h2>Organigrama</h2>
+        <img src="/images/web/organigrama.png" alt="" title="" border="0"/>
+    </div>
+
     <div class="wide_content">
     <h2>Misión</h2>
     <p>
