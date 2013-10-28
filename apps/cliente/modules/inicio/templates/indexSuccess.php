@@ -1,3 +1,5 @@
+<?php use_helper('Date') ?>
+
 <h2>Bienvenido a ANBEED.</h2>
 
 <div class="portal">
@@ -5,8 +7,8 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <div class="titulo_img"><img src="/images/icons/tareas.svg" /></div>
-                    <h2 class="titulo"> Etapas de tramites</h2>
+                    <div class="titulo_img"><img src="/images/icons/tareas.svg" height="32" width="32"/></div>
+                    <h3 class="titulo"> Etapas de tramites</h3>
                     <div class="contenido">
                         <ul>
                             <li><?php echo link_to('Formulario 5', 'form5/index')?></li>
@@ -19,5 +21,38 @@
                 </div>
             </div>
         </div>
+        
+        <div class="col-noticias">
+            <div class="cubo">
+                <div class="adentro">
+                    <div class="title-cubo">
+                        Noticias
+                    </div>
+                    <div class="contenido">
+                        <?php foreach($notificaciones as $noti): ?>
+                            <div class="noticia">
+                                <div class="title-bar">
+                                    <span class="n-asunto"><?php echo link_to($noti->getAsunto(), 'noticias/show?id='.$noti->getId()) ?></span>
+                                    
+                                    <span class="n-fecha"><?php echo format_date($noti->getCreatedAt(), "dd/MM/yy") ?></span>
+                                </div>
+                                <div class="n-content">
+                                    <p><?php echo $noti->getDescripcion() ?></p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                        <div class="noticia">
+                            <?php echo link_to('Ver más', 'noticias/index') ?>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </div>
+    
+    
 </div>
+
+
+

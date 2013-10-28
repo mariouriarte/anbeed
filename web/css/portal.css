@@ -30,7 +30,7 @@ div.portal {
     overflow: hidden;
     position: relative;
     border: 1px solid #EEE;
-    border-radius: 10px;
+    border-radius: 1px;
     box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.09);
     
 }
@@ -53,30 +53,88 @@ div.portal {
     color: #000;
     overflow: hidden;
     display: block;
-    border-radius: 6px;
+    border-radius: 5px;
     box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.15);
     border: 1px solid #DADADA;
     /*border-top: 1px #fff solid;*/
 }
 
+.col-noticias {
+    display: inline;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    border: 1px solid #8CACBB;
+    width: 250px;
+    height: 410px;
+    margin: 11px;
+    float: right;
+    position: relative;
+    /*background-color: #f9f9f9;*/
+    color: #000;
+    overflow: hidden;
+    display: block;
+    border-radius: 5px;
+    /*box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.15);*/
+    border: 1px solid #DADADA;
+}
+
 .columna .cubo {
     margin-bottom: 5px;
     width: 100%;
-    
-    
 }
 
-.linea .cubo .contenido {    
+.n-asunto {
+    font-weight: bold;
+    color: #292F33;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.title-cubo {
+    border-width: 0 0 1px;
+    box-shadow: 0 0 0 -3px transparent;
+    padding: 8px;
+    transition: box-shadow 0.3s ease-out 0s;
+    font-size: 18px;
+    font-weight: bold;
+    color: #292F33;
+    border-bottom: 1px solid #DADADA;
+}
+
+.noticia-title a:hover{
+    text-decoration: underline;
+}
+
+.linea .cubo{    
     min-height: 158px;
     padding: 0px;
     /*border-top: 1px solid #8CACBB;*/
 }
 
-.cubo:hover {
+.col-noticias .noticia {
+    border-top: 1px solid #DADADA;
+}
+
+.col-noticias .noticia p {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 13px;
+}
+
+.col-noticias .n-fecha {
+    float: right;
+}
+
+.col-noticias .noticia {
+    padding: 5px;
+}
+
+/*.cubo:hover {
 	border-top: 1px #ddd solid;
 	-webkit-box-shadow: inset 0px 1px 5px -2px #777;
-	box-shadow: inset 0px 1px 5px -2px #777;
-}
+	box-shadow: inset 0px 1px 5px -2px #777;*/
+/*}*/
+
 .titulo{
     border-top: 10px;
     padding-top: 20px;
@@ -85,7 +143,7 @@ div.portal {
     padding-bottom: 5px;
     background: #EEE;
     margin: 0em 0;
-    height: 33px;
+    /*height: 33px;*/
     text-align: left;
 }
 
@@ -97,8 +155,16 @@ div.portal {
 {
     background: #EEE;
     width: 48px;
-    height: 48px;
+    /*height: 48px;*/
     padding: 5px;
     position: relative;
     float: left;
+}
+
+.col-noticias {
+    font-size: 10px;
+}
+
+.tbl-noticias {
+    width: 100%;
 }

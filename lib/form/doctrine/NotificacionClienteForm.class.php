@@ -15,6 +15,8 @@ class NotificacionClienteForm extends BaseNotificacionClienteForm
         unset($this['created_at'], $this['updated_at'],
               $this['updated_by'], $this['created_by']);
         
+        $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden();
+        
         $years = range(date('Y') - 10, date('Y'));   
         $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(
             array('culture' => 'es','date_widget' => new sfWidgetFormDate(array(

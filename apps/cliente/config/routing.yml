@@ -1,3 +1,12 @@
+notificacion_cliente:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                NotificacionCliente
+    module:               noticias
+    prefix_path:          /noticias
+    column:               id
+    with_wildcard_routes: true
+
 iniciacion_formulario:
   class: sfDoctrineRouteCollection
   options:

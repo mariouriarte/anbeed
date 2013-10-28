@@ -6,11 +6,16 @@ sfGuardUser:
     password: admin
     is_super_admin: true
     Groups:         [Group_admin]
-    
   Cliente:
     Empresa: Empresa_1
     username: cliente
     password: cliente
+    is_super_admin: false
+    Groups:         [Group_cliente]
+  Cliente3:
+    Empresa: Empresa_3
+    username: cliente3
+    password: cliente3
     is_super_admin: false
     Groups:         [Group_cliente]
     

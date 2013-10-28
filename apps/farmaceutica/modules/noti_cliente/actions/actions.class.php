@@ -19,4 +19,12 @@ class noti_clienteActions extends autoNoti_clienteActions
         $empresa = $user->getAttribute('empresa');
         $this->redirect('empresas/administrarEmpresa?id=' . $empresa->getId());
     }
+    
+    public function executeNew(sfWebRequest $request)
+    {
+        parent::executeNew($request);
+        
+        $empresa = $this->getUser()->getAttribute('empresa');
+        $this->form->setDefault('empresa_id', $empresa->getId());
+    }
 }

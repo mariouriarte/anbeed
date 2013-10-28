@@ -14,14 +14,18 @@ generator:
     config:
       actions: ~
       fields:
+        created_at: {label: Creado, date_format: dd/MM/yyyy}
         descripcion: {label: Descripción}
+        
       list:
-        title: Notificaciones a empresas clientes
-        table_method: selectNotificacionesOrdenadas
-        display: [empresa, asunto, descripcion]
+        title: Notificaciones
+        table_method: selectNoticiasCliente
+        display: [asunto, descripcion, created_at]
         actions:
-          adm_empresa: {label: Volver a Empresa}
-          _new: ~ 
+          ir_portal:    {label: Volver al portal}
+        object_actions:
+          show:    {label: Información, action: show}
+        batch_actions:  {}
       filter:
         display: [asunto]
       form:    ~

@@ -26,6 +26,16 @@ class inicioActions extends sfActions
             $this->env = '';
         }
         
+        //echo $this->getUser()->Empresa;
+        
+        $id = $this->getUser()->getGuardUser()->getEmpresaId();
+        $this->notificaciones = Doctrine_Query::create()
+            ->from('NotificacionCliente n')
+            ->where('n.empresa_id = ?', $id)
+            ->orderBy('n.created_at DESC')
+            ->limit(6)
+            ->execute();
+        
         // Incurre a un error
 //        $user = $this->getUser();
 //        $user->getAttributeHolder()->remove('empresa');
