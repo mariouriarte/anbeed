@@ -29,6 +29,7 @@ generator:
           ir_portal: {label: Volver al portal}
           _save: ~
       new:     
+        title: Califique el Servicio que desee
         actions: 
           ir_portal: {label: Volver al portal}
           _save: ~

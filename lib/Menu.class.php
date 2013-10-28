@@ -82,6 +82,12 @@ class Menu
         
         $user = $instancia->getUser();
         
+        /*gardamos la foto si tuviera el usuario*/
+        $foto = $user->getGuardUser()->Persona->getFoto();
+        if($foto == null || $foto == '')
+            $foto = 'default_user.gif';
+        $user->setAttribute('foto', $foto);
+        
         // preguntamos por el nivel en el que estamos
         $environment = sfConfig::get('sf_environment');
         if($environment == 'dev')
@@ -93,13 +99,13 @@ class Menu
         }
         
         
-        $menu_admin =
-            '<li class="first-list"><a href="/"><span>adm</span></a>
-                <div><ul>
-                    <li><a href="/cliente_dev.php"><span>Cambiar a modo "DEV"</span></a>
-                    <li><a href="/cliente.php"><span>Cambiar a modo "PROD"</span></a>
-                </ul></div>
-            </li>';
+//        $menu_admin =
+//            '<li class="first-list"><a href="/"><span>adm</span></a>
+//                <div><ul>
+//                    <li><a href="/cliente_dev.php"><span>Cambiar a modo "DEV"</span></a>
+//                    <li><a href="/cliente.php"><span>Cambiar a modo "PROD"</span></a>
+//                </ul></div>
+//            </li>';
         
         // armando el menu  <--- jajajaja (._.)
         $html = '

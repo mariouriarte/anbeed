@@ -40,12 +40,11 @@
                                 
                                 <?php endif ?>
                                 <?php if (!$sf_user->isAuthenticated()): ?>
-                                    <h2>ANBEED SRL</h2>
                                 <?php endif; ?>
                             </div>
                             <div id="header-logo">
                                 <div id="logo">
-                                    <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '/portal'.$env.'.php/inicio/index')?>
+                                    <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '/cliente'.$env.'.php/portal/index')?>
                                 </div>
                             </div>
                             <?php if ($sf_user->isAuthenticated()): ?>

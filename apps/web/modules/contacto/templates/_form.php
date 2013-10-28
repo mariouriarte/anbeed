@@ -79,27 +79,22 @@
                     <p>
                     Publicamos los comentarios y experiencias de clientes que solicitaron nuestros servicios.
                     </p>
-                    
+                        <?php $q = Doctrine_Query::create()
+                                ->from('Satisfaccion s')
+                                ->innerJoin('s.Empresa e');
+                        $empresas = $q->fetchArray();
+                        ?>
+                    <?php foreach($empresas as $empresa)
+                    {?>
                     <div class="testbox">
-                    <h4>Cliente  </h4>
+                    <h4><?php echo $empresa['empresa_id']?>  </h4>
                     <p>
-                    Comentario
+                    <?php echo $empresa['comentario']?>
                     </p>
-                    </div>
-                    
-                    <div class="testbox">
-                    <h4>Cliente  </h4>
-                    <p>
-                    Comentario
-                    </p>
-                    </div>            
-                    <div class="testbox">
-                    <h4>Cliente  </h4>
-                    <p>
-                    Comentario
-                    </p>
-                    </div>             
-                    
+                    </div>         
+                    <?php 
+                    }
+                    ?>
              </div>
     
     <div class="clear"></div>

@@ -1,0 +1,35 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Satisfaccion
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          satisfaccion
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        nombre_empresa: {label: Empresa}
+      list:    
+        title: Listado de Calificaciones a Servicios de Clientes
+        display: [nombre_empresa, servicio, calificacion, comentario]
+        actions: 
+          ir_portal: {label: Volver al portal}
+        object_actions:
+          _edit: {label: Ver}
+          _delete: ~
+      filter:  
+        display: [empresa_id, servicio_id, calificacion_id]
+      form:    ~
+      edit:    
+        title: Vista de la Calificacion y el Comentario de %%nombre_empresa%%
+        display: [servicio_id, calificacion_id, comentario, empresa_id]
+        actions:
+          _delete: ~
+          _list: ~
+      new:     ~
