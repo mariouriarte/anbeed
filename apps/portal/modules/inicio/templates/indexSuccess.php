@@ -17,8 +17,9 @@
 
                             <li><a href="/farmaceutica<?php echo $env ?>.php/empresas/new"><span>Nueva Empresa</span></a></li>
                             <?php if ($sf_user->hasCredential('ADMINISTRADOR')):?>
+                            <li><a href="/farmaceutica<?php echo $env ?>.php/solicitudes"><span>Servicios Solicitados</span></a>
                             <li><a href="/farmaceutica<?php echo $env ?>.php/contactos"><span>Mensajes de Contactos y Sugerencias</span></a>
-                            <li><a href="/farmaceutica<?php echo $env ?>.php/satisfaccion"><span>Mesajes de Satisfaccion de Clientes</span></a>
+                            <li><a href="/farmaceutica<?php echo $env ?>.php/satisfaccion"><span>Mensajes de Satisfaccion de Clientes</span></a>
                             <li><a href="/adm<?php echo $env ?>.php/cliente_usuario"><span>Usuarios Clientes</span></a></li>
                             <?php endif; ?>
                         </ul>

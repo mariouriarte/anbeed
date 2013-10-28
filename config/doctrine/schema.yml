@@ -92,6 +92,7 @@ Empresa:
     Ciudad:                 {local: ciudad_id, foreign: id, type: one, foreignAlias: Empresa}
     EmisionCorrespondencia: {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
     Satisfaccion:           {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
+    SolicitudServicio:      {local: id, foreign: empresa_id, type: many, foreignAlias: Empresa}
     
 LaboratorioFabricante:
   actAs: [Timestampable, Signable]
@@ -825,3 +826,12 @@ Satisfaccion:
     Empresa:              {local: empresa_id, foreign: id, type: one, foreignAlias: Satisfaccion}
     Servicios:            {local: servicio_id, foreign: id, type: one, foreignAlias: Satisfaccion}
     CalificacionServicio: {local: calificacion_id, foreign: id, type: one, foreignAlias: Satisfaccion}
+
+SolicitudServicio:
+  actAs: [Timestampable]
+  columns:
+    asunto:     {type: string(100), notnull: true}
+    solicitud:  {type: string(5000), notnull: true}
+    empresa_id: {type: integer, notnull: true}
+  relations:
+    Empresa:    {local: empresa_id, foreign: id, type: one, foreignAlias: Solicitudes}

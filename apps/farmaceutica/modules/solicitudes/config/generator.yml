@@ -1,0 +1,35 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           SolicitudServicio
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          solicitud_servicio
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        nombre_empresa: {label: Empresa}
+        created_at:     {label: Fecha}
+      list:    
+        title: Listado de Solicitudes Recibidas
+        display: [nombre_empresa, asunto, solicitud]
+        actions: 
+          ir_portal: {label: Volver al portal}
+        object_actions:
+          _edit: {label: Ver}
+          _delete: ~
+      filter:  
+        display: [empresa_id, created_at]
+      form:    ~
+      edit:    
+        title: Vista de la Solicitud de %%nombre_empresa%%
+        actions:
+          _delete: ~
+          _list: ~
+      new:     ~
