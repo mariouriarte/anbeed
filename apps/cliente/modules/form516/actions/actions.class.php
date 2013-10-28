@@ -15,6 +15,6 @@ class form516Actions extends autoForm516Actions
 {
     public function executeListIrPortal(sfWebRequest $request)
     {
-        $this->redirect('portal/index');
+        $this->redirect('inicio/index');
     }
 }

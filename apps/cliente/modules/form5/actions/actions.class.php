@@ -15,7 +15,7 @@ class form5Actions extends autoForm5Actions
 {
     public function executeListIrPortal(sfWebRequest $request)
     {
-        $this->redirect('portal/index');
+        $this->redirect('inicio/index');
     }
     
     public function executeListShow(sfWebRequest $request)

@@ -15,6 +15,6 @@ class form27Actions extends autoForm27Actions
 {
     public function executeListIrPortal(sfWebRequest $request)
     {
-        $this->redirect('portal/index');
+        $this->redirect('inicio/index');
     }
 }

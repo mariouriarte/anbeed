@@ -12,8 +12,11 @@ generator:
     actions_base_class:    sfActions
 
     config:
-      actions: ~
-      fields:  ~
+      actions:
+        
+      fields:
+        fecha: {label: Fecha, date_format: dd/MM/yyyy}
+        tipo_tramite_formulario5: {label: Tipo de Trámite}
       list:
         title: Listado de formularios 05
         display: [fecha, tipo_tramite_formulario5, empresa, laboratorio_fabricante, medicamento]

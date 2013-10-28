@@ -15,6 +15,6 @@ class form706Actions extends autoForm706Actions
 {
     public function executeListIrPortal(sfWebRequest $request)
     {
-        $this->redirect('portal/index');
+        $this->redirect('inicio/index');
     }
 }
