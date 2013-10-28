@@ -1,3 +1,21 @@
+satisfaccion:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Satisfaccion
+    module:               satisfaccion
+    prefix_path:          /satisfaccion
+    column:               id
+    with_wildcard_routes: true
+
+contacto:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Contacto
+    module:               contactos
+    prefix_path:          /contactos
+    column:               id
+    with_wildcard_routes: true
+
 iniciacion_formulario_pri_etapa_producto:
   class: sfDoctrineRouteCollection
   options:

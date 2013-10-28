@@ -1,0 +1,38 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Contacto
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          contacto
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        nombre:   {label: 'Nombre'}
+        email:    {label: 'E-mail'}
+        telefono: {label: 'Teléfono'}
+        asunto:   {label: 'Asunto'}
+        mensaje:  {label: 'Mensaje'}
+      list:    
+        title: Listado de Contactos y Sugerenciass
+        display: [nombre, asunto]
+        object_actions:
+          _edit: {label: Ver}
+          _delete: ~
+        actions:
+          ir_portal: {label: Volver al Portal}
+      filter:  
+        display: [nombre]
+      form:    ~
+      edit:    
+        title: Vista del Mensaje
+        actions:
+          _delete: ~
+          _list : ~
+      new:     ~

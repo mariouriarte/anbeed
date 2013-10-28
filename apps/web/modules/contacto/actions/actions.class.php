@@ -67,7 +67,7 @@ class contactoActions extends sfActions
     {
       $contacto = $form->save();
 
-      $this->redirect('contacto/edit?id='.$contacto->getId());
+      $this->redirect('contacto/new');
     }
   }
 }

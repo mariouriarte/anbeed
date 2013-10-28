@@ -12,4 +12,18 @@
  */
 class Satisfaccion extends BaseSatisfaccion
 {
+    public function getServicio()
+    {
+        return $this->Servicios->getNombre();
+    }
+    
+    public function getCalificacion()
+    {
+        return $this->CalificacionServicio->getNombre();
+    }
+    
+    public function getNombreEmpresa()
+    {
+        return $this->Empresa->getRazonSocial();
+    }
 }
