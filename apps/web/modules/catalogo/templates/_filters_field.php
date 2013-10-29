@@ -3,7 +3,7 @@
 <?php elseif ($field->isComponent()): ?>
   <?php include_component('catalogo', $name, array('type' => 'filter', 'form' => $form, 'attributes' => $attributes instanceof sfOutputEscaper ? $attributes->getRawValue() : $attributes)) ?>
 <?php else: ?>
-  <tr class="<?php echo $class ?>">
+  <tr class="filter_title">
     <th>
       <?php echo $form[$name]->renderLabel($label) ?>
     </th>

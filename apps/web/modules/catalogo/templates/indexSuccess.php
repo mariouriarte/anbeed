@@ -1,6 +1,8 @@
 <?php use_helper('I18N', 'Date') ?>
 <?php //include_partial('catalogo/assets') ?>
-
+<script type="text/javascript">
+    $( "#productos" ).addClass( "current" );
+</script>
 <div class="center_content">
   <div id="filtros_web">
     <?php include_partial('catalogo/filters', array('form' => $filters, 'configuration' => $configuration)) ?>

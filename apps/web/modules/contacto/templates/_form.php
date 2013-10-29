@@ -69,6 +69,13 @@
           <?php echo $form['mensaje'] ?>
         </td>
       </tr>
+      <tr>
+          <td colspan="2">
+          <?php echo $form['captcha']->renderError() ?>
+          <?php echo $form['captcha'] ?>
+        </td>
+      </tr>
+      
     </tbody>
   </table>
 </form>
