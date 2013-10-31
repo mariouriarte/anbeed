@@ -79,17 +79,17 @@
                     <p>
                     Publicamos los comentarios y experiencias de clientes que solicitaron nuestros servicios.
                     </p>
-                        <?php $q = Doctrine_Query::create()
-                                ->from('Satisfaccion s')
-                                ->innerJoin('s.Empresa e');
-                        $empresas = $q->fetchArray();
+                        <?php 
+                        $q = Doctrine_Core::getTable('Satisfaccion')->selectSatisfaccion();
+                        $satisfacciones = $q->execute();
                         ?>
-                    <?php foreach($empresas as $empresa)
+                    <?php foreach($satisfacciones as $satisfaccion)
                     {?>
                     <div class="testbox">
-                    <h4><?php echo $empresa['empresa_id']?>  </h4>
+                    <h4><?php echo $satisfaccion->Empresa->getRazonSocial()?>  </h4>
+                    <span><?php echo $satisfaccion->getServicio()?></span>
                     <p>
-                    <?php echo $empresa['comentario']?>
+                    <?php echo $satisfaccion->getComentario()?>
                     </p>
                     </div>         
                     <?php 

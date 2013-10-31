@@ -1,5 +1,5 @@
 body {
-background:url(/images/web/fondo.jpg) repeat;
+background:url(/images/web/fondo5.png) repeat;
 margin:0px;
 padding:0px;
 font-size:12px;
@@ -282,6 +282,9 @@ border-bottom:1px #57ad55 solid;
 }
 .testbox p{
 font-style:italic;
+}
+.testbox span{
+padding:0px 0 0px 0px; font-size:10px; color:#888;
 }
 
 

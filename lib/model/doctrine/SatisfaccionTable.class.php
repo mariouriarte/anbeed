@@ -16,4 +16,12 @@ class SatisfaccionTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Satisfaccion');
     }
+    
+    public static function selectSatisfaccion()
+    {
+        $q = Doctrine_Query::create()
+                -> from('Satisfaccion s')
+                ->leftJoin('s.Empresa e');
+        return $q;
+    }
 }

@@ -1,4 +1,4 @@
-<h2>Bienvenido a ANBEED.</h2>
+<h1>Bienvenido a ANBEED.</h1>
 
 <div class="portal">
     <div class="linea">
