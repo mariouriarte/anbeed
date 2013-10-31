@@ -44,7 +44,7 @@
                 <li><a href="#">Despacho Aduanero</a></li>
             </ul>
     </div>
-    <div class="wide_content">
+    <div class="wide_content_services">
         <a name="importadora_insumos"></a><h2>Requisitos para Importadoras de Insumos Medicos</h2>
             Documentación que debe ser presentada para el trámite de apertura de empresa:<br>
             <ul>
@@ -59,7 +59,7 @@
             <b>Nota.- </b>Para el trámite debe enviarse los datos de ubicación de la empresa, email, Nº telefónico y Nº de fax.
     </div><br>
     
-    <div class="wide_content">
+    <div class="wide_content_services">
         <a name="importadora_medicamentos"></a><h2>Requisitos para Importadoras de Medicamentos</h2>
 
             Documentación que debe ser presentada para el tramite de apertura de empresa:<br>
@@ -95,7 +95,7 @@
             </ul>
     </div>
     
-    <div class="wide_content">
+    <div class="wide_content_services">
         <a name="medicamentos"></a><h2>Requisitos para Registro de Medicamentos</h2>
         <br><b>Documentación Legal del Producto</b>
         <ul>
@@ -140,7 +140,7 @@
     </div>
 
 
-    <div class="wide_content">
+    <div class="wide_content_services">
         <a name="dispositivos"></a><h2>Requisitos para Registro de Dispositivos Médicos</h2>
         <br><b>1. Formulario 027</b>
         <br><b>2. Documentacion Legal</b>
@@ -171,7 +171,7 @@
         <br><b>6. Muestra</b>
     </div>
     
-    <div class="wide_content">
+    <div class="wide_content_services">
         <a name="cosmeticos"></a><h2>Requisitos para Registro de Cosméticos</h2>
         <ul>
             <li>Contrato de fabricación por terceros</li>
@@ -188,7 +188,7 @@
         <b>NOTA.-</b> Los aranceles para inscripción al Ministerio de Salud es de 1200 Bs por producto deposito que se hará en la cuenta 3G-300 del Banco central de Bolivia.
     </div>
     
-    <div class="wide_content">
+    <div class="wide_content_services">
         <a name="higiene"></a><h2>Requisitos para Registro de Productos de Aseo y Limpieza Absorvente</h2>
         <ul>
             <li>Contrato de fabricación por terceros</li>
