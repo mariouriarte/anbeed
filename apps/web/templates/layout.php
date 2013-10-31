@@ -19,8 +19,9 @@
     <div class="top_corner"></div>
     <div id="main_container">
         <div id="header">
-            <div id="logo"><?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '@homepage')?>
-                           <?php echo link_to(image_tag('/images/web/anbeed.png', 'alt=ANBEED size=246x90' ), '@homepage')?>
+            <div id="logo"><?php //echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '@homepage')?>
+                <center><?php echo link_to(image_tag('/images/web/anbeed.png', 'alt=ANBEED size=350x50' ), '@homepage')?> <br />
+                           <?php echo link_to(image_tag('/images/web/anbeed2.png', 'alt=ANBEED size=300x43' ), '@homepage')?></center>
             </div>
             
             <div id="menu">

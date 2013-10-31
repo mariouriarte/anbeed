@@ -1,19 +1,31 @@
-<div class="sf_admin_list">
   <?php if (!$pager->getNbResults()): ?>
     <p><?php echo __('No result', array(), 'sf_admin') ?></p>
   <?php else: ?>
     <table cellspacing="0">
       <thead>
         <tr>
-          <th id="sf_admin_list_batch_actions"><input id="sf_admin_list_batch_checkbox" type="checkbox" onclick="checkAll();" /></th>
-          <?php include_partial('catalogo/list_th_tabular', array('sort' => $sort)) ?>
-          <th id="sf_admin_list_th_actions"><?php echo __('Actions', array(), 'sf_admin') ?></th>
+          <!--<th id="sf_admin_list_batch_actions"><input id="sf_admin_list_batch_checkbox" type="checkbox" onclick="checkAll();" /></th>-->
+          <?php //include_partial('catalogo/list_th_tabular', array('sort' => $sort)) ?>
+          <!--<th id="sf_admin_list_th_actions"><?php echo __('Actions', array(), 'sf_admin') ?></th>-->
         </tr>
       </thead>
       <tfoot>
-        <tr>
-          <th colspan="15">
-            <?php if ($pager->haveToPaginate()): ?>
+        
+        
+        
+      </tfoot>
+      <tbody>
+        <?php foreach ($pager->getResults() as $i => $producto_web): $odd = fmod(++$i, 2) ? 'odd' : 'even' ?>
+          <!--<tr class="sf_admin_row <?php echo $odd ?>">-->
+            <?php //include_partial('catalogo/list_td_batch_actions', array('producto_web' => $producto_web, 'helper' => $helper)) ?>
+            <?php include_partial('catalogo/list_td_tabular', array('producto_web' => $producto_web)) ?>
+            <?php //include_partial('catalogo/list_td_actions', array('producto_web' => $producto_web, 'helper' => $helper)) ?>
+          <!--</tr>-->
+        <?php endforeach; ?>
+      </tbody>
+    </table>
+    <div class="web_pager">
+        <?php if ($pager->haveToPaginate()): ?>
               <?php include_partial('catalogo/pagination', array('pager' => $pager)) ?>
             <?php endif; ?>
 
@@ -21,21 +33,8 @@
             <?php if ($pager->haveToPaginate()): ?>
               <?php echo __('(page %%page%%/%%nb_pages%%)', array('%%page%%' => $pager->getPage(), '%%nb_pages%%' => $pager->getLastPage()), 'sf_admin') ?>
             <?php endif; ?>
-          </th>
-        </tr>
-      </tfoot>
-      <tbody>
-        <?php foreach ($pager->getResults() as $i => $producto_web): $odd = fmod(++$i, 2) ? 'odd' : 'even' ?>
-          <tr class="sf_admin_row <?php echo $odd ?>">
-            <?php include_partial('catalogo/list_td_batch_actions', array('producto_web' => $producto_web, 'helper' => $helper)) ?>
-            <?php include_partial('catalogo/list_td_tabular', array('producto_web' => $producto_web)) ?>
-            <?php include_partial('catalogo/list_td_actions', array('producto_web' => $producto_web, 'helper' => $helper)) ?>
-          </tr>
-        <?php endforeach; ?>
-      </tbody>
-    </table>
+    </div>    
   <?php endif; ?>
-</div>
 <script type="text/javascript">
 /* <![CDATA[ */
 function checkAll()

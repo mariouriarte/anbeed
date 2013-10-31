@@ -1,7 +1,7 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 
-<div class="sf_admin_filter">
+<div class="cuerpo_filter">
   <?php if ($form->hasGlobalErrors()): ?>
     <?php echo $form->renderGlobalErrors() ?>
   <?php endif; ?>
@@ -12,8 +12,8 @@
         <tr>
           <td colspan="2">
             <?php echo $form->renderHiddenFields() ?>
-            <?php echo link_to(__('Limpiar', array(), 'sf_admin'), 'producto_web_collection', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post')) ?>
-            <input type="submit" value="<?php echo __('Buscar', array(), 'sf_admin') ?>" />
+            <?php echo link_to(__('Limpiar', array()), 'producto_web_collection', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post', 'id' => 'reset')) ?>
+              <input id="filter_button" type="submit" value="<?php echo __('Buscar', array(), 'sf_admin') ?>" />
           </td>
         </tr>
       </tfoot>

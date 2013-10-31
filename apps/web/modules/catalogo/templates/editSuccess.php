@@ -1,20 +1,60 @@
-<?php use_helper('I18N', 'Date') ?>
-<?php include_partial('catalogo/assets') ?>
+<div class="center_content">
+<div class="ver_titulo">
+        <?php echo $producto_web;?>
+</div>
+<div class="ver_producto_web">
 
-<div id="sf_admin_container">
-  <h1><?php echo __('Edit Catalogo', array(), 'messages') ?></h1>
+    <div class="ver_foto">
+        <?php echo image_tag(public_path("images/catalogo/normal/".$producto_web->getFoto().""),
+                'alt_image='.$producto_web->getNombre()); ?>
+        
+    </div>
+    <div class="ver_detalle_producto">
+        <table>
+            <tr>
+                <th>Nombre del producto:</th>
+                <td>
+                    <?php echo $producto_web; ?>
+                </td>
+            </tr>
+            <tr>
+                <th>Categoría:</th>
+                <td>
+                    <?php echo $producto_web->Categoria; ?>
+                </td>
+            </tr>    
+            <tr>
+                <th>Línea o Marca:</th>
+                <td>
+                    <?php echo $producto_web->Linea; ?>
+                </td>
+            </tr>    
+            <tr>
+                <th>País de Procedencia</th>
+                <td>
+                    <?php echo $producto_web->Pais; ?>
+                </td>
+            </tr>    
+            <tr>
+                <th>Precio</th>
+                <td>
+                    <?php echo 'Bs.'.$producto_web->getPrecio(); ?>
+                </td>
+            </tr>    
+            <tr>
+                <th>Características</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <?php echo $producto_web->getCaracteristicas(); ?>
+                </td>
+            </tr>
+                
+        </table>
+        
+    </div>
+    <?php echo link_to(image_tag(public_path("images/icons/back.svg"),
+                'alt_image=Volver ').'Volver al catálogo', "catalogo/index" )?> 
+</div>
 
-  <?php include_partial('catalogo/flashes') ?>
-
-  <div id="sf_admin_header">
-    <?php include_partial('catalogo/form_header', array('producto_web' => $producto_web, 'form' => $form, 'configuration' => $configuration)) ?>
-  </div>
-
-  <div id="sf_admin_content">
-    <?php include_partial('catalogo/form', array('producto_web' => $producto_web, 'form' => $form, 'configuration' => $configuration, 'helper' => $helper)) ?>
-  </div>
-
-  <div id="sf_admin_footer">
-    <?php include_partial('catalogo/form_footer', array('producto_web' => $producto_web, 'form' => $form, 'configuration' => $configuration)) ?>
-  </div>
 </div>

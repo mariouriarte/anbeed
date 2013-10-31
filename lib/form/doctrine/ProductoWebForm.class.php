@@ -44,7 +44,17 @@ class ProductoWebForm extends BaseProductoWebForm
                                   'required' => false,
                                   'validated_file_class' => 'sfValidatedFileCustom'));
             
+      
+      
       $this->validatorSchema['foto_delete'] = new sfValidatorBoolean();
+      
+      
+      $this->validatorSchema['foto']->setOption('required', true);
+      
+      
+      $this->widgetSchema['nombre']->setAttribute('size' , 30);
+      $this->widgetSchema['nombre']->setAttribute('maxlength' ,30);
+      
       
       
       
