@@ -5,6 +5,7 @@ prod:
   .settings:
     no_script_name:         false
     logging_enabled:        false
+    
 
 dev:
   .settings:
@@ -13,6 +14,7 @@ dev:
     cache:                  false
     no_script_name:         false
     etag:                   false
+    
 
 test:
   .settings:
@@ -24,6 +26,9 @@ test:
 
 all:
   .settings:
+    recaptcha:
+      public_key: 6Ldki-kSAAAAAEsSbasC9Am6w-IN680ydRw2BKMe 
+      private_key: 6Ldki-kSAAAAAFvzC1MDUXHJZ2Lvv0ULyThKaiIx
     # Form security secret (CSRF protection)
     csrf_secret:            debf683a88f561fa1afec788dc382b10991fcb88
 
@@ -38,3 +43,4 @@ all:
 #    enabled_modules:      [default, sfCaptchaGD]
 #    standard_helpers:     [Partial, Cache, I18N]
 #    i18n:                 true
+    

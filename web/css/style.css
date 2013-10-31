@@ -395,6 +395,10 @@ padding:4px;
 float:left;
 }
 
+#contacto_form table
+{
+    text-align: left;
+}
 
 #filtros_web
 {
@@ -700,3 +704,34 @@ text-align: center;
     color: #000;
 }
 
+
+
+
+
+#contacto_form .notice
+{
+  margin: 4px 0;
+  padding: 4px 4px 4px 30px;
+  background: url(../sfDoctrinePlugin/images/tick.png) no-repeat 10px 4px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffc;
+}
+
+#contacto_form .error
+{
+  margin: 4px 0;
+  padding: 4px 4px 4px 30px;
+  background: url(../sfDoctrinePlugin/images/error.png) no-repeat 10px 4px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+/*  background-color: #f33;*/
+  color: #f33;
+}
+
+ul.error_list li {
+    background: url("../sfDoctrinePlugin/images/error.png") no-repeat scroll 4px 4px rgba(0, 0, 0, 0);
+    color: #FF3333;
+    list-style: none outside none;
+    padding: 4px 4px 4px 25px;
+}

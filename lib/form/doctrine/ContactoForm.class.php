@@ -15,13 +15,14 @@ class ContactoForm extends BaseContactoForm
       unset($this['created_at'], $this['updated_at']);
       
       $this->widgetSchema['captcha'] = new sfWidgetFormReCaptcha(array(
-        'public_key' => '6Lcri-kSAAAAAFAYsUpID6T-GOAw37n7BxoA4HOg'
+        'public_key' => '6Ldki-kSAAAAAEsSbasC9Am6w-IN680ydRw2BKMe',
+        #'theme' => 'red',
       ));
 
       $this->validatorSchema['captcha'] = new sfValidatorReCaptcha(array(
-        'private_key' => '6Lcri-kSAAAAAFAYsUpID6T-GOAw37n7BxoA4HOg'
+        'private_key' => '6Ldki-kSAAAAAFvzC1MDUXHJZ2Lvv0ULyThKaiIx'
       ));
-      $this->widgetSchema->setNameFormat('register[%s]');
+      //$this->widgetSchema->setNameFormat('register[%s]');
 
 //        $this->widgetSchema['captcha'] = new sfWidgetFormReCaptcha(array(
 //          'public_key' => '6Lcri-kSAAAAAFAYsUpID6T-GOAw37n7BxoA4HOg'

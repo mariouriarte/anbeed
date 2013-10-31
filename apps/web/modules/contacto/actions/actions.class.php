@@ -68,19 +68,25 @@ class contactoActions extends sfActions
       'recaptcha_challenge_field' => $request->getParameter('recaptcha_challenge_field'),
       'recaptcha_response_field'  => $request->getParameter('recaptcha_response_field'),
     );
-    $valoresEnviados = array_merge(
-      $request->getParameter('contacto'),
-      array('captcha' => $captcha)
+    //var_dump($captcha); die;
+    $form->bind(array_merge(
+      $request->getParameter($form->getName()),
+      array('captcha' => $captcha))
     );
 
 
    
-    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
+    //$form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
+    
     if ($form->isValid())
     {
-      $contacto = $form->save();
-
-      $this->redirect('contacto/new');
+        $contacto = $form->save();
+        $this->getUser()->setFlash('notice', 'Su comentario y/o sugerencia fueron enviadas correctamente. Gracias por comunicarse con nosotros.');  
+        $this->redirect('contacto/new');
+    }
+    else
+    {
+        $this->getUser()->setFlash('error', 'El formulario no ha sido enviado debido a que contiene algunos errores.');
     }
   }
 }

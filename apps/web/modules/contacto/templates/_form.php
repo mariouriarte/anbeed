@@ -33,7 +33,7 @@
     </tfoot>
     <tbody>
       <?php echo $form->renderGlobalErrors() ?>
-
+      <?php include_partial('flashes') ?>
       <tr>
         <th><label>Su nombre o Empresa: </label></th>
         <td>
