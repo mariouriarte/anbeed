@@ -43,6 +43,7 @@ CREATE TABLE regente_farmaceutico (id BIGSERIAL, persona_id BIGINT NOT NULL, mat
 CREATE TABLE representante_legal (id BIGSERIAL, persona_id BIGINT NOT NULL, is_active BOOLEAN DEFAULT 'true' NOT NULL, created_at TIMESTAMP NOT NULL, updated_at TIMESTAMP NOT NULL, created_by BIGINT, updated_by BIGINT, PRIMARY KEY(id));
 CREATE TABLE satisfaccion (id BIGSERIAL, comentario VARCHAR(2000), servicio_id BIGINT NOT NULL, calificacion_id BIGINT NOT NULL, empresa_id BIGINT NOT NULL, created_at TIMESTAMP NOT NULL, updated_at TIMESTAMP NOT NULL, created_by BIGINT, updated_by BIGINT, PRIMARY KEY(id));
 CREATE TABLE servicios (id BIGSERIAL, nombre VARCHAR(50) NOT NULL, descripcion VARCHAR(2000), created_at TIMESTAMP NOT NULL, updated_at TIMESTAMP NOT NULL, created_by BIGINT, updated_by BIGINT, PRIMARY KEY(id));
+CREATE TABLE solicitud_servicio (id BIGSERIAL, asunto VARCHAR(100) NOT NULL, solicitud VARCHAR(5000) NOT NULL, empresa_id BIGINT NOT NULL, created_at TIMESTAMP NOT NULL, updated_at TIMESTAMP NOT NULL, PRIMARY KEY(id));
 CREATE TABLE tarea (id BIGSERIAL, user_id BIGINT NOT NULL, estado_id BIGINT NOT NULL, nombre VARCHAR(150) NOT NULL, descripcion VARCHAR(2000) NOT NULL, fecha_estimada DATE, created_at TIMESTAMP NOT NULL, updated_at TIMESTAMP NOT NULL, created_by BIGINT, updated_by BIGINT, PRIMARY KEY(id));
 CREATE TABLE tipo_calificacion (id BIGSERIAL, nombre VARCHAR(30) NOT NULL, created_at TIMESTAMP NOT NULL, updated_at TIMESTAMP NOT NULL, created_by BIGINT, updated_by BIGINT, PRIMARY KEY(id));
 CREATE TABLE tipo_despacho (id BIGSERIAL, nombre VARCHAR(50) NOT NULL, created_at TIMESTAMP NOT NULL, updated_at TIMESTAMP NOT NULL, created_by BIGINT, updated_by BIGINT, PRIMARY KEY(id));
@@ -235,6 +236,7 @@ ALTER TABLE satisfaccion ADD CONSTRAINT satisfaccion_created_by_sf_guard_user_id
 ALTER TABLE satisfaccion ADD CONSTRAINT satisfaccion_calificacion_id_calificacion_servicio_id FOREIGN KEY (calificacion_id) REFERENCES calificacion_servicio(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE servicios ADD CONSTRAINT servicios_updated_by_sf_guard_user_id FOREIGN KEY (updated_by) REFERENCES sf_guard_user(id) ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE servicios ADD CONSTRAINT servicios_created_by_sf_guard_user_id FOREIGN KEY (created_by) REFERENCES sf_guard_user(id) ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;
+ALTER TABLE solicitud_servicio ADD CONSTRAINT solicitud_servicio_empresa_id_empresa_id FOREIGN KEY (empresa_id) REFERENCES empresa(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE tarea ADD CONSTRAINT tarea_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id) NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE tarea ADD CONSTRAINT tarea_updated_by_sf_guard_user_id FOREIGN KEY (updated_by) REFERENCES sf_guard_user(id) ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;
 ALTER TABLE tarea ADD CONSTRAINT tarea_estado_id_estado_tarea_id FOREIGN KEY (estado_id) REFERENCES estado_tarea(id) NOT DEFERRABLE INITIALLY IMMEDIATE;

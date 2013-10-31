@@ -1,0 +1,35 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           SolicitudServicio
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          solicitud_servicio
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        asunto:     {label: 'Asunto'}
+        solicitud:  {label: 'Solicitud'}
+        empresa_id: {label: 'Empresa'}
+        created_at: {label: 'Fecha'}
+      list:    
+        title: Listado de Solicitudes Realizadas
+#        table_method: selectSolicitudDeEmpresa
+        display: [asunto, created_at]
+        actions:
+          ir_portal: {label: Volver al Portal}
+          _new: ~
+      filter:  
+        display: [created_at]
+      form:    
+        display: [asunto, solicitud]
+      edit:    
+        title: Editar Solicitud "%%asunto%%"
+      new:     
+        title: Nueva Solicitud

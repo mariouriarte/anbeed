@@ -1,3 +1,12 @@
+solicitud_servicio:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SolicitudServicio
+    module:               solicitud
+    prefix_path:          /solicitud
+    column:               id
+    with_wildcard_routes: true
+
 satisfaccion:
   class: sfDoctrineRouteCollection
   options:

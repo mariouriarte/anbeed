@@ -24,9 +24,10 @@
             <div class="cubo">
                 <div class="adentro">
                     <div class="titulo_img"><img src="/images/icons/tareas.svg" /></div>
-                    <h2 class="titulo"> Satisfacción del Cliente</h2>
+                    <h2 class="titulo"> Servicios</h2>
                     <div class="contenido">
                         <ul>
+                            <li><?php echo link_to('Solicite un servicio', 'solicitud/index')?></li>
                             <li><?php echo link_to('Califique nuestros servicios', 'satisfaccion/new')?></li>
                         </ul>
                     </div>

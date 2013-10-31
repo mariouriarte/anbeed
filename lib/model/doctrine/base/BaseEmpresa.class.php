@@ -34,6 +34,7 @@
  * @property Ciudad $Ciudad
  * @property Doctrine_Collection $EmisionCorrespondencia
  * @property Doctrine_Collection $Satisfaccion
+ * @property Doctrine_Collection $SolicitudServicio
  * @property Doctrine_Collection $sfGuardUser
  * @property Doctrine_Collection $Inicio
  * @property Doctrine_Collection $Reactivos
@@ -68,6 +69,7 @@
  * @method Ciudad              getCiudad()                  Returns the current record's "Ciudad" value
  * @method Doctrine_Collection getEmisionCorrespondencia()  Returns the current record's "EmisionCorrespondencia" collection
  * @method Doctrine_Collection getSatisfaccion()            Returns the current record's "Satisfaccion" collection
+ * @method Doctrine_Collection getSolicitudServicio()       Returns the current record's "SolicitudServicio" collection
  * @method Doctrine_Collection getSfGuardUser()             Returns the current record's "sfGuardUser" collection
  * @method Doctrine_Collection getInicio()                  Returns the current record's "Inicio" collection
  * @method Doctrine_Collection getReactivos()               Returns the current record's "Reactivos" collection
@@ -101,6 +103,7 @@
  * @method Empresa             setCiudad()                  Sets the current record's "Ciudad" value
  * @method Empresa             setEmisionCorrespondencia()  Sets the current record's "EmisionCorrespondencia" collection
  * @method Empresa             setSatisfaccion()            Sets the current record's "Satisfaccion" collection
+ * @method Empresa             setSolicitudServicio()       Sets the current record's "SolicitudServicio" collection
  * @method Empresa             setSfGuardUser()             Sets the current record's "sfGuardUser" collection
  * @method Empresa             setInicio()                  Sets the current record's "Inicio" collection
  * @method Empresa             setReactivos()               Sets the current record's "Reactivos" collection
@@ -251,6 +254,10 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'foreign' => 'empresa_id'));
 
         $this->hasMany('Satisfaccion', array(
+             'local' => 'id',
+             'foreign' => 'empresa_id'));
+
+        $this->hasMany('SolicitudServicio', array(
              'local' => 'id',
              'foreign' => 'empresa_id'));
 
