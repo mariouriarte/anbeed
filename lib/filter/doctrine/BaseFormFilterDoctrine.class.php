@@ -15,17 +15,15 @@ abstract class BaseFormFilterDoctrine extends sfFormFilterDoctrine
     }
     protected function addTextQuery(Doctrine_Query $query, $field, $values)
     {
-        /**Esta funcio permite buscar en mayuscula o minusculas lo ingresado*/
         $fieldName = $this->getFieldName($field);
 
         if (is_array($values) && isset($values['is_empty']) && $values['is_empty'])
         {
-          $query->addWhere('r.' . $fieldName . ' IS NULL');
+          $query->addWhere(sprintf('(%s.%s IS NULL OR %1$s.%2$s = ?)', $query->getRootAlias(), $fieldName), array(''));
         }
-        else if (is_array($values) && isset($values['text']) &&  $values['text'])
+        else if (is_array($values) && isset($values['text']) && '' != $values['text'])
         {
-          // Here is the change, with "ILIKE" instead of "LIKE"
-          $query->addWhere('r.' . $fieldName . ' ILIKE ?', '%' . $values['text'] . '%');
+          $query->addWhere(sprintf('%s.%s ILIKE ?', $query->getRootAlias(), $fieldName), '%'.$values['text'].'%');
         }
     }
 }
