@@ -16,5 +16,6 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfDoctrineActAsSignablePlugin');
     $this->enablePlugins('sfThumbnailPlugin');
 //    $this->enablePlugins('sfCaptchaGDPlugin');
+    
   }
 }

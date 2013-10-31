@@ -62,6 +62,19 @@ class contactoActions extends sfActions
 
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
+    
+
+    $captcha = array(
+      'recaptcha_challenge_field' => $request->getParameter('recaptcha_challenge_field'),
+      'recaptcha_response_field'  => $request->getParameter('recaptcha_response_field'),
+    );
+    $valoresEnviados = array_merge(
+      $request->getParameter('contacto'),
+      array('captcha' => $captcha)
+    );
+
+
+   
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {

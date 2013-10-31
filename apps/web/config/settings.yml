@@ -35,6 +35,6 @@ all:
     use_database:           true
     
     ## CAPTCHA###
-    enabled_modules:      [default, sfCaptchaGD]
-    standard_helpers:     [Partial, Cache, I18N]
-    i18n:                 true
+#    enabled_modules:      [default, sfCaptchaGD]
+#    standard_helpers:     [Partial, Cache, I18N]
+#    i18n:                 true
