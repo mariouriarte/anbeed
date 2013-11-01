@@ -620,3 +620,51 @@ input:focus,textarea:focus{
 .tabla-etapa {
     width: 100%;
 }
+
+.panel-etapa{
+    width: 70%;
+    border-radius: 6px 6px 6px 6px;
+}
+.tabla-cliente {
+    width: 100%;
+}
+
+.tabla-cliente th,
+.tabla-cliente td{
+    border: none;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.tabla-cliente th{
+    width: 150px;
+}
+
+.tabla-cliente td{
+    width: 400px;
+}
+
+.num-etapa {
+    font-size: 22px;
+}
+
+.etapa_1 {
+    background-color: #9ACA64;
+}
+.etapa_2 {
+    background-color: #9ACA64;
+}
+.etapa_3 {
+    background-color: #9ACA64;
+}
+.etapa_4 {
+    background-color: #EF570E;
+}
+.etapa_5 {
+    background-color: #9ACA64;
+}
+
+.info-etapa{
+    width: 300px;
+    border-radius: 6px 6px 6px 6px;
+    padding: 10px;
+}

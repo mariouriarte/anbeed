@@ -51,7 +51,11 @@ abstract class BasesfGuardUserFormFilter extends BaseFormFilterDoctrine
     parent::setup();
   }
 
-  public function addGroupsListColumnQuery(Doctrine_Query $query, $field, $values)
+  public function add
+Deprecated: preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/mario/Development/capsule/anbeed/lib/vendor/symfony/lib/util/sfToolkit.class.php on line 362
+
+Deprecated: preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/mario/Development/capsule/anbeed/lib/vendor/symfony/lib/util/sfToolkit.class.php on line 362
+GroupsListColumnQuery(Doctrine_Query $query, $field, $values)
   {
     if (!is_array($values))
     {
@@ -69,7 +73,11 @@ abstract class BasesfGuardUserFormFilter extends BaseFormFilterDoctrine
     ;
   }
 
-  public function addPermissionsListColumnQuery(Doctrine_Query $query, $field, $values)
+  public function add
+Deprecated: preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/mario/Development/capsule/anbeed/lib/vendor/symfony/lib/util/sfToolkit.class.php on line 362
+
+Deprecated: preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/mario/Development/capsule/anbeed/lib/vendor/symfony/lib/util/sfToolkit.class.php on line 362
+PermissionsListColumnQuery(Doctrine_Query $query, $field, $values)
   {
     if (!is_array($values))
     {

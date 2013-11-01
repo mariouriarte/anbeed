@@ -6,11 +6,16 @@ $etapas = $form->Formulario->Etapa;
 $medicamento = $form->Medicamento;
 ?>
 
-<h3>Tramite <?php echo $form->Formulario ?></h3>
+<h2>Tramite <?php echo $form->Formulario ?></h2>
+
+<div class="info-etapa etapa_<?php echo $etapas[0]->TipoEtapa->getId()?>">
+    Etapa en <strong><?php echo $etapas[0]->TipoEtapa->getNombre(); ?></strong>, 
+    Numero de etapa: <spam class="num-etapa"><?php echo $etapas[0]->TipoEtapa->getId()?></spam>
+</div>
 
 <h2>II. Datos de la Empresa Solicitante</h2>
 <div>
-    <table class="tablas_form">
+    <table class="tabla-cliente">
         <tbody>
             <tr>
                 <th>Razón Social</th>
@@ -37,7 +42,7 @@ $medicamento = $form->Medicamento;
 </div>
 <h2>III. Datos del Laboratorio Fabricante</h2>
 <div>
-    <table class="tablas_form">
+    <table class="tabla-cliente">
         <tbody>
             <tr>
                 <th>Laboratorio fabricante</th>
@@ -64,7 +69,7 @@ $medicamento = $form->Medicamento;
 </div>
 <h2>IV. Datos del Producto</h2>
 <div>
-    <table class="tablas_form">
+    <table class="tabla-cliente">
         <tbody>
             <tr>
                 <th>Nombre comercial</th>
@@ -95,8 +100,8 @@ $medicamento = $form->Medicamento;
             <tr>
                 <th>Conservación</th>
                 <td><?php echo $medicamento->getConservacion(); ?></td>
-                <th>Periódo de validez</th>
-                <td></td>
+                <th>PeriOdo de validez</th>
+                <td><?php echo $medicamento->getPeriodoValidez(); ?></td>
             </tr>
             <tr>
                 <th>Especificación del envase</th>
@@ -121,3 +126,14 @@ $medicamento = $form->Medicamento;
         </tbody>
     </table>
 </div>
+
+<ul class="sf_admin_actions">
+    <li class="sf_admin_action_list">
+        <a href="<?php echo url_for('form5/index') ?>">Volver al listado</a>
+    </li>
+    <?php if($etapas[0]->TipoEtapa->getId() == 1): ?>
+        <li class="sf_admin_action_list">
+            <?php echo link_to('Verificar formulario','form5/index') ?>
+        </li>
+    <?php endif; ?>
+</ul>

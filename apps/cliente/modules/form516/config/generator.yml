@@ -13,18 +13,22 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:
+        fecha:                   {label: Fecha, date_format: dd/MM/yyyy}
+        tipo_tramite_formulario: {label: Tipo de Trámite}
+        cosmetico:               {label: Cosmético}
       list:
         title: Listado de Formularios 516
-        display: [tipo_tramite_formulario, empresa,  laboratorio, cosmetico]
+        table_method: selectForms516DeEmpresa
+        display: [cosmetico, tipo_tramite_formulario, laboratorio, etapa]
         batch_actions:  {}
         actions:
           ir_portal:    {label: Volver al portal}
         object_actions:
-          show:    {label: Etapas}
+          etapa: {label: Seguimiento, action: etapa}
+          show:  {label: Información, action: show}
       filter:
         display: [cosmetico_id, tipo_tramite_formulario_id]
-      filter:  ~
       form:    ~
       edit:    ~
       new:     ~

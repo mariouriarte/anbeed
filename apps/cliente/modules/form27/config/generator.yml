@@ -13,15 +13,22 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:
+        fecha:                     {label: 'Fecha', date_format: dd/MM/yyyy}
+        tipo_tramite_formulario27: {label: 'Tipo de Trámite'}
+        empresa:                   {label: 'Empresa'}
+        laboratorio_fabricante:    {label: 'Laboratorio fabricante'}
+        
       list:
         title: Listado de formularios 027
-        display: [fecha, tipo_tramite_formulario27, empresa, laboratorio_fabricante, dispositivo_medico]
+        table_method: selectForms27DeEmpresa
+        display: [dispositivo_medico, tipo_tramite_formulario27, laboratorio_fabricante, fecha, etapa]
         batch_actions:  {}
         actions:
           ir_portal:    {label: Volver al portal}
         object_actions:
-          show:    {label: Etapas}
+          etapa: {label: Seguimiento, action: etapa}
+          show:  {label: Información, action: show}
       filter:  
         display: [datos_formulario27_id, tipo_tramite_formulario27_id, origen_formulario_id]
       

@@ -12,20 +12,20 @@ generator:
     actions_base_class:    sfActions
 
     config:
-      actions:
-        
+      actions: ~
       fields:
-        fecha: {label: Fecha, date_format: dd/MM/yyyy}
+        fecha:                    {label: Fecha, date_format: dd/MM/yyyy}
         tipo_tramite_formulario5: {label: Tipo de Trámite}
       list:
         title: Listado de formularios 05
+        table_method: selectForms5DeEmpresa
         display: [medicamento, tipo_tramite_formulario5, laboratorio_fabricante, etapa, fecha]
         batch_actions:  {}
         actions:
           ir_portal:    {label: Volver al portal}
         object_actions:
-          etapa: {label: Etapas, action: etapa}
-          show:  {label: Info, action: show}
+          etapa: {label: Seguimiento, action: etapa}
+          show:  {label: Información, action: show}
       filter:
         display: [numero_ruta, tipo_tramite_formulario5_id, tipo_producto_formulario5_id]
       form:    ~

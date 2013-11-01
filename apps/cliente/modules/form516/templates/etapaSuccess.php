@@ -3,7 +3,6 @@
 
 <?php
 $etapas = $form->Formulario->Etapa;
-$medicamento = $form->Medicamento;
 ?>
 
 <h3>Tramite <?php echo $form->Formulario ?></h3>
@@ -38,6 +37,6 @@ $medicamento = $form->Medicamento;
 
 <ul class="sf_admin_actions">
     <li class="sf_admin_action_list">
-        <a href="<?php echo url_for('form5/index') ?>">Volver al listado</a>
+        <a href="<?php echo url_for('form516/index') ?>">Volver al listado</a>
     </li>
 </ul>

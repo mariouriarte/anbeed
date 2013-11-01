@@ -20,13 +20,25 @@ class form5Actions extends autoForm5Actions
     
     public function executeShow(sfWebRequest $request)
     {
-        $this->form = $this->getRoute()->getObject();
+        $form = $this->getRoute()->getObject();
+        
+        //$this->form = selectForms5DeEmpresa()
+        $q = Doctrine_Core::getTable('Formulario5')
+            ->selectFormulario5DeEmpresa($form->getId());
+        
+        $this->form = $q->fetchOne();
         
     }
     
     public function executeEtapa(sfWebRequest $request)
     {
-        $this->form = $this->getRoute()->getObject();
+        $form = $this->getRoute()->getObject();
+        
+        //$this->form = selectForms5DeEmpresa()
+        $q = Doctrine_Core::getTable('Formulario5')
+            ->selectFormulario5DeEmpresa($form->getId());
+        
+        $this->form = $q->fetchOne();
     }
     
 }

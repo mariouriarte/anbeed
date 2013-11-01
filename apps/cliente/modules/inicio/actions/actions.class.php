@@ -26,9 +26,10 @@ class inicioActions extends sfActions
             $this->env = '';
         }
         
-        //echo $this->getUser()->Empresa;
+        $empresa =  $this->getUser()->getGuardUser()->getEmpresa();
         
         $id = $this->getUser()->getGuardUser()->getEmpresaId();
+        
         $this->notificaciones = Doctrine_Query::create()
             ->from('NotificacionCliente n')
             ->where('n.empresa_id = ?', $id)
@@ -36,10 +37,9 @@ class inicioActions extends sfActions
             ->limit(6)
             ->execute();
         
-        // Incurre a un error
-//        $user = $this->getUser();
-//        $user->getAttributeHolder()->remove('empresa');
-//        $user->getAttributeHolder()->remove('producto');
+        //$this->empresa = $this->getRoute()->getObject();
+        
+        $this->getUser()->setAttribute('empresa', $empresa);
     }
     
     public function executeSecure()

@@ -39,10 +39,27 @@ class Formulario516Table extends Doctrine_Table
         $q = Doctrine_Query::create()
             ->from('Formulario516 f')
             ->leftJoin('f.Cosmetico d')
-            #->leftJoin('d.Empresa e') 
+            ->leftJoin('f.Formulario u')
+            ->leftJoin('u.Etapa e')
             ->where('d.empresa_id = ?', $empresa->getId())
-            ->orderBy('f.id ASC');
+            ->orderBy('f.created_at DESC')
+            ->addOrderBy('e.created_at DESC');;
         
         return $q;
+    }
+    
+    public function selectFormulario516DeEmpresa($id)
+    {
+        $q = Doctrine_Query::create()
+            ->from('Formulario516 f')
+            ->leftJoin('f.Cosmetico d')
+            ->leftJoin('f.Formulario u')
+            ->leftJoin('u.Etapa e')
+            ->where('f.id = ?', $id)
+            ->orderBy('f.created_at DESC')
+            ->addOrderBy('e.created_at DESC');;
+        
+        return $q;
+        
     }
 }

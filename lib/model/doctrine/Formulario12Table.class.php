@@ -40,9 +40,35 @@ class Formulario12Table extends Doctrine_Table
         $q = Doctrine_Query::create()
             ->from('Formulario12 f')
             ->leftJoin('f.Reactivo r')
-            ->leftJoin('r.Empresa e') 
+            ->leftJoin('r.Empresa e')
+            ->leftJoin('f.TipoTramiteFormulario12 tf')
+            ->leftJoin('f.OrigenFormulario of')
+            ->leftJoin('f.Formulario u')
+            ->leftJoin('u.Etapa et')
             ->where('r.empresa_id = ?', $empresa->getId())
-            ->orderBy('f.id ASC');
+            ->orderBy('f.created_at DESC')
+            ->addOrderBy('et.created_at DESC');
         return $q;
+    }
+    
+    public function selectFormulario12DeEmpresa($id)
+    {
+        $user = sfContext::getInstance()->getUser();
+        $empresa = $user->getAttribute('empresa');
+        
+        $q = Doctrine_Query::create()
+            ->from('Formulario12 f')
+            ->leftJoin('f.Reactivo r')
+            ->leftJoin('r.Empresa e')
+            ->leftJoin('f.TipoTramiteFormulario12 tf')
+            ->leftJoin('f.OrigenFormulario of')
+            ->leftJoin('f.Formulario u')
+            ->leftJoin('u.Etapa et')
+            ->where('r.empresa_id = ?', $empresa->getId())
+            ->addWhere('f.id = ?', $id)
+            ->orderBy('f.created_at DESC')
+            ->addOrderBy('et.created_at DESC');
+        return $q;
+        
     }
 }

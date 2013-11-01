@@ -17,4 +17,27 @@ class form516Actions extends autoForm516Actions
     {
         $this->redirect('inicio/index');
     }
+    
+    public function executeShow(sfWebRequest $request)
+    {
+        $form = $this->getRoute()->getObject();
+        
+        //$this->form = selectForms5DeEmpresa()
+        $q = Doctrine_Core::getTable('Formulario516')
+            ->selectFormulario516DeEmpresa($form->getId());
+        
+        $this->form = $q->fetchOne();
+        
+    }
+    
+    public function executeEtapa(sfWebRequest $request)
+    {
+        $form = $this->getRoute()->getObject();
+        
+        //$this->form = selectForms5DeEmpresa()
+        $q = Doctrine_Core::getTable('Formulario516')
+            ->selectFormulario516DeEmpresa($form->getId());
+        
+        $this->form = $q->fetchOne();
+    }
 }
