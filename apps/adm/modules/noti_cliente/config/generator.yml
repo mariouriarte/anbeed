@@ -17,10 +17,9 @@ generator:
         descripcion: {label: Descripción}
       list:
         title: Notificaciones a empresas clientes
-        table_method: selectNotificacionesOrdenadas
         display: [asunto, descripcion_corta]
         actions:
-          adm_empresa: {label: Volver a Empresa}
+          ir_portal: {label: Volver al portal}
           _new: ~ 
       filter:
         display: [asunto]

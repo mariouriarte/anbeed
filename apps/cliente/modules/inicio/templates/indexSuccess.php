@@ -7,8 +7,10 @@
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
-                    <div class="titulo_img"><img src="/images/icons/tareas.svg" height="32" width="32"/></div>
-                    <h3 class="titulo"> Etapas de tramites</h3>
+                    <!--<div class="titulo_img"><img src="/images/icons/tareas.svg" height="32" width="32"/></div>-->
+                    <div class="title-cubo">
+                        Etapa de tramites
+                    </div>
                     <div class="contenido">
                         <ul>
                             <li><?php echo link_to('Formulario 5', 'form5/index')?></li>
@@ -37,11 +39,11 @@
                                     <span class="n-fecha"><?php echo format_date($noti->getCreatedAt(), "dd/MM/yy") ?></span>
                                 </div>
                                 <div class="n-content">
-                                    <p><?php echo $noti->getDescripcion() ?></p>
+                                    <p><?php echo $noti->getDescripcionCorta() ?></p>
                                 </div>
                             </div>
                         <?php endforeach; ?>
-                        <div class="noticia">
+                        <div class="n-foot">
                             <?php echo link_to('Ver más', 'noticias/index') ?>
                         </div>
                     </div>

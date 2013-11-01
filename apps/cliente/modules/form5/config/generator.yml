@@ -19,12 +19,13 @@ generator:
         tipo_tramite_formulario5: {label: Tipo de Trámite}
       list:
         title: Listado de formularios 05
-        display: [fecha, tipo_tramite_formulario5, empresa, laboratorio_fabricante, medicamento]
+        display: [medicamento, tipo_tramite_formulario5, laboratorio_fabricante, etapa, fecha]
         batch_actions:  {}
         actions:
           ir_portal:    {label: Volver al portal}
         object_actions:
-          show:    {label: Etapas}
+          etapa: {label: Etapas, action: etapa}
+          show:  {label: Info, action: show}
       filter:
         display: [numero_ruta, tipo_tramite_formulario5_id, tipo_producto_formulario5_id]
       form:    ~

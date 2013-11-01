@@ -24,7 +24,54 @@ class noti_clienteActions extends autoNoti_clienteActions
     {
         parent::executeNew($request);
         
+        $widget = $this->form->getWidgetSchema();
+        
+        $widget['empresa_id'] = new sfWidgetFormInputHidden();
+        
         $empresa = $this->getUser()->getAttribute('empresa');
         $this->form->setDefault('empresa_id', $empresa->getId());
     }
+    
+    public function executeCreate(sfWebRequest $request)
+    {
+        parent::executeCreate($request);
+        
+        $widget = $this->form->getWidgetSchema();
+        
+        $widget['empresa_id'] = new sfWidgetFormInputHidden();
+        
+        $empresa = $this->getUser()->getAttribute('empresa');
+        $this->form->setDefault('empresa_id', $empresa->getId());
+        
+    }
+    
+    public function executeEdit(sfWebRequest $request)
+    {
+        parent::executeEdit($request);
+        
+        $widget = $this->form->getWidgetSchema();
+        
+        $widget['empresa_id'] = new sfWidgetFormInputHidden();
+        
+        $empresa = $this->getUser()->getAttribute('empresa');
+        $this->form->setDefault('empresa_id', $empresa->getId());
+    }
+  
+    public function executeUpdate(sfWebRequest $request)
+    {
+        $this->notificacion_cliente = $this->getRoute()->getObject();
+        $this->form = $this->configuration->getForm($this->notificacion_cliente);
+  
+        $widget = $this->form->getWidgetSchema();
+        
+        $widget['empresa_id'] = new sfWidgetFormInputHidden();
+        
+        $empresa = $this->getUser()->getAttribute('empresa');
+        $this->form->setDefault('empresa_id', $empresa->getId());
+        
+        $this->processForm($request, $this->form);
+  
+        $this->setTemplate('edit');
+    }
+    
 }

@@ -8,34 +8,6 @@ $medicamento = $form->Medicamento;
 
 <h3>Tramite <?php echo $form->Formulario ?></h3>
 
-<?php foreach($etapas as $etapa): ?>
-    <h3><?php echo $etapa->getDescripcion() ?> </h3>
-    <div>
-    <table class="tablas_form">
-        <tbody>
-            <tr>
-                <th>Tipo de etapa</th>
-                <td><?php echo $etapa->TipoEtapa->getNombre(); ?></td>
-            </tr>
-            <tr>
-                <th>Descripcion</th>
-                <td><?php echo $etapa->getDescripcion(); ?></td>
-            </tr>
-            <tr>
-                <th>Observacion</th>
-                <td><?php echo $etapa->getObservacion(); ?></td>
-            </tr>
-            <tr>
-                <th>Fecha tentativa</th>
-                <td><?php echo $etapa->getFecha(); ?></td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
-    
-<?php endforeach; ?>
-    
-
 <h2>II. Datos de la Empresa Solicitante</h2>
 <div>
     <table class="tablas_form">

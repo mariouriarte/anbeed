@@ -20,7 +20,7 @@ generator:
       list:
         title: Notificaciones
         table_method: selectNoticiasCliente
-        display: [asunto, descripcion, created_at]
+        display: [asunto, descripcion_corta, created_at]
         actions:
           ir_portal:    {label: Volver al portal}
         object_actions:

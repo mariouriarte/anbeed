@@ -12,4 +12,9 @@
  */
 class NotificacionCliente extends BaseNotificacionCliente
 {
+    public function getDescripcionCorta()
+    {
+        return substr($this->getDescripcion(), 0, 60) . '...';
+        
+    }
 }

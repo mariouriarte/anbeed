@@ -18,10 +18,15 @@ class form5Actions extends autoForm5Actions
         $this->redirect('inicio/index');
     }
     
-    public function executeListShow(sfWebRequest $request)
+    public function executeShow(sfWebRequest $request)
     {
         $this->form = $this->getRoute()->getObject();
         
+    }
+    
+    public function executeEtapa(sfWebRequest $request)
+    {
+        $this->form = $this->getRoute()->getObject();
     }
     
 }
