@@ -111,7 +111,6 @@ class Menu
         $html = '
             <ul class="menu header-menu">
                 <li class="first-list"><a href="/cliente' . $env . '.php"><span>Portal</span></a></li>
-                '. ($user->hasCredential('admin') ? $menu_admin : '') .'
                 <li class="first-list"><a href="/web'. $env . '.php"><span>Home</span></a></li>
                 
             </ul>';

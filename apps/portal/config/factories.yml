@@ -3,7 +3,7 @@
 
 prod:
   logger:
-    class:   sfNoLogger
+    class:   sfAggregateLogger
     param:
       level:   err
       loggers: ~
