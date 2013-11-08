@@ -15,6 +15,7 @@ generator:
       actions: ~
       fields:
         descripcion: {label: Descripción}
+        observacion: {label: Observación}
       list:
         title: Notificaciones a empresas clientes
         display: [asunto, descripcion_corta]
@@ -22,7 +23,8 @@ generator:
           ir_portal: {label: Volver al portal}
           _new: ~ 
       filter:
-        display: [asunto]
-      form:    ~
+        display: [empresa_id, asunto]
+      form:
+        display: [empresa_id, asunto, descripcion, observacion]
       edit:    ~
       new:     ~

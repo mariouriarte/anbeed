@@ -14,13 +14,6 @@ class Formulario extends BaseFormulario
 {
     public function __toString()
     {
-       //return $this->getDescripcion();
-        //return $this->Formulario->Formulario706;
-        //if($this->Formulario5->getId())
-        //echo $this->Formulario5->getId();
-            
-        //return $this->Formulario706->Higiene->getNombre();
-        
         if($this->Formulario5->getId())
         {
             return $this->Formulario5->Medicamento->getNombreComercial();
@@ -37,13 +30,10 @@ class Formulario extends BaseFormulario
         {
             return $this->Formulario706->Higiene->getNombre();
         }
-//        if($this->Formulario7->getId())
-//        {
-//            return $this->Formulario7;
-//        }
         if($this->Formulario11->getId())
         {
-            return $this->Formulario11->getNumeroRuta();
+            //return 'asdasd';
+            return ''.$this->Formulario11->getNumeroRuta();
         }
         if($this->Formulario12->getId())
         {

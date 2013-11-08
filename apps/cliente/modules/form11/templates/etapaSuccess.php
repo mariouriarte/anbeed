@@ -33,6 +33,6 @@ $etapas = $form->Formulario->Etapa;
 
 <ul class="sf_admin_actions">
     <li class="sf_admin_action_list">
-        <a href="<?php echo url_for('form706/index') ?>">Volver al listado</a>
+        <a href="<?php echo url_for('form11/index') ?>">Volver al listado</a>
     </li>
 </ul>

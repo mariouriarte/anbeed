@@ -9,8 +9,8 @@ $reactivo = $form->Reactivo;
 <h2>Tramite <?php echo $form->Formulario ?></h2>
 
 <div class="info-etapa etapa_<?php echo $etapas[0]->TipoEtapa->getId()?>">
-    Etapa en <strong><?php echo $etapas[0]->TipoEtapa->getNombre(); ?></strong>, 
-    Numero de etapa: <spam class="num-etapa"><?php echo $etapas[0]->TipoEtapa->getId()?></spam>
+    Etapa en <strong><?php echo $etapas[0]->TipoEtapa->getNombre(); ?></strong>
+    <p><?php echo $etapas[0]->getDescripcion() ?></p>
 </div>
 
 <h2>II. Datos de la Empresa Solicitante</h2>

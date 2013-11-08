@@ -15,6 +15,7 @@ generator:
       actions: ~
       fields:
         descripcion: {label: Descripción}
+        observacion: {label: Observación}
       list:
         title: Notificaciones a empresas clientes
         table_method: selectNotificacionesOrdenadas
@@ -24,6 +25,7 @@ generator:
           _new: ~ 
       filter:
         display: [asunto]
-      form:    ~
+      form:
+        display: [empresa_id, asunto, descripcion, observacion]
       edit:    ~
       new:     ~

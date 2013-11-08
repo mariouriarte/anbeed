@@ -23,11 +23,10 @@ class form11Actions extends autoForm11Actions
         $form = $this->getRoute()->getObject();
         
         //$this->form = selectForms5DeEmpresa()
-        $q = Doctrine_Core::getTable('Formulario12')
-            ->selectFormulario12DeEmpresa($form->getId());
+        $q = Doctrine_Core::getTable('Formulario11')
+            ->selectFormulario11DeEmpresa($form->getId());
         
         $this->form = $q->fetchOne();
-    
     }
     
     public function executeEtapa(sfWebRequest $request)
@@ -36,7 +35,7 @@ class form11Actions extends autoForm11Actions
         
         //$this->form = selectForms5DeEmpresa()
         $q = Doctrine_Core::getTable('Formulario11')
-            ->selectFormulario12DeEmpresa($form->getId());
+            ->selectFormulario11DeEmpresa($form->getId());
         
         $this->form = $q->fetchOne();
     }

@@ -31,4 +31,24 @@ class Formulario11Table extends Doctrine_Table
         return $q;
     }
     
+    public function selectFormulario11DeEmpresa($id)
+    {
+//        $user = sfContext::getInstance()->getUser();
+//        $empresa = $user->getAttribute('empresa');
+        
+        $q = Doctrine_Query::create()
+            ->from('Formulario11 f')
+            //->leftJoin('f.Reactivo r')
+//            ->leftJoin('r.Empresa e')
+            //->leftJoin('f.TipoTramiteFormulario12 tf')
+            //->leftJoin('f.OrigenFormulario of')
+            ->leftJoin('f.Formulario u')
+            ->leftJoin('u.Etapa et')
+            ->addWhere('f.id = ?', $id)
+            ->orderBy('f.created_at DESC')
+            ->addOrderBy('et.created_at DESC');
+        return $q;
+        
+    }
+    
 }

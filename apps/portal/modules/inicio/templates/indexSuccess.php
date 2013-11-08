@@ -123,10 +123,11 @@
                     <div class="contenido">
                         <ul>
                             <li><a href="/adm<?php echo $env ?>.php/tareas/new"><span>Asignar nueva tarea</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=1"><span>Listado de tareas Asignadas</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=2"><span>Listado de tareas en Proceso</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=3"><span>Listado de tareas Observadas</span></a></li>
-                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=4"><span>Listado de tareas Concluidas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=1"><span>Tareas Asignadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=2"><span>Tareas en Proceso</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=3"><span>Tareas Observadas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/tareas/index?estado=4"><span>Tareas Concluidas</span></a></li>
+                            <li><a href="/adm<?php echo $env ?>.php/noti_cliente"><span>Notificación a cliente</span></a></li>
                         </ul>
                     </div>
                 </div>
