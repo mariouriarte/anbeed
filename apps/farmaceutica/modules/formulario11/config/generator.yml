@@ -14,32 +14,33 @@ generator:
     config:
       actions: ~
       fields:
-        numero_ruta:            {label: Numero de Ruta}
-        fecha_inicio_vigencia:  {label: Fecha de inicio de vigencia}
+        numero_ruta:            {label: Numero de ruta}
+        fecha_inicio_vigencia:  {label: Fecha inicio de vigencia}
         empresa_id:             {label: Empresa}
-        tipo_despacho_id:       {label: Tipo de Despacho}
+        tipo_despacho_id:       {label: Tipo despacho}
         otro:                   {label: Otro}
         sustancias_quimica:     {label: Sustancias quimicas}
-        licencia_previa:        {label: Licencia Previa}
-        licencia_resolucion:    {label: No de Resolucion de Licencia}
-        licencia_fecha:         {label: Fecha de Licencia}
+        licencia_previa:        {label: Licencia previa}
+        licencia_resolucion:    {label: No de resolucion de licencia}
+        licencia_fecha:         {label: Fecha de licencia}
         numero_item:            {label: Numero de item}
         foja:                   {label: Foja}
         pais_id:                {label: Pais}
         factura:                {label: Factura}
-        factura_fecha:          {label: Fecha de Factura}
+        factura_fecha:          {label: Fecha de factura}
         para:                   {label: Para}
-        tipo:                   {label: Tipo de Despacho}
+        tipo:                   {label: Tipo despacho}
+        fecha:                  {label: Fecha, date_format: dd/MM/yyyy}
       list:    
         title: Despachos Aduaneros Registrados
-        display: [fecha, tipo, numero_ruta, empresa ]
+        display: [tipo, numero_ruta, fecha, etapa]
         table_method: selectForm11DeEmpresa
         actions:
           ir_empresa:   {label: Volver a Empresa}
           new:          {label: Nuevo, action: nuevo}
         object_actions:
-          imprimir:    {label: Imprimir, action: print}
           etapa:       {label: Etapa}
+          imprimir:    {label: Imprimir, action: print}
           items:       {label: Producto(s),  action: item}
           edit:        {label: Editar, action: editar}
       filter:  

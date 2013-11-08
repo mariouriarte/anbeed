@@ -1,3 +1,12 @@
+formulario11:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                formulario11
+    module:               form11
+    prefix_path:          /form11
+    column:               id
+    with_wildcard_routes: true
+
 notificacion_cliente:
   class: sfDoctrineRouteCollection
   options:

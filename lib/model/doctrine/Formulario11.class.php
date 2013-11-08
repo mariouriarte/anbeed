@@ -19,4 +19,9 @@ class Formulario11 extends BaseFormulario11
             $otro = " - ".$this->getOtro();
         return $this->TipoDespacho."".$otro ;
     }
+    
+    public function getEtapa()
+    {
+        return $this->Formulario->Etapa[0]->TipoEtapa->getNombre();
+    }
 }

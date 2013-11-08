@@ -22,11 +22,13 @@ class Formulario11Table extends Doctrine_Table
         $user = sfContext::getInstance()->getUser();
         $empresa = $user->getAttribute('empresa');
         $q = Doctrine_Query::create()
-                    ->from('Formulario11 f')
-//                    ->leftJoin('f.Medicamento p')
-//                    ->leftJoin('p.Empresa e') 
-                    ->where('f.empresa_id = ?', $empresa->getId())
-                    ->orderBy('f.id ASC');
+            ->from('Formulario11 f')
+            ->leftJoin('f.Formulario u')
+            ->leftJoin('u.Etapa e')
+            ->where('f.empresa_id = ?', $empresa->getId())
+            ->orderBy('f.created_at DESC')
+            ->addOrderBy('e.created_at DESC');
         return $q;
     }
+    
 }

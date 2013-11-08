@@ -1,3 +1,12 @@
+etapa_etapaform11:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Etapa
+    module:               etapaform11
+    prefix_path:          /etapaform11
+    column:               id
+    with_wildcard_routes: true
+
 notificacion_cliente:
   class: sfDoctrineRouteCollection
   options:

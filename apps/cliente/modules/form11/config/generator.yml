@@ -1,0 +1,35 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           formulario11
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          formulario11
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        fecha:                     {label: 'Fecha', date_format: dd/MM/yyyy}
+        origen_formulario_id:      {label: 'Origen'}
+        empresa:                   {label: 'Empresa'}
+        laboratorio_fabricante:    {label: 'Laboratorio fabricante'}
+      list:
+        title: Listado de formulario 011
+        table_method: selectForm11DeEmpresa
+        display: [tipo, numero_ruta, fecha, etapa]
+        batch_actions:  {}
+        actions:
+          ir_portal:    {label: Volver al portal}
+        object_actions:
+          etapa: {label: Seguimiento, action: etapa}
+          show:  {label: Información, action: show}
+      filter:
+        display: [numero_ruta]
+      form:    ~
+      edit:    ~
+      new:     ~

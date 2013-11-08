@@ -14,6 +14,7 @@
                     <div class="contenido">
                         <ul>
                             <li><?php echo link_to('Formulario 5', 'form5/index')?></li>
+                            <li><?php echo link_to('Formulario 11', 'form11/index')?></li>
                             <li><?php echo link_to('Formulario 12', 'form12/index')?></li>
                             <li><?php echo link_to('Formulario 27', 'form27/index')?></li>
                             <li><?php echo link_to('Formulario 516', 'form516/index')?></li>
