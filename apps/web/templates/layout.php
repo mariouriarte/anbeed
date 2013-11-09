@@ -24,7 +24,74 @@
                            <?php echo link_to(image_tag('/images/web/anbeed2.png', 'alt=ANBEED size=300x43' ), '@homepage')?></center>
             </div>
             
-            <div id="menu">
+            
+            <div class="container">
+                <div class="navbar navbar-static-top">
+                        <div class="navigation">
+                                <nav>
+                                <ul class="nav topnav bold">
+                                        <li class="dropdown active">
+                                        <?php echo link_to('Inicio', 'home/index', 'id=inicio')?>
+<!--                                        <ul class="dropdown-menu bold">
+                                                <li><a href="#">Homepage 2</a></li>
+                                                <li><a href="#">Homepage 3</a></li>
+                                                <li><a href="#">Homepage 4</a></li>
+                                        </ul>-->
+                                        </li>
+                                        <li class="dropdown">
+                                        <?php echo link_to('Nosotros<i class="icon-angle-down"></i>', 'home/quienesSomos', 'id=quienes') ?>
+                                        <ul style="display: none;" class="dropdown-menu bold">
+                                                <li><a href="#">Typography</a></li>
+                                                <li><a href="#">Components</a></li>
+                                                <li><a href="#">Icons</a></li>
+                                                <li><a href="#">Icon variations</a></li>
+                                                <li class="dropdown"><a href="#">4 Sliders <i class="icon-angle-right"></i></a>
+                                                <ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
+                                                        <li><a href="#">Lush slider</a></li>
+                                                        <li><a href="#">Layer slider</a></li>
+                                                        <li><a href="#"> Flexslider</a></li>
+                                                        <li><a href="#">Flexslider</a></li>
+                                                </ul>
+                                                </li>
+                                        </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                       <?php echo link_to('Servicios<i class="icon-angle-down"></i>', 'home/servicios', 'id=servicios') ?> 
+                                        <ul class="dropdown-menu bold">
+                                                <li><a href="#">About us</a></li>
+                                                <li><a href="#">Pricing boxes</a></li>
+                                                <li><a href="#">404</a></li>
+                                        </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                        <?php echo link_to('Productos', 'catalogo/index', 'id=productos') ?> 
+                                        <ul style="display: none;" class="dropdown-menu bold">
+                                                <li><a href="#">Portfolio 2 columns</a></li>
+                                                <li><a href="#">Portfolio 3 columns</a></li>
+                                                <li><a href="#">Portfolio 4 columns</a></li>
+                                                <li><a href="#">Portfolio detail</a></li>
+                                        </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                        <?php echo link_to('Contacto', 'contacto/new', 'id=contact') ?>
+                                        <ul class="dropdown-menu bold">
+                                                <li><a href="#">Blog left sidebar</a></li>
+                                                <li><a href="#">Blog right sidebar</a></li>
+                                                <li><a href="#">Post left sidebar</a></li>
+                                                <li><a href="#">Post right sidebar</a></li>
+                                        </ul>
+                                        </li>
+                                        <li>
+                                        <a href="/cliente.php/portal/index">Iniciar </a>
+                                        </li>
+                                </ul>
+                                </nav>
+                        </div>
+                        <!-- end navigation -->
+                </div>
+            </div>
+            
+<!--            <div id="menu">
                 <ul>                                                                                            
                    <li><?php echo link_to('Inicio', 'home/index', 'id=inicio') ?></li>
                     <li><?php echo link_to('Quienes Somos', 'home/quienesSomos', 'id=quienes') ?></li>
@@ -33,8 +100,9 @@
                     <li><?php echo link_to('Contáctenos', 'contacto/new', 'id=contact') ?></li>
                     <li><a href="/cliente.php/portal/index">Iniciar Sesión</a></li>
                 </ul>
-            </div>
+            </div>-->
         </div>
+        
         <div class="middle_banner">               
            
 <div class="featured_slider">

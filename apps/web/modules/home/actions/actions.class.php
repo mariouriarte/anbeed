@@ -44,4 +44,7 @@ class homeActions extends sfActions
   public function executeContactenos(sfWebRequest $request)
   {
   }  
+  public function executeEj(sfWebRequest $request)
+  {
+  }  
 }
