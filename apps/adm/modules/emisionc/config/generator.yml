@@ -13,7 +13,7 @@ generator:
 
     config:
       actions: ~
-      fields:  
+      fields: 
         tipo_documento_id:      {label: 'tipo de documento' }
         tipo_documento:         {label: 'Tipo de Documento' }
         factura:                {label: 'Nº factura' }
@@ -28,6 +28,7 @@ generator:
         numero_guia:            {label: 'Número de Guía' }
       list:
         title:   Listado Emisión de Correspondencia
+        sort:    [id, desc]
         display: [tipo_documento, empresa, emisor, nombre, fecha_envio, numero_guia]
         actions:
           ir_portal: {label: Volver al Portal}
