@@ -167,7 +167,7 @@ class formulario5Actions extends autoFormulario5Actions
         if($this->formulario5->getTipoProductoFormulario5Id() == 6)
             $y_tipo_producto += 26;
         /*Imprimimos X del tipo de tramite*/
-        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x+164, $y_tipo_producto, true);
+        $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x+161, $y_tipo_producto, true);
         
         /*Revisamos el origen*/
         $y+=22;
@@ -217,9 +217,11 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->MultiCell(155, 0, strtoupper($this->formulario5->Medicamento->LaboratorioFabricante
             ->Pais->getNombre()), 
             0, 'L', 0, 0, $x+45, $y+=6, true);
+        $pdf->SetFont('courier', '', 8, '', true);
         $pdf->MultiCell(150, 0, $this->formulario5->Medicamento->LaboratorioFabricante
             ->getDireccion(), 
             0, 'L', 0, 0, $x+35, $y+=6, true);
+        $pdf->SetFont('courier', '', 13, '', true);
         
         /*Datos del producto*/
         $pdf->MultiCell(150, 0, $this->formulario5->Medicamento->getNombreComercial(),
@@ -235,9 +237,11 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->MultiCell(80, 0, $this->formulario5->Medicamento->getAccionTerapeutica(),
             0, 'L', 0, 0, $x+50, $y+=6, true);
         $pdf->MultiCell(60, 0, $this->formulario5->Medicamento->TipoVenta, 
-            0, 'L', 0, 0, $x+160, $y, true);
-        $pdf->MultiCell(85, 0, $this->formulario5->Medicamento->getConservacion(), 
-            0, 'L', 0, 0, $x+45, $y+=6, true);
+            0, 'L', 0, 0, $x+155, $y, true);
+        $pdf->SetFont('courier', '', 8, '', true);
+        $pdf->MultiCell(95, 0, $this->formulario5->Medicamento->getConservacion(), 
+            0, 'L', 0, 0, $x+40, $y+=6, true);
+        $pdf->SetFont('courier', '', 13, '', true);
         $pdf->MultiCell(35, 0, $this->formulario5->Medicamento->getPeriodoValidez(), 
             0, 'L', 0, 0, $x+165, $y, true);
         $pdf->MultiCell(140, 0, $this->formulario5->Medicamento->getEspecificacionEnvase(),
