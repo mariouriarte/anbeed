@@ -18,7 +18,7 @@ generator:
       list:
         title:   Desiciones 516 Registrados
         table_method: selectForms516DeCosmetico
-        display: [tipo_tramite_formulario, empresa,  laboratorio, cosmetico]
+        display: [tipo_tramite_formulario, cosmetico, etapa]
         actions:
           ir_empresa:   {label: Volver a Empresa}
           ir_productos: {label: Regresar a Cosméticos}

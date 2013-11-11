@@ -15,6 +15,29 @@ class form12Actions extends autoForm12Actions
 {
     public function executeListIrPortal(sfWebRequest $request)
     {
-        $this->redirect('portal/index');
+        $this->redirect('inicio/index');
+    }
+    
+    public function executeShow(sfWebRequest $request)
+    {
+        $form = $this->getRoute()->getObject();
+        
+        //$this->form = selectForms5DeEmpresa()
+        $q = Doctrine_Core::getTable('Formulario12')
+            ->selectFormulario12DeEmpresa($form->getId());
+        
+        $this->form = $q->fetchOne();
+        
+    }
+    
+    public function executeEtapa(sfWebRequest $request)
+    {
+        $form = $this->getRoute()->getObject();
+        
+        //$this->form = selectForms5DeEmpresa()
+        $q = Doctrine_Core::getTable('Formulario12')
+            ->selectFormulario12DeEmpresa($form->getId());
+        
+        $this->form = $q->fetchOne();
     }
 }

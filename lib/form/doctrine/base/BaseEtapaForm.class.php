@@ -16,11 +16,11 @@ abstract class BaseEtapaForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'            => new sfWidgetFormInputHidden(),
-      'formulario_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'), 'add_empty' => true)),
+      'formulario_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'), 'add_empty' => false)),
       'tipo_etapa_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TipoEtapa'), 'add_empty' => false)),
       'descripcion'   => new sfWidgetFormInputText(),
       'observacion'   => new sfWidgetFormTextarea(),
-      'fecha'         => new sfWidgetFormDate(),
+      'fecha_fin'     => new sfWidgetFormDate(),
       'created_at'    => new sfWidgetFormDateTime(),
       'updated_at'    => new sfWidgetFormDateTime(),
       'created_by'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'add_empty' => true)),
@@ -29,11 +29,11 @@ abstract class BaseEtapaForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'formulario_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'), 'required' => false)),
+      'formulario_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Formulario'))),
       'tipo_etapa_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TipoEtapa'))),
       'descripcion'   => new sfValidatorString(array('max_length' => 250, 'required' => false)),
       'observacion'   => new sfValidatorString(array('max_length' => 2000, 'required' => false)),
-      'fecha'         => new sfValidatorDate(),
+      'fecha_fin'     => new sfValidatorDate(),
       'created_at'    => new sfValidatorDateTime(),
       'updated_at'    => new sfValidatorDateTime(),
       'created_by'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Creator'), 'required' => false)),

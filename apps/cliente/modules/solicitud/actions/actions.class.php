@@ -15,13 +15,12 @@ class solicitudActions extends autoSolicitudActions
 {
     public function executeListIrPortal(sfWebRequest $request)
     {
-        //$this->getUser()->setAttribute('empresa', NULL);
         $env = '';
         if(sfConfig::get('sf_environment') == 'dev')
         {
             $env = '_dev';
         } 
-        $this->redirect('/cliente'.$env.'.php/portal/index');
+        $this->redirect('/cliente'.$env.'.php');
     }
     public function executeNew(sfWebRequest $request)
     {

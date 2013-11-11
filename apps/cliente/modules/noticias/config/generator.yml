@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           NotificacionCliente
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          notificacion_cliente
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        created_at: {label: Creado, date_format: dd/MM/yyyy}
+        descripcion: {label: Descripción}
+        
+      list:
+        title: Notificaciones
+        table_method: selectNoticiasCliente
+        display: [asunto, descripcion_corta, created_at]
+        actions:
+          ir_portal:    {label: Volver al portal}
+        object_actions:
+          show:    {label: Información, action: show}
+        batch_actions:  {}
+      filter:
+        display: [asunto]
+      form:    ~
+      edit:    ~
+      new:     ~

@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           NotificacionCliente
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          notificacion_cliente
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        descripcion: {label: Descripción}
+      list:
+        title: Notificaciones a empresas clientes
+        table_method: selectNotificacionesOrdenadas
+        display: [asunto, descripcion_corta]
+        actions:
+          adm_empresa: {label: Volver a Empresa}
+          _new: ~ 
+      filter:
+        display: [asunto]
+      form:    ~
+      edit:    ~
+      new:     ~

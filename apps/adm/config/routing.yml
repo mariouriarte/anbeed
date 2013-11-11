@@ -25,6 +25,15 @@ linea:
     column:               id
     with_wildcard_routes: true
 
+notificacion_cliente:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                NotificacionCliente
+    module:               noti_cliente
+    prefix_path:          /noti_cliente
+    column:               id
+    with_wildcard_routes: true
+
 comentario_tarea:
   class: sfDoctrineRouteCollection
   options:

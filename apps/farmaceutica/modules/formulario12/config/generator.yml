@@ -14,18 +14,17 @@ generator:
     config:
       actions: ~
       fields:
-        fecha:                         {label: 'Fecha de Registro'}
-        tipo_tramite_formulario12_id:  {label: 'Tipo de Trámite'}
-        origen_formulario_id:          {label: 'Origen'}
-        empresa:                       {label: 'Empresa'}
-        laboratorio_fabricante:        {label: 'Laboratorio Fabricante'}
-      
+        fecha:                     {label: 'Fecha de Registro', date_format: dd/MM/yyyy}
+        tipo_tramite_formulario12: {label: 'Tipo de Trámite'}
+        origen_formulario_id:      {label: 'Origen'}
+        empresa:                   {label: 'Empresa'}
+        laboratorio_fabricante:    {label: 'Laboratorio Fabricante'}
       list:    
         title: Listado de Solicitudes para Registro Reactivos para Diagnostico
-        display: [fecha, tipo_tramite_formulario12, empresa, laboratorio_fabricante, reactivo]
+        display: [fecha, tipo_tramite_formulario12, reactivo, etapa]
         table_method: selectForms12DeReactivo
         object_actions:
-          imprimir:    {label: Imprimir, action: print}
+          imprimir: {label: Imprimir, action: print}
           etapa:    {label: Etapa}
           _edit: ~
           _delete: ~

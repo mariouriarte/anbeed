@@ -21,10 +21,13 @@ class Formulario706Table extends Doctrine_Table
         $user = sfContext::getInstance()->getUser();
         $higiene = $user->getAttribute('higiene');
         $q = Doctrine_Query::create()
-                    ->from('Formulario706 f')
-                    ->leftJoin('f.TipoTramiteFormulario tf')
-                    ->where('f.higiene_id = ?', $higiene->getId())
-                    ->orderBy('f.id ASC');
+            ->from('Formulario706 f')
+            ->leftJoin('f.TipoTramiteFormulario tf')
+            ->leftJoin('f.Formulario u')
+            ->leftJoin('u.Etapa e')
+            ->where('f.higiene_id = ?', $higiene->getId())
+            ->orderBy('f.created_at DESC')
+            ->addOrderBy('e.created_at DESC');
             
         return $q;
     }
@@ -36,10 +39,29 @@ class Formulario706Table extends Doctrine_Table
         $q = Doctrine_Query::create()
             ->from('Formulario706 f')
             ->leftJoin('f.Higiene d')
-            #->leftJoin('d.Empresa e') 
+            ->leftJoin('f.Formulario u')
+            ->leftJoin('u.Etapa et')
+            ->leftJoin('d.Empresa e') 
             ->where('d.empresa_id = ?', $empresa->getId())
-            ->orderBy('f.id ASC');
+            ->orderBy('f.created_at DESC')
+            ->addOrderBy('et.created_at DESC');
         
         return $q;
+    }
+    
+    public function selectFormulario706DeEmpresa($id)
+    {
+        $q = Doctrine_Query::create()
+            ->from('Formulario706 f')
+            ->leftJoin('f.Higiene d')
+            ->leftJoin('f.Formulario u')
+            ->leftJoin('u.Etapa et')
+            ->leftJoin('d.Empresa e') 
+            ->where('f.id = ?', $id)
+            ->orderBy('f.created_at DESC')
+            ->addOrderBy('et.created_at DESC');
+            
+        return $q;
+        
     }
 }

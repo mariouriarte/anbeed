@@ -17,14 +17,12 @@ class TipoEtapaTable extends Doctrine_Table
         return Doctrine_Core::getTable('TipoEtapa');
     }
     
-    public function selectTipoEtapaValida()
+    public function selectTipoEtapaBackend()
     {
         $q = Doctrine_Query::create()
             ->from('TipoEtapa t')
-            ->leftJoin('t.Etapa e');
-            //->where('e.id is NULL');
-            //->addWhere('e.id');
-        
+            ->where('t.nombre != ?', 'Verificado');
+            
         return $q;
     }
 }

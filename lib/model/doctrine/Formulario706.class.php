@@ -21,4 +21,9 @@ class Formulario706 extends BaseFormulario706
     {
         return $this-> Higiene -> LaboratorioFabricante;
     }
+    
+    public function getEtapa()
+    {
+        return $this->Formulario->Etapa[0]->TipoEtapa->getNombre();
+    }
 }

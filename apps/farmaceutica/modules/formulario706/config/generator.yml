@@ -14,12 +14,12 @@ generator:
     config:
       actions: ~
       fields:
-        fields:  
         laboratorio: {label: 'Laboratorio Fabricante'}
+        fecha: {label: 'Fecha', date_format: dd/MM/yyyy}
       list:
         title: Desiciones 706 registrados
         table_method: selectForms706DeHigiene
-        display: [fecha, tipo_tramite_formulario, empresa, higiene]
+        display: [fecha, tipo_tramite_formulario, etapa]
         actions:
 #          ir_empresa:   {label: Volver a empresa}
           ir_productos: {label: Volver a higiéne}
@@ -29,7 +29,7 @@ generator:
           etapa:    {label: Etapa}
           edit:     {label: Editar, action: editar}
       filter:
-        display: [higiene_id, tipo_tramite_formulario_id]
+        display: [tipo_tramite_formulario_id]
       form:    ~
       edit:    ~
       new:     ~

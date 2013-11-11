@@ -3,16 +3,16 @@
 
 all:
   is_secure: on
-  credentials: [[ADMINISTRADOR, REGISTRO SANITARIO, DESPACHO ADUANERO]]
+  credentials: [[admin, REGISTRO SANITARIO, DESPACHO ADUANERO]]
 
 index:
   is_secure: on
-  credentials: [[ADMINISTRADOR, REGISTRO SANITARIO, DESPACHO ADUANERO]]
+  credentials: [[admin, REGISTRO SANITARIO, DESPACHO ADUANERO]]
  
 new:
   is_secure: on
-  credentials: [[ADMINISTRADOR, REGISTRO SANITARIO]]
+  credentials: [[admin, REGISTRO SANITARIO]]
 
 delete:
   is_secure: on
-  credentials: ADMINISTRADOR
+  credentials: admin

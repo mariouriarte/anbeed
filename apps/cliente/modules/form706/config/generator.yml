@@ -13,15 +13,19 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:
+        fecha:                    {label: Fecha, date_format: dd/MM/yyyy}
+        tipo_tramite_formulario5: {label: Tipo de Trámite}
       list:
         title: Listado de Formularios 706
-        display: [fecha, tipo_tramite_formulario, empresa, higiene]
+        table_method: selectForms706DeEmpresa
+        display: [higiene, tipo_tramite_formulario, fecha, etapa]
         batch_actions:  {}
         actions:
           ir_portal:    {label: Volver al portal}
         object_actions:
-          show:    {label: Etapas}
+          etapa: {label: Seguimiento, action: etapa}
+          show:  {label: Información, action: show}
       filter:
         display: [higiene_id, tipo_tramite_formulario_id]
       form:    ~

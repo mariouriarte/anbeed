@@ -14,7 +14,6 @@ actAs:
       name: updated_by
       type: integer
 
-
 Persona:
   actAs: [Timestampable, Signable]
   columns:
@@ -501,11 +500,11 @@ Formulario706:
 Etapa:
   actAs: [Timestampable, Signable]
   columns:
-    formulario_id: {type: integer, notnull: false}
+    formulario_id: {type: integer, notnull: true}
     tipo_etapa_id: {type: integer, notnull: true}
     descripcion:   {type: string(250), notnull: false}
     observacion:   {type: string(2000), notnull: false}
-    fecha:         {type: date, notnull: true}
+    fecha_fin:     {type: date, notnull: true}
   relations:
     TipoEtapa:  {local: tipo_etapa_id, foreign: id, type: one, foreignAlias: Etapa}
     Formulario: {local: formulario_id, foreign: id, type: one, foreignAlias: Etapa}
@@ -528,18 +527,17 @@ ValidacionEtapa:
   relations:
     Etapa: {local: id, foreign: tipo_etapa_id, type: one, foreignAlias: Validacion}
 
-IniciacionFormulario:
+NotificacionCliente:
   actAs: [Timestampable, Signable]
   columns:
     empresa_id:   {type: integer, notnull: true}
-    etapa_id:     {type: integer, notnull: false}
-    tramite:      {type: string(250), notnull: true}
-    descripcion:  {type: string(2000), notnull: true}
+    asunto:       {type: string(250), notnull: true}
+    descripcion:  {type: string(2000), notnull: false}
     observacion:  {type: string(2000), notnull: false}
-    fecha_fin:    {type: date, notnull: false}
+    fecha:        {type: date, notnull: false}
   relations:
     Empresa: {local: empresa_id, foreign: id, type: one, foreignAlias: Inicio}
-    Etapa:   {local: etapa_id, foreign: id, type: one, foreignAlias:  Inicio}
+    #Etapa:   {local: etapa_id, foreign: id, type: one, foreignAlias:  Inicio}
     
 ######## REACTIVO###############
 Reactivo:
@@ -711,7 +709,6 @@ TipoDocumento:
     nombre: {type: string(30), notnull: true}
   relations:
     EmisionCorrespondencia: {local: id, foreign: tipo_documento_id, type: many, foreignAlias: TipoDocumentos}   
-
 
 Emisor:
   actAs: [Timestampable, Signable]

@@ -265,7 +265,7 @@ abstract class BaseEmpresa extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'empresa_id'));
 
-        $this->hasMany('IniciacionFormulario as Inicio', array(
+        $this->hasMany('NotificacionCliente as Inicio', array(
              'local' => 'id',
              'foreign' => 'empresa_id'));
 

@@ -589,3 +589,82 @@ input:focus,textarea:focus{
 {
     margin-top: 0.2px;
 }
+
+/*  -- show items -- */
+.show-item h3 {
+    font-size: 150%;
+    margin: 15px 10px;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.show-item h2 {
+    font-size: 120%;
+    margin: 15px 10px;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.show-item p{
+    margin: 10px 10px;
+    padding: 0;
+    width: 500px;
+}
+
+.show-item {
+    min-height: 380px;
+}
+
+/* -- show etapas -- */
+
+.tabla-etapa {
+    width: 100%;
+}
+
+.panel-etapa{
+    width: 70%;
+    border-radius: 6px 6px 6px 6px;
+}
+.tabla-cliente {
+    width: 100%;
+}
+
+.tabla-cliente th,
+.tabla-cliente td{
+    border: none;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.tabla-cliente th{
+    width: 150px;
+}
+
+.tabla-cliente td{
+    width: 400px;
+}
+
+.num-etapa {
+    font-size: 22px;
+}
+
+.etapa_1 {
+    background-color: #9ACA64;
+}
+.etapa_2 {
+    background-color: #9ACA64;
+}
+.etapa_3 {
+    background-color: #9ACA64;
+}
+.etapa_4 {
+    background-color: #EF570E;
+}
+.etapa_5 {
+    background-color: #9ACA64;
+}
+
+.info-etapa{
+    width: 300px;
+    border-radius: 6px 6px 6px 6px;
+    padding: 10px;
+}

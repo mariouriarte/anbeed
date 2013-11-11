@@ -26,11 +26,22 @@ class inicioActions extends sfActions
             $this->env = '';
         }
         
-        // Incurre a un error
-//        $user = $this->getUser();
-//        $user->getAttributeHolder()->remove('empresa');
-//        $user->getAttributeHolder()->remove('producto');
+        $empresa =  $this->getUser()->getGuardUser()->getEmpresa();
+        
+        $id = $this->getUser()->getGuardUser()->getEmpresaId();
+        
+        $this->notificaciones = Doctrine_Query::create()
+            ->from('NotificacionCliente n')
+            ->where('n.empresa_id = ?', $id)
+            ->orderBy('n.created_at DESC')
+            ->limit(6)
+            ->execute();
+        
+        //$this->empresa = $this->getRoute()->getObject();
+        
+        $this->getUser()->setAttribute('empresa', $empresa);
     }
+    
     public function executeSecure()
     {
         

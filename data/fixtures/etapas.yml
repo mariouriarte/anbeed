@@ -4,8 +4,10 @@ TipoEtapa:
   Etapa_2:
     nombre: Verificación
   Etapa_3:
-    nombre: En tramite
+    nombre: Verificado
   Etapa_4:
-    nombre: Observado
+    nombre: En tramite
   Etapa_5:
+    nombre: Observado
+  Etapa_6:
     nombre: Finalizado

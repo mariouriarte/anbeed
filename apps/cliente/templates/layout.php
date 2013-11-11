@@ -44,7 +44,7 @@
                             </div>
                             <div id="header-logo">
                                 <div id="logo">
-                                    <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '/cliente'.$env.'.php/portal/index')?>
+                                    <?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '/cliente'.$env.'.php')?>
                                 </div>
                             </div>
                             <?php if ($sf_user->isAuthenticated()): ?>

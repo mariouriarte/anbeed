@@ -16,8 +16,14 @@ class Formulario516 extends BaseFormulario516
     {
         return $this->Cosmetico->LaboratorioFabricante;
     }
+    
     public function getEmpresa()
     {
-        return $this-> Cosmetico -> Empresa;
+        return $this->Cosmetico->Empresa;
+    }
+    
+    public function getEtapa()
+    {
+        return $this->Formulario->Etapa[0]->TipoEtapa->getNombre();
     }
 }

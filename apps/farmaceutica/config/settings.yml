@@ -8,7 +8,7 @@ prod:
 
 dev:
   .settings:
-    error_reporting:        <?php echo (E_ALL | E_STRICT)."\n" ?>
+    error_reporting:        <?php echo ((E_ALL | E_STRICT) ^ E_DEPRECATED)."\n" ?>
     web_debug:              true
     cache:                  false
     no_script_name:         false
@@ -38,7 +38,7 @@ all:
     use_database:           true
     enabled_modules:        [default, sfGuardAuth]
   .actions:
-    login_module:    sfGuardAuth
-    login_action:    signin
+    login_module: sfGuardAuth
+    login_action: signin
     secure_module: inicio   # To be called when a user doesn't have
     secure_action: secure   # The credentials required for an action

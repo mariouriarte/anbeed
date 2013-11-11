@@ -15,13 +15,30 @@ class form5Actions extends autoForm5Actions
 {
     public function executeListIrPortal(sfWebRequest $request)
     {
-        $this->redirect('portal/index');
+        $this->redirect('inicio/index');
     }
     
-    public function executeListShow(sfWebRequest $request)
+    public function executeShow(sfWebRequest $request)
     {
-        $this->form = $this->getRoute()->getObject();
+        $form = $this->getRoute()->getObject();
         
+        //$this->form = selectForms5DeEmpresa()
+        $q = Doctrine_Core::getTable('Formulario5')
+            ->selectFormulario5DeEmpresa($form->getId());
+        
+        $this->form = $q->fetchOne();
+        
+    }
+    
+    public function executeEtapa(sfWebRequest $request)
+    {
+        $form = $this->getRoute()->getObject();
+        
+        //$this->form = selectForms5DeEmpresa()
+        $q = Doctrine_Core::getTable('Formulario5')
+            ->selectFormulario5DeEmpresa($form->getId());
+        
+        $this->form = $q->fetchOne();
     }
     
 }

@@ -17,7 +17,7 @@ class formulario5Actions extends autoFormulario5Actions
     {
         $form = $this->getRoute()->getObject();
         
-        $this->redirect('etapa/new?idform='.$form->Formulario->getId());
+        $this->redirect('etapaform5/new?idform='.$form->Formulario->getId());
     }
     
    public function executePrintfcc(sfWebRequest $request)

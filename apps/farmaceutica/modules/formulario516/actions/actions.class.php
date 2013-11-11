@@ -17,7 +17,7 @@ class formulario516Actions extends autoFormulario516Actions
     {
         $form = $this->getRoute()->getObject();
         
-        $this->redirect('etapa/new?idform='.$form->Formulario->getId());
+        $this->redirect('etapaform516/new?idform='.$form->Formulario->getId());
     }
     
     public function executeListIrProductos(sfWebRequest $request)

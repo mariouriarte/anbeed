@@ -14,17 +14,17 @@ generator:
     config:
       actions: ~
       fields:
-        fecha:                         {label: 'Fecha de Registro'}
-        datos_formulario27_id:         {label: 'Datos'}
-        tipo_tramite_formulario27_id:  {label: 'Tipo de Trámite'}
-        origen_formulario_id:          {label: 'Origen'}
+        fecha:                        {label: 'Fecha de Registro', date_format: dd/MM/yyyy}
+        datos_formulario27_id:        {label: 'Datos'}
+        tipo_tramite_formulario27_id: {label: 'Tipo de Trámite'}
+        origen_formulario_id:         {label: 'Origen'}
         empresa:                      {label: 'Empresa'}
-        laboratorio_fabricante:       {label: 'Laboratorio Fabricante'}
-        tipo_tramite_formulario27:     {label: 'Tipo de Trámite'}
+        laboratorio_fabricante:       {label: 'Lab Fabricante'}
+        tipo_tramite_formulario27:    {label: 'Tipo de Trámite'}
       
       list:    
         title: Listado de Solicitudes para Registro y Control de Calidad de Dispositivos Medicos
-        display: [fecha, tipo_tramite_formulario27, empresa, laboratorio_fabricante, dispositivo_medico]
+        display: [fecha, tipo_tramite_formulario27, dispositivo_medico, etapa]
         table_method: selectForms27DeDispositivo
         object_actions:
           imprimir: {label: Imprimir, action: print}

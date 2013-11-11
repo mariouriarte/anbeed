@@ -14,19 +14,21 @@ generator:
     config:
       actions: ~
       fields:
-        fecha:                         {label: 'Fecha de Registro'}
-        tipo_tramite_formulario12_id:  {label: 'Tipo de Trámite'}
-        origen_formulario_id:          {label: 'Origen'}
-        empresa:                       {label: 'Empresa'}
-        laboratorio_fabricante:        {label: 'Laboratorio Fabricante'}
+        fecha:                     {label: 'Fecha', date_format: dd/MM/yyyy}
+        tipo_tramite_formulario12: {label: 'Tipo de Trámite'}
+        origen_formulario_id:      {label: 'Origen'}
+        empresa:                   {label: 'Empresa'}
+        laboratorio_fabricante:    {label: 'Laboratorio fabricante'}
       list:
         title: Listado de formulario 012
-        display: [fecha, tipo_tramite_formulario12, empresa, laboratorio_fabricante, reactivo]
+        table_method: selectForms12DeEmpresa
+        display: [reactivo, tipo_tramite_formulario12, laboratorio_fabricante, fecha, etapa]
         batch_actions:  {}
         actions:
           ir_portal:    {label: Volver al portal}
         object_actions:
-          show:    {label: Etapas}
+          etapa: {label: Seguimiento, action: etapa}
+          show:  {label: Información, action: show}
       filter:
         display: [numero_ruta, tipo_tramite_formulario12_id, origen_formulario_id]
       form:    ~

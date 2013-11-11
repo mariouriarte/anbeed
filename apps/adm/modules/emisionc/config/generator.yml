@@ -21,7 +21,7 @@ generator:
         monto_item:             {label: 'monto Bs. y item' }
         nombre:                 {label: 'Detalle o Nombre' }
         numero:                 {label: 'Nº Reg. San. o despacho' }
-        codigo_producto:        {label: 'código' }
+        codigo_producto_id:     {label: 'código de producto' }
         fecha_inicio_vigencia:  {label: 'Fecha de reg. san. o despacho' }
         vigencia:               {label: 'plazo de vencimiento' }
         fecha_envio:            {label: 'Fecha de Envío' }
@@ -35,7 +35,11 @@ generator:
           _new: ~
       filter:  
         display: [tipo_documento_id, empresa_id, emisor_id, nombre, fecha_envio, numero_guia]
-      form:    ~
+      form:    
+        display:
+          Datos del Envío:                  [fecha_envio, numero_guia, tipo_documento_id, empresa_id, emisor_id, nombre]
+          En caso de Factura:               [factura, factura_fecha, monto_item]
+          En caso de Productos o Despachos: [numero, codigo_producto_id, fecha_inicio_vigencia, vigencia]
       edit:    
         title:   Editar Emisión de Correspondencia
       new:     

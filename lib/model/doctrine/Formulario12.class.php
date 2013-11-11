@@ -14,11 +14,16 @@ class Formulario12 extends BaseFormulario12
 {
     public function getEmpresa()
     {
-        return $this-> Reactivo -> Empresa;
+        return $this->Reactivo->Empresa;
     }
     
     public function getLaboratorioFabricante()
     {
-        return $this-> Reactivo -> LaboratorioFabricante;
+        return $this->Reactivo->LaboratorioFabricante;
+    }
+    
+    public function getEtapa()
+    {
+        return $this->Formulario->Etapa[0]->TipoEtapa->getNombre();
     }
 }

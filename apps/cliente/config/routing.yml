@@ -16,6 +16,24 @@ satisfaccion:
     column:               id
     with_wildcard_routes: true
 
+formulario11:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                formulario11
+    module:               form11
+    prefix_path:          /form11
+    column:               id
+    with_wildcard_routes: true
+
+notificacion_cliente:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                NotificacionCliente
+    module:               noticias
+    prefix_path:          /noticias
+    column:               id
+    with_wildcard_routes: true
+
 iniciacion_formulario:
   class: sfDoctrineRouteCollection
   options:
@@ -76,7 +94,7 @@ formulario5:
 # default rules
 homepage:
   url:   /
-  param: { module: portal, action: index }
+  param: { module: inicio, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules

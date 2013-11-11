@@ -15,6 +15,29 @@ class form706Actions extends autoForm706Actions
 {
     public function executeListIrPortal(sfWebRequest $request)
     {
-        $this->redirect('portal/index');
+        $this->redirect('inicio/index');
+    }
+    
+    public function executeShow(sfWebRequest $request)
+    {
+        $form = $this->getRoute()->getObject();
+        
+        //$this->form = selectForms5DeEmpresa()
+        $q = Doctrine_Core::getTable('Formulario706')
+            ->selectFormulario706DeEmpresa($form->getId());
+        
+        $this->form = $q->fetchOne();
+        
+    }
+    
+    public function executeEtapa(sfWebRequest $request)
+    {
+        $form = $this->getRoute()->getObject();
+        
+        //$this->form = selectForms5DeEmpresa()
+        $q = Doctrine_Core::getTable('Formulario706')
+            ->selectFormulario706DeEmpresa($form->getId());
+        
+        $this->form = $q->fetchOne();
     }
 }
