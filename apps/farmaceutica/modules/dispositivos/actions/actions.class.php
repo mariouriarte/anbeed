@@ -103,4 +103,68 @@ class dispositivosActions extends autoDispositivosActions
           $this->getUser()->setFlash('error', 'The item has not been saved due to some errors.', false);
         }
       }
+      
+   public function executePrintfcc(sfWebRequest $request)
+   {
+        $this->DispositivoMedico = $this->getRoute()->getObject();
+//        var_dump($this->Medicamento->getFormulaCcId());
+//        die;
+        if($this->DispositivoMedico->getFormulaCc() == NULL)
+        {   
+            $this->getUser()->setFlash('notice', 'No cuenta con Fórmula Cuali-Cuantitativa');
+            $this->redirect('@dispositivo_medico');
+            
+        }
+        $config = sfTCPDFPluginConfigHandler::loadConfig();
+                  sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
+
+        $pdf = new sfTCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+        // Informacion el documento
+        $pdf->SetCreator(PDF_CREATOR);
+        $pdf->SetAuthor('Capsule Systems');
+        $pdf->SetTitle('Formulario');
+        $pdf->SetSubject('ANBEED SRL');
+        $pdf->SetKeywords('TCPDF, PDF, ANBEED SRL, Formulario027, impresion');
+
+        //set margins
+        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+        $pdf->SetPrintHeader(false);
+        $pdf->SetPrintFooter(false);
+        //set auto page breaks
+        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+        // Set font
+        // dejavusans is a UTF-8 Unicode font, if you only need to
+        // print standard ASCII chars, you can use core fonts like
+        // helvetica or times to reduce file size.
+        $pdf->SetFont('courier', '', 13, '', true);
+
+        // Add a page
+        // This method has several options, check the source code documentation for more information.
+        $pdf->AddPage();
+
+        /*Imprimimos titulo*/
+        $pdf->MultiCell(78, 0, 'FÓRMULA CUALI-CUANTITATIVA', 'B', 'L', 0, 0, 65, 30, true);
+        
+        $pdf->SetFont('courier', '', 13, '', true);
+        /*Imprimimos el producto*/
+        $pdf->MultiCell(78, 0, 'Producto:', 0, 'L', 0, 0, 15, 45, true);
+        $pdf->MultiCell(78, 0, $this->DispositivoMedico, 0, 'L', 0, 0, 45, 45, true);
+        
+        /*Imprimimos la formula del dispositivo medico*/            
+        $pdf->SetFont('courier', '', 13, '', true);
+        $html = '<br><br><br><table border="1" width="100%" cellpadding="2" cellspacing="0">
+                    <tr>
+                        <td>'.$this->DispositivoMedico->getFormulaCc().'</td>
+                    </tr>
+                    ';
+        
+        $html.="</table>";
+        //echo $html;
+        $pdf->writeHTML($html, true, FALSE, true, FALSE, 'L');
+        $pdf->Output('FormulaCc.pdf', 'I');
+        throw new sfStopException();
+   }
 }

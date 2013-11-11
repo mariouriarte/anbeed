@@ -87,7 +87,7 @@
                 <th>Conservación</th>
                 <td><?php echo $medicamento->getConservacion(); ?></td>
                 <th>Periódo de validez</th>
-                <td></td>
+                <td><?php echo $medicamento->getPeriodoValidez(); ?></td>
             </tr>
             <tr>
                 <th>Especificación del envase</th>

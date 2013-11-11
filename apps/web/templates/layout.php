@@ -16,24 +16,25 @@
     </head>
     <body>
 <div id="wrap">
-    <div class="top_corner"></div>
+<!--    <div class="top_corner"></div>-->
     <div id="main_container">
         <div id="header">
-            <div id="logo"><?php //echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '@homepage')?>
-                <center><?php echo link_to(image_tag('/images/web/anbeed.png', 'alt=ANBEED size=350x50' ), '@homepage')?> <br />
-                           <?php echo link_to(image_tag('/images/web/anbeed2.png', 'alt=ANBEED size=300x43' ), '@homepage')?></center>
+            <?php echo link_to(image_tag('/images/web/header.png', 'alt=ANBEED size=960x151' ), '@homepage')?> <br />
+<!--            <div id="logo"><?php //echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '@homepage')?>
+                <center><?php //echo link_to(image_tag('/images/web/header.png', 'alt=ANBEED size=965x140' ), '@homepage')?> <br />
+                           <?php //echo link_to(image_tag('/images/web/anbeed2.png', 'alt=ANBEED size=300x43' ), '@homepage')?></center>
             </div>
             
             <div id="menu">
                 <ul>                                                                                            
-                   <li><?php echo link_to('Inicio', 'home/index', 'id=inicio') ?></li>
-                    <li><?php echo link_to('Quienes Somos', 'home/quienesSomos', 'id=quienes') ?></li>
-                    <li><?php echo link_to('Servicios', 'home/servicios', 'id=servicios') ?></li>
-                    <li><?php echo link_to('Productos', 'catalogo/index', 'id=productos') ?></li>
-                    <li><?php echo link_to('Contáctenos', 'contacto/new', 'id=contact') ?></li>
+                   <li><?php //echo link_to('Inicio', 'home/index', 'id=inicio') ?></li>
+                    <li><?php //echo link_to('Quienes Somos', 'home/quienesSomos', 'id=quienes') ?></li>
+                    <li><?php //echo link_to('Servicios', 'home/servicios', 'id=servicios') ?></li>
+                    <li><?php //echo link_to('Productos', 'catalogo/index', 'id=productos') ?></li>
+                    <li><?php// echo link_to('Contáctenos', 'contacto/new', 'id=contact') ?></li>
                     <li><a href="/cliente.php/portal/index">Iniciar Sesión</a></li>
                 </ul>
-            </div>
+            </div>-->
         </div>
         <div class="middle_banner">               
            
