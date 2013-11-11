@@ -22,9 +22,7 @@
                     <h2 class="titulo">Administración</h2>
                     <div class="contenido">
                         <ul> 
-
-                            <li><?php echo link_to(image_tag('/images/icons/print.svg').'&nbsp;Imprimir Form. 003', 'empresas/print?id=' . $empresa->getId()) ?></li>
-                            
+                            <li><?php echo link_to(image_tag('/images/icons/print.svg').'&nbsp;Imprimir Form. 003', 'empresas/print?id='.$empresa->getId(), array('popup' => array('popupWindow', 'width=900,height=700,left=320,top=100,scrollbars=yes,menubar=no,resizable=no'))) ?></li>
                             <li><?php echo link_to('Editar empresa', 'empresas/edit?id=' . $empresa->getId()) ?></li>
                             
                             <li>

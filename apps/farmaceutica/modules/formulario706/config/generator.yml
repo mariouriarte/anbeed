@@ -21,8 +21,8 @@ generator:
         table_method: selectForms706DeHigiene
         display: [fecha, tipo_tramite_formulario, etapa]
         actions:
-#          ir_empresa:   {label: Volver a empresa}
           ir_productos: {label: Volver a higiéne}
+          ir_empresa:   {label: Volver a empresa}
           new:          {label: Nuevo, action: nuevo}
         object_actions:
           imprimir: {label: Imprimir, action: exportPdf}

@@ -32,7 +32,6 @@ generator:
         table_method: selectHigieneDeEmpresa
         display: [nombre, marca, laboratorio_fabricante, registro_sanitario]
         object_actions:
-          _edit: ~
           ir_form706:   {label: Desicion 706}
 #          ir_form7:     {label: Form 007}
           _edit: ~ 
