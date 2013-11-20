@@ -592,7 +592,8 @@ TipoCalificacion:
   columns:
     nombre: {type: string(30), notnull: true}
   relations:
-    Formulario7: {local: id, foreign: tipo_tramite_formulario7_id, type: one, foreignAlias: TipoTramitef7}
+    Formulario7: {local: id, foreign: tipo_calificacion_id, type: one, foreignAlias: TipoCalificacion}
+    Aval:        {local: id, foreign: tipo_calificacion_id, type: one, foreignAlias: TipoCalificacion}
 
 Formulario7:
   actAs: [Timestampable, Signable]
@@ -605,6 +606,7 @@ Formulario7:
 #   este campo copiamos al campo aval del formulario 5
     referencia_aval:       {type: string(50)} 
     producto_id:           {type: integer, notnull: false}
+    aval_id:               {type: integer, notnull: false}
     forma_farmaceutica_id: {type: integer, notnull: false}
     concentracion:         {type: string(150), notnull: true}
     tipo_calificacion_id:  {type: integer, notnull: true}
@@ -624,6 +626,7 @@ Formulario7:
     TipoCalificacion:  {local: tipo_calificacion_id, foreign: id, type: one, foreignAlias: Formulario7}
     ViaAdministracion: {local: via_administracion_id, foreign: id, type: one, foreignAlias: Formulario7}
     FormaFarmaceutica: {local: forma_farmaceutica_id, foreign: id, type: one, foreignAlias: Formulario7}
+    Aval:              {local: aval_id, foreign: id, type: one, foreignAlias: Formulario7}
 
 ############DESPACHO ADUANERO ################
 Formulario11:
@@ -832,3 +835,48 @@ SolicitudServicio:
     empresa_id: {type: integer, notnull: true}
   relations:
     Empresa:    {local: empresa_id, foreign: id, type: one, foreignAlias: Solicitudes}
+
+Aval:
+  actAs: [Timestampable]
+  columns:
+#    aval_formula_cc_id:       {type: integer, notnull: true}
+    nombre_generico:       {type: string(100), notnull: true}
+    forma_farmaceutica:    {type: string(100), notnull: true}
+    concentracion:         {type: string(150), notnull: true}
+    via_administracion:    {type: string(100), notnull: true}
+    accion_terapeutica:    {type: string(1000), notnull: true}
+    dosis:                 {type: string(2000), notnull: true}
+    indicaciones:          {type: string(5000), notnull: true}
+    contraindicaciones:    {type: string(5000), notnull: true}
+    precauciones:          {type: string(5000), notnull: true}
+    efectos_secundarios:   {type: string(5000), notnull: true}
+    acta_comunicacion:     {type: string(100)}
+    observaciones:         {type: string(2000)}
+    comision:              {type: string(100)}
+    calificacion:          {type: string(150)}
+  relations:
+    Formulario7:  {local: id, foreign: aval_id, type: many, foreignAlias: Aval}
+#    AvalFormulaCc:     {local: aval_formula_cc_id, foreign: id, type: one, foreignAlias: Aval}
+#   
+#AvalFormulaCc:
+#  actAs: [Timestampable]
+#  columns:
+#    contenido:      {type: string(250), notnull: false}
+#    ingrediente_id: {type: integer, notnull: false}
+#    cantidad:       {type: decimal(5), scale: 2, notnull: false}
+#    unidad:         {type: string(30), notnull: false}
+#    
+#  relations:
+#    AvalDetalleFormulaCc: {local: id, foreign: aval_formula_cc_id, type: many, foreignAlias: AvalFormulaCc}
+#    Ingrediente:          {local: ingrediente_id, foreign: id, type: one, foreignAlias: AvalFormulaCc}
+#    
+#AvalDetalleFormulaCc:
+#  actAs: [Timestampable]
+#  columns:
+#    aval_formula_cc_id:  {type: integer, notnull: true}
+#    ingrediente_id:      {type: integer, notnull: false}
+#    cantidad:            {type: decimal(5), scale: 2, notnull: true}
+#    unidad:              {type: string(20), notnull: true}
+#  relations:
+#    AvalFormulaCc: {local: aval_formula_cc_id, foreign: id, type: one, foreignAlias: Detalles}
+#    Ingrediente:   {local: ingrediente_id, foreign: id, type: many, foreignAlias: Detalles}

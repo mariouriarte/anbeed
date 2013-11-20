@@ -7,11 +7,14 @@
  * 
  * @property string $nombre
  * @property Formulario7 $Formulario7
+ * @property Aval $Aval
  * 
  * @method string           getNombre()      Returns the current record's "nombre" value
  * @method Formulario7      getFormulario7() Returns the current record's "Formulario7" value
+ * @method Aval             getAval()        Returns the current record's "Aval" value
  * @method TipoCalificacion setNombre()      Sets the current record's "nombre" value
  * @method TipoCalificacion setFormulario7() Sets the current record's "Formulario7" value
+ * @method TipoCalificacion setAval()        Sets the current record's "Aval" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -35,7 +38,11 @@ abstract class BaseTipoCalificacion extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Formulario7', array(
              'local' => 'id',
-             'foreign' => 'tipo_tramite_formulario7_id'));
+             'foreign' => 'tipo_calificacion_id'));
+
+        $this->hasOne('Aval', array(
+             'local' => 'id',
+             'foreign' => 'tipo_calificacion_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));
