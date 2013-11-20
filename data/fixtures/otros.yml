@@ -183,3 +183,23 @@ RegenteFarmaceutico:
     is_active: true
     created_at: '2013-07-11 17:58:55'
     updated_at: '2013-07-11 17:58:55'
+    
+Aval:
+  Aval_1:
+    codigo: '0961'
+    nombre_generico: ACARBOSA
+    forma_farmaceutica: COMPRIMIDOS
+    concentracion: 50 MG  
+    via_administracion: 'INHIBIDOR DE LAS ALFA GLUCOSIDASAS'
+    accion_terapeutica: 'USUAL: 2 A 3 COMPRIMIDOS, TRES VECES AL DIA EN LAS COMIDAS.'
+    dosis: 'COADYUVANTE EN EL TRATAMIENTO DE LA DIABETES MELLITUS.'    
+    indicaciones: 'HIPERSENSIBILIDAD A LA DROGA, PACIENTES CON PATOLOGIAS GASTROINTESTINALES CRONICAS, HERNIAS SEVERAS, TUMORES INTESTINALES, EMBARAZO, LACTANCIA.'
+    contraindicaciones: 'NO PRODUCE HIPOGLICEMIA EN MONOTERAPIA, PERO SI APARECIERA EN PACIENTES QUE RECIBEN TERAPIA ASOCIADA, SE RECOMIENDA ADMINISTRACION DE GLUCOSA.'
+    precauciones: 'FLATULENCIA, DISTENSION ABDOMINAL, METEORISMO, MUY RARA VEZ DIARREA.'
+    efectos_secundarios: ''
+    acta_comunicacion: ''
+    observaciones: ''
+    comision: ''    
+    calificacion: ''
+    created_at: '2013-07-11 17:58:55'
+    updated_at: '2013-07-11 17:58:55'

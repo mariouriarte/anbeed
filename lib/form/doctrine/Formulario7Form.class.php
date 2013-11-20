@@ -15,11 +15,19 @@ class Formulario7Form extends BaseFormulario7Form
         unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
         $years = range(date('Y') - 0, date('Y'));   
         
+        
         $this->widgetSchema['formulario_id'] = new sfWidgetFormInputHidden();
         
         // producto
         $this->widgetSchema['producto_id'] = new sfWidgetFormInputHidden(
             array());
+        
+        $this->widgetSchema['aval_id'] = new sfWidgetFormDoctrineChoice(
+                array('model'        => 'Aval',
+                  'add_empty'    => 'Seleccione el Nombre Generico'));
+        
+        $this->validatorSchema['aval_id'] = new sfValidatorDoctrineChoice(
+            array('model' => 'Aval', 'required' => true));
         
         // fecha
         $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(

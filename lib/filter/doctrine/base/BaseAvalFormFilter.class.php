@@ -13,6 +13,7 @@ abstract class BaseAvalFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
+      'codigo'              => new sfWidgetFormFilterInput(),
       'nombre_generico'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'forma_farmaceutica'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'concentracion'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
@@ -32,6 +33,7 @@ abstract class BaseAvalFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
+      'codigo'              => new sfValidatorPass(array('required' => false)),
       'nombre_generico'     => new sfValidatorPass(array('required' => false)),
       'forma_farmaceutica'  => new sfValidatorPass(array('required' => false)),
       'concentracion'       => new sfValidatorPass(array('required' => false)),
@@ -68,6 +70,7 @@ abstract class BaseAvalFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'                  => 'Number',
+      'codigo'              => 'Text',
       'nombre_generico'     => 'Text',
       'forma_farmaceutica'  => 'Text',
       'concentracion'       => 'Text',

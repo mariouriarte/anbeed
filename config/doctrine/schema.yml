@@ -840,6 +840,7 @@ Aval:
   actAs: [Timestampable]
   columns:
 #    aval_formula_cc_id:       {type: integer, notnull: true}
+    codigo:                {type: string(50)}
     nombre_generico:       {type: string(100), notnull: true}
     forma_farmaceutica:    {type: string(100), notnull: true}
     concentracion:         {type: string(150), notnull: true}

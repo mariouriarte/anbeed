@@ -97,14 +97,15 @@ if($tabla == 'higiene')
       </tr>
       <tr>
           <th>Nombre Generico (D.C.I.): </th>
-          <td><?php if($tabla == 'medicamento')
-                    echo $producto -> getNombreGenerico();
-                if($tabla == 'dispositivo_medico')
-                    echo $producto-> getNombreGenerico();
-                if($tabla == 'cosmetico')
-                    echo $producto-> getNombre();
-                if($tabla == 'higiene')
-                    echo $producto-> getNombre();
+          <td><?php echo $form['aval_id'];
+//                if($tabla == 'medicamento')
+//                    echo $producto -> getNombreGenerico();
+//                if($tabla == 'dispositivo_medico')
+//                    echo $producto-> getNombreGenerico();
+//                if($tabla == 'cosmetico')
+//                    echo $producto-> getNombre();
+//                if($tabla == 'higiene')
+//                    echo $producto-> getNombre();
           ?></td>
       </tr>
       <tr>
@@ -114,73 +115,104 @@ if($tabla == 'higiene')
       <tr>
           <th>Forma Farmacéutica: </th>
           <td><?php
-                if($tabla == 'medicamento')
-                    echo $producto -> getFormaFarmaceutica();
-                else {
-                    echo $form['forma_farmaceutica_id']->renderError();
-                    echo $form['forma_farmaceutica_id'];
-                }
+//                if($tabla == 'medicamento')
+//                    echo $producto -> getFormaFarmaceutica();
+//                else {
+//                    echo $form['forma_farmaceutica_id']->renderError();
+//                    echo $form['forma_farmaceutica_id'];
+//                }
            ?></td>
       </tr>
       <tr>
           <th>Concentración: </th>
           <td>
             <?php echo $form['concentracion']->renderError() ?>
-            <?php echo $form['concentracion'] ?>
+            <?php // echo $form['concentracion'] ?>
           </td>
       </tr>
       <tr>
         <th>Vía de Administración: </th>
         <td>
           <?php echo $form['via_administracion_id']->renderError() ?>
-          <?php echo $form['via_administracion_id'] ?>
+          <?php // echo $form['via_administracion_id'] ?>
         </td>
       </tr>
       <tr>
         <th>Acción terapéutica: </th>
         <td>
           <?php echo $form['accion_terapeutica']->renderError() ?>
-          <?php echo $form['accion_terapeutica'] ?>
+          <?php // echo $form['accion_terapeutica'] ?>
         </td>
       </tr>
       <tr>
         <th>Dosis: </th>
         <td>
           <?php echo $form['dosis']->renderError() ?>
-          <?php echo $form['dosis'] ?>
+          <?php // echo $form['dosis'] ?>
         </td>
       </tr>
       <tr>
         <th>Indicaciones: </th>
         <td>
           <?php echo $form['indicaciones']->renderError() ?>
-          <?php echo $form['indicaciones'] ?>
+          <?php // echo $form['indicaciones'] ?>
         </td>
       </tr>
       <tr>
         <th>Contraindicaciones: </th>
         <td>
           <?php echo $form['contraindicaciones']->renderError() ?>
-          <?php echo $form['contraindicaciones'] ?>
+          <?php // echo $form['contraindicaciones'] ?>
         </td>
       </tr>
       <tr>
         <th>Precauciones: </th>
         <td>
           <?php echo $form['precauciones']->renderError() ?>
-          <?php echo $form['precauciones'] ?>
+          <?php // echo $form['precauciones'] ?>
         </td>
       </tr>
       <tr>
         <th>Efectos secundarios/Interacciones: </th>
         <td>
           <?php echo $form['efectos_secundarios']->renderError() ?>
-          <?php echo $form['efectos_secundarios'] ?>
+          <?php // echo $form['efectos_secundarios'] ?>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
+
+<div class="container-form-decision">
+  <table class="tbl-form-decision">
+    <tbody>
+      <tr>
+        <th>Observaciones</th>
+        <td>
+          <?php echo $form['observaciones']->renderError() ?>
+          <?php // echo $form['observaciones'] ?>
+        </td>
+      </tr>
+      <tr>
+        <th>La Comisión Farmacológica Nacional </th>
+        <td>
+          <?php echo $form['comision']->renderError() ?>
+          <?php // echo $form['comision'] ?>
+            <span class="help-descripcion-tabla">solicita mayor información</span>
+        </td>
+      </tr>
+      <tr>
+        <th>Por consiguiente el citado producto es </th>
+        <td>
+          <?php echo $form['calificacion']->renderError() ?>
+          <?php // echo $form['calificacion'] ?> 
+          <span class="help-descripcion-tabla">pudiendo proseguir con el correspondiente trámite de inscripción y/o reinscripción </spam>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 <table bordercolor="#FFFFFF" align="center">
     <tr>
         <td><font size="4"><b>DATOS ADICIONALES DEL FORMULARIO</b></font></td>
@@ -209,35 +241,6 @@ if($tabla == 'higiene')
         <td>
           <?php echo $form['referencia_aval']->renderError() ?>
           <?php echo $form['referencia_aval'] ?>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="container-form-decision">
-  <table class="tbl-form-decision">
-    <tbody>
-      <tr>
-        <th>Observaciones</th>
-        <td>
-          <?php echo $form['observaciones']->renderError() ?>
-          <?php echo $form['observaciones'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th>La Comisión Farmacológica Nacional </th>
-        <td>
-          <?php echo $form['comision']->renderError() ?>
-          <?php echo $form['comision'] ?>
-            <span class="help-descripcion-tabla">solicita mayor información</span>
-        </td>
-      </tr>
-      <tr>
-        <th>Por consiguiente el citado producto es </th>
-        <td>
-          <?php echo $form['calificacion']->renderError() ?>
-          <?php echo $form['calificacion'] ?> 
-          <span class="help-descripcion-tabla">pudiendo proseguir con el correspondiente trámite de inscripción y/o reinscripción </spam>
         </td>
       </tr>
     </tbody>

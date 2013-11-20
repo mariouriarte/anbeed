@@ -1,3 +1,12 @@
+aval:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Aval
+    module:               avales
+    prefix_path:          /avales
+    column:               id
+    with_wildcard_routes: true
+
 producto_web:
   class: sfDoctrineRouteCollection
   options:

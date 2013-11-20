@@ -16,6 +16,7 @@ abstract class BaseAvalForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'                  => new sfWidgetFormInputHidden(),
+      'codigo'              => new sfWidgetFormInputText(),
       'nombre_generico'     => new sfWidgetFormInputText(),
       'forma_farmaceutica'  => new sfWidgetFormInputText(),
       'concentracion'       => new sfWidgetFormInputText(),
@@ -36,6 +37,7 @@ abstract class BaseAvalForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'                  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'codigo'              => new sfValidatorString(array('max_length' => 50, 'required' => false)),
       'nombre_generico'     => new sfValidatorString(array('max_length' => 100)),
       'forma_farmaceutica'  => new sfValidatorString(array('max_length' => 100)),
       'concentracion'       => new sfValidatorString(array('max_length' => 150)),

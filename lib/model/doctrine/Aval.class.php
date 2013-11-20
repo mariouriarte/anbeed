@@ -12,4 +12,8 @@
  */
 class Aval extends BaseAval
 {
+    public function __toString()
+    {
+       return $this->getNombreGenerico();
+    }
 }
