@@ -783,7 +783,7 @@ ProductoWeb:
     pais_id:         {type: integer, notnull: true}
     nombre:          {type: string(50), notnull: true}
     caracteristicas: {type: string(2000), notnull: true}
-    precio:          {type: float, scale: (2)  , notnull: true}
+    #precio:          {type: float, scale: (2)  , notnull: true}
     foto:            {type: string(50), notnull: true}
     visto:           {type: integer, default: 0 }
   relations:
@@ -841,22 +841,61 @@ Aval:
   columns:
 #    aval_formula_cc_id:       {type: integer, notnull: true}
     codigo:                {type: string(50)}
-    nombre_generico:       {type: string(100), notnull: true}
-    forma_farmaceutica:    {type: string(100), notnull: true}
-    concentracion:         {type: string(150), notnull: true}
-    via_administracion:    {type: string(100), notnull: true}
-    accion_terapeutica:    {type: string(1000), notnull: true}
-    dosis:                 {type: string(2000), notnull: true}
-    indicaciones:          {type: string(5000), notnull: true}
-    contraindicaciones:    {type: string(5000), notnull: true}
-    precauciones:          {type: string(5000), notnull: true}
-    efectos_secundarios:   {type: string(5000), notnull: true}
-    acta_comunicacion:     {type: string(100)}
-    observaciones:         {type: string(2000)}
-    comision:              {type: string(100)}
-    calificacion:          {type: string(150)}
-  relations:
-    Formulario7:  {local: id, foreign: aval_id, type: many, foreignAlias: Aval}
+    nombre_generico:       {type: string(100), notnull: false}
+    forma_farmaceutica:    {type: string(100), notnull: false}
+    concentracion:         {type: string(150), notnull: false}
+    via_administracion:    {type: string(100), notnull: false}
+    accion_terapeutica:    {type: string(200), notnull: false}
+    accion_terapeutica2:    {type: string(200), notnull: false}
+    dosis:                  {type: string(200), notnull: false}
+    dosis2:                 {type: string(200), notnull: false}
+    dosis3:                 {type: string(200), notnull: false}
+    indicaciones:           {type: string(200), notnull: false}
+    indicaciones2:          {type: string(200), notnull: false}
+    indicaciones3:          {type: string(200), notnull: false}
+    indicaciones4:          {type: string(200), notnull: false}
+    indicaciones5:          {type: string(200), notnull: false}
+    indicaciones6:          {type: string(200), notnull: false}
+    contraindicaciones:     {type: string(200), notnull: false}
+    contraindicaciones2:    {type: string(200), notnull: false}
+    contraindicaciones3:    {type: string(200), notnull: false}
+    contraindicaciones4:    {type: string(200), notnull: false}
+    contraindicaciones5:    {type: string(200), notnull: false}
+    precauciones:           {type: string(200), notnull: false}
+    precauciones2:          {type: string(200), notnull: false}
+    precauciones3:          {type: string(200), notnull: false}
+    precauciones4:          {type: string(200), notnull: false}
+    precauciones5:          {type: string(200), notnull: false}
+    efectos_secundarios:    {type: string(200), notnull: false}
+    efectos_secundarios2:   {type: string(200), notnull: false}
+    efectos_secundarios3:   {type: string(200), notnull: false}
+    efectos_secundarios4:   {type: string(200), notnull: false}
+    efectos_secundarios5:   {type: string(200), notnull: false}
+    acta_comunicacion:      {type: string(100)}
+    observaciones:          {type: string(200)}
+    observaciones2:         {type: string(200)}
+
+#Aval:
+#  actAs: [Timestampable]
+#  columns:
+##    aval_formula_cc_id:       {type: integer, notnull: true}
+#    codigo:                {type: string(50)}
+#    nombre_generico:       {type: string(100), notnull: true}
+#    forma_farmaceutica:    {type: string(100), notnull: true}
+#    concentracion:         {type: string(150), notnull: true}
+#    via_administracion:    {type: string(100), notnull: true}
+#    accion_terapeutica:    {type: string(1000), notnull: true}
+#    dosis:                 {type: string(2000), notnull: true}
+#    indicaciones:          {type: string(5000), notnull: true}
+#    contraindicaciones:    {type: string(5000), notnull: true}
+#    precauciones:          {type: string(5000), notnull: true}
+#    efectos_secundarios:   {type: string(5000), notnull: true}
+#    acta_comunicacion:     {type: string(100)}
+#    observaciones:         {type: string(2000)}
+#    comision:              {type: string(100)}
+#    calificacion:          {type: string(150)}
+#  relations:
+#    Formulario7:  {local: id, foreign: aval_id, type: many, foreignAlias: Aval}
 #    AvalFormulaCc:     {local: aval_formula_cc_id, foreign: id, type: one, foreignAlias: Aval}
 #   
 #AvalFormulaCc:

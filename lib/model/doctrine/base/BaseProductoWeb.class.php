@@ -10,7 +10,6 @@
  * @property integer $pais_id
  * @property string $nombre
  * @property string $caracteristicas
- * @property float $precio
  * @property string $foto
  * @property integer $visto
  * @property Categoria $Categoria
@@ -22,7 +21,6 @@
  * @method integer     getPaisId()          Returns the current record's "pais_id" value
  * @method string      getNombre()          Returns the current record's "nombre" value
  * @method string      getCaracteristicas() Returns the current record's "caracteristicas" value
- * @method float       getPrecio()          Returns the current record's "precio" value
  * @method string      getFoto()            Returns the current record's "foto" value
  * @method integer     getVisto()           Returns the current record's "visto" value
  * @method Categoria   getCategoria()       Returns the current record's "Categoria" value
@@ -33,7 +31,6 @@
  * @method ProductoWeb setPaisId()          Sets the current record's "pais_id" value
  * @method ProductoWeb setNombre()          Sets the current record's "nombre" value
  * @method ProductoWeb setCaracteristicas() Sets the current record's "caracteristicas" value
- * @method ProductoWeb setPrecio()          Sets the current record's "precio" value
  * @method ProductoWeb setFoto()            Sets the current record's "foto" value
  * @method ProductoWeb setVisto()           Sets the current record's "visto" value
  * @method ProductoWeb setCategoria()       Sets the current record's "Categoria" value
@@ -71,11 +68,6 @@ abstract class BaseProductoWeb extends sfDoctrineRecord
              'type' => 'string',
              'notnull' => true,
              'length' => 2000,
-             ));
-        $this->hasColumn('precio', 'float', null, array(
-             'type' => 'float',
-             'scale' => '(2)',
-             'notnull' => true,
              ));
         $this->hasColumn('foto', 'string', 50, array(
              'type' => 'string',
