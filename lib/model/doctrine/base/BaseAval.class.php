@@ -11,109 +11,52 @@
  * @property string $concentracion
  * @property string $via_administracion
  * @property string $accion_terapeutica
- * @property string $accion_terapeutica2
  * @property string $dosis
- * @property string $dosis2
- * @property string $dosis3
  * @property string $indicaciones
- * @property string $indicaciones2
- * @property string $indicaciones3
- * @property string $indicaciones4
- * @property string $indicaciones5
- * @property string $indicaciones6
  * @property string $contraindicaciones
- * @property string $contraindicaciones2
- * @property string $contraindicaciones3
- * @property string $contraindicaciones4
- * @property string $contraindicaciones5
  * @property string $precauciones
- * @property string $precauciones2
- * @property string $precauciones3
- * @property string $precauciones4
- * @property string $precauciones5
  * @property string $efectos_secundarios
- * @property string $efectos_secundarios2
- * @property string $efectos_secundarios3
- * @property string $efectos_secundarios4
- * @property string $efectos_secundarios5
  * @property string $acta_comunicacion
  * @property string $observaciones
- * @property string $observaciones2
- * @property Doctrine_Collection $TipoCalificacion
+ * @property string $comision
+ * @property string $calificacion
  * @property Doctrine_Collection $Formulario7
+ * @property Doctrine_Collection $TipoCalificacion
  * 
- * @method string              getCodigo()               Returns the current record's "codigo" value
- * @method string              getNombreGenerico()       Returns the current record's "nombre_generico" value
- * @method string              getFormaFarmaceutica()    Returns the current record's "forma_farmaceutica" value
- * @method string              getConcentracion()        Returns the current record's "concentracion" value
- * @method string              getViaAdministracion()    Returns the current record's "via_administracion" value
- * @method string              getAccionTerapeutica()    Returns the current record's "accion_terapeutica" value
- * @method string              getAccionTerapeutica2()   Returns the current record's "accion_terapeutica2" value
- * @method string              getDosis()                Returns the current record's "dosis" value
- * @method string              getDosis2()               Returns the current record's "dosis2" value
- * @method string              getDosis3()               Returns the current record's "dosis3" value
- * @method string              getIndicaciones()         Returns the current record's "indicaciones" value
- * @method string              getIndicaciones2()        Returns the current record's "indicaciones2" value
- * @method string              getIndicaciones3()        Returns the current record's "indicaciones3" value
- * @method string              getIndicaciones4()        Returns the current record's "indicaciones4" value
- * @method string              getIndicaciones5()        Returns the current record's "indicaciones5" value
- * @method string              getIndicaciones6()        Returns the current record's "indicaciones6" value
- * @method string              getContraindicaciones()   Returns the current record's "contraindicaciones" value
- * @method string              getContraindicaciones2()  Returns the current record's "contraindicaciones2" value
- * @method string              getContraindicaciones3()  Returns the current record's "contraindicaciones3" value
- * @method string              getContraindicaciones4()  Returns the current record's "contraindicaciones4" value
- * @method string              getContraindicaciones5()  Returns the current record's "contraindicaciones5" value
- * @method string              getPrecauciones()         Returns the current record's "precauciones" value
- * @method string              getPrecauciones2()        Returns the current record's "precauciones2" value
- * @method string              getPrecauciones3()        Returns the current record's "precauciones3" value
- * @method string              getPrecauciones4()        Returns the current record's "precauciones4" value
- * @method string              getPrecauciones5()        Returns the current record's "precauciones5" value
- * @method string              getEfectosSecundarios()   Returns the current record's "efectos_secundarios" value
- * @method string              getEfectosSecundarios2()  Returns the current record's "efectos_secundarios2" value
- * @method string              getEfectosSecundarios3()  Returns the current record's "efectos_secundarios3" value
- * @method string              getEfectosSecundarios4()  Returns the current record's "efectos_secundarios4" value
- * @method string              getEfectosSecundarios5()  Returns the current record's "efectos_secundarios5" value
- * @method string              getActaComunicacion()     Returns the current record's "acta_comunicacion" value
- * @method string              getObservaciones()        Returns the current record's "observaciones" value
- * @method string              getObservaciones2()       Returns the current record's "observaciones2" value
- * @method Doctrine_Collection getTipoCalificacion()     Returns the current record's "TipoCalificacion" collection
- * @method Doctrine_Collection getFormulario7()          Returns the current record's "Formulario7" collection
- * @method Aval                setCodigo()               Sets the current record's "codigo" value
- * @method Aval                setNombreGenerico()       Sets the current record's "nombre_generico" value
- * @method Aval                setFormaFarmaceutica()    Sets the current record's "forma_farmaceutica" value
- * @method Aval                setConcentracion()        Sets the current record's "concentracion" value
- * @method Aval                setViaAdministracion()    Sets the current record's "via_administracion" value
- * @method Aval                setAccionTerapeutica()    Sets the current record's "accion_terapeutica" value
- * @method Aval                setAccionTerapeutica2()   Sets the current record's "accion_terapeutica2" value
- * @method Aval                setDosis()                Sets the current record's "dosis" value
- * @method Aval                setDosis2()               Sets the current record's "dosis2" value
- * @method Aval                setDosis3()               Sets the current record's "dosis3" value
- * @method Aval                setIndicaciones()         Sets the current record's "indicaciones" value
- * @method Aval                setIndicaciones2()        Sets the current record's "indicaciones2" value
- * @method Aval                setIndicaciones3()        Sets the current record's "indicaciones3" value
- * @method Aval                setIndicaciones4()        Sets the current record's "indicaciones4" value
- * @method Aval                setIndicaciones5()        Sets the current record's "indicaciones5" value
- * @method Aval                setIndicaciones6()        Sets the current record's "indicaciones6" value
- * @method Aval                setContraindicaciones()   Sets the current record's "contraindicaciones" value
- * @method Aval                setContraindicaciones2()  Sets the current record's "contraindicaciones2" value
- * @method Aval                setContraindicaciones3()  Sets the current record's "contraindicaciones3" value
- * @method Aval                setContraindicaciones4()  Sets the current record's "contraindicaciones4" value
- * @method Aval                setContraindicaciones5()  Sets the current record's "contraindicaciones5" value
- * @method Aval                setPrecauciones()         Sets the current record's "precauciones" value
- * @method Aval                setPrecauciones2()        Sets the current record's "precauciones2" value
- * @method Aval                setPrecauciones3()        Sets the current record's "precauciones3" value
- * @method Aval                setPrecauciones4()        Sets the current record's "precauciones4" value
- * @method Aval                setPrecauciones5()        Sets the current record's "precauciones5" value
- * @method Aval                setEfectosSecundarios()   Sets the current record's "efectos_secundarios" value
- * @method Aval                setEfectosSecundarios2()  Sets the current record's "efectos_secundarios2" value
- * @method Aval                setEfectosSecundarios3()  Sets the current record's "efectos_secundarios3" value
- * @method Aval                setEfectosSecundarios4()  Sets the current record's "efectos_secundarios4" value
- * @method Aval                setEfectosSecundarios5()  Sets the current record's "efectos_secundarios5" value
- * @method Aval                setActaComunicacion()     Sets the current record's "acta_comunicacion" value
- * @method Aval                setObservaciones()        Sets the current record's "observaciones" value
- * @method Aval                setObservaciones2()       Sets the current record's "observaciones2" value
- * @method Aval                setTipoCalificacion()     Sets the current record's "TipoCalificacion" collection
- * @method Aval                setFormulario7()          Sets the current record's "Formulario7" collection
+ * @method string              getCodigo()              Returns the current record's "codigo" value
+ * @method string              getNombreGenerico()      Returns the current record's "nombre_generico" value
+ * @method string              getFormaFarmaceutica()   Returns the current record's "forma_farmaceutica" value
+ * @method string              getConcentracion()       Returns the current record's "concentracion" value
+ * @method string              getViaAdministracion()   Returns the current record's "via_administracion" value
+ * @method string              getAccionTerapeutica()   Returns the current record's "accion_terapeutica" value
+ * @method string              getDosis()               Returns the current record's "dosis" value
+ * @method string              getIndicaciones()        Returns the current record's "indicaciones" value
+ * @method string              getContraindicaciones()  Returns the current record's "contraindicaciones" value
+ * @method string              getPrecauciones()        Returns the current record's "precauciones" value
+ * @method string              getEfectosSecundarios()  Returns the current record's "efectos_secundarios" value
+ * @method string              getActaComunicacion()    Returns the current record's "acta_comunicacion" value
+ * @method string              getObservaciones()       Returns the current record's "observaciones" value
+ * @method string              getComision()            Returns the current record's "comision" value
+ * @method string              getCalificacion()        Returns the current record's "calificacion" value
+ * @method Doctrine_Collection getFormulario7()         Returns the current record's "Formulario7" collection
+ * @method Doctrine_Collection getTipoCalificacion()    Returns the current record's "TipoCalificacion" collection
+ * @method Aval                setCodigo()              Sets the current record's "codigo" value
+ * @method Aval                setNombreGenerico()      Sets the current record's "nombre_generico" value
+ * @method Aval                setFormaFarmaceutica()   Sets the current record's "forma_farmaceutica" value
+ * @method Aval                setConcentracion()       Sets the current record's "concentracion" value
+ * @method Aval                setViaAdministracion()   Sets the current record's "via_administracion" value
+ * @method Aval                setAccionTerapeutica()   Sets the current record's "accion_terapeutica" value
+ * @method Aval                setDosis()               Sets the current record's "dosis" value
+ * @method Aval                setIndicaciones()        Sets the current record's "indicaciones" value
+ * @method Aval                setContraindicaciones()  Sets the current record's "contraindicaciones" value
+ * @method Aval                setPrecauciones()        Sets the current record's "precauciones" value
+ * @method Aval                setEfectosSecundarios()  Sets the current record's "efectos_secundarios" value
+ * @method Aval                setActaComunicacion()    Sets the current record's "acta_comunicacion" value
+ * @method Aval                setObservaciones()       Sets the current record's "observaciones" value
+ * @method Aval                setComision()            Sets the current record's "comision" value
+ * @method Aval                setCalificacion()        Sets the current record's "calificacion" value
+ * @method Aval                setFormulario7()         Sets the current record's "Formulario7" collection
+ * @method Aval                setTipoCalificacion()    Sets the current record's "TipoCalificacion" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -131,7 +74,7 @@ abstract class BaseAval extends sfDoctrineRecord
              ));
         $this->hasColumn('nombre_generico', 'string', 100, array(
              'type' => 'string',
-             'notnull' => false,
+             'notnull' => true,
              'length' => 100,
              ));
         $this->hasColumn('forma_farmaceutica', 'string', 100, array(
@@ -149,160 +92,64 @@ abstract class BaseAval extends sfDoctrineRecord
              'notnull' => false,
              'length' => 100,
              ));
-        $this->hasColumn('accion_terapeutica', 'string', 200, array(
+        $this->hasColumn('accion_terapeutica', 'string', 1000, array(
              'type' => 'string',
              'notnull' => false,
-             'length' => 200,
+             'length' => 1000,
              ));
-        $this->hasColumn('accion_terapeutica2', 'string', 200, array(
+        $this->hasColumn('dosis', 'string', 2000, array(
              'type' => 'string',
              'notnull' => false,
-             'length' => 200,
+             'length' => 2000,
              ));
-        $this->hasColumn('dosis', 'string', 200, array(
+        $this->hasColumn('indicaciones', 'string', 5000, array(
              'type' => 'string',
              'notnull' => false,
-             'length' => 200,
+             'length' => 5000,
              ));
-        $this->hasColumn('dosis2', 'string', 200, array(
+        $this->hasColumn('contraindicaciones', 'string', 5000, array(
              'type' => 'string',
              'notnull' => false,
-             'length' => 200,
+             'length' => 5000,
              ));
-        $this->hasColumn('dosis3', 'string', 200, array(
+        $this->hasColumn('precauciones', 'string', 5000, array(
              'type' => 'string',
              'notnull' => false,
-             'length' => 200,
+             'length' => 5000,
              ));
-        $this->hasColumn('indicaciones', 'string', 200, array(
+        $this->hasColumn('efectos_secundarios', 'string', 5000, array(
              'type' => 'string',
              'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('indicaciones2', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('indicaciones3', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('indicaciones4', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('indicaciones5', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('indicaciones6', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('contraindicaciones', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('contraindicaciones2', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('contraindicaciones3', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('contraindicaciones4', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('contraindicaciones5', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('precauciones', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('precauciones2', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('precauciones3', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('precauciones4', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('precauciones5', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('efectos_secundarios', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('efectos_secundarios2', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('efectos_secundarios3', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('efectos_secundarios4', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
-             ));
-        $this->hasColumn('efectos_secundarios5', 'string', 200, array(
-             'type' => 'string',
-             'notnull' => false,
-             'length' => 200,
+             'length' => 5000,
              ));
         $this->hasColumn('acta_comunicacion', 'string', 100, array(
              'type' => 'string',
              'length' => 100,
              ));
-        $this->hasColumn('observaciones', 'string', 200, array(
+        $this->hasColumn('observaciones', 'string', 2000, array(
              'type' => 'string',
-             'length' => 200,
+             'length' => 2000,
              ));
-        $this->hasColumn('observaciones2', 'string', 200, array(
+        $this->hasColumn('comision', 'string', 100, array(
              'type' => 'string',
-             'length' => 200,
+             'length' => 100,
+             ));
+        $this->hasColumn('calificacion', 'string', 150, array(
+             'type' => 'string',
+             'length' => 150,
              ));
     }
 
     public function setUp()
     {
         parent::setUp();
-        $this->hasMany('TipoCalificacion', array(
-             'local' => 'tipo_calificacion_id',
-             'foreign' => 'id'));
-
         $this->hasMany('Formulario7', array(
              'local' => 'id',
              'foreign' => 'aval_id'));
+
+        $this->hasMany('TipoCalificacion', array(
+             'local' => 'tipo_calificacion_id',
+             'foreign' => 'id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));
