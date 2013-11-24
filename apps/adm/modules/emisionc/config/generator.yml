@@ -29,7 +29,7 @@ generator:
       list:
         title:   Listado Emisión de Correspondencia
         sort:    [id, desc]
-        display: [tipo_documento, empresa, emisor, nombre, fecha_envio, numero_guia]
+        display: [tipo_documento, emisor, nombre, fecha_envio, numero_guia]
         actions:
           ir_portal: {label: Volver al Portal}
           _new: ~
