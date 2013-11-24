@@ -1,37 +1,47 @@
 table {
     margin-top: 15px;
+    font-size: 11px;
 }
 
 h3 {
-    font-size: 10px;
+    font-size: 13px;
     font-weight: normal;
     width: 100%;
     text-align: center;
 }
 
 p {
-    font-size: 10px;
+    font-size: 11px;
 }
 
-.tbl-tipo-form td{
-    border: 1px solid #000;
-    /*margin-bottom: 10px;*/
-    font-size: 10px;
+.tbl-tipo-tramite {
+    width: 910px;
+    font-size: 11px;
+}
+
+.tbl-tipo-tramite td{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
     font-weight: bold;
-    font-style: normal;
-}
-
-.tbl-tipo-form td{
-    /*padding: 15px;*/
 }
 
 .caja-x {
-    font-size: 12px;
-    width: 15px;
-    height: 10px;
-    border: 1px solid #000;
-    display: inline;
+    background-color: #d55;
+    width: 30px;
 }
+
+.tramite-x {
+    font-size: 11px;
+    width: 30px;
+    border-left: 1px solid #000;
+    font-weight: bold;
+}
+
+.tramite-desc {
+    border-right: 1px solid #000;
+}
+
+
 
 td#textarea{
     height: 150px !important;
@@ -45,8 +55,14 @@ td#textarea{
 .tbl-generica td {
     border: 1px solid #000;
     margin-bottom: 10px;
-    font-size: 9px;
-    height: 33px;
+    font-size: 11px;
+    /*height: 33px;*/
+}
+
+td.titulo-pequeno,
+.titulo-pequeno
+{
+    font-size: 10px;
 }
 
 .tbl-firma td {
@@ -91,7 +107,7 @@ td#textarea{
     width: 367px;
 }
 .interesado-516 {
-    width: 235;
+    /*width: 235;*/
 }
 
 .sanitaria {
@@ -107,14 +123,14 @@ td.firma-persona {
     height: 40px;
 }
 
-.titulo-form {
-    margin-left: 50px;
+.head-formulario span#titulo-form {
+    width: 400px;
 }
 
 .head-formulario {
-    width: 100%;
-    text-align: center;
-    font-size: 10px;
+    /*width: 100%;*/
+    /*text-align: center;*/
+    font-size: 11px;
 }
 
 .maquila {
