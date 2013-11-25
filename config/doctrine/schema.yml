@@ -215,7 +215,7 @@ FormaFarmaceutica:
     nombre: {type: string(255), notnull: true}
   relations:
     Medicamento: {local: id, foreign: forma_farmaceutica_id, type: many, foreignAlias: Forma}
-    Formulario7: {local: id, foreign: forma_farmaceutica_id, type: many, foreignAlias: Forma}
+    #Formulario7: {local: id, foreign: forma_farmaceutica_id, type: many, foreignAlias: Forma}
     
 ViaAdministracion:
   actAs: [Timestampable, Signable]
@@ -223,7 +223,7 @@ ViaAdministracion:
     nombre: {type: string(100), notnull: true}
   relations:
     Medicamento: {local: id, foreign: via_administracion_id, type: many, foreignAlias: Administracion}
-    Formulario7: {local: id, foreign: via_administracion_id, type: many, foreignAlias: Administracion}
+    #Formulario7: {local: id, foreign: via_administracion_id, type: many, foreignAlias: Administracion}
     
 TipoVenta:
   actAs: [Timestampable, Signable]
@@ -607,10 +607,12 @@ Formulario7:
     referencia_aval:       {type: string(50)} 
     producto_id:           {type: integer, notnull: false}
     aval_id:               {type: integer, notnull: false}
-    forma_farmaceutica_id: {type: integer, notnull: false}
+    #forma_farmaceutica_id: {type: integer, notnull: false}
+    forma_farmaceutica:    {type: string(150), notnull: true}
     concentracion:         {type: string(150), notnull: true}
     tipo_calificacion_id:  {type: integer, notnull: true}
-    via_administracion_id: {type: integer, notnull: true}
+    #via_administracion_id: {type: integer, notnull: true}
+    via_administracion:    {type: string(150), notnull: true}
     accion_terapeutica:    {type: string(1000), notnull: true}
     dosis:                 {type: string(2000), notnull: true}
     indicaciones:          {type: string(5000), notnull: true}
@@ -624,8 +626,8 @@ Formulario7:
     Formulario:        {local: formulario_id, foreign: id, type: one, foreignAlias: Formulario7}
     Producto:          {local: producto_id, foreign: id, type: one, foreignAlias: Formulario7}
     TipoCalificacion:  {local: tipo_calificacion_id, foreign: id, type: one, foreignAlias: Formulario7}
-    ViaAdministracion: {local: via_administracion_id, foreign: id, type: one, foreignAlias: Formulario7}
-    FormaFarmaceutica: {local: forma_farmaceutica_id, foreign: id, type: one, foreignAlias: Formulario7}
+    #ViaAdministracion: {local: via_administracion_id, foreign: id, type: one, foreignAlias: Formulario7}
+    #FormaFarmaceutica: {local: forma_farmaceutica_id, foreign: id, type: one, foreignAlias: Formulario7}
     Aval:              {local: aval_id, foreign: id, type: one, foreignAlias: Formulario7}
 
 ############DESPACHO ADUANERO ################

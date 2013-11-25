@@ -21,7 +21,7 @@ class DetalleFormulaCcForm extends BaseDetalleFormulaCcForm
                 array( 'model'=>'Ingrediente',
                         'url'=>sfContext::getInstance()->getRouting()->generate('buscar_ingrediente')
          ));
-      //$this->validatorSchema['ingrediente_id']->setOption('required', true);
+      $this->validatorSchema['ingrediente_id']->setOption('required', true);
       if ($this->object->exists())
       {
         $this->widgetSchema['Eliminar'] = new sfWidgetFormInputCheckbox();

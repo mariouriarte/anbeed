@@ -50,15 +50,32 @@ class Formulario7Form extends BaseFormulario7Form
                  'model'     => 'TipoCalificacion'));
          
         // Autocompletar Via de Administracion
-        $this->widgetSchema['via_administracion_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
-                array( 'model'=> 'ViaAdministracion',
-                        'url' => sfContext::getInstance()->getRouting()->generate('buscar_via')
-        ));
+//        $this->widgetSchema['via_administracion_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+//                array( 'model'=> 'ViaAdministracion',
+//                        'url' => sfContext::getInstance()->getRouting()->generate('buscar_via')
+//        ));   
+        
+        //$this->widgetSchema['via_administracion_id']= new sfWidgetFormInput();
+                 
       
         // Autocompletar Forma Farmaceutica
-        $this->widgetSchema['forma_farmaceutica_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
-                array( 'model'=> 'FormaFarmaceutica',
-                        'url' => sfContext::getInstance()->getRouting()->generate('buscar_ffarmaceutica')
-        ));
+//        $this->widgetSchema['forma_farmaceutica_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+//                array( 'model'=> 'FormaFarmaceutica',
+//                        'url' => sfContext::getInstance()->getRouting()->generate('buscar_ffarmaceutica')
+//        ));
+        
+        
+        
+       # $this->widgetSchema['acta_comunicacion']->setAttribute('size' , 50);
+        $this->widgetSchema['comision']->setAttribute('size' , 50);
+        $this->widgetSchema['calificacion']->setAttribute('size' , 50);
+        $this->widgetSchema['accion_terapeutica']->setAttribute('cols' , 80);
+        $this->widgetSchema['dosis']->setAttribute('cols' , 80);
+        $this->widgetSchema['indicaciones']->setAttribute('cols' , 80);
+        $this->widgetSchema['contraindicaciones']->setAttribute('cols' , 80);
+        $this->widgetSchema['precauciones']->setAttribute('cols' , 80);
+        $this->widgetSchema['efectos_secundarios']->setAttribute('cols' , 80);
+        $this->widgetSchema['observaciones']->setAttribute('cols' , 80);
+    
   }
 }

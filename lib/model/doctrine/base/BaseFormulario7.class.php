@@ -12,10 +12,10 @@
  * @property string $referencia_aval
  * @property integer $producto_id
  * @property integer $aval_id
- * @property integer $forma_farmaceutica_id
+ * @property string $forma_farmaceutica
  * @property string $concentracion
  * @property integer $tipo_calificacion_id
- * @property integer $via_administracion_id
+ * @property string $via_administracion
  * @property string $accion_terapeutica
  * @property string $dosis
  * @property string $indicaciones
@@ -28,62 +28,56 @@
  * @property Formulario $Formulario
  * @property Producto $Producto
  * @property TipoCalificacion $TipoCalificacion
- * @property ViaAdministracion $ViaAdministracion
- * @property FormaFarmaceutica $FormaFarmaceutica
  * @property Aval $Aval
  * 
- * @method integer           getFormularioId()          Returns the current record's "formulario_id" value
- * @method date              getFecha()                 Returns the current record's "fecha" value
- * @method integer           getVigencia()              Returns the current record's "vigencia" value
- * @method date              getFechaInicioVigencia()   Returns the current record's "fecha_inicio_vigencia" value
- * @method string            getReferenciaAval()        Returns the current record's "referencia_aval" value
- * @method integer           getProductoId()            Returns the current record's "producto_id" value
- * @method integer           getAvalId()                Returns the current record's "aval_id" value
- * @method integer           getFormaFarmaceuticaId()   Returns the current record's "forma_farmaceutica_id" value
- * @method string            getConcentracion()         Returns the current record's "concentracion" value
- * @method integer           getTipoCalificacionId()    Returns the current record's "tipo_calificacion_id" value
- * @method integer           getViaAdministracionId()   Returns the current record's "via_administracion_id" value
- * @method string            getAccionTerapeutica()     Returns the current record's "accion_terapeutica" value
- * @method string            getDosis()                 Returns the current record's "dosis" value
- * @method string            getIndicaciones()          Returns the current record's "indicaciones" value
- * @method string            getContraindicaciones()    Returns the current record's "contraindicaciones" value
- * @method string            getPrecauciones()          Returns the current record's "precauciones" value
- * @method string            getEfectosSecundarios()    Returns the current record's "efectos_secundarios" value
- * @method string            getObservaciones()         Returns the current record's "observaciones" value
- * @method string            getComision()              Returns the current record's "comision" value
- * @method string            getCalificacion()          Returns the current record's "calificacion" value
- * @method Formulario        getFormulario()            Returns the current record's "Formulario" value
- * @method Producto          getProducto()              Returns the current record's "Producto" value
- * @method TipoCalificacion  getTipoCalificacion()      Returns the current record's "TipoCalificacion" value
- * @method ViaAdministracion getViaAdministracion()     Returns the current record's "ViaAdministracion" value
- * @method FormaFarmaceutica getFormaFarmaceutica()     Returns the current record's "FormaFarmaceutica" value
- * @method Aval              getAval()                  Returns the current record's "Aval" value
- * @method Formulario7       setFormularioId()          Sets the current record's "formulario_id" value
- * @method Formulario7       setFecha()                 Sets the current record's "fecha" value
- * @method Formulario7       setVigencia()              Sets the current record's "vigencia" value
- * @method Formulario7       setFechaInicioVigencia()   Sets the current record's "fecha_inicio_vigencia" value
- * @method Formulario7       setReferenciaAval()        Sets the current record's "referencia_aval" value
- * @method Formulario7       setProductoId()            Sets the current record's "producto_id" value
- * @method Formulario7       setAvalId()                Sets the current record's "aval_id" value
- * @method Formulario7       setFormaFarmaceuticaId()   Sets the current record's "forma_farmaceutica_id" value
- * @method Formulario7       setConcentracion()         Sets the current record's "concentracion" value
- * @method Formulario7       setTipoCalificacionId()    Sets the current record's "tipo_calificacion_id" value
- * @method Formulario7       setViaAdministracionId()   Sets the current record's "via_administracion_id" value
- * @method Formulario7       setAccionTerapeutica()     Sets the current record's "accion_terapeutica" value
- * @method Formulario7       setDosis()                 Sets the current record's "dosis" value
- * @method Formulario7       setIndicaciones()          Sets the current record's "indicaciones" value
- * @method Formulario7       setContraindicaciones()    Sets the current record's "contraindicaciones" value
- * @method Formulario7       setPrecauciones()          Sets the current record's "precauciones" value
- * @method Formulario7       setEfectosSecundarios()    Sets the current record's "efectos_secundarios" value
- * @method Formulario7       setObservaciones()         Sets the current record's "observaciones" value
- * @method Formulario7       setComision()              Sets the current record's "comision" value
- * @method Formulario7       setCalificacion()          Sets the current record's "calificacion" value
- * @method Formulario7       setFormulario()            Sets the current record's "Formulario" value
- * @method Formulario7       setProducto()              Sets the current record's "Producto" value
- * @method Formulario7       setTipoCalificacion()      Sets the current record's "TipoCalificacion" value
- * @method Formulario7       setViaAdministracion()     Sets the current record's "ViaAdministracion" value
- * @method Formulario7       setFormaFarmaceutica()     Sets the current record's "FormaFarmaceutica" value
- * @method Formulario7       setAval()                  Sets the current record's "Aval" value
+ * @method integer          getFormularioId()          Returns the current record's "formulario_id" value
+ * @method date             getFecha()                 Returns the current record's "fecha" value
+ * @method integer          getVigencia()              Returns the current record's "vigencia" value
+ * @method date             getFechaInicioVigencia()   Returns the current record's "fecha_inicio_vigencia" value
+ * @method string           getReferenciaAval()        Returns the current record's "referencia_aval" value
+ * @method integer          getProductoId()            Returns the current record's "producto_id" value
+ * @method integer          getAvalId()                Returns the current record's "aval_id" value
+ * @method string           getFormaFarmaceutica()     Returns the current record's "forma_farmaceutica" value
+ * @method string           getConcentracion()         Returns the current record's "concentracion" value
+ * @method integer          getTipoCalificacionId()    Returns the current record's "tipo_calificacion_id" value
+ * @method string           getViaAdministracion()     Returns the current record's "via_administracion" value
+ * @method string           getAccionTerapeutica()     Returns the current record's "accion_terapeutica" value
+ * @method string           getDosis()                 Returns the current record's "dosis" value
+ * @method string           getIndicaciones()          Returns the current record's "indicaciones" value
+ * @method string           getContraindicaciones()    Returns the current record's "contraindicaciones" value
+ * @method string           getPrecauciones()          Returns the current record's "precauciones" value
+ * @method string           getEfectosSecundarios()    Returns the current record's "efectos_secundarios" value
+ * @method string           getObservaciones()         Returns the current record's "observaciones" value
+ * @method string           getComision()              Returns the current record's "comision" value
+ * @method string           getCalificacion()          Returns the current record's "calificacion" value
+ * @method Formulario       getFormulario()            Returns the current record's "Formulario" value
+ * @method Producto         getProducto()              Returns the current record's "Producto" value
+ * @method TipoCalificacion getTipoCalificacion()      Returns the current record's "TipoCalificacion" value
+ * @method Aval             getAval()                  Returns the current record's "Aval" value
+ * @method Formulario7      setFormularioId()          Sets the current record's "formulario_id" value
+ * @method Formulario7      setFecha()                 Sets the current record's "fecha" value
+ * @method Formulario7      setVigencia()              Sets the current record's "vigencia" value
+ * @method Formulario7      setFechaInicioVigencia()   Sets the current record's "fecha_inicio_vigencia" value
+ * @method Formulario7      setReferenciaAval()        Sets the current record's "referencia_aval" value
+ * @method Formulario7      setProductoId()            Sets the current record's "producto_id" value
+ * @method Formulario7      setAvalId()                Sets the current record's "aval_id" value
+ * @method Formulario7      setFormaFarmaceutica()     Sets the current record's "forma_farmaceutica" value
+ * @method Formulario7      setConcentracion()         Sets the current record's "concentracion" value
+ * @method Formulario7      setTipoCalificacionId()    Sets the current record's "tipo_calificacion_id" value
+ * @method Formulario7      setViaAdministracion()     Sets the current record's "via_administracion" value
+ * @method Formulario7      setAccionTerapeutica()     Sets the current record's "accion_terapeutica" value
+ * @method Formulario7      setDosis()                 Sets the current record's "dosis" value
+ * @method Formulario7      setIndicaciones()          Sets the current record's "indicaciones" value
+ * @method Formulario7      setContraindicaciones()    Sets the current record's "contraindicaciones" value
+ * @method Formulario7      setPrecauciones()          Sets the current record's "precauciones" value
+ * @method Formulario7      setEfectosSecundarios()    Sets the current record's "efectos_secundarios" value
+ * @method Formulario7      setObservaciones()         Sets the current record's "observaciones" value
+ * @method Formulario7      setComision()              Sets the current record's "comision" value
+ * @method Formulario7      setCalificacion()          Sets the current record's "calificacion" value
+ * @method Formulario7      setFormulario()            Sets the current record's "Formulario" value
+ * @method Formulario7      setProducto()              Sets the current record's "Producto" value
+ * @method Formulario7      setTipoCalificacion()      Sets the current record's "TipoCalificacion" value
+ * @method Formulario7      setAval()                  Sets the current record's "Aval" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -123,9 +117,10 @@ abstract class BaseFormulario7 extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => false,
              ));
-        $this->hasColumn('forma_farmaceutica_id', 'integer', null, array(
-             'type' => 'integer',
-             'notnull' => false,
+        $this->hasColumn('forma_farmaceutica', 'string', 150, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => 150,
              ));
         $this->hasColumn('concentracion', 'string', 150, array(
              'type' => 'string',
@@ -136,9 +131,10 @@ abstract class BaseFormulario7 extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('via_administracion_id', 'integer', null, array(
-             'type' => 'integer',
+        $this->hasColumn('via_administracion', 'string', 150, array(
+             'type' => 'string',
              'notnull' => true,
+             'length' => 150,
              ));
         $this->hasColumn('accion_terapeutica', 'string', 1000, array(
              'type' => 'string',
@@ -197,14 +193,6 @@ abstract class BaseFormulario7 extends sfDoctrineRecord
 
         $this->hasOne('TipoCalificacion', array(
              'local' => 'tipo_calificacion_id',
-             'foreign' => 'id'));
-
-        $this->hasOne('ViaAdministracion', array(
-             'local' => 'via_administracion_id',
-             'foreign' => 'id'));
-
-        $this->hasOne('FormaFarmaceutica', array(
-             'local' => 'forma_farmaceutica_id',
              'foreign' => 'id'));
 
         $this->hasOne('Aval', array(

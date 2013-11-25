@@ -1,7 +1,7 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 <?php use_stylesheet('formulario_decision.css') ?>
-<?php use_javascript('jquery-migrate.js') ?>
+<?php // use_javascript('jquery-migrate.js') ?>
 
 <?php
 if(sfConfig::get('sf_environment') == 'dev')
@@ -15,11 +15,41 @@ if(sfConfig::get('sf_environment') == 'dev')
 $(document).ready(function()
 {
     //Formula Farmaceutica
-    $('#autocomplete_formulario7_forma_farmaceutica_id')
-        .after("&nbsp;&nbsp;<a href='/farmaceutica<?php echo $env?>.php/ffarmaceuticas/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nueva Forma Farmaceutica\"/></a>");
-    $('#autocomplete_formulario7_via_administracion_id')
-        .after("&nbsp;&nbsp;<a href='/farmaceutica<?php echo $env?>.php/administraciones/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nueva Via de Administración\"/></a>");
-});
+//    $('#autocomplete_formulario7_forma_farmaceutica_id')
+//        .after("&nbsp;&nbsp;<a href='/farmaceutica<?php echo $env?>.php/ffarmaceuticas/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nueva Forma Farmaceutica\"/></a>");
+//    $('#autocomplete_formulario7_via_administracion_id')
+//        .after("&nbsp;&nbsp;<a href='/farmaceutica<?php echo $env?>.php/administraciones/new' onclick=\"var w=window.open(this.href,'popupWindow','width=500,height=290,left=20,top=100,scrollbars=yes,menubar=no,resizable=no');w.focus();return false;\"><img src=\"/images/icons/add.svg\" title=\"Nueva Via de Administración\"/></a>");
+
+
+    $('#formulario7_aval_id').change(function() 
+    {
+        id = $("select[name='formulario7[aval_id]'] option:selected").val();
+        //codigo = $('#activo-codigo-header').html();
+        //alert(id);
+        $.ajax({
+            method: 'get',
+            dataType: "json",
+            url:  '<?php echo url_for("form7/ajaxGetCamposAvalJSON") ?>',
+            data: 'aval_id='+ id,
+            beforeSend: function(){            
+            },
+            complete: function(){
+            },
+            success: function(data){
+                $('#formulario7_forma_farmaceutica').val(data.formula);
+                $('#formulario7_concentracion').val(data.concentracion);
+                $('#formulario7_via_administracion').val(data.via);
+                $('#formulario7_accion_terapeutica').val(data.accion);
+                $('#formulario7_dosis').val(data.dosis);
+                $('#formulario7_indicaciones').val(data.indi);
+                $('#formulario7_contraindicaciones').val(data.contraindi);
+                $('#formulario7_precauciones').val(data.precau);
+                $('#formulario7_efectos_secundarios').val(data.efectos);
+                $('#formulario7_observaciones').val(data.obs);
+            }
+        });
+    })
+});    
 </script>
 
 <?php 
@@ -118,8 +148,8 @@ if($tabla == 'higiene')
 //                if($tabla == 'medicamento')
 //                    echo $producto -> getFormaFarmaceutica();
 //                else {
-//                    echo $form['forma_farmaceutica_id']->renderError();
-//                    echo $form['forma_farmaceutica_id'];
+                    echo $form['forma_farmaceutica']->renderError();
+                    echo $form['forma_farmaceutica'];
 //                }
            ?></td>
       </tr>
@@ -127,56 +157,56 @@ if($tabla == 'higiene')
           <th>Concentración: </th>
           <td>
             <?php echo $form['concentracion']->renderError() ?>
-            <?php // echo $form['concentracion'] ?>
+            <?php echo $form['concentracion'] ?>
           </td>
       </tr>
       <tr>
         <th>Vía de Administración: </th>
         <td>
-          <?php echo $form['via_administracion_id']->renderError() ?>
-          <?php // echo $form['via_administracion_id'] ?>
+          <?php echo $form['via_administracion']->renderError() ?>
+          <?php echo $form['via_administracion'] ?>
         </td>
       </tr>
       <tr>
         <th>Acción terapéutica: </th>
         <td>
           <?php echo $form['accion_terapeutica']->renderError() ?>
-          <?php // echo $form['accion_terapeutica'] ?>
+          <?php echo $form['accion_terapeutica'] ?>
         </td>
       </tr>
       <tr>
         <th>Dosis: </th>
         <td>
           <?php echo $form['dosis']->renderError() ?>
-          <?php // echo $form['dosis'] ?>
+          <?php echo $form['dosis'] ?>
         </td>
       </tr>
       <tr>
         <th>Indicaciones: </th>
         <td>
           <?php echo $form['indicaciones']->renderError() ?>
-          <?php // echo $form['indicaciones'] ?>
+          <?php echo $form['indicaciones'] ?>
         </td>
       </tr>
       <tr>
         <th>Contraindicaciones: </th>
         <td>
           <?php echo $form['contraindicaciones']->renderError() ?>
-          <?php // echo $form['contraindicaciones'] ?>
+          <?php echo $form['contraindicaciones'] ?>
         </td>
       </tr>
       <tr>
         <th>Precauciones: </th>
         <td>
           <?php echo $form['precauciones']->renderError() ?>
-          <?php // echo $form['precauciones'] ?>
+          <?php echo $form['precauciones'] ?>
         </td>
       </tr>
       <tr>
         <th>Efectos secundarios/Interacciones: </th>
         <td>
           <?php echo $form['efectos_secundarios']->renderError() ?>
-          <?php // echo $form['efectos_secundarios'] ?>
+          <?php echo $form['efectos_secundarios'] ?>
         </td>
       </tr>
     </tbody>
@@ -190,14 +220,14 @@ if($tabla == 'higiene')
         <th>Observaciones</th>
         <td>
           <?php echo $form['observaciones']->renderError() ?>
-          <?php // echo $form['observaciones'] ?>
+          <?php echo $form['observaciones'] ?>
         </td>
       </tr>
       <tr>
         <th>La Comisión Farmacológica Nacional </th>
         <td>
           <?php echo $form['comision']->renderError() ?>
-          <?php // echo $form['comision'] ?>
+          <?php  echo $form['comision'] ?>
             <span class="help-descripcion-tabla">solicita mayor información</span>
         </td>
       </tr>
@@ -205,7 +235,7 @@ if($tabla == 'higiene')
         <th>Por consiguiente el citado producto es </th>
         <td>
           <?php echo $form['calificacion']->renderError() ?>
-          <?php // echo $form['calificacion'] ?> 
+          <?php echo $form['calificacion'] ?> 
           <span class="help-descripcion-tabla">pudiendo proseguir con el correspondiente trámite de inscripción y/o reinscripción </spam>
         </td>
       </tr>
@@ -213,7 +243,7 @@ if($tabla == 'higiene')
   </table>
 </div>
 
-<table bordercolor="#FFFFFF" align="center">
+<!--<table bordercolor="#FFFFFF" align="center">
     <tr>
         <td><font size="4"><b>DATOS ADICIONALES DEL FORMULARIO</b></font></td>
     </tr>
@@ -225,27 +255,27 @@ if($tabla == 'higiene')
       <tr>
         <th>Tiempo de Vigencia</th>
         <td>
-          <?php echo $form['vigencia']->renderError() ?>
-          <?php echo $form['vigencia'] ?>
+          <?php // echo $form['vigencia']->renderError() ?>
+          <?php // echo $form['vigencia'] ?>
         </td>
       </tr>
       <tr>
         <th>Fecha de inicio de vigencia</th>
         <td>
-          <?php echo $form['fecha_inicio_vigencia']->renderError() ?>
-          <?php echo $form['fecha_inicio_vigencia'] ?>
+          <?php // echo $form['fecha_inicio_vigencia']->renderError() ?>
+          <?php // echo $form['fecha_inicio_vigencia'] ?>
         </td>
       </tr>
       <tr>
         <th>Reverencia aval</th>
         <td>
-          <?php echo $form['referencia_aval']->renderError() ?>
-          <?php echo $form['referencia_aval'] ?>
+          <?php // echo $form['referencia_aval']->renderError() ?>
+          <?php // echo $form['referencia_aval'] ?>
         </td>
       </tr>
     </tbody>
   </table>
-</div>
+</div>-->
 
 <?php echo $form->renderHiddenFields(false) ?>          
 <ul class="sf_admin_actions">
