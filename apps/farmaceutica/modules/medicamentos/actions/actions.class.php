@@ -149,7 +149,7 @@ class medicamentosActions extends autoMedicamentosActions
         $pdf->SetKeywords('TCPDF, PDF, ANBEED SRL, Formulario005, impresion');
 
         //set margins
-        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, 0);
         $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
         $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
@@ -181,9 +181,9 @@ class medicamentosActions extends autoMedicamentosActions
         $pdf->SetFont('courier', '', 13, '', true);
         $html = '<br><br><br><table border="1" width="100%" cellpadding="2" cellspacing="0">
                     <tr bgcolor="#EEE">
-                        <th width="70%"><b>INGREDIENTE</b></th>
-                        <th width="15%"><b>CANTIDAD</b></th>
-                        <th width="15%"><b>UNIDAD</b></th>
+                        <th width="60%"><b>INGREDIENTE</b></th>
+                        <th width="20%"  align="center"><b>CANTIDAD</b></th>
+                        <th width="10%"><b>UNIDAD</b></th>
                     </tr>
                     <tr>
                         <td colspan="3">'.$this->Medicamento->FormulaCc->getContenido().':</td>
@@ -192,7 +192,7 @@ class medicamentosActions extends autoMedicamentosActions
                         <td colspan="3"><b>PRINCIPIO ACTIVO:</b></td>
                     </tr>
                     <tr>
-                        <td>'.$this->Medicamento->FormulaCc->Ingrediente.'</td>
+                        <td>'.$this->Medicamento->FormulaCc->Ingrediente->getNombre().'</td>
                         <td align="center">'.$this->Medicamento->FormulaCc->getCantidad().'</td>
                         <td align="center">'.$this->Medicamento->FormulaCc->getUnidad().'</td>
                     </tr>
@@ -205,7 +205,7 @@ class medicamentosActions extends autoMedicamentosActions
         {
             $html.='
                 <tr>
-                    <td>'.$ingrediente->Ingrediente[0].'</td>
+                    <td>'.$ingrediente->Ingrediente[0]->getNombre().'</td>
                     <td align="center">'.$ingrediente->getCantidad().'</td>
                     <td align="center">'.$ingrediente->getUnidad().'</td>
                 </tr>
