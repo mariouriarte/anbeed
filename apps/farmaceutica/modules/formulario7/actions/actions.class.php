@@ -54,7 +54,7 @@ class formulario7Actions extends autoFormulario7Actions
         $pdf->AddPage();
 
         //definimos la variable para el eje y
-        $y = 67;
+        $y = 68;
         $x = 0;
         
         //Tamaño de letra para datos
@@ -75,13 +75,13 @@ class formulario7Actions extends autoFormulario7Actions
         
         //Revisamos el tipo de tramite
             // inicializamos en el primero
-        $x_tipo_calificacion = $x+51; 
+        $x_tipo_calificacion = $x+53; 
         if($this->formulario7->getTipoCalificacionId() == 2)
-            $x_tipo_calificacion += 46;
+            $x_tipo_calificacion += 48;
         if($this->formulario7->getTipoCalificacionId() == 3)
-            $x_tipo_calificacion += 99;
+            $x_tipo_calificacion += 100;
         if($this->formulario7->getTipoCalificacionId() == 4)
-            $x_tipo_calificacion += 139;
+            $x_tipo_calificacion += 135;
             //Imprimimos X del tipo de tramite
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_tipo_calificacion, $y+=5, true);
         
@@ -137,7 +137,7 @@ class formulario7Actions extends autoFormulario7Actions
         $pdf->MultiCell(145, 10, $this->formulario7->getAccionTerapeutica(),
             0, 'L', 0, 0, $x+56, $y+=4, true);
         $pdf->MultiCell(165, 15, $this->formulario7->getDosis(),
-            0, 'L', 0, 0, $x+36, $y+=8, true);
+            0, 'L', 0, 0, $x+36, $y+=9, true);
         $pdf->MultiCell(155, 30, $this->formulario7->getIndicaciones(),
             0, 'L', 0, 0, $x+47, $y+=12, true);
         $pdf->MultiCell(145, 25, $this->formulario7->getContraindicaciones(),
