@@ -7,14 +7,14 @@
  * 
  * @property integer $formula_cc_id
  * @property integer $ingrediente_id
- * @property decimal $cantidad
+ * @property string $cantidad
  * @property string $unidad
  * @property FormulaCc $FormulaCc
  * @property Doctrine_Collection $Ingrediente
  * 
  * @method integer             getFormulaCcId()    Returns the current record's "formula_cc_id" value
  * @method integer             getIngredienteId()  Returns the current record's "ingrediente_id" value
- * @method decimal             getCantidad()       Returns the current record's "cantidad" value
+ * @method string              getCantidad()       Returns the current record's "cantidad" value
  * @method string              getUnidad()         Returns the current record's "unidad" value
  * @method FormulaCc           getFormulaCc()      Returns the current record's "FormulaCc" value
  * @method Doctrine_Collection getIngrediente()    Returns the current record's "Ingrediente" collection
@@ -43,11 +43,10 @@ abstract class BaseDetalleFormulaCc extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => false,
              ));
-        $this->hasColumn('cantidad', 'decimal', 5, array(
-             'type' => 'decimal',
-             'scale' => 2,
+        $this->hasColumn('cantidad', 'string', 25, array(
+             'type' => 'string',
              'notnull' => true,
-             'length' => 5,
+             'length' => 25,
              ));
         $this->hasColumn('unidad', 'string', 20, array(
              'type' => 'string',

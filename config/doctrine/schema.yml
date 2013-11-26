@@ -238,7 +238,7 @@ FormulaCc:
     contenido:      {type: string(250), notnull: false}
     ingrediente_id: {type: integer, notnull: false}
     #cantidad:       {type: decimal(5), scale: 2, notnull: false}
-    cantidad:       {type: string(25), scale: 2, notnull: false}
+    cantidad:       {type: string(25), notnull: false}
     unidad:         {type: string(30), notnull: false}
     
   relations:
