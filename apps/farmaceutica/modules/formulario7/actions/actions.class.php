@@ -90,50 +90,49 @@ class formulario7Actions extends autoFormulario7Actions
         
         //Datos del Producto
         
-        if($producto=='Reactivo')
+//        if($producto=='Reactivo')
+//            $pdf->MultiCell(145, 0, $this->formulario7->Producto
+//                ->$producto->getNombreComercial(),
+//                0, 'L', 0, 0, $x+57, $y+=5, true);
+//        
+//        if($producto=='Medicamento' || $producto ='DispositivoMedico')
+//        {
             $pdf->MultiCell(145, 0, $this->formulario7->Producto
                 ->$producto->getNombreComercial(),
                 0, 'L', 0, 0, $x+57, $y+=5, true);
-        
-        if($producto=='Medicamento' || $producto ='DispositivoMedico')
-        {
-            $pdf->MultiCell(145, 0, $this->formulario7->Producto
-                ->$producto->getNombreComercial(),
-                0, 'L', 0, 0, $x+57, $y+=5, true);
-            $pdf->MultiCell(135, 0, $this->formulario7->Producto
-                ->$producto->getNombreGenerico(),
+            $pdf->MultiCell(135, 0, $this->formulario7->Aval->getNombreGenerico(),
                 0, 'L', 0, 0, $x+68, $y+=5, true);
-        }
-        
-        if ($producto=='Cosmetico' || $producto =='Higiene')
-        {
-            $pdf->MultiCell(145, 0, $this->formulario7->Producto->$producto->getMarca(),
-                0, 'L', 0, 0, $x+57, $y+=5, true);
-            $pdf->MultiCell(135, 0, $this->formulario7->Producto->$producto->getNombre(),
-                0, 'L', 0, 0, $x+68, $y+=5, true);
-        }
+//        }
+//        
+//        if ($producto=='Cosmetico' || $producto =='Higiene')
+//        {
+//            $pdf->MultiCell(145, 0, $this->formulario7->Producto->$producto->getMarca(),
+//                0, 'L', 0, 0, $x+57, $y+=5, true);
+//            $pdf->MultiCell(135, 0, $this->formulario7->Producto->$producto->getNombre(),
+//                0, 'L', 0, 0, $x+68, $y+=5, true);
+//        }
         
         //Datos del laboratorio
         $pdf->MultiCell(140, 0, $this->formulario7->Producto->$producto
             ->LaboratorioFabricante->getNombre(),
             0, 'L', 0, 0, $x+63, $y+=4, true);
         
-        if($producto=='Medicamento')
-        {
-            $pdf->MultiCell(65, 0, $this->formulario7->Producto->$producto
-                ->FormaFarmaceutica->getNombre(),
+//        if($producto=='Medicamento')
+//        {
+//            $pdf->MultiCell(65, 0, $this->formulario7->Producto->$producto
+//                ->FormaFarmaceutica->getNombre(),
+//                0, 'L', 0, 0, $x+59, $y+=5, true);
+//        }
+//        else 
+//        {
+            $pdf->MultiCell(65, 0, $this->formulario7->getFormaFarmaceutica(),
                 0, 'L', 0, 0, $x+59, $y+=5, true);
-        }
-        else 
-        {
-            $pdf->MultiCell(65, 0, $this->formulario7->FormaFarmaceutica->getNombre(),
-                0, 'L', 0, 0, $x+59, $y+=5, true);
-        }
+//        }
         $pdf->MultiCell(50, 0, $this->formulario7->getConcentracion(),
             0, 'L', 0, 0, $x+149, $y, true);
 
         //Datos del Formulario
-        $pdf->MultiCell(145, 0, $this->formulario7->ViaAdministracion->getNombre(),
+        $pdf->MultiCell(145, 0, $this->formulario7->getViaAdministracion(),
             0, 'L', 0, 0, $x+60, $y+=38, true);
         $pdf->MultiCell(145, 10, $this->formulario7->getAccionTerapeutica(),
             0, 'L', 0, 0, $x+56, $y+=4, true);
