@@ -26,7 +26,7 @@ class formulario12Actions extends autoFormulario12Actions
         $config = sfTCPDFPluginConfigHandler::loadConfig();
                   sfTCPDFPluginConfigHandler::includeLangFile(
                           $this->getUser()->getCulture());
-        $page_size = array(210,320);
+        $page_size = array(210,340);
         $pdf = new sfTCPDF('P', PDF_UNIT, $page_size, true, 'UTF-8', false);
         
         // Informacion el documento
@@ -141,7 +141,7 @@ class formulario12Actions extends autoFormulario12Actions
         
         $fecha_registro = funciones::FechaEspanol2($this->formulario12->getFecha());
         
-        $pdf->MultiCell(60, 0, $fecha_registro[0],0, 'L', 0, 0, $x+107, $y+=30, true);
+        $pdf->MultiCell(60, 0, $fecha_registro[0],0, 'L', 0, 0, $x+107, $y+=50, true);
         $pdf->MultiCell(60, 0, $fecha_registro[1],0, 'L', 0, 0, $x+127, $y, true);
         $pdf->MultiCell(60, 0, $fecha_registro[3],0, 'L', 0, 0, $x+175, $y, true);
         
