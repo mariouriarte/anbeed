@@ -49,7 +49,6 @@ abstract class BaseFormulaCc extends sfDoctrineRecord
              ));
         $this->hasColumn('cantidad', 'string', 25, array(
              'type' => 'string',
-             'scale' => 2,
              'notnull' => false,
              'length' => 25,
              ));
