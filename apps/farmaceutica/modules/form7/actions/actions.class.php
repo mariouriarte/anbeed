@@ -21,18 +21,18 @@ class form7Actions extends sfActions
                     ->where('a.id = ?', $aval_id);
             
             $aval = $q->fetchOne();
-            //$formula = $aval['forma_farmaceutica'];
+            
             $formula = array(
-                'formula' => str_pad($aval['forma_farmaceutica'], 4, '0', STR_PAD_LEFT),
-                'concentracion' => str_pad($aval['concentracion'], 4, '0', STR_PAD_LEFT),
-                'via' => str_pad($aval['via_administracion'], 4, '0', STR_PAD_LEFT),
-                'accion' => str_pad($aval['accion_terapeutica'], 4, '0', STR_PAD_LEFT),
-                'dosis' => str_pad($aval['dosis'], 4, '0', STR_PAD_LEFT),
-                'indi' => str_pad($aval['indicaciones'], 4, '0', STR_PAD_LEFT),
-                'contraindi' => str_pad($aval['contraindicaciones'], 4, '0', STR_PAD_LEFT),
-                'precau' => str_pad($aval['precauciones'], 4, '0', STR_PAD_LEFT),
-                'efectos' => str_pad($aval['efectos_secundarios'], 4, '0', STR_PAD_LEFT),
-                'obs' => str_pad($aval['observaciones'], 4, '0', STR_PAD_LEFT)
+                'formula' => $aval['forma_farmaceutica'],
+                'concentracion' => $aval['concentracion'], 
+                'via' => $aval['via_administracion'],
+                'accion' => $aval['accion_terapeutica'],
+                'dosis' => $aval['dosis'],
+                'indi' => $aval['indicaciones'],
+                'contraindi' => $aval['contraindicaciones'],
+                'precau' => $aval['precauciones'],
+                'efectos' => $aval['efectos_secundarios'],
+                'obs' => $aval['observaciones']
             );
         
             echo json_encode($formula, JSON_FORCE_OBJECT);

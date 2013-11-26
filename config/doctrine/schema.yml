@@ -237,7 +237,8 @@ FormulaCc:
   columns:
     contenido:      {type: string(250), notnull: false}
     ingrediente_id: {type: integer, notnull: false}
-    cantidad:       {type: decimal(5), scale: 2, notnull: false}
+    #cantidad:       {type: decimal(5), scale: 2, notnull: false}
+    cantidad:       {type: string(25), scale: 2, notnull: false}
     unidad:         {type: string(30), notnull: false}
     
   relations:
@@ -250,7 +251,8 @@ DetalleFormulaCc:
   columns:
     formula_cc_id:  {type: integer, notnull: true}
     ingrediente_id: {type: integer, notnull: false}
-    cantidad:       {type: decimal(5), scale: 2, notnull: true}
+    cantidad:       {type: string(25), notnull: true}
+    #cantidad:       {type: decimal(5), scale: 2, notnull: true}
     unidad:         {type: string(20), notnull: true}
   relations:
     FormulaCc:   {local: formula_cc_id, foreign: id, type: one, foreignAlias: Detalles}
