@@ -111,7 +111,7 @@ class formulario5Actions extends autoFormulario5Actions
         $config = sfTCPDFPluginConfigHandler::loadConfig();
                   sfTCPDFPluginConfigHandler::includeLangFile($this->getUser()->getCulture());
         
-        $page_size = array(210,331);
+        $page_size = array(210,345);
         $pdf = new sfTCPDF('P', PDF_UNIT, $page_size, true, 'UTF-8', false);
         // Informacion el documento
         $pdf->SetCreator(PDF_CREATOR);
@@ -140,7 +140,7 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->AddPage();
 
         //definimos la variable para el eje y
-        $y = 94;
+        $y = 101;
         $x = 0;
         
         /*Revisamos el tipo de tramite*/
@@ -257,7 +257,7 @@ class formulario5Actions extends autoFormulario5Actions
         
         $fecha_registro = funciones::FechaEspanol2($this->formulario5->getFecha());
         
-        $pdf->MultiCell(60, 0, $fecha_registro[0],0, 'L', 0, 0, $x+107, $y+=30, true);
+        $pdf->MultiCell(60, 0, $fecha_registro[0],0, 'L', 0, 0, $x+107, $y+=34, true);
         $pdf->MultiCell(60, 0, $fecha_registro[1],0, 'L', 0, 0, $x+127, $y, true);
         $pdf->MultiCell(60, 0, $fecha_registro[3],0, 'L', 0, 0, $x+175, $y, true);
         

@@ -139,6 +139,12 @@ class formulario12Actions extends autoFormulario12Actions
 //        $pdf->MultiCell(35, 0, $this->formulario12->getFecha(),
 //                0, 'L', 0, 0, $x+110, $y+=10, true);
         
+        $fecha_registro = funciones::FechaEspanol2($this->formulario12->getFecha());
+        
+        $pdf->MultiCell(60, 0, $fecha_registro[0],0, 'L', 0, 0, $x+107, $y+=30, true);
+        $pdf->MultiCell(60, 0, $fecha_registro[1],0, 'L', 0, 0, $x+127, $y, true);
+        $pdf->MultiCell(60, 0, $fecha_registro[3],0, 'L', 0, 0, $x+175, $y, true);
+        
         $pdf->Output('Formulario012.pdf', 'I');
         throw new sfStopException();
     }
