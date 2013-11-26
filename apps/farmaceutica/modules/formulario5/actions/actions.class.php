@@ -196,9 +196,9 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->SetFont('courier', '', 10, '', true);
         $pdf->MultiCell(120, 0, $this->formulario5->Medicamento->Empresa->getDireccion(),
             0, 'L', 0, 0, $x+35, $y+=6, true);
+        $pdf->MultiCell(50, 0, $this->formulario5->Medicamento->Empresa->getTelefono1(),
+            0, 'L', 0, 0, $x+145, $y, true);
         $pdf->SetFont('courier', '', 13, '', true);
-        $pdf->MultiCell(35, 0, $this->formulario5->Medicamento->Empresa->getTelefono1(),
-            0, 'L', 0, 0, $x+150, $y, true);
         $pdf->MultiCell(110, 0, $this->formulario5->Medicamento->Empresa->RegenteFarmaceutico,
             0, 'L', 0, 0, $x+55, $y+=6, true);
         $pdf->MultiCell(30, 0, $this->formulario5->Medicamento->Empresa
