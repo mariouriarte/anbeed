@@ -43,7 +43,7 @@ class form7Actions extends sfActions
     
     
     
-  public function executeIndex(sfWebRequest $request) {
+    public function executeIndex(sfWebRequest $request) {
         $this->formulario7s = Doctrine_Core::getTable('Formulario7')
                 ->createQuery('a')
                 ->execute();
