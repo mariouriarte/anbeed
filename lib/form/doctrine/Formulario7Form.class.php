@@ -28,6 +28,7 @@ class Formulario7Form extends BaseFormulario7Form
         
         $this->validatorSchema['aval_id'] = new sfValidatorDoctrineChoice(
             array('model' => 'Aval', 'required' => true));
+        $this->widgetSchema['aval_id']->addOption('order_by',array('nombre_generico','asc'));
         
         // fecha
         $this->widgetSchema['fecha'] = new sfWidgetFormJQueryDate(

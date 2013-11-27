@@ -14,6 +14,6 @@ class Aval extends BaseAval
 {
     public function __toString()
     {
-       return $this->getCodigo()."-".$this->getNombreGenerico();
+       return $this->getNombreGenerico()."-".$this->getCodigo();
     }
 }
