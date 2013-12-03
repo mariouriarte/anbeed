@@ -79,20 +79,26 @@ class formulario706Actions extends autoFormulario706Actions
         // set header and footer fonts
         $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
         $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
-
-       
+        
+        //$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM); 
+        $pdf->SetAutoPageBreak(TRUE, 6);
+        
         $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+        $pdf->SetFooterMargin(0);
+        
+        $pdf->SetDisplayMode('real','default');  
         // quitar la linea del header
         $pdf->setHeaderData('',0,'','',array(0,0,0), array(255,255,255) );
         
+        $pdf->setPrintHeader(false);
+        $pdf->setPrintFooter(false);
         
         // set default monospaced font
-         $pdf->SetMargins(25, 25, 20);
-        $pdf->SetFont('dejavusans', '', 8, '', true);
+        $pdf->SetMargins(30, 8, 15);
+        $pdf->SetFont('dejavusans', '', 11, '', true);
         $pdf->AddPage();
-        $pdf->writeHTML($css.$html, true, false, true, false, '');
-        
+        //$pdf->writeHTML($css.$html, true, false, true, false, '');
+        $pdf->writeHTML($css.$html, true, false, false, false, '');
         // ---------------------------------------------------------
         // Close and output PDF document
         $pdf->Output('Formulario706.pdf', 'I');

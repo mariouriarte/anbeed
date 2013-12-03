@@ -6,22 +6,53 @@
 <img src="images/forms/unimed.png" border="0" height="70" width="120">
 </div>
 
+
+<div class="body-form">
 <h3><b>DECISIÓN 516</b></h3>
 <h3><b>COMERCIALIZACIÓN DE LOS PRODUCTOS COSMÉTICOS</b></h3>
+<p></p>
 
 <?php $tipo_form = $form->getTipoTramiteFormularioId()?>
-<table class="tbl-tipo-form" cellpadding="4">
+<table class="tbl-tipo-tramite" cellpadding="4">
     <tr>
-        <td><?php echo $tipo_form == 1 ? ' x ' : ' '?><span>Notificación Sanitaria Obligatoria (NSO)</span></td>
+        <td class="tramite-x">
+            <?php if($tipo_form == 1): ?>
+                <img src="images/forms/cuadrado-x.png" border="0"/>
+            <?php else:?>
+                <img src="images/forms/cuadrado.png" border="0"/>
+            <?php endif;?>
+        </td>
+        <td class="tramite-desc">Notificación Sanitaria Obligatoria (NSO)</td>
     </tr>    
     <tr>
-        <td><?php echo $tipo_form == 2 ? ' x ' : ' '?><span>Solicitud de Renovación del código de identificación de la NSO</span></td>
+        <td class="tramite-x">
+            <?php if($tipo_form == 2): ?>
+                <img src="images/forms/cuadrado-x.png" border="0"/>
+            <?php else:?>
+                <img src="images/forms/cuadrado.png" border="0"/>
+            <?php endif;?>
+        </td>
+        <td class="tramite-desc">Solicitud de Renovación del código de identificación de la NSO</td>
     </tr>    
     <tr>
-        <td><?php echo $tipo_form == 3 ? ' x ' : ' '?><span>Solicitud de Reconocimiento del código de identificación de la NSO</span></td>
+        <td class="tramite-x">
+            <?php if($tipo_form == 3): ?>
+                <img src="images/forms/cuadrado-x.png" border="0"/>
+            <?php else:?>
+                <img src="images/forms/cuadrado.png" border="0"/>
+            <?php endif;?>
+        </td>
+        <td class="tramite-desc">Solicitud de Reconocimiento del código de identificación de la NSO</td>
     </tr>    
     <tr>
-        <td><?php echo $tipo_form == 4 ? ' x ' : ' '?><span>Información de Cambios</span></td>
+        <td class="tramite-x">
+            <?php if($tipo_form == 4): ?>
+                <img src="images/forms/cuadrado-x.png" border="0"/>
+            <?php else: ?>
+                <img src="images/forms/cuadrado.png" border="0"/>
+            <?php endif; ?>
+        </td>
+        <td class="tramite-desc">Información de Cambios</td>
     </tr>
 </table>
 
@@ -30,9 +61,9 @@
     <tr>
         <td colspan="2">
             <?php if($form->getDatos() === 'TITULAR'): ?>
-                <b>I. DATOS DEL x TITULAR _ RESPONSABLE DE LA COMERCIALIZACIÓN</b><br />
+                <b>I. DATOS DEL TITULAR <img src="images/forms/cuadrado-x.png" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RESPONSABLE DE LA COMERCIALIZACIÓN <img src="images/forms/cuadrado.png" border="0"/></b><br />
             <?php else: ?>
-                <b>I. DATOS DEL _ TITULAR x RESPONSABLE DE LA COMERCIALIZACIÓN</b><br />
+                <b>I. DATOS DEL TITULAR <img src="images/forms/cuadrado.png" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RESPONSABLE DE LA COMERCIALIZACIÓN <img src="images/forms/cuadrado-x.png" border="0"/></b><br />
             <?php endif; ?> 
             <span class="metadato">Artículo 7, numeral 1, literales a) y c); y Artículo 12 de la Decisión 706</span>
         </td>
@@ -62,9 +93,9 @@
     <tr>
         <td colspan="2">
             <?php if($form->getDatosTitular() === 'Representante Legal'): ?>
-                <b>Nombre del:</b> Representante Legal x Apoderado _
+                <b>Nombre del:</b> Representante Legal <img src="images/forms/cuadrado-x.png" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apoderado <img src="images/forms/cuadrado.png" border="0"/>
             <?php else: ?>
-                <b>Nombre del:</b> Representante Legal _ Apoderado x
+                <b>Nombre del:</b> Representante Legal <img src="images/forms/cuadrado.png" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apoderado <img src="images/forms/cuadrado-x.png" border="0"/>
             <?php endif; ?>
         </td>
     </tr>

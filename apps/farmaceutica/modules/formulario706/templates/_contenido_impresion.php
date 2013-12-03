@@ -1,27 +1,56 @@
 <?php use_helper('Date') ?>
 
 <div class="head-formulario">
-<img src="images/forms/comunidad.jpg" border="0" height="90" width="120">
+<img src="images/forms/comunidad.jpg" border="0" height="90" width="120"/>
 <span class="titulo-form"><b>FORMATO ÚNICO (FNSOHA-001)</b></span>
-<img src="images/forms/unimed.png" border="0" height="70" width="120">
+<img src="images/forms/unimed.png" border="0" height="70" width="120"/>
 </div>
 
+<div class="body-form">
 <h3><b>DECISION 706</b></h3>
-<h3><b>PRODUCTOS DE HIGIENE DOMESTICA (PHD) Y PRODUCTOS ABSORBENTES DE HIGIENE PERSONAL (PAHP)</b></h3>
-
+<h3><b>PRODUCTOS DE HIGIENE DOMESTICA (PHD) Y PRODUCTOS <br />ABSORBENTES DE HIGIENE PERSONAL (PAHP)</b></h3>
+<p></p>
 <?php $tipo_form = $form->getTipoTramiteFormularioId()?>
-<table class="tbl-tipo-form" cellpadding="4">
+<table class="tbl-tipo-tramite" cellpadding="4">
     <tr>
-        <td><?php echo $tipo_form == 1 ? ' x ' : ' '?><span>Notificación Sanitaria Obligatoria (NSO)</span></td>
+        <td class="tramite-x">
+            <?php if($tipo_form == 1): ?>
+                <img src="images/forms/cuadrado-x.png" border="0"/>
+            <?php else:?>
+                <img src="images/forms/cuadrado.png" border="0"/>
+            <?php endif;?>
+        </td>
+        <td class="tramite-desc">Notificación Sanitaria Obligatoria (NSO)</td>
     </tr>    
     <tr>
-        <td><?php echo $tipo_form == 2 ? ' x ' : ' '?><span>Solicitud de Renovación del código de identificación de la NSO</span></td>
+        <td class="tramite-x">
+            <?php if($tipo_form == 2): ?>
+                <img src="images/forms/cuadrado-x.png" border="0"/>
+            <?php else:?>
+                <img src="images/forms/cuadrado.png" border="0"/>
+            <?php endif;?>
+        </td>
+        <td class="tramite-desc">Solicitud de Renovación del código de identificación de la NSO</td>
     </tr>    
     <tr>
-        <td><?php echo $tipo_form == 3 ? ' x ' : ' '?><span>Solicitud de Reconocimiento del código de identificación de la NSO</span></td>
+        <td class="tramite-x">
+            <?php if($tipo_form == 3): ?>
+                <img src="images/forms/cuadrado-x.png" border="0"/>
+            <?php else:?>
+                <img src="images/forms/cuadrado.png" border="0"/>
+            <?php endif;?>
+        </td>
+        <td class="tramite-desc">Solicitud de Reconocimiento del código de identificación de la NSO</td>
     </tr>    
     <tr>
-        <td><?php echo $tipo_form == 4 ? ' x ' : ' '?><span>Información de Cambios</span></td>
+        <td class="tramite-x">
+            <?php if($tipo_form == 4): ?>
+                <img src="images/forms/cuadrado-x.png" border="0"/>
+            <?php else: ?>
+                <img src="images/forms/cuadrado.png" border="0"/>
+            <?php endif; ?>
+        </td>
+        <td class="tramite-desc">Información de Cambios</td>
     </tr>
 </table>
 
@@ -30,23 +59,23 @@
     <tr>
         <td colspan="2">
             <?php if($form->getDatos() === 'IMPORTADOR'): ?>
-                <b>I. DATOS DEL TITULAR _ IMPORTADOR x  </b><br />
+                <b>I. DATOS DEL TITULAR <img src="images/forms/cuadrado.png" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IMPORTADOR<img src="images/forms/cuadrado-x.png" border="0"/></b><br />
             <?php else: ?>
-                <b>I. DATOS DEL TITULAR x IMPORTADOR _ </b><br />
+                <b>I. DATOS DEL TITULAR <img src="images/forms/cuadrado-x.png" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IMPORTADOR<img src="images/forms/cuadrado.png" border="0"/></b><br />
             <?php endif; ?> 
             <span class="metadato">Artículo 7, numeral 1, literales a) y c); y Artículo 12 de la Decisión 706</span>
         </td>
     </tr>
     <tr>
         <td colspan="2"><b>Nombre o razón social:</b><br />
-            <?php echo $form->Higiene->Empresa ?>
+            <b><?php echo $form->Higiene->Empresa ?></b>
         </td>
     </tr>
     <tr>
         <td>Domicilio o dirección:<br />
             <?php echo $form->Higiene->Empresa->getDireccion() ?>
         </td>
-        <td>Ciudad / Distrito / Provincia / Departamento:<br />
+        <td class="titulo-pequeno">Ciudad / Distrito / Provincia / Departamento:<br />
             <?php echo strtoupper($form->Higiene->Empresa->Ciudad->getNombre()) ?>
         </td>
     </tr>
@@ -63,10 +92,11 @@
         </td>
     </tr>
     <tr>
+        <td colspan="2">
         <?php if($form->getDatosTitular() === 'Apoderado'): ?>
-            <td colspan="2"><b>Nombre del Representante Legal _ Apoderado x</b></td>
+            <b>Nombre del Representante Legal <img src="images/forms/cuadrado.png" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apoderado <img src="images/forms/cuadrado-x.png" border="0"/></b></td>
         <?php else: ?>
-            <td colspan="2"><b>Nombre del Representante Legal x Apoderado _</b></td>
+            <b>Nombre del Representante Legal <img src="images/forms/cuadrado-x.png" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apoderado <img src="images/forms/cuadrado.png" border="0"/></b></td>
         <?php endif; ?>
     </tr>
     <tr>
@@ -77,18 +107,18 @@
         <td>e-mail: <?php echo $form->Higiene->Empresa->RepresentanteLegal->Persona->getEmail() ?></td>
     </tr>
     <tr>
-        <td colspan="2"><b>Responsable de la Comercialización</b></td>
+        <td colspan="2"><b>Responsable del:</b> Responsable Técnico (Químico Farmacéutico)</td>
     </tr>
     <tr>
         <td colspan="2">Nombre o razón social:<br />
-            <?php echo $form->getRescomNombre() ?>
+            <b><?php echo $form->getRescomNombre() ?></b>
         </td>
     </tr>
     <tr>
         <td>Domicilio o dirección:<br />
             <?php echo $form->getRescomDireccion() ?>
         </td>
-        <td>Ciudad / Distrito / Provincia / Departamento:<br />
+        <td class="titulo-pequeno">Ciudad / Distrito / Provincia / Departamento:<br />
             <?php echo strtoupper($form->Ciudad->getNombre()) ?>
         </td>
     </tr>
@@ -107,7 +137,7 @@
         </td>
     </tr>
     <tr>
-        <td colspan="2">Nombre o razón social:<br />
+        <td colspan="2" nobr="true">Nombre o razón social:<br />
             <?php echo $form->Higiene->LaboratorioFabricante ?>
         </td>
     </tr>
@@ -115,7 +145,7 @@
         <td>Domicilio o dirección:<br />
             <?php echo $form->Higiene->LaboratorioFabricante->getDireccion() ?>
         </td>
-        <td>Ciudad / Distrito / Provincia / Departamento:<br />
+        <td class="titulo-pequeno">Ciudad / Distrito / Provincia / Departamento:<br />
             <?php echo strtoupper($form->Higiene->LaboratorioFabricante->Ciudad->getNombre()) ?>
         </td>
     </tr>
@@ -139,7 +169,7 @@
     </tr>
     <tr>
         <td>Fax: <?php echo $form->Higiene->Empresa->RegenteFarmaceutico->Persona->getFax() ?></td>
-        <td>Número de Registro o Colegiatura Profesional<br />
+        <td class="titulo-pequeno">Número de Registro o Colegiatura Profesional:<br />
             <?php echo $form->Higiene->Empresa->RegenteFarmaceutico->getMatriculaProfesional() ?>
         </td>
     </tr>
@@ -225,7 +255,7 @@
                     <tr>
                         <td>PAHP</td>
                         <td class="maquila-x"></td>
-                        <td>_______________________________________________________</td>
+                        <td>___________________________________________</td>
                     </tr>
                 </table>
             <?php else: ?>
@@ -233,7 +263,7 @@
                     <tr>
                         <td class="maquila-tipo">PHD</td>
                         <td class="maquila-x"></td>
-                        <td class="maquila-nombre">_______________________________________________________</td>
+                        <td class="maquila-nombre">_____________________________________________________</td>
                     </tr>
                     <tr>
                         <td>PAHP</td>
@@ -630,3 +660,4 @@
         <td><b>La Paz - Bolivia, <?php echo format_date($form->getCreatedAt(), "dd MMMM yyyy") ?></b></td>
     </tr>
 </table>
+</div>

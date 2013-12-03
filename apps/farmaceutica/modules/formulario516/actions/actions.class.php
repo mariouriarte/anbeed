@@ -69,18 +69,26 @@ class formulario516Actions extends autoFormulario516Actions
         $pdf->SetKeywords('TCPDF, PDF, ANBEED SRL, Formulario516, impresion');
         
         // set header and footer fonts
-        $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
-        $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+//        $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+//        $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
 
-       
-        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
-        // quitar la linea del header
-        $pdf->setHeaderData('',0,'','',array(0,0,0), array(255,255,255) );
+        //$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM); 
+        // set auto page breaks
+        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+        $pdf->SetAutoPageBreak(TRUE, 6);
         
+        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+        $pdf->SetFooterMargin(0);
+//        
+//        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+//        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+        // quitar la linea del header
+//        $pdf->setHeaderData('',0,'','',array(0,0,0), array(255,255,255) );
+        $pdf->setPrintHeader(false);
+        $pdf->setPrintFooter(false);
         
         // set default monospaced font
-         $pdf->SetMargins(25, 25, 20);
+        $pdf->SetMargins(30, 8, 15);
         $pdf->SetFont('dejavusans', '', 8, '', true);
         $pdf->AddPage();
         //echo '<table ' .$table;
