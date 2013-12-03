@@ -83,9 +83,11 @@ class formulario706Actions extends autoFormulario706Actions
         // quitar la linea del header
         $pdf->setHeaderData('',0,'','',array(0,0,0), array(255,255,255) );
         
+        $pdf->setPrintHeader(false);
+        $pdf->setPrintFooter(false);
         
         // set default monospaced font
-        $pdf->SetMargins(12, 8, 15);
+        $pdf->SetMargins(30, 8, 15);
         $pdf->SetFont('dejavusans', '', 11, '', true);
         $pdf->AddPage();
         //$pdf->writeHTML($css.$html, true, false, true, false, '');

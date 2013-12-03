@@ -1,5 +1,11 @@
 <?php use_helper('Date') ?>
 
+<div class="head-formulario">
+<img src="images/forms/comunidad.jpg" border="0" height="90" width="120"/>
+<span class="titulo-form"><b>FORMATO ÚNICO (FNSOHA-001)</b></span>
+<img src="images/forms/unimed.png" border="0" height="70" width="120"/>
+</div>
+
 <div class="body-form">
 <h3><b>DECISION 706</b></h3>
 <h3><b>PRODUCTOS DE HIGIENE DOMESTICA (PHD) Y PRODUCTOS <br />ABSORBENTES DE HIGIENE PERSONAL (PAHP)</b></h3>
@@ -9,9 +15,9 @@
     <tr>
         <td class="tramite-x">
             <?php if($tipo_form == 1): ?>
-                <img src="images/forms/cuadrado-x.png" border="0">
+                <img src="images/forms/cuadrado-x.png" border="0"/>
             <?php else:?>
-                <img src="images/forms/cuadrado.png" border="0">
+                <img src="images/forms/cuadrado.png" border="0"/>
             <?php endif;?>
         </td>
         <td class="tramite-desc">Notificación Sanitaria Obligatoria (NSO)</td>
@@ -19,9 +25,9 @@
     <tr>
         <td class="tramite-x">
             <?php if($tipo_form == 2): ?>
-                <img src="images/forms/cuadrado-x.png" border="0">
+                <img src="images/forms/cuadrado-x.png" border="0"/>
             <?php else:?>
-                <img src="images/forms/cuadrado.png" border="0">
+                <img src="images/forms/cuadrado.png" border="0"/>
             <?php endif;?>
         </td>
         <td class="tramite-desc">Solicitud de Renovación del código de identificación de la NSO</td>
@@ -29,9 +35,9 @@
     <tr>
         <td class="tramite-x">
             <?php if($tipo_form == 3): ?>
-                <img src="images/forms/cuadrado-x.png" border="0">
+                <img src="images/forms/cuadrado-x.png" border="0"/>
             <?php else:?>
-                <img src="images/forms/cuadrado.png" border="0">
+                <img src="images/forms/cuadrado.png" border="0"/>
             <?php endif;?>
         </td>
         <td class="tramite-desc">Solicitud de Reconocimiento del código de identificación de la NSO</td>
@@ -39,9 +45,9 @@
     <tr>
         <td class="tramite-x">
             <?php if($tipo_form == 4): ?>
-                <img src="images/forms/cuadrado-x.png" border="0">
+                <img src="images/forms/cuadrado-x.png" border="0"/>
             <?php else: ?>
-                <img src="images/forms/cuadrado.png" border="0">
+                <img src="images/forms/cuadrado.png" border="0"/>
             <?php endif; ?>
         </td>
         <td class="tramite-desc">Información de Cambios</td>
@@ -53,9 +59,9 @@
     <tr>
         <td colspan="2">
             <?php if($form->getDatos() === 'IMPORTADOR'): ?>
-                <b>I. DATOS DEL TITULAR <img src="images/forms/cuadrado.png" border="0"> IMPORTADOR <img src="images/forms/cuadrado-x.png" border="0">  </b><br />
+                <b>I. DATOS DEL TITULAR <img src="images/forms/cuadrado.png" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IMPORTADOR<img src="images/forms/cuadrado-x.png" border="0"/></b><br />
             <?php else: ?>
-                <b>I. DATOS DEL TITULAR <img src="images/forms/cuadrado-x.png" border="0"> IMPORTADOR <img src="images/forms/cuadrado.png" border="0">  </b><br />
+                <b>I. DATOS DEL TITULAR <img src="images/forms/cuadrado-x.png" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IMPORTADOR<img src="images/forms/cuadrado.png" border="0"/></b><br />
             <?php endif; ?> 
             <span class="metadato">Artículo 7, numeral 1, literales a) y c); y Artículo 12 de la Decisión 706</span>
         </td>
@@ -88,9 +94,9 @@
     <tr>
         <td colspan="2">
         <?php if($form->getDatosTitular() === 'Apoderado'): ?>
-            <b>Nombre del Representante Legal <img src="images/forms/cuadrado.png" border="0"> Apoderado <img src="images/forms/cuadrado-x.png" border="0"></b></td>
+            <b>Nombre del Representante Legal <img src="images/forms/cuadrado.png" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apoderado <img src="images/forms/cuadrado-x.png" border="0"/></b></td>
         <?php else: ?>
-            <b>Nombre del Representante Legal <img src="images/forms/cuadrado-x.png" border="0"> Apoderado <img src="images/forms/cuadrado.png" border="0"></b></td>
+            <b>Nombre del Representante Legal <img src="images/forms/cuadrado-x.png" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apoderado <img src="images/forms/cuadrado.png" border="0"/></b></td>
         <?php endif; ?>
     </tr>
     <tr>
@@ -249,7 +255,7 @@
                     <tr>
                         <td>PAHP</td>
                         <td class="maquila-x"></td>
-                        <td>_______________________________________________________</td>
+                        <td>___________________________________________</td>
                     </tr>
                 </table>
             <?php else: ?>
@@ -257,7 +263,7 @@
                     <tr>
                         <td class="maquila-tipo">PHD</td>
                         <td class="maquila-x"></td>
-                        <td class="maquila-nombre">_______________________________________________________</td>
+                        <td class="maquila-nombre">_____________________________________________________</td>
                     </tr>
                     <tr>
                         <td>PAHP</td>

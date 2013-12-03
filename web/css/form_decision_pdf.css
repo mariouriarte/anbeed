@@ -74,6 +74,10 @@ td.titulo-pequeno,
 
 .tbl-title-noborder td {
     font-size: 9px;
+
+}
+.tbl-anexos {
+    width: 587px;
 }
 
 .tbl-anexos td {
@@ -129,7 +133,7 @@ td.firma-persona {
 
 .head-formulario {
     /*width: 100%;*/
-    /*text-align: center;*/
+    text-align: center;
     font-size: 11px;
 }
 
