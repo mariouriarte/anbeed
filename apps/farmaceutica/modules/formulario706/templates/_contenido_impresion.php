@@ -130,6 +130,9 @@
         <td>Fax: <?php echo $form->getRescomFax() ?></td>
         <td>e-mail: <?php echo $form->getRescomEmail() ?></td>
     </tr>
+</table>
+<br pagebreak="true"/>
+<table class="tbl-generica" cellpadding="4">
     <tr>
         <td colspan="2"><b>II. DATOS DEL FABRICANTE O FABRICANTES</b><br />
             <span class="metadato">Artículo 7, numeral 1, literal c), y Artículo 12, segundo párrafo de la Decisión 706<br />
@@ -315,7 +318,10 @@
             <?php echo $form->Higiene->Pais->getNombre() ?>
         </td>
     </tr>
-    <!--<>-->
+  </table>
+
+  <br pagebreak="true"/>
+  <table class="tbl-generica" cellpadding="4">
     <tr>
         <td colspan="2"><b>IV. INFORMACIÓN TÉCNICA DEL PRODUCTO</b><br />
             <span class="metadato">Artículo 7, numeral 2, literales a), b), c), d), e), f), g), h), i) y  j) de la Decisión 706</span>
@@ -590,8 +596,7 @@
         <td></td>
     </tr>
 </table>
-
-<p></p>
+<br pagebreak="true"/>
 <table class="tbl-title-noborder" cellpadding="4">
     <tr>
         <td><b>VII. CERTIFICACION DE LA INFORMACION TECNICA DEL PRODUCTO</b><br />
@@ -599,7 +604,7 @@
     </tr>
 </table>
     
-<p>Yo, <b><?php echo $form->Higiene->Empresa->RegenteFarmaceutico->Persona ?></b>, 
+<p style="text-align:justify;">Yo, <b><?php echo $form->Higiene->Empresa->RegenteFarmaceutico->Persona ?></b>, 
     identificado con (DNI) <b><?php echo $form->Higiene->Empresa->RegenteFarmaceutico->Persona->getCi().' '.$form->Higiene->Empresa->RegenteFarmaceutico->Persona->getExpedido() ?></b>,
     actuando en mi condición de químico farmacéutico 
     titulado y con registro profesional No. 
@@ -631,7 +636,7 @@
     </tr>
 </table>
 
-<p>Yo, <b><?php echo $form->Higiene->Empresa->RepresentanteLegal->Persona ?></b>, 
+<p  style="text-align:justify;">Yo, <b><?php echo $form->Higiene->Empresa->RepresentanteLegal->Persona ?></b>, 
     identificado con 
     (DNI) <b><?php echo $form->Higiene->Empresa->RepresentanteLegal->Persona->getCi() .' '. $form->Higiene->Empresa->RepresentanteLegal->Persona->getExpedido() ?></b>,
     actuando en condición de Representante legal o 
