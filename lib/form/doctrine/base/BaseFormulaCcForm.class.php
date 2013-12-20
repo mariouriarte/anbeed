@@ -30,7 +30,7 @@ abstract class BaseFormulaCcForm extends BaseFormDoctrine
       'id'             => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'contenido'      => new sfValidatorString(array('max_length' => 250, 'required' => false)),
       'ingrediente_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Ingrediente'), 'required' => false)),
-      'cantidad'       => new sfValidatorNumber(array('required' => false)),
+      'cantidad'       => new sfValidatorString(array('max_length' => 25, 'required' => false)),
       'unidad'         => new sfValidatorString(array('max_length' => 30, 'required' => false)),
       'created_at'     => new sfValidatorDateTime(),
       'updated_at'     => new sfValidatorDateTime(),

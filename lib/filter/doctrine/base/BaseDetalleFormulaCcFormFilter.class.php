@@ -26,7 +26,7 @@ abstract class BaseDetalleFormulaCcFormFilter extends BaseFormFilterDoctrine
     $this->setValidators(array(
       'formula_cc_id'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('FormulaCc'), 'column' => 'id')),
       'ingrediente_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Ingrediente'), 'column' => 'id')),
-      'cantidad'       => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
+      'cantidad'       => new sfValidatorPass(array('required' => false)),
       'unidad'         => new sfValidatorPass(array('required' => false)),
       'created_at'     => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'     => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
@@ -54,7 +54,7 @@ abstract class BaseDetalleFormulaCcFormFilter extends BaseFormFilterDoctrine
       'id'             => 'Number',
       'formula_cc_id'  => 'ForeignKey',
       'ingrediente_id' => 'ForeignKey',
-      'cantidad'       => 'Number',
+      'cantidad'       => 'Text',
       'unidad'         => 'Text',
       'created_at'     => 'Date',
       'updated_at'     => 'Date',
