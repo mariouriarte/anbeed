@@ -9,7 +9,7 @@
         <?php echo link_to($producto_web->getNombre(), "catalogo/edit/".$producto_web->getId().'/id') ?>
     </div>
     <div class="web_precio">
-        <?php echo link_to($producto_web->getPrecio()." Bs." , 'catalogo/edit/'.$producto_web->getId().'/id') ?>
+        <?php // echo link_to($producto_web->getPrecio()." Bs." , 'catalogo/edit/'.$producto_web->getId().'/id') ?>
     </div>        
 </div>        
        

@@ -25,7 +25,7 @@ generator:
       filter:  
         display: [categoria_id, linea_id, pais_id, nombre]
       form:    
-        display: [_verfoto, categoria_id, linea_id, pais_id, nombre, caracteristicas, precio, foto]
+        display: [_verfoto, categoria_id, linea_id, pais_id, nombre, caracteristicas, foto]
       edit:    
         title: Editar Producto %%nombre%%
         actions:
