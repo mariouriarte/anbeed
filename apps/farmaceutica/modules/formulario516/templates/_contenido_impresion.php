@@ -141,6 +141,9 @@
             <?php echo $form->Cosmetico->LaboratorioFabricante ?>
         </td>
     </tr>
+</table>
+<br pagebreak="true"/>
+<table class="tbl-generica" cellpadding="4">
     <tr>
         <td>Domicilio o dirección: <br />
             <?php echo $form->Cosmetico->LaboratorioFabricante->getDireccion() ?>
@@ -317,6 +320,9 @@
             problemas para la salud.
         </td>
     </tr>
+</table>
+<br pagebreak="true"/>
+<table class="tbl-generica" cellpadding="4">
     <tr>
         <td colspan="2">7. Proyecto de arte de etiqueta o rotulado (especificar los 
             contenidos netos a comercializar).
@@ -467,14 +473,17 @@
         <td></td>
         <td></td>
     </tr>
+</table>
+<br pagebreak="true"/>
+<table class="tbl-anexos" cellpadding="4">
     <tr>
-        <td>11.</td>
-        <td>Proyecto de arte de la etiqueta o rotulado (especificar los 
+        <td class="num">11.</td>
+        <td class="anexo-detalle">Proyecto de arte de la etiqueta o rotulado (especificar los 
             contenidos netos a comercializar).
         </td>
-        <td>DEL...........AL.................FOLIO</td>
-        <td></td>
-        <td></td>
+        <td class="folios">DEL...........AL.................FOLIO</td>
+        <td class="cumple"></td>
+        <td class="no-cumple"></td>
     </tr>
     <tr>
         <td colspan="5">Anexar para NSO y Reconocimiento</td>
@@ -847,7 +856,7 @@
     </tr>
 </table>
 
-<p></p>
+<br pagebreak="true"/>
 <table class="tbl-title-noborder" cellpadding="4">
     <tr>
         <td><b>VII. CERTIFICACION DE LA INFORMACION TECNICA DEL PRODUCTO</b><br />

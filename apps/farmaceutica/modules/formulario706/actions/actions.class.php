@@ -96,10 +96,10 @@ class formulario706Actions extends autoFormulario706Actions
         // set default monospaced font
         $pdf->SetMargins(30, 8, 15);
         $pdf->SetFont('dejavusans', '', 11, '', true);
+        
         $pdf->AddPage();
-        //$pdf->writeHTML($css.$html, true, false, true, false, '');
         $pdf->writeHTML($css.$html, true, false, false, false, '');
-        // ---------------------------------------------------------
+
         // Close and output PDF document
         $pdf->Output('Formulario706.pdf', 'I');
 
