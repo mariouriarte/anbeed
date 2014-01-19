@@ -15,42 +15,94 @@
         <?php include_javascripts() ?>
     </head>
     <body>
-<div id="wrap">
-    <div class="top_corner"></div>
-    <div id="main_container">
-        <div id="header">
-            <?php echo link_to(image_tag('/images/web/header.png', 'alt=ANBEED size=960x151' ), '@homepage')?> <br />
-            <div id="logo"><?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90' ), '@homepage')?>
+        <div id="wrap">
+            <div class="top_corner"></div>
+            <div id="main_container">
+                <div id="header">
+                    <?php echo link_to(image_tag('/images/web/header.png', 'alt=ANBEED size=960x151'), '@homepage') ?> <br />
+                    <div id="logo"><?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90'), '@homepage') ?>
 
-            </div>
-            
-            <div id="menu">
-                <ul>                                                                                            
-                   <li><?php echo link_to('Inicio', 'home/index', 'id=inicio') ?></li>
-                    <li><?php echo link_to('Quienes Somos', 'home/quienesSomos', 'id=quienes') ?></li>
-                    <li><?php echo link_to('Servicios', 'home/servicios', 'id=servicios') ?></li>
-                    <li><?php echo link_to('Productos', 'catalogo/index', 'id=productos') ?></li>
-                    <li><?php echo link_to('Contáctenos', 'contacto/new', 'id=contact') ?></li>
-                    <li><a href="/cliente.php/">Iniciar Sesión</a></li>
-                </ul>
+                    </div>
+
+
+                    <div class="container">
+                        <div class="navbar navbar-static-top">
+                            <div class="navigation">
+                                <nav>
+                                    <ul class="nav topnav bold">
+                                        <li class="dropdown active">
+                                            <?php echo link_to('Inicio', 'home/index', 'id=inicio') ?>
+                                        </li>
+                                        <li class="dropdown">
+                                            <?php echo link_to('Nosotros<i class="icon-angle-down"></i>', 'home/quienesSomos', 'id=quienes') ?>
+                                            <ul style="display: none;" class="dropdown-menu bold">
+                                                <li><?php echo link_to('Mision y Vision', 'home/misionVision') ?></li>
+                                                <li><?php echo link_to('Organigrama', 'home/organigrama') ?></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <?php echo link_to('Servicios<i class="icon-angle-down"></i>', 'home/servicios', 'id=servicios') ?> 
+                                            <ul class="dropdown-menu bold">
+                                                <li class="dropdown"><a href="#">Registros de Empresas <i class="icon-angle-right"></i></a>
+                                                    <ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
+                                                        <li><?php echo link_to('Importadoras de Medicamentos', 'home/importadoraMedicamentos') ?></li>
+                                                        <li><?php echo link_to('Importadoras de Cosméticos', 'home/importadoraCosmeticos') ?></li>
+                                                        <li><?php echo link_to('Importadoras de Insumos', 'home/importadoraInsumos') ?></li>
+                                                    </ul>                                                
+                                                </li>
+                                                <li class="dropdown"><a href="#">Registros Sanitarios <i class="icon-angle-right"></i></a>
+                                                    <ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
+                                                        <li><?php echo link_to('Medicamentos', 'home/medicamentos') ?></li>
+                                                        <li><?php echo link_to('Dispositivos Médicos', 'home/dispositivosMedicos') ?></li>
+                                                        <li><?php echo link_to('Cosméticos', 'home/cosmeticos') ?></li>
+                                                        <li><?php echo link_to('Higiene y Limpieza', 'home/higieneLimpieza') ?></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <?php echo link_to('Productos', 'catalogo/index', 'id=productos') ?> 
+                                        </li>
+                                        <li class="dropdown">
+                                            <?php echo link_to('Contacto', 'contacto/new', 'id=contact') ?>
+                                        </li>
+                                        <li>
+                                            <a href="/cliente.php">Iniciar </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- end navigation -->
+                        </div>
+                    </div>
+
+                    <!--            <div id="menu">
+                                    <ul>                                                                                            
+                                       <li><?php echo link_to('Inicio', 'home/index', 'id=inicio') ?></li>
+                                        <li><?php echo link_to('Quienes Somos', 'home/quienesSomos', 'id=quienes') ?></li>
+                                        <li><?php echo link_to('Servicios', 'home/servicios', 'id=servicios') ?></li>
+                                        <li><?php echo link_to('Productos', 'catalogo/index', 'id=productos') ?></li>
+                                        <li><?php echo link_to('Contáctenos', 'contacto/new', 'id=contact') ?></li>
+                                        <li><a href="/cliente.php/">Iniciar Sesión</a></li>
+                                    </ul>
+                                </div>-->
+                </div>
+
+                <!---------------------------------end of middle banner-------------------------------->
+                <?php echo $sf_content ?>
+
+                <div class="footer">
+                    <div class="copyright"><a href="http://www.anbeed.com/" target="_blank">ANBEED S.R.L.</a> | <a href="http://www.capsulesystem.com/" target="_blank">by CapsuleSystems</a></div>
+
+                    <div class="footer_links">
+                        <?php echo link_to('Inicio', 'home/index') ?>
+                        <?php echo link_to('Quienes Somos', 'home/quienesSomos') ?>
+                        <?php echo link_to('Servicios', 'home/servicios') ?>
+                        <?php echo link_to('Productos', 'catalogo/index') ?>
+                        <?php echo link_to('Contáctenos', 'contacto/new') ?>
+                    </div>
+                </div>
             </div>
         </div>
-        
-<!---------------------------------end of middle banner-------------------------------->
-            <?php echo $sf_content ?>
-        
-        <div class="footer">
-        	<div class="copyright"><a href="http://www.anbeed.com/" target="_blank">ANBEED S.R.L.</a> | <a href="http://www.capsulesystem.com/" target="_blank">by CapsuleSystems</a></div>
-        
-        	<div class="footer_links">
-                    <?php echo link_to('Inicio', 'home/index') ?>
-                    <?php echo link_to('Quienes Somos', 'home/quienesSomos') ?>
-                    <?php echo link_to('Servicios', 'home/servicios') ?>
-                    <?php echo link_to('Productos', 'home/productos') ?>
-                    <?php echo link_to('Contáctenos', 'contacto/new') ?>
-            </div>
-        </div>
-    </div>
-</div>
     </body>
 </html>

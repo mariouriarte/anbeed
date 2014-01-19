@@ -30,10 +30,46 @@ class homeActions extends sfActions
   {
   }
   
+  public function executeMisionVision(sfWebRequest $request)
+  {
+  }
+  
+  public function executeOrganigrama(sfWebRequest $request)
+  {
+  }
+  
   public function executeServicios(sfWebRequest $request)
   {
   }
   
+  public function executeMedicamentos(sfWebRequest $request)
+  {
+  }
+  
+  public function executeDispositivosMedicos(sfWebRequest $request)
+  {
+  }
+  
+  public function executeCosmeticos(sfWebRequest $request)
+  {
+  }
+  
+  public function executeHigieneLimpieza(sfWebRequest $request)
+  {
+  }
+  
+  public function executeImportadoraMedicamentos(sfWebRequest $request)
+  {
+  }  
+
+  public function executeImportadoraInsumos(sfWebRequest $request)
+  {
+  }   
+
+  public function executeImportadoraCosmeticos(sfWebRequest $request)
+  {
+  }  
+
   public function executeProductos(sfWebRequest $request)
   {
   }
@@ -42,6 +78,9 @@ class homeActions extends sfActions
   {
   }
   public function executeContactenos(sfWebRequest $request)
+  {
+  }  
+  public function executeEj(sfWebRequest $request)
   {
   }  
 }
