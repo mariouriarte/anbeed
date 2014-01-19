@@ -92,7 +92,7 @@ class formulario27Actions extends autoFormulario27Actions
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x_origen, $y_origen, true);
         
         //Reduciendo tamaño de letra
-        $pdf->SetFont('courier', '', 11, '', true);
+        $pdf->SetFont('courier', '', 10, '', true);
         
         //Datos de la empresa
         $pdf->MultiCell(150, 0, $this->formulario27->DispositivoMedico->Empresa
@@ -106,11 +106,9 @@ class formulario27Actions extends autoFormulario27Actions
         $pdf->MultiCell(55, 0, funciones::FormatearFecha(
             $this->formulario27->DispositivoMedico->Empresa->getFechaResolucion()), 
             0, 'L', 0, 0, $x+140, $y, true);
-        $pdf->SetFont('courier', '', 10, '', true);
         $pdf->MultiCell(110, 0, $this->formulario27->DispositivoMedico->Empresa
             ->RegenteFarmaceutico,
             0, 'L', 0, 0, $x+55, $y+=5, true);
-        $pdf->SetFont('courier', '', 11, '', true);
         $pdf->MultiCell(70, 0, $this->formulario27->DispositivoMedico->Empresa
             ->RegenteFarmaceutico->getMatriculaProfesional(),
             0, 'L', 0, 0, $x+130, $y, true);
@@ -118,7 +116,7 @@ class formulario27Actions extends autoFormulario27Actions
         $pdf->MultiCell(90, 0, $this->formulario27->DispositivoMedico->Empresa
             ->getDireccion(),
             0, 'L', 0, 0, $x+40, $y+=5, true);
-        $pdf->SetFont('courier', '', 11, '', true);
+        $pdf->SetFont('courier', '', 10, '', true);
         $pdf->Multicell(50, 0, $this->formulario27->DispositivoMedico->Empresa
             ->getTelefono1(),
             0, 'L', 0, 0, $x+145, $y, true);
@@ -156,10 +154,8 @@ class formulario27Actions extends autoFormulario27Actions
             0, 'L', 0, 0, $x+50, $y+=5, true);
         $pdf->MultiCell(145, 0, $this->formulario27->DispositivoMedico->getPresentacion(),
             0, 'L', 0, 0, $x+40, $y+=5, true);
-        $pdf->SetFont('courier', '', 10, '', true);
         $pdf->MultiCell(35, 0, $this->formulario27->DispositivoMedico->getCondicionEmpaque(),
             0, 'L', 0, 0, $x+90, $y+=5, true);
-        $pdf->SetFont('courier', '', 11, '', true);
         $pdf->MultiCell(50, 0, $this->formulario27->DispositivoMedico->getVidaUtil(),
             0, 'L', 0, 0, $x+145, $y, true);
         $pdf->MultiCell(90, 0, $this->formulario27->DispositivoMedico->getMetodoDesecho(),

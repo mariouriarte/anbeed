@@ -48,7 +48,7 @@ class formulario5Actions extends autoFormulario5Actions
         // dejavusans is a UTF-8 Unicode font, if you only need to
         // print standard ASCII chars, you can use core fonts like
         // helvetica or times to reduce file size.
-        $pdf->SetFont('courier', '', 13, '', true);
+        $pdf->SetFont('courier', '', 10, '', true);
 
         // Add a page
         // This method has several options, check the source code documentation for more information.
@@ -57,7 +57,6 @@ class formulario5Actions extends autoFormulario5Actions
         /*Imprimimos titulo*/
         $pdf->MultiCell(78, 0, 'FÓRMULA CUALI-CUANTITATIVA', 'B', 'L', 0, 0, 65, 30, true);
         
-        $pdf->SetFont('courier', '', 13, '', true);
         /*Imprimimos el producto*/
         $pdf->MultiCell(78, 0, 'Producto:', 0, 'L', 0, 0, 15, 45, true);
         $pdf->MultiCell(78, 0, $this->formulario5->Medicamento, 0, 'L', 0, 0, 45, 45, true);
@@ -65,7 +64,6 @@ class formulario5Actions extends autoFormulario5Actions
         /*Imprimimos la formula del medicamento*/                                                           
         $q = Doctrine_Core::getTable('DetalleFormulaCc')->getIngredientes($this->formulario5->Medicamento->getFormulaCcId());
         $ingredientes = $q->execute();
-        $pdf->SetFont('courier', '', 13, '', true);
         $html = '<br><br><br><table border="1" width="100%" cellpadding="2" cellspacing="0">
                     <tr bgcolor="#EEE">
                         <th width="70%"><b>INGREDIENTE</b></th>
@@ -133,7 +131,7 @@ class formulario5Actions extends autoFormulario5Actions
         // dejavusans is a UTF-8 Unicode font, if you only need to
         // print standard ASCII chars, you can use core fonts like
         // helvetica or times to reduce file size.
-        $pdf->SetFont('courier', '', 13, '', true);
+        $pdf->SetFont('courier', '', 10, '', true);
 
         // Add a page
         // This method has several options, check the source code documentation for more information.
@@ -180,7 +178,6 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x+73, $y_origen, true);
         
         /*tamaño y tipo de letra*/
-        $pdf->SetFont('courier', '', 13, '', true);
         
         /*Datos de la empresa*/
         $pdf->MultiCell(160, 0, $this->formulario5->Medicamento->Empresa,
@@ -193,12 +190,10 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->MultiCell(150, 0, $this->formulario5->Medicamento->Empresa
             ->RepresentanteLegal, 
             0, 'L', 0, 0, $x+50, $y+=6, true);
-        $pdf->SetFont('courier', '', 10, '', true);
         $pdf->MultiCell(120, 0, $this->formulario5->Medicamento->Empresa->getDireccion(),
             0, 'L', 0, 0, $x+35, $y+=6, true);
         $pdf->MultiCell(50, 0, $this->formulario5->Medicamento->Empresa->getTelefono1(),
             0, 'L', 0, 0, $x+145, $y, true);
-        $pdf->SetFont('courier', '', 13, '', true);
         $pdf->MultiCell(110, 0, $this->formulario5->Medicamento->Empresa->RegenteFarmaceutico,
             0, 'L', 0, 0, $x+55, $y+=6, true);
         $pdf->MultiCell(30, 0, $this->formulario5->Medicamento->Empresa
@@ -221,7 +216,7 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->MultiCell(150, 0, $this->formulario5->Medicamento->LaboratorioFabricante
             ->getDireccion(), 
             0, 'L', 0, 0, $x+35, $y+=6, true);
-        $pdf->SetFont('courier', '', 13, '', true);
+        $pdf->SetFont('courier', '', 10, '', true);
         
         /*Datos del producto*/
         $pdf->MultiCell(150, 0, $this->formulario5->Medicamento->getNombreComercial(),
@@ -241,7 +236,7 @@ class formulario5Actions extends autoFormulario5Actions
         $pdf->SetFont('courier', '', 8, '', true);
         $pdf->MultiCell(95, 0, $this->formulario5->Medicamento->getConservacion(), 
             0, 'L', 0, 0, $x+40, $y+=6, true);
-        $pdf->SetFont('courier', '', 13, '', true);
+        $pdf->SetFont('courier', '', 10, '', true);
         $pdf->MultiCell(35, 0, $this->formulario5->Medicamento->getPeriodoValidez(), 
             0, 'L', 0, 0, $x+165, $y, true);
         $pdf->MultiCell(140, 0, $this->formulario5->Medicamento->getEspecificacionEnvase(),

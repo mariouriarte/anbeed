@@ -47,7 +47,7 @@ class formulario12Actions extends autoFormulario12Actions
         $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
         
         // Set font
-        $pdf->SetFont('courier', 'B', 11, '', true);
+        $pdf->SetFont('courier', 'B', 10, '', true);
         
         // Add a page
         $pdf->AddPage();
@@ -73,8 +73,6 @@ class formulario12Actions extends autoFormulario12Actions
         //Imprimimos X del origen
         $pdf->MultiCell(10, 0, 'X', 0, 'L', 0, 0, $x+135, $y_origen, true);
         
-        //Reduciendo tamaño de letra
-        $pdf->SetFont('courier', '', 11, '', true);
         
         //Datos de la empresa
         $pdf->MultiCell(160, 0, $this->formulario12->Reactivo->Empresa, 
@@ -113,7 +111,7 @@ class formulario12Actions extends autoFormulario12Actions
         $pdf->SetFont('courier', '', 9, '', true);
         $pdf->MultiCell(80, 10, $this->formulario12->Reactivo->LaboratorioFabricante->
                 getDireccion(), 0, 'L', 0, 0, $x+40, $y+=6, true);
-        $pdf->SetFont('courier', '', 11, '', true);
+        $pdf->SetFont('courier', '', 10, '', true);
         $pdf->MultiCell(125, 0, $this->formulario12->Reactivo->LaboratorioFabricante->
                 getTelefono(), 0, 'L', 0, 0, $x+140, $y, true);
         

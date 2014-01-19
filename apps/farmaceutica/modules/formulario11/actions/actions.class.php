@@ -58,7 +58,7 @@ class formulario11Actions extends autoFormulario11Actions
         $y = 83;
         $x = 5;
         //Tamaño de letra para datos
-        $pdf->SetFont('courier', '', 13, '', true);
+        $pdf->SetFont('courier', '', 10, '', true);
         
         //Datos de la Empresa
         $pdf->MultiCell(70, 0, $this->formulario11->Empresa->RepresentanteLegal, 
@@ -127,11 +127,9 @@ class formulario11Actions extends autoFormulario11Actions
             $pdf->MultiCell(15, 0, 'SI',
                 0, 'L', 0, 0, $x+79, $y+=5, true);
             
-            $pdf->SetFont('courier', '', 10, '', true);
             $pdf->MultiCell(25, 0, $this->formulario11->getLicenciaResolucion(),
                 0, 'L', 0, 0, $x+70, $y+=5, true);
             
-            $pdf->SetFont('courier', '', 13, '', true);
             $fecha_licencia = funciones::FechaEspanol2($this->formulario11->getLicenciaFecha());
             
             $pdf->MultiCell(8, 0, $fecha_licencia[0],0, 'L', 0, 0, $x+110, $y, true);
@@ -170,11 +168,8 @@ class formulario11Actions extends autoFormulario11Actions
         $pdf->MultiCell(8, 0, $fecha_factura[0],0, 'L', 0, 0, $x+105, $y, true);
         $pdf->MultiCell(31, 0, $fecha_factura[1],0, 'L', 0, 0, $x+128, $y, true);
         $pdf->MultiCell(25, 0, $fecha_factura[3],0, 'L', 0, 0, $x+167, $y, true);
-        
-        $pdf->SetFont('courier', '', 10, '', true);
         $pdf->MultiCell(70, 0, $this->formulario11->getPorTratarse(),
             0, 'L', 0, 0, $x+110, $y+=32, true);
-        $pdf->SetFont('courier', '', 13, '', true);
         $pdf->MultiCell(75, 0, $this->formulario11->getPara(),
             0, 'L', 0, 0, $x+110, $y+=5, true);
         
@@ -202,7 +197,7 @@ class formulario11Actions extends autoFormulario11Actions
                 $y_fila_items = 55;
                 $num_items-=42;
                 $contador_fojas++;
-                $pdf->SetFont('courier', '', 12, '', true);
+                $pdf->SetFont('courier', '', 10, '', true);
                 /*Numero de foja*/
                 $pdf->MultiCell(10, 0, $contador_fojas,
                 0, 'L', 0, 0, $x+45, $y_fila_items, true);
