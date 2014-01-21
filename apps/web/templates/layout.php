@@ -36,14 +36,13 @@
                                         <li class="dropdown">
                                             <?php echo link_to('Nosotros<i class="icon-angle-down"></i>', 'home/quienesSomos', 'id=quienes') ?>
                                             <ul style="display: none;" class="dropdown-menu bold">
-                                                <li><?php echo link_to('Mision y Vision', 'home/misionVision') ?></li>
+                                                <li><?php echo link_to('Misión y Visión', 'home/misionVision') ?></li>
                                                 <li><?php echo link_to('Organigrama', 'home/organigrama') ?></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown">
-                                            <?php echo link_to('Servicios<i class="icon-angle-down"></i>', 'home/servicios', 'id=servicios') ?> 
+                                        <li class="dropdown"><a href="#">Servicios <i class="icon-angle-down"></i></a>
                                             <ul class="dropdown-menu bold">
-                                                <li class="dropdown"><a href="#">Registros de Empresas <i class="icon-angle-right"></i></a>
+                                                <li class="dropdown"><a href="#">Apertura de Empresas <i class="icon-angle-right"></i></a>
                                                     <ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
                                                         <li><?php echo link_to('Importadoras de Medicamentos', 'home/importadoraMedicamentos') ?></li>
                                                         <li><?php echo link_to('Importadoras de Cosméticos', 'home/importadoraCosmeticos') ?></li>

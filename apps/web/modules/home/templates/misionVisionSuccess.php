@@ -1,19 +1,20 @@
 <script type="text/javascript">
-    $( "#quienes" ).addClass( "current" );
+    $("#quienes").addClass("current");
 </script>
-    <div class="wide_content">
+<div class="wide_content">
     <h2>Misión</h2>
+    <img src="/images/web/mision.jpg">
     <p>
-    Ser una empresa de servicios integrados líder en el mercado nacional e itnernacional con capacidad idónea, técnica, profesional, orienteda y comprometida con sus clientes para el cumplimiento de sus objetivos.
+        Lograr convertirnos en una empresa de servicios integrados Líder en el mercado nacional e internacional con capacidad idónea, técnica, profesional, orientada y comprometida con sus clientes para el cumplimiento de sus objetivos.
     </p>
-    </div> 
+</div> 
 
-    <div class="wide_content">
+<div class="wide_content">
     <h2>Visión</h2>
+    <img src="/images/web/vision.jpg">
     <p>
-    Constituirse en una empresa reconocida en el mercado por su capacidad de ofrecer servicios integrados desde y hasta cualquier parte del mundo y plantear a lo largo las soluciones y/o alternativas oportunas y efectivas para lograr satisfacer plenamente las necesidades de sus clientes.
+        Constituirnos en una empresa reconocida en el ámbito laboral por su capacidad de ofrecer servicios integrados hasta cualquier parte del mundo y en consecuencia plantear  las soluciones y/o alternativas oportunas y efectivas para lograr satisfacer plenamente las necesidades de sus clientes.
     </p>
-    </div>
-            
-    <div class="clear"></div>
 </div>
+
+<div class="clear"></div>

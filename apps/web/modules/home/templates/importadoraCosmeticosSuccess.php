@@ -1,39 +1,59 @@
-<div class="center_content">
+<div class="wide_content_services">
+    <a name="importadora_medicamentos"></a><h2>Requisitos para Apertura de Empresa Importadora de Cosméticos S.R.L. o S.A.</h2>
 
-    <div class="wide_content_services">
-        <a name="importadora_medicamentos"></a><h2>Requisitos para Importadoras de Cosméticos</h2>
+    <h3>Documentacion Legal De La Empresa:</h3>
+    <ul>
+        <li> Matricula de <b>FUNDEMPRESA</b> emitida por la Cámara de Industria y <b>Comercio Padrón Municipal</b> emitído por la Alcaldía Municipal Fotocopia Legalizada</li>
+        <li> Fotocopia de <b>NIT</b> </li>
+        <li> Fotocopia Legalizada de la <b>Constitución de la Empresa</b></li>
+        <li> Fotocopia Legalizada del <b>Poder de Representante Legal</b></li>
+        <li> <b>Carnet de Identidad</b> del Representante Legal</li>
+    </ul>
 
-            Documentación que debe ser presentada para el tramite de apertura de empresa:<br>
-            <ul>
-                <li> Matricula de FUNDEMPRESA emitida por la Cámara de Industria y Comercio <b>Original</b></li>
-                <li> Padrón municipal emítido por la alcaldía <b>Fotocopia legalizada</b> </li>
-                <li> Nit <b>Fotocopia legalizada</b></li>
-                <li> Carnet de Identidad del representante legal <b>Fotocopia simple</b></li>
-                <li> Pago de 4.000 Bs al Banco Central de Bolivia a la cuenta 3G-300 del Ministerio de Salud y deportes por concepto de apertura de empresa importadora</li>
-            </ul><br>
-            En caso de NO ser empresa unipersonal, adicionar los siguientes documentos:<br>
-            <ul>
-                <li> Documento de constitucion de la empresa <b>Fotocopia legalizada</b></li>
-                <li> Documento de poder del representante legal <b>Fotocopia legalizada</b></li>
-            </ul><br>
-            Documentación del Regente Farmacéutica:
-            <ul>
-                <li>Fotocopia legalizada del titulo en provisión Nacional</li>
-                <li>Fotocopia del Carnet de Colegiada</li>
-                <li>Fotocopia matricula Profesional</li>
-                <li>Contrato por tiempo completo visado en el Ministerio de Trabajo</li>
-                <li>Fotocopia Carnet de Identidad</li>
-                <li>Certificado de compatibilidad horaria emitida por el SEDES Santa Cruz</li>
-            </ul>
-            
-            <b>Nota.-</b> 
-            <ul>
-                <li>Para el trámite debe enviarse los datos de ubicación de la empresa, email, Nº telefónico y Nº de fax.</li>
-                <li>Para FUNDEMPRESA se deberá tomar en cuenta la actividad es importadora de  INSUMOS MEDICOS</li>
-                <li>El NIT debe  de tener el nombre de la Razón Social de la empresa y la actividad la misma de FUNDAEMPRESA</li>
-                <li>La Licencia de Funcionamiento de la misma forma tomar en cuenta la Razón Social y la actividad</li>
-                <br> <b>ARANCELES:</b> 10.000 BS AL MINISTERIO DE SALUD Y DEPORTES  APERTURA IMPORTADORA DE MEDICAMENTOS.
-            </ul>
-    </div>
-    <div class="clear"></div>
+    <h3>Documentación Regente Farmacéutica:</h3>
+    <ul>
+        <li> Fotocopia Legalizada <b>Titulo en Provisión Nacional</b> (PERFIL PROFESIONAL FARMACEUTICO)</li>
+        <li> Fotocopia <b>Matricula profesional</b></li>
+        <li> Fotocopia <b>Carnet de Colegiada</b></li>
+        <li> Fotocopia <b>Carnet de Identidad</b></li>
+        <li> <b>Certificado de Compatibilidad Horaria</b> emitida por el SEDES por tiempo completo</li>
+        <li> <b>Contrato de trabajo Visado</b> en el Ministerio de Trabajo</li>
+    </ul>
+
+    <h3>Arancel Ministerio De Salud:</h3>
+    <ul>
+        <li>
+            Pago de 10.000 Bs al Banco Central de Bolivia a la cuenta 3G-300 del Ministerio de Salud y deportes por concepto de apertura de empresa importadora
+        </li>
+    </ul>
 </div>
+
+<div class="wide_content_services">
+    <a name="importadora_medicamentos"></a><h2>Requisitos para Apertura de Empresa Importadora de Cosméticos UNIPERSONAL</h2>
+
+    <h3>Documentacion Legal De La Empresa:</h3>
+    <ul>
+        <li> Matricula de <b>FUNDEMPRESA</b> emitida por la Cámara de Industria y <b>Comercio Padrón Municipal</b> emitído por la Alcaldía Municipal Fotocopia Legalizada</li>
+        <li> Fotocopia de <b>NIT</b> </li>
+        <li> <b>Carnet de Identidad</b> del Representante Legal</li>
+    </ul>
+
+    <h3>Documentación Regente Farmacéutica:</h3>
+    <ul>
+        <li> Fotocopia Legalizada <b>Titulo en Provisión Nacional</b> (PERFIL PROFESIONAL FARMACEUTICO)</li>
+        <li> Fotocopia <b>Matricula profesional</b></li>
+        <li> Fotocopia <b>Carnet de Colegiada</b></li>
+        <li> Fotocopia <b>Carnet de Identidad</b></li>
+        <li> <b>Certificado de Compatibilidad Horaria</b> emitida por el SEDES por tiempo completo</li>
+        <li> <b>Contrato de trabajo Visado</b> en el Ministerio de Trabajo</li>
+    </ul>
+
+    <h3>Arancel Ministerio De Salud:</h3>
+    <ul>
+        <li>
+            Pago de 10.000 Bs al Banco Central de Bolivia a la cuenta 3G-300 del Ministerio de Salud y deportes por concepto de apertura de empresa importadora
+        </li>
+    </ul>
+</div>
+
+<div class="clear"></div>

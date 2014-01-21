@@ -1,19 +1,58 @@
-<div class="center_content">
-
-    <div class="wide_content_services">
-        <a name="importadora_insumos"></a><h2>Requisitos para Importadoras de Insumos Medicos</h2>
-            Documentación que debe ser presentada para el trámite de apertura de empresa:<br>
-            <ul>
-                <li> Matricula de FUNDEMPRESA emitida por la Cámara de Industria y Comercio</li>
-                <li> Padrón Municipal emítido por la alcaldía </li>
-                <li> Nit </li>
-                <li> Carnet de Identidad del representante legal</li>
-                <li> Poder de constitución de la empresa si es en sociedad</li>
-                <li> Poder del representante legal si es en sociedad (para el caso de empresas unipersonales el punto 5 y 6 no corresponde)</li>
-                <li> Pago de 4.000 Bs al Banco Central de Bolivia a la cuenta 3G-300 del Ministerio de Salud y deportes por concepto de apertura de empresa importadora</li>
-            </ul>
-            <b>Nota.- </b>Para el trámite debe enviarse los datos de ubicación de la empresa, email, Nº telefónico y Nº de fax.
-    </div><br>
-    
-    <div class="clear"></div>
+<div class="wide_content_services">
+    <a name="importadora_insumos"></a><h2>Requisitos para Apertura de Empresa Importadora de Insumos Medicos S.R.L. ó S.A.</h2>
+    <h3>Documentacion Legal De La Empresa:</h3>
+    <ul>
+        <li> Matricula de <b>FUNDEMPRESA</b> emitida por la Cámara de Industria y <b>Comercio Padrón Municipal</b> emitído por la Alcaldía Municipal Fotocopia Legalizada</li>
+        <li> Fotocopia de <b>NIT</b> </li>
+        <li> Fotocopia Legalizada de la <b>Constitución de la Empresa</b></li>
+        <li> Fotocopia Legalizada del <b>Poder de Representante Legal</b></li>
+        <li> <b>Carnet de Identidad</b> del Representante Legal</li>
+    </ul>
+    <h3>Documentación Regente Farmacéutica:</h3>
+    <ul>
+        <li> Fotocopia Legalizada <b>Titulo en Provisión Nacional</b> (PERFIL PROFESIONAL FARMACEUTICO)</li>
+        <li> Fotocopia <b>Matricula profesional</b></li>
+        <li> Fotocopia <b>Carnet de Colegiada</b></li>
+        <li> Fotocopia <b>Carnet de Identidad</b></li>
+        <li> <b>Certificado de Compatibilidad Horaria</b> emitida por el SEDES por tiempo completo</li>
+        <li> <b>Contrato de trabajo Visado</b> en el Ministerio de Trabajo</li>
+    </ul>
+    <h3>Arancel Ministerio De Salud:</h3>
+    <ul>
+        <li>
+            Pago de 4.000 Bs al Banco Central de Bolivia a la cuenta 3G-300 del Ministerio de Salud y deportes por concepto de apertura de empresa importadora.
+        </li>
+    </ul>
+    <b>Nota.</b>
+    <h4>Para el trámite debe enviarse los datos de ubicación de la empresa, nº telefónico, nº de fax y email.</h4>
 </div>
+
+<div class="wide_content_services">
+    <a name="importadora_insumos"></a><h2>Requisitos para Apertura de Empresa Importadora de Insumos Medicos UNIPERSONAL</h2>
+    <h3>Documentacion Legal De La Empresa:</h3>
+    <ul>
+        <li> Matricula de <b>FUNDEMPRESA</b> emitida por la Cámara de Industria y <b>Comercio Padrón Municipal</b> emitído por la Alcaldía Municipal Fotocopia Legalizada</li>
+        <li> Fotocopia de <b>NIT</b> </li>
+        <li> <b>Carnet de Identidad</b> del Representante Legal</li>
+    </ul>
+    <h3>Documentación Regente Farmacéutica:</h3>
+    <ul>
+        <li> Fotocopia Legalizada <b>Titulo en Provisión Nacional</b> (PERFIL PROFESIONAL FARMACEUTICO)</li>
+        <li> Fotocopia <b>Matricula profesional</b></li>
+        <li> Fotocopia <b>Carnet de Colegiada</b></li>
+        <li> Fotocopia <b>Carnet de Identidad</b></li>
+        <li> <b>Certificado de Compatibilidad Horaria</b> emitida por el SEDES por tiempo completo</li>
+        <li> <b>Contrato de trabajo Visado</b> en el Ministerio de Trabajo</li>
+    </ul>
+    <h3>Arancel Ministerio De Salud:</h3>
+    <ul>
+        <li>
+            Pago de 4.000 Bs al Banco Central de Bolivia a la cuenta 3G-300 del Ministerio de Salud y deportes por concepto de apertura de empresa importadora
+        </li>
+    </ul>
+    <b>Nota.</b>
+    <h4>Para el trámite debe enviarse los datos de ubicación de la empresa, nº telefónico, nº de fax y email.</h4>
+</div>
+
+
+<div class="clear"></div>
