@@ -12,9 +12,10 @@ default:
     language:     en
     #robots:       index, follow
 
-  stylesheets:    [style.css, font-awesome.css, menu_web.css]
+  stylesheets:    [settings.css, style.css, font-awesome.css, menu_web.css]
 
-  javascripts:    [jquery.js, custom.js, jquery.core.js, jquery.superfish.js, jquery.jcarousel.pack.js, jquery.easing.js, jquery.scripts.js]
+#  javascripts:    [jquery.js, custom.js, jquery.core.js, jquery.superfish.js, jquery.jcarousel.pack.js, jquery.easing.js, jquery.scripts.js, jquery.themepunch.plugins.min, jquery.themepunch.revolution.min]
+  javascripts:    [jquery-1.7.1.min.js, custom.js, jquery.themepunch.plugins.min.js, jquery.themepunch.revolution.min.js]
 
   has_layout:     true
   layout:         layout

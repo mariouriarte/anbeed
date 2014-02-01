@@ -24,7 +24,7 @@
 
                     </div>
 
-
+                    <div class="contenedor-menu">
                     <div class="container">
                         <div class="navbar navbar-static-top">
                             <div class="navigation">
@@ -33,9 +33,10 @@
                                         <li class="dropdown active">
                                             <?php echo link_to('Inicio', 'home/index', 'id=inicio') ?>
                                         </li>
-                                        <li class="dropdown">
-                                            <?php echo link_to('Nosotros<i class="icon-angle-down"></i>', 'home/quienesSomos', 'id=quienes') ?>
+                                        <li class="dropdown"><a href="#">Nosotros <i class="icon-angle-down"></i></a>
+                                            
                                             <ul style="display: none;" class="dropdown-menu bold">
+                                                <li><?php echo link_to('Quienes Somos', 'home/quienesSomos') ?></li>
                                                 <li><?php echo link_to('Misión y Visión', 'home/misionVision') ?></li>
                                                 <li><?php echo link_to('Organigrama', 'home/organigrama') ?></li>
                                             </ul>
@@ -74,7 +75,7 @@
                             <!-- end navigation -->
                         </div>
                     </div>
-
+                    </div>
                     <!--            <div id="menu">
                                     <ul>                                                                                            
                                        <li><?php echo link_to('Inicio', 'home/index', 'id=inicio') ?></li>

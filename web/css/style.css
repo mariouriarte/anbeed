@@ -23,12 +23,12 @@ h2{
     margin:20px auto auto auto;
 }
 .top_corner{
-    width:976px;
+    width:960px;
     height:15px;
     background:url(/images/web/top_bg.gif) no-repeat center bottom;
 }
 #main_container{
-    width:977px;
+    width:960px;
     background:url(/images/web/center_bg_repeat.gif) repeat-y center;
 }
 #header{
