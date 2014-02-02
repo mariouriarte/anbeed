@@ -8,7 +8,7 @@
             <h3>Gerente General</h3>
                 <div>
                     <p>
-                        <img align="left" border="0" alt="" src="/images/web/organigrama/ana_ruth.jpg">
+                        <img  align="left" border="0" alt="" src="/images/web/organigrama/ana_ruth.jpg">
                         Dra. Ana Ruth Gutierrez Poveda <br>
                     </p>
                 </div>

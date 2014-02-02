@@ -34,26 +34,26 @@
                 <div class="caption lft" data-x="250" data-y="50" data-speed="900" data-start="1700" data-easing="easeOutBack"><img src="/images/slides/strawberries.png" /></div>	
                 <div class="caption lfb big_white" data-x="120" data-y="330" data-speed="600" data-start="1800" data-easing="easeOutExpo">Strawberries are like a glimpse of summer.</div>										
             </li>
-            <li data-transition="slotzoom-horizontal" data-slotamount="7" data-thumb="/images/thumbs/thumb2.jpg"> 
-          <img src="/images/slides/thumb1.jpg" />	
+            <li data-transition="slotzoom-horizontal" data-slotamount="7" data-thumb="/images/thumbs/thumb3.jpg"> 
+          <img src="/images/slides/thumb3.jpg" />	
                 <div class="caption sfb" data-x="0" data-y="10" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="/images/slides/glare2.png" /></div>
                 <div class="caption lft" data-x="250" data-y="50" data-speed="900" data-start="1700" data-easing="easeOutBack"><img src="/images/slides/strawberries.png" /></div>	
                 <div class="caption lfb big_white" data-x="120" data-y="330" data-speed="600" data-start="1800" data-easing="easeOutExpo">Strawberries are like a glimpse of summer.</div>										
             </li>
-            <li data-transition="slotslide-horizontal" data-slotamount="7" data-thumb="/images/thumbs/thumb2.jpg"> 
-                <img src="/images/slides/thumb2.jpg" />
+            <li data-transition="slotslide-horizontal" data-slotamount="7" data-thumb="/images/thumbs/thumb1.jpg"> 
+                <img src="/images/slides/thumb1.jpg" />
                 <div class="caption sfb" data-x="0" data-y="10" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="/images/slides/glare2.png" /></div>
                 <div class="caption lft" data-x="250" data-y="50" data-speed="900" data-start="1700" data-easing="easeOutBack"><img src="/images/slides/strawberries.png" /></div>	
                 <div class="caption lfb big_white" data-x="120" data-y="330" data-speed="600" data-start="1800" data-easing="easeOutExpo">Strawberries are like a glimpse of summer.</div>										
             </li>
             <li data-transition="slotfade-horizontal" data-slotamount="7" data-thumb="/images/thumbs/thumb2.jpg"> 
-         <img src="/images/slides/thumb1.jpg" />	
+         <img src="/images/slides/thumb2.jpg" />	
                 <div class="caption sfb" data-x="0" data-y="10" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="/images/slides/glare2.png" /></div>
                 <div class="caption lft" data-x="250" data-y="50" data-speed="900" data-start="1700" data-easing="easeOutBack"><img src="/images/slides/strawberries.png" /></div>	
                 <div class="caption lfb big_white" data-x="120" data-y="330" data-speed="600" data-start="1800" data-easing="easeOutExpo">Strawberries are like a glimpse of summer.</div>										
             </li>
-            <li data-transition="slotzoom-vertical" data-slotamount="7" data-thumb="/images/thumbs/thumb2.jpg"> 
-                <img src="/images/slides/thumb2.jpg" />
+            <li data-transition="slotzoom-vertical" data-slotamount="7" data-thumb="/images/thumbs/thumb3.jpg"> 
+                <img src="/images/slides/thumb3.jpg" />
                 <div class="caption sfb" data-x="0" data-y="10" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="/images/slides/glare2.png" /></div>
                 <div class="caption lft" data-x="250" data-y="50" data-speed="900" data-start="1700" data-easing="easeOutBack"><img src="/images/slides/strawberries.png" /></div>	
                 <div class="caption lfb big_white" data-x="120" data-y="330" data-speed="600" data-start="1800" data-easing="easeOutExpo">Strawberries are like a glimpse of summer.</div>										
@@ -76,33 +76,39 @@
     </div>					
 </div>
 
-<div class="center_content">
+<div class="inicio_content">
 
-    <div class="home_section_left">
-        <img src="/images/web/icon3.gif" alt="" title="" class="home_section_icon" border="0">
-
-        <h2 class="home_title">Apertura de Empresas</h2>
-        <p><span>Requiere apoyo para la apertura de su empresa?</span><br><br>
-            ANBEED le brinda servicios de consultoria para la apertura de empresas de insumos médicos, medicamentos. 
+    <div class="moduletable_ol_green">
+        <h3>Apertura de empresas</h3>
+        <div>
+            <p>
+                <img align="left" border="0" alt="" src="/images/web/ap_empresas.png">
+                Requiere apoyo para la apertura de su empresa? <br>
+                ANBEED le brinda servicios de consultoria para la apertura de empresas de insumos médicos, medicamentos.
+            </p>
+        </div>
     </div>
 
-
-    <div class="home_section_left">
-        <img src="/images/web/icon3.gif" alt="" title="" class="home_section_icon" border="0">
-
-        <h2 class="home_title">Registro Sanitario</h2>
-        <p><span>Necesita registrar su producto?</span><br><br>
-            Contamos con personal capacitado para el registro sanitario de medicamentos, dispositivos médicos, reactivos medicos, cosméticos y productos de higiene y limpieza.
-        </p>
+    <div class="moduletable_ol_blue">
+        <h3>Registro Sanitario</h3>
+        <div>
+            <p>
+                <img align="left" border="0" alt="" src="/images/web/registro_sanitario.png" width="90" height="90">
+                Necesita registrar su producto? <br>
+                Contamos con personal capacitado para el registro sanitario de medicamentos, dispositivos médicos, reactivos medicos, cosméticos y productos de higiene y limpieza.
+            </p>
+        </div>
     </div>
 
-    <div class="home_section_left">
-        <img src="/images/web/icon3.gif" alt="" title="" class="home_section_icon" border="0">
-
-        <h2 class="home_title">Despacho Aduanero</h2>
-        <p><span>Precisa desaduanizar sus productos médicos?</span><br><br>
-            Desconosolidamos y despachamos sus productos que se encuentren en Aduana a la brevedad posible.
-        </p>
+    <div class="moduletable_ol_red">
+        <h3>Despacho Aduanero</h3>
+        <div>
+            <p>
+                <img align="left" border="0" alt="" src="/images/web/despacho_aduanero.png" width="90" height="90">
+                Precisa realizar tramites de despachos aduaneros? <br>
+                Realice el tramite para sus despachos aduaneros a la brevedad posible.
+            </p>
+        </div>
     </div>
 
     

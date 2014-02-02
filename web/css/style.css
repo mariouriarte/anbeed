@@ -251,10 +251,11 @@ img.projects{
     margin:10px 10px 10px 15px;
 }
 
-.wide_organigrama img
+.wide_organigrama .moduletable_ol_blue img
 {
     border:3px #57ad55 solid;
     margin:10px 10px 10px 15px;
+    padding: 0;
 }
 
 .wide_organigrama_logo
@@ -754,6 +755,10 @@ ul.error_list li {
 }
 
 
+.inicio_content{
+    padding:25px;
+}
+
 /* MODULE BOX STYLES -------------------------------------*/
 
 .moduletable_ol_dark, 
@@ -761,11 +766,11 @@ ul.error_list li {
 .moduletable_ol_red, 
 .moduletable_ol_green, 
 .moduletable_ol_blue {
-    width: 35%;
+    width: 28%;
     padding: 10px;
     float: left;
-    height: auto;
-    
+    height: 250px;
+    font-size: 14px;
     margin-bottom: 1%;
     margin-left: 2%;
     padding-bottom: 10px;
@@ -812,4 +817,17 @@ ul.error_list li {
     border-bottom: 1px solid #BBBBBB;
     content: "";
     display: block;
+}
+
+.moduletable_ol_dark img, 
+.moduletable_ol_light img, 
+.moduletable_ol_red img, 
+.moduletable_ol_green img,
+.moduletable_ol_blue img {
+padding: 15px;
+}
+
+.wide_organigrama .moduletable_ol_blue {
+    width: 35%;
+    height: auto;
 }
