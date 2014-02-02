@@ -1,7 +1,7 @@
 <?php use_helper('I18N', 'Date') ?>
 <?php //include_partial('catalogo/assets') ?>
 <script type="text/javascript">
-    $( "#productos" ).addClass( "current" );
+    $( "#catalogo" ).addClass( "dropdown active" );
 </script>
 <div class="center_content">
   <div id="filtros_web">

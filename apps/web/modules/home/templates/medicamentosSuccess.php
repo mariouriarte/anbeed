@@ -1,3 +1,6 @@
+<script type="text/javascript">
+    $( "#servicios" ).addClass( "dropdown active" );
+</script>
 <div class="wide_content_services">
     <a name="medicamentos"></a><h2>Requisitos para Registro Sanitario de Medicamentos Importados</h2>
     <h3>Documentación Legal del Producto:</h3>
