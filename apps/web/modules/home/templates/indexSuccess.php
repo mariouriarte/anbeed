@@ -9,22 +9,34 @@
 
 
             <!-- FADE -->
-            <li data-transition="fade" data-slotamount="10" data-thumb="/images/thumbs/thumb1.jpg"> 										
+            <li data-transition="fade" data-slotamount="10" data-thumb="/images/thumbs/1.jpeg"> 										
 
-                <img src="/images/slides/thumb1.jpg" />									
+                <img src="/images/slides/1.jpeg" />									
 
-                <div class="caption lft" data-x="0" data-y="10" data-speed="900" data-start="900" data-easing="easeOutExpo"><img src="/images/slides/glare.png" /></div>
-                <div class="caption lfl" data-x="0" data-y="10" data-speed="900" data-start="1300" data-easing="easeOutBack"><img src="/images/slides/dude2.png" /></div>
-                <div class="caption lft big_white" data-x="400" data-y="100" data-speed="400" data-start="1700" data-easing="easeOutBack">ANBEED</div>
-                <div class="caption lft big_orange" data-x="400" data-y="137" data-speed="400" data-start="1900" data-easing="easeOutExpo"><span style="font-weight:normal;">With</span><em> Slider Revolution</em></div>
-                <div class="caption lfr medium_grey" data-x="510" data-y="210" data-speed="300" data-start="2500" data-easing="easeOutExpo">Unlimited Transitions</div>
-                <div class="caption sfl" data-x="510" data-y="250" data-speed="300" data-start="2600" data-easing="easeOutExpo"><img src="/images/tiles/check.png" /></div>
-                <div class="caption lfr small_text" data-x="560" data-y="248" data-speed="300" data-start="2600" data-easing="easeOutExpo">Sliding, Fading, Slots, Box Transitions<br />
+                <!--<div class="caption lft" data-x="0" data-y="10" data-speed="900" data-start="900" data-easing="easeOutExpo"><img src="/images/slides/glare.png" /></div>-->
+                <div class="caption lfl" data-x="25" data-y="80" data-speed="900" data-start="1300" data-easing="easeOutBack"><img src="/images/slides/logo.png" /></div>
+                <div class="caption lft big_blue" data-x="330" data-y="150" data-speed="400" data-start="1700" data-easing="easeOutBack">ANBEED S.R.L.</div>
+                
+                <div class="caption lft anbeed_grande" data-x="400" data-y="230" data-speed="400" data-start="1900" data-easing="easeOutExpo"><em> Consultora:</em></div>
+                
+                <div class="caption sfl Short from Top" data-x="480" data-y="270" data-speed="300" data-start="1850" data-easing="easeOutExpo"><img src="/images/tiles/check.svg" /></div>    
+                <div class="caption lft anbeed_medio" data-x="500" data-y="270" data-speed="400" data-start="1900" data-easing="easeOutExpo"><em> Jurídica</em></div>
+
+                <div class="caption sfl" data-x="480" data-y="300" data-speed="300" data-start="1950" data-easing="easeOutExpo"><img src="/images/tiles/check.svg" /></div>    
+                <div class="caption lft anbeed_medio" data-x="500" data-y="300" data-speed="400" data-start="2000" data-easing="easeOutExpo"><em> Contable</em></div>
+
+                <div class="caption sfl" data-x="480" data-y="330" data-speed="300" data-start="2050" data-easing="easeOutExpo"><img src="/images/tiles/check.svg" /></div>    
+                <div class="caption lft anbeed_medio" data-x="500" data-y="330" data-speed="400" data-start="2100" data-easing="easeOutExpo"><em> Regulación Farmaceútica</em></div>
+                
+                
+                <div class="caption lfr medium_grey" data-x="510" data-y="210" data-speed="300" data-start="2500" data-easing="easeOutExpo"></div>
+                <!--<div class="caption sfl" data-x="510" data-y="250" data-speed="300" data-start="2600" data-easing="easeOutExpo"><img src="/images/tiles/check.png" /></div>-->
+<!--                <div class="caption lfr small_text" data-x="560" data-y="248" data-speed="300" data-start="2600" data-easing="easeOutExpo">Inscripción de <span style="color: #084B8A;">Registros Sanitarios</span><br />
                     <span style="color: #ffe400;">SLIDER REVOLUTION</span> has it all!</div>
                 <div class="caption sfl" data-x="510" data-y="300" data-speed="300" data-start="2900" data-easing="easeOutExpo"><img src="/images/tiles/check.png" /></div>
-                <div class="caption lfr small_text" data-x="560" data-y="307" data-speed="300" data-start="2900" data-easing="easeOutExpo">Responsive & Mobile Optimized</div>
+                <div class="caption lfr small_text" data-x="560" data-y="307" data-speed="300" data-start="2900" data-easing="easeOutExpo">Despachos Aduaneros</div>
                 <div class="caption sfl" data-x="510" data-y="350" data-speed="300" data-start="3200" data-easing="easeOutExpo"><img src="/images/tiles/check.png" /></div>
-                <div class="caption lfr small_text" data-x="560" data-y="348" data-speed="300" data-start="3200" data-easing="easeOutExpo">Customizable Navigation<br />Arrows, Bullets, Thumbs</div>
+                <div class="caption lfr small_text" data-x="560" data-y="348" data-speed="300" data-start="3200" data-easing="easeOutExpo">Customizable Navigation<br />Arrows, Bullets, Thumbs</div>-->
             </li>
 
             <!-- SLIDEUP -->
