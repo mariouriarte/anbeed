@@ -67,7 +67,7 @@
                                             <?php echo link_to('Contacto', 'contacto/new', 'id=contact') ?>
                                         </li>
                                         <li>
-                                            <a href="/cliente.php">Iniciar </a>
+                                            <a href="/cliente.php">Ingresar </a>
                                         </li>
                                     </ul>
                                 </nav>
