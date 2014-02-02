@@ -73,11 +73,7 @@ h2{
 }
 /*----------------------slider---------------------------*/
 .featured_slider { width:965px; margin:auto; float:left; margin:11px 0 0 6px; }
-ul, li{
-    padding:0px;
-    margin:0px;
-    list-style:none;
-}
+
 /** ----------------------------------------------------- **/
 #featured_border { position: relative; border: none; padding:0px; height:280px; margin: 0px; }
 #featured_wrapper { position: relative; width: 100%; height: 100%; overflow: hidden; }
@@ -210,7 +206,7 @@ img.projects{
 .wide_content{
     width:930px;
     clear:both;
-    padding:10px 25px 0 25px;
+    padding:10px;
 }
 .wide_organigrama{
     width:930px;
@@ -218,12 +214,29 @@ img.projects{
     padding:10px 15px 0 110px;
 }
 .wide_content_services{
-    width:895px;
-    clear:both;
-    margin: 25px 5px 5px 15px;
-    border: 2px solid #57AD55;
-    padding:10px 15px 0 15px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 3px 3px 3px 3px;
+    display: block;
+    height: auto;
+    width: 90% !important;
+    margin-bottom: 1%;
+    margin-left: 28px;
+    padding: 20px;
+    position: relative;
+    float: left;
 }
+
+.wide_content_services .requisitos {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: auto;
+    width: 32% !important;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    border-right: 1px #D5D5D2 solid;
+    float: left;
+}
+
 .wide_left{
     width:440px;
     float: left;
@@ -239,17 +252,18 @@ img.projects{
     float:right;
     padding:20px 20px 10px 0;
 }
-.wide_content_services ul{
-    padding: 10px 100px;
-}
-.wide_content_services li{
-    list-style: square outside none !important;
-    padding: 5px 0px 1px 1px;
-}
+
 .wide_content img
 {
     border:3px #57ad55 solid;
     margin:10px 10px 10px 15px;
+}
+
+.wide_content .moduletable_ol_light img
+{
+    border:0px #57ad55 solid;
+    margin:10px 10px 10px 15px;
+    padding: 0;
 }
 
 .wide_organigrama .moduletable_ol_blue img
@@ -832,3 +846,29 @@ padding: 15px;
     width: 35%;
     height: auto;
 }
+
+.wide_content .moduletable_ol_light {
+    width:400px;
+    height: 556px;
+    float: left;
+    padding:20px;
+}
+
+.mision_vision{
+    width:930px;
+    clear:both;
+    padding:10px;
+}
+
+.mision_vision .moduletable_ol_light{
+    width:90%;
+    height: auto;
+    float: left;
+    padding:20px;
+}
+
+/* LIST #2 */
+.wide_content_services .requisitos .lista_requisitos ol { padding-left: 20px; padding-right: 5px; font-style:italic; font-family:Georgia, Times, serif; font-size:14px; color:#0b1910;  }
+.wide_content_services .requisitos .lista_requisitos ol li { }
+.wide_content_services .requisitos .lista_requisitos ol li p { padding:2px; font-style:normal; font-family: sans-serif; font-size:12px; color:#070f0a; border-left: 1px solid #213a2a; }
+.wide_content_services .requisitos .lista_requisitos ol li p em { display:block; }
