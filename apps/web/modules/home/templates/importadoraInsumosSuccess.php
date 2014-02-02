@@ -1,3 +1,6 @@
+<script type="text/javascript">
+    $( "#servicios" ).addClass( "dropdown active" );
+</script>
 <div class="wide_content_services">
     <a name="importadora_insumos"></a><h2>Requisitos para Apertura de Empresa Importadora de Insumos Medicos S.R.L. ó S.A.</h2>
     <h3>Documentacion Legal De La Empresa:</h3>

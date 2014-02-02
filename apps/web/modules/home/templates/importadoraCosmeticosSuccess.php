@@ -1,3 +1,6 @@
+<script type="text/javascript">
+    $( "#servicios" ).addClass( "dropdown active" );
+</script>
 <div class="wide_content_services">
     <a name="importadora_medicamentos"></a><h2>Requisitos para Apertura de Empresa Importadora de Cosméticos S.R.L. o S.A.</h2>
 

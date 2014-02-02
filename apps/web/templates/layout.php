@@ -30,10 +30,10 @@
                             <div class="navigation">
                                 <nav>
                                     <ul class="nav topnav bold">
-                                        <li class="dropdown active">
+                                        <li class="dropdown" id="inicio">
                                             <?php echo link_to('Inicio', 'home/index', 'id=inicio') ?>
                                         </li>
-                                        <li class="dropdown"><a href="#">Nosotros <i class="icon-angle-down"></i></a>
+                                        <li class="dropdown" id="nosotros"><a href="#">Nosotros <i class="icon-angle-down"></i></a>
                                             
                                             <ul style="display: none;" class="dropdown-menu bold">
                                                 <li><?php echo link_to('Quienes Somos', 'home/quienesSomos') ?></li>
@@ -41,7 +41,7 @@
                                                 <li><?php echo link_to('Organigrama', 'home/organigrama') ?></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown"><a href="#">Servicios <i class="icon-angle-down"></i></a>
+                                        <li class="dropdown" id="servicios"><a href="#">Servicios <i class="icon-angle-down"></i></a>
                                             <ul class="dropdown-menu bold">
                                                 <li class="dropdown"><a href="#">Apertura de Empresas <i class="icon-angle-right"></i></a>
                                                     <ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
@@ -60,10 +60,10 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown">
+                                        <li class="dropdown" id="catalogo">
                                             <?php echo link_to('Productos', 'catalogo/index', 'id=productos') ?> 
                                         </li>
-                                        <li class="dropdown">
+                                        <li class="dropdown" id="contacto">
                                             <?php echo link_to('Contacto', 'contacto/new', 'id=contact') ?>
                                         </li>
                                         <li>

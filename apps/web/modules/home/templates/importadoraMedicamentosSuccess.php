@@ -1,3 +1,6 @@
+<script type="text/javascript">
+    $( "#servicios" ).addClass( "dropdown active" );
+</script>
 <div class="center_content">
     
     <div class="wide_content_services">

@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    $("#quienes").addClass("current");
+    $( "#nosotros" ).addClass( "dropdown active" );
 </script>
 <div class="center_content_pages">
     <div class="wide_content"> 

@@ -1,3 +1,6 @@
+<script type="text/javascript">
+    $( "#servicios" ).addClass( "dropdown active" );
+</script>
 <div class="wide_content_services">
     <a name="cosmeticos"></a><h2>Requisitos para Registro de Cosméticos</h2>
     <ul>

@@ -2,7 +2,7 @@
 <?php use_javascripts_for_form($form) ?>
 
 <script type="text/javascript">
-    $( "#contact" ).addClass( "current" );
+    $( "#contacto" ).addClass( "dropdown active" );
 </script>
 
 <div class="center_content_pages">

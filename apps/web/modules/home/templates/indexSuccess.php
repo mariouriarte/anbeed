@@ -1,6 +1,6 @@
-<!--<script type="text/javascript">
-    //$("#inicio").addClass("current");
-</script>-->
+<script type="text/javascript">
+    $("#inicio").addClass("dropdown active");
+</script>
 
     
     <div class="fullwidthbanner-container">					

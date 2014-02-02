@@ -1,3 +1,6 @@
+<script type="text/javascript">
+    $( "#servicios" ).addClass( "dropdown active" );
+</script>
 <div class="wide_content_services">
     <a name="dispositivos"></a><h2>Requisitos para Registro de Dispositivos Médicos</h2>
     <br><b>1. Formulario 027</b>
