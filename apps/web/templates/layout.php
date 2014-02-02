@@ -16,13 +16,13 @@
     </head>
     <body>
         <div id="wrap">
-            <div class="top_corner"></div>
+            
             <div id="main_container">
                 <div id="header">
                     <?php echo link_to(image_tag('/images/web/header.png', 'alt=ANBEED size=960x151'), '@homepage') ?> <br />
-                    <div id="logo"><?php echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90'), '@homepage') ?>
+<!--                    <div id="logo"><?php //echo link_to(image_tag('logo.jpg', 'alt=ANBEED size=90x90'), '@homepage') ?>
 
-                    </div>
+                    </div>-->
 
                     <div class="contenedor-menu">
                     <div class="container">

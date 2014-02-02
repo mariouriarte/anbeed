@@ -15,7 +15,7 @@
 
                 <div class="caption lft" data-x="0" data-y="10" data-speed="900" data-start="900" data-easing="easeOutExpo"><img src="/images/slides/glare.png" /></div>
                 <div class="caption lfl" data-x="0" data-y="10" data-speed="900" data-start="1300" data-easing="easeOutBack"><img src="/images/slides/dude2.png" /></div>
-                <div class="caption lft big_white" data-x="400" data-y="100" data-speed="400" data-start="1700" data-easing="easeOutExpo">Kickstart Your Website</div>
+                <div class="caption lft big_white" data-x="400" data-y="100" data-speed="400" data-start="1700" data-easing="easeOutBack">ANBEED</div>
                 <div class="caption lft big_orange" data-x="400" data-y="137" data-speed="400" data-start="1900" data-easing="easeOutExpo"><span style="font-weight:normal;">With</span><em> Slider Revolution</em></div>
                 <div class="caption lfr medium_grey" data-x="510" data-y="210" data-speed="300" data-start="2500" data-easing="easeOutExpo">Unlimited Transitions</div>
                 <div class="caption sfl" data-x="510" data-y="250" data-speed="300" data-start="2600" data-easing="easeOutExpo"><img src="/images/tiles/check.png" /></div>
