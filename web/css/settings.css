@@ -158,6 +158,38 @@ website:   	http://www.themepunch.com
     white-space:nowrap;	
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);		
 }
+.caption.anbeed_grande2	{
+    position: absolute; 
+    color: #FFF; 
+    text-shadow: none; 
+    font-weight: 700; 
+    font-size: 40px; 
+    line-height: 40px; 
+    font-family: sans-serif; 
+    padding: 2px 4px; 
+    margin: 0px; 
+    border-width: 0px; 
+    border-style: none; 
+    /*background-color:#E6E6E6;*/		
+    white-space:nowrap;	
+    text-shadow: 0px 2px 5px rgba(2, 2, 2, 2.5);		
+}
+.caption.anbeed_peque	{
+    position: absolute; 
+    color: #FFF; 
+    text-shadow: none; 
+    font-weight: 700; 
+    font-size: 20px; 
+    line-height: 20px; 
+    font-family: sans-serif; 
+    padding: 2px 4px; 
+    margin: 0px; 
+    border-width: 0px; 
+    border-style: none; 
+    /*background-color:#E6E6E6;*/		
+    white-space:nowrap;	
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);		
+}
 .caption.anbeed_medio	{
     position: absolute; 
     color: #0a5373; 

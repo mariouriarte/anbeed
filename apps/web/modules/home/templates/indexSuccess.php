@@ -9,7 +9,7 @@
 
 
             <!-- FADE -->
-            <li data-transition="fade" data-slotamount="10" data-thumb="/images/thumbs/1.jpeg"> 										
+            <li data-transition="fade" data-slotamount="7" data-thumb="/images/thumbs/1.jpeg"> 										
 
                 <img src="/images/slides/1.jpeg" />									
 
@@ -40,11 +40,23 @@
             </li>
 
             <!-- SLIDEUP -->
-            <li data-transition="boxfade" data-slotamount="7" data-thumb="/images/thumbs/thumb2.jpg"> 
-                <img src="/images/slides/thumb2.jpg" />
-                <div class="caption sfb" data-x="0" data-y="10" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="/images/slides/glare2.png" /></div>
-                <div class="caption lft" data-x="250" data-y="50" data-speed="900" data-start="1700" data-easing="easeOutBack"><img src="/images/slides/strawberries.png" /></div>	
-                <div class="caption lfb big_white" data-x="120" data-y="330" data-speed="600" data-start="1800" data-easing="easeOutExpo">Strawberries are like a glimpse of summer.</div>										
+            <li data-transition="slotzoom-horizontal" data-slotamount="7" data-thumb="/images/thumbs/thumb1.jpg"> 
+                <img src="/images/slides/thumb1.jpg" />
+                <div class="caption sfb" data-x="0" data-y="10" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="/images/slides/glare.png" /></div>
+                <div class="caption lft" data-x="70" data-y="0" data-speed="900" data-start="1500" data-easing="easeOutBack"><img src="/images/slides/empresa.png" /></div>	
+                <div class="caption lfl anbeed_grande2" data-x="550" data-y="100" data-speed="600" data-start="1000" data-easing="easeOutExpo">Apertura de</div>
+                <div class="caption lfr anbeed_grande2" data-x="575" data-y="145" data-speed="600" data-start="1500" data-easing="easeOutExpo">Empresas</div>
+                
+                
+                
+                <div class="caption sfl" data-x="500" data-y="230" data-speed="900" data-start="2000" data-easing="easeOutExpo"><img src="/images/tiles/empresas.svg" /></div>    
+                <div class="caption sfl anbeed_peque" data-x="525" data-y="230" data-speed="900" data-start="2000" data-easing="easeOutExpo">Importadoras de Medicamentos</div>
+                
+                <div class="caption sfr" data-x="500" data-y="260" data-speed="900" data-start="2500" data-easing="easeOutExpo"><img src="/images/tiles/empresas.svg" /></div>    
+                <div class="caption sfr anbeed_peque" data-x="525" data-y="260" data-speed="900" data-start="2500" data-easing="easeOutExpo">Importadoras de Cosméticos</div>
+                
+                <div class="caption sfb" data-x="500" data-y="290" data-speed="900" data-start="3000" data-easing="easeOutExpo"><img src="/images/tiles/empresas.svg" /></div>    
+                <div class="caption sfb anbeed_peque" data-x="525" data-y="290" data-speed="900" data-start="3000" data-easing="easeOutExpo">Importadoras de Insumos Médicos</div>
             </li>
             <li data-transition="slotzoom-horizontal" data-slotamount="7" data-thumb="/images/thumbs/thumb3.jpg"> 
           <img src="/images/slides/thumb3.jpg" />	
