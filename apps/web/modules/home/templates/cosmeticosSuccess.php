@@ -2,20 +2,21 @@
     $( "#servicios" ).addClass( "dropdown active" );
 </script>
 <div class="wide_content_services">
+    <img id="etiqueta-registro" src="/images/web/registro.jpg"/>
     <h2>Requisitos para Registro de Cosméticos</h2>
     <div class="requisitos-uno">
         <div class="lista_requisitos">
     <ol>
-        <li><p>Contrato de fabricación por terceros</p></li>
-        <li><p>Certificado de Buenas Prácticas de Manufactura o ISO</p></li>
-        <li><p>Formula Cuali cuantitativa </p></li>
-        <li><p>Especificaciones organolépticas y fisicoquímicas del producto terminado</p></li>
-        <li><p>Especificaciones microbiológicas cuando corresponda, de acuerdo a la naturaleza del producto terminado.</p></li>
-        <li><p>Justificación de las bondades y proclamas de carácter cosmético atribuibles al producto en estas bondades no se atribuirán efectos terapéuticos.</p></li>
-        <li><p>Proyecto de arte de la etiqueta o rotulado</p></li>
-        <li><p>Instrucciones de uso del producto</p></li>
-        <li><p>Material de envase primario especificaciones</p></li>
-        <li><p>Certificado de Análisis microbiológico</p></li> 
+        <li><p>Contrato de <b>fabricación por terceros</b></p></li>
+        <li><p>Certificado de <b>Buenas Prácticas de Manufactura o ISO</b></p></li>
+        <li><p><b>Formula Cuali cuantitativa</b> </p></li>
+        <li><p>Especificaciones <b>organolépticas y fisicoquímicas</b> del producto terminado</p></li>
+        <li><p>Especificaciones <b>microbiológicas</b> cuando corresponda, de acuerdo a la naturaleza del producto terminado.</p></li>
+        <li><p>Justificación de las <b>bondades y proclamas</b> de carácter cosmético atribuibles al producto en estas bondades no se atribuirán efectos terapéuticos.</p></li>
+        <li><p>Proyecto de arte de la <b>etiqueta o rotulado</b></p></li>
+        <li><p><b>Instrucciones de uso</b> del producto</p></li>
+        <li><p><b>Material de envase</b> primario especificaciones</p></li>
+        <li><p>Certificado de <b>Análisis microbiológico</b></p></li> 
     </ol>
             </div>
     <h4>NOTA.-</h4> 

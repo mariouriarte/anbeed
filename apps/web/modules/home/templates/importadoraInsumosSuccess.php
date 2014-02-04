@@ -4,7 +4,11 @@
 <div class="wide_content_services">
     <img id="etiqueta" src="/images/web/sociedad.jpg"/>
     <h2>Requisitos para Apertura de Empresa Importadora de Insumos Medicos S.R.L. ó S.A.</h2>
-    <div class="requisitos">
+    <div class="sub">
+        <div class="imagen-presentacion">
+            <img id="servicio" src="/images/web/supplies_1.jpg"/>
+        </div>
+    <div class="requisitos-dos">
         <h3>Documentacion Legal De La Empresa:</h3>
         <div class="lista_requisitos">
             <ol>
@@ -16,7 +20,9 @@
             </ol>
         </div>
     </div>
-    <div class="requisitos">
+        </div>
+    <div class="sub">
+    <div class="requisitos-dos">
         <h3>Documentación Regente Farmacéutica:</h3>
         <div class="lista_requisitos">
             <ol>
@@ -29,7 +35,7 @@
             </ol>
         </div>
     </div>
-    <div class="requisitos">
+    <div class="requisitos-dos">
         <h3>Arancel Ministerio De Salud:</h3>
         <div class="lista_requisitos">
             <ol>
@@ -42,11 +48,16 @@
         <h4>Para el trámite debe enviarse los datos de ubicación de la empresa, nº telefónico, nº de fax y email.</h4>
 
     </div>
+        </div>
 </div>
 <div class="wide_content_services">
     <img id="etiqueta" src="/images/web/unipersonal.jpg"/>
     <h2>Requisitos para Apertura de Empresa Importadora de Insumos Medicos UNIPERSONAL</h2>
-    <div class="requisitos">
+    <div class="sub">
+        <div class="imagen-presentacion">
+            <img id="servicio" src="/images/web/supplies_2.jpg"/>
+        </div>
+    <div class="requisitos-dos">
         <h3>Documentacion Legal De La Empresa:</h3>
         <div class="lista_requisitos">
             <ol>
@@ -56,7 +67,9 @@
             </ol>
         </div>
     </div>
-    <div class="requisitos">
+        </div>
+    <div class="sub">
+    <div class="requisitos-dos">
         <h3>Documentación Regente Farmacéutica:</h3>
         <div class="lista_requisitos">
             <ol>
@@ -69,7 +82,7 @@
             </ol>
         </div>
     </div>
-    <div class="requisitos">
+    <div class="requisitos-dos">
         <h3>Arancel Ministerio De Salud:</h3>
         <div class="lista_requisitos">
             <ol>
@@ -81,5 +94,6 @@
         <h4>Nota.</h4>
         <h4>Para el trámite debe enviarse los datos de ubicación de la empresa, nº telefónico, nº de fax y email.</h4>
     </div>
+        </div>
 </div>
     <div class="clear"></div>

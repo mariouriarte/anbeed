@@ -2,6 +2,7 @@
     $("#servicios").addClass("dropdown active");
 </script>
 <div class="wide_content_services">
+    <img id="etiqueta-registro" src="/images/web/registro.jpg"/>
     <h2>Requisitos para Inscripción de Productos de Aseo y Limpieza Absorvente</h2>
     <h5>Toallas higiénicas, pañales desechables y otros similares</h5>
     <div class='requisitos-dos'>

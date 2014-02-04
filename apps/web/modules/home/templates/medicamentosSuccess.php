@@ -2,19 +2,20 @@
     $("#servicios").addClass("dropdown active");
 </script>
 <div class="wide_content_services">
+    <img id="etiqueta-registro" src="/images/web/registro.jpg"/>
     <h2>Requisitos para Registro Sanitario de Medicamentos Importados</h2>
     <div class="requisitos-left">
         <div class="sub-requisitos">
             <h3>Documentación Legal del Producto:</h3>
             <div class="lista_requisitos">
                 <ol>
-                    <li><p>Información general de Licenciantes y fabricantes</p></li>
-                    <li><p>Aclaración de particularidades del producto</p></li>
-                    <li><p>Certificado del director técnico</p></li>
-                    <li><p>Certificado de Buenas Prácticas de Manufactura (fotocopia)</p></li>
-                    <li><p>Contrato de fabricación o control de calidad (si corresponde)</p></li>
-                    <li><p>Certificado de Libre Venta Consularizado (original)</p></li>
-                    <li><p>Carta de Representación Legal Consularizada (original)</p></li>
+                    <li><p>Información general de <b>Licenciantes y fabricantes</b></p></li>
+                    <li><p>Aclaración de <b>particularidades</b> del producto</p></li>
+                    <li><p>Certificado del <b>Director Técnico</b></p></li>
+                    <li><p>Certificado de <b>Buenas Prácticas de Manufactura</b> (fotocopia)</p></li>
+                    <li><p>Contrato de <b>fabricación o control de calidad</b> (si corresponde)</p></li>
+                    <li><p>Certificado de <b>Libre Venta Consularizado</b> (original)</p></li>
+                    <li><p>Carta de <b>Representación Legal Consularizada</b> (original)</p></li>
                 </ol>
             </div>
         </div>
@@ -22,26 +23,27 @@
             <h3>Documentación Técnica del Principio Activo:</h3>
             <div class="lista_requisitos">
                 <ol>
-                    <li><p>Fotocopia de certificado de análisis de materia prima</p></li>
-                    <li><p>Clasificación anatomo terapéutica</p></li>
+                    <li><p>Fotocopia de certificado de <b>Análisis de materia prima</b></p></li>
+                    <li><p>Clasificación <b>Anatomo terapéutica</b></p></li>
                     <li><p>Nombre químico, Formula Estructural Molecular y Peso Molecular</p></li>
-                    <li><p>Características Fisicoquímicas del principio Activo</p></li>
-                    <li><p>Características Organolépticas del principio activo</p></li>
-                    <li><p>Impurezas y productos de degradación</p></li>
-                    <li><p>Estabilidad del principio activo</p></li>
-                    <li><p>Metodología analítica del principio activo</p></li>
-                    <li><p>Validación de la metodología analítica</p></li>
+                    <li><p>Características <b>Fisicoquímicas</b> del principio Activo</p></li>
+                    <li><p>Características <b>Organolépticas</b> del principio activo</p></li>
+                    <li><p>Impurezas y productos de <b>degradación</b></p></li>
+                    <li><p><b>Estabilidad</b> del principio activo</p></li>
+                    <li><p><b>Metodología analítica</b> del principio activo</p></li>
+                    <li><p><b>Validación</b> de la metodología analítica</p></li>
                 </ol>
             </div>
         </div>
-
-
+        <div id="imagen-medicamentos">
+            <img id="servicio-medicamento" src="/images/web/registro_medicamentos.jpg"/>
+        </div>
         <div class="sub-requisitos">
             <h3>Arancel al Ministerio de Salud a la cuenta 0688B del Banco Central de Bolivia por:</h3>
             <div class="lista_requisitos">
                 <ol>
-                    <li><p>Medicamento Generico esencial importado el pago es de 1300 Bs</p></li>
-                    <li><p>Medicamento Generico no esencial, marca , homeopático, natural  importado 1600 Bs</p></li>
+                    <li><p>Para Medicamento Generico esencial importado el pago es de <b>1300 Bs</b></p></li>
+                    <li><p>Para Medicamento Generico no esencial, marca , homeopático, natural importado el pago es de <b>1600 Bs</b></p></li>
                 </ol>
             </div>
         </div>
@@ -49,7 +51,7 @@
             <h3>Arancel a INLASA a la cuenta 0689B del Banco Central de Bolivia:</h3>
             <div class="lista_requisitos">
                 <ol>
-                    <li><p>Control de calidad del medicamento 1200 Bs</p></li>
+                    <li><p>Control de calidad del medicamento <b>1200 Bs</b></p></li>
                 </ol>
             </div>
         </div>
@@ -58,22 +60,25 @@
         <h3>Documentación Técnica del Producto Terminado:</h3>
         <div class="lista_requisitos">
             <ol>
-                <li><p>Desarrollo galénico</p></li>
-                <li><p>Formula Cuali-Cuantitativa ( cada componente con la acción)</p></li>
-                <li><p>Certificado de análisis de producto terminado</p></li>
-                <li><p>Certificado CONCAMIT si es reinscripción</p></li>
-                <li><p>Características Fisicoquímicas de los excipientes</p></li>
-                <li><p>Método de manufactura(un resumen o flujograma)</p></li>
-                <li><p>Metodología analítica del producto terminado</p></li>
-                <li><p>Validación de la metodología analítica</p></li>
-                <li><p>Estudio de estabilidad del producto terminado</p></li>
-                <li><p>Condiciones de almacenamiento del producto</p></li>
-                <li><p>Características del material de envase</p></li>
-                <li><p>Codificación de Lote</p></li>
-                <li><p>Etiquetas, Rótulos y estuches, Insertos y Prospectos</p></li>
-                <li><p>Monografía farmacológica</p></li>
-                <li><p>Muestras del producto (original) 2 muestras</p></li>        
+                <li><p>Desarrollo <b>galénico</b></p></li>
+                <li><p>Formula <b>Cuali-Cuantitativa</b> ( cada componente con la acción)</p></li>
+                <li><p>Certificado de <b>Análisis de producto terminado</b></p></li>
+                <li><p>Certificado <b>CONCAMIT</b> si es <b>reinscripción</b></p></li>
+                <li><p>Características <b>Fisicoquímicas de los excipientes</b></p></li>
+                <li><p><b>Método de manufactura</b>(un resumen o flujograma)</p></li>
+                <li><p><b>Metodología analítica</b> del producto terminado</p></li>
+                <li><p><b>Validación</b> de la metodología analítica</p></li>
+                <li><p><b>Estudio de estabilidad</b> del producto terminado</p></li>
+                <li><p><b>Condiciones de almacenamiento</b> del producto</p></li>
+                <li><p>Características del <b>material de envase</b></p></li>
+                <li><p><b>Codificación</b> de Lote</p></li>
+                <li><p><b>Etiquetas, Rótulos y estuches, Insertos y Prospectos</b></p></li>
+                <li><p><b>Monografía farmacológica</b></p></li>
+                <li><p><b>Muestras del producto</b> (original) 2 muestras</p></li>        
             </ol>
         </div>
+    </div>
+    <div class="imagen-medicamentos">
+        <img id="servicio-medicamento2" src="/images/web/registro_medicamentos_1.jpg"/>
     </div>
 </div>
