@@ -2,7 +2,11 @@
     $("#servicios").addClass("dropdown active");
 </script>
 <div class="wide_content_services">
+    <img id="etiqueta" src="/images/web/sociedad.jpg"/>
     <h2>Requisitos para Apertura de Empresas Importadoras de Medicamentos S.R.L. ó S.A.</h2>
+    <div class="imagen-presentacion">
+        <img id="central" src="/images/web/medicinas.gif"/>
+    </div>
     <div class="requisitos">
         <h3>Documentación legal de la empresa:</h3>
 
@@ -40,7 +44,11 @@
 </div>
 
 <div class="wide_content_services">
+    <img id="etiqueta" src="/images/web/unipersonal.jpg"/>
     <h2>Requisitos para Apertura de Empresas Importadoras de Medicamentos UNIPERSONAL</h2>
+    <div class="imagen-presentacion">
+        <img id="central" src="/images/web/injectable.jpg"/>
+    </div>
     <div class="requisitos">
         <h3>Documentacion Legal de la Empresa:</h3>
         <div class="lista_requisitos">

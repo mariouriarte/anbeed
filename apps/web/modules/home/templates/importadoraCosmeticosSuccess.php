@@ -2,6 +2,7 @@
     $("#servicios").addClass("dropdown active");
 </script>
 <div class="wide_content_services">
+    <img id="etiqueta" src="/images/web/sociedad.jpg"/>
     <h2>Requisitos para Apertura de Empresa Importadora de Cosméticos S.R.L. o S.A.</h2>
     <div class="requisitos">
         <h3>Documentacion Legal De La Empresa:</h3>
@@ -41,6 +42,7 @@
 </div>
 
 <div class="wide_content_services">
+    <img id="etiqueta" src="/images/web/unipersonal.jpg"/>
     <h2>Requisitos para Apertura de Empresa Importadora de Cosméticos UNIPERSONAL</h2>
     <div class="requisitos">
     <h3>Documentacion Legal De La Empresa:</h3>

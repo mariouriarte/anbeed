@@ -246,6 +246,11 @@ img.projects{
     float: left;
 }
 
+.wide_content_services .imagen-presentacion {
+    width: 90%;
+    margin: 1%;
+    float: left;
+}
 img#costemic{
     width: 320px;
     padding-top: 50px;
@@ -255,6 +260,20 @@ img#costemic{
 img#aseo-limpieza{
     width: 270px;
     padding-left: 70px;
+}
+
+img#etiqueta{
+    width: 80px;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+}
+
+img#central{
+    width: 300px;
+    padding-left: 5px;
+    padding-right: 5px;
+    alignment-adjust: central;
 }
 
 .wide_content_services .requisitos-dos {
