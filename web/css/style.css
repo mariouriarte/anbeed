@@ -15,6 +15,9 @@ p{
 p#shadow{
     text-shadow: 0 3px 2px rgba(0, 0, 0, 0.9);
 }
+p#shadow-ligth{
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
 h2{
     padding:0px 0 10px 0; margin:0px; color:#57ad55; font-size:25px; font-weight:normal;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
