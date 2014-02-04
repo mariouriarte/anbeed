@@ -102,10 +102,10 @@
 
 <div class="inicio_content">
 
-    <div class="moduletable_ol_green">
+    <div class="moduletable_ol_blue">
         <h3>Apertura de empresas</h3>
         <div>
-            <p>
+            <p id="shadow">
                 <img align="left" border="0" alt="" src="/images/web/ap_empresas.png">
                 Requiere apoyo para la apertura de su empresa? <br>
                 ANBEED le brinda servicios de consultoria para la apertura de empresas de insumos médicos, medicamentos.
@@ -116,7 +116,7 @@
     <div class="moduletable_ol_blue">
         <h3>Registro Sanitario</h3>
         <div>
-            <p>
+            <p id="shadow">
                 <img align="left" border="0" alt="" src="/images/web/registro_sanitario.png" width="90" height="90">
                 Necesita registrar su producto? <br>
                 Contamos con personal capacitado para el registro sanitario de medicamentos, dispositivos médicos, reactivos medicos, cosméticos y productos de higiene y limpieza.
@@ -124,10 +124,10 @@
         </div>
     </div>
 
-    <div class="moduletable_ol_red">
+    <div class="moduletable_ol_blue">
         <h3>Despacho Aduanero</h3>
         <div>
-            <p>
+            <p id="shadow">
                 <img align="left" border="0" alt="" src="/images/web/despacho_aduanero.png" width="90" height="90">
                 Precisa realizar tramites de despachos aduaneros? <br>
                 Realice el tramite para sus despachos aduaneros a la brevedad posible.

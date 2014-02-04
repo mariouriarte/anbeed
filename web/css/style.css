@@ -12,6 +12,9 @@ p{
     padding:0px;
     margin:0px;
 }
+p#shadow{
+    text-shadow: 0 3px 2px rgba(0, 0, 0, 0.9);
+}
 h2{
     padding:0px 0 10px 0; margin:0px; color:#57ad55; font-size:25px; font-weight:normal;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -939,12 +942,14 @@ ul.error_list li {
 
 .moduletable_ol_green {
     color: #f1f1f1;
-    background-color: #339933 !important;
+    background-color: #094b27 !important;
+    /*background-color: #339933 !important;*/
 }
 
 .moduletable_ol_blue {
     color: #f1f1f1;
-    background-color: #336699 !important;
+    background-color: #0a5373 !important;
+    /*background-color: #336699 !important;*/
 }
 
 .moduletable_ol_light h3:after,
