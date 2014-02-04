@@ -2,7 +2,13 @@
     $( "#nosotros" ).addClass( "dropdown active" );
 </script>
 <div class="center_content_pages">
-    <h2 align="center">Personal Activo</h2>
+    
+    <h2 id="title-org">Personal Activo</h2>
+    
+    <div class="wide-organigrama-logo">
+        <img border="0" alt="" src="/images/logo.jpg">
+    </div>
+    <div id="org-panel">
     <div class="wide_organigrama">
         <div class="moduletable_ol_blue">
             <h3>Gerente General</h3>
@@ -13,9 +19,6 @@
                     </p>
                 </div>
         </div>
-    </div>    
-    <div class="wide_organigrama_logo">
-    <img border="0" alt="" src="/images/logo.jpg">
     </div>
     <div class="wide_organigrama">
         <div class="moduletable_ol_blue">
@@ -81,6 +84,7 @@
                     </p>
                 </div>
         </div>
+    </div>
     </div>
     <div class="clear"></div>
 </div>

@@ -219,9 +219,9 @@ img.projects{
     padding:10px;
 }
 .wide_organigrama{
-    width:930px;
+    /*width:100%;*/
     clear:both;
-    padding:10px 15px 0 110px;
+    /*padding:10px 15px 0 110px;*/*/
 }
 .wide_content_services{
     background: none repeat scroll 0 0 #FFFFFF;
@@ -358,14 +358,28 @@ img#central{
 
 .wide_organigrama .moduletable_ol_blue img
 {
-    border:3px #57ad55 solid;
+    border:3px #DCE2D9 solid;
     margin:10px 10px 10px 15px;
     padding: 0;
 }
 
-.wide_organigrama_logo
+.wide-organigrama-logo
 {
-    padding-left: 58%;
+    width: 100%;
+    text-align: center;
+}
+
+#org-panel {
+    background-color: #ddd;
+    padding: 10px;
+    width: 800px;
+    height: 950px;
+    margin: 0 auto;
+}
+
+#title-org {
+    text-align: center;
+    color: #000;
 }
 
 img.pic{
@@ -933,7 +947,7 @@ padding: 15px;
 }
 
 .wide_organigrama .moduletable_ol_blue {
-    width: 35%;
+    width: 350px;
     height: auto;
 }
 
