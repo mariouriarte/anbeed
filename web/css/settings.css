@@ -576,7 +576,7 @@ website:   	http://www.themepunch.com
 
 #header .fullwidthbanner-container
 {
-    width: 953px;
+    width: 960px;
     position: relative;
     padding: 0;
     max-height: 151px !important;
@@ -584,12 +584,14 @@ website:   	http://www.themepunch.com
     
 }
 
-/*#header .fullwidthbanner
+#header .fullwidthbanner
 {
-    width: 953px;
+    width: 960px;
     max-height: 151px !important;
     
 }
-*/
-
-
+#headerimg
+{
+    max-width: 960px;
+    max-height: 151px
+}

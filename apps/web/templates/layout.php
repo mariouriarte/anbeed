@@ -24,10 +24,19 @@
                         <div class="fullwidthbanner-container">					
                   <div class="fullwidthbanner">
                         <ul>	
-                            <li data-transition="fade" data-slotamount="7" data-thumb="/images/slides/headerb.png">
+                            <li data-transition="curtain-2" data-slotamount="7" data-thumb="/images/slides/headerb.png">
+                                <img id="headerimg" src="/images/slides/headerb.png" width="960" height="151"/>									
+                                <div class="caption lfl" data-x="-20" data-y="80" data-speed="900" data-start="1000" data-easing="easeOutBack"><img src="/images/slides/anbeed.png" width="222" height="63"/></div>
+                                <div class="caption lfl" data-x="-30" data-y="130" data-speed="900" data-start="1500" data-easing="easeOutBack"><img src="/images/slides/anbeed2.png" width="683" height="27"/></div>
+                                <div class="caption lfl" data-x="40" data-y="0" data-speed="2000" data-start="2000" data-easing="easeOutBack"><img src="/images/slides/logo.png" width="80" height="80"/></div>
+                            </li>                                
+                            
+                            <li data-transition="curtain-1" data-slotamount="7" data-thumb="/images/slides/headerb.png">
                                     
-                                <img src="/images/slides/headerb.png" />									
-                                <div class="caption lfl" data-x="0" data-y="0" data-speed="900" data-start="1300" data-easing="easeOutBack"><img src="/images/slides/logo.png" /></div>
+                                <img id="headerimg" src="/images/slides/headerb.png" width="960" height="151"/>									
+                                <div class="caption lfr" data-x="-20" data-y="80" data-speed="900" data-start="1000" data-easing="easeOutBack"><img src="/images/slides/anbeed.png" width="222" height="63"/></div>
+                                <div class="caption lfr" data-x="-30" data-y="130" data-speed="900" data-start="1500" data-easing="easeOutBack"><img src="/images/slides/anbeed2.png" width="683" height="27"/></div>
+                                <div class="caption lfl" data-x="40" data-y="0" data-speed="2000" data-start="2000" data-easing="easeOutBack"><img src="/images/slides/logo.png" width="80" height="80"/></div>
                             </li>
                         </ul>
                     </div>
