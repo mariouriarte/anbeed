@@ -22,9 +22,9 @@
                
                     <div id="header">
                         <div class="fullwidthbanner-container">					
-                  <div class="fullwidthbanner">
+                  <div class="fullwidthbanner2">
                         <ul>	
-                            <li data-transition="curtain-2" data-slotamount="7" data-thumb="/images/slides/headerb.png">
+                            <li data-transition="boxslide" data-slotamount="7"  data-thumb="/images/slides/headerb.png">
                                 <img id="headerimg" src="/images/slides/headerb.png" width="960" height="151"/>									
                                 <div class="caption lfl" data-x="-20" data-y="80" data-speed="900" data-start="1000" data-easing="easeOutBack"><img src="/images/slides/anbeed.png" width="222" height="63"/></div>
                                 <div class="caption lfl" data-x="-30" data-y="130" data-speed="900" data-start="1500" data-easing="easeOutBack"><img src="/images/slides/anbeed2.png" width="683" height="27"/></div>

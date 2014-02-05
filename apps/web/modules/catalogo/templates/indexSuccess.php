@@ -5,7 +5,7 @@
         if ($.fn.cssOriginal != undefined)
             $.fn.css = $.fn.cssOriginal;
 
-        $('.fullwidthbanner').revolution(
+        $('.fullwidthbanner2').revolution(
                 {
                     delay: 8000,
                     startwidth: 890,
