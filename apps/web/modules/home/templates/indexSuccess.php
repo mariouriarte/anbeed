@@ -58,23 +58,23 @@
                 <div class="caption sfb" data-x="500" data-y="290" data-speed="900" data-start="3000" data-easing="easeOutExpo"><img src="/images/tiles/empresas.svg" /></div>    
                 <div class="caption sfb anbeed_peque" data-x="525" data-y="290" data-speed="900" data-start="3000" data-easing="easeOutExpo">Importadoras de Insumos Médicos</div>
             </li>
-            <li data-transition="slotzoom-horizontal" data-slotamount="7" data-thumb="/images/slides/servicios.jpg"> 
+            <li data-transition="slotzoom-vertical" data-slotamount="7" data-thumb="/images/slides/servicios.jpg"> 
                 <img src="/images/slides/servicios.jpg" />	
                 <!--<div class="caption sfb" data-x="0" data-y="10" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="/images/slides/glare2.png" /></div>-->
                 <!--<div class="caption lft" data-x="250" data-y="50" data-speed="900" data-start="1700" data-easing="easeOutBack"><img src="/images/slides/strawberries.png" /></div>-->	
                 <div class="caption lfb big_blue_white" data-x="110" data-y="50" data-speed="600" data-start="1000" data-easing="easeOutExpo">Registros Sanitarios</div>										
                 
-                <div class="caption sfl Short from Top" data-x="250" data-y="180" data-speed="300" data-start="1500" data-easing="easeOutExpo"><img src="/images/tiles/registros.png" width="50px" height="50px"/></div>    
-                <div class="caption lfb small_blue_white" data-x="300" data-y="200" data-speed="600" data-start="1500" data-easing="easeOutExpo">Medicamentos Importados</div>										
+                <div class="caption sfl Short from Top" data-x="250" data-y="160" data-speed="900" data-start="2000" data-easing="easeOutExpo"><img src="/images/tiles/registros.png" width="50px" height="50px"/></div>    
+                <div class="caption lft small_blue_white" data-x="300" data-y="180" data-speed="900" data-start="2200" data-easing="easeOutExpo">Medicamentos Importados</div>										
                 
-                <div class="caption sfl Short from Top" data-x="250" data-y="240" data-speed="300" data-start="1500" data-easing="easeOutExpo"><img src="/images/tiles/registros.png" width="50px" height="50px"/></div>    
-                <div class="caption lfb small_blue_white" data-x="300" data-y="260" data-speed="600" data-start="1500" data-easing="easeOutExpo">Dispositivos Médicos</div>										
+                <div class="caption sfl Short from Top" data-x="250" data-y="220" data-speed="900" data-start="3000" data-easing="easeOutExpo"><img src="/images/tiles/registros.png" width="50px" height="50px"/></div>    
+                <div class="caption lfl small_blue_white" data-x="300" data-y="240" data-speed="900" data-start="3200" data-easing="easeOutExpo">Dispositivos Médicos</div>										
                 
-                <div class="caption sfl Short from Top" data-x="250" data-y="300" data-speed="300" data-start="1500" data-easing="easeOutExpo"><img src="/images/tiles/registros.png" width="50px" height="50px"/></div>    
-                <div class="caption lfb small_blue_white" data-x="300" data-y="320" data-speed="600" data-start="1500" data-easing="easeOutExpo">Cosméticos Importados</div>										
+                <div class="caption sfl Short from Top" data-x="250" data-y="280" data-speed="300" data-start="4000" data-easing="easeOutExpo"><img src="/images/tiles/registros.png" width="50px" height="50px"/></div>    
+                <div class="caption lfr small_blue_white" data-x="300" data-y="300" data-speed="900" data-start="4200" data-easing="easeOutExpo">Cosméticos Importados</div>										
                 
-                <div class="caption sfl Short from Top" data-x="250" data-y="360" data-speed="300" data-start="1500" data-easing="easeOutExpo"><img src="/images/tiles/registros.png" width="50px" height="50px"/></div>    
-                <div class="caption lfb small_blue_white" data-x="300" data-y="380" data-speed="600" data-start="1500" data-easing="easeOutExpo">Higiene y Limpieza</div>										
+                <div class="caption sfl Short from Top" data-x="250" data-y="340" data-speed="300" data-start="5000" data-easing="easeOutExpo"><img src="/images/tiles/registros.png" width="50px" height="50px"/></div>    
+                <div class="caption lfb small_blue_white" data-x="300" data-y="360" data-speed="900" data-start="5200" data-easing="easeOutExpo">Higiene y Limpieza</div>										
                 
                 
             </li>
