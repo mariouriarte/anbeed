@@ -43,6 +43,24 @@ website:   	http://www.themepunch.com
 **************************/
 /*pepe*/
 
+.caption.big_green	{
+    position: absolute; 
+    color: #fff; 
+    text-shadow: none; 
+    font-weight: 700; 
+    font-size: 60px; 
+    line-height: 60px; 
+    font-family: sans-serif; 
+    padding: 0px 4px; 
+    padding-top: 1px;
+    margin: 0px; 
+    border-width: 0px; 
+    border-style: none; 
+    background-color: #0A2A0A;	
+    letter-spacing: -1.0px;		
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+}
 .caption.big_blue	{
     position: absolute; 
     color: #fff; 
@@ -59,6 +77,45 @@ website:   	http://www.themepunch.com
     background-color:#0a5373;	
     letter-spacing: -1.0px;		
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+}
+.caption.big_blue_white	{
+    position: absolute; 
+    /*color: #D8D8D8; */
+    color: #A4A4A4; 
+    text-shadow: none; 
+    font-weight: 700; 
+    font-size: 60px; 
+    line-height: 60px; 
+    font-family: sans-serif; 
+    padding: 0px 4px; 
+    padding-top: 1px;
+    margin: 0px; 
+    border-width: 0px; 
+    border-style: none; 
+    background-color: #0a5373;	
+    letter-spacing: -1.0px;		
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9);
+    border-radius: 16px;
+}
+.caption.small_blue_white	{
+    position: absolute; 
+    /*color: #D8D8D8; */
+    color: #A4A4A4; 
+    text-shadow: none; 
+    font-weight: 700; 
+    font-size: 30px; 
+    line-height: 30px; 
+    font-family: sans-serif; 
+    padding: 0px 4px; 
+    padding-top: 1px;
+    margin: 0px; 
+    border-width: 0px; 
+    border-style: none; 
+    background-color: #0a5373;	
+    letter-spacing: -1.0px;		
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9);
+    border-radius: 16px;
 }
 .caption.big_white	{
     position: absolute; 
@@ -139,6 +196,39 @@ website:   	http://www.themepunch.com
     border-width: 0px; 
     border-style: none; 
     background-color:#F2F2F2;		
+    white-space:nowrap;	
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);		
+}
+.caption.anbeed_grande3	{
+    position: absolute; 
+    color: #122A0A; 
+    text-shadow: none; 
+    font-weight: 700; 
+    font-size: 40px; 
+    line-height: 40px; 
+    font-family: sans-serif; 
+    padding: 2px 4px; 
+    margin: 0px; 
+    border-width: 0px; 
+    border-style: none; 
+    background-color:#F2F2F2;		
+    white-space:nowrap;	
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+}
+.caption.anbeed_grandee	{
+    position: absolute; 
+    color: #F2F2F2; 
+    text-shadow: none; 
+    font-weight: 700; 
+    font-size: 30px; 
+    line-height: 30px; 
+    font-family: sans-serif; 
+    padding: 2px 4px; 
+    margin: 0px; 
+    border-width: 0px; 
+    border-style: none; 
+    background-color:#122A0A;		
     white-space:nowrap;	
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);		
 }
