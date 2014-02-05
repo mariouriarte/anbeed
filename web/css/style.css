@@ -224,7 +224,12 @@ img.projects{
     padding: 10px;
     width: 800px;
     margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5) url("/images/logo.jpg") top left no-repeat;
+    background-position: 10px 10px;
+    background-size: 200px 200px;
+    
 }
+
 
 
 .wide_organigrama {
@@ -235,6 +240,7 @@ img.projects{
     padding:10px 10px 10px 10px;
     /*background-color: #ddd;*/
     border: 1px #000 solid;
+    background-color: #fff;
 }
 
 .org-nombre-personal p {
@@ -407,11 +413,12 @@ img#central{
     text-align: center;
 }
 
-#title-org {
+#title-org span {
     text-align: left;
     color: #000;
-    margin-left: 100px;
-    border-bottom: 2px #000 solid;
+    margin-left: 65px;
+/*    border-bottom: 2px #000 solid;*/
+    border-bottom: 8px solid #83afb4;
     width: 250px;
     padding: 0 !important;
 }

@@ -3,7 +3,7 @@
 </script>
 <div class="center_content_pages">
     
-    <h2 id="title-org">Recursos Humanos</h2>
+    <h2 id="title-org"><span>Recursos Humanos</span></h2>
     
     <div class="wide-organigrama-logo">
         <!--<img border="0" alt="" src="/images/logo.jpg">-->
