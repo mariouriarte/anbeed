@@ -224,11 +224,55 @@ img.projects{
     clear:both;
     padding:10px;
 }
-.wide_organigrama{
-    width:930px;
-    clear:both;
-    padding:10px 15px 0 110px;
+
+#org-panel {
+    /*background-color: #ddd;*/
+    padding: 10px;
+    width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5) url("/images/logo.jpg") top left no-repeat;
+    background-position: 10px 10px;
+    background-size: 200px 200px;
+    
 }
+
+
+
+.wide_organigrama {
+    margin: 10px auto;
+    width:220px;
+    clear:both;
+    height: 250px;
+    padding:10px 10px 10px 10px;
+    /*background-color: #ddd;*/
+    border: 1px #000 solid;
+    background-color: #fff;
+}
+
+.org-nombre-personal p {
+    width: 100%;
+    border-bottom: 2px #000 solid;
+}
+
+.foto-personal {
+    height: 200px;
+    text-align: center;
+    /*background-color: #DCE2D9;*/
+}
+
+.org-nombre-personal {
+    text-align: left;
+    font-size: 14px;
+    font-style: oblique;
+    /*border-bottom: 2px #000 solid;*/
+    width: 100%;
+}
+
+.org-cargo {
+    text-align: left;
+    font-size: 14px;
+}
+
 .wide_content_services{
     background: none repeat scroll 0 0 #FFFFFF;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
@@ -402,14 +446,25 @@ img#mini-formulario{
 
 .wide_organigrama .moduletable_ol_blue img
 {
-    border:3px #57ad55 solid;
+    border:3px #DCE2D9 solid;
     margin:10px 10px 10px 15px;
     padding: 0;
 }
 
-.wide_organigrama_logo
+.wide-organigrama-logo
 {
-    padding-left: 58%;
+    width: 100%;
+    text-align: center;
+}
+
+#title-org span {
+    text-align: left;
+    color: #000;
+    margin-left: 65px;
+/*    border-bottom: 2px #000 solid;*/
+    border-bottom: 8px solid #83afb4;
+    width: 250px;
+    padding: 0 !important;
 }
 
 img.pic{
@@ -979,7 +1034,7 @@ padding: 15px;
 }
 
 .wide_organigrama .moduletable_ol_blue {
-    width: 35%;
+    width: 350px;
     height: auto;
 }
 
