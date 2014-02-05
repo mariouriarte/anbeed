@@ -218,11 +218,47 @@ img.projects{
     clear:both;
     padding:10px;
 }
-.wide_organigrama{
-    /*width:100%;*/
-    clear:both;
-    /*padding:10px 15px 0 110px;*/*/
+
+#org-panel {
+    /*background-color: #ddd;*/
+    padding: 10px;
+    width: 800px;
+    margin: 0 auto;
 }
+
+
+.wide_organigrama {
+    margin: 10px auto;
+    width:220px;
+    clear:both;
+    height: 250px;
+    padding:10px 10px 10px 10px;
+    /*background-color: #ddd;*/
+    border: 1px #57ad55 solid;
+}
+.wide_organigrama p {
+    width: 100%;
+}
+
+.foto-personal {
+    height: 200px;
+    text-align: center;
+    /*background-color: #DCE2D9;*/
+}
+
+.org-nombre-personal {
+    text-align: left;
+    font-size: 14px;
+    font-style: oblique;
+    border-bottom: 2px #000 solid;
+    width: 100%;
+}
+
+.org-cargo {
+    text-align: left;
+    font-size: 14px;
+}
+
 .wide_content_services{
     background: none repeat scroll 0 0 #FFFFFF;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
@@ -367,14 +403,6 @@ img#central{
 {
     width: 100%;
     text-align: center;
-}
-
-#org-panel {
-    background-color: #ddd;
-    padding: 10px;
-    width: 800px;
-    height: 950px;
-    margin: 0 auto;
 }
 
 #title-org {
