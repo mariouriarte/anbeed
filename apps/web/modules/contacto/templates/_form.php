@@ -9,10 +9,10 @@
     <div class="financial-application-form">
          <h2>Buzón de Información y Sugerencias</h2>
 
-         <p>
+         <p id="shadow-ligth">
             A través de este formulario usted podra contactarse directamente con nuestro personal. Mediante este formulario puede solicitar información de nuestros servicios y nos comunicaremos con usted a la brevedad posible.
          </p>
-         <p>
+         <p id="shadow-ligth">
             Además tambien puede hacernos llegar sugerencias a nuestra empresa para mejorar nuestros servicios y que tenga una mejor atención.
          </p>
 <form class="form" id ="contacto_form"action="<?php echo url_for('contacto/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
@@ -83,7 +83,7 @@
     
              <div class="testimonials">
                     <h2>Comentarios y Experiencias </h2>
-                    <p>
+                    <p id="shadow-ligth">
                     Publicamos los comentarios y experiencias de clientes que solicitaron nuestros servicios.
                     </p>
                         <?php 
@@ -95,7 +95,7 @@
                     <div class="testbox">
                     <h4><?php echo $satisfaccion->Empresa->getRazonSocial()?>  </h4>
                     <span><?php echo $satisfaccion->getServicio()?></span>
-                    <p>
+                    <p id="shadow-ligth">
                     <?php echo $satisfaccion->getComentario()?>
                     </p>
                     </div>         

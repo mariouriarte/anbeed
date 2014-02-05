@@ -315,6 +315,11 @@ img#servicio-medicamento2{
     padding-right: 10px;
 }
 
+img#mini-formulario{
+    width: 90px;
+    padding-left: 80px;
+}
+
 .wide_content_services .requisitos-dos {
     background: none repeat scroll 0 0 #FFFFFF;
     height: auto;

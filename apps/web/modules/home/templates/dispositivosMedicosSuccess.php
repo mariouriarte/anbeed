@@ -6,7 +6,7 @@
     <h2>Requisitos para Registro de Dispositivos Médicos</h2>
     <div class="requisitos">
         <h3>Formulario 027</h3>
-        <img src="/images/web/formulario_27.png" width="90"/>
+        <img id="mini-formulario" src="/images/web/formulario_27.png"/>
     </div>
     <div class="requisitos">
         <h3>Documentacion Legal</h3>
