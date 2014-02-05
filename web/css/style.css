@@ -234,10 +234,12 @@ img.projects{
     height: 250px;
     padding:10px 10px 10px 10px;
     /*background-color: #ddd;*/
-    border: 1px #57ad55 solid;
+    border: 1px #000 solid;
 }
-.wide_organigrama p {
+
+.org-nombre-personal p {
     width: 100%;
+    border-bottom: 2px #000 solid;
 }
 
 .foto-personal {
@@ -250,7 +252,7 @@ img.projects{
     text-align: left;
     font-size: 14px;
     font-style: oblique;
-    border-bottom: 2px #000 solid;
+    /*border-bottom: 2px #000 solid;*/
     width: 100%;
 }
 
@@ -406,8 +408,12 @@ img#central{
 }
 
 #title-org {
-    text-align: center;
+    text-align: left;
     color: #000;
+    margin-left: 100px;
+    border-bottom: 2px #000 solid;
+    width: 250px;
+    padding: 0 !important;
 }
 
 img.pic{
