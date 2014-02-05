@@ -60,6 +60,44 @@ website:   	http://www.themepunch.com
     letter-spacing: -1.0px;		
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
+.caption.big_blue_white	{
+    position: absolute; 
+    /*color: #D8D8D8; */
+    color: #A4A4A4; 
+    text-shadow: none; 
+    font-weight: 700; 
+    font-size: 60px; 
+    line-height: 60px; 
+    font-family: sans-serif; 
+    padding: 0px 4px; 
+    padding-top: 1px;
+    margin: 0px; 
+    border-width: 0px; 
+    border-style: none; 
+    background-color: #0a5373;	
+    letter-spacing: -1.0px;		
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9);
+    border-radius: 16px;
+}
+.caption.small_blue_white	{
+    position: absolute; 
+    /*color: #D8D8D8; */
+    color: #A4A4A4; 
+    text-shadow: none; 
+    font-weight: 700; 
+    font-size: 30px; 
+    line-height: 30px; 
+    font-family: sans-serif; 
+    padding: 0px 4px; 
+    padding-top: 1px;
+    margin: 0px; 
+    border-width: 0px; 
+    border-style: none; 
+    background-color: #0a5373;	
+    letter-spacing: -1.0px;		
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9);
+    border-radius: 16px;
+}
 .caption.big_white	{
     position: absolute; 
     color: #fff; 
