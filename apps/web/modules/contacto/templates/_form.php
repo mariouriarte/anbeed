@@ -4,6 +4,39 @@
 <script type="text/javascript">
     $("#contacto").addClass("dropdown active");
 </script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        if ($.fn.cssOriginal != undefined)
+            $.fn.css = $.fn.cssOriginal;
+
+        $('.fullwidthbanner2').revolution(
+                {
+                    delay: 8000,
+                    startwidth: 890,
+                    startheight: 151,
+                    onHoverStop: "on", // Stop Banner Timet at Hover on Slide on/off
+
+                    thumbWidth: 100, // Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
+                    thumbHeight: 50,
+                    thumbAmount: 4,
+                    hideThumbs: 200,
+                    navigationType: "none", //bullet, thumb, none, both	 (No Shadow in Fullwidth Version !)
+                    navigationArrows: "none", //nexttobullets, verticalcentered, none
+                    navigationStyle: "round", //round,square,navbar
+
+                    touchenabled: "on", // Enable Swipe Function : on/off
+
+                    navOffsetHorizontal: 0,
+                    navOffsetVertical: 20,
+                    fullWidth: "on",
+                    shadow: 0								//0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
+
+                });
+
+    });
+
+
+</script>
 
 <div class="financial-application-form">
     <h2>Buzón de Información y Sugerencias</h2>

@@ -555,6 +555,7 @@ website:   	http://www.themepunch.com
 }
 
 .fullwidthbanner-container .tp-thumbs					{  padding:2px;}											
+.header-container .tp-thumbs					{  padding:2px;}											
 
 .tp-bullets.tp-thumbs .tp-mask				{	width:500px; height:50px;  			/* THE DIMENSIONS OF THE THUMB CONTAINER */
                                     overflow:hidden; position:relative;}
@@ -642,12 +643,45 @@ website:   	http://www.themepunch.com
 }
 
 .fullwidthbanner-container {
-width: 100% !important;
-position: relative;
-padding: 0;
-max-height: 450px !important;
-overflow: hidden;
+    width: 100% !important;
+    position: relative;
+    padding: 0;
+    max-height: 450px !important;
+    overflow: hidden;
+}
+.header-container {
+    /*width: 100% !important;*/
+    width: 953px;
+    position: relative;
+    padding: 0;
+    max-height: 151px !important;
+    overflow: hidden;
 }
 
+/*.banner
+{
+    width: 953px;
+    max-height: 151px !important;
+}*/
 
+#header .fullwidthbanner-container
+{
+    width: 960px;
+    position: relative;
+    padding: 0;
+    max-height: 151px !important;
+    overflow: hidden;
+    
+}
 
+#header .fullwidthbanner
+{
+    width: 960px;
+    max-height: 151px !important;
+    
+}
+#headerimg
+{
+    max-width: 960px;
+    max-height: 151px
+}
