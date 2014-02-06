@@ -100,7 +100,7 @@
             <p id="shadow">
                 <img align="left" border="0" alt="" src="/images/web/ap_empresas.png">
                 Requiere apoyo para la apertura de su empresa? <br>
-                ANBEED le brinda servicios de consultoria para la apertura de empresas de insumos médicos, medicamentos.
+                ANBEED le brinda servicios de consultoria para la apertura de empresas de medicamentos, insumos médicos, cosméticos, reactivos y productos de aseo y limpieza.
             </p>
         </div>
     </div>
@@ -121,8 +121,8 @@
         <div>
             <p id="shadow">
                 <img align="left" border="0" alt="" src="/images/web/despacho_aduanero.png" width="90" height="90">
-                Precisa realizar tramites de despachos aduaneros? <br>
-                Realice el tramite para sus despachos aduaneros a la brevedad posible.
+                Precisa realizar trámites de despachos aduaneros? <br>
+                Realice el trámite para su certificación de autorización de despachos aduaneros a la brevedad posible.
             </p>
         </div>
     </div>

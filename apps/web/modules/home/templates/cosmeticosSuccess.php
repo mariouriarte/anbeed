@@ -8,6 +8,9 @@
         <div class="lista_requisitos">
     <ol>
         <li><p>Contrato de <b>fabricación por terceros</b></p></li>
+        <li><p><b>Certificado de libre venta</b> consularizado original</p></li>
+        <li><p><b>En caso de homologación</b>, notificación sanitaria legalizada</p></li>
+        <li><p><b>Carta de representación consularizada</b></p></li>
         <li><p>Certificado de <b>Buenas Prácticas de Manufactura o ISO</b></p></li>
         <li><p><b>Formula Cuali cuantitativa</b> </p></li>
         <li><p>Especificaciones <b>organolépticas y fisicoquímicas</b> del producto terminado</p></li>
@@ -20,7 +23,7 @@
     </ol>
             </div>
     <h4>NOTA.-</h4> 
-    <h4>Los aranceles para inscripción al Ministerio de Salud es de 1200 Bs por producto deposito que se hará en la cuenta 3G-300 del Banco central de Bolivia.</h4>
+    <h4>Los aranceles para inscripción al Ministerio de Salud es de 2000 Bs por producto deposito que se hará en la cuenta 3G-300 del Banco central de Bolivia.</h4>
     </div>
     <img id='costemic' src="/images/web/cosmetics.jpeg"/>
 </div>

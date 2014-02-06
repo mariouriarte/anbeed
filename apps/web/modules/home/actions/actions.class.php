@@ -34,7 +34,7 @@ class homeActions extends sfActions
   {
   }
   
-  public function executeOrganigrama(sfWebRequest $request)
+  public function executeRecursosHumanos(sfWebRequest $request)
   {
   }
   
@@ -54,7 +54,11 @@ class homeActions extends sfActions
   {
   }
   
-  public function executeHigieneLimpieza(sfWebRequest $request)
+  public function executeLimpiezaAbsorvente(sfWebRequest $request)
+  {
+  }
+  
+  public function executeLimpiezaDomestica(sfWebRequest $request)
   {
   }
   

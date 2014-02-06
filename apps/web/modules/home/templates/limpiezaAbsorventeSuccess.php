@@ -12,6 +12,7 @@
                 <li><p>Contrato de <b>Fabricación por Terceros</b> (Si corresponde)</p></li>
                 <li><p>Certificado de <b>Libre Venta Original Conzularizado</b></p></li>
                 <li><p>Certificado de <b>Buenas Prácticas de Manufactura o ISO</b></p></li>
+                <li><p><b>Carta de Representación</b> del fabricante orgininal consularizado</p></li>
 
             </ol>
         </div>

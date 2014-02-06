@@ -38,7 +38,7 @@
                                             <ul style="display: none;" class="dropdown-menu bold">
                                                 <li><?php echo link_to('Quienes Somos', 'home/quienesSomos') ?></li>
                                                 <li><?php echo link_to('Misión y Visión', 'home/misionVision') ?></li>
-                                                <li><?php echo link_to('Organigrama', 'home/organigrama') ?></li>
+                                                <li><?php echo link_to('Recursos Humanos', 'home/recursosHumanos') ?></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown" id="servicios"><a href="#">Servicios <i class="icon-angle-down"></i></a>
@@ -55,7 +55,8 @@
                                                         <li><?php echo link_to('Medicamentos', 'home/medicamentos') ?></li>
                                                         <li><?php echo link_to('Dispositivos Médicos', 'home/dispositivosMedicos') ?></li>
                                                         <li><?php echo link_to('Cosméticos', 'home/cosmeticos') ?></li>
-                                                        <li><?php echo link_to('Higiene y Limpieza', 'home/higieneLimpieza') ?></li>
+                                                        <li><?php echo link_to('Aseo y Limpieza Absorvente', 'home/limpiezaAbsorvente') ?></li>
+                                                        <li><?php echo link_to('Aseo y Limpieza Doméstica', 'home/limpiezaDomestica') ?></li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -97,7 +98,6 @@
                     <div class="footer_links">
                         <?php echo link_to('Inicio', 'home/index') ?>
                         <?php echo link_to('Quienes Somos', 'home/quienesSomos') ?>
-                        <?php echo link_to('Servicios', 'home/servicios') ?>
                         <?php echo link_to('Productos', 'catalogo/index') ?>
                         <?php echo link_to('Contáctenos', 'contacto/new') ?>
                     </div>
