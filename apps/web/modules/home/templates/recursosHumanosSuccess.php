@@ -62,7 +62,7 @@
         <span class="org-nombre-personal"><p>Christian Paukner</p></span>
         <p><span class="org-cargo">Responsable de Almacén y Cobranzas</span></p>
     </div>
-    <div class="wide_organigrama">
+<!--    <div class="wide_organigrama">
         <div class="foto-personal"><img alt="" src="/images/web/organigrama/IMG_1046.jpg"></div>
         <span class="org-nombre-personal"><p>Narda Magaly Gutierrez</p></span>
         <p><span class="org-cargo">Responsable de Correspondencia</span></p>
@@ -71,7 +71,7 @@
         <div class="foto-personal"><img alt="" src="/images/web/organigrama/IMG_1078.jpg"></div>
         <span class="org-nombre-personal"><p>Marco Antonio Martinez</p></span>
         <p><span class="org-cargo">Responsable de Ventas</span></p>
-    </div>
+    </div>-->
     <div class="wide_organigrama">
         <div class="foto-personal"><img alt="" src="/images/web/organigrama/IMG_1093.jpg"></div>
         <span class="org-nombre-personal"><p>Carlos Pinto Zabala</p></span>

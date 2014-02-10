@@ -63,7 +63,7 @@
                 <li> <p>Fotocopia <b>Matricula profesional</b></p></li>
                 <li> <p>Fotocopia <b>Carnet de Colegiada</b></p></li>
                 <li> <p>Fotocopia <b>Carnet de Identidad</b></p></li>
-                <li> <p><b>Certificado de Compatibilidad Horaria</b> emitida por el SEDES por tiempo completo</p></li>
+                <li> <p><b>Certificado de Compatibilidad Horaria</b> emitida por el SEDES por medio tiempo</p></li>
                 <li> <p><b>Contrato de trabajo Visado</b> en el Ministerio de Trabajo</p></li>
             </ol>
         </div>
@@ -110,7 +110,7 @@
                 <li><p> Fotocopia <b>Matricula profesional</b></p></li>
                 <li><p> Fotocopia <b>Carnet de Colegiada</b></p></li>
                 <li><p> Fotocopia <b>Carnet de Identidad</b></p></li>
-                <li><p> <b>Certificado de Compatibilidad Horaria</b> emitida por el SEDES por tiempo completo</p></li>
+                <li><p> <b>Certificado de Compatibilidad Horaria</b> emitida por el SEDES por medio tiempo</p></li>
                 <li><p> <b>Contrato de trabajo Visado</b> en el Ministerio de Trabajo</p></li>
             </ol>
         </div>

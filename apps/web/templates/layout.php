@@ -44,7 +44,6 @@
                         
 <!--                        <ul>	
                             <li data-transition="fade" data-slotamount="7" data-thumb="/images/slides/headerb.png">
-
                                 <img src="/images/slides/headerb.png" />									
 
                             </li>
@@ -55,42 +54,43 @@
                         
                                             </div>-->
 
-                        <div class="contenedor-menu">
-                            <div class="container">
-                                <div class="navbar navbar-static-top">
-                                    <div class="navigation">
-                                        <nav>
-                                            <ul class="nav topnav bold">
-                                                <li class="dropdown" id="inicio">
-                                                    <?php echo link_to('Inicio', 'home/index', 'id=inicio') ?>
+                    <div class="contenedor-menu">
+                    <div class="container">
+                        <div class="navbar navbar-static-top">
+                            <div class="navigation">
+                                <nav>
+                                    <ul class="nav topnav bold">
+                                        <li class="dropdown" id="inicio">
+                                            <?php echo link_to('Inicio', 'home/index', 'id=inicio') ?>
+                                        </li>
+                                        <li class="dropdown" id="nosotros"><a href="#">Nosotros <i class="icon-angle-down"></i></a>
+                                            
+                                            <ul style="display: none;" class="dropdown-menu bold">
+                                                <li><?php echo link_to('Quienes Somos', 'home/quienesSomos') ?></li>
+                                                <li><?php echo link_to('Misión y Visión', 'home/misionVision') ?></li>
+                                                <li><?php echo link_to('Recursos Humanos', 'home/recursosHumanos') ?></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown" id="servicios"><a href="#">Servicios <i class="icon-angle-down"></i></a>
+                                            <ul class="dropdown-menu bold">
+                                                <li class="dropdown"><a href="#">Apertura de Empresas <i class="icon-angle-right"></i></a>
+                                                    <ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
+                                                        <li><?php echo link_to('Importadoras de Medicamentos', 'home/importadoraMedicamentos') ?></li>
+                                                        <li><?php echo link_to('Importadoras de Cosméticos', 'home/importadoraCosmeticos') ?></li>
+                                                        <li><?php echo link_to('Importadoras de Insumos', 'home/importadoraInsumos') ?></li>
+                                                    </ul>                                                
                                                 </li>
-                                                <li class="dropdown" id="nosotros"><a href="#">Nosotros <i class="icon-angle-down"></i></a>
-
-                                                    <ul style="display: none;" class="dropdown-menu bold">
-                                                        <li><?php echo link_to('Quienes Somos', 'home/quienesSomos') ?></li>
-                                                        <li><?php echo link_to('Misión y Visión', 'home/misionVision') ?></li>
-                                                        <li><?php echo link_to('Organigrama', 'home/organigrama') ?></li>
+                                                <li class="dropdown"><a href="#">Registros Sanitarios <i class="icon-angle-right"></i></a>
+                                                    <ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
+                                                        <li><?php echo link_to('Medicamentos', 'home/medicamentos') ?></li>
+                                                        <li><?php echo link_to('Dispositivos Médicos', 'home/dispositivosMedicos') ?></li>
+                                                        <li><?php echo link_to('Cosméticos', 'home/cosmeticos') ?></li>
+                                                        <li><?php echo link_to('Aseo y Limpieza Absorvente', 'home/limpiezaAbsorvente') ?></li>
+                                                        <li><?php echo link_to('Aseo y Limpieza Doméstica', 'home/limpiezaDomestica') ?></li>
                                                     </ul>
                                                 </li>
-                                                <li class="dropdown" id="servicios"><a href="#">Servicios <i class="icon-angle-down"></i></a>
-                                                    <ul class="dropdown-menu bold">
-                                                        <li class="dropdown"><a href="#">Apertura de Empresas <i class="icon-angle-right"></i></a>
-                                                            <ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
-                                                                <li><?php echo link_to('Importadoras de Medicamentos', 'home/importadoraMedicamentos') ?></li>
-                                                                <li><?php echo link_to('Importadoras de Cosméticos', 'home/importadoraCosmeticos') ?></li>
-                                                                <li><?php echo link_to('Importadoras de Insumos', 'home/importadoraInsumos') ?></li>
-                                                            </ul>                                                
-                                                        </li>
-                                                        <li class="dropdown"><a href="#">Registros Sanitarios <i class="icon-angle-right"></i></a>
-                                                            <ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
-                                                                <li><?php echo link_to('Medicamentos', 'home/medicamentos') ?></li>
-                                                                <li><?php echo link_to('Dispositivos Médicos', 'home/dispositivosMedicos') ?></li>
-                                                                <li><?php echo link_to('Cosméticos', 'home/cosmeticos') ?></li>
-                                                                <li><?php echo link_to('Higiene y Limpieza', 'home/higieneLimpieza') ?></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
+                                            </ul>
+                                        </li>
                                                 <li class="dropdown" id="catalogo">
                                                     <?php echo link_to('Productos', 'catalogo/index', 'id=productos') ?> 
                                                 </li>
@@ -107,16 +107,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!--            <div id="menu">
-                                        <ul>                                                                                            
-                                           <li><?php echo link_to('Inicio', 'home/index', 'id=inicio') ?></li>
-                                            <li><?php echo link_to('Quienes Somos', 'home/quienesSomos', 'id=quienes') ?></li>
-                                            <li><?php echo link_to('Servicios', 'home/servicios', 'id=servicios') ?></li>
-                                            <li><?php echo link_to('Productos', 'catalogo/index', 'id=productos') ?></li>
-                                            <li><?php echo link_to('Contáctenos', 'contacto/new', 'id=contact') ?></li>
-                                            <li><a href="/cliente.php/">Iniciar Sesión</a></li>
-                                        </ul>
-                                    </div>-->
                     </div>
 
                     <!---------------------------------end of middle banner-------------------------------->
@@ -124,14 +114,11 @@
 
                     <div class="footer">
                         <div class="copyright"><a href="http://www.anbeed.com/" target="_blank">ANBEED S.R.L.</a> | <a href="http://www.capsulesystem.com/" target="_blank">by CapsuleSystems</a></div>
-
-                        <div class="footer_links">
-                            <?php echo link_to('Inicio', 'home/index') ?>
-                            <?php echo link_to('Quienes Somos', 'home/quienesSomos') ?>
-                            <?php echo link_to('Servicios', 'home/servicios') ?>
-                            <?php echo link_to('Productos', 'catalogo/index') ?>
-                            <?php echo link_to('Contáctenos', 'contacto/new') ?>
-                        </div>
+                    <div class="footer_links">
+                        <?php echo link_to('Inicio', 'home/index') ?>
+                        <?php echo link_to('Quienes Somos', 'home/quienesSomos') ?>
+                        <?php echo link_to('Productos', 'catalogo/index') ?>
+                        <?php echo link_to('Contáctenos', 'contacto/new') ?>
                     </div>
                 </div>
             </div>

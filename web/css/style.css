@@ -31,6 +31,10 @@ h5{
     padding:0px 0 10px 0; margin:0px; color:#094b27; font-size:12px; font-weight:normal;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
+h6{
+    padding:5px; margin:0px; color:#bc1010; font-size:12px; font-weight:normal;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
 .clear{
     clear:both;
 }
@@ -926,9 +930,26 @@ input.submit{
     color: #000;
 }
 
+.contacto-datos1{
+    width:345px;
+    float:right;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-right: 15px;
+    border-bottom: 1px solid #D5D5D2;
+}
 
+.contacto-datos1 ul{
+    margin: 0;
+}
 
-
+.contacto-datos{
+    width:345px;
+    float:right;
+    margin-right: 20px;
+    padding-right: 15px;
+    border-bottom: 1px solid #D5D5D2;
+}
 
 #contacto_form .notice
 {
@@ -973,7 +994,7 @@ ul.error_list li {
     width: 28%;
     padding: 10px;
     float: left;
-    height: 250px;
+    height: 260px;
     font-size: 14px;
     margin-bottom: 1%;
     margin-left: 2%;
