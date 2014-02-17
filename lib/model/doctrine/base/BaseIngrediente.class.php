@@ -8,13 +8,16 @@
  * @property string $nombre
  * @property DetalleFormulaCc $DetalleFormulaCc
  * @property FormulaCc $FormulaCc
+ * @property Doctrine_Collection $Principio
  * 
- * @method string           getNombre()           Returns the current record's "nombre" value
- * @method DetalleFormulaCc getDetalleFormulaCc() Returns the current record's "DetalleFormulaCc" value
- * @method FormulaCc        getFormulaCc()        Returns the current record's "FormulaCc" value
- * @method Ingrediente      setNombre()           Sets the current record's "nombre" value
- * @method Ingrediente      setDetalleFormulaCc() Sets the current record's "DetalleFormulaCc" value
- * @method Ingrediente      setFormulaCc()        Sets the current record's "FormulaCc" value
+ * @method string              getNombre()           Returns the current record's "nombre" value
+ * @method DetalleFormulaCc    getDetalleFormulaCc() Returns the current record's "DetalleFormulaCc" value
+ * @method FormulaCc           getFormulaCc()        Returns the current record's "FormulaCc" value
+ * @method Doctrine_Collection getPrincipio()        Returns the current record's "Principio" collection
+ * @method Ingrediente         setNombre()           Sets the current record's "nombre" value
+ * @method Ingrediente         setDetalleFormulaCc() Sets the current record's "DetalleFormulaCc" value
+ * @method Ingrediente         setFormulaCc()        Sets the current record's "FormulaCc" value
+ * @method Ingrediente         setPrincipio()        Sets the current record's "Principio" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -41,6 +44,10 @@ abstract class BaseIngrediente extends sfDoctrineRecord
              'foreign' => 'ingrediente_id'));
 
         $this->hasOne('FormulaCc', array(
+             'local' => 'id',
+             'foreign' => 'ingrediente_id'));
+
+        $this->hasMany('Principio', array(
              'local' => 'id',
              'foreign' => 'ingrediente_id'));
 

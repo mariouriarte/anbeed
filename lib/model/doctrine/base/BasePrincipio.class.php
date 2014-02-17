@@ -11,22 +11,22 @@
  * @property string $unidad
  * @property string $otro
  * @property FormulaCc $FormulaCc
- * @property Doctrine_Collection $Ingrediente
+ * @property Ingrediente $Ingrediente
  * 
- * @method integer             getFormulaCcId()    Returns the current record's "formula_cc_id" value
- * @method integer             getIngredienteId()  Returns the current record's "ingrediente_id" value
- * @method string              getCantidad()       Returns the current record's "cantidad" value
- * @method string              getUnidad()         Returns the current record's "unidad" value
- * @method string              getOtro()           Returns the current record's "otro" value
- * @method FormulaCc           getFormulaCc()      Returns the current record's "FormulaCc" value
- * @method Doctrine_Collection getIngrediente()    Returns the current record's "Ingrediente" collection
- * @method Principio           setFormulaCcId()    Sets the current record's "formula_cc_id" value
- * @method Principio           setIngredienteId()  Sets the current record's "ingrediente_id" value
- * @method Principio           setCantidad()       Sets the current record's "cantidad" value
- * @method Principio           setUnidad()         Sets the current record's "unidad" value
- * @method Principio           setOtro()           Sets the current record's "otro" value
- * @method Principio           setFormulaCc()      Sets the current record's "FormulaCc" value
- * @method Principio           setIngrediente()    Sets the current record's "Ingrediente" collection
+ * @method integer     getFormulaCcId()    Returns the current record's "formula_cc_id" value
+ * @method integer     getIngredienteId()  Returns the current record's "ingrediente_id" value
+ * @method string      getCantidad()       Returns the current record's "cantidad" value
+ * @method string      getUnidad()         Returns the current record's "unidad" value
+ * @method string      getOtro()           Returns the current record's "otro" value
+ * @method FormulaCc   getFormulaCc()      Returns the current record's "FormulaCc" value
+ * @method Ingrediente getIngrediente()    Returns the current record's "Ingrediente" value
+ * @method Principio   setFormulaCcId()    Sets the current record's "formula_cc_id" value
+ * @method Principio   setIngredienteId()  Sets the current record's "ingrediente_id" value
+ * @method Principio   setCantidad()       Sets the current record's "cantidad" value
+ * @method Principio   setUnidad()         Sets the current record's "unidad" value
+ * @method Principio   setOtro()           Sets the current record's "otro" value
+ * @method Principio   setFormulaCc()      Sets the current record's "FormulaCc" value
+ * @method Principio   setIngrediente()    Sets the current record's "Ingrediente" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -40,11 +40,9 @@ abstract class BasePrincipio extends sfDoctrineRecord
         $this->setTableName('principio');
         $this->hasColumn('formula_cc_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => false,
              ));
         $this->hasColumn('ingrediente_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => false,
              ));
         $this->hasColumn('cantidad', 'string', 25, array(
              'type' => 'string',
@@ -67,7 +65,7 @@ abstract class BasePrincipio extends sfDoctrineRecord
              'local' => 'formula_cc_id',
              'foreign' => 'id'));
 
-        $this->hasMany('Ingrediente', array(
+        $this->hasOne('Ingrediente', array(
              'local' => 'ingrediente_id',
              'foreign' => 'id'));
 
