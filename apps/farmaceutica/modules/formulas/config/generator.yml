@@ -18,6 +18,8 @@ generator:
         ingrediente_id:        {label: 'Principio Activo'} 
         NuevoDetalleFormulaCc: {label: 'Excipientes'}
         DetalleFormulaCc:      {label: 'Excipientes Resgistrados:'}
+        NuevoPrincipio:             {label: 'Principio Activo:'}
+        Principio:             {label: 'Principio Activo Registrados:'}
       list:    
         title:   Fórmulas Cualicuantitativas Registradas
         display: [observaciones]
@@ -25,7 +27,8 @@ generator:
       form:  
         display:  
           Fórmula Cualicuantitativa:                                 [contenido]
-          Principio Activo:                                          [ingrediente_id, cantidad, unidad]
+          Nuevo Principio Activo:                                    [NuevoPrincipio]
+          Principio Activo Registrados:                              [Principio]
           Nuevo Excipiente de la Fórmula Cualicuantitativa:          [NuevoDetalleFormulaCc]
           Excipientes de la Fórmula Cualicuantitativa Registrado(s): [DetalleFormulaCc]
         actions:

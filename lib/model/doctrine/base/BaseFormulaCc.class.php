@@ -10,6 +10,7 @@
  * @property string $cantidad
  * @property string $unidad
  * @property Doctrine_Collection $DetalleFormulaCc
+ * @property Doctrine_Collection $Principio
  * @property Doctrine_Collection $Medicamento
  * @property Ingrediente $Ingrediente
  * 
@@ -18,6 +19,7 @@
  * @method string              getCantidad()         Returns the current record's "cantidad" value
  * @method string              getUnidad()           Returns the current record's "unidad" value
  * @method Doctrine_Collection getDetalleFormulaCc() Returns the current record's "DetalleFormulaCc" collection
+ * @method Doctrine_Collection getPrincipio()        Returns the current record's "Principio" collection
  * @method Doctrine_Collection getMedicamento()      Returns the current record's "Medicamento" collection
  * @method Ingrediente         getIngrediente()      Returns the current record's "Ingrediente" value
  * @method FormulaCc           setContenido()        Sets the current record's "contenido" value
@@ -25,6 +27,7 @@
  * @method FormulaCc           setCantidad()         Sets the current record's "cantidad" value
  * @method FormulaCc           setUnidad()           Sets the current record's "unidad" value
  * @method FormulaCc           setDetalleFormulaCc() Sets the current record's "DetalleFormulaCc" collection
+ * @method FormulaCc           setPrincipio()        Sets the current record's "Principio" collection
  * @method FormulaCc           setMedicamento()      Sets the current record's "Medicamento" collection
  * @method FormulaCc           setIngrediente()      Sets the current record's "Ingrediente" value
  * 
@@ -63,6 +66,10 @@ abstract class BaseFormulaCc extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasMany('DetalleFormulaCc', array(
+             'local' => 'id',
+             'foreign' => 'formula_cc_id'));
+
+        $this->hasMany('Principio', array(
              'local' => 'id',
              'foreign' => 'formula_cc_id'));
 

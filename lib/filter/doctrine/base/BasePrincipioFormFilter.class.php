@@ -1,14 +1,14 @@
 <?php
 
 /**
- * DetalleFormulaCc filter form base class.
+ * Principio filter form base class.
  *
  * @package    anbeed
  * @subpackage filter
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormFilterGeneratedTemplate.php 29570 2010-05-21 14:49:47Z Kris.Wallsmith $
  */
-abstract class BaseDetalleFormulaCcFormFilter extends BaseFormFilterDoctrine
+abstract class BasePrincipioFormFilter extends BaseFormFilterDoctrine
 {
   public function setup()
   {
@@ -36,7 +36,7 @@ abstract class BaseDetalleFormulaCcFormFilter extends BaseFormFilterDoctrine
       'updated_by'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Updator'), 'column' => 'id')),
     ));
 
-    $this->widgetSchema->setNameFormat('detalle_formula_cc_filters[%s]');
+    $this->widgetSchema->setNameFormat('principio_filters[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
 
@@ -47,7 +47,7 @@ abstract class BaseDetalleFormulaCcFormFilter extends BaseFormFilterDoctrine
 
   public function getModelName()
   {
-    return 'DetalleFormulaCc';
+    return 'Principio';
   }
 
   public function getFields()

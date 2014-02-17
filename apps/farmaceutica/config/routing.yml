@@ -1,3 +1,12 @@
+principio:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Principio
+    module:               principios
+    prefix_path:          /principios
+    column:               id
+    with_wildcard_routes: true
+
 solicitud_servicio:
   class: sfDoctrineRouteCollection
   options:
