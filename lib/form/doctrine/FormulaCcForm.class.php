@@ -11,6 +11,7 @@
 class FormulaCcForm extends BaseFormulaCcForm
 {
   protected $detallesAEliminar = array();
+  protected $principiosAEliminar = array();
   public function configure()
   {
       unset($this['created_at'], $this['updated_at'], $this['created_by'], $this['updated_by']);
@@ -43,10 +44,10 @@ class FormulaCcForm extends BaseFormulaCcForm
   protected function doBind(array $values) {
     // step 3.1
     if (
-        '' === trim($values['NuevoPrincipio']['ingrediente_id']) AND
+        ('' === trim($values['NuevoPrincipio']['ingrediente_id']) AND
         '' === trim($values['NuevoPrincipio']['cantidad']) AND
         '' === trim($values['NuevoPrincipio']['otro']) AND
-        '' === trim($values['NuevoPrincipio']['unidad'])
+        '' === trim($values['NuevoPrincipio']['unidad']))
         
        ) 
       $this->validatorSchema['NuevoPrincipio'] = new sfValidatorPass();
@@ -111,30 +112,45 @@ class FormulaCcForm extends BaseFormulaCcForm
     // step 3.2
     if (null === $forms) {
       $principio = $this->getValue('NuevoPrincipio');
+      $detalle = $this->getValue('NuevoDetalleFormulaCc');
       $forms = $this->embeddedForms;
+//      echo $forms;
+//      die;  
      
       if ('' === trim($principio['ingrediente_id']) AND
           '' === trim($principio['cantidad']) AND
-          '' === trim($principio['unidad'])) {
+          '' === trim($principio['unidad']) AND
+          '' === trim($principio['otro'])
+         ) 
+      {
           unset($forms['NuevoPrincipio']);
       }
-
-    }
-    
-    if (null === $forms) {
-      $detalle = $this->getValue('NuevoDetalleFormulaCc');
-      $forms = $this->embeddedForms;
+//      else
+//      {
+////          echo $principio['otro'] ; die;
+//          if(trim($principio['otro']) != "")
+//          {
+//              unset($principio['ingrediente_id']);
+//             //echo $principio['otro'] ; //die;
+//          }
+//      }
      
       if ('' === trim($detalle['ingrediente_id']) AND
           '' === trim($detalle['cantidad']) AND
-          '' === trim($detalle['unidad'])) {
+          '' === trim($detalle['unidad']) AND
+          '' === trim($detalle['otro'])
+              
+         ) {
           unset($forms['NuevoDetalleFormulaCc']);
       }
+//      else
+//      {
+//          if(trim($principio['otro']) != "")
+//              unset($forms['NuevoDetalleFormulaCc']['ingrediente_id']);
+//      }
 
     }
-    
-    
-    
+        
 
     foreach ($forms as $form){
       if ($form instanceof sfFormObject) 

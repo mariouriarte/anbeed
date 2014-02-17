@@ -250,11 +250,10 @@ FormulaCc:
 DetalleFormulaCc:
   actAs: [Timestampable, Signable]
   columns:
-    formula_cc_id:  {type: integer, notnull: true}
-    ingrediente_id: {type: integer, notnull: false}
-    cantidad:       {type: string(25), notnull: true}
-    #cantidad:       {type: decimal(5), scale: 2, notnull: true}
-    unidad:         {type: string(20), notnull: true}
+    formula_cc_id:  {type: integer}
+    ingrediente_id: {type: integer}
+    cantidad:       {type: string(25)}
+    unidad:         {type: string(20)}
     otro:           {type: string(2000)}
   relations:
     FormulaCc:   {local: formula_cc_id, foreign: id, type: one, foreignAlias: Detalles}
@@ -263,10 +262,10 @@ DetalleFormulaCc:
 Principio:
   actAs: [Timestampable, Signable]
   columns:
-    formula_cc_id:  {type: integer, notnull: true}
+    formula_cc_id:  {type: integer, notnull: false}
     ingrediente_id: {type: integer, notnull: false}
-    cantidad:       {type: string(25), notnull: true}
-    unidad:         {type: string(20), notnull: true}
+    cantidad:       {type: string(25)}
+    unidad:         {type: string(20)}
     otro:           {type: string(2000)}
   relations:
     FormulaCc:   {local: formula_cc_id, foreign: id, type: one, foreignAlias: Detalles}

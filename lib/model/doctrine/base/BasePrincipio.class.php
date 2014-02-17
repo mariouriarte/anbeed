@@ -40,7 +40,7 @@ abstract class BasePrincipio extends sfDoctrineRecord
         $this->setTableName('principio');
         $this->hasColumn('formula_cc_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('ingrediente_id', 'integer', null, array(
              'type' => 'integer',
@@ -48,12 +48,10 @@ abstract class BasePrincipio extends sfDoctrineRecord
              ));
         $this->hasColumn('cantidad', 'string', 25, array(
              'type' => 'string',
-             'notnull' => true,
              'length' => 25,
              ));
         $this->hasColumn('unidad', 'string', 20, array(
              'type' => 'string',
-             'notnull' => true,
              'length' => 20,
              ));
         $this->hasColumn('otro', 'string', 2000, array(

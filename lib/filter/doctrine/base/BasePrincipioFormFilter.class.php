@@ -15,8 +15,8 @@ abstract class BasePrincipioFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'formula_cc_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('FormulaCc'), 'add_empty' => true)),
       'ingrediente_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Ingrediente'), 'add_empty' => true)),
-      'cantidad'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'unidad'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'cantidad'       => new sfWidgetFormFilterInput(),
+      'unidad'         => new sfWidgetFormFilterInput(),
       'otro'           => new sfWidgetFormFilterInput(),
       'created_at'     => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'     => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),

@@ -16,7 +16,7 @@ abstract class BasePrincipioForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'             => new sfWidgetFormInputHidden(),
-      'formula_cc_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('FormulaCc'), 'add_empty' => false)),
+      'formula_cc_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('FormulaCc'), 'add_empty' => true)),
       'ingrediente_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Ingrediente'), 'add_empty' => true)),
       'cantidad'       => new sfWidgetFormInputText(),
       'unidad'         => new sfWidgetFormInputText(),
@@ -29,10 +29,10 @@ abstract class BasePrincipioForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'             => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'formula_cc_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('FormulaCc'))),
+      'formula_cc_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('FormulaCc'), 'required' => false)),
       'ingrediente_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Ingrediente'), 'required' => false)),
-      'cantidad'       => new sfValidatorString(array('max_length' => 25)),
-      'unidad'         => new sfValidatorString(array('max_length' => 20)),
+      'cantidad'       => new sfValidatorString(array('max_length' => 25, 'required' => false)),
+      'unidad'         => new sfValidatorString(array('max_length' => 20, 'required' => false)),
       'otro'           => new sfValidatorString(array('max_length' => 2000, 'required' => false)),
       'created_at'     => new sfValidatorDateTime(),
       'updated_at'     => new sfValidatorDateTime(),

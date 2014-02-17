@@ -146,7 +146,7 @@ class medicamentosActions extends autoMedicamentosActions
         $pdf->SetAuthor('Capsule Systems');
         $pdf->SetTitle('Formulario');
         $pdf->SetSubject('ANBEED SRL');
-        $pdf->SetKeywords('TCPDF, PDF, ANBEED SRL, Formulario005, impresion');
+        $pdf->SetKeywords('TCPDF, PDF, ANBEED SRL, FormulaCC, impresion');
 
         //set margins
         $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, 0);

@@ -40,20 +40,16 @@ abstract class BaseDetalleFormulaCc extends sfDoctrineRecord
         $this->setTableName('detalle_formula_cc');
         $this->hasColumn('formula_cc_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
              ));
         $this->hasColumn('ingrediente_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => false,
              ));
         $this->hasColumn('cantidad', 'string', 25, array(
              'type' => 'string',
-             'notnull' => true,
              'length' => 25,
              ));
         $this->hasColumn('unidad', 'string', 20, array(
              'type' => 'string',
-             'notnull' => true,
              'length' => 20,
              ));
         $this->hasColumn('otro', 'string', 2000, array(
