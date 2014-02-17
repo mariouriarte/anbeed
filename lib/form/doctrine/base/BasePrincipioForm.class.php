@@ -1,16 +1,16 @@
 <?php
 
 /**
- * DetalleFormulaCc form base class.
+ * Principio form base class.
  *
- * @method DetalleFormulaCc getObject() Returns the current form's model object
+ * @method Principio getObject() Returns the current form's model object
  *
  * @package    anbeed
  * @subpackage form
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
-abstract class BaseDetalleFormulaCcForm extends BaseFormDoctrine
+abstract class BasePrincipioForm extends BaseFormDoctrine
 {
   public function setup()
   {
@@ -40,7 +40,7 @@ abstract class BaseDetalleFormulaCcForm extends BaseFormDoctrine
       'updated_by'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Updator'), 'required' => false)),
     ));
 
-    $this->widgetSchema->setNameFormat('detalle_formula_cc[%s]');
+    $this->widgetSchema->setNameFormat('principio[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
 
@@ -51,7 +51,7 @@ abstract class BaseDetalleFormulaCcForm extends BaseFormDoctrine
 
   public function getModelName()
   {
-    return 'DetalleFormulaCc';
+    return 'Principio';
   }
 
 }

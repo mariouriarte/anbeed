@@ -243,6 +243,7 @@ FormulaCc:
     
   relations:
     DetalleFormulaCc: {local: id, foreign: formula_cc_id, type: many, foreignAlias: FormulaCc}
+    Principio:        {local: id, foreign: formula_cc_id, type: many, foreignAlias: FormulaCc}
     Medicamento:      {local: id, foreign: formula_cc_id, type: many, foreignAlias: FormulaCc}
     Ingrediente:      {local: ingrediente_id, foreign: id, type: one, foreignAlias: FormulaCc}
     
@@ -254,6 +255,19 @@ DetalleFormulaCc:
     cantidad:       {type: string(25), notnull: true}
     #cantidad:       {type: decimal(5), scale: 2, notnull: true}
     unidad:         {type: string(20), notnull: true}
+    otro:           {type: string(2000)}
+  relations:
+    FormulaCc:   {local: formula_cc_id, foreign: id, type: one, foreignAlias: Detalles}
+    Ingrediente: {local: ingrediente_id, foreign: id, type: many, foreignAlias: Detalles}
+
+Principio:
+  actAs: [Timestampable, Signable]
+  columns:
+    formula_cc_id:  {type: integer, notnull: true}
+    ingrediente_id: {type: integer, notnull: false}
+    cantidad:       {type: string(25), notnull: true}
+    unidad:         {type: string(20), notnull: true}
+    otro:           {type: string(2000)}
   relations:
     FormulaCc:   {local: formula_cc_id, foreign: id, type: one, foreignAlias: Detalles}
     Ingrediente: {local: ingrediente_id, foreign: id, type: many, foreignAlias: Detalles}
