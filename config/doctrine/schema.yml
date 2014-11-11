@@ -160,6 +160,24 @@ Producto:
     Higiene:                {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
     Reactivo:               {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
     Item:                   {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
+
+######### PRODUCTO
+ProductoUnimed:
+  actAs: [Timestampable, Signable]
+  columns:
+    codigo_producto_id:     {type: integer, notnull: true}
+    numero_registro:        {type: integer, notnull: true}
+    fecha_registro:         {type: date, notnull: true}
+    notificacion:           {type: string(50), notnull: false}
+    nombre_comercial:       {type: string(255), notnull: true}
+    nombre_generico:        {type: string(255)}
+    forma_farmaceutica:     {type: string(255)}
+    concentracion:          {type: string(255)}
+    laboratorio_fabricante: {type: string(255)}
+    pais_origen:            {type: string(255)}
+  relations:
+    CodigoProducto:         {local: codigo_producto_id, foreign: id, type: one, foreignAlias: ProductoUnimed}
+#    Item:                   {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
     
 ######### FORMULARIOS
 Formulario:
@@ -745,6 +763,7 @@ CodigoProducto:
   relations:
     EmisionCorrespondencia: {local: id, foreign: codigo_producto_id, type: many, foreignAlias: Emisores}   
     Producto:               {local: id, foreign: codigo_producto_id, type: many, foreignAlias: Productos}   
+    ProductoUnimed:         {local: id, foreign: codigo_producto_id, type: many, foreignAlias: Productos}   
 
 Tarea:
   actAs: [Timestampable, Signable]

@@ -9,15 +9,18 @@
  * @property string $descripcion
  * @property Doctrine_Collection $EmisionCorrespondencia
  * @property Doctrine_Collection $Producto
+ * @property Doctrine_Collection $ProductoUnimed
  * 
  * @method string              getNombre()                 Returns the current record's "nombre" value
  * @method string              getDescripcion()            Returns the current record's "descripcion" value
  * @method Doctrine_Collection getEmisionCorrespondencia() Returns the current record's "EmisionCorrespondencia" collection
  * @method Doctrine_Collection getProducto()               Returns the current record's "Producto" collection
+ * @method Doctrine_Collection getProductoUnimed()         Returns the current record's "ProductoUnimed" collection
  * @method CodigoProducto      setNombre()                 Sets the current record's "nombre" value
  * @method CodigoProducto      setDescripcion()            Sets the current record's "descripcion" value
  * @method CodigoProducto      setEmisionCorrespondencia() Sets the current record's "EmisionCorrespondencia" collection
  * @method CodigoProducto      setProducto()               Sets the current record's "Producto" collection
+ * @method CodigoProducto      setProductoUnimed()         Sets the current record's "ProductoUnimed" collection
  * 
  * @package    anbeed
  * @subpackage model
@@ -49,6 +52,10 @@ abstract class BaseCodigoProducto extends sfDoctrineRecord
              'foreign' => 'codigo_producto_id'));
 
         $this->hasMany('Producto', array(
+             'local' => 'id',
+             'foreign' => 'codigo_producto_id'));
+
+        $this->hasMany('ProductoUnimed', array(
              'local' => 'id',
              'foreign' => 'codigo_producto_id'));
 

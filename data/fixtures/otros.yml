@@ -24,18 +24,38 @@ CodigoProducto:
     created_at:  '2013-08-05 20:53:27'
     updated_at:  '2013-08-05 20:53:27'
   CodigoProducto_3:
-    nombre: NSOC
-    descripcion: 'NOTIFICACION SANITARIA OBLIGATORIA COSMETICO'
+    nombre: CI
+    descripcion: 'COSMETICO IMPORTADO'
     created_at:  '2013-08-05 20:53:37'
     updated_at:  '2013-08-05 20:53:37'
   CodigoProducto_4:
-    nombre: NSOH
-    descripcion: 'NOTIFICACION SANITARIA OBLIGATORIA HIGIENE'
+    nombre: PHDI
+    descripcion: 'PRODUCTO DE HIGIENE DOMESTICA IMPORTADO'
     created_at:  '2013-08-05 20:53:44'
     updated_at:  '2013-08-05 20:53:44'
   CodigoProducto_5:
     nombre: RI
     descripcion: 'REACTIVO IMPORTADO'
+    created_at:  '2013-08-05 20:53:44'
+    updated_at:  '2013-08-05 20:53:44'
+  CodigoProducto_6:
+    nombre: NN
+    descripcion: 'MEDICAMENTO NACIONAL'
+    created_at:  '2013-08-05 20:53:44'
+    updated_at:  '2013-08-05 20:53:44'
+  CodigoProducto_7:
+    nombre: DN
+    descripcion: 'DISPOSITIVO MEDICO NACIONAL'
+    created_at:  '2013-08-05 20:53:44'
+    updated_at:  '2013-08-05 20:53:44'
+  CodigoProducto_8:
+    nombre: CN
+    descripcion: 'COSMETICO NACIONAL'
+    created_at:  '2013-08-05 20:53:44'
+    updated_at:  '2013-08-05 20:53:44'
+  CodigoProducto_9:
+    nombre: PHDN
+    descripcion: 'PRODUCTO DE HIGIENE DOMESTICA NACIONAL'
     created_at:  '2013-08-05 20:53:44'
     updated_at:  '2013-08-05 20:53:44'
 Emisor:
