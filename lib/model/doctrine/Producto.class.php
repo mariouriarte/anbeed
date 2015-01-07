@@ -34,7 +34,9 @@ class Producto extends BaseProducto
        }
        
        if($this->getCodigoProductoId() == 5)
+       {
            return $this->CodigoProducto->getNombre()." -- ".$this->Reactivo->getNombreComercial();
+       }
     }
     
     public function getProducto()

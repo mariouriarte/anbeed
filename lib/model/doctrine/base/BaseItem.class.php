@@ -8,28 +8,37 @@
  * @property integer $formulario11_id
  * @property string $cantidad
  * @property integer $producto_id
+ * @property integer $producto_unimed_id
  * @property string $nombre
  * @property string $num_lote
  * @property date $fecha_vencimiento
+ * @property enum $tipo_item
  * @property Formulario11 $Formulario11
  * @property Producto $Producto
+ * @property ProductoUnimed $ProductoUnimed
  * 
- * @method integer      getFormulario11Id()    Returns the current record's "formulario11_id" value
- * @method string       getCantidad()          Returns the current record's "cantidad" value
- * @method integer      getProductoId()        Returns the current record's "producto_id" value
- * @method string       getNombre()            Returns the current record's "nombre" value
- * @method string       getNumLote()           Returns the current record's "num_lote" value
- * @method date         getFechaVencimiento()  Returns the current record's "fecha_vencimiento" value
- * @method Formulario11 getFormulario11()      Returns the current record's "Formulario11" value
- * @method Producto     getProducto()          Returns the current record's "Producto" value
- * @method Item         setFormulario11Id()    Sets the current record's "formulario11_id" value
- * @method Item         setCantidad()          Sets the current record's "cantidad" value
- * @method Item         setProductoId()        Sets the current record's "producto_id" value
- * @method Item         setNombre()            Sets the current record's "nombre" value
- * @method Item         setNumLote()           Sets the current record's "num_lote" value
- * @method Item         setFechaVencimiento()  Sets the current record's "fecha_vencimiento" value
- * @method Item         setFormulario11()      Sets the current record's "Formulario11" value
- * @method Item         setProducto()          Sets the current record's "Producto" value
+ * @method integer        getFormulario11Id()     Returns the current record's "formulario11_id" value
+ * @method string         getCantidad()           Returns the current record's "cantidad" value
+ * @method integer        getProductoId()         Returns the current record's "producto_id" value
+ * @method integer        getProductoUnimedId()   Returns the current record's "producto_unimed_id" value
+ * @method string         getNombre()             Returns the current record's "nombre" value
+ * @method string         getNumLote()            Returns the current record's "num_lote" value
+ * @method date           getFechaVencimiento()   Returns the current record's "fecha_vencimiento" value
+ * @method enum           getTipoItem()           Returns the current record's "tipo_item" value
+ * @method Formulario11   getFormulario11()       Returns the current record's "Formulario11" value
+ * @method Producto       getProducto()           Returns the current record's "Producto" value
+ * @method ProductoUnimed getProductoUnimed()     Returns the current record's "ProductoUnimed" value
+ * @method Item           setFormulario11Id()     Sets the current record's "formulario11_id" value
+ * @method Item           setCantidad()           Sets the current record's "cantidad" value
+ * @method Item           setProductoId()         Sets the current record's "producto_id" value
+ * @method Item           setProductoUnimedId()   Sets the current record's "producto_unimed_id" value
+ * @method Item           setNombre()             Sets the current record's "nombre" value
+ * @method Item           setNumLote()            Sets the current record's "num_lote" value
+ * @method Item           setFechaVencimiento()   Sets the current record's "fecha_vencimiento" value
+ * @method Item           setTipoItem()           Sets the current record's "tipo_item" value
+ * @method Item           setFormulario11()       Sets the current record's "Formulario11" value
+ * @method Item           setProducto()           Sets the current record's "Producto" value
+ * @method Item           setProductoUnimed()     Sets the current record's "ProductoUnimed" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -52,7 +61,9 @@ abstract class BaseItem extends sfDoctrineRecord
              ));
         $this->hasColumn('producto_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             ));
+        $this->hasColumn('producto_unimed_id', 'integer', null, array(
+             'type' => 'integer',
              ));
         $this->hasColumn('nombre', 'string', 28, array(
              'type' => 'string',
@@ -68,6 +79,15 @@ abstract class BaseItem extends sfDoctrineRecord
              'type' => 'date',
              'notnull' => true,
              ));
+        $this->hasColumn('tipo_item', 'enum', null, array(
+             'type' => 'enum',
+             'values' => 
+             array(
+              0 => 'UNIMED',
+              1 => 'ANBEED',
+             ),
+             'notnull' => true,
+             ));
     }
 
     public function setUp()
@@ -79,6 +99,10 @@ abstract class BaseItem extends sfDoctrineRecord
 
         $this->hasOne('Producto', array(
              'local' => 'producto_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('ProductoUnimed', array(
+             'local' => 'producto_unimed_id',
              'foreign' => 'id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(

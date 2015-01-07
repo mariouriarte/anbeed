@@ -12,4 +12,8 @@
  */
 class ProductoUnimed extends BaseProductoUnimed
 {
+    public function __toString()
+    {
+        return $this->CodigoProducto->getNombre()." -- ".$this->getNombreGenerico()." ".$this->getConcentracion();
+    }
 }

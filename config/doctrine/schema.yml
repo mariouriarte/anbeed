@@ -177,7 +177,7 @@ ProductoUnimed:
     pais_origen:            {type: string(255)}
   relations:
     CodigoProducto:         {local: codigo_producto_id, foreign: id, type: one, foreignAlias: ProductoUnimed}
-#    Item:                   {local: id, foreign: producto_id, type: one, foreignAlias: Producto}
+    Item:                   {local: id, foreign: producto_unimed_id, type: one, foreignAlias: ProductoUnimed}
     
 ######### FORMULARIOS
 Formulario:
@@ -704,15 +704,18 @@ TipoDespacho:
 Item:
   actAs: [Timestampable, Signable]
   columns:
-    formulario11_id:   {type: integer, notnull: true}
-    cantidad:          {type: string(150), notnull: true}
-    producto_id:       {type: integer, notnull: true}
-    nombre:            {type: string(28), notnull: true}
-    num_lote:          {type: string(150), notnull: true}
-    fecha_vencimiento: {type: date, notnull: true}
+    formulario11_id:    {type: integer, notnull: true}
+    cantidad:           {type: string(150), notnull: true}
+    producto_id:        {type: integer}
+    producto_unimed_id: {type: integer}
+    nombre:             {type: string(28), notnull: true}
+    num_lote:           {type: string(150), notnull: true}
+    fecha_vencimiento:  {type: date, notnull: true}
+    tipo_item:          {type: enum, values: [UNIMED, ANBEED], notnull: true}
   relations:
     Formulario11:     {local: formulario11_id, foreign: id, type: one, foreignAlias: Items}
     Producto:         {local: producto_id, foreign: id, type: one, foreignAlias: Item}
+    ProductoUnimed:   {local: producto_unimed_id, foreign: id, type: one, foreignAlias: Item}
 
 ########### CORRESPONDENCIA ··············
 

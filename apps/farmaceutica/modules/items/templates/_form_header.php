@@ -5,14 +5,61 @@
     <?php include_partial('empresas/info_empresa', array('empresa' => $empresa)) ?>
 </div>
 <script type="text/javascript">
-
-function Producto()
+$(document).ready(function()
 {
-    var sel = document.getElementById("item_producto_id");
-    var opt = sel.options[sel.selectedIndex].text;
-    //alert(opt.replace('-', ''));
-    opt = opt.split('--');
-    producto = opt[1].substr(1);
-    document.getElementById("item_nombre").value = producto;
-}
+    if ($('#item_tipo_item').val() === 'UNIMED')
+        {
+            $('.sf_admin_form_field_producto_id').hide();
+            $('.sf_admin_form_field_producto_unimed_id').show();
+            
+        } else if ($('#item_tipo_item').val() === 'ANBEED')
+        {
+            $('.sf_admin_form_field_producto_unimed_id').hide();
+            $('.sf_admin_form_field_producto_id').show();
+        } else 
+        {
+            $('.sf_admin_form_field_producto_unimed_id').hide();
+            $('.sf_admin_form_field_producto_id').hide();
+        }
+        
+    $('#item_tipo_item').on('change', function()
+        {
+            if (this.value === 'UNIMED')
+            {
+                $('.sf_admin_form_field_producto_id').hide('fast');
+                $('.sf_admin_form_field_producto_unimed_id').show('fast');
+            } else if (this.value === 'ANBEED')
+            {
+                $('.sf_admin_form_field_producto_unimed_id').hide('fast');
+                $('.sf_admin_form_field_producto_id').show('fast');
+                
+            } else if(this.value === '')
+            {
+                $('.sf_admin_form_field_producto_unimed_id').hide('fast');
+                $('.sf_admin_form_field_producto_id').hide('fast');
+            }
+        });
+    
+    
+
+});
+function Producto()
+    {
+        var sel = document.getElementById("item_producto_id");
+        var opt = sel.options[sel.selectedIndex].text;
+        //alert(opt.replace('-', ''));
+        opt = opt.split('--');
+        producto = opt[1].substr(1);
+        document.getElementById("item_nombre").value = producto;
+    }
+    
+    function ProductoUnimed()
+    {
+        var sel = document.getElementById("item_producto_unimed_id");
+        var opt = sel.options[sel.selectedIndex].text;
+        //alert(opt.replace('-', ''));
+        opt = opt.split('--');
+        producto = opt[1].substr(1);
+        document.getElementById("item_nombre").value = producto;
+    }
 </script>

@@ -24,6 +24,7 @@ class itemsActions extends autoItemsActions
         $empresa = $user->getAttribute('empresa');
         $this->redirect('empresas/administrarEmpresa?id='.$empresa->getId());
     }
+    
     public function executeNew(sfWebRequest $request)
     {
         $this->form = $this->configuration->getForm();
@@ -34,6 +35,7 @@ class itemsActions extends autoItemsActions
         $user = $this->getUser();
         $user->getAttributeHolder()->remove('item_producto');     
     }
+    
     public function executeEdit(sfWebRequest $request)
     {
         $this->item = $this->getRoute()->getObject();
@@ -49,78 +51,91 @@ class itemsActions extends autoItemsActions
     
     public function executeDelete(sfWebRequest $request)
     {
-      $request->checkCSRFProtection();
-
-      $this->dispatcher->notify(new sfEvent($this, 'admin.delete_object', array('object' => $this->getRoute()->getObject())));
-
-      if ($this->getRoute()->getObject()->delete())
-      {
-        /*Actualizamos los items y las fojas al formulario11*/
-        $items = ItemTable::ContarItems();
-        $fojas = ItemTable::getFojas($items);
-        
-        $form11 = $this->getUser()->getAttribute('form11');
-        $form11->setNumeroItem($items);
-        $form11->setFoja($fojas);
-        $form11->save();
-        $this->getUser()->setFlash('notice', 'The item was deleted successfully.');
-      }
-
-      $this->redirect('@item');
-    }
-    
-
+        $request->checkCSRFProtection();
   
-  protected function processForm(sfWebRequest $request, sfForm $form)
-  {
-    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
-    if ($form->isValid())
-    {
-      $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
-
-      try {
-        $item = $form->save();
-        /*Actualizamos los items y las fojas al formulario11*/
-        $items = ItemTable::ContarItems();
-        $fojas = ItemTable::getFojas($items);
-        
-        $form11 = $this->getUser()->getAttribute('form11');
-        $form11->setNumeroItem($items);
-        $form11->setFoja($fojas);
-        $form11->save();
-        } catch (Doctrine_Validator_Exception $e) {
-
-        $errorStack = $form->getObject()->getErrorStack();
-
-        $message = get_class($form->getObject()) . ' has ' . count($errorStack) . " field" . (count($errorStack) > 1 ?  's' : null) . " with validation errors: ";
-        foreach ($errorStack as $field => $errors) {
-            $message .= "$field (" . implode(", ", $errors) . "), ";
+        $this->dispatcher->notify(new sfEvent($this, 'admin.delete_object', array('object' => $this->getRoute()->getObject())));
+  
+        if ($this->getRoute()->getObject()->delete())
+        {
+            /*Actualizamos los items y las fojas al formulario11*/
+            $items = ItemTable::ContarItems();
+            $fojas = ItemTable::getFojas($items);
+            
+            $form11 = $this->getUser()->getAttribute('form11');
+            $form11->setNumeroItem($items);
+            $form11->setFoja($fojas);
+            $form11->save();
+            $this->getUser()->setFlash('notice', 'The item was deleted successfully.');
         }
-        $message = trim($message, ', ');
-
-        $this->getUser()->setFlash('error', $message);
-        return sfView::SUCCESS;
-      }
-
-      $this->dispatcher->notify(new sfEvent($this, 'admin.save_object', array('object' => $item)));
-
-      if ($request->hasParameter('_save_and_add'))
-      {
-        $this->getUser()->setFlash('notice', $notice.' You can add another one below.');
-
-        $this->redirect('@item_new');
-      }
-      else
-      {
-        $this->getUser()->setFlash('notice', $notice);
-
-        $this->redirect(array('sf_route' => 'item_edit', 'sf_subject' => $item));
-      }
+  
+        $this->redirect('@item');
     }
-    else
-    {
-      $this->getUser()->setFlash('error', 'The item has not been saved due to some errors.', false);
-    }
-  }
     
+    public function executeBuscar(sfWebRequest $request)
+    {
+        $this->getResponse()->setContentType('application/json');
+        $buscar = $request->getParameter('q');
+        
+        //construimos la consulta
+        $q = Doctrine_Core::getTable('ProductoUnimed')
+                 ->createQuery('p')
+                 ->where("p.nombre_generico ILIKE '%$buscar%'");
+        
+        $productos = $q->execute();
+        
+        $row = null;
+        foreach($productos as $ingrediente)
+        {
+            $row[$ingrediente['id']] = $ingrediente->CodigoProducto->getNombre() .' -- '. $ingrediente['nombre_generico'] .' '. $ingrediente['concentracion'];
+        }
+        
+        return $this->renderText(json_encode($row));
+    }
+  
+    protected function processForm(sfWebRequest $request, sfForm $form) 
+    {
+        $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
+        if ($form->isValid()) {
+            $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
+
+            try {
+                $item = $form->save();
+                /* Actualizamos los items y las fojas al formulario11 */
+                $items = ItemTable::ContarItems();
+                $fojas = ItemTable::getFojas($items);
+
+                $form11 = $this->getUser()->getAttribute('form11');
+                $form11->setNumeroItem($items);
+                $form11->setFoja($fojas);
+                $form11->save();
+            } catch (Doctrine_Validator_Exception $e) {
+
+                $errorStack = $form->getObject()->getErrorStack();
+
+                $message = get_class($form->getObject()) . ' has ' . count($errorStack) . " field" . (count($errorStack) > 1 ? 's' : null) . " with validation errors: ";
+                foreach ($errorStack as $field => $errors) {
+                    $message .= "$field (" . implode(", ", $errors) . "), ";
+                }
+                $message = trim($message, ', ');
+
+                $this->getUser()->setFlash('error', $message);
+                return sfView::SUCCESS;
+            }
+
+            $this->dispatcher->notify(new sfEvent($this, 'admin.save_object', array('object' => $item)));
+
+            if ($request->hasParameter('_save_and_add')) {
+                $this->getUser()->setFlash('notice', $notice . ' You can add another one below.');
+
+                $this->redirect('@item_new');
+            } else {
+                $this->getUser()->setFlash('notice', $notice);
+
+                $this->redirect(array('sf_route' => 'item_edit', 'sf_subject' => $item));
+            }
+        } else {
+            $this->getUser()->setFlash('error', 'The item has not been saved due to some errors.', false);
+        }
+    }
+
 }

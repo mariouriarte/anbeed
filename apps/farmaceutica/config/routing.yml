@@ -1,3 +1,7 @@
+buscar_producto_unimed:
+  url: /items/buscar_producto_unimed
+  param: { module: items, action: buscar }
+
 principio:
   class: sfDoctrineRouteCollection
   options:

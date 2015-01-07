@@ -19,11 +19,10 @@ class CosmeticoForm extends BaseCosmeticoForm
         //La empresa_id lo haremos hidden por que ya tenemos ese id
         $this->widgetSchema['empresa_id'] = new sfWidgetFormInputHidden();
 
-         //Autocompletar Labs
+        //Autocompletar Labs
         $this->widgetSchema['laboratorio_fabricante_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
-                  array( 'model'=>'LaboratorioFabricante',
-                          'url'=>sfContext::getInstance()->getRouting()->generate('buscar_labs')
-           ));
+            array('model' => 'LaboratorioFabricante',
+                  'url'   => sfContext::getInstance()->getRouting()->generate('buscar_labs')));
 
         //Autocompletar Forma Cosmetica
         $this->widgetSchema['forma_cosmetica_id']= new sfWidgetFormDoctrineJQueryAutocompleter(

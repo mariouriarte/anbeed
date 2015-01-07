@@ -16,6 +16,7 @@
  * @property string $laboratorio_fabricante
  * @property string $pais_origen
  * @property CodigoProducto $CodigoProducto
+ * @property Item $Item
  * 
  * @method integer        getCodigoProductoId()       Returns the current record's "codigo_producto_id" value
  * @method integer        getNumeroRegistro()         Returns the current record's "numero_registro" value
@@ -28,6 +29,7 @@
  * @method string         getLaboratorioFabricante()  Returns the current record's "laboratorio_fabricante" value
  * @method string         getPaisOrigen()             Returns the current record's "pais_origen" value
  * @method CodigoProducto getCodigoProducto()         Returns the current record's "CodigoProducto" value
+ * @method Item           getItem()                   Returns the current record's "Item" value
  * @method ProductoUnimed setCodigoProductoId()       Sets the current record's "codigo_producto_id" value
  * @method ProductoUnimed setNumeroRegistro()         Sets the current record's "numero_registro" value
  * @method ProductoUnimed setFechaRegistro()          Sets the current record's "fecha_registro" value
@@ -39,6 +41,7 @@
  * @method ProductoUnimed setLaboratorioFabricante()  Sets the current record's "laboratorio_fabricante" value
  * @method ProductoUnimed setPaisOrigen()             Sets the current record's "pais_origen" value
  * @method ProductoUnimed setCodigoProducto()         Sets the current record's "CodigoProducto" value
+ * @method ProductoUnimed setItem()                   Sets the current record's "Item" value
  * 
  * @package    anbeed
  * @subpackage model
@@ -100,6 +103,10 @@ abstract class BaseProductoUnimed extends sfDoctrineRecord
         $this->hasOne('CodigoProducto', array(
              'local' => 'codigo_producto_id',
              'foreign' => 'id'));
+
+        $this->hasOne('Item', array(
+             'local' => 'id',
+             'foreign' => 'producto_unimed_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));
