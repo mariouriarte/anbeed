@@ -23,19 +23,19 @@ class ItemTable extends Doctrine_Table
         $formulario11 = $user->getAttribute('form11');
         $q = Doctrine_Query::create()
                     ->from('Item i')
-                    ->leftJoin('i.Formulario11 f11')
-                    ->leftJoin('i.Producto p') 
-                    ->leftJoin('p.Medicamento m')
-                    ->leftJoin('p.DispositivoMedico dm')
-                    ->leftJoin('p.Cosmetico c')
-                    ->leftJoin('p.Higiene h')
-                    ->leftJoin('p.Reactivo r')
-                
+//                    ->leftJoin('i.Formulario11 f11')
+//                    ->leftJoin('i.Producto p')  
+//                    ->leftJoin('p.Medicamento m')
+//                    ->leftJoin('p.DispositivoMedico dm')
+//                    ->leftJoin('p.Cosmetico c')
+//                    ->leftJoin('p.Higiene h')
+//                    ->leftJoin('p.Reactivo r')
+  
                     ->where('i.formulario11_id = ?', $formulario11->getId())
                     ->orderBy('i.id ASC');
         return $q;
     }
-    
+
     public static function ContarItems()
     {
         $user = sfContext::getInstance()->getUser();

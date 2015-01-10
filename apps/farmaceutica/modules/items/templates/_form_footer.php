@@ -23,7 +23,7 @@ $items = $q->execute();
                 $num_items=1;
                 foreach ($items as $item) 
                 {
-                    
+
                     $reg_sanitario = ItemTable::getNumRegSanitario($item);
                 ?>
             <tr>

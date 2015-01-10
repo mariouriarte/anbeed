@@ -17,12 +17,11 @@ class ItemForm extends BaseItemForm
               array());
         
         //productos
-        /*$this->widgetSchema['producto_id']
+        $this->widgetSchema['producto_id']
               ->setOption('add_empty', 'Seleccione producto')
               ->setOption('table_method', 'ProductosEmpresa')
               ->setAttribute('onChange    ','Producto();');
              # ->setOption('table_method', 'ProductosItemsEmpresa');
-        */
         
         //productos unimed
         $this->widgetSchema['producto_unimed_id']
@@ -51,9 +50,9 @@ class ItemForm extends BaseItemForm
                       'format' => '%day%%month%%year%',
                       'years' => array_combine($years, $years))), ));
           
-        $this->widgetSchema['producto_unimed_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
-            array('model'=>'item',
-                  'url'=>sfContext::getInstance()->getRouting()->generate('buscar_producto_unimed')
-        ));
+//        $this->widgetSchema['producto_unimed_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+//            array('model'=>'item',
+//                  'url'=>sfContext::getInstance()->getRouting()->generate('buscar_producto_unimed')
+//        ));
     }
 }
