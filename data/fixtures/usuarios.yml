@@ -42,6 +42,11 @@ sfGuardGroup:
     description:    GRUPO DE CORRESPONDENCIA
     Permissions:    [Permission_correspondencia]
     
+  Group_correspondencia:
+    name:           VENTA
+    description:    GRUPO DE VENTAS
+    Permissions:    [Permission_venta]
+    
 ## permisos para los grupos
 sfGuardPermission:
   Permission_cliente:
@@ -63,5 +68,8 @@ sfGuardPermission:
   Permission_correspondencia:
     name:           CORRESPONDENCIA
     description:    PERMISOS DE CORRESPONDENCIA
+  Permission_venta:
+    name:           VENTA
+    description:    PERMISOS DE CATALOGO DE PRODUCTOS
   
     

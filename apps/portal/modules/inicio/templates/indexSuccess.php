@@ -160,7 +160,7 @@
         </div>
         <?php endif; ?>
 
-        <?php if ($sf_user->hasCredential('ADMINISTRADOR')): ?>
+        <?php if ($sf_user->hasCredential('ADMINISTRADOR') || $sf_user->hasCredential('VENTA')): ?>
         <div class="columna">
             <div class="cubo">
                 <div class="adentro">
