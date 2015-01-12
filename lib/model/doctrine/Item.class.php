@@ -25,132 +25,259 @@ class Item extends BaseItem
         //EL CODIGO DE PRODUCTO
         $producto;
         $codigo =0;
-        if($this->Producto->CodigoProducto->getId()==1)
+        if($this->Producto->getId() != NULL)
         {
-            $producto = $this->Producto->Medicamento->getId();
-            //echo $producto;
-            $codigo =1;
-            $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
-            //echo $fecha_inicio_vigencia;
-            //die;
-            //echo format_date($fecha_vencimiento,'yyyy');
-            //die;
-            /*Calculamos si tiene - */
-            $registro_largo = funciones::AparicionesCaracter($this->Producto->Medicamento->getRegistroSanitario(), '-');
-            //die;
-            if($registro_largo)
+            if($this->Producto->CodigoProducto->getId()==1)
             {
-                $reg_sanitario = $this->Producto->Medicamento->getRegistroSanitario();
-            }
-            else
-            {
-                if($this->Producto->Medicamento->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != "")
+                $producto = $this->Producto->Medicamento->getId();
+                //echo $producto;
+                $codigo =1;
+                $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
+                //echo $fecha_inicio_vigencia;
+                //die;
+                //echo format_date($fecha_vencimiento,'yyyy');
+                //die;
+                /*Calculamos si tiene - */
+                $registro_largo = funciones::AparicionesCaracter($this->Producto->Medicamento->getRegistroSanitario(), '-');
+                //die;
+                if($registro_largo)
                 {
-                    $reg_sanitario = $this->Producto->CodigoProducto.'-'.
-                                     $this->Producto->Medicamento->getRegistroSanitario().'/'.format_date(
-                                     $fecha_inicio_vigencia,'yy');
+                    $reg_sanitario = $this->Producto->Medicamento->getRegistroSanitario();
+                }
+                else
+                {
+                    if($this->Producto->Medicamento->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != "")
+                    {
+                        $reg_sanitario = $this->Producto->CodigoProducto.'-'.
+                                         $this->Producto->Medicamento->getRegistroSanitario().'/'.format_date(
+                                         $fecha_inicio_vigencia,'yy');
+                    }
+                }
+    
+            }
+            if($this->Producto->CodigoProducto->getId()==2)
+            {
+                $producto = $this->Producto->DispositivoMedico->getId();
+                $codigo =2; 
+                $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
+                
+                /*Calculamos si tiene - */
+                $registro_largo = funciones::AparicionesCaracter($this->Producto->DispositivoMedico->getRegistroSanitario(), '-');
+                //die;
+                if($registro_largo)
+                {
+                    $reg_sanitario = $this->Producto->DispositivoMedico->getRegistroSanitario();
+                }
+                else
+                {
+                    if($this->Producto->DispositivoMedico->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != "")
+                    {
+                        $reg_sanitario = $this->Producto->CodigoProducto.'-'.
+                                         $this->Producto->DispositivoMedico->getRegistroSanitario().'/'.format_date(
+                                         $fecha_inicio_vigencia,'yy');
+                    }
+                }
+    
+            }
+            if($this->Producto->CodigoProducto->getId()==3)
+            {
+                $producto = $this->Producto->Cosmetico->getId();
+                $codigo =3;
+                $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
+                
+                /*Calculamos si tiene - */
+                $registro_largo = funciones::AparicionesCaracter($this->Producto->Cosmetico->getRegistroSanitario(), '-');
+                //die;
+                if($registro_largo)
+                {
+                    $reg_sanitario = $this->Producto->Cosmetico->getRegistroSanitario();
+                }
+                else
+                {
+                    if($this->Producto->Cosmetico->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != "")
+                    {
+                        $reg_sanitario = $this->Producto->CodigoProducto.'-'.
+                                         $this->Producto->Cosmetico->getRegistroSanitario().'/'.format_date(
+                                         $fecha_inicio_vigencia,'yy');
+                    }
+                }
+    
+            }
+            if($this->Producto->CodigoProducto->getId()==4)
+            {
+                $producto = $this->Producto->Higiene->getId();
+                $codigo =4;
+                $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
+                
+                /*Calculamos si tiene - */
+                $registro_largo = funciones::AparicionesCaracter($this->Producto->Higiene->getRegistroSanitario(), '-');
+                //die;
+                if($registro_largo)
+                {
+                    $reg_sanitario = $this->Producto->Higiene->getRegistroSanitario();
+                }
+                else
+                {
+                    if($this->Producto->Higiene->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != "")
+                    {
+                        $reg_sanitario = $this->Producto->CodigoProducto.'-'.
+                                         $this->Producto->Higiene->getRegistroSanitario().'/'.format_date(
+                                         $fecha_inicio_vigencia,'yy');
+                    }
+                }
+    
+            }
+            if($this->Producto->CodigoProducto->getId()==5)
+            {
+                $producto = $this->Producto->Reactivo->getId();
+                $codigo =5;
+                $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
+                
+                /*Calculamos si tiene - */
+                $registro_largo = funciones::AparicionesCaracter($this->Producto->Reactivo->getRegistroSanitario(), '-');
+                //die;
+                if($registro_largo)
+                {
+                    $reg_sanitario = $this->Producto->Reactivo->getRegistroSanitario();
+                }
+                else
+                {
+                    if($this->Producto->Reactivo->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != "")
+                    {
+                        $reg_sanitario = $this->Producto->CodigoProducto.'-'.
+                                         $this->Producto->Reactivo->getRegistroSanitario().'/'.format_date(
+                                         $fecha_inicio_vigencia,'yy');
+                    }
+                }
+    
+            }
+        } else
+        {
+            if($this->ProductoUnimed->CodigoProducto->getId()==1)
+            {
+                $producto = $this->ProductoUnimed->getId();
+                //echo $producto;
+                $codigo =1;
+                $fecha_inicio_vigencia = $this->ProductoUnimed->getFechaRegistro();
+                //echo $fecha_inicio_vigencia;
+                //die;
+                //echo format_date($fecha_vencimiento,'yyyy');
+                //die;
+                /*Calculamos si tiene - */
+                $registro_largo = funciones::AparicionesCaracter($this->ProductoUnimed->getNumeroRegistro(), '-');
+                //die;
+                if($registro_largo)
+                {
+                    $reg_sanitario = $this->ProductoUnimed->getNumeroRegistro();
+                }
+                else
+                {
+                    if($this->ProductoUnimed->getNumeroRegistro()!= "" AND $fecha_inicio_vigencia != "")
+                    {
+                        $reg_sanitario = $this->ProductoUnimed->CodigoProducto.'-'.
+                                         $this->ProductoUnimed->getNumeroRegistro().'/'.format_date(
+                                         $fecha_inicio_vigencia,'yy');
+                    }
                 }
             }
-
-        }
-        if($this->Producto->CodigoProducto->getId()==2)
-        {
-            $producto = $this->Producto->DispositivoMedico->getId();
-            $codigo =2; 
-            $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
             
-            /*Calculamos si tiene - */
-            $registro_largo = funciones::AparicionesCaracter($this->Producto->DispositivoMedico->getRegistroSanitario(), '-');
-            //die;
-            if($registro_largo)
+            if($this->ProductoUnimed->CodigoProducto->getId()==2)
             {
-                $reg_sanitario = $this->Producto->DispositivoMedico->getRegistroSanitario();
-            }
-            else
-            {
-                if($this->Producto->DispositivoMedico->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != "")
+                $producto = $this->ProductoUnimed->getId();
+                $codigo =2; 
+                $fecha_inicio_vigencia = $this->ProductoUnimed->getFechaRegistro();
+                
+                /*Calculamos si tiene - */
+                $registro_largo = funciones::AparicionesCaracter($this->ProductoUnimed->getNumeroRegistro(), '-');
+                //die;
+                if($registro_largo)
                 {
-                    $reg_sanitario = $this->Producto->CodigoProducto.'-'.
-                                     $this->Producto->DispositivoMedico->getRegistroSanitario().'/'.format_date(
-                                     $fecha_inicio_vigencia,'yy');
+                    $reg_sanitario = $this->ProductoUnimed->getNumeroRegistro();
+                }
+                else
+                {
+                    if($this->ProductoUnimed->getNumeroRegistro()!= "" AND $fecha_inicio_vigencia != "")
+                    {
+                        $reg_sanitario = $this->ProductoUnimed->CodigoProducto.'-'.
+                                         $this->ProductoUnimed->getNumeroRegistro().'/'.format_date(
+                                         $fecha_inicio_vigencia,'yy');
+                    }
                 }
             }
-
-        }
-        if($this->Producto->CodigoProducto->getId()==3)
-        {
-            $producto = $this->Producto->Cosmetico->getId();
-            $codigo =3;
-            $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
             
-            /*Calculamos si tiene - */
-            $registro_largo = funciones::AparicionesCaracter($this->Producto->Cosmetico->getRegistroSanitario(), '-');
-            //die;
-            if($registro_largo)
+            if($this->ProductoUnimed->CodigoProducto->getId()==3)
             {
-                $reg_sanitario = $this->Producto->Cosmetico->getRegistroSanitario();
-            }
-            else
-            {
-                if($this->Producto->Cosmetico->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != "")
+                $producto = $this->ProductoUnimed>getId();
+                $codigo =3;
+                $fecha_inicio_vigencia = $this->ProductoUnimed->getFechaRegistro();
+                
+                /*Calculamos si tiene - */
+                $registro_largo = funciones::AparicionesCaracter($this->ProductoUnimed->getNumeroRegistro(), '-');
+                //die;
+                if($registro_largo)
                 {
-                    $reg_sanitario = $this->Producto->CodigoProducto.'-'.
-                                     $this->Producto->Cosmetico->getRegistroSanitario().'/'.format_date(
-                                     $fecha_inicio_vigencia,'yy');
+                    $reg_sanitario = $this->ProductoUnimed->getNumeroRegistro();
+                }
+                else
+                {
+                    if($this->ProductoUnimed->getNumeroRegistro()!= "" AND $fecha_inicio_vigencia != "")
+                    {
+                        $reg_sanitario = $this->ProductoUnimed->CodigoProducto.'-'.
+                                         $this->ProductoUnimed->getNumeroRegistro().'/'.format_date(
+                                         $fecha_inicio_vigencia,'yy');
+                    }
                 }
             }
-
-        }
-        if($this->Producto->CodigoProducto->getId()==4)
-        {
-            $producto = $this->Producto->Higiene->getId();
-            $codigo =4;
-            $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
             
-            /*Calculamos si tiene - */
-            $registro_largo = funciones::AparicionesCaracter($this->Producto->Higiene->getRegistroSanitario(), '-');
-            //die;
-            if($registro_largo)
+            if($this->ProductoUnimed->CodigoProducto->getId()==4)
             {
-                $reg_sanitario = $this->Producto->Higiene->getRegistroSanitario();
-            }
-            else
-            {
-                if($this->Producto->Higiene->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != "")
+                $producto = $this->ProductoUnimed->getId();
+                $codigo =4;
+                $fecha_inicio_vigencia = $this->ProductoUnimed->getFechaRegistro();
+                
+                /*Calculamos si tiene - */
+                $registro_largo = funciones::AparicionesCaracter($this->ProductoUnimed->getNumeroRegistro(), '-');
+                //die;
+                if($registro_largo)
                 {
-                    $reg_sanitario = $this->Producto->CodigoProducto.'-'.
-                                     $this->Producto->Higiene->getRegistroSanitario().'/'.format_date(
-                                     $fecha_inicio_vigencia,'yy');
+                    $reg_sanitario = $this->ProductoUnimed->getNumeroRegistro();
+                }
+                else
+                {
+                    if($this->ProductoUnimed->getNumeroRegistro()!= "" AND $fecha_inicio_vigencia != "")
+                    {
+                        $reg_sanitario = $this->ProductoUnimed->CodigoProducto.'-'.
+                                         $this->ProductoUnimed->getNumeroRegistro().'/'.format_date(
+                                         $fecha_inicio_vigencia,'yy');
+                    }
                 }
             }
-
-        }
-        if($this->Producto->CodigoProducto->getId()==5)
-        {
-            $producto = $this->Producto->Reactivo->getId();
-            $codigo =5;
-            $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
             
-            /*Calculamos si tiene - */
-            $registro_largo = funciones::AparicionesCaracter($this->Producto->Reactivo->getRegistroSanitario(), '-');
-            //die;
-            if($registro_largo)
+            if($this->ProductoUnimed->CodigoProducto->getId()==5)
             {
-                $reg_sanitario = $this->Producto->Reactivo->getRegistroSanitario();
-            }
-            else
-            {
-                if($this->Producto->Reactivo->getRegistroSanitario()!= "" AND $fecha_inicio_vigencia != "")
+                $producto = $this->ProductoUnimed->getId();
+                $codigo =5;
+                $fecha_inicio_vigencia = $this->ProductoUnimed->getFechaRegistro();
+                
+                /*Calculamos si tiene - */
+                $registro_largo = funciones::AparicionesCaracter($this->ProductoUnimed->getNumeroRegistro(), '-');
+                //die;
+                if($registro_largo)
                 {
-                    $reg_sanitario = $this->Producto->CodigoProducto.'-'.
-                                     $this->Producto->Reactivo->getRegistroSanitario().'/'.format_date(
-                                     $fecha_inicio_vigencia,'yy');
+                    $reg_sanitario = $this->ProductoUnimed->getNumeroRegistro();
+                }
+                else
+                {
+                    if($this->ProductoUnimed->getNumeroRegistro()!= "" AND $fecha_inicio_vigencia != "")
+                    {
+                        $reg_sanitario = $this->ProductoUnimed->CodigoProducto.'-'.
+                                         $this->ProductoUnimed->getNumeroRegistro().'/'.format_date(
+                                         $fecha_inicio_vigencia,'yy');
+                    }
                 }
             }
+        }  
 
-        }
-        //echo   $reg_sanitario;
-        //die;
         return $reg_sanitario;
     }
 }

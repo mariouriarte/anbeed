@@ -153,15 +153,9 @@ class formulario11Actions extends autoFormulario11Actions
         $pdf->MultiCell(10, 0, $this->formulario11->getNumeroItem(),
             0, 'L', 0, 0, $x+28, $y+=11, true);
         $pdf->MultiCell(10, 0, $this->formulario11->getFoja(),
-//<<<<<<< HEAD
             0, 'L', 0, 0, $x+98, $y, true);
         $pdf->MultiCell(55, 0, strtoupper($this->formulario11->Pais->getNombre()),
             0, 'L', 0, 0, $x+140, $y, true);
-//=======
-//            0, 'L', 0, 0, $x+86, $y, true);
-//        $pdf->MultiCell(55, 0, $this->formulario11->Pais,
-//            0, 'L', 0, 0, $x+135, $y, true);
-//>>>>>>> 1894728955c60c015c4c2518f6fa66800867f4aa
         $pdf->MultiCell(25, 0, $this->formulario11->getFactura(),
             0, 'L', 0, 0, $x+58, $y+=5, true);
         $fecha_factura = funciones::FechaEspanol2($this->formulario11->getFacturaFecha());
@@ -211,16 +205,16 @@ class formulario11Actions extends autoFormulario11Actions
                 
             }     
             
-            $pdf->SetFont('courier', '', 8, '', true);
+            $pdf->SetFont('courier', '', 9, '', true);
             /*ITEM*/
             $pdf->MultiCell(10, 0, $num,
-                0, 'L', 0, 0, $x+10, $y_fila_items, true);
+                0, 'L', 0, 0, $x+8, $y_fila_items, true);
             /*CANT*/
             $pdf->MultiCell(20, 0, $item->getCantidad(),
-                0, 'L', 0, 0, $x+25, $y_fila_items, true);
+                0, 'L', 0, 0, $x+20, $y_fila_items, true);
             /*PROD*/
             $pdf->MultiCell(64, 0, $item->getNombre(),
-                0, 'L', 0, 0, $x+44, $y_fila_items, true);
+                0, 'L', 0, 0, $x+34, $y_fila_items, true);
             /*N.RS*/
             $pdf->MultiCell(25, 0, ItemTable::getNumRegSanitario($item),
                 0, 'L', 0, 0, $x+110, $y_fila_items, true);
