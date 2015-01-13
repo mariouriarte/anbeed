@@ -11,6 +11,7 @@
  * @property integer $producto_unimed_id
  * @property string $nombre
  * @property string $num_lote
+ * @property string $num_registro_libre
  * @property date $fecha_vencimiento
  * @property enum $tipo_item
  * @property Formulario11 $Formulario11
@@ -23,6 +24,7 @@
  * @method integer        getProductoUnimedId()   Returns the current record's "producto_unimed_id" value
  * @method string         getNombre()             Returns the current record's "nombre" value
  * @method string         getNumLote()            Returns the current record's "num_lote" value
+ * @method string         getNumRegistroLibre()   Returns the current record's "num_registro_libre" value
  * @method date           getFechaVencimiento()   Returns the current record's "fecha_vencimiento" value
  * @method enum           getTipoItem()           Returns the current record's "tipo_item" value
  * @method Formulario11   getFormulario11()       Returns the current record's "Formulario11" value
@@ -34,6 +36,7 @@
  * @method Item           setProductoUnimedId()   Sets the current record's "producto_unimed_id" value
  * @method Item           setNombre()             Sets the current record's "nombre" value
  * @method Item           setNumLote()            Sets the current record's "num_lote" value
+ * @method Item           setNumRegistroLibre()   Sets the current record's "num_registro_libre" value
  * @method Item           setFechaVencimiento()   Sets the current record's "fecha_vencimiento" value
  * @method Item           setTipoItem()           Sets the current record's "tipo_item" value
  * @method Item           setFormulario11()       Sets the current record's "Formulario11" value
@@ -75,16 +78,20 @@ abstract class BaseItem extends sfDoctrineRecord
              'notnull' => true,
              'length' => 150,
              ));
+        $this->hasColumn('num_registro_libre', 'string', 50, array(
+             'type' => 'string',
+             'length' => 50,
+             ));
         $this->hasColumn('fecha_vencimiento', 'date', null, array(
              'type' => 'date',
-             'notnull' => true,
              ));
         $this->hasColumn('tipo_item', 'enum', null, array(
              'type' => 'enum',
              'values' => 
              array(
-              0 => 'UNIMED',
-              1 => 'ANBEED',
+              0 => 'ANBEED',
+              1 => 'UNIMED',
+              2 => 'LIBRE',
              ),
              'notnull' => true,
              ));

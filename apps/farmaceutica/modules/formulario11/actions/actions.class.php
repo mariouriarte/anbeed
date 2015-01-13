@@ -55,7 +55,7 @@ class formulario11Actions extends autoFormulario11Actions
         $pdf->AddPage();
 
         //definimos la variable para el eje y
-        $y = 83;
+        $y = 73;
         $x = 5;
         //Tamaño de letra para datos
         $pdf->SetFont('courier', '', 10, '', true);
@@ -188,7 +188,7 @@ class formulario11Actions extends autoFormulario11Actions
             {
                 /*add page*/
                 $pdf->AddPage();
-                $y_fila_items = 55;
+                $y_fila_items = 45;
                 $num_items-=42;
                 $contador_fojas++;
                 $pdf->SetFont('courier', '', 10, '', true);
@@ -215,15 +215,31 @@ class formulario11Actions extends autoFormulario11Actions
             /*PROD*/
             $pdf->MultiCell(64, 0, $item->getNombre(),
                 0, 'L', 0, 0, $x+34, $y_fila_items, true);
+            
             /*N.RS*/
-            $pdf->MultiCell(25, 0, ItemTable::getNumRegSanitario($item),
+                if($item->getTipoItem() == 'LIBRE')
+                    $reg_sanitario = $item->getNumRegistroLibre();
+                else
+                    $reg_sanitario = ItemTable::getNumRegSanitario($item);
+
+                if($reg_sanitario == '')
+                    $reg_sanitario = 'NO APLICA';
+                
+            $pdf->MultiCell(25, 0, $reg_sanitario,
                 0, 'L', 0, 0, $x+110, $y_fila_items, true);
+            
             /*F,Vto.*/
-            $pdf->MultiCell(25, 0, $item->getFechaVencimiento(),
+                if($item->getFechaVencimiento() == NULL)
+                    $fecha_vencimiento = 'NO APLICA';
+                else
+                    $fecha_vencimiento = $item->getFechaVencimiento();
+            
+            $pdf->MultiCell(25, 0, $fecha_vencimiento,
                 0, 'L', 0, 0, $x+135, $y_fila_items, true);
+            
             /*N,Lote.*/
             $pdf->MultiCell(25, 0, $item->getNumLote(),
-                0, 'L', 0, 0, $x+168, $y_fila_items, true);
+                0, 'L', 0, 0, $x+160, $y_fila_items, true);
             
             $y_fila_items+=5;
             $contador_item--;

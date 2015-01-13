@@ -49,8 +49,8 @@ class ItemTable extends Doctrine_Table
     
     public static function getFojas($items)
     {
-        /*Entran 42 items por cada foja*/
-        /*En la primera foja solo entran 6 items*/
+        //Entran 42 items por cada foja
+        //En la primera foja solo entran 6 items
         $fojas=1;
         $items-=6;
         while($items>0)
@@ -70,19 +70,16 @@ class ItemTable extends Doctrine_Table
         $codigo =0;
         if($item->Producto->getId())
         {
-            if($item->Producto->CodigoProducto->getId()==1)
+            if($item->Producto->CodigoProducto->getId() == 1 || $item->Producto->CodigoProducto->getId() == 6)
             {
                 $producto = $item->Producto->Medicamento->getId();
-                //echo $producto;
+
                 $codigo =1;
                 $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
-                //echo $fecha_inicio_vigencia;
-                //die;
-                //echo format_date($fecha_vencimiento,'yyyy');
-                //die;
-                /*Calculamos si tiene - */
+
+                //Calculamos si tiene
                 $registro_largo = funciones::AparicionesCaracter($item->Producto->Medicamento->getRegistroSanitario(), '-');
-                //die;
+
                 if($registro_largo)
                 {
                     $reg_sanitario = $item->Producto->Medicamento->getRegistroSanitario();
@@ -98,15 +95,15 @@ class ItemTable extends Doctrine_Table
                 }
     
             }
-            if($item->Producto->CodigoProducto->getId()==2)
+            if($item->Producto->CodigoProducto->getId() == 2 || $item->Producto->CodigoProducto->getId() == 7)
             {
                 $producto = $item->Producto->DispositivoMedico->getId();
                 $codigo =2; 
                 $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
                 
-                /*Calculamos si tiene - */
+                //Calculamos si tiene
                 $registro_largo = funciones::AparicionesCaracter($item->Producto->DispositivoMedico->getRegistroSanitario(), '-');
-                //die;
+
                 if($registro_largo)
                 {
                     $reg_sanitario = $item->Producto->DispositivoMedico->getRegistroSanitario();
@@ -122,15 +119,15 @@ class ItemTable extends Doctrine_Table
                 }
     
             }
-            if($item->Producto->CodigoProducto->getId()==3)
+            if($item->Producto->CodigoProducto->getId() == 3 || $item->Producto->CodigoProducto->getId() == 8)
             {
                 $producto = $item->Producto->Cosmetico->getId();
                 $codigo =3;
                 $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
                 
-                /*Calculamos si tiene - */
+                //Calculamos si tiene
                 $registro_largo = funciones::AparicionesCaracter($item->Producto->Cosmetico->getRegistroSanitario(), '-');
-                //die;
+
                 if($registro_largo)
                 {
                     $reg_sanitario = $item->Producto->Cosmetico->getRegistroSanitario();
@@ -146,15 +143,15 @@ class ItemTable extends Doctrine_Table
                 }
     
             }
-            if($item->Producto->CodigoProducto->getId()==4)
+            if($item->Producto->CodigoProducto->getId() == 4 || $item->Producto->CodigoProducto->getId() == 9)
             {
                 $producto = $item->Producto->Higiene->getId();
                 $codigo =4;
                 $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
                 
-                /*Calculamos si tiene - */
+                //Calculamos si tiene
                 $registro_largo = funciones::AparicionesCaracter($item->Producto->Higiene->getRegistroSanitario(), '-');
-                //die;
+
                 if($registro_largo)
                 {
                     $reg_sanitario = $item->Producto->Higiene->getRegistroSanitario();
@@ -176,9 +173,9 @@ class ItemTable extends Doctrine_Table
                 $codigo =5;
                 $fecha_inicio_vigencia = ProductoTable::getFechaInicioVigencia($producto, $codigo);
                 
-                /*Calculamos si tiene - */
+                //Calculamos si tiene
                 $registro_largo = funciones::AparicionesCaracter($item->Producto->Reactivo->getRegistroSanitario(), '-');
-                //die;
+
                 if($registro_largo)
                 {
                     $reg_sanitario = $item->Producto->Reactivo->getRegistroSanitario();
@@ -196,19 +193,15 @@ class ItemTable extends Doctrine_Table
             }
         } else
         {
-            if($item->ProductoUnimed->CodigoProducto->getId()==1)
+            if($item->ProductoUnimed->CodigoProducto->getId() == 1 || $item->ProductoUnimed->CodigoProducto->getId() == 6)
             {
                 $producto = $item->ProductoUnimed->getId();
-                //echo $producto;
                 $codigo =1;
                 $fecha_inicio_vigencia = $item->ProductoUnimed->getFechaRegistro();
-                //echo $fecha_inicio_vigencia;
-                //die;
-                //echo format_date($fecha_vencimiento,'yyyy');
-                //die;
-                //Calculamos si tiene - 
+
+                //Calculamos si tiene
                 $registro_largo = funciones::AparicionesCaracter($item->ProductoUnimed->getNumeroRegistro(), '-');
-                //die;
+                
                 if($registro_largo)
                 {
                     $reg_sanitario = $item->ProductoUnimed->getNumeroRegistro();
@@ -224,15 +217,15 @@ class ItemTable extends Doctrine_Table
                 }
             }
             
-            if($item->ProductoUnimed->CodigoProducto->getId()==2)
+            if($item->ProductoUnimed->CodigoProducto->getId() == 2 || $item->ProductoUnimed->CodigoProducto->getId() == 7)
             {
                 $producto = $item->ProductoUnimed->getId();
                 $codigo =2; 
                 $fecha_inicio_vigencia = $item->ProductoUnimed->getFechaRegistro();
                 
-                //Calculamos si tiene - 
+                //Calculamos si tiene
                 $registro_largo = funciones::AparicionesCaracter($item->ProductoUnimed->getNumeroRegistro(), '-');
-                //die;
+                
                 if($registro_largo)
                 {
                     $reg_sanitario = $item->ProductoUnimed->getNumeroRegistro();
@@ -248,15 +241,15 @@ class ItemTable extends Doctrine_Table
                 }
             }
             
-            if($item->ProductoUnimed->CodigoProducto->getId()==3)
+            if($item->ProductoUnimed->CodigoProducto->getId() == 3 || $item->ProductoUnimed->CodigoProducto->getId() == 8)
             {
                 $producto = $item->ProductoUnimed>getId();
                 $codigo =3;
                 $fecha_inicio_vigencia = $item->ProductoUnimed->getFechaRegistro();
                 
-                //Calculamos si tiene -
+                //Calculamos si tiene
                 $registro_largo = funciones::AparicionesCaracter($item->ProductoUnimed->getNumeroRegistro(), '-');
-                //die;
+                
                 if($registro_largo)
                 {
                     $reg_sanitario = $item->ProductoUnimed->getNumeroRegistro();
@@ -272,15 +265,15 @@ class ItemTable extends Doctrine_Table
                 }
             }
             
-            if($item->ProductoUnimed->CodigoProducto->getId()==4)
+            if($item->ProductoUnimed->CodigoProducto->getId() == 4 || $item->ProductoUnimed->CodigoProducto->getId() == 9)
             {
                 $producto = $item->ProductoUnimed->getId();
                 $codigo =4;
                 $fecha_inicio_vigencia = $item->ProductoUnimed->getFechaRegistro();
                 
-                //Calculamos si tiene -
+                //Calculamos si tiene
                 $registro_largo = funciones::AparicionesCaracter($item->ProductoUnimed->getNumeroRegistro(), '-');
-                //die;
+                
                 if($registro_largo)
                 {
                     $reg_sanitario = $item->ProductoUnimed->getNumeroRegistro();
@@ -302,9 +295,9 @@ class ItemTable extends Doctrine_Table
                 $codigo =5;
                 $fecha_inicio_vigencia = $item->ProductoUnimed->getFechaRegistro();
                 
-                //Calculamos si tiene - 
+                //Calculamos si tiene
                 $registro_largo = funciones::AparicionesCaracter($item->ProductoUnimed->getNumeroRegistro(), '-');
-                //die;
+                
                 if($registro_largo)
                 {
                     $reg_sanitario = $item->ProductoUnimed->getNumeroRegistro();
@@ -320,8 +313,6 @@ class ItemTable extends Doctrine_Table
                 }
             }
         }
-        //echo   $reg_sanitario;
-        //die;
         return $reg_sanitario;
     }
     

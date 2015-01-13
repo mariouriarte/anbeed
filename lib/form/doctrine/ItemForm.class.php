@@ -32,8 +32,9 @@ class ItemForm extends BaseItemForm
         // tipo de item
         $this->widgetSchema['tipo_item'] = new sfWidgetFormChoice(
             array('choices' => array(''       => 'Seleccione un tipo de Item',
+                                     'ANBEED' => 'ANBEED',
                                      'UNIMED' => 'UNIMED',
-                                     'ANBEED' => 'ANBEED')));
+                                     'LIBRE'  => 'LIBRE')));
        
         $this->widgetSchema['nombre']->setAttribute('maxlength', 28);
         

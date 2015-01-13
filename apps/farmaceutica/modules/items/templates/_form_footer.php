@@ -23,15 +23,25 @@ $items = $q->execute();
                 $num_items=1;
                 foreach ($items as $item) 
                 {
-
-                    $reg_sanitario = ItemTable::getNumRegSanitario($item);
+                    if($item->getTipoItem() == 'LIBRE')
+                        $reg_sanitario = $item->getNumRegistroLibre();
+                    else
+                        $reg_sanitario = ItemTable::getNumRegSanitario($item);
                 ?>
             <tr>
                 <td><?php echo $num_items ?></td>
                 <td><?php echo $item->getCantidad()?></td>
                 <td><?php echo $item->getNombre()?></td>
-                <td><?php echo $reg_sanitario?></td>
-                <td><?php echo funciones::FormatearFecha($item->getFechaVencimiento())?></td>
+                <?php if($reg_sanitario != ''): ?>
+                    <td><?php echo $reg_sanitario?></td>
+                <?php else: ?>
+                    <td><?php echo 'NO APLICA'?></td>
+                <?php endif; ?>
+                <?php if($item->getFechaVencimiento() != NULL): ?>
+                    <td><?php echo funciones::FormatearFecha($item->getFechaVencimiento())?></td>
+                <?php else: ?>
+                    <td><?php echo 'NO APLICA'?></td>
+                <?php endif; ?>
                 <td><?php echo $item->getNumLote()?></td>
                 <td>
                     <ul class="sf_admin_td_actions">

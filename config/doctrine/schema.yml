@@ -710,8 +710,9 @@ Item:
     producto_unimed_id: {type: integer}
     nombre:             {type: string(28), notnull: true}
     num_lote:           {type: string(150), notnull: true}
-    fecha_vencimiento:  {type: date, notnull: true}
-    tipo_item:          {type: enum, values: [UNIMED, ANBEED], notnull: true}
+    num_registro_libre: {type: string(50)}
+    fecha_vencimiento:  {type: date}
+    tipo_item:          {type: enum, values: [ANBEED, UNIMED, LIBRE], notnull: true}
   relations:
     Formulario11:     {local: formulario11_id, foreign: id, type: one, foreignAlias: Items}
     Producto:         {local: producto_id, foreign: id, type: one, foreignAlias: Item}

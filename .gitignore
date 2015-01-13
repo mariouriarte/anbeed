@@ -1,6 +1,7 @@
-#.gitignore
+.gitignore
 /cache/
 /log/
 /nbproject/
 /test/
 /web/uploads/
+*~
