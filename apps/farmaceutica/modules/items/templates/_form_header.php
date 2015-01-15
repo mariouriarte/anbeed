@@ -57,9 +57,20 @@ $(document).ready(function()
         }
     });
     
-    //$( "#item_producto_unimed_id" ).change(function() {
-    $("#item_nombre").keyup(function() {
-        //$('#item_nombre').val($("#item_producto_unimed_id").val());
+    //$("#autocomplete_item_producto_unimed_id").change(function() {
+    $("#item_nombre").keyup(function(e) 
+    {
+        var str = $("#autocomplete_item_producto_unimed_id").val();
+        var res = str.split(" -- "); 
+        
+        switch(e.which) 
+        {
+            case 39: // up
+                $('#item_nombre').val(res[1]);
+            break;
+            default: return; // exit this handler for other keys
+        }
+        e.preventDefault(); // prevent the default action (scroll / move caret)
     });
 });
 
@@ -74,7 +85,10 @@ function Producto()
 }
 
 function ProductoUnimed()
-{   
+{
+    var str = "How are you doing today?";
+    var res = str.split(" -- "); 
+    
     var sel = document.getElementById("item_producto_unimed_id");
     var opt = sel.options[sel.selectedIndex].text;
     //opt = opt.split('--');
