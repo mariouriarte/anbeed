@@ -67,7 +67,6 @@ abstract class BaseItem extends sfDoctrineRecord
              ));
         $this->hasColumn('producto_unimed_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
              ));
         $this->hasColumn('nombre', 'string', 28, array(
              'type' => 'string',

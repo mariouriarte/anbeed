@@ -707,7 +707,7 @@ Item:
     formulario11_id:    {type: integer, notnull: true}
     cantidad:           {type: string(150), notnull: true}
     producto_id:        {type: integer}
-    producto_unimed_id: {type: integer, notnull: true}
+    producto_unimed_id: {type: integer}
     nombre:             {type: string(28), notnull: true}
     num_lote:           {type: string(150), notnull: true}
     num_registro_libre: {type: string(50)}
