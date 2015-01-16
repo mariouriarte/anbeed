@@ -13,4 +13,10 @@ require_once dirname(__FILE__).'/../lib/catalogoGeneratorHelper.class.php';
  */
 class catalogoActions extends autoCatalogoActions
 {
+    public function executeVer(sfWebRequest $request)
+    {
+        $this->producto_web = Doctrine::getTable('ProductoWeb')
+                         ->find($request->getParameter('id'));
+        return sfView::SUCCESS;
+    }
 }
