@@ -15,6 +15,7 @@ default:
   stylesheets:    [jquery-ui.min.css, /sfDoctrinePlugin/css/global.css, /sfDoctrinePlugin/css/default.css, main.css, menu.css, login.css, portal.css, formulario_decision.css]
 
   javascripts:    [jquery-1.7.1.min.js, jquery-ui.min.js]
+  #javascripts:    [jquery-1.11.0.js, jquery-ui.min.js]
 
   has_layout:     true
   layout:         layout

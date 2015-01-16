@@ -714,9 +714,9 @@ Item:
     fecha_vencimiento:  {type: date}
     tipo_item:          {type: enum, values: [ANBEED, UNIMED, LIBRE], notnull: true}
   relations:
-    Formulario11:     {local: formulario11_id, foreign: id, type: one, foreignAlias: Items}
-    Producto:         {local: producto_id, foreign: id, type: one, foreignAlias: Item}
-    ProductoUnimed:   {local: producto_unimed_id, foreign: id, type: one, foreignAlias: Item}
+    Formulario11:   {local: formulario11_id, foreign: id, type: one, foreignAlias: Items}
+    Producto:       {local: producto_id, foreign: id, type: one, foreignAlias: Item}
+    ProductoUnimed: {local: producto_unimed_id, foreign: id, type: one, foreignAlias: Item}
 
 ########### CORRESPONDENCIA ··············
 

@@ -20,15 +20,16 @@ class ItemForm extends BaseItemForm
         $this->widgetSchema['producto_id']
               ->setOption('add_empty', 'Seleccione producto')
               ->setOption('table_method', 'ProductosEmpresa')
-              ->setAttribute('onChange    ','Producto();');
+              ->setAttribute('onChange','Producto();');
              # ->setOption('table_method', 'ProductosItemsEmpresa');
         
         //productos unimed
-        $this->widgetSchema['producto_unimed_id']
+        /*$this->widgetSchema['producto_unimed_id']
               ->setOption('add_empty', 'Seleccione producto de UNIMED')
               ->setAttribute('onChange    ','ProductoUnimed();');
              # ->setOption('table_method', 'ProductosItemsEmpresa');
-             
+        */   
+        
         // tipo de item
         $this->widgetSchema['tipo_item'] = new sfWidgetFormChoice(
             array('choices' => array(''       => 'Seleccione un tipo de Item',
@@ -42,8 +43,7 @@ class ItemForm extends BaseItemForm
         $this->widgetSchema['cantidad']->setAttribute('maxlength' ,10);
         $this->widgetSchema['num_lote']->setAttribute('maxlength' ,10);
         //formulario11    
-        $this->widgetSchema['formulario11_id'] = new sfWidgetFormInputHidden(
-              array());
+        $this->widgetSchema['formulario11_id'] = new sfWidgetFormInputHidden(array());
         
         $years = range(date('Y') , date('Y') + 10);   
           $this->widgetSchema['fecha_vencimiento'] = new sfWidgetFormJQueryDate(
@@ -51,9 +51,9 @@ class ItemForm extends BaseItemForm
                       'format' => '%day%%month%%year%',
                       'years' => array_combine($years, $years))), ));
           
-//        $this->widgetSchema['producto_unimed_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
-//            array('model'=>'item',
-//                  'url'=>sfContext::getInstance()->getRouting()->generate('buscar_producto_unimed')
-//        ));
+        $this->widgetSchema['producto_unimed_id']= new sfWidgetFormDoctrineJQueryAutocompleter(
+            array('model' => 'ProductoUnimed',
+                  'url'   => sfContext::getInstance()->getRouting()->generate('buscar_producto_unimed')));
+            //array('onChange' => 'ProductoUnimed();'));
     }
 }
